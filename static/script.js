@@ -1,0 +1,616 @@
+/**
+ * Cliente JavaScript para PER Tests
+ * 
+ * Este archivo maneja toda la lógica del frontend:
+ * 1. Cargar información inicial del sistema
+ * 2. Configurar y generar exámenes
+ * 3. Mostrar preguntas y manejar respuestas
+ * 4. Enviar examen para corrección
+ * 5. Mostrar resultados
+ */
+
+// ================================
+// VARIABLES GLOBALES
+// ================================
+
+let currentExam = null;          // Examen actual
+let currentQuestionIndex = 0;    // Índice de pregunta actual
+let userAnswers = {};           // Respuestas del usuario
+let examStartTime = null;       // Tiempo de inicio del examen
+let timerInterval = null;       // Intervalo del cronómetro
+
+// ================================
+// CONFIGURACIÓN DE LA API
+// ================================
+
+const API_BASE = '/api';
+
+// ================================
+// FUNCIONES DE UTILIDAD
+// ================================
+
+/**
+ * Muestra/oculta el overlay de carga
+ */
+function showLoading(show = true) {
+    const loading = document.getElementById('loading');
+    if (show) {
+        loading.classList.add('active');
+    } else {
+        loading.classList.remove('active');
+    }
+}
+
+/**
+ * Cambia entre pantallas
+ */
+function showScreen(screenId) {
+    // Ocultar todas las pantallas
+    document.querySelectorAll('.screen').forEach(screen => {
+        screen.classList.remove('active');
+    });
+    
+    // Mostrar la pantalla seleccionada
+    document.getElementById(screenId).classList.add('active');
+}
+
+/**
+ * Realiza una petición a la API
+ */
+async function apiRequest(endpoint, options = {}) {
+    try {
+        const response = await fetch(`${API_BASE}${endpoint}`, {
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            },
+            ...options
+        });
+        
+        if (!response.ok) {
+            const error = await response.json();
+            throw new Error(error.detail || 'Error en la petición');
+        }
+        
+        return await response.json();
+    } catch (error) {
+        console.error('Error en API:', error);
+        alert(`Error: ${error.message}`);
+        throw error;
+    }
+}
+
+// ================================
+// INICIALIZACIÓN
+// ================================
+
+/**
+ * Carga la información inicial del sistema
+ */
+async function loadSystemInfo() {
+    try {
+        // Cargar información general
+        const info = await apiRequest('/exams/info');
+        displaySystemInfo(info);
+        
+        // Cargar opciones para formularios
+        const categories = await apiRequest('/exams/categories');
+        populateFormOptions(categories);
+        
+    } catch (error) {
+        console.error('Error cargando información del sistema:', error);
+    }
+}
+
+/**
+ * Muestra la información del sistema
+ */
+function displaySystemInfo(info) {
+    const container = document.getElementById('system-info');
+    const preguntas = info.preguntas;
+    
+    container.innerHTML = `
+        <div class="info-grid">
+            <div class="info-item">
+                <strong>📚 Total de preguntas:</strong> ${preguntas.total_preguntas}
+            </div>
+            <div class="info-item">
+                <strong>📂 Categorías:</strong> ${preguntas.categorias}
+            </div>
+            <div class="info-item">
+                <strong>📅 Años disponibles:</strong> ${preguntas.años_disponibles.join(', ')}
+            </div>
+            <div class="info-item">
+                <strong>🌍 Comunidades:</strong> ${preguntas.comunidades_disponibles.length}
+            </div>
+            <div class="info-item">
+                <strong>🎯 Exámenes activos:</strong> ${info.servicio.examenes_activos}
+            </div>
+        </div>
+    `;
+}
+
+/**
+ * Rellena las opciones de los formularios
+ */
+function populateFormOptions(data) {
+    // Categorías
+    const categoriasContainer = document.getElementById('categorias-container');
+    categoriasContainer.innerHTML = data.categorias.map(cat => `
+        <div class="checkbox-item">
+            <input type="checkbox" id="cat-${cat}" value="${cat}">
+            <label for="cat-${cat}">${cat.replace(/_/g, ' ')}</label>
+        </div>
+    `).join('');
+    
+    // Años
+    const añosContainer = document.getElementById('años-container');
+    añosContainer.innerHTML = data.años.map(año => `
+        <div class="checkbox-item">
+            <input type="checkbox" id="año-${año}" value="${año}">
+            <label for="año-${año}">${año}</label>
+        </div>
+    `).join('');
+    
+    // Comunidades
+    const comunidadesContainer = document.getElementById('comunidades-container');
+    comunidadesContainer.innerHTML = data.comunidades.map(com => `
+        <div class="checkbox-item">
+            <input type="checkbox" id="com-${com}" value="${com}">
+            <label for="com-${com}">${com}</label>
+        </div>
+    `).join('');
+}
+
+// ================================
+// GENERACIÓN DE EXÁMENES
+// ================================
+
+/**
+ * Genera un nuevo examen
+ */
+async function generateExam() {
+    showLoading(true);
+    
+    try {
+        // Recoger configuración del formulario
+        const config = getExamConfig();
+        
+        // Generar examen
+        const exam = await apiRequest('/exams/generate', {
+            method: 'POST',
+            body: JSON.stringify(config)
+        });
+        
+        // Guardar examen y empezar
+        currentExam = exam;
+        currentQuestionIndex = 0;
+        userAnswers = {};
+        
+        startExam();
+        
+    } catch (error) {
+        console.error('Error generando examen:', error);
+    } finally {
+        showLoading(false);
+    }
+}
+
+/**
+ * Obtiene la configuración del examen del formulario
+ */
+function getExamConfig() {
+    const numPreguntasSelect = document.getElementById('num-preguntas');
+    let numPreguntas;
+    
+    if (numPreguntasSelect.value === 'custom') {
+        // Usar el valor personalizado
+        numPreguntas = parseInt(document.getElementById('custom-questions').value);
+        
+        // Validar que sea un número válido
+        if (isNaN(numPreguntas) || numPreguntas < 1 || numPreguntas > 100) {
+            alert('Por favor, ingresa un número válido de preguntas (entre 1 y 100)');
+            throw new Error('Número de preguntas inválido');
+        }
+    } else {
+        // Usar el valor predefinido
+        numPreguntas = parseInt(numPreguntasSelect.value);
+    }
+    
+    // Categorías seleccionadas
+    const categorias = Array.from(document.querySelectorAll('#categorias-container input:checked'))
+        .map(cb => cb.value);
+    
+    // Años seleccionados
+    const años = Array.from(document.querySelectorAll('#años-container input:checked'))
+        .map(cb => parseInt(cb.value));
+    
+    // Comunidades seleccionadas
+    const comunidades = Array.from(document.querySelectorAll('#comunidades-container input:checked'))
+        .map(cb => cb.value);
+    
+    return {
+        num_preguntas: numPreguntas,
+        categorias: categorias.length > 0 ? categorias : null,
+        años: años.length > 0 ? años : null,
+        comunidades: comunidades.length > 0 ? comunidades : null
+    };
+}
+
+// ================================
+// INTERFAZ DEL EXAMEN
+// ================================
+
+/**
+ * Inicia el examen
+ */
+function startExam() {
+    showScreen('exam-screen');
+    examStartTime = Date.now();
+    startTimer();
+    showQuestion(0);
+}
+
+/**
+ * Inicia el cronómetro
+ */
+function startTimer() {
+    timerInterval = setInterval(() => {
+        const elapsed = Date.now() - examStartTime;
+        const minutes = Math.floor(elapsed / 60000);
+        const seconds = Math.floor((elapsed % 60000) / 1000);
+        
+        document.getElementById('timer').textContent = 
+            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }, 1000);
+}
+
+/**
+ * Detiene el cronómetro
+ */
+function stopTimer() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+}
+
+/**
+ * Muestra una pregunta específica
+ */
+function showQuestion(index) {
+    const question = currentExam.questions[index];
+    
+    // Actualizar progreso
+    document.getElementById('progress-text').textContent = 
+        `Pregunta ${index + 1} de ${currentExam.questions.length}`;
+    
+    const progressPercent = ((index + 1) / currentExam.questions.length) * 100;
+    document.getElementById('progress-fill').style.width = `${progressPercent}%`;
+    
+    // Mostrar pregunta
+    document.getElementById('question-number').textContent = index + 1;
+    document.getElementById('question-text').textContent = question.enunciado;
+    
+    // Mostrar opciones
+    const optionsContainer = document.getElementById('question-options');
+    optionsContainer.innerHTML = Object.entries(question.opciones).map(([letter, text]) => `
+        <div class="option" data-value="${letter}">
+            <div class="option-letter">${letter.toUpperCase()}</div>
+            <div class="option-text">${text}</div>
+        </div>
+    `).join('');
+    
+    // Agregar eventos a opciones
+    document.querySelectorAll('.option').forEach(option => {
+        option.addEventListener('click', () => selectOption(option));
+    });
+    
+    // Mostrar respuesta previa si existe
+    const previousAnswer = userAnswers[question.id];
+    if (previousAnswer) {
+        const selectedOption = document.querySelector(`[data-value="${previousAnswer}"]`);
+        if (selectedOption) {
+            selectOption(selectedOption);
+        }
+    }
+    
+    // Actualizar botones de navegación
+    updateNavigationButtons(index);
+}
+
+/**
+ * Selecciona una opción
+ */
+function selectOption(optionElement) {
+    // Remover selección previa
+    document.querySelectorAll('.option').forEach(opt => {
+        opt.classList.remove('selected');
+    });
+    
+    // Seleccionar nueva opción
+    optionElement.classList.add('selected');
+    
+    // Guardar respuesta
+    const questionId = currentExam.questions[currentQuestionIndex].id;
+    const answer = optionElement.dataset.value;
+    userAnswers[questionId] = answer;
+}
+
+/**
+ * Actualiza los botones de navegación
+ */
+function updateNavigationButtons(index) {
+    const btnAnterior = document.getElementById('btn-anterior');
+    const btnSiguiente = document.getElementById('btn-siguiente');
+    const btnFinalizar = document.getElementById('btn-finalizar');
+    
+    // Botón anterior
+    btnAnterior.style.display = index > 0 ? 'inline-block' : 'none';
+    
+    // Botón siguiente y finalizar
+    if (index < currentExam.questions.length - 1) {
+        btnSiguiente.style.display = 'inline-block';
+        btnFinalizar.style.display = 'none';
+    } else {
+        btnSiguiente.style.display = 'none';
+        btnFinalizar.style.display = 'inline-block';
+    }
+}
+
+/**
+ * Navega a la pregunta anterior
+ */
+function previousQuestion() {
+    if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        showQuestion(currentQuestionIndex);
+    }
+}
+
+/**
+ * Navega a la siguiente pregunta
+ */
+function nextQuestion() {
+    if (currentQuestionIndex < currentExam.questions.length - 1) {
+        currentQuestionIndex++;
+        showQuestion(currentQuestionIndex);
+    }
+}
+
+// ================================
+// FINALIZACIÓN Y RESULTADOS
+// ================================
+
+/**
+ * Finaliza el examen y envía para corrección
+ */
+async function finishExam() {
+    // Verificar que todas las preguntas están respondidas
+    const unanswered = currentExam.questions.filter(q => !userAnswers[q.id]);
+    
+    if (unanswered.length > 0) {
+        if (!confirm(`Tienes ${unanswered.length} preguntas sin responder. ¿Quieres continuar?`)) {
+            return;
+        }
+    }
+    
+    showLoading(true);
+    stopTimer();
+    
+    try {
+        // Enviar respuestas para corrección
+        const result = await apiRequest('/exams/correct', {
+            method: 'POST',
+            body: JSON.stringify({
+                exam_id: currentExam.exam_id,
+                respuestas: userAnswers
+            })
+        });
+        
+        // Mostrar resultados
+        showResults(result);
+        
+    } catch (error) {
+        console.error('Error corrigiendo examen:', error);
+    } finally {
+        showLoading(false);
+    }
+}
+
+/**
+ * Muestra los resultados del examen
+ */
+function showResults(result) {
+    showScreen('results-screen');
+    
+    // Puntuación principal
+    document.getElementById('score-percentage').textContent = `${result.porcentaje}%`;
+    document.getElementById('score-fraction').textContent = result.puntuacion_total;
+    
+    const statusElement = document.getElementById('score-status');
+    if (result.aprobado) {
+        statusElement.textContent = '✅ APROBADO';
+        statusElement.className = 'score-status aprobado';
+    } else {
+        statusElement.textContent = '❌ SUSPENDIDO';
+        statusElement.className = 'score-status suspendido';
+    }
+    
+    // Resultados por categoría
+    const categoryContainer = document.getElementById('category-results');
+    categoryContainer.innerHTML = Object.entries(result.desglose_por_categoria).map(([category, data]) => `
+        <div class="category-result">
+            <div class="category-name">${category.replace(/_/g, ' ')}</div>
+            <div class="category-score">${data.correctas}/${data.total} (${data.porcentaje}%)</div>
+        </div>
+    `).join('');
+    
+    // Detalle de preguntas
+    const questionsContainer = document.getElementById('question-details');
+    questionsContainer.innerHTML = result.preguntas_detalle.map((detail, index) => {
+        // Preparar información de respuestas
+        let respuestaUsuarioInfo = '';
+        let respuestaCorrectaInfo = '';
+        
+        if (detail.respuesta_usuario) {
+            respuestaUsuarioInfo = `
+                <span class="answer-letter">${detail.respuesta_usuario.toUpperCase()}</span>
+                <span class="answer-text">${detail.texto_respuesta_usuario}</span>
+            `;
+        } else {
+            respuestaUsuarioInfo = '<span class="no-answer">Sin responder</span>';
+        }
+        
+        respuestaCorrectaInfo = `
+            <span class="answer-letter correct">${detail.respuesta_correcta.toUpperCase()}</span>
+            <span class="answer-text">${detail.texto_respuesta_correcta}</span>
+        `;
+        
+        // Mostrar todas las opciones para referencia
+        const opcionesHtml = Object.entries(detail.opciones).map(([letra, texto]) => {
+            let claseOpcion = 'option-reference';
+            if (letra === detail.respuesta_correcta) {
+                claseOpcion += ' correct-option';
+            }
+            if (letra === detail.respuesta_usuario && !detail.es_correcta) {
+                claseOpcion += ' user-wrong-option';
+            }
+            
+            return `
+                <div class="${claseOpcion}">
+                    <span class="option-letter-ref">${letra.toUpperCase()}</span>
+                    <span class="option-text-ref">${texto}</span>
+                    ${letra === detail.respuesta_correcta ? '<span class="correct-indicator">✓</span>' : ''}
+                    ${letra === detail.respuesta_usuario && !detail.es_correcta ? '<span class="wrong-indicator">✗</span>' : ''}
+                </div>
+            `;
+        }).join('');
+        
+        return `
+            <div class="question-detail ${detail.es_correcta ? 'correct' : 'incorrect'}">
+                <div class="question-detail-header">
+                    <span class="question-number-detail">Pregunta ${index + 1}</span>
+                    <span class="question-status ${detail.es_correcta ? 'correct' : 'incorrect'}">
+                        ${detail.es_correcta ? '✅ Correcta' : '❌ Incorrecta'}
+                    </span>
+                </div>
+                <div class="question-detail-content">
+                    <div class="question-text-detail">
+                        <strong>Pregunta:</strong> ${detail.enunciado}
+                    </div>
+                    
+                    <div class="answers-comparison">
+                        <div class="answer-row">
+                            <div class="answer-label">Tu respuesta:</div>
+                            <div class="answer-content ${detail.es_correcta ? 'correct-answer' : 'wrong-answer'}">
+                                ${respuestaUsuarioInfo}
+                            </div>
+                        </div>
+                        
+                        ${!detail.es_correcta ? `
+                            <div class="answer-row">
+                                <div class="answer-label">Respuesta correcta:</div>
+                                <div class="answer-content correct-answer">
+                                    ${respuestaCorrectaInfo}
+                                </div>
+                            </div>
+                        ` : ''}
+                    </div>
+                    
+                    <div class="all-options">
+                        <div class="options-label">Todas las opciones:</div>
+                        <div class="options-list">
+                            ${opcionesHtml}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+/**
+ * Vuelve a la pantalla de configuración para un nuevo examen
+ */
+function newExam() {
+    // Limpiar datos del examen anterior
+    currentExam = null;
+    currentQuestionIndex = 0;
+    userAnswers = {};
+    stopTimer();
+    
+    // Volver a la pantalla de configuración
+    showScreen('exam-config');
+    
+    // Recargar información del sistema
+    loadSystemInfo();
+}
+
+// ================================
+// EVENT LISTENERS
+// ================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Cargar información inicial
+    loadSystemInfo();
+    
+    // Botones principales
+    document.getElementById('btn-generar').addEventListener('click', generateExam);
+    document.getElementById('btn-anterior').addEventListener('click', previousQuestion);
+    document.getElementById('btn-siguiente').addEventListener('click', nextQuestion);
+    document.getElementById('btn-finalizar').addEventListener('click', finishExam);
+    document.getElementById('btn-nuevo-examen').addEventListener('click', newExam);
+    
+    // Manejar cambio en el selector de número de preguntas
+    document.getElementById('num-preguntas').addEventListener('change', handleQuestionNumberChange);
+    
+    // Validación en tiempo real para el campo personalizado
+    document.getElementById('custom-questions').addEventListener('input', (e) => {
+        const value = parseInt(e.target.value);
+        const isValid = !isNaN(value) && value >= 1 && value <= 100;
+        
+        // Cambiar estilo según validación
+        if (e.target.value && !isValid) {
+            e.target.style.borderColor = '#dc3545';
+            e.target.style.backgroundColor = '#fff5f5';
+        } else {
+            e.target.style.borderColor = '#e1e5e9';
+            e.target.style.backgroundColor = 'white';
+        }
+    });
+});
+
+// ================================
+// UTILIDADES ADICIONALES
+// ================================
+
+/**
+ * Maneja errores de red
+ */
+window.addEventListener('online', () => {
+    console.log('Conexión restaurada');
+});
+
+window.addEventListener('offline', () => {
+    console.log('Sin conexión a internet');
+    alert('Se ha perdido la conexión a internet. Algunas funciones pueden no funcionar correctamente.');
+});
+
+/**
+ * Maneja el cambio en el selector de número de preguntas
+ */
+function handleQuestionNumberChange() {
+    const select = document.getElementById('num-preguntas');
+    const customGroup = document.getElementById('custom-questions-group');
+    
+    if (select.value === 'custom') {
+        customGroup.style.display = 'block';
+        // Hacer focus en el campo personalizado
+        setTimeout(() => {
+            document.getElementById('custom-questions').focus();
+        }, 100);
+    } else {
+        customGroup.style.display = 'none';
+    }
+}

@@ -1,0 +1,155 @@
+metadata:
+  exam_type: "per"
+  category: "meteorologia"
+  version: "1.0"
+
+preguntas:
+  - id: "per_met_001_2023_madrid_p20"
+    enunciado: "¿Cómo se llama el viento que sopla del mar hacia tierra durante el día?"
+    opciones:
+      a: "Terral"
+      b: "Virazón"
+      c: "Levante"
+      d: "Poniente"
+    respuesta_correcta: "b"
+    metadata:
+      categoria: "meteorologia"
+      convocatoria: "junio"
+      año: 2023
+      comunidad_autonoma: "madrid"
+      numero_pregunta: 20
+
+  - id: "per_met_002_2023_valencia_p24"
+    enunciado: "¿Qué indica una presión atmosférica en descenso?"
+    opciones:
+      a: "Buen tiempo estable"
+      b: "Posible empeoramiento del tiempo"
+      c: "Viento en calma"
+      d: "Mar en calma"
+    respuesta_correcta: "b"
+    metadata:
+      categoria: "meteorologia"
+      convocatoria: "septiembre"
+      año: 2023
+      comunidad_autonoma: "valencia"
+      numero_pregunta: 24
+
+  - id: "per_met_003_2022_madrid_p17"
+    enunciado: "¿Cuál es la escala utilizada para medir la fuerza del viento en el mar?"
+    opciones:
+      a: "Escala Richter"
+      b: "Escala Beaufort"
+      c: "Escala Celsius"
+      d: "Escala Douglas"
+    respuesta_correcta: "b"
+    metadata:
+      categoria: "meteorologia"
+      convocatoria: "junio"
+      año: 2022
+      comunidad_autonoma: "madrid"
+      numero_pregunta: 17
+
+  - id: "per_met_004_2022_valencia_p30"
+    enunciado: "¿Qué tipo de nube indica la proximidad de un frente frío?"
+    opciones:
+      a: "Cirrus"
+      b: "Cumulus"
+      c: "Cumulonimbus"
+      d: "Stratus"
+    respuesta_correcta: "c"
+    metadata:
+      categoria: "meteorologia"
+      convocatoria: "septiembre"
+      año: 2022
+      comunidad_autonoma: "valencia"
+      numero_pregunta: 30
+
+  - id: "per_met_005_2021_madrid_p13"
+    enunciado: "¿En qué unidad se mide la presión atmosférica en meteorología marítima?"
+    opciones:
+      a: "Pascales"
+      b: "Milibares"
+      c: "Atmósferas"
+      d: "Todas las anteriores"
+    respuesta_correcta: "b"
+    metadata:
+      categoria: "meteorologia"
+      convocatoria: "junio"
+      año: 2021
+      comunidad_autonoma: "madrid"
+      numero_pregunta: 13
+
+  - id: "per_met_006_2021_valencia_p37"
+    enunciado: "¿Cómo se denomina el viento que sopla de tierra hacia el mar durante la noche?"
+    opciones:
+      a: "Virazón"
+      b: "Terral"
+      c: "Mistral"
+      d: "Siroco"
+    respuesta_correcta: "b"
+    metadata:
+      categoria: "meteorologia"
+      convocatoria: "septiembre"
+      año: 2021
+      comunidad_autonoma: "valencia"
+      numero_pregunta: 37
+
+  - id: "per_met_007_2023_barcelona_p26"
+    enunciado: "¿Qué velocidad de viento corresponde a un grado 4 en la escala Beaufort?"
+    opciones:
+      a: "7-10 nudos"
+      b: "11-16 nudos"
+      c: "17-21 nudos"
+      d: "22-27 nudos"
+    respuesta_correcta: "b"
+    metadata:
+      categoria: "meteorologia"
+      convocatoria: "junio"
+      año: 2023
+      comunidad_autonoma: "barcelona"
+      numero_pregunta: 26
+
+  - id: "per_met_008_2023_madrid_p41"
+    enunciado: "¿Qué es una borrasca?"
+    opciones:
+      a: "Una zona de altas presiones"
+      b: "Una zona de bajas presiones"
+      c: "Un tipo de viento"
+      d: "Una corriente marina"
+    respuesta_correcta: "b"
+    metadata:
+      categoria: "meteorologia"
+      convocatoria: "septiembre"
+      año: 2023
+      comunidad_autonoma: "madrid"
+      numero_pregunta: 41
+
+  - id: "per_met_009_2022_valencia_p19"
+    enunciado: "¿Qué fenómeno meteorológico puede causar el 'efecto Venturi' en el mar?"
+    opciones:
+      a: "Aumento de la velocidad del viento entre islas o cabos"
+      b: "Disminución de la presión atmosférica"
+      c: "Formación de niebla"
+      d: "Calma total del viento"
+    respuesta_correcta: "a"
+    metadata:
+      categoria: "meteorologia"
+      convocatoria: "junio"
+      año: 2022
+      comunidad_autonoma: "valencia"
+      numero_pregunta: 19
+
+  - id: "per_met_010_2022_madrid_p32"
+    enunciado: "¿Cuál es el mejor indicador de la proximidad de mal tiempo?"
+    opciones:
+      a: "Subida rápida de la temperatura"
+      b: "Bajada rápida del barómetro"
+      c: "Viento constante del norte"
+      d: "Mar completamente en calma"
+    respuesta_correcta: "b"
+    metadata:
+      categoria: "meteorologia"
+      convocatoria: "septiembre"
+      año: 2022
+      comunidad_autonoma: "madrid"
+      numero_pregunta: 32
