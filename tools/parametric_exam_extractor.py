@@ -45,6 +45,15 @@ PER_TEST_01 = ExamPattern(
     categories=PER_CATEGORIES
 )
 
+# Definir el patrón para PER Código de Test 03 (que tiene pregunta anulada)
+PER_TEST_03 = ExamPattern(
+    title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
+    subtitle="Código de Test 03",
+    answer_prefix="Respuestas al",
+    total_questions=45,
+    categories=PER_CATEGORIES
+)
+
 class ParametricExamExtractor:
     def __init__(self):
         self.questions = []
@@ -307,14 +316,52 @@ class ParametricExamExtractor:
         
         for letter, number in answer_pairs:
             question_num = int(number)
-            answers[question_num] = letter
+            # Solo incluir números de pregunta válidos (1-45)
+            if 1 <= question_num <= 45:
+                answers[question_num] = letter
         
-        # Buscar respuestas anuladas (formato: número ANULADA)
-        anuladas = re.findall(r'(\d+)\s+ANULADA', answer_section, re.IGNORECASE)
-        for number in anuladas:
-            question_num = int(number)
-            answers[question_num] = "ANULADA"
-            print(f"⚠️  Pregunta {question_num} marcada como ANULADA")
+        # Buscar respuestas anuladas con el formato específico del PDF
+        # Formato encontrado: "45 1 ANULADA (Todas las respuestas se dan por válidas)"
+        # Esto significa que después del número de pregunta hay una respuesta que está anulada
+        
+        # Patrón 1: Buscar "número respuesta ANULADA"
+        anulada_pattern_1 = r'(\d+)\s+[A-D1-9]\s+ANULADA'
+        matches_1 = re.findall(anulada_pattern_1, answer_section, re.IGNORECASE)
+        for match in matches_1:
+            question_num = int(match)
+            if 1 <= question_num <= 45:
+                answers[question_num] = "ANULADA"
+                print(f"⚠️  Pregunta {question_num} marcada como ANULADA (patrón 1)")
+        
+        # Patrón 2: Buscar patrones más tradicionales
+        anulada_patterns = [
+            r'Pregunta\s+(\d+)\s+ANULADA',          # "Pregunta 42 ANULADA"
+            r'(\d+)\s*[-:]\s*ANULADA',              # "42 - ANULADA" o "42: ANULADA"
+            r'(\d+)\s+ANULADA\s*\([^)]*\)',         # "42 ANULADA (Todas las respuestas...)"
+            r'(\d+)\s+ANULADA(?:\s|$)',             # "42 ANULADA" seguido de espacio o fin
+        ]
+        
+        for pattern in anulada_patterns:
+            matches = re.findall(pattern, answer_section, re.IGNORECASE)
+            for match in matches:
+                question_num = int(match if isinstance(match, str) else match[0])
+                if 1 <= question_num <= 45:
+                    answers[question_num] = "ANULADA"
+                    print(f"⚠️  Pregunta {question_num} marcada como ANULADA (patrón tradicional)")
+        
+        # Log para debugging
+        if 'anulada' in answer_section.lower():
+            print("ℹ️  Texto 'ANULADA' encontrado en sección de respuestas")
+            # Mostrar contexto alrededor de "ANULADA"
+            lines = answer_section.split('\n')
+            for i, line in enumerate(lines):
+                if 'anulada' in line.lower():
+                    context_start = max(0, i-2)
+                    context_end = min(len(lines), i+3)
+                    print(f"    Contexto líneas {context_start}-{context_end}:")
+                    for j in range(context_start, context_end):
+                        marker = ">>> " if j == i else "    "
+                        print(f"    {marker}{lines[j]}")
         
         print(f"✅ Extraídas {len(answers)} respuestas")
         return answers
@@ -392,15 +439,6 @@ class ParametricExamExtractor:
         
         # Extraer respuestas
         answers_text = self.extract_text_from_pdf(answers_pdf)
-        answer_section = self.find_answers_section(answers_text, pattern)
-        
-        if answer_section:
-            answers = self.parse_answers_from_section(answer_section)
-        else:
-            answers = {}
-        
-        # Asignar respuestas a las preguntas (las categorías ya están asignadas)
-        for question in questions:
             # Asignar respuesta correcta
             if question['id'] in answers:
                 answer_value = answers[question['id']]

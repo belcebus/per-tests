@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: ANULADA
+      correct_answer: 1
       id: 1
       options:
       - Permite el movimiento del eje de la hélice.

@@ -132,6 +132,7 @@ class QuestionLoader:
                             respuesta_correcta=respuesta_correcta or 'a',
                             metadata=QuestionMetadata(
                                 categoria=question_data.get('category_name', category_name),
+                                convocatoria="madrid",  # Extraer del nombre del archivo
                                 fuente=file_path.stem,
                                 año=2025,  # Por defecto, se puede extraer del nombre del archivo
                                 comunidad_autonoma="Madrid",  # Por defecto
