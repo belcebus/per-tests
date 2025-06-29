@@ -13,7 +13,7 @@ import yaml
 from typing import List, Dict
 from pathlib import Path
 
-from app.models.schemas import Question, QuestionFile
+from app.models.schemas import Question, QuestionFile, QuestionMetadata
 
 
 class QuestionLoader:
@@ -91,13 +91,69 @@ class QuestionLoader:
         """
         print(f"📖 Leyendo {file_path.name}...")
         
-        with open(file_path, 'r', encoding='utf-8') as f:
-            yaml_data = yaml.safe_load(f)
-        
-        # Usar Pydantic para validar la estructura
-        question_file = QuestionFile(**yaml_data)
-        
-        return question_file.preguntas
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                yaml_data = yaml.safe_load(f)
+            
+            questions = []
+            
+            # Verificar si es el nuevo formato (con categorías) o el formato anterior
+            if 'categories' in yaml_data:
+                # Nuevo formato: las preguntas están organizadas por categorías
+                for category_id, category_data in yaml_data['categories'].items():
+                    category_name = category_data.get('name', f'Categoría {category_id}')
+                    
+                    for question_data in category_data.get('questions', []):
+                        # Convertir opciones de lista a diccionario si es necesario
+                        opciones_raw = question_data.get('options', [])
+                        if isinstance(opciones_raw, list):
+                            # Convertir lista a diccionario {a: opcion1, b: opcion2, ...}
+                            opciones = {}
+                            letters = ['a', 'b', 'c', 'd']
+                            for i, option in enumerate(opciones_raw[:4]):  # Máximo 4 opciones
+                                if i < len(letters):
+                                    opciones[letters[i]] = option
+                        else:
+                            opciones = opciones_raw
+                        
+                        # Convertir respuesta correcta de índice a letra si es necesario
+                        respuesta_correcta = question_data.get('correct_answer')
+                        if isinstance(respuesta_correcta, int):
+                            letters = ['a', 'b', 'c', 'd']
+                            if 0 <= respuesta_correcta < len(letters):
+                                respuesta_correcta = letters[respuesta_correcta]
+                        elif respuesta_correcta == "ANULADA":
+                            respuesta_correcta = "ANULADA"
+                        
+                        question = Question(
+                            id=str(question_data.get('id', f"{file_path.stem}_{category_id}_{len(questions)}")),
+                            enunciado=question_data.get('question', ''),
+                            opciones=opciones,
+                            respuesta_correcta=respuesta_correcta or 'a',
+                            metadata=QuestionMetadata(
+                                categoria=question_data.get('category_name', category_name),
+                                fuente=file_path.stem,
+                                año=2025,  # Por defecto, se puede extraer del nombre del archivo
+                                comunidad_autonoma="Madrid",  # Por defecto
+                                numero_pregunta=question_data.get('id', 0)
+                            )
+                        )
+                        questions.append(question)
+            
+            elif 'preguntas' in yaml_data:
+                # Formato anterior: usar Pydantic para validar la estructura
+                question_file = QuestionFile(**yaml_data)
+                questions = question_file.preguntas
+            
+            else:
+                print(f"⚠️  Formato no reconocido en {file_path}")
+                return []
+            
+            return questions
+            
+        except Exception as e:
+            print(f"❌ Error cargando {file_path}: {e}")
+            return []
     
     def get_questions_by_criteria(
         self,

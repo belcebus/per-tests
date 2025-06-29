@@ -13,6 +13,11 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
 import uvicorn
+import sys
+import os
+
+# Añadir el directorio padre al path para importaciones
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from app.routers import exams
 from app.services.question_loader import question_loader
@@ -53,9 +58,22 @@ async def startup_event():
     para tenerlas listas en memoria.
     """
     print("🚀 Iniciando aplicación PER Tests...")
+    print(f"📂 Directorio de trabajo: {os.getcwd()}")
+    print(f"📁 Buscando archivos en: {question_loader.data_directory}")
+    
+    # Verificar si el directorio existe
+    if question_loader.data_directory.exists():
+        print(f"✅ Directorio encontrado")
+        yaml_files = list(question_loader.data_directory.glob("**/*.yaml"))
+        print(f"📄 Archivos YAML encontrados: {[f.name for f in yaml_files]}")
+    else:
+        print(f"❌ Directorio no encontrado: {question_loader.data_directory}")
     
     # Cargar todas las preguntas
     question_loader.load_all_questions()
+    
+    print(f"📊 Total preguntas cargadas: {len(question_loader.all_questions)}")
+    print(f"📂 Categorías cargadas: {list(question_loader.questions_cache.keys())}")
     
     print("✅ Aplicación lista!")
 
@@ -119,7 +137,7 @@ if __name__ == "__main__":
     uvicorn.run(
         "app.main:app",
         host="0.0.0.0",
-        port=8000,
+        port=8002,
         reload=True,  # Recarga automática cuando cambian archivos
         log_level="info"
     )

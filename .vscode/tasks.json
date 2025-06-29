@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start PER Tests App",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"app/main.py"
+			],
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			}
+		}
+	]
+}
