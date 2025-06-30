@@ -33,7 +33,13 @@ class QuestionLoader:
         Args:
             data_directory: Carpeta donde están los archivos YAML
         """
-        self.data_directory = Path(data_directory)
+        # Usar ruta absoluta basada en la ubicación de este archivo
+        if not os.path.isabs(data_directory):
+            # Obtener directorio del proyecto (dos niveles arriba de este archivo)
+            project_root = Path(__file__).parent.parent.parent
+            self.data_directory = project_root / data_directory
+        else:
+            self.data_directory = Path(data_directory)
         self.questions_cache: Dict[str, List[Question]] = {}
         self.all_questions: List[Question] = []
         
@@ -97,50 +103,53 @@ class QuestionLoader:
             
             questions = []
             
-            # Verificar si es el nuevo formato (con categorías) o el formato anterior
+            # Verificar si es el nuevo formato (con categories) o el formato anterior
             if 'categories' in yaml_data:
                 # Nuevo formato: las preguntas están organizadas por categorías
+                print(f"   📁 Procesando formato con categorías...")
+                
                 for category_id, category_data in yaml_data['categories'].items():
                     category_name = category_data.get('name', f'Categoría {category_id}')
+                    print(f"   📂 Procesando categoría {category_id}: {category_name}")
                     
-                    for question_data in category_data.get('questions', []):
-                        # Convertir opciones de lista a diccionario si es necesario
-                        opciones_raw = question_data.get('options', [])
-                        if isinstance(opciones_raw, list):
-                            # Convertir lista a diccionario {a: opcion1, b: opcion2, ...}
-                            opciones = {}
-                            letters = ['a', 'b', 'c', 'd']
-                            for i, option in enumerate(opciones_raw[:4]):  # Máximo 4 opciones
-                                if i < len(letters):
-                                    opciones[letters[i]] = option
-                        else:
-                            opciones = opciones_raw
+                    category_questions = category_data.get('questions', [])
+                    print(f"   📝 Preguntas en esta categoría: {len(category_questions)}")
+                    
+                    for question_data in category_questions:
+                        # Las opciones ya vienen como diccionario en el formato actual
+                        opciones = question_data.get('options', {})
                         
-                        # Convertir respuesta correcta de índice a letra si es necesario
-                        respuesta_correcta = question_data.get('correct_answer')
-                        if isinstance(respuesta_correcta, int):
-                            letters = ['a', 'b', 'c', 'd']
-                            if 0 <= respuesta_correcta < len(letters):
-                                respuesta_correcta = letters[respuesta_correcta]
-                        elif respuesta_correcta == "ANULADA":
-                            respuesta_correcta = "ANULADA"
+                        # La respuesta correcta ya viene como letra o "ANULADA"
+                        respuesta_correcta = question_data.get('correct_answer', 'a')
+                        
+                        # Extraer información del examen del archivo si está disponible
+                        exam_info = yaml_data.get('exam_info', {})
                         
                         question = Question(
                             id=str(question_data.get('id', f"{file_path.stem}_{category_id}_{len(questions)}")),
                             enunciado=question_data.get('question', ''),
                             opciones=opciones,
-                            respuesta_correcta=respuesta_correcta or 'a',
+                            respuesta_correcta=respuesta_correcta,
                             metadata=QuestionMetadata(
-                                # Usar la categoría del nodo padre, no de la pregunta individual
+                                # Campos principales requeridos
+                                title=exam_info.get('title', 'EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO'),
+                                subtitle=exam_info.get('subtitle', 'Código de Test'),
+                                total_questions=exam_info.get('total_questions', 45),
+                                community=exam_info.get('community', 'Madrid'),
+                                year=exam_info.get('year', 2025),
+                                call=exam_info.get('call', 'Ordinaria'),
+                                test_code=exam_info.get('test_code', 'Test01'),
+                                # Campos de compatibilidad
                                 categoria=category_name,
-                                convocatoria="madrid",  # Extraer del nombre del archivo
-                                fuente=file_path.stem,
-                                año=2025,  # Por defecto, se puede extraer del nombre del archivo
-                                comunidad_autonoma="Madrid",  # Por defecto
+                                convocatoria=exam_info.get('call', 'Ordinaria'),
+                                año=exam_info.get('year', 2025),
+                                comunidad_autonoma=exam_info.get('community', 'Madrid'),
                                 numero_pregunta=question_data.get('id', 0)
                             )
                         )
                         questions.append(question)
+                
+                print(f"   ✅ Total preguntas procesadas del archivo: {len(questions)}")
             
             elif 'preguntas' in yaml_data:
                 # Formato anterior: usar Pydantic para validar la estructura
