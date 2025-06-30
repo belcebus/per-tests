@@ -23,17 +23,36 @@ class QuestionMetadata(BaseModel):
     Información adicional sobre cada pregunta.
     
     Esta clase define qué información extra tendrá cada pregunta:
-    - categoria: A qué tema pertenece (ej: "nomenclatura_nautica")
-    - convocatoria: En qué convocatoria apareció (ej: "junio")
-    - año: En qué año apareció
-    - comunidad_autonoma: De qué comunidad autónoma era el examen
-    - numero_pregunta: Qué número tenía en el examen original
+    - title: Título del examen (ej: "EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO")
+    - subtitle: Subtítulo del examen (ej: "Código de Test 01")
+    - total_questions: Número total de preguntas en el examen
+    - community: Comunidad autónoma donde se realizó el examen (ej: "Madrid")
+    - year: Año en que se realizó el examen (ej: 2025)
+    - call: Convocatoria del examen (ej: "Ordinaria", "Extraordinaria")
+    - test_code: Código del test (ej: "Test01", "Test03")
+    
+    Campos opcionales para compatibilidad con formato anterior:
+    - categoria: A qué tema pertenece (mantenido por compatibilidad)
+    - convocatoria: En qué convocatoria apareció (mantenido por compatibilidad)
+    - año: En qué año apareció (mantenido por compatibilidad)  
+    - comunidad_autonoma: De qué comunidad autónoma era el examen (mantenido por compatibilidad)
+    - numero_pregunta: Qué número tenía en el examen original (mantenido por compatibilidad)
     """
-    categoria: str
-    convocatoria: str
-    año: int
-    comunidad_autonoma: str
-    numero_pregunta: int
+    # Nuevos campos principales
+    title: str
+    subtitle: str
+    total_questions: int
+    community: str
+    year: int
+    call: str
+    test_code: str
+    
+    # Campos de compatibilidad (opcionales)
+    categoria: Optional[str] = None
+    convocatoria: Optional[str] = None
+    año: Optional[int] = None
+    comunidad_autonoma: Optional[str] = None
+    numero_pregunta: Optional[int] = None
 
 
 class Question(BaseModel):

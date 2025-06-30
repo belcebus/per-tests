@@ -131,7 +131,8 @@ class QuestionLoader:
                             opciones=opciones,
                             respuesta_correcta=respuesta_correcta or 'a',
                             metadata=QuestionMetadata(
-                                categoria=question_data.get('category_name', category_name),
+                                # Usar la categoría del nodo padre, no de la pregunta individual
+                                categoria=category_name,
                                 convocatoria="madrid",  # Extraer del nombre del archivo
                                 fuente=file_path.stem,
                                 año=2025,  # Por defecto, se puede extraer del nombre del archivo
@@ -247,6 +248,85 @@ class QuestionLoader:
                 for cat, questions in self.questions_cache.items()
             }
         }
+    
+    def load_yaml_file(self, file_path: Path) -> QuestionFile:
+        """
+        Carga un archivo YAML específico y lo convierte a objetos Python.
+        
+        Args:
+            file_path: Ruta completa al archivo YAML
+            
+        Returns:
+            QuestionFile con las preguntas organizadas
+            
+        Raises:
+            Exception: Si el archivo no existe o está mal formateado
+        """
+        print(f"📄 Cargando archivo: {file_path}")
+        
+        try:
+            with open(file_path, 'r', encoding='utf-8') as file:
+                data = yaml.safe_load(file)
+            
+            # Verificar estructura básica
+            if 'exam_info' not in data or 'categories' not in data:
+                raise ValueError("El archivo no tiene la estructura correcta (falta exam_info o categories)")
+            
+            # Extraer metadatos del examen (con soporte para formato antiguo y nuevo)
+            exam_info = data['exam_info']
+            metadata = QuestionMetadata(
+                title=exam_info.get('title', 'Título no especificado'),
+                subtitle=exam_info.get('subtitle', 'Subtítulo no especificado'),
+                total_questions=exam_info.get('total_questions', 0),
+                # Nuevos campos con valores por defecto para compatibilidad
+                community=exam_info.get('community', 'No especificada'),
+                year=exam_info.get('year', 0),
+                call=exam_info.get('call', 'No especificada'),
+                test_code=exam_info.get('test_code', 'No especificado')
+            )
+            
+            questions = []
+            
+            # Cargar preguntas (compatible con ambos formatos)
+            for category_data in data['categories']:
+                category_name = category_data.get('name', 'Categoría sin nombre')
+                
+                for question_data in category_data.get('questions', []):
+                    # Convertir opciones de lista a diccionario si es necesario
+                    opciones_raw = question_data.get('options', [])
+                    if isinstance(opciones_raw, list):
+                        # Convertir lista a diccionario {a: opcion1, b: opcion2, ...}
+                        opciones = {}
+                        letters = ['a', 'b', 'c', 'd']
+                        for i, option in enumerate(opciones_raw[:4]):  # Máximo 4 opciones
+                            if i < len(letters):
+                                opciones[letters[i]] = option
+                    else:
+                        opciones = opciones_raw
+                    
+                    # Convertir respuesta correcta de índice a letra si es necesario
+                    respuesta_correcta = question_data.get('correct_answer')
+                    if isinstance(respuesta_correcta, int):
+                        letters = ['a', 'b', 'c', 'd']
+                        if 0 <= respuesta_correcta < len(letters):
+                            respuesta_correcta = letters[respuesta_correcta]
+                    elif respuesta_correcta == "ANULADA":
+                        respuesta_correcta = "ANULADA"
+                    
+                    question = Question(
+                        id=str(question_data.get('id', f"{file_path.stem}_{len(questions)}")),
+                        enunciado=question_data.get('question', ''),
+                        opciones=opciones,
+                        respuesta_correcta=respuesta_correcta or 'a',
+                        metadata=metadata  # Usar metadatos extraídos del archivo
+                    )
+                    questions.append(question)
+            
+            return QuestionFile(preguntas=questions)
+        
+        except Exception as e:
+            print(f"❌ Error cargando {file_path}: {e}")
+            raise e
 
 
 # Instancia global del cargador de preguntas

@@ -20,6 +20,11 @@ class ExamPattern:
     answer_prefix: str  # Prefijo para las respuestas (ej: "Respuestas al")
     total_questions: int # Número total de preguntas esperadas
     categories: Dict[int, str]  # Categorías del examen
+    # Metadatos del examen
+    community: str      # Comunidad autónoma donde se realizó (ej: "Madrid")
+    year: int          # Año de realización (ej: 2025)
+    call: str          # Convocatoria (ej: "Ordinaria", "Extraordinaria", "Enero", "Junio")
+    test_code: str     # Código del test (ej: "Test01", "Test03")
 
 # Categorías oficiales de PER
 PER_CATEGORIES = {
@@ -36,28 +41,92 @@ PER_CATEGORIES = {
     11: "Carta de navegación"
 }
 
-# Definir el patrón para PER Código de Test 01
-PER_TEST_01 = ExamPattern(
+# Definir el patrón para PER Madrid 2025 Código de Test 01
+PER_MADRID_2025_TEST_01 = ExamPattern(
     title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
     subtitle="Código de Test 01",
     answer_prefix="Respuestas al",
     total_questions=45,
-    categories=PER_CATEGORIES
+    categories=PER_CATEGORIES,
+    community="Madrid",
+    year=2025,
+    call="Ordinaria",
+    test_code="Test01"
 )
 
-# Definir el patrón para PER Código de Test 03 (que tiene pregunta anulada)
-PER_TEST_03 = ExamPattern(
+# Definir el patrón para PER Madrid 2025 Código de Test 03 (que tiene pregunta anulada)
+PER_MADRID_2025_TEST_03 = ExamPattern(
     title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
     subtitle="Código de Test 03",
     answer_prefix="Respuestas al",
     total_questions=45,
-    categories=PER_CATEGORIES
+    categories=PER_CATEGORIES,
+    community="Madrid",
+    year=2025,
+    call="Ordinaria",
+    test_code="Test03"
 )
+
+# Mantener compatibilidad con nombres anteriores
+PER_TEST_01 = PER_MADRID_2025_TEST_01
+PER_TEST_03 = PER_MADRID_2025_TEST_03
+
+def create_per_pattern(community: str, year: int, call: str, test_code: str, 
+                      total_questions: int = 45) -> ExamPattern:
+    """
+    Función helper para crear nuevos patrones de examen PER fácilmente.
+    
+    Args:
+        community: Nombre de la comunidad autónoma (ej: "Madrid", "Barcelona", "Valencia")
+        year: Año de realización (ej: 2025, 2024)
+        call: Convocatoria (ej: "Ordinaria", "Extraordinaria", "Enero", "Junio")
+        test_code: Código del test (ej: "Test01", "Test02", "Test03")
+        total_questions: Número total de preguntas (por defecto 45)
+    
+    Returns:
+        ExamPattern configurado para el examen especificado
+    
+    Ejemplo:
+        # Para un examen de Valencia de junio 2024, test 02
+        pattern = create_per_pattern("Valencia", 2024, "Junio", "Test02")
+    """
+    # Determinar el subtítulo basado en el código de test
+    test_number = test_code.replace("Test", "").replace("test", "").zfill(2)
+    subtitle = f"Código de Test {test_number}"
+    
+    return ExamPattern(
+        title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
+        subtitle=subtitle,
+        answer_prefix="Respuestas al",
+        total_questions=total_questions,
+        categories=PER_CATEGORIES,
+        community=community,
+        year=year,
+        call=call,
+        test_code=test_code
+    )
+
+# Ejemplos de uso para otros exámenes:
+# PER_VALENCIA_2024_JUNIO_TEST02 = create_per_pattern("Valencia", 2024, "Junio", "Test02")
+# PER_BARCELONA_2023_EXTRAORDINARIA_TEST01 = create_per_pattern("Barcelona", 2023, "Extraordinaria", "Test01")
 
 class ParametricExamExtractor:
     def __init__(self):
         self.questions = []
         self.answers = {}
+    
+    def generate_filename(self, pattern: ExamPattern, base_dir: str = "data") -> str:
+        """
+        Genera un nombre de archivo basado en los metadatos del examen.
+        Formato: per_{comunidad}_{año}_{convocatoria}_{codigo_test}.yaml
+        """
+        # Normalizar valores para el nombre de archivo
+        community_clean = pattern.community.lower().replace(" ", "_")
+        call_clean = pattern.call.lower().replace(" ", "_")
+        test_code_clean = pattern.test_code.lower()
+        
+        filename = f"per_{community_clean}_{pattern.year}_{call_clean}_{test_code_clean}.yaml"
+        return os.path.join(base_dir, filename)
         
     def extract_text_from_pdf(self, pdf_path: str) -> str:
         """Extrae todo el texto del PDF."""
@@ -113,42 +182,38 @@ class ParametricExamExtractor:
         
         return exam_section, start_pos, start_pos + end_pos
     
-    def find_answers_section(self, text: str, pattern: ExamPattern) -> str:
+    def find_answer_section(self, text: str, pattern: ExamPattern) -> str:
         """
         Encuentra la sección de respuestas para el examen específico.
         """
-        # Construir patrón de búsqueda para las respuestas
-        answer_pattern = rf"{re.escape(pattern.answer_prefix)}\s+{re.escape(pattern.title)}\s*{re.escape(pattern.subtitle)}"
+        # Buscar la sección de respuestas específica para este test
+        answer_pattern = rf"Respuestas\s+al\s+{re.escape(pattern.title)}\s*{re.escape(pattern.subtitle)}"
         
-        print(f"🔍 Buscando respuestas con patrón: {answer_pattern}")
-        
-        answer_match = re.search(answer_pattern, text, re.IGNORECASE | re.DOTALL)
-        if not answer_match:
-            print(f"❌ No se encontraron las respuestas del examen")
+        match = re.search(answer_pattern, text, re.IGNORECASE | re.DOTALL)
+        if not match:
+            print(f"❌ No se encontró la sección de respuestas para {pattern.subtitle}")
             return ""
         
-        print(f"✅ Respuestas encontradas en posición: {answer_match.start()}")
+        print(f"✅ Sección de respuestas encontrada")
         
-        # Extraer texto desde el inicio de las respuestas
-        answer_text = text[answer_match.end():]
+        # Extraer la sección de respuestas
+        answer_text = text[match.end():]
         
-        # Buscar el final de las respuestas (inicio de las siguientes respuestas o final)
+        # Buscar el final (siguiente test o fin de documento)
         end_patterns = [
-            rf"{re.escape(pattern.answer_prefix)}\s+EXAMEN",  # Siguientes respuestas
-            r"EXAMEN DE [^{]+?Código de Test"  # Siguiente examen
+            r"Respuestas\s+al\s+EXAMEN",
+            r"EXAMEN\s+DE.*?Código\s+de\s+Test"
         ]
         
         end_pos = len(answer_text)
         for end_pattern in end_patterns:
-            match = re.search(end_pattern, answer_text[100:], re.IGNORECASE)
-            if match:
-                candidate_end = match.start() + 100
-                if candidate_end < end_pos:
-                    end_pos = candidate_end
-                    break
+            end_match = re.search(end_pattern, answer_text[100:], re.IGNORECASE)
+            if end_match:
+                end_pos = end_match.start() + 100
+                break
         
         answer_section = answer_text[:end_pos]
-        print(f"📊 Sección de respuestas extraída: {len(answer_section)} caracteres")
+        print(f"📊 Sección de respuestas: {len(answer_section)} caracteres")
         
         return answer_section
     
@@ -191,8 +256,9 @@ class ParametricExamExtractor:
                 i += 1
                 continue
             
-            # Verificar si la línea es una pregunta numerada
-            question_match = re.match(r'^\s*(\d+)\s+(.+)', line)
+            # Verificar si la línea es una pregunta numerada de forma más específica
+            # Debe ser: número al inicio + espacio + texto que no sea solo número
+            question_match = re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', line)
             if question_match:
                 question_num = int(question_match.group(1))
                 
@@ -210,8 +276,12 @@ class ParametricExamExtractor:
                     next_line = lines[i].strip()
                     
                     # Parar si encontramos la siguiente pregunta numerada
-                    if re.match(r'^\s*\d+\s+', next_line):
-                        break
+                    # Ser más específico: número válido + espacio + texto que no sea solo número
+                    if re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', next_line):
+                        next_question_num = int(re.match(r'^\s*(\d{1,2})', next_line).group(1))
+                        # Solo parar si es un número de pregunta válido y mayor al actual
+                        if 1 <= next_question_num <= pattern.total_questions and next_question_num > question_num:
+                            break
                     
                     # Parar si encontramos una nueva categoría
                     next_line_lower = next_line.lower().rstrip('.')
@@ -262,7 +332,7 @@ class ParametricExamExtractor:
         
         # Identificar pregunta y opciones
         question_lines = []
-        options = []
+        options = {}  # Cambiar a diccionario con letras como claves
         options_started = False
         
         for line in lines:
@@ -270,8 +340,9 @@ class ParametricExamExtractor:
             option_match = re.match(r'^([a-d])\)\s*(.+)', line, re.IGNORECASE)
             if option_match:
                 options_started = True
+                option_letter = option_match.group(1).lower()
                 option_text = option_match.group(2).strip()
-                options.append(option_text)
+                options[option_letter] = option_text
             elif not options_started:
                 # Si no hemos empezado con opciones, es parte de la pregunta
                 question_lines.append(line)
@@ -280,10 +351,11 @@ class ParametricExamExtractor:
         question_text = ' '.join(question_lines).strip()
         
         # Ser más tolerante: si no hay opciones suficientes, crear opciones por defecto
-        if len(options) < 4:
-            print(f"⚠️  Pregunta {question_num}: Solo {len(options)} opciones encontradas, completando con opciones por defecto")
-            while len(options) < 4:
-                options.append(f"Opción {len(options) + 1} (contenido incompleto)")
+        expected_letters = ['a', 'b', 'c', 'd']
+        for letter in expected_letters:
+            if letter not in options:
+                print(f"⚠️  Pregunta {question_num}: Falta opción {letter}, añadiendo por defecto")
+                options[letter] = f"Opción {letter.upper()} (contenido incompleto)"
         
         # Validar que tenemos al menos una pregunta
         if len(question_text) < 5:
@@ -292,12 +364,12 @@ class ParametricExamExtractor:
             if len(question_text) < 10:
                 question_text = f"Pregunta {question_num} (contenido incompleto): {question_text}"
         
-        # Crear la pregunta incluso si no es perfecta
+        # Crear la pregunta con nuevo formato
         return {
             'id': question_num,
             'question': question_text,
-            'options': options[:4],  # Máximo 4 opciones
-            'correct_answer': None,  # Se asignará después
+            'options': options,  # Ahora es un diccionario {'a': 'texto', 'b': 'texto', ...}
+            'correct_answer': None,  # Se asignará después (será una letra a-d)
             'category': category,
             'category_name': category_name
         }
@@ -439,15 +511,23 @@ class ParametricExamExtractor:
         
         # Extraer respuestas
         answers_text = self.extract_text_from_pdf(answers_pdf)
-            # Asignar respuesta correcta
-            if question['id'] in answers:
-                answer_value = answers[question['id']]
-                if answer_value == "ANULADA":
-                    question['correct_answer'] = "ANULADA"
-                else:
-                    answer_index = ord(answer_value) - ord('A')
-                    if 0 <= answer_index < len(question['options']):
-                        question['correct_answer'] = answer_index
+        answer_section = self.find_answer_section(answers_text, pattern)
+        
+        if answer_section:
+            answers = self.parse_answers_from_section(answer_section)
+            print(f"📋 Asignando respuestas a {len(questions)} preguntas")
+            
+            # Asignar respuesta correcta (convertir A-D a a-d)
+            for question in questions:
+                if question['id'] in answers:
+                    answer_value = answers[question['id']]
+                    if answer_value == "ANULADA":
+                        question['correct_answer'] = "ANULADA"
+                    else:
+                        # Convertir A,B,C,D a a,b,c,d
+                        question['correct_answer'] = answer_value.lower()
+        else:
+            print("⚠️  No se encontraron respuestas")
         
         # Agrupar por categoría
         questions_by_category = {}
@@ -465,7 +545,12 @@ class ParametricExamExtractor:
                 'total_questions': len(questions),
                 'expected_questions': pattern.total_questions,
                 'categories': len(questions_by_category),
-                'questions_with_answers': sum(1 for q in questions if q['correct_answer'] is not None)
+                'questions_with_answers': sum(1 for q in questions if q['correct_answer'] is not None),
+                # Nuevos metadatos
+                'community': pattern.community,
+                'year': pattern.year,
+                'call': pattern.call,
+                'test_code': pattern.test_code
             },
             'categories': {}
         }
@@ -495,62 +580,70 @@ class ParametricExamExtractor:
         for missing_id in sorted(missing_ids):
             print(f"🔍 Buscando pregunta {missing_id}...")
             
-            # Buscar patrones alternativos que podrían indicar esta pregunta
-            patterns_to_try = [
-                rf'^\s*{missing_id}\s+',  # Número al inicio de línea
-                rf'\b{missing_id}\s+[A-Z]',  # Número seguido de letra mayúscula
-                rf'[\s\n]{missing_id}\.?\s+[A-Za-z]',  # Número con posible punto
-            ]
-            
+            # Buscar patrones más específicos para evitar falsos positivos
             for i, line in enumerate(lines):
-                for pattern_text in patterns_to_try:
-                    if re.search(pattern_text, line):
-                        print(f"✓ Posible coincidencia para pregunta {missing_id} en línea {i}: {line[:80]}...")
-                        
-                        # Recopilar contenido desde esta línea
-                        content_lines = []
-                        j = i
-                        collected_chars = 0
-                        
-                        while j < len(lines) and collected_chars < 1000:  # Límite de seguridad
-                            current_line = lines[j].strip()
-                            if current_line:
-                                content_lines.append(current_line)
-                                collected_chars += len(current_line)
-                            
-                            # Parar si encontramos otra pregunta numerada
-                            if j > i and re.match(r'^\s*(\d+)\s+', current_line):
-                                next_num = int(re.match(r'^\s*(\d+)', current_line).group(1))
-                                if next_num != missing_id:
-                                    break
-                            
+                # Patrón específico: número + espacio + texto que no sea solo número
+                pattern_match = re.match(rf'^\s*{missing_id}\s+([^\d\s].*)', line)
+                if pattern_match:
+                    print(f"✓ Posible coincidencia para pregunta {missing_id} en línea {i}: {line[:80]}...")
+                    
+                    # Recopilar contenido desde esta línea
+                    content_lines = [pattern_match.group(1)]  # Usar solo el texto después del número
+                    j = i + 1
+                    collected_chars = len(pattern_match.group(1))
+                    
+                    while j < len(lines) and collected_chars < 1000:  # Límite de seguridad
+                        current_line = lines[j].strip()
+                        if not current_line:
                             j += 1
+                            continue
                         
-                        if content_lines:
-                            content = '\n'.join(content_lines)
-                            
-                            # Asignar a una categoría por defecto o intentar detectarla
-                            category = 1  # Por defecto
-                            category_name = pattern.categories[1]
-                            
-                            # Intentar detectar categoría basándose en contenido previo
-                            for k in range(max(0, i-10), i):
-                                prev_line = lines[k].strip().lower().rstrip('.')
-                                if prev_line in category_title_map:
-                                    category = category_title_map[prev_line]
-                                    category_name = pattern.categories[category]
-                                    break
-                            
-                            # Crear pregunta recuperada
-                            question_data = self._parse_single_question(missing_id, content, category, category_name)
-                            if question_data:
-                                print(f"✅ Recuperada pregunta {missing_id} en categoría {category_name}")
-                                recovered.append(question_data)
+                        # Parar si encontramos otra pregunta numerada válida
+                        next_question_match = re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', current_line)
+                        if next_question_match:
+                            next_num = int(next_question_match.group(1))
+                            if 1 <= next_num <= pattern.total_questions and next_num != missing_id:
                                 break
+                        
+                        # Parar si encontramos una nueva categoría
+                        current_line_lower = current_line.lower().rstrip('.')
+                        if current_line_lower in category_title_map:
+                            break
+                        
+                        content_lines.append(current_line)
+                        collected_chars += len(current_line)
+                        j += 1
+                    
+                    if content_lines:
+                        content = '\n'.join(content_lines)
+                        
+                        # Asignar a una categoría por defecto o intentar detectarla
+                        category = 1  # Por defecto
+                        category_name = pattern.categories[1]
+                        
+                        # Intentar detectar categoría basándose en contenido previo
+                        for k in range(max(0, i-10), i):
+                            prev_line = lines[k].strip().lower().rstrip('.')
+                            if prev_line in category_title_map:
+                                category = category_title_map[prev_line]
+                                category_name = pattern.categories[category]
+                                break
+                        
+                        # Intentar clasificar por contenido si no se encontró categoría
+                        if category == 1:
+                            category = self.classify_question_by_content(content, pattern.categories)
+                            category_name = pattern.categories[category]
+                        
+                        print(f"✅ Recuperada pregunta {missing_id} en categoría {category_name}")
+                        
+                        question_data = self._parse_single_question(missing_id, content, category, category_name)
+                        if question_data:
+                            recovered.append(question_data)
                         break
-                
-                if any(q['id'] == missing_id for q in recovered):
-                    break
+            
+            # Si ya recuperamos la pregunta, pasar a la siguiente
+            if any(q['id'] == missing_id for q in recovered):
+                continue
         
         return recovered
 
@@ -570,28 +663,33 @@ def main():
         print(f"❌ Error: No se encuentra {pdf_answers}")
         return
     
-    # Extraer el examen de PER Código de Test 01
-    exam_data = extractor.extract_exam(pdf_questions, pdf_answers, PER_TEST_01)
+    # Extraer el examen de PER Madrid 2025 Código de Test 01
+    exam_data = extractor.extract_exam(pdf_questions, pdf_answers, PER_MADRID_2025_TEST_01)
     
     if not exam_data:
         print("❌ No se pudo extraer el examen")
         return
     
-    # Guardar resultado
-    output_path = "/workspaces/per-tests/data/per_test_01.yaml"
+    # Generar nombre de archivo automáticamente
+    output_path = extractor.generate_filename(PER_MADRID_2025_TEST_01, "/workspaces/per-tests/data")
     extractor.save_to_yaml(exam_data, output_path)
     
     # Mostrar estadísticas
-    print(f"\n{'='*50}")
+    print(f"\n{'='*60}")
     print(f"📊 ESTADÍSTICAS DEL EXAMEN EXTRAÍDO")
-    print(f"{'='*50}")
+    print(f"{'='*60}")
     info = exam_data['exam_info']
     print(f"📋 Título: {info['title']}")
     print(f"🏷️  Subtítulo: {info['subtitle']}")
+    print(f"🏛️  Comunidad: {info['community']}")
+    print(f"📅 Año: {info['year']}")
+    print(f"📢 Convocatoria: {info['call']}")
+    print(f"🔢 Código de Test: {info['test_code']}")
     print(f"❓ Preguntas extraídas: {info['total_questions']}")
     print(f"🎯 Preguntas esperadas: {info['expected_questions']}")
     print(f"✅ Preguntas con respuesta: {info['questions_with_answers']}")
     print(f"📂 Categorías: {info['categories']}")
+    print(f"💾 Archivo generado: {output_path}")
     
     print(f"\n📈 DISTRIBUCIÓN POR CATEGORÍA:")
     for cat_id, cat_data in exam_data['categories'].items():
