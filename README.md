@@ -46,10 +46,8 @@ per-tests/
 │   └── README.md            # Documentación general de herramientas
 ├── .env.example             # Plantilla de variables de entorno
 ├── requirements.txt         # Dependencias completas
-└── requirements-minimal.txt # Dependencias mínimas```
-│   └── README.md                 # Documentación de herramientas
+└── requirements-minimal.txt # Dependencias mínimas
 ├── extracted_answers/       # Respuestas extraídas por OCR
-├── pdfs/                   # Archivos PDF de exámenes oficiales
 ├── requirements.txt        # Dependencias Python
 └── README.md
 ```
