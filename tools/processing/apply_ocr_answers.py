@@ -32,15 +32,18 @@ def apply_answers_to_yaml(yaml_file: Path, extracted_answers: Dict[str, str]) ->
     """Aplica las respuestas extraídas al archivo YAML"""
     print(f"📝 Procesando {yaml_file.name}...")
     
-    # Crear backup del archivo original
-    backup_file = yaml_file.with_suffix('.yaml.backup')
+    # Crear backup del archivo original en el directorio de backups
+    backup_dir = settings.get_backups_path()
+    backup_file = backup_dir / f"{yaml_file.stem}.yaml.backup"
+    
     if not backup_file.exists():
-        yaml_file.rename(backup_file)
-        yaml_file = backup_file.with_suffix('.yaml')
+        # Copiar el archivo original al directorio de backups
+        import shutil
+        shutil.copy2(yaml_file, backup_file)
         print(f"💾 Backup creado: {backup_file.name}")
     
-    # Cargar el archivo YAML
-    with open(backup_file, 'r', encoding='utf-8') as f:
+    # Cargar el archivo YAML original
+    with open(yaml_file, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
     
     updates_count = 0

@@ -48,7 +48,7 @@ class QuestionLoader:
         self.questions_cache: Dict[str, List[Question]] = {}
         self.all_questions: List[Question] = []
         
-    def load_all_questions(self) -> None:
+    def load_all_questions(self) -> List[Question]:
         """
         Carga TODAS las preguntas de TODOS los archivos YAML.
         
@@ -79,7 +79,7 @@ class QuestionLoader:
         
         if not yaml_files:
             print(f"⚠️  No se encontraron archivos YAML válidos en {self.data_directory}")
-            return
+            return []
             
         for yaml_file in yaml_files:
             try:
@@ -99,7 +99,8 @@ class QuestionLoader:
         
         print(f"✅ Cargadas {len(self.all_questions)} preguntas de {len(yaml_files)} archivos")
         print(f"📂 Categorías encontradas: {list(self.questions_cache.keys())}")
-    
+        
+        return self.all_questions
     def _load_questions_from_file(self, file_path: Path) -> List[Question]:
         """
         Carga preguntas de un archivo YAML específico.
