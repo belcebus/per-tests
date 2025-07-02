@@ -633,47 +633,165 @@ class ParametricExamExtractor:
         
         return recovered
 
+def find_pdf_file(directory: Path, pattern: str) -> Optional[str]:
+    """
+    Busca un archivo PDF que coincida con el patrón especificado.
+    
+    Args:
+        directory: Directorio donde buscar
+        pattern: Patrón de nombre de archivo (puede incluir wildcards)
+    
+    Returns:
+        Ruta completa del archivo encontrado o None si no se encuentra
+    """
+    # Intentar buscar con el patrón exacto
+    matching_files = list(directory.glob(f"{pattern}.pdf"))
+    if matching_files:
+        return str(matching_files[0])
+    
+    # Intentar buscar con wildcards más flexibles
+    flexible_patterns = [
+        f"*{pattern}*.pdf",
+        f"{pattern}*pdf",
+        f"*{pattern.replace('-', '*')}*.pdf"
+    ]
+    
+    for flex_pattern in flexible_patterns:
+        matching_files = list(directory.glob(flex_pattern))
+        if matching_files:
+            print(f"📄 Encontrado con patrón flexible '{flex_pattern}': {matching_files[0].name}")
+            return str(matching_files[0])
+    
+    return None
+
 def main():
     """Función principal para extraer el examen de PER."""
-    extractor = ParametricExamExtractor()
-    
-    # Rutas de los PDFs usando la configuración global
+    import argparse
     import sys
+    
+    # Configurar argumentos de línea de comandos
+    parser = argparse.ArgumentParser(
+        description="Extractor parametrizable de exámenes PER desde PDFs",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Ejemplos de uso:
+  # Extraer test01 de Madrid 2025 abril (por defecto)
+  python madrid_extract_questions.py
+  
+  # Extraer test03 específico
+  python madrid_extract_questions.py --test test03
+  
+  # Extraer de Valencia 2024 junio
+  python madrid_extract_questions.py --community Valencia --year 2024 --call junio
+  
+  # Especificar archivo PDF específico
+  python madrid_extract_questions.py --pdf-file valencia-2024-junio.pdf
+  
+  # Especificar patrón de búsqueda para el PDF
+  python madrid_extract_questions.py --pdf-pattern "valencia-2024-junio"
+        """
+    )
+    
+    parser.add_argument('--community', default='Madrid',
+                       help='Comunidad autónoma (ej: Madrid, Valencia, Barcelona)')
+    parser.add_argument('--year', type=int, default=2025,
+                       help='Año del examen (ej: 2024, 2025)')
+    parser.add_argument('--call', default='abril',
+                       help='Convocatoria (ej: abril, junio, septiembre, noviembre)')
+    parser.add_argument('--test', default='test01',
+                       help='Código del test (ej: test01, test02, test03)')
+    parser.add_argument('--total-questions', type=int, default=45,
+                       help='Número total de preguntas esperadas')
+    
+    # Opciones para especificar archivos PDF
+    parser.add_argument('--pdf-file', 
+                       help='Archivo PDF específico a procesar (ruta completa)')
+    parser.add_argument('--pdf-pattern',
+                       help='Patrón para buscar el archivo PDF (ej: "madrid-2025-abril")')
+    
+    # Opciones de salida
+    parser.add_argument('--output-dir', 
+                       help='Directorio de salida (por defecto: data/exams)')
+    parser.add_argument('--output-file',
+                       help='Nombre de archivo de salida específico')
+    
+    args = parser.parse_args()
+    
+    # Configuración del proyecto
     project_root = Path(__file__).parent.parent.parent
     sys.path.append(str(project_root))
     from config.settings import settings
     
-    # Buscar archivos PDF en los directorios configurados
-    questions_dir = settings.get_raw_questions_path()
-    answers_dir = settings.get_raw_answers_path()
+    # Crear el patrón de examen dinámicamente
+    exam_pattern = create_per_pattern(
+        community=args.community,
+        year=args.year,
+        call=args.call,
+        test_code=args.test,
+        total_questions=args.total_questions
+    )
     
-    # Buscar archivo de preguntas
-    pdf_questions_list = list(questions_dir.glob("*.pdf"))
-    if pdf_questions_list:
-        pdf_questions = str(pdf_questions_list[0])
-        print(f"📄 Usando PDF de preguntas: {Path(pdf_questions).name}")
+    print(f"🚢 Configuración del examen:")
+    print(f"   📍 Comunidad: {exam_pattern.community}")
+    print(f"   📅 Año: {exam_pattern.year}")
+    print(f"   📢 Convocatoria: {exam_pattern.call}")
+    print(f"   🔢 Test: {exam_pattern.test_code}")
+    print(f"   ❓ Preguntas esperadas: {exam_pattern.total_questions}")
+    
+    # Determinar el archivo PDF a procesar
+    pdf_questions = None
+    
+    if args.pdf_file:
+        # Archivo específico proporcionado
+        if os.path.exists(args.pdf_file):
+            pdf_questions = args.pdf_file
+            print(f"📄 Usando archivo específico: {Path(pdf_questions).name}")
+        else:
+            print(f"❌ Error: El archivo {args.pdf_file} no existe")
+            return
     else:
-        print(f"❌ Error: No se encuentra archivo PDF en {questions_dir}")
-        return
+        # Buscar archivo PDF basado en patrón
+        questions_dir = settings.get_raw_questions_path()
+        
+        if args.pdf_pattern:
+            # Usar patrón personalizado
+            search_pattern = args.pdf_pattern
+        else:
+            # Generar patrón automáticamente
+            community_clean = args.community.lower().replace(" ", "-")
+            call_clean = args.call.lower().replace(" ", "-")
+            search_pattern = f"{community_clean}-{args.year}-{call_clean}"
+        
+        print(f"� Buscando PDF con patrón: {search_pattern}")
+        pdf_questions = find_pdf_file(questions_dir, search_pattern)
+        
+        if not pdf_questions:
+            print(f"❌ Error: No se encontró archivo PDF con patrón '{search_pattern}' en {questions_dir}")
+            print(f"📁 Archivos disponibles:")
+            for pdf_file in questions_dir.glob("*.pdf"):
+                print(f"   - {pdf_file.name}")
+            print(f"\n💡 Consejos:")
+            print(f"   - Usa --pdf-pattern para especificar un patrón personalizado")
+            print(f"   - Usa --pdf-file para especificar la ruta completa del archivo")
+            return
+        
+        print(f"📄 Usando PDF encontrado: {Path(pdf_questions).name}")
     
-    # Buscar archivo de respuestas  
-    pdf_answers_list = list(answers_dir.glob("*.pdf"))
-    if pdf_answers_list:
-        pdf_answers = str(pdf_answers_list[0])
-        print(f"📄 Usando PDF de respuestas: {Path(pdf_answers).name}")
-    else:
-        print(f"❌ Error: No se encuentra archivo PDF en {answers_dir}")
-        return
-    
-    # Extraer el examen de PER Madrid 2025 Código de Test 01
-    exam_data = extractor.extract_exam(pdf_questions, PER_MADRID_2025_TEST_01)
+    # Extraer el examen
+    extractor = ParametricExamExtractor()
+    exam_data = extractor.extract_exam(pdf_questions, exam_pattern)
     
     if not exam_data:
         print("❌ No se pudo extraer el examen")
         return
     
-    # Generar nombre de archivo automáticamente usando configuración
-    output_path = extractor.generate_filename(PER_MADRID_2025_TEST_01, str(settings.get_exams_path()))
+    # Determinar archivo de salida
+    if args.output_file:
+        output_path = args.output_file
+    else:
+        output_dir = args.output_dir or str(settings.get_exams_path())
+        output_path = extractor.generate_filename(exam_pattern, output_dir)
+    
     extractor.save_to_yaml(exam_data, output_path)
     
     # Mostrar estadísticas
@@ -697,6 +815,10 @@ def main():
     for cat_id, cat_data in exam_data['categories'].items():
         questions_with_answers = sum(1 for q in cat_data['questions'] if q['correct_answer'] is not None)
         print(f"  {cat_id:2d}. {cat_data['name']:<25}: {len(cat_data['questions']):2d} preguntas ({questions_with_answers} con respuesta)")
+    
+    print(f"\n💡 Próximos pasos:")
+    print(f"   1. Ejecuta el extractor de respuestas para completar el examen")
+    print(f"   2. Usa: python madrid_extract_answers.py --exam-file '{output_path}'")
 
 if __name__ == "__main__":
     main()
