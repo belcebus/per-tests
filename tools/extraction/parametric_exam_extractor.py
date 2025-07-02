@@ -493,13 +493,14 @@ class ParametricExamExtractor:
             return max(category_scores.items(), key=lambda x: x[1])[0]
         return list(categories.keys())[0]  # Primera categoría por defecto
     
-    def extract_exam(self, questions_pdf: str, answers_pdf: str, pattern: ExamPattern) -> Dict:
+    def extract_exam(self, questions_pdf: str, pattern: ExamPattern) -> Dict:
         """
         Extrae un examen completo usando el patrón especificado.
+        Solo extrae las preguntas, sin respuestas.
         """
         print(f"🚢 Extrayendo examen: {pattern.title} - {pattern.subtitle}")
         
-        # Extraer preguntas
+        # Extraer preguntas del PDF
         questions_text = self.extract_text_from_pdf(questions_pdf)
         exam_section, _, _ = self.find_exam_section(questions_text, pattern)
         
@@ -508,26 +509,10 @@ class ParametricExamExtractor:
             return {}
         
         questions = self.parse_questions_from_section(exam_section, pattern)
+        print(f"✅ Extraídas {len(questions)} preguntas organizadas por categorías")
         
-        # Extraer respuestas
-        answers_text = self.extract_text_from_pdf(answers_pdf)
-        answer_section = self.find_answer_section(answers_text, pattern)
-        
-        if answer_section:
-            answers = self.parse_answers_from_section(answer_section)
-            print(f"📋 Asignando respuestas a {len(questions)} preguntas")
-            
-            # Asignar respuesta correcta (convertir A-D a a-d)
-            for question in questions:
-                if question['id'] in answers:
-                    answer_value = answers[question['id']]
-                    if answer_value == "ANULADA":
-                        question['correct_answer'] = "ANULADA"
-                    else:
-                        # Convertir A,B,C,D a a,b,c,d
-                        question['correct_answer'] = answer_value.lower()
-        else:
-            print("⚠️  No se encontraron respuestas")
+        # Nota: Las respuestas se asignarán usando el script OCR analyze_pdf_structure.py
+        print("💡 Consejo: Usa 'python analyze_pdf_structure.py --exam-type PER --test-model TEST01' para extraer respuestas")
         
         # Agrupar por categoría
         questions_by_category = {}
@@ -652,8 +637,8 @@ def main():
     extractor = ParametricExamExtractor()
     
     # Rutas de los PDFs
-    pdf_questions = "/workspaces/per-tests/pdfs/madrid-2025.pdf"
-    pdf_answers = "/workspaces/per-tests/pdfs/madrid-2025-resp.pdf"
+    pdf_questions = "/workspaces/per-tests/data/raw/questions/madrid-2025.pdf"
+    pdf_answers = "/workspaces/per-tests/data/raw/answers/madrid-2025-resp.pdf"
     
     # Verificar que existen los PDFs
     if not os.path.exists(pdf_questions):
@@ -664,14 +649,14 @@ def main():
         return
     
     # Extraer el examen de PER Madrid 2025 Código de Test 01
-    exam_data = extractor.extract_exam(pdf_questions, pdf_answers, PER_MADRID_2025_TEST_01)
+    exam_data = extractor.extract_exam(pdf_questions, PER_MADRID_2025_TEST_01)
     
     if not exam_data:
         print("❌ No se pudo extraer el examen")
         return
     
     # Generar nombre de archivo automáticamente
-    output_path = extractor.generate_filename(PER_MADRID_2025_TEST_01, "/workspaces/per-tests/data")
+    output_path = extractor.generate_filename(PER_MADRID_2025_TEST_01, "/workspaces/per-tests/data/exams")
     extractor.save_to_yaml(exam_data, output_path)
     
     # Mostrar estadísticas

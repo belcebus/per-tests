@@ -2,40 +2,65 @@
 
 Este directorio contiene los scripts esenciales para procesar los PDFs oficiales de exámenes y convertirlos a archivos YAML que utiliza la aplicación.
 
-## Scripts Disponibles
+## 📁 Estructura Organizada
 
-### 🔧 Scripts de Procesamiento Principal
+### 🔍 `extraction/` - Extracción de Datos
+Scripts especializados en extraer información de PDFs:
+- **`parametric_exam_extractor.py`** - Extrae preguntas y estructura de exámenes
+- **`analyze_pdf_structure.py`** - Extrae respuestas oficiales usando OCR
 
-- **`parametric_exam_extractor.py`** - Extractor parametrizable de exámenes desde PDFs. Script principal para extraer exámenes específicos usando patrones de título y subtítulo.
+### ⚙️ `processing/` - Procesamiento de Datos  
+Scripts para procesar y transformar datos extraídos:
+- **`apply_ocr_answers.py`** - Aplica respuestas extraídas a archivos YAML
 
-- **`pdf_to_yaml.py`** - Procesador que convierte PDFs de exámenes a archivos YAML con la estructura diseñada para la aplicación.
+### 🛠️ `utils/` - Utilidades y Análisis
+Herramientas de desarrollo y análisis:
+- **`pdf_analyzer.py`** - Análisis de estructura de PDFs para desarrollo
 
-- **`complete_pdf_processor.py`** - Procesador completo que extrae todos los tipos de examen y códigos de test de un PDF.
+## 🚀 Flujo de Procesamiento End-to-End
 
-- **`clean_per_processor.py`** - Procesador específico para exámenes de PER, clasificando las preguntas por categorías oficiales.
+### Paso 1: Extracción de Preguntas
+**`extraction/parametric_exam_extractor.py`** - Extractor principal que procesa PDFs de exámenes y genera archivos YAML con las preguntas estructuradas por categorías.
 
-- **`process_official_answers.py`** - Procesador de respuestas oficiales desde el PDF de respuestas.
+### Paso 2: Extracción de Respuestas OCR  
+**`extraction/analyze_pdf_structure.py`** - Extrae respuestas oficiales de PDFs usando OCR (reconocimiento óptico de caracteres). Procesa múltiples tipos de examen y genera archivos JSON con las respuestas.
 
-### 🔍 Scripts de Análisis
+### Paso 3: Aplicación de Respuestas
+**`processing/apply_ocr_answers.py`** - Aplica las respuestas extraídas por OCR al archivo YAML de preguntas, generando un backup automático del archivo original.
 
-- **`pdf_analyzer.py`** - Analizador de estructura de PDFs. Útil para analizar nuevos PDFs antes de procesarlos.
+## � Scripts de Desarrollo
 
-## Uso
+### Análisis de PDFs
+**`utils/pdf_analyzer.py`** - Herramienta de análisis para entender la estructura de nuevos PDFs antes de procesarlos. Útil para debugging y desarrollo.
 
-Estos scripts están diseñados para ser ejecutados desde la línea de comandos cuando sea necesario procesar nuevos PDFs oficiales o actualizar el contenido de las preguntas.
+## 📝 Uso Típico
 
 ```bash
-# Ejemplo de uso del extractor parametrizable
-python tools/parametric_exam_extractor.py
+# 1. Extraer preguntas del PDF de examen
+python tools/extraction/parametric_exam_extractor.py
 
-# Ejemplo de análisis de un PDF
-python tools/pdf_analyzer.py
+# 2. Extraer respuestas oficiales usando OCR
+python tools/extraction/analyze_pdf_structure.py
+
+# 3. Aplicar respuestas al archivo YAML
+python tools/processing/apply_ocr_answers.py
+
+# 4. (Opcional) Analizar nuevo PDF antes de procesarlo
+python tools/utils/pdf_analyzer.py
 ```
 
-## Archivos de Entrada
+## 📁 Estructura de Archivos
 
-Los scripts esperan encontrar los PDFs oficiales en el directorio `pdfs/` del proyecto.
+### Archivos de Entrada
+- `pdfs/` - PDFs oficiales de exámenes y respuestas
 
-## Archivos de Salida
+### Archivos de Salida
+- `data/` - Archivos YAML finales para la aplicación
+- `extracted_answers/` - Respuestas extraídas por OCR en formato JSON
 
-Los archivos YAML generados se guardan en el directorio `data/` del proyecto, donde la aplicación los lee para generar los exámenes.
+## ✅ Proceso Verificado
+
+Este flujo ha sido probado exitosamente con:
+- **Examen**: PER Madrid 2025 Test 01 (45 preguntas)
+- **Precisión**: 100% verificada contra archivo de referencia
+- **Funcionalidad**: Completamente integrado en la aplicación web

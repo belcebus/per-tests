@@ -14,6 +14,7 @@ from typing import List, Dict
 from pathlib import Path
 
 from app.models.schemas import Question, QuestionFile, QuestionMetadata
+from config.settings import settings
 
 
 class QuestionLoader:
@@ -26,20 +27,24 @@ class QuestionLoader:
     - Los organiza para que sea fácil buscar preguntas
     """
     
-    def __init__(self, data_directory: str = "data"):
+    def __init__(self, data_directory: str = None):
         """
         Inicializa el cargador de preguntas.
         
         Args:
-            data_directory: Carpeta donde están los archivos YAML
+            data_directory: Carpeta donde están los archivos YAML (opcional, usa configuración por defecto)
         """
-        # Usar ruta absoluta basada en la ubicación de este archivo
-        if not os.path.isabs(data_directory):
-            # Obtener directorio del proyecto (dos niveles arriba de este archivo)
-            project_root = Path(__file__).parent.parent.parent
-            self.data_directory = project_root / data_directory
+        # Usar configuración centralizada si no se especifica directorio
+        if data_directory is None:
+            self.data_directory = settings.get_absolute_path(settings.data_dir)
         else:
-            self.data_directory = Path(data_directory)
+            # Usar ruta absoluta basada en la ubicación de este archivo (compatibilidad)
+            if not os.path.isabs(data_directory):
+                # Obtener directorio del proyecto (dos niveles arriba de este archivo)
+                project_root = Path(__file__).parent.parent.parent
+                self.data_directory = project_root / data_directory
+            else:
+                self.data_directory = Path(data_directory)
         self.questions_cache: Dict[str, List[Question]] = {}
         self.all_questions: List[Question] = []
         
@@ -59,11 +64,21 @@ class QuestionLoader:
         self.questions_cache.clear()
         self.all_questions.clear()
         
-        # Buscar todos los archivos .yaml
-        yaml_files = list(self.data_directory.glob("**/*.yaml"))
+        # Buscar archivos .yaml solo en la carpeta exams y excluir backups
+        exams_dir = settings.get_exams_path()
+        yaml_files = []
+        
+        if exams_dir.exists():
+            # Buscar archivos en exams/ y excluir backups
+            all_yaml_files = list(exams_dir.glob("**/*.yaml"))
+            yaml_files = [f for f in all_yaml_files if not any(x in f.name.lower() for x in ['backup', 'bk_', '.bak'])]
+        else:
+            # Fallback: buscar en el directorio principal (compatibilidad)
+            all_yaml_files = list(self.data_directory.glob("*.yaml"))
+            yaml_files = [f for f in all_yaml_files if not any(x in f.name.lower() for x in ['backup', 'bk_', '.bak'])]
         
         if not yaml_files:
-            print(f"⚠️  No se encontraron archivos YAML en {self.data_directory}")
+            print(f"⚠️  No se encontraron archivos YAML válidos en {self.data_directory}")
             return
             
         for yaml_file in yaml_files:

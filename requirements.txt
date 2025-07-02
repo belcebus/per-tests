@@ -1,5 +1,42 @@
+# =============================================================================
+# DEPENDENCIAS CORE DE LA APLICACIÓN WEB
+# =============================================================================
+
+# Framework web y servidor
 fastapi==0.104.1
-uvicorn==0.24.0
+uvicorn[standard]==0.24.0
+
+# Validación de datos y serialización
 pydantic==2.5.0
-pyyaml==6.0.1
+
+# Variables de entorno
+python-dotenv==1.0.0
+pydantic-settings==2.0.3
+
+# Procesamiento de archivos YAML
+PyYAML==6.0.1
+
+# Manejo de formularios multipart (para uploads si es necesario)
 python-multipart==0.0.6
+
+# =============================================================================
+# DEPENDENCIAS PARA SCRIPTS DE PROCESAMIENTO (tools/)
+# =============================================================================
+
+# Procesamiento de PDFs
+PyMuPDF==1.26.1
+
+# OCR y procesamiento de imágenes
+pytesseract==0.3.13
+Pillow==10.1.0
+pdf2image==1.17.0
+
+# Análisis adicional de PDFs (para pdf_analyzer.py)
+pdfplumber==0.10.3
+
+# =============================================================================
+# DEPENDENCIAS OPCIONALES PARA DESARROLLO
+# =============================================================================
+
+# Análisis numérico (usado en algunos scripts OCR para mejores resultados)
+numpy==2.3.1

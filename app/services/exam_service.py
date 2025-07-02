@@ -19,6 +19,7 @@ from app.models.schemas import (
     CategoryResult, QuestionResult
 )
 from app.services.question_loader import question_loader
+from config.settings import settings
 
 
 class ExamService:
@@ -38,8 +39,8 @@ class ExamService:
         # Clave: exam_id, Valor: CachedExam
         self.active_exams: Dict[str, CachedExam] = {}
         
-        # Tiempo de vida de un examen (2 horas)
-        self.exam_ttl = timedelta(hours=2)
+        # Tiempo de vida de un examen (configurable)
+        self.exam_ttl = timedelta(hours=settings.exam_ttl_hours)
     
     def generate_exam(self, request: ExamGenerationRequest) -> GeneratedExam:
         """

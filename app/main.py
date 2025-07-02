@@ -21,15 +21,16 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from app.routers import exams
 from app.services.question_loader import question_loader
+from config.settings import settings
 
 # ================================
 # CONFIGURACIÓN DE LA APLICACIÓN
 # ================================
 
 app = FastAPI(
-    title="PER Tests API",
-    description="API para generar y corregir exámenes aleatorios de PER España",
-    version="1.0.0",
+    title=settings.api_title,
+    description=settings.api_description,
+    version=settings.api_version,
     docs_url="/docs",  # Documentación automática en /docs
     redoc_url="/redoc"  # Documentación alternativa en /redoc
 )
@@ -43,7 +44,7 @@ app.include_router(exams.router)
 
 # Servir archivos estáticos (HTML, CSS, JS)
 # Esto permite que el frontend esté en la carpeta 'static'
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory=str(settings.get_static_path())), name="static")
 
 # ================================
 # EVENTOS DE LA APLICACIÓN
@@ -136,8 +137,8 @@ if __name__ == "__main__":
     """
     uvicorn.run(
         "app.main:app",
-        host="0.0.0.0",
-        port=8002,
-        reload=True,  # Recarga automática cuando cambian archivos
-        log_level="info"
+        host=settings.host,
+        port=settings.port,
+        reload=settings.reload,
+        log_level=settings.log_level
     )

@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: ANULADA
+      correct_answer: null
       id: 1
       options:
         a: Permite el movimiento del eje de la hélice.
@@ -14,7 +14,7 @@ categories:
       question: ¿Cuál de las siguientes características NO es propia de la bocina?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: b
+      correct_answer: null
       id: 2
       options:
         a: Virar.
@@ -24,7 +24,7 @@ categories:
       question: 'Arriar progresivamente un cabo que está trabajando se denomina:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: b
+      correct_answer: null
       id: 3
       options:
         a: Esta emerge lo máximo posible disminuyendo la parte sumergida al mínimo.
@@ -34,7 +34,7 @@ categories:
       question: 'Siempre que se alcanza el desplazamiento máximo de una embarcación:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: c
+      correct_answer: null
       id: 4
       options:
         a: Divide la embarcación en dos mitades transversalmente, la de popa y la
@@ -51,7 +51,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: c
+      correct_answer: null
       id: 5
       options:
         a: El nudo llano se utiliza para afirmar un cabo con rapidez a un pasamanos,
@@ -64,7 +64,7 @@ categories:
       question: ¿Cuál de las siguientes definiciones es CORRECTA?
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: c
+      correct_answer: null
       id: 6
       options:
         a: De 8 a 10 metros.
@@ -80,7 +80,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: b
+      correct_answer: null
       id: 7
       options:
         a: Son elementos de seguridad en el caso de persona al agua.
@@ -92,7 +92,7 @@ categories:
         es INCORRECTA?
     - category: 3
       category_name: Seguridad
-      correct_answer: d
+      correct_answer: null
       id: 8
       options:
         a: Reducir la velocidad.
@@ -103,7 +103,7 @@ categories:
         a tomar en una navegación con niebla?
     - category: 3
       category_name: Seguridad
-      correct_answer: b
+      correct_answer: null
       id: 9
       options:
         a: El centro geométrico y la cota cero de la quilla de la embarcación.
@@ -115,7 +115,7 @@ categories:
         simultánea de:'
     - category: 3
       category_name: Seguridad
-      correct_answer: c
+      correct_answer: null
       id: 10
       options:
         a: Llevar puesto un chaleco salvavidas.
@@ -129,7 +129,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: c
+      correct_answer: null
       id: 11
       options:
         a: Se permite la descarga en el mar de desechos de alimentos a menos de 12
@@ -144,7 +144,7 @@ categories:
         de basuras dentro de zonas especiales”, seleccione la respuesta CORRECTA.
     - category: 4
       category_name: Legislación
-      correct_answer: a
+      correct_answer: null
       id: 12
       options:
         a: Si el buque que recibe la alerta de socorro no puede prestar auxilio, el
@@ -162,7 +162,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: d
+      correct_answer: null
       id: 13
       options:
         a: Marca de Emergencia.
@@ -173,7 +173,7 @@ categories:
         verticales rojas y blancas:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: a
+      correct_answer: null
       id: 14
       options:
         a: Blanco.
@@ -183,7 +183,7 @@ categories:
       question: 'La luz de la Marca de Peligro Aislado, si la tuviera, será de color:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: c
+      correct_answer: null
       id: 15
       options:
         a: El sentido obligatorio de navegación.
@@ -193,7 +193,7 @@ categories:
       question: ¿Qué indica una Marca Cardinal?
     - category: 5
       category_name: Balizamiento
-      correct_answer: a
+      correct_answer: null
       id: 16
       options:
         a: La marca de tope, formada por dos esferas superpuestas, es la característica
@@ -206,7 +206,7 @@ categories:
       question: 'Señale la afirmación que NO aplica a las Marcas Especiales:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: a
+      correct_answer: null
       id: 17
       options:
         a: Dejaremos la “Marca de canal principal a estribor” por nuestro costado
@@ -226,7 +226,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: d
+      correct_answer: null
       id: 18
       options:
         a: El hidroavión amarado.
@@ -239,7 +239,7 @@ categories:
         con carácter general, ¿cuál de ellos mantendrá su derrota?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: b
+      correct_answer: null
       id: 19
       options:
         a: Cambiando el rumbo con anticipación suficiente y manteniendo de forma decidida
@@ -255,7 +255,7 @@ categories:
         buque, en la medida de lo posible, ¿cómo debemos actuar?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: b
+      correct_answer: null
       id: 20
       options:
         a: Mantenernos a rumbo ya que en ningún caso debemos maniobrar por tener preferencia
@@ -272,7 +272,7 @@ categories:
         evitar el abordaje”, deberemos:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: a
+      correct_answer: null
       id: 21
       options:
         a: Dirigir un haz de luz de nuestro proyector en la dirección del peligro,
@@ -285,7 +285,7 @@ categories:
         estando en un buque necesitamos llamar la atención de otro buque, podremos:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: a
+      correct_answer: null
       id: 22
       options:
         a: Cada uno caerá a estribor de forma que pase por la banda de babor del otro.
@@ -298,7 +298,7 @@ categories:
         de las siguientes actuaciones es la CORRECTA ante la situación descrita?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: b
+      correct_answer: null
       id: 23
       options:
         a: En cualquier caso, usará la zona de navegación costera.
@@ -312,7 +312,7 @@ categories:
         tráfico”, un buque de 24 metros de eslora:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: c
+      correct_answer: null
       id: 24
       options:
         a: Luces de costado, una luz de alcance y dos luces todo horizonte en línea
@@ -327,7 +327,7 @@ categories:
         eslora mayor de 7 metros y menor de 20 metros?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: b
+      correct_answer: null
       id: 25
       options:
         a: Un tope, las luces de costado, la luz de alcance, la luz de remolque y
@@ -344,7 +344,7 @@ categories:
         dedica a operaciones de limpieza de minas?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: c
+      correct_answer: null
       id: 26
       options:
         a: Buque sin gobierno.
@@ -357,7 +357,7 @@ categories:
         pueda apartarse de la derrota de otro buque, se considerara un:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: a
+      correct_answer: null
       id: 27
       options:
         a: Una embarcación de 20 metros de eslora varada.
@@ -374,7 +374,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: c
+      correct_answer: null
       id: 28
       options:
         a: Hacerlo firme.
@@ -384,7 +384,7 @@ categories:
       question: 'Lascar un cabo es:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: c
+      correct_answer: null
       id: 29
       options:
         a: Atracar la proa, sin imprimir movimiento avante o atrás a la embarcación.
@@ -400,7 +400,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: d
+      correct_answer: null
       id: 30
       options:
         a: Lo primero que debemos hacer siempre es separar las embarcaciones involucradas
@@ -414,7 +414,7 @@ categories:
       question: 'Tras sufrir un abordaje:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: b
+      correct_answer: null
       id: 31
       options:
         a: Avisar a Salvamento Marítimo y esperar instrucciones sin tomar ninguna
@@ -427,7 +427,7 @@ categories:
       question: 'Si se detecta una vía de agua a bordo, se deberá inmediatamente:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: b
+      correct_answer: null
       id: 32
       options:
         a: Salte al agua con las piernas y rodillas juntas y encogidas, sujetando
@@ -444,7 +444,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: d
+      correct_answer: null
       id: 33
       options:
         a: Se expresa en millas náuticas.
@@ -457,7 +457,7 @@ categories:
         es INCORRECTA.
     - category: 9
       category_name: Meteorología
-      correct_answer: a
+      correct_answer: null
       id: 34
       options:
         a: Los vientos circulan en sentido antihorario y el valor de las isobaras
@@ -471,7 +471,7 @@ categories:
       question: ¿Cuáles son las características de una borrasca en el Hemisferio Norte?
     - category: 9
       category_name: Meteorología
-      correct_answer: b
+      correct_answer: null
       id: 35
       options:
         a: Nocturna, con dirección y sentido de tierra a mar.
@@ -481,7 +481,7 @@ categories:
       question: 'El virazón es un viento o brisa:'
     - category: 9
       category_name: Meteorología
-      correct_answer: c
+      correct_answer: null
       id: 36
       options:
         a: Llamada telefónica al responsable de meteorología de la Autoridad Portuaria
@@ -496,7 +496,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: d
+      correct_answer: null
       id: 37
       options:
         a: (-) 6 NW.
@@ -507,7 +507,7 @@ categories:
         = 1º NE (+), ¿cuál es el resultado de la Corrección total?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: b
+      correct_answer: null
       id: 38
       options:
         a: La media de las bajamares de los últimos 50 años.
@@ -517,7 +517,7 @@ categories:
       question: 'Las sondas reflejadas en las cartas náuticas se corresponden con:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: c
+      correct_answer: null
       id: 39
       options:
         a: Desde el Norte en sentido de las agujas del reloj de 0° a 360°.
@@ -527,7 +527,7 @@ categories:
       question: 'La forma correcta de contar una demora cuadrantal sería:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: d
+      correct_answer: null
       id: 40
       options:
         a: La hora local de cualquier puerto de destino.
@@ -537,7 +537,7 @@ categories:
       question: ¿Qué se entiende por "Hora de Reloj de Bitácora"?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: d
+      correct_answer: null
       id: 41
       options:
         a: La declinación magnética indicada en la carta.
@@ -551,7 +551,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: d
+      correct_answer: null
       id: 42
       options:
         a: l=36º 00,0' N; L=005º 29,6' W.
@@ -563,7 +563,7 @@ categories:
         270º.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: b
+      correct_answer: null
       id: 43
       options:
         a: l= 36°06,4´N; L= 005° 31,6´W.
@@ -581,7 +581,7 @@ categories:
         día es de 2°(W).
     - category: 11
       category_name: Carta de navegación
-      correct_answer: b
+      correct_answer: null
       id: 44
       options:
         a: 13,62 m.
@@ -593,7 +593,7 @@ categories:
         la carta de 12,6 metros.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: ANULADA
+      correct_answer: null
       id: 45
       options:
         a: Ra= 246°.
@@ -611,7 +611,7 @@ exam_info:
   categories: 11
   community: Madrid
   expected_questions: 45
-  questions_with_answers: 45
+  questions_with_answers: 0
   subtitle: Código de Test 01
   test_code: Test01
   title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO

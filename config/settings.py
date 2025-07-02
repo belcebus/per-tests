@@ -1,0 +1,226 @@
+"""
+Configuración centralizada de la aplicación PER Tests
+
+Este módulo proporciona configuración centralizada para:
+- Rutas de archivos y directorios
+- Configuración del servidor web
+- Configuración de exámenes
+- Configuración de herramientas de procesamiento
+"""
+
+import os
+from pathlib import Path
+from typing import Optional
+from pydantic import Field
+from pydantic_settings import BaseSettings
+
+
+class Settings(BaseSettings):
+    """
+    Configuración principal de la aplicación.
+    
+    Utiliza variables de entorno con prefijo PER_
+    o valores por defecto si no están definidas.
+    """
+    
+    # ==========================================
+    # CONFIGURACIÓN DE RUTAS Y DIRECTORIOS
+    # ==========================================
+    
+    # Directorio base del proyecto
+    project_root: Path = Field(
+        default_factory=lambda: Path(__file__).parent.parent,
+        description="Directorio raíz del proyecto"
+    )
+    
+    # Directorios de datos
+    data_dir: str = Field(
+        default="data",
+        env="PER_DATA_DIR",
+        description="Directorio base de datos"
+    )
+    
+    exams_dir: str = Field(
+        default="data/exams",
+        env="PER_EXAMS_DIR", 
+        description="Directorio de archivos YAML de exámenes"
+    )
+    
+    raw_questions_dir: str = Field(
+        default="data/raw/questions",
+        env="PER_RAW_QUESTIONS_DIR",
+        description="Directorio de PDFs de preguntas originales"
+    )
+    
+    raw_answers_dir: str = Field(
+        default="data/raw/answers", 
+        env="PER_RAW_ANSWERS_DIR",
+        description="Directorio de PDFs de respuestas originales"
+    )
+    
+    backups_dir: str = Field(
+        default="data/backups",
+        env="PER_BACKUPS_DIR",
+        description="Directorio de backups de archivos YAML"
+    )
+    
+    extracted_dir: str = Field(
+        default="extracted_answers",
+        env="PER_EXTRACTED_DIR",
+        description="Directorio de archivos extraídos temporalmente"
+    )
+    
+    static_dir: str = Field(
+        default="static",
+        env="PER_STATIC_DIR",
+        description="Directorio de archivos estáticos del frontend"
+    )
+    
+    # ==========================================
+    # CONFIGURACIÓN DEL SERVIDOR WEB
+    # ==========================================
+    
+    # Configuración de uvicorn
+    host: str = Field(
+        default="0.0.0.0",
+        env="PER_HOST",
+        description="Host del servidor"
+    )
+    
+    port: int = Field(
+        default=8002,
+        env="PER_PORT",
+        description="Puerto del servidor"
+    )
+    
+    reload: bool = Field(
+        default=True,
+        env="PER_RELOAD",
+        description="Recarga automática en desarrollo"
+    )
+    
+    log_level: str = Field(
+        default="info",
+        env="PER_LOG_LEVEL",
+        description="Nivel de logging"
+    )
+    
+    # ==========================================
+    # CONFIGURACIÓN DE LA APLICACIÓN
+    # ==========================================
+    
+    # Información de la API
+    api_title: str = Field(
+        default="PER Tests API",
+        env="PER_API_TITLE",
+        description="Título de la API"
+    )
+    
+    api_description: str = Field(
+        default="API para generar y corregir exámenes aleatorios de PER España",
+        env="PER_API_DESCRIPTION",
+        description="Descripción de la API"
+    )
+    
+    api_version: str = Field(
+        default="1.0.0",
+        env="PER_API_VERSION",
+        description="Versión de la API"
+    )
+    
+    # ==========================================
+    # CONFIGURACIÓN DE EXÁMENES
+    # ==========================================
+    
+    # Configuración de exámenes por defecto
+    default_num_questions: int = Field(
+        default=45,
+        env="PER_DEFAULT_NUM_QUESTIONS",
+        description="Número de preguntas por defecto en exámenes"
+    )
+    
+    exam_ttl_hours: int = Field(
+        default=2,
+        env="PER_EXAM_TTL_HOURS",
+        description="Tiempo de vida de exámenes en memoria (horas)"
+    )
+    
+    # ==========================================
+    # CONFIGURACIÓN DE PROCESAMIENTO
+    # ==========================================
+    
+    # Configuración de OCR
+    ocr_confidence_threshold: float = Field(
+        default=0.7,
+        env="PER_OCR_CONFIDENCE_THRESHOLD",
+        description="Umbral de confianza para OCR"
+    )
+    
+    # Configuración de procesamiento de PDFs
+    pdf_dpi: int = Field(
+        default=300,
+        env="PER_PDF_DPI",
+        description="DPI para conversión de PDFs a imágenes"
+    )
+    
+    # ==========================================
+    # CONFIGURACIÓN DE DESARROLLO
+    # ==========================================
+    
+    debug: bool = Field(
+        default=False,
+        env="PER_DEBUG",
+        description="Modo debug"
+    )
+    
+    # ==========================================
+    # MÉTODOS AUXILIARES
+    # ==========================================
+    
+    def get_absolute_path(self, relative_path: str) -> Path:
+        """
+        Obtiene la ruta absoluta basada en el directorio del proyecto.
+        
+        Args:
+            relative_path: Ruta relativa desde el directorio del proyecto
+            
+        Returns:
+            Path: Ruta absoluta
+        """
+        if os.path.isabs(relative_path):
+            return Path(relative_path)
+        return self.project_root / relative_path
+    
+    def get_exams_path(self) -> Path:
+        """Obtiene la ruta absoluta del directorio de exámenes."""
+        return self.get_absolute_path(self.exams_dir)
+    
+    def get_raw_questions_path(self) -> Path:
+        """Obtiene la ruta absoluta del directorio de preguntas originales."""
+        return self.get_absolute_path(self.raw_questions_dir)
+    
+    def get_raw_answers_path(self) -> Path:
+        """Obtiene la ruta absoluta del directorio de respuestas originales."""
+        return self.get_absolute_path(self.raw_answers_dir)
+    
+    def get_backups_path(self) -> Path:
+        """Obtiene la ruta absoluta del directorio de backups."""
+        return self.get_absolute_path(self.backups_dir)
+    
+    def get_extracted_path(self) -> Path:
+        """Obtiene la ruta absoluta del directorio de extracción temporal."""
+        return self.get_absolute_path(self.extracted_dir)
+    
+    def get_static_path(self) -> Path:
+        """Obtiene la ruta absoluta del directorio de archivos estáticos."""
+        return self.get_absolute_path(self.static_dir)
+    
+    class Config:
+        """Configuración de Pydantic."""
+        env_file = ".env"
+        env_file_encoding = "utf-8"
+        case_sensitive = False
+
+
+# Instancia global de configuración
+settings = Settings()
