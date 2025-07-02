@@ -4,19 +4,19 @@ Scripts especializados en extraer información de documentos PDF oficiales.
 
 ## 📄 Scripts Disponibles
 
-### `parametric_exam_extractor.py`
-**Propósito**: Extrae preguntas y estructura de exámenes desde PDFs oficiales.
+### `madrid_extract_questions.py`
+**Propósito**: Extrae preguntas y estructura de exámenes desde PDFs oficiales de M!adrid.
 
 **Características**:
-- Procesamiento parametrizado para diferentes tipos de examen
+- Procesamiento parametrizado para diferentes tipos de examen de Madrid
 - Extracción automática de categorías y preguntas
 - Generación de archivos YAML estructurados
-- Soporte para múltiples formatos de examen
+- Soporte para múltiples formatos de examen de Madrid
 
 **Uso**:
 ```bash
 cd /workspaces/per-tests
-python tools/extraction/parametric_exam_extractor.py
+python tools/extraction/madrid_extract_questions.py
 ```
 
 **Salida**: Archivos YAML en `data/exams/` con preguntas estructuradas por categorías.
@@ -48,7 +48,7 @@ python tools/extraction/madrid_extract_answers.py [--pdf-path RUTA_PDF] [--outpu
 ## 🔄 Flujo de Trabajo
 
 1. **Preparar PDFs**: Colocar PDFs originales en `data/raw/questions/` y `data/raw/answers/`
-2. **Extraer preguntas**: Ejecutar `parametric_exam_extractor.py`
+2. **Extraer preguntas**: Ejecutar `madrid_extract_questions.py`
 3. **Extraer respuestas**: Ejecutar `madrid_extract_answers.py`
 4. **Procesar datos**: Continuar con herramientas de `processing/`
 

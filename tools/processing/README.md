@@ -31,8 +31,8 @@ python tools/processing/madrid_merge_exam.py
 ## 🔄 Flujo de Trabajo
 
 1. **Prerequisitos**: 
-   - Archivo YAML con preguntas (generado por `extraction/parametric_exam_extractor.py`)
-   - Archivo JSON con respuestas (generado por `extraction/analyze_pdf_structure.py`)
+   - Archivo YAML con preguntas (generado por `extraction/madrid_extract_questions.py`)
+   - Archivo JSON con respuestas (generado por `extraction/madrid_extract_answers.py`)
 
 2. **Procesamiento**:
    ```bash

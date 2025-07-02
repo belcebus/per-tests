@@ -136,13 +136,13 @@ def main():
 EJEMPLOS DE USO:
 
   # Aplicar respuestas usando auto-detección de archivos
-  python apply_ocr_answers.py
+  python madrid_merge_exam.py
 
   # Especificar archivo de respuestas específico
-  python apply_ocr_answers.py --answers-file per-test01-madrid-2025-abril.json
+  python madrid_merge_exam.py --answers-file per-test01-madrid-2025-abril.json
 
   # Especificar tanto archivo de respuestas como YAML objetivo
-  python apply_ocr_answers.py --answers-file per-test01-madrid-2025-abril.json --yaml-file per-test01-madrid-2025-abril.yaml
+  python madrid_merge_exam.py --answers-file per-test01-madrid-2025-abril.json --yaml-file per-test01-madrid-2025-abril.yaml
         """
     )
     

@@ -99,33 +99,43 @@ uvicorn app.main:app --reload
 
 ## Herramientas de Extracción
 
-El proyecto incluye herramientas para extraer respuestas oficiales de PDFs usando OCR:
+El proyecto incluye herramientas específicas para procesar documentos oficiales de Madrid:
 
-### Extracción de Respuestas OCR
+### Flujo Completo de Procesamiento
 
 ```bash
-# Desde la carpeta tools
-cd tools
+# 1. Extraer preguntas del PDF oficial de Madrid
+python tools/extraction/madrid_extract_questions.py
 
+# 2. Extraer respuestas usando OCR del PDF oficial de Madrid
+python tools/extraction/madrid_extract_answers.py --exam-type PER --test-model TEST01
+
+# 3. Combinar preguntas y respuestas
+python tools/processing/madrid_merge_exam.py
+```
+
+### Extracción Avanzada de Respuestas
+
+```bash
 # Extraer todas las respuestas de todos los exámenes
-python extraction/madrid_extract_answers.py
+python tools/extraction/madrid_extract_answers.py
+python tools/extraction/madrid_extract_answers.py
 
 # Extraer respuestas de un tipo específico de examen
-python extraction/madrid_extract_answers.py --exam-type PER
+python tools/extraction/madrid_extract_answers.py --exam-type PER
 
 # Extraer respuestas de un modelo específico
-python extraction/madrid_extract_answers.py --exam-type PER --test-model TEST01
+python tools/extraction/madrid_extract_answers.py --exam-type PER --test-model TEST01
 
 # Especificar archivo PDF personalizado
-python extraction/madrid_extract_answers.py --pdf-path "../pdfs/otro-examen.pdf" --exam-type PATRON_YATE
+python tools/extraction/madrid_extract_answers.py --pdf-path "data/raw/answers/otro-examen.pdf" --exam-type PATRON_YATE
 ```
 
 ### Aplicar Respuestas Extraídas
 
 ```bash
 # Aplicar respuestas OCR al archivo YAML
-cd tools
-python processing/madrid_merge_exam.py
+python tools/processing/madrid_merge_exam.py
 ```
 
 **Tipos de examen soportados:**

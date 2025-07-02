@@ -26,7 +26,7 @@ TIPOS DE EXAMEN SOPORTADOS:
                 print("   4. Reiniciar el servidor de la aplicación")
             else:
                 print("   1. Revisar los archivos JSON generados en el directorio de salida")
-                print("   2. Usar apply_ocr_answers.py para aplicar las respuestas al YAML correspondiente")SO:
+                print("   2. Usar madrid_merge_exam.py para aplicar las respuestas al YAML correspondiente")SO:
 # Extraer todas las respuestas de todos los exámenes
 python madrid_extract_answers.py
 
