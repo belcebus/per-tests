@@ -1,0 +1,21 @@
+# =============================================================================
+# DEPENDENCIAS MÍNIMAS PARA LA APLICACIÓN WEB
+# Solo incluye lo necesario para ejecutar el servidor FastAPI
+# =============================================================================
+
+# Framework web y servidor
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# Validación de datos y serialización
+pydantic==2.5.0
+
+# Variables de entorno
+python-dotenv==1.0.0
+pydantic-settings==2.0.3
+
+# Procesamiento de archivos YAML
+PyYAML==6.0.1
+
+# Manejo de formularios multipart
+python-multipart==0.0.6

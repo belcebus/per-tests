@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PER Tests - Exámenes de Navegación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>🚢 PER Tests</h1>
+            <p>Exámenes aleatorios para Patrón de Embarcación de Recreo</p>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <!-- Pantalla de configuración del examen -->
+        <div id="exam-config" class="screen active">
+            <div class="card">
+                <h2>Configurar Examen</h2>
+                
+                <div class="form-group">
+                    <label for="num-preguntas">Número de preguntas:</label>
+                    <select id="num-preguntas">
+                        <option value="5">5 preguntas (práctica rápida)</option>
+                        <option value="10">10 preguntas (práctica corta)</option>
+                        <option value="15">15 preguntas (práctica media)</option>
+                        <option value="20">20 preguntas (práctica larga)</option>
+                        <option value="30">30 preguntas (simulacro)</option>
+                        <option value="45" selected>45 preguntas (examen completo PER)</option>
+                        <option value="custom">Personalizado...</option>
+                    </select>
+                </div>
+
+                <!-- Campo personalizado (inicialmente oculto) -->
+                <div class="form-group" id="custom-questions-group" style="display: none;">
+                    <label for="custom-questions">Número personalizado de preguntas:</label>
+                    <input type="number" id="custom-questions" min="1" max="100" value="45" placeholder="Ingresa el número de preguntas">
+                    <small class="form-help">Entre 1 y 100 preguntas</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Categorías (deja vacío para todas):</label>
+                    <div id="categorias-container" class="checkbox-group">
+                        <!-- Se llenarán dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Años (deja vacío para todos):</label>
+                    <div id="años-container" class="checkbox-group">
+                        <!-- Se llenarán dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Comunidades autónomas (deja vacío para todas):</label>
+                    <div id="comunidades-container" class="checkbox-group">
+                        <!-- Se llenarán dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button id="btn-generar" class="btn btn-primary">
+                        🎯 Generar Examen
+                    </button>
+                </div>
+            </div>
+
+            <!-- Información del sistema -->
+            <div class="card info-card">
+                <h3>📊 Información del Sistema</h3>
+                <div id="system-info">
+                    <p>Cargando información...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla del examen -->
+        <div id="exam-screen" class="screen">
+            <div class="exam-header">
+                <div class="exam-progress">
+                    <span id="progress-text">Pregunta 1 de 45</span>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="exam-timer">
+                    <span id="timer">00:00</span>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <div class="question-number">
+                    <span id="question-number">1</span>
+                </div>
+                <div class="question-content">
+                    <h3 id="question-text">Pregunta...</h3>
+                    <div id="question-options" class="options">
+                        <!-- Se llenarán dinámicamente -->
+                    </div>
+                </div>
+                <div class="question-navigation">
+                    <button id="btn-anterior" class="btn btn-secondary">⬅️ Anterior</button>
+                    <button id="btn-siguiente" class="btn btn-primary">Siguiente ➡️</button>
+                    <button id="btn-finalizar" class="btn btn-success" style="display: none;">✅ Finalizar Examen</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla de resultados -->
+        <div id="results-screen" class="screen">
+            <div class="results-header">
+                <h2>📋 Resultados del Examen</h2>
+            </div>
+            
+            <div class="results-summary">
+                <div class="score-card">
+                    <div class="score-main">
+                        <span id="score-percentage">0%</span>
+                        <span id="score-status" class="score-status">—</span>
+                    </div>
+                    <div class="score-details">
+                        <span id="score-fraction">0/0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-categories">
+                <h3>Resultados por Categoría</h3>
+                <div id="category-results">
+                    <!-- Se llenarán dinámicamente -->
+                </div>
+            </div>
+
+            <div class="results-questions">
+                <h3>Detalle de Preguntas</h3>
+                <div id="question-details">
+                    <!-- Se llenarán dinámicamente -->
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="btn-nuevo-examen" class="btn btn-primary">
+                    🔄 Nuevo Examen
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Loading overlay -->
+    <div id="loading" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>Procesando...</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
