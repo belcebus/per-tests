@@ -4,7 +4,7 @@ Scripts especializados en procesar y transformar datos extraídos.
 
 ## 📄 Scripts Disponibles
 
-### `apply_ocr_answers.py`
+### `madrid_merge_exam.py`
 **Propósito**: Aplica respuestas extraídas por OCR a archivos YAML de preguntas.
 
 **Características**:
@@ -17,7 +17,7 @@ Scripts especializados en procesar y transformar datos extraídos.
 **Uso**:
 ```bash
 cd /workspaces/per-tests
-python tools/processing/apply_ocr_answers.py
+python tools/processing/madrid_merge_exam.py
 ```
 
 **Entrada**: 
@@ -36,7 +36,7 @@ python tools/processing/apply_ocr_answers.py
 
 2. **Procesamiento**:
    ```bash
-   python tools/processing/apply_ocr_answers.py
+   python tools/processing/madrid_merge_exam.py
    ```
 
 3. **Verificación**: El script muestra estadísticas de aplicación y posibles inconsistencias

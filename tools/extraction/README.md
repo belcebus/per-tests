@@ -23,7 +23,7 @@ python tools/extraction/parametric_exam_extractor.py
 
 ---
 
-### `analyze_pdf_structure.py`
+### `madrid_extract_answers.py`
 **Propósito**: Extrae respuestas oficiales de PDFs usando OCR (Reconocimiento Óptico de Caracteres).
 
 **Características**:
@@ -36,7 +36,7 @@ python tools/extraction/parametric_exam_extractor.py
 **Uso**:
 ```bash
 cd /workspaces/per-tests
-python tools/extraction/analyze_pdf_structure.py [--pdf-path RUTA_PDF] [--output-dir DIRECTORIO_SALIDA]
+python tools/extraction/madrid_extract_answers.py [--pdf-path RUTA_PDF] [--output-dir DIRECTORIO_SALIDA]
 ```
 
 **Parámetros**:
@@ -49,7 +49,7 @@ python tools/extraction/analyze_pdf_structure.py [--pdf-path RUTA_PDF] [--output
 
 1. **Preparar PDFs**: Colocar PDFs originales en `data/raw/questions/` y `data/raw/answers/`
 2. **Extraer preguntas**: Ejecutar `parametric_exam_extractor.py`
-3. **Extraer respuestas**: Ejecutar `analyze_pdf_structure.py`
+3. **Extraer respuestas**: Ejecutar `madrid_extract_answers.py`
 4. **Procesar datos**: Continuar con herramientas de `processing/`
 
 ## 🛠️ Dependencias

@@ -34,11 +34,11 @@ per-tests/
 ├── static/                  # Frontend (HTML, CSS, JS)
 ├── tools/                   # Scripts de extracción y procesamiento
 │   ├── extraction/          # Scripts de extracción de datos
-│   │   ├── parametric_exam_extractor.py # Extractor de preguntas
-│   │   ├── analyze_pdf_structure.py     # Extractor OCR de respuestas
+│   │   ├── madrid_extract_questions.py   # Extractor de preguntas de PDFs
+│   │   ├── madrid_extract_answers.py     # Extractor OCR de respuestas
 │   │   └── README.md        # Documentación de extracción
 │   ├── processing/          # Scripts de procesamiento de datos
-│   │   ├── apply_ocr_answers.py         # Aplicador de respuestas
+│   │   ├── madrid_merge_exam.py         # Aplicador de respuestas
 │   │   └── README.md        # Documentación de procesamiento
 │   ├── utils/               # Utilidades y análisis
 │   │   ├── pdf_analyzer.py  # Analizador de PDFs
@@ -108,16 +108,16 @@ El proyecto incluye herramientas para extraer respuestas oficiales de PDFs usand
 cd tools
 
 # Extraer todas las respuestas de todos los exámenes
-python analyze_pdf_structure.py
+python extraction/madrid_extract_answers.py
 
 # Extraer respuestas de un tipo específico de examen
-python analyze_pdf_structure.py --exam-type PER
+python extraction/madrid_extract_answers.py --exam-type PER
 
 # Extraer respuestas de un modelo específico
-python analyze_pdf_structure.py --exam-type PER --test-model TEST01
+python extraction/madrid_extract_answers.py --exam-type PER --test-model TEST01
 
 # Especificar archivo PDF personalizado
-python analyze_pdf_structure.py --pdf-path "../pdfs/otro-examen.pdf" --exam-type PATRON_YATE
+python extraction/madrid_extract_answers.py --pdf-path "../pdfs/otro-examen.pdf" --exam-type PATRON_YATE
 ```
 
 ### Aplicar Respuestas Extraídas
@@ -125,7 +125,7 @@ python analyze_pdf_structure.py --pdf-path "../pdfs/otro-examen.pdf" --exam-type
 ```bash
 # Aplicar respuestas OCR al archivo YAML
 cd tools
-python apply_ocr_answers.py
+python processing/madrid_merge_exam.py
 ```
 
 **Tipos de examen soportados:**

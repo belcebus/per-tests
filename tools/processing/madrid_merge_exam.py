@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-Script para aplicar respuestas extraídas por OCR al archivo YAML de Madrid PER Test 01
+Script para aplicar respuestas extraídas por OCR al archivo YAML correspondiente
 """
 
 import json
 import yaml
 import sys
 import os
+import argparse
 from pathlib import Path
 from typing import Dict
 
@@ -16,9 +17,25 @@ sys.path.append(str(project_root))
 
 from config.settings import settings
 
-def load_extracted_answers() -> Dict[str, str]:
+def load_extracted_answers(answers_file: str = None) -> Dict[str, str]:
     """Carga las respuestas extraídas del archivo JSON"""
-    answers_file = settings.get_extracted_path() / "per_test01_answers.json"
+    if answers_file is None:
+        # Intentar buscar el archivo con el nuevo patrón de nomenclatura primero
+        extracted_dir = settings.get_extracted_path()
+        
+        # Buscar archivos que sigan el patrón per-test01-*.json
+        pattern_files = list(extracted_dir.glob("per-test01-*.json"))
+        
+        if pattern_files:
+            # Usar el primer archivo encontrado con el nuevo patrón
+            answers_file = pattern_files[0]
+            print(f"📄 Usando archivo con patrón nuevo: {answers_file.name}")
+        else:
+            # Fallback al archivo de compatibilidad
+            answers_file = extracted_dir / "per_test01_answers.json"
+            print(f"📄 Usando archivo de compatibilidad: {answers_file.name}")
+    else:
+        answers_file = Path(answers_file)
     
     if not answers_file.exists():
         raise FileNotFoundError(f"Archivo de respuestas no encontrado: {answers_file}")
@@ -50,7 +67,10 @@ def apply_answers_to_yaml(yaml_file: Path, extracted_answers: Dict[str, str]) ->
     questions_found = 0
     
     # Procesar cada categoría y pregunta
-    for category_id, category_data in data.get('categories', {}).items():
+    # Intentar ambas estructuras: 'categories' y 'pycategories'
+    categories_data = data.get('categories', data.get('pycategories', {}))
+    
+    for category_id, category_data in categories_data.items():
         questions = category_data.get('questions', [])
         
         for question in questions:
@@ -109,18 +129,52 @@ def validate_answers(extracted_answers: Dict[str, str]):
 
 def main():
     """Función principal"""
-    print("🚀 Aplicando respuestas OCR al archivo YAML de Madrid PER Test 01...")
+    parser = argparse.ArgumentParser(
+        description="Aplicar respuestas extraídas por OCR al archivo YAML correspondiente",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+EJEMPLOS DE USO:
+
+  # Aplicar respuestas usando auto-detección de archivos
+  python apply_ocr_answers.py
+
+  # Especificar archivo de respuestas específico
+  python apply_ocr_answers.py --answers-file per-test01-madrid-2025-abril.json
+
+  # Especificar tanto archivo de respuestas como YAML objetivo
+  python apply_ocr_answers.py --answers-file per-test01-madrid-2025-abril.json --yaml-file per-test01-madrid-2025-abril.yaml
+        """
+    )
+    
+    parser.add_argument(
+        '--answers-file',
+        type=str,
+        help='Archivo JSON con las respuestas extraídas (default: auto-detectar)'
+    )
+    
+    parser.add_argument(
+        '--yaml-file',
+        type=str,
+        help='Archivo YAML del examen a actualizar (default: per-test01-madrid-2025-abril.yaml)'
+    )
+    
+    args = parser.parse_args()
+    
+    print("🚀 Aplicando respuestas OCR al archivo YAML correspondiente...")
     
     try:
         # Cargar respuestas extraídas
-        extracted_answers = load_extracted_answers()
+        extracted_answers = load_extracted_answers(args.answers_file)
         print(f"📖 Respuestas cargadas: {len(extracted_answers)}")
         
         # Validar respuestas
         validate_answers(extracted_answers)
         
-        # Aplicar al archivo YAML
-        yaml_file = settings.get_exams_path() / "per_madrid_2025_ordinaria_test01.yaml"
+        # Determinar archivo YAML objetivo
+        if args.yaml_file:
+            yaml_file = settings.get_exams_path() / args.yaml_file
+        else:
+            yaml_file = settings.get_exams_path() / "per-test01-madrid-2025-abril.yaml"
         
         if not yaml_file.exists():
             print(f"❌ Archivo YAML no encontrado: {yaml_file}")
@@ -128,11 +182,11 @@ def main():
         
         updates = apply_answers_to_yaml(yaml_file, extracted_answers)
         
-        print(f"\\n🎉 Proceso completado exitosamente!")
+        print(f"\n🎉 Proceso completado exitosamente!")
         print(f"   📈 Total actualizaciones: {updates}")
         
         if updates > 0:
-            print("\\n💡 Recomendaciones:")
+            print("\n💡 Recomendaciones:")
             print("   - Reinicia el servidor de la aplicación para cargar los cambios")
             print("   - Verifica algunas respuestas manualmente para confirmar la precisión")
             print("   - El archivo original se guardó como .backup")

@@ -6,12 +6,12 @@ Este directorio contiene los scripts esenciales para procesar los PDFs oficiales
 
 ### 🔍 `extraction/` - Extracción de Datos
 Scripts especializados en extraer información de PDFs:
-- **`parametric_exam_extractor.py`** - Extrae preguntas y estructura de exámenes
-- **`analyze_pdf_structure.py`** - Extrae respuestas oficiales usando OCR
+- **`madrid_extract_questions.py`** - Extrae preguntas y estructura de exámenes de Madrid
+- **`madrid_extract_answers.py`** - Extrae respuestas oficiales de Madrid usando OCR
 
 ### ⚙️ `processing/` - Procesamiento de Datos  
 Scripts para procesar y transformar datos extraídos:
-- **`apply_ocr_answers.py`** - Aplica respuestas extraídas a archivos YAML
+- **`madrid_merge_exam.py`** - Aplica respuestas extraídas a archivos YAML
 
 ### 🛠️ `utils/` - Utilidades y Análisis
 Herramientas de desarrollo y análisis:
@@ -20,13 +20,13 @@ Herramientas de desarrollo y análisis:
 ## 🚀 Flujo de Procesamiento End-to-End
 
 ### Paso 1: Extracción de Preguntas
-**`extraction/parametric_exam_extractor.py`** - Extractor principal que procesa PDFs de exámenes y genera archivos YAML con las preguntas estructuradas por categorías.
+**`extraction/madrid_extract_questions.py`** - Extractor principal que procesa PDFs de exámenes de Madrid y genera archivos YAML con las preguntas estructuradas por categorías.
 
 ### Paso 2: Extracción de Respuestas OCR  
-**`extraction/analyze_pdf_structure.py`** - Extrae respuestas oficiales de PDFs usando OCR (reconocimiento óptico de caracteres). Procesa múltiples tipos de examen y genera archivos JSON con las respuestas.
+**`extraction/madrid_extract_answers.py`** - Extrae respuestas oficiales de PDFs de Madrid usando OCR (reconocimiento óptico de caracteres). Procesa múltiples tipos de examen y genera archivos JSON con las respuestas.
 
 ### Paso 3: Aplicación de Respuestas
-**`processing/apply_ocr_answers.py`** - Aplica las respuestas extraídas por OCR al archivo YAML de preguntas, generando un backup automático del archivo original.
+**`processing/madrid_merge_exam.py`** - Aplica las respuestas extraídas por OCR al archivo YAML de preguntas, generando un backup automático del archivo original.
 
 ## � Scripts de Desarrollo
 
@@ -37,13 +37,13 @@ Herramientas de desarrollo y análisis:
 
 ```bash
 # 1. Extraer preguntas del PDF de examen
-python tools/extraction/parametric_exam_extractor.py
+python tools/extraction/madrid_extract_questions.py
 
 # 2. Extraer respuestas oficiales usando OCR
-python tools/extraction/analyze_pdf_structure.py
+python tools/extraction/madrid_extract_answers.py
 
 # 3. Aplicar respuestas al archivo YAML
-python tools/processing/apply_ocr_answers.py
+python tools/processing/madrid_merge_exam.py
 
 # 4. (Opcional) Analizar nuevo PDF antes de procesarlo
 python tools/utils/pdf_analyzer.py

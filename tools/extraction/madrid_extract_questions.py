@@ -50,8 +50,8 @@ PER_MADRID_2025_TEST_01 = ExamPattern(
     categories=PER_CATEGORIES,
     community="Madrid",
     year=2025,
-    call="Ordinaria",
-    test_code="Test01"
+    call="abril",  # Actualizado para coincidir con el PDF madrid-2025-abril.pdf
+    test_code="test01"  # Actualizado para coincidir con el formato de archivo
 )
 
 # Definir el patrón para PER Madrid 2025 Código de Test 03 (que tiene pregunta anulada)
@@ -63,8 +63,8 @@ PER_MADRID_2025_TEST_03 = ExamPattern(
     categories=PER_CATEGORIES,
     community="Madrid",
     year=2025,
-    call="Ordinaria",
-    test_code="Test03"
+    call="abril",  # Actualizado para coincidir con el PDF madrid-2025-abril.pdf
+    test_code="test03"  # Actualizado para coincidir con el formato de archivo
 )
 
 # Mantener compatibilidad con nombres anteriores
@@ -118,14 +118,15 @@ class ParametricExamExtractor:
     def generate_filename(self, pattern: ExamPattern, base_dir: str = "data") -> str:
         """
         Genera un nombre de archivo basado en los metadatos del examen.
-        Formato: per_{comunidad}_{año}_{convocatoria}_{codigo_test}.yaml
+        Formato: per-{modelo}-{comunidad}-{año}-{convocatoria}.yaml
         """
-        # Normalizar valores para el nombre de archivo
-        community_clean = pattern.community.lower().replace(" ", "_")
-        call_clean = pattern.call.lower().replace(" ", "_")
+        # Normalizar valores para el nombre de archivo siguiendo el patrón oficial
+        community_clean = pattern.community.lower().replace(" ", "-")
+        call_clean = pattern.call.lower().replace(" ", "-")
         test_code_clean = pattern.test_code.lower()
         
-        filename = f"per_{community_clean}_{pattern.year}_{call_clean}_{test_code_clean}.yaml"
+        # Nuevo formato: per-test01-madrid-2025-abril.yaml
+        filename = f"per-{test_code_clean}-{community_clean}-{pattern.year}-{call_clean}.yaml"
         return os.path.join(base_dir, filename)
         
     def extract_text_from_pdf(self, pdf_path: str) -> str:
@@ -511,8 +512,8 @@ class ParametricExamExtractor:
         questions = self.parse_questions_from_section(exam_section, pattern)
         print(f"✅ Extraídas {len(questions)} preguntas organizadas por categorías")
         
-        # Nota: Las respuestas se asignarán usando el script OCR analyze_pdf_structure.py
-        print("💡 Consejo: Usa 'python analyze_pdf_structure.py --exam-type PER --test-model TEST01' para extraer respuestas")
+        # Nota: Las respuestas se asignarán usando el script OCR madrid_extract_answers.py
+        print("💡 Consejo: Usa 'python madrid_extract_answers.py --exam-type PER --test-model TEST01' para extraer respuestas")
         
         # Agrupar por categoría
         questions_by_category = {}
@@ -636,16 +637,32 @@ def main():
     """Función principal para extraer el examen de PER."""
     extractor = ParametricExamExtractor()
     
-    # Rutas de los PDFs
-    pdf_questions = "/workspaces/per-tests/data/raw/questions/madrid-2025.pdf"
-    pdf_answers = "/workspaces/per-tests/data/raw/answers/madrid-2025-resp.pdf"
+    # Rutas de los PDFs usando la configuración global
+    import sys
+    project_root = Path(__file__).parent.parent.parent
+    sys.path.append(str(project_root))
+    from config.settings import settings
     
-    # Verificar que existen los PDFs
-    if not os.path.exists(pdf_questions):
-        print(f"❌ Error: No se encuentra {pdf_questions}")
+    # Buscar archivos PDF en los directorios configurados
+    questions_dir = settings.get_raw_questions_path()
+    answers_dir = settings.get_raw_answers_path()
+    
+    # Buscar archivo de preguntas
+    pdf_questions_list = list(questions_dir.glob("*.pdf"))
+    if pdf_questions_list:
+        pdf_questions = str(pdf_questions_list[0])
+        print(f"📄 Usando PDF de preguntas: {Path(pdf_questions).name}")
+    else:
+        print(f"❌ Error: No se encuentra archivo PDF en {questions_dir}")
         return
-    if not os.path.exists(pdf_answers):
-        print(f"❌ Error: No se encuentra {pdf_answers}")
+    
+    # Buscar archivo de respuestas  
+    pdf_answers_list = list(answers_dir.glob("*.pdf"))
+    if pdf_answers_list:
+        pdf_answers = str(pdf_answers_list[0])
+        print(f"📄 Usando PDF de respuestas: {Path(pdf_answers).name}")
+    else:
+        print(f"❌ Error: No se encuentra archivo PDF en {answers_dir}")
         return
     
     # Extraer el examen de PER Madrid 2025 Código de Test 01
@@ -655,8 +672,8 @@ def main():
         print("❌ No se pudo extraer el examen")
         return
     
-    # Generar nombre de archivo automáticamente
-    output_path = extractor.generate_filename(PER_MADRID_2025_TEST_01, "/workspaces/per-tests/data/exams")
+    # Generar nombre de archivo automáticamente usando configuración
+    output_path = extractor.generate_filename(PER_MADRID_2025_TEST_01, str(settings.get_exams_path()))
     extractor.save_to_yaml(exam_data, output_path)
     
     # Mostrar estadísticas

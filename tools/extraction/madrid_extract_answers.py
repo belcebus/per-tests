@@ -16,20 +16,28 @@ TIPOS DE EXAMEN SOPORTADOS:
 - PER: Patrón de Embarcación de Recreo
 - PATRON_YATE: Patrón de Yate  
 - CAPITAN_YATE: Capitán de Yate
-- LICENCIA_NAVEGACION: Licencia de Navegación
-
-USO:
+- LICENCIA_NAVEGACION: Licencia de Nave            # Sugerencias de próximos pasos
+            print("\n💡 PRÓXIMOS PASOS:")
+            if args.exam_type == 'PER' and args.test_model == 'TEST01':
+                new_filename = extractor._generate_output_filename('PER', 'TEST01')
+                print(f"   1. Revisar: extracted_answers/{new_filename}")
+                print(f"   2. Archivo de compatibilidad: extracted_answers/per_test01_answers.json")
+                print("   3. Ejecutar: python madrid_merge_exam.py")
+                print("   4. Reiniciar el servidor de la aplicación")
+            else:
+                print("   1. Revisar los archivos JSON generados en el directorio de salida")
+                print("   2. Usar apply_ocr_answers.py para aplicar las respuestas al YAML correspondiente")SO:
 # Extraer todas las respuestas de todos los exámenes
-python analyze_pdf_structure.py
+python madrid_extract_answers.py
 
 # Extraer respuestas de un tipo específico de examen
-python analyze_pdf_structure.py --exam-type PER
+python madrid_extract_answers.py --exam-type PER
 
 # Extraer respuestas de un modelo específico
-python analyze_pdf_structure.py --exam-type PER --test-model TEST01
+python madrid_extract_answers.py --exam-type PER --test-model TEST01
 
 # Especificar archivo PDF personalizado
-python analyze_pdf_structure.py --pdf-path "pdfs/otro-examen.pdf" --exam-type PATRON_YATE
+python madrid_extract_answers.py --pdf-path "pdfs/otro-examen.pdf" --exam-type PATRON_YATE
 
 PARÁMETROS:
 --exam-type: Tipo de examen a extraer (PER, PATRON_YATE, CAPITAN_YATE, LICENCIA_NAVEGACION)
@@ -49,16 +57,50 @@ from PIL import Image, ImageEnhance, ImageFilter
 import re
 import json
 import argparse
+import sys
+import os
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
+
+# Añadir el directorio del proyecto al path para importaciones
+project_root = Path(__file__).parent.parent.parent
+sys.path.append(str(project_root))
+
+from config.settings import settings
 
 class PDFAnswerExtractor:
     """
     Extractor de respuestas del PDF oficial usando OCR
     """
     
-    def __init__(self, pdf_path: str = "../../data/raw/answers/madrid-2025-resp.pdf", output_dir: str = "../../extracted_answers", 
+    def __init__(self, pdf_path: str = None, output_dir: str = None, 
                  target_exam_type: Optional[str] = None, target_test_model: Optional[str] = None):
+        # Usar configuración global si no se especifica ruta
+        if pdf_path is None:
+            # Buscar el archivo PDF de respuestas en el directorio de respuestas configurado
+            answers_dir = settings.get_raw_answers_path()
+            
+            # Intentar encontrar el archivo PDF siguiendo el patrón: comunidad-año-convocatoria.pdf
+            # Buscar archivos PDF en el directorio
+            pdf_files = list(answers_dir.glob("*.pdf"))
+            
+            if pdf_files:
+                # Usar el primer archivo PDF encontrado
+                pdf_path = pdf_files[0]
+                print(f"📄 Auto-detectado archivo PDF: {pdf_path.name}")
+            else:
+                # Fallback al nombre por defecto
+                pdf_path = answers_dir / "madrid-2025-abril.pdf"
+                print(f"📄 Usando archivo por defecto: {pdf_path.name}")
+        else:
+            pdf_path = Path(pdf_path)
+            
+        if output_dir is None:
+            # Usar directorio configurado para archivos extraídos
+            output_dir = settings.get_extracted_path()
+        else:
+            output_dir = Path(output_dir)
+            
         self.pdf_path = Path(pdf_path)
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(exist_ok=True)
@@ -66,6 +108,9 @@ class PDFAnswerExtractor:
         # Filtros específicos
         self.target_exam_type = target_exam_type
         self.target_test_model = target_test_model
+        
+        # Extraer información del PDF para generar nombres de archivo
+        self.pdf_info = self._extract_pdf_info_from_name()
         
         # Patrones para detectar tipos de examen
         self.exam_patterns = {
@@ -97,6 +142,51 @@ class PDFAnswerExtractor:
             r'Cdd(\d+)'  # Patrón específico que aparece en el OCR
         ]
     
+    def _extract_pdf_info_from_name(self) -> dict:
+        """
+        Extrae información del nombre del archivo PDF siguiendo el patrón:
+        comunidad-año-convocatoria.pdf (ej: madrid-2025-abril.pdf)
+        """
+        pdf_info = {
+            'comunidad': 'unknown',
+            'año': 'unknown',
+            'convocatoria': 'unknown'
+        }
+        
+        # Extraer nombre del archivo sin extensión
+        filename = self.pdf_path.stem
+        
+        # Patrón esperado: comunidad-año-convocatoria
+        # Ej: madrid-2025-abril
+        parts = filename.split('-')
+        
+        if len(parts) >= 3:
+            pdf_info['comunidad'] = parts[0]
+            pdf_info['año'] = parts[1]
+            pdf_info['convocatoria'] = parts[2]
+        elif len(parts) == 2:
+            # Fallback si solo hay 2 partes
+            pdf_info['comunidad'] = parts[0]
+            pdf_info['año'] = parts[1]
+        
+        print(f"📋 Info extraída del PDF: {pdf_info}")
+        return pdf_info
+    
+    def _generate_output_filename(self, exam_type: str, test_model: str) -> str:
+        """
+        Genera el nombre del archivo de salida siguiendo el patrón:
+        {tipo}-{modelo}-{comunidad}-{año}-{convocatoria}.json
+        """
+        # Convertir tipo de examen a formato de archivo
+        exam_type_lower = exam_type.lower()
+        test_model_lower = test_model.lower()
+        
+        # Construir nombre usando la información del PDF
+        filename = f"{exam_type_lower}-{test_model_lower}-{self.pdf_info['comunidad']}-{self.pdf_info['año']}-{self.pdf_info['convocatoria']}.json"
+        
+        print(f"📝 Nombre de archivo generado: {filename}")
+        return filename
+
     def enhance_image_for_ocr(self, image: Image.Image) -> Image.Image:
         """
         Mejora la imagen para obtener mejor precisión en el OCR
@@ -402,21 +492,36 @@ class PDFAnswerExtractor:
                 json.dump(all_exams, f, indent=2, ensure_ascii=False)
             print(f"📄 Archivo completo: {complete_file}")
             
-            # Archivo específico para PER Test 01 (compatibilidad con versiones anteriores)
+            # Archivo específico para PER Test 01 con nuevo patrón de nomenclatura
             if 'PER' in all_exams and 'TEST01' in all_exams['PER']:
                 per_test01 = all_exams['PER']['TEST01']
-                per_file = self.output_dir / "per_test01_answers.json"
+                
+                # Generar nombre de archivo siguiendo el nuevo patrón
+                new_filename = self._generate_output_filename('PER', 'TEST01')
+                per_file_new = self.output_dir / new_filename
+                
+                # Mantener archivo de compatibilidad con nombre anterior
+                per_file_legacy = self.output_dir / "per_test01_answers.json"
                 
                 per_data = {
                     'exam_type': 'PER',
                     'test_model': 'TEST01',
                     'total_answers': per_test01['total_answers'],
-                    'answers': per_test01['answers']
+                    'answers': per_test01['answers'],
+                    'source_pdf': self.pdf_path.name,
+                    'generated_at': per_test01.get('generated_at'),
+                    'pdf_info': self.pdf_info
                 }
                 
-                with open(per_file, 'w', encoding='utf-8') as f:
+                # Guardar con nuevo nombre
+                with open(per_file_new, 'w', encoding='utf-8') as f:
                     json.dump(per_data, f, indent=2, ensure_ascii=False)
-                print(f"🎯 PER Test 01 (compatibilidad): {per_file}")
+                print(f"🎯 PER Test 01 (nuevo formato): {per_file_new}")
+                
+                # Guardar también con nombre legacy para compatibilidad
+                with open(per_file_legacy, 'w', encoding='utf-8') as f:
+                    json.dump(per_data, f, indent=2, ensure_ascii=False)
+                print(f"🎯 PER Test 01 (compatibilidad): {per_file_legacy}")
             
             # Resumen general
             summary_file = self.output_dir / "exam_summary.json"
@@ -481,7 +586,7 @@ class PDFAnswerExtractor:
             per_data = all_exams['PER']['TEST01']
             print(f"   ✅ {per_data['total_answers']} respuestas extraídas")
             print(f"   📄 Archivos generados:")
-            print(f"      - extracted_answers/per_test01_answers.json")
+            print(f"      - extracted_answers/{self._generate_output_filename('PER', 'TEST01')}")
             print(f"      - extracted_answers/per_test01_answers.json (compatibilidad)")
         
         print("\\n💡 ARCHIVOS GENERADOS:")
@@ -502,19 +607,19 @@ def parse_arguments():
 EJEMPLOS DE USO:
 
   # Extraer todas las respuestas de todos los exámenes
-  python analyze_pdf_structure.py
+  python madrid_extract_answers.py
 
   # Extraer respuestas de un tipo específico de examen
-  python analyze_pdf_structure.py --exam-type PER
+  python madrid_extract_answers.py --exam-type PER
 
   # Extraer respuestas de un modelo específico
-  python analyze_pdf_structure.py --exam-type PER --test-model TEST01
+  python madrid_extract_answers.py --exam-type PER --test-model TEST01
 
   # Especificar archivo PDF personalizado
-  python analyze_pdf_structure.py --pdf-path "pdfs/otro-examen.pdf" --exam-type PATRON_YATE
+  python madrid_extract_answers.py --pdf-path "pdfs/otro-examen.pdf" --exam-type PATRON_YATE
 
   # Especificar directorio de salida personalizado
-  python analyze_pdf_structure.py --output-dir "mis_respuestas" --exam-type PER
+  python madrid_extract_answers.py --output-dir "mis_respuestas" --exam-type PER
 
 TIPOS DE EXAMEN SOPORTADOS:
   - PER: Patrón de Embarcación de Recreo
@@ -543,15 +648,13 @@ MODELOS DE TEST COMUNES:
     parser.add_argument(
         '--pdf-path',
         type=str,
-        default='../../data/raw/answers/madrid-2025-resp.pdf',
-        help='Ruta al archivo PDF de respuestas (default: ../../data/raw/answers/madrid-2025-resp.pdf)'
+        help='Ruta al archivo PDF de respuestas (default: usar configuración global)'
     )
     
     parser.add_argument(
         '--output-dir',
         type=str,
-        default='../../extracted_answers',
-        help='Directorio de salida para los archivos JSON (default: ../../extracted_answers)'
+        help='Directorio de salida para los archivos JSON (default: usar configuración global)'
     )
     
     return parser.parse_args()
@@ -567,8 +670,6 @@ def main():
     # Mostrar encabezado
     print("🚀 EXTRACTOR DE RESPUESTAS OCR - PDF OFICIAL")
     print("="*60)
-    print(f"📄 Archivo PDF: {args.pdf_path}")
-    print(f"📁 Directorio salida: {args.output_dir}")
     
     if args.exam_type:
         print(f"🎯 Filtro tipo examen: {args.exam_type}")
@@ -583,20 +684,24 @@ def main():
     print("="*60)
     
     try:
-        # Verificar que el archivo PDF existe
-        pdf_path = Path(args.pdf_path)
-        if not pdf_path.exists():
-            print(f"❌ Error: El archivo PDF no existe: {args.pdf_path}")
-            print("💡 Verifica la ruta del archivo PDF")
-            return 1
-        
-        # Crear extractor con los parámetros especificados
+        # Crear extractor con los parámetros especificados (o rutas por defecto)
         extractor = PDFAnswerExtractor(
-            pdf_path=args.pdf_path,
-            output_dir=args.output_dir,
+            pdf_path=args.pdf_path if args.pdf_path else None,  # None usa configuración global
+            output_dir=args.output_dir if args.output_dir else None,  # None usa configuración global
             target_exam_type=args.exam_type,
             target_test_model=args.test_model
         )
+        
+        # Verificar que el archivo PDF existe
+        if not extractor.pdf_path.exists():
+            print(f"❌ Error: El archivo PDF no existe: {extractor.pdf_path}")
+            print("💡 Verifica la ruta del archivo PDF")
+            print(f"💡 Directorio esperado: {settings.get_raw_answers_path()}")
+            print(f"💡 Patrón de nombre esperado: comunidad-año-convocatoria.pdf (ej: madrid-2025-abril.pdf)")
+            return 1
+        
+        print(f"📄 Usando archivo PDF: {extractor.pdf_path}")
+        print(f"📁 Directorio salida: {extractor.output_dir}")
         
         # Procesar páginas
         all_exams = extractor.process_all_pages()
@@ -614,17 +719,17 @@ def main():
             print("\\n💡 PRÓXIMOS PASOS:")
             if args.exam_type == 'PER' and args.test_model == 'TEST01':
                 print("   1. Revisar: extracted_answers/per_test01_answers.json")
-                print("   2. Ejecutar: python apply_ocr_answers.py")
+                print("   2. Ejecutar: python madrid_merge_exam.py")
                 print("   3. Reiniciar el servidor de la aplicación")
             else:
                 print("   1. Revisar los archivos JSON generados en el directorio de salida")
-                print("   2. Usar apply_ocr_answers.py para aplicar las respuestas al YAML correspondiente")
+                print("   2. Usar madrid_merge_exam.py para aplicar las respuestas al YAML correspondiente")
         else:
             print("\\n⚠️  No se encontraron exámenes que coincidan con los filtros especificados")
             print("\\n💡 SUGERENCIAS:")
             print("   - Verificar que el PDF contiene el tipo de examen especificado")
             print("   - Probar sin filtros para ver todos los exámenes disponibles:")
-            print(f"     python analyze_pdf_structure.py --pdf-path '{args.pdf_path}'")
+            print(f"     python madrid_extract_answers.py --pdf-path '{args.pdf_path}'")
             return 1
             
         return 0
