@@ -67,8 +67,22 @@ PER_MADRID_2025_TEST_03 = ExamPattern(
     test_code="test03"  # Actualizado para coincidir con el formato de archivo
 )
 
+# Definir el patrón para PER Madrid 2025 Código de Test 02
+PER_MADRID_2025_TEST_02 = ExamPattern(
+    title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
+    subtitle="Código de Test 02",
+    answer_prefix="Respuestas al",
+    total_questions=45,
+    categories=PER_CATEGORIES,
+    community="Madrid",
+    year=2025,
+    call="abril",
+    test_code="test02"
+)
+
 # Mantener compatibilidad con nombres anteriores
 PER_TEST_01 = PER_MADRID_2025_TEST_01
+PER_TEST_02 = PER_MADRID_2025_TEST_02
 PER_TEST_03 = PER_MADRID_2025_TEST_03
 
 def create_per_pattern(community: str, year: int, call: str, test_code: str, 
@@ -323,13 +337,16 @@ class ParametricExamExtractor:
                 
                 # Procesar el contenido completo de la pregunta
                 question_data = self._parse_single_question(question_num, question_content, current_category, current_category_name)
-                if question_data:
+                if question_data and self._is_valid_question(question_data):
                     questions.append(question_data)
             else:
                 i += 1
         
         # Ordenar por ID para asegurar orden secuencial
         questions.sort(key=lambda x: x['id'])
+        
+        # NUEVA MEJORA: Detectar y eliminar duplicados por ID
+        questions = self._remove_duplicate_ids(questions)
         
         # Buscar preguntas faltantes y intentar recuperarlas
         extracted_ids = set(q['id'] for q in questions)
@@ -342,8 +359,13 @@ class ParametricExamExtractor:
             
             # Buscar fragmentos que podrían ser preguntas faltantes
             recovered_questions = self._recover_missing_questions(exam_section, missing_ids, pattern, category_title_map)
-            questions.extend(recovered_questions)
+            # Validar preguntas recuperadas
+            valid_recovered = [q for q in recovered_questions if self._is_valid_question(q)]
+            questions.extend(valid_recovered)
             questions.sort(key=lambda x: x['id'])
+            
+            # Eliminar duplicados una vez más después de la recuperación
+            questions = self._remove_duplicate_ids(questions)
         
         print(f"✅ Extraídas {len(questions)} preguntas organizadas por categorías")
         return questions
@@ -682,192 +704,152 @@ class ParametricExamExtractor:
         
         return recovered
 
-def find_pdf_file(directory: Path, pattern: str) -> Optional[str]:
-    """
-    Busca un archivo PDF que coincida con el patrón especificado.
-    
-    Args:
-        directory: Directorio donde buscar
-        pattern: Patrón de nombre de archivo (puede incluir wildcards)
-    
-    Returns:
-        Ruta completa del archivo encontrado o None si no se encuentra
-    """
-    # Intentar buscar con el patrón exacto
-    matching_files = list(directory.glob(f"{pattern}.pdf"))
-    if matching_files:
-        return str(matching_files[0])
-    
-    # Intentar buscar con wildcards más flexibles
-    flexible_patterns = [
-        f"*{pattern}*.pdf",
-        f"{pattern}*pdf",
-        f"*{pattern.replace('-', '*')}*.pdf"
-    ]
-    
-    for flex_pattern in flexible_patterns:
-        matching_files = list(directory.glob(flex_pattern))
-        if matching_files:
-            print(f"📄 Encontrado con patrón flexible '{flex_pattern}': {matching_files[0].name}")
-            return str(matching_files[0])
-    
-    return None
-
-def main():
-    """Función principal para extraer el examen de PER."""
-    import argparse
-    import sys
-    
-    # Configurar argumentos de línea de comandos
-    parser = argparse.ArgumentParser(
-        description="Extractor parametrizable de exámenes PER desde PDFs",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Ejemplos de uso:
-  # Extraer test01 de Madrid 2025 abril (por defecto)
-  python madrid_extract_questions.py
-  
-  # Extraer test03 específico
-  python madrid_extract_questions.py --test test03
-  
-  # Extraer de Valencia 2024 junio
-  python madrid_extract_questions.py --community Valencia --year 2024 --call junio
-  
-  # Especificar archivo PDF específico
-  python madrid_extract_questions.py --pdf-file valencia-2024-junio.pdf
-  
-  # Especificar patrón de búsqueda para el PDF
-  python madrid_extract_questions.py --pdf-pattern "valencia-2024-junio"
+    def _is_valid_question(self, question_data: Dict) -> bool:
         """
-    )
-    
-    parser.add_argument('--community', default='Madrid',
-                       help='Comunidad autónoma (ej: Madrid, Valencia, Barcelona)')
-    parser.add_argument('--year', type=int, default=2025,
-                       help='Año del examen (ej: 2024, 2025)')
-    parser.add_argument('--call', default='abril',
-                       help='Convocatoria (ej: abril, junio, septiembre, noviembre)')
-    parser.add_argument('--test', default='test01',
-                       help='Código del test (ej: test01, test02, test03)')
-    parser.add_argument('--total-questions', type=int, default=45,
-                       help='Número total de preguntas esperadas')
-    
-    # Opciones para especificar archivos PDF
-    parser.add_argument('--pdf-file', 
-                       help='Archivo PDF específico a procesar (ruta completa)')
-    parser.add_argument('--pdf-pattern',
-                       help='Patrón para buscar el archivo PDF (ej: "madrid-2025-abril")')
-    
-    # Opciones de salida
-    parser.add_argument('--output-dir', 
-                       help='Directorio de salida (por defecto: data/exams)')
-    parser.add_argument('--output-file',
-                       help='Nombre de archivo de salida específico')
-    
-    args = parser.parse_args()
-    
-    # Configuración del proyecto
-    project_root = Path(__file__).parent.parent.parent
-    sys.path.append(str(project_root))
-    from config.settings import settings
-    
-    # Crear el patrón de examen dinámicamente
-    exam_pattern = create_per_pattern(
-        community=args.community,
-        year=args.year,
-        call=args.call,
-        test_code=args.test,
-        total_questions=args.total_questions
-    )
-    
-    print(f"🚢 Configuración del examen:")
-    print(f"   📍 Comunidad: {exam_pattern.community}")
-    print(f"   📅 Año: {exam_pattern.year}")
-    print(f"   📢 Convocatoria: {exam_pattern.call}")
-    print(f"   🔢 Test: {exam_pattern.test_code}")
-    print(f"   ❓ Preguntas esperadas: {exam_pattern.total_questions}")
-    
-    # Determinar el archivo PDF a procesar
-    pdf_questions = None
-    
-    if args.pdf_file:
-        # Archivo específico proporcionado
-        if os.path.exists(args.pdf_file):
-            pdf_questions = args.pdf_file
-            print(f"📄 Usando archivo específico: {Path(pdf_questions).name}")
-        else:
-            print(f"❌ Error: El archivo {args.pdf_file} no existe")
-            return
-    else:
-        # Buscar archivo PDF basado en patrón
-        questions_dir = settings.get_raw_questions_path()
+        Valida si una pregunta extraída es válida y completa.
         
-        if args.pdf_pattern:
-            # Usar patrón personalizado
-            search_pattern = args.pdf_pattern
-        else:
-            # Generar patrón automáticamente
-            community_clean = args.community.lower().replace(" ", "-")
-            call_clean = args.call.lower().replace(" ", "-")
-            search_pattern = f"{community_clean}-{args.year}-{call_clean}"
+        Criterios de validación:
+        1. La pregunta debe tener al menos 10 caracteres de texto significativo
+        2. Debe tener las 4 opciones (a, b, c, d)
+        3. El texto de la pregunta no debe ser solo fragmentos o palabras sueltas
+        4. Las opciones deben tener contenido mínimo
+        """
+        if not question_data:
+            return False
         
-        print(f"� Buscando PDF con patrón: {search_pattern}")
-        pdf_questions = find_pdf_file(questions_dir, search_pattern)
+        question_text = question_data.get('question', '').strip()
+        options = question_data.get('options', {})
         
-        if not pdf_questions:
-            print(f"❌ Error: No se encontró archivo PDF con patrón '{search_pattern}' en {questions_dir}")
-            print(f"📁 Archivos disponibles:")
-            for pdf_file in questions_dir.glob("*.pdf"):
-                print(f"   - {pdf_file.name}")
-            print(f"\n💡 Consejos:")
-            print(f"   - Usa --pdf-pattern para especificar un patrón personalizado")
-            print(f"   - Usa --pdf-file para especificar la ruta completa del archivo")
-            return
+        # 1. Validar longitud mínima de la pregunta
+        if len(question_text) < 10:
+            print(f"❌ Pregunta {question_data.get('id')} rechazada: texto muy corto ('{question_text}')")
+            return False
         
-        print(f"📄 Usando PDF encontrado: {Path(pdf_questions).name}")
-    
-    # Extraer el examen
-    extractor = ParametricExamExtractor()
-    exam_data = extractor.extract_exam(pdf_questions, exam_pattern)
-    
-    if not exam_data:
-        print("❌ No se pudo extraer el examen")
-        return
-    
-    # Determinar archivo de salida
-    if args.output_file:
-        output_path = args.output_file
-    else:
-        output_dir = args.output_dir or str(settings.get_exams_path())
-        output_path = extractor.generate_filename(exam_pattern, output_dir)
-    
-    extractor.save_to_yaml(exam_data, output_path)
-    
-    # Mostrar estadísticas
-    print(f"\n{'='*60}")
-    print(f"📊 ESTADÍSTICAS DEL EXAMEN EXTRAÍDO")
-    print(f"{'='*60}")
-    info = exam_data['exam_info']
-    print(f"📋 Título: {info['title']}")
-    print(f"🏷️  Subtítulo: {info['subtitle']}")
-    print(f"🏛️  Comunidad: {info['community']}")
-    print(f"📅 Año: {info['year']}")
-    print(f"📢 Convocatoria: {info['call']}")
-    print(f"🔢 Código de Test: {info['test_code']}")
-    print(f"❓ Preguntas extraídas: {info['total_questions']}")
-    print(f"🎯 Preguntas esperadas: {info['expected_questions']}")
-    print(f"✅ Preguntas con respuesta: {info['questions_with_answers']}")
-    print(f"📂 Categorías: {info['categories']}")
-    print(f"💾 Archivo generado: {output_path}")
-    
-    print(f"\n📈 DISTRIBUCIÓN POR CATEGORÍA:")
-    for cat_id, cat_data in exam_data['categories'].items():
-        questions_with_answers = sum(1 for q in cat_data['questions'] if q['correct_answer'] is not None)
-        print(f"  {cat_id:2d}. {cat_data['name']:<25}: {len(cat_data['questions']):2d} preguntas ({questions_with_answers} con respuesta)")
-    
-    print(f"\n💡 Próximos pasos:")
-    print(f"   1. Ejecuta el extractor de respuestas para completar el examen")
-    print(f"   2. Usa: python madrid_extract_answers.py --exam-file '{output_path}'")
+        # 2. Filtrar fragmentos que claramente no son preguntas
+        invalid_fragments = [
+            'millas.',
+            'metros.',
+            'nudos.',
+            'grados.',
+            'minutos.',
+            'segundos.',
+            'horas.',
+            'días.',
+            'años.',
+        ]
+        
+        if question_text.lower() in invalid_fragments:
+            print(f"❌ Pregunta {question_data.get('id')} rechazada: fragmento inválido ('{question_text}')")
+            return False
+        
+        # 3. Validar que tenga las 4 opciones
+        expected_options = {'a', 'b', 'c', 'd'}
+        if not expected_options.issubset(set(options.keys())):
+            missing_options = expected_options - set(options.keys())
+            print(f"❌ Pregunta {question_data.get('id')} rechazada: faltan opciones {missing_options}")
+            return False
+        
+        # 4. Validar que las opciones tengan contenido mínimo
+        for letter, option_text in options.items():
+            if len(option_text.strip()) < 3:
+                print(f"❌ Pregunta {question_data.get('id')} rechazada: opción {letter} muy corta")
+                return False
+        
+        # 5. Validar que la pregunta tenga estructura de pregunta (signos de interrogación, etc.)
+        # o al menos contenido sustancial
+        has_question_structure = (
+            '?' in question_text or
+            ':' in question_text or  # Muchas preguntas terminan con ":"
+            question_text.lower().startswith(('qué', 'cuál', 'cómo', 'dónde', 'cuándo', 'por qué', 'indique', 'señale', 'conforme', 'según', 'de acuerdo', 'en relación', 'con respecto', 'ante una', 'en caso de', 'se define', 'todo buque', 'un buque')) or
+            len(question_text.split()) >= 5  # Al menos 5 palabras
+        )
+        
+        if not has_question_structure:
+            print(f"❌ Pregunta {question_data.get('id')} rechazada: no parece una pregunta válida ('{question_text[:50]}...')")
+            return False
+        
+        return True
 
-if __name__ == "__main__":
-    main()
+    def _remove_duplicate_ids(self, questions: List[Dict]) -> List[Dict]:
+        """
+        Elimina preguntas duplicadas basándose en el ID, manteniendo la de mejor calidad.
+        """
+        from collections import defaultdict
+        
+        # Agrupar preguntas por ID
+        questions_by_id = defaultdict(list)
+        for q in questions:
+            questions_by_id[q['id']].append(q)
+        
+        # Resolver duplicados
+        final_questions = []
+        for question_id, question_list in questions_by_id.items():
+            if len(question_list) == 1:
+                # No hay duplicados
+                final_questions.append(question_list[0])
+            else:
+                # Hay duplicados, elegir el mejor
+                print(f"⚠️  Detectados {len(question_list)} duplicados para pregunta {question_id}")
+                
+                best_question = self._choose_best_question(question_list)
+                final_questions.append(best_question)
+                
+                # Mostrar información de debug
+                for i, q in enumerate(question_list):
+                    marker = "✅ ELEGIDA" if q == best_question else "❌ Descartada"
+                    print(f"   {marker}: '{q['question'][:50]}...' (categoría {q['category']})")
+        
+        return final_questions
+
+    def _choose_best_question(self, question_candidates: List[Dict]) -> Dict:
+        """
+        Elige la mejor pregunta entre varios candidatos duplicados.
+        
+        Criterios de selección (en orden de prioridad):
+        1. Pregunta con todas las opciones válidas
+        2. Pregunta con texto más largo y sustancial
+        3. Pregunta que no contenga fragmentos como "contenido incompleto"
+        4. Pregunta de categoría más apropiada según contenido
+        """
+        # Filtrar candidatos válidos
+        valid_candidates = [q for q in question_candidates if self._is_valid_question(q)]
+        
+        if not valid_candidates:
+            # Si ninguno es válido, tomar el que tenga más texto
+            return max(question_candidates, key=lambda q: len(q.get('question', '')))
+        
+        if len(valid_candidates) == 1:
+            return valid_candidates[0]
+        
+        # Múltiples candidatos válidos, aplicar criterios de calidad
+        def quality_score(question):
+            score = 0
+            text = question.get('question', '')
+            options = question.get('options', {})
+            
+            # Puntos por longitud del texto
+            score += len(text)
+            
+            # Penalizar si contiene "incompleto"
+            if 'incompleto' in text.lower():
+                score -= 50
+            
+            # Puntos por opciones de calidad
+            for option_text in options.values():
+                if 'incompleto' in option_text.lower():
+                    score -= 10
+                else:
+                    score += len(option_text)
+            
+            # Bonos por estructura de pregunta
+            if '?' in text:
+                score += 20
+            
+            if any(starter in text.lower() for starter in ['qué', 'cuál', 'cómo', 'indique', 'señale']):
+                score += 15
+            
+            return score
+        
+        # Elegir el candidato con mayor puntuación
+        best_candidate = max(valid_candidates, key=quality_score)
+        return best_candidate
