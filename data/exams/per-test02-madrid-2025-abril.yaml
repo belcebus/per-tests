@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 1
       options:
         a: Mecha.
@@ -14,7 +14,7 @@ categories:
       question: 'El tubo dentro del cual gira el eje del timón se denomina:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 2
       options:
         a: La prolongación estructural de la quilla hacia la proa.
@@ -25,7 +25,7 @@ categories:
       question: 'La roda es:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 3
       options:
         a: Los imbornales son aberturas en los costados que sirven para evacuar el
@@ -37,7 +37,7 @@ categories:
       question: Indique cuál de las siguientes definiciones es INCORRECTA.
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 4
       options:
         a: Enderezarse o ponerse vertical.
@@ -51,7 +51,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 5
       options:
         a: Un noray es cada uno de los postes de madera o hierro que, asegurados a
@@ -65,7 +65,7 @@ categories:
       question: ¿Cuál de las siguientes definiciones es CORRECTA?
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 6
       options:
         a: Se estudiará la carta y el derrotero para elegir un lugar protegido y un
@@ -83,7 +83,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 7
       options:
         a: Se deben almacenar a bordo en lugar seco.
@@ -95,7 +95,7 @@ categories:
         una recomendación de uso y estiba?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 8
       options:
         a: Es un equipo personal adaptado a la talla de cada tripulante.
@@ -107,7 +107,7 @@ categories:
       question: En relación con el arnés de seguridad, señale la opción INCORRECTA.
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 9
       options:
         a: Originar una inducción magnética peligrosa en el reflector radar pasivo.
@@ -117,7 +117,7 @@ categories:
       question: 'Una tormenta eléctrica podrá:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 10
       options:
         a: Llevar la mar por la amura con poca arrancada, pero la suficiente para
@@ -132,7 +132,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 11
       options:
         a: 40 metros.
@@ -144,7 +144,7 @@ categories:
         buceo de:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 12
       options:
         a: Un incidente o accidente que afecte a la seguridad de la embarcación tales
@@ -163,7 +163,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 13
       options:
         a: Un doble cilindro amarillo.
@@ -173,7 +173,7 @@ categories:
       question: 'Las marcas de tope de las Marcas cardinales serán siempre:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 14
       options:
         a: Las Marcas de peligro aislado nunca tendrán forma de castillete o espeque.
@@ -186,7 +186,7 @@ categories:
         siguientes afirmaciones es INCORRECTA.
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 15
       options:
         a: Indican el lugar donde se encuentran las aguas más seguras, en relación
@@ -199,7 +199,7 @@ categories:
         CORRECTA.
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 16
       options:
         a: Una única esfera roja.
@@ -210,7 +210,7 @@ categories:
         sería:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 17
       options:
         a: Dejaremos la “Marca de canal principal a estribor” por nuestro costado
@@ -230,7 +230,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 18
       options:
         a: Únicamente los buques de vela.
@@ -243,7 +243,7 @@ categories:
         del paso o canal?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 19
       options:
         a: Un pito.
@@ -257,7 +257,7 @@ categories:
         equipos acústicos debemos llevar a bordo?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 20
       options:
         a: Deberá mantener un resguardo mínimo de 1 milla con el buque alcanzado.
@@ -270,7 +270,7 @@ categories:
         a otro:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 21
       options:
         a: Con una frecuencia de 120 o más centelleos por minuto, a intervalos regulares.
@@ -283,7 +283,7 @@ categories:
         y marcas” del RIPA, la «luz centelleante» es una luz que produce centelleos:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 22
       options:
         a: Empujando a otro, cuando forman una unidad compuesta y la longitud del
@@ -296,7 +296,7 @@ categories:
         en el lugar más visible una marca bicónica, podría tratarse de un buque:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 23
       options:
         a: Blanca, que muestra su luz en un arco de horizonte de 225 grados, de forma
@@ -311,7 +311,7 @@ categories:
         para estas señales tendrá las siguientes características:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 24
       options:
         a: Reducirá su velocidad hasta la mínima de gobierno.
@@ -326,7 +326,7 @@ categories:
         buque situado a proa de su través:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 25
       options:
         a: Buque sin gobierno.
@@ -339,7 +339,7 @@ categories:
         de la derrota de otro buque, se considera un:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Que puede existir riesgo aun cuando sea evidente una variación apreciable
@@ -356,7 +356,7 @@ categories:
         28 del RIPA, ¿cuál de los siguientes buques viene de vuelta encontrada?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 27
       options:
         a: Que puede existir riesgo aun cuando sea evidente una variación apreciable
@@ -375,7 +375,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 28
       options:
         a: Adujar.
@@ -386,7 +386,7 @@ categories:
         círculos recibe el nombre de:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 29
       options:
         a: Alejar la proa del viento.
@@ -400,7 +400,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 30
       options:
         a: Nunca es de utilidad trasladar pesos para cambiar el asiento.
@@ -412,7 +412,7 @@ categories:
       question: 'En relación con el reflote de una embarcación de recreo varada:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 31
       options:
         a: Desnudar la zona afectada, recortar cuidadosamente todas las ampollas y
@@ -428,7 +428,7 @@ categories:
         cara, cuello o manos, se debe:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 32
       options:
         a: Parar el motor y colocarse el chaleco salvavidas.
@@ -442,7 +442,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 33
       options:
         a: Un aumento en su intensidad.
@@ -452,7 +452,7 @@ categories:
       question: 'En relación con el viento, se denomina “caer” a:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 34
       options:
         a: La ebullición del agua.
@@ -463,7 +463,7 @@ categories:
         de la escala centígrada?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 35
       options:
         a: 1 milibar.
@@ -474,7 +474,7 @@ categories:
         que existe a nivel del mar, cuyo valor normal es:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 36
       options:
         a: Es el que existe en un momento dado, con nuestra embarcación parada.
@@ -489,7 +489,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 37
       options:
         a: Demora= Rumbo – Marcación.
@@ -499,7 +499,7 @@ categories:
       question: Indique cuál de las siguientes expresiones es CORRECTA.
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 38
       options:
         a: La variación anual.
@@ -509,7 +509,7 @@ categories:
       question: 'El rumbo verdadero se diferencia del rumbo magnético en:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 39
       options:
         a: Sensibilidad y estabilidad.
@@ -520,7 +520,7 @@ categories:
         dos cualidades esenciales:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 40
       options:
         a: El efecto que produce la acción del viento en una embarcación en navegación.
@@ -531,7 +531,7 @@ categories:
       question: 'El abatimiento es:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 41
       options:
         a: Navegación costera.
@@ -544,7 +544,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 42
       options:
         a: 6,26 metros.
@@ -556,7 +556,7 @@ categories:
         es de 1018 milibares, ¿cuál sería la sonda en el momento de la primera pleamar?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 43
       options:
         a: l= 36º 54,5’N; L= 005º 46,6’W.
@@ -570,7 +570,7 @@ categories:
         y la declinación magnética en toda la zona es 2,5º W.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 44
       options:
         a: l= 36° 07,4´N; L= 006° 03,7´W.
@@ -584,7 +584,7 @@ categories:
         y elegir la más aproximada de entre las siguientes.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 45
       options:
         a: 'Ra = 065º; HRB: 15:42.'

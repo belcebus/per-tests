@@ -51,6 +51,7 @@ def apply_answers_to_yaml(yaml_file: Path, extracted_answers: Dict[str, str]) ->
     
     # Crear backup del archivo original en el directorio de backups
     backup_dir = settings.get_backups_path()
+    backup_dir.mkdir(parents=True, exist_ok=True)  # Crear directorio si no existe
     backup_file = backup_dir / f"{yaml_file.stem}.yaml.backup"
     
     if not backup_file.exists():
@@ -58,6 +59,8 @@ def apply_answers_to_yaml(yaml_file: Path, extracted_answers: Dict[str, str]) ->
         import shutil
         shutil.copy2(yaml_file, backup_file)
         print(f"💾 Backup creado: {backup_file.name}")
+    else:
+        print(f"💾 Backup ya existe: {backup_file.name}")
     
     # Cargar el archivo YAML original
     with open(yaml_file, 'r', encoding='utf-8') as f:
@@ -172,7 +175,10 @@ EJEMPLOS DE USO:
         
         # Determinar archivo YAML objetivo
         if args.yaml_file:
-            yaml_file = settings.get_exams_path() / args.yaml_file
+            yaml_file = Path(args.yaml_file)
+            # Si la ruta no es absoluta y no incluye la carpeta base, añadir la ruta de exámenes
+            if not yaml_file.is_absolute() and not str(yaml_file).startswith('data/exams'):
+                yaml_file = settings.get_exams_path() / args.yaml_file
         else:
             yaml_file = settings.get_exams_path() / "per-test01-madrid-2025-abril.yaml"
         
