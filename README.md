@@ -46,10 +46,8 @@ per-tests/
 │   └── README.md            # Documentación general de herramientas
 ├── .env.example             # Plantilla de variables de entorno
 ├── requirements.txt         # Dependencias completas
-└── requirements-minimal.txt # Dependencias mínimas```
-│   └── README.md                 # Documentación de herramientas
+└── requirements-minimal.txt # Dependencias mínimas
 ├── extracted_answers/       # Respuestas extraídas por OCR
-├── pdfs/                   # Archivos PDF de exámenes oficiales
 ├── requirements.txt        # Dependencias Python
 └── README.md
 ```
@@ -97,20 +95,137 @@ uvicorn app.main:app --reload
 - **pdfplumber**: Análisis avanzado de estructura PDF
 - **numpy**: Operaciones numéricas para procesamiento de imágenes
 
+### Dependencias del Sistema (DevContainer)
+
+El devcontainer instala automáticamente las siguientes dependencias del sistema necesarias para OCR:
+
+#### 📦 Paquetes del Sistema
+
+1. **poppler-utils**: Herramientas para manipular archivos PDF
+   - Necesario para: `pdf2image` (conversión de PDF a imágenes)
+   - Comandos: `pdfinfo`, `pdftoppm`, etc.
+
+2. **tesseract-ocr**: Motor de OCR (Reconocimiento Óptico de Caracteres)
+   - Necesario para: `pytesseract` (reconocimiento de texto en imágenes)
+   - Versión: 4.1.1
+
+3. **tesseract-ocr-spa**: Paquete de idioma español para Tesseract
+   - Mejora la precisión del OCR para texto en español
+   - Incluye modelos entrenados específicamente para español
+
+#### 🚀 Instalación Automática
+
+Las dependencias del sistema se instalan automáticamente cuando se crea el devcontainer:
+
+```bash
+sudo apt update && sudo apt install -y poppler-utils tesseract-ocr tesseract-ocr-spa && pip3 install --user -r requirements.txt
+```
+
+#### ✅ Verificación de Instalación
+
+Para verificar que las dependencias están correctamente instaladas:
+
+```bash
+# Verificar poppler
+pdfinfo --version
+
+# Verificar tesseract
+tesseract --version
+
+# Verificar idiomas disponibles en tesseract
+tesseract --list-langs
+```
+
+#### 🔧 Solución de Problemas
+
+Si encuentras errores relacionados con:
+
+- `PDFInfoNotInstalledError`: Instala `poppler-utils`
+- `tesseract is not installed`: Instala `tesseract-ocr`
+- Precisión baja en OCR español: Instala `tesseract-ocr-spa`
+
+#### 🏗️ Reconstruir Devcontainer
+
+Si necesitas aplicar estos cambios a un Codespace existente:
+
+1. Abre la paleta de comandos (Ctrl+Shift+P)
+2. Busca "Dev Containers: Rebuild Container"
+3. Selecciona la opción para reconstruir
+
+O simplemente crea un nuevo Codespace que tendrá automáticamente todas las dependencias instaladas.
+
 ## Herramientas de Extracción
 
-El proyecto incluye herramientas específicas para procesar documentos oficiales de Madrid:
+El proyecto incluye herramientas especializadas para procesar documentos oficiales de diferentes comunidades:
+
+### `madrid_extract_questions.py` - Extractor Parametrizable
+**Completamente parametrizable** para extraer preguntas de diferentes comunidades, años y convocatorias.
+
+#### Características:
+- ✨ **Extracción parametrizable**: Soporte para diferentes comunidades autónomas
+- 🔍 **Búsqueda inteligente de PDFs**: Encuentra automáticamente archivos basándose en parámetros
+- 📂 **Múltiples opciones de salida**: Personaliza directorios y nombres de archivo
+- 🔧 **Manejo robusto de errores**: Sugerencias y validaciones útiles
+
+#### Parámetros principales:
+- `--community`: Comunidad autónoma (Madrid, Valencia, Barcelona, etc.)
+- `--year`: Año del examen (2024, 2025, etc.)
+- `--call`: Convocatoria (abril, junio, noviembre, etc.)
+- `--test`: Código del test (test01, test02, test03)
+- `--pdf-file`: Archivo PDF específico
+- `--output-file`: Archivo de salida personalizado
+
+### `madrid_extract_answers.py` - Extractor OCR
+Extrae respuestas oficiales de PDFs usando reconocimiento óptico de caracteres.
+
+#### Características:
+- 🤖 **OCR avanzado**: Reconocimiento óptico con preprocesamiento
+- 🎯 **Filtros específicos**: Extrae solo el tipo de examen deseado
+- ✅ **Detección automática**: Identifica respuestas anuladas
+- 📋 **Múltiples formatos**: Soporte para diferentes layouts
+
+#### Parámetros principales:
+- `--exam-type`: Tipo de examen (PER, PATRON_YATE, etc.)
+- `--test-model`: Modelo específico (TEST01, TEST02, etc.)
+- `--pdf-path`: Ruta al PDF de respuestas
+- `--output-dir`: Directorio de salida
 
 ### Flujo Completo de Procesamiento
 
+#### Para Madrid 2025 abril (por defecto):
 ```bash
-# 1. Extraer preguntas del PDF oficial de Madrid
+# 1. Extraer preguntas del PDF oficial
 python tools/extraction/madrid_extract_questions.py
 
-# 2. Extraer respuestas usando OCR del PDF oficial de Madrid
+# 2. Extraer respuestas usando OCR del PDF oficial
 python tools/extraction/madrid_extract_answers.py --exam-type PER --test-model TEST01
 
 # 3. Combinar preguntas y respuestas
+python tools/processing/madrid_merge_exam.py
+```
+
+#### Para otros años/comunidades/convocatorias:
+```bash
+# Ejemplo: Madrid 2024 noviembre test01
+# 1. Extraer preguntas
+python tools/extraction/madrid_extract_questions.py --year 2024 --call noviembre --test test01
+
+# 2. Extraer respuestas (especificando PDF correcto)
+python tools/extraction/madrid_extract_answers.py --exam-type PER --test-model TEST01 --pdf-path "data/raw/answers/madrid-2024-noviembre.pdf"
+
+# 3. Combinar datos
+python tools/processing/madrid_merge_exam.py
+```
+
+#### Para Valencia 2024 junio (ejemplo):
+```bash
+# 1. Extraer preguntas
+python tools/extraction/madrid_extract_questions.py --community Valencia --year 2024 --call junio --test test02
+
+# 2. Extraer respuestas
+python tools/extraction/madrid_extract_answers.py --exam-type PER --test-model TEST02 --pdf-path "data/raw/answers/valencia-2024-junio.pdf"
+
+# 3. Combinar datos
 python tools/processing/madrid_merge_exam.py
 ```
 

@@ -259,12 +259,24 @@ class ParametricExamExtractor:
             
             # Verificar si la línea es una pregunta numerada de forma más específica
             # Debe ser: número al inicio + espacio + texto que no sea solo número
+            # Y NO debe ser parte de una regla del RIPA
             question_match = re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', line)
             if question_match:
                 question_num = int(question_match.group(1))
+                question_text_start = question_match.group(2)
                 
                 # Solo procesar preguntas en el rango válido
                 if question_num < 1 or question_num > pattern.total_questions:
+                    i += 1
+                    continue
+                
+                # Verificar que NO sea parte de una regla del RIPA
+                is_ripa_rule = (re.search(r'del\s+RIPA', question_text_start, re.IGNORECASE) or
+                               re.search(r'de\s+la\s+Regla', question_text_start, re.IGNORECASE) or
+                               re.search(r'Regla\s+\d+', line, re.IGNORECASE))
+                
+                if is_ripa_rule:
+                    # Es parte de una regla, no una nueva pregunta, continuar agregando al contenido actual
                     i += 1
                     continue
                 
@@ -277,11 +289,26 @@ class ParametricExamExtractor:
                     next_line = lines[i].strip()
                     
                     # Parar si encontramos la siguiente pregunta numerada
-                    # Ser más específico: número válido + espacio + texto que no sea solo número
-                    if re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', next_line):
-                        next_question_num = int(re.match(r'^\s*(\d{1,2})', next_line).group(1))
-                        # Solo parar si es un número de pregunta válido y mayor al actual
-                        if 1 <= next_question_num <= pattern.total_questions and next_question_num > question_num:
+                    # Ser MUY específico para evitar confundir números de reglas RIPA con números de pregunta
+                    # Debe ser: número al inicio + espacio + texto que NO empiece con "del RIPA" o patrones similares
+                    question_pattern_match = re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', next_line)
+                    if question_pattern_match:
+                        potential_question_num = int(question_pattern_match.group(1))
+                        question_text_start = question_pattern_match.group(2)
+                        
+                        # Solo parar si:
+                        # 1. Es un número de pregunta válido y mayor al actual
+                        # 2. NO es parte de una regla del RIPA (ej: "32 del RIPA", "13 del RIPA")
+                        # 3. NO es parte de un texto de regla (ej: "Regla 32", "Regla 13")
+                        is_valid_question_num = (1 <= potential_question_num <= pattern.total_questions and 
+                                               potential_question_num > question_num)
+                        
+                        # Detectar si es parte de una regla del RIPA
+                        is_ripa_rule = (re.search(r'del\s+RIPA', question_text_start, re.IGNORECASE) or
+                                       re.search(r'de\s+la\s+Regla', question_text_start, re.IGNORECASE) or
+                                       re.search(r'Regla\s+\d+', next_line, re.IGNORECASE))
+                        
+                        if is_valid_question_num and not is_ripa_rule:
                             break
                     
                     # Parar si encontramos una nueva categoría
@@ -447,6 +474,28 @@ class ParametricExamExtractor:
         
         # Patrones específicos para PER (se puede extender para otros exámenes)
         if categories == PER_CATEGORIES:
+            # **DETECCIÓN PRIORITARIA DE RIPA**: Si menciona "ripa" o "regla X del ripa", es categoría 6
+            # Patrones más amplios y específicos para detectar preguntas del RIPA
+            ripa_patterns = [
+                r'\bripa\b',  # Menciona "ripa" explícitamente
+                r'regla\s+\d+\s+del\s+ripa',  # "regla X del ripa"
+                r'según\s+la\s+regla\s+\d+',  # "según la regla X"
+                r'conforme\s+a\s+la\s+regla\s+\d+',  # "conforme a la regla X"
+                r'de\s+acuerdo\s+con\s+la\s+regla\s+\d+',  # "de acuerdo con la regla X"
+                r'regla\s+\d+.*ripa',  # "regla X ... ripa"
+                r'con\s+arreglo\s+a\s+la\s+regla\s+\d+',  # "con arreglo a la regla X"
+                r'lo\s+establecido\s+en\s+la\s+regla\s+\d+',  # "lo establecido en la regla X"
+                r'por\s+la\s+regla\s+\d+',  # "por la regla X"
+                r'en\s+la\s+regla\s+\d+',  # "en la regla X"
+                r'la\s+regla\s+\d+\s+establece',  # "la regla X establece"
+                r'aplicación.*regla\s+\d+',  # "aplicación ... regla X"
+                r'ámbito\s+de\s+aplicación.*regla',  # "ámbito de aplicación ... regla"
+            ]
+            
+            for pattern in ripa_patterns:
+                if re.search(pattern, question_lower):
+                    return 6  # Categoría RIPA
+            
             # Primero verificar reglas específicas para casos problemáticos
             if any(word in question_lower for word in ["nudo", "gaza", "cornamusa", "chicote", "amarrar", "fondear", "cabo"]):
                 # Si menciona múltiples términos de amarre, es categoría 2
@@ -466,7 +515,7 @@ class ParametricExamExtractor:
                 5: ["boya", "baliza", "faro", "luz", "señal", "cardinal", "lateral", "marca", "enfilación",
                     "sector", "destellos", "ocultaciones", "ritmo", "alcance"],
                 6: ["abordaje", "rumbo", "cruce", "alcance", "maniobra", "preferencia", "paso", "ripa",
-                    "buque", "embarcación", "motor", "vela", "fondeado", "visibilidad"],
+                    "buque", "embarcación", "motor", "vela", "fondeado", "visibilidad", "luces", "marcas", "señales", "acústicas", "luminosas"],
                 7: ["rumbo", "derrota", "posición", "navegación", "maniobra", "gobierno", "caída",
                     "arribada", "orzada", "virada", "trasluchada", "ceñida", "largo", "través"],
                 8: ["abandono", "emergencia", "socorro", "supervivencia", "situación", "peligro",
@@ -633,47 +682,165 @@ class ParametricExamExtractor:
         
         return recovered
 
+def find_pdf_file(directory: Path, pattern: str) -> Optional[str]:
+    """
+    Busca un archivo PDF que coincida con el patrón especificado.
+    
+    Args:
+        directory: Directorio donde buscar
+        pattern: Patrón de nombre de archivo (puede incluir wildcards)
+    
+    Returns:
+        Ruta completa del archivo encontrado o None si no se encuentra
+    """
+    # Intentar buscar con el patrón exacto
+    matching_files = list(directory.glob(f"{pattern}.pdf"))
+    if matching_files:
+        return str(matching_files[0])
+    
+    # Intentar buscar con wildcards más flexibles
+    flexible_patterns = [
+        f"*{pattern}*.pdf",
+        f"{pattern}*pdf",
+        f"*{pattern.replace('-', '*')}*.pdf"
+    ]
+    
+    for flex_pattern in flexible_patterns:
+        matching_files = list(directory.glob(flex_pattern))
+        if matching_files:
+            print(f"📄 Encontrado con patrón flexible '{flex_pattern}': {matching_files[0].name}")
+            return str(matching_files[0])
+    
+    return None
+
 def main():
     """Función principal para extraer el examen de PER."""
-    extractor = ParametricExamExtractor()
-    
-    # Rutas de los PDFs usando la configuración global
+    import argparse
     import sys
+    
+    # Configurar argumentos de línea de comandos
+    parser = argparse.ArgumentParser(
+        description="Extractor parametrizable de exámenes PER desde PDFs",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Ejemplos de uso:
+  # Extraer test01 de Madrid 2025 abril (por defecto)
+  python madrid_extract_questions.py
+  
+  # Extraer test03 específico
+  python madrid_extract_questions.py --test test03
+  
+  # Extraer de Valencia 2024 junio
+  python madrid_extract_questions.py --community Valencia --year 2024 --call junio
+  
+  # Especificar archivo PDF específico
+  python madrid_extract_questions.py --pdf-file valencia-2024-junio.pdf
+  
+  # Especificar patrón de búsqueda para el PDF
+  python madrid_extract_questions.py --pdf-pattern "valencia-2024-junio"
+        """
+    )
+    
+    parser.add_argument('--community', default='Madrid',
+                       help='Comunidad autónoma (ej: Madrid, Valencia, Barcelona)')
+    parser.add_argument('--year', type=int, default=2025,
+                       help='Año del examen (ej: 2024, 2025)')
+    parser.add_argument('--call', default='abril',
+                       help='Convocatoria (ej: abril, junio, septiembre, noviembre)')
+    parser.add_argument('--test', default='test01',
+                       help='Código del test (ej: test01, test02, test03)')
+    parser.add_argument('--total-questions', type=int, default=45,
+                       help='Número total de preguntas esperadas')
+    
+    # Opciones para especificar archivos PDF
+    parser.add_argument('--pdf-file', 
+                       help='Archivo PDF específico a procesar (ruta completa)')
+    parser.add_argument('--pdf-pattern',
+                       help='Patrón para buscar el archivo PDF (ej: "madrid-2025-abril")')
+    
+    # Opciones de salida
+    parser.add_argument('--output-dir', 
+                       help='Directorio de salida (por defecto: data/exams)')
+    parser.add_argument('--output-file',
+                       help='Nombre de archivo de salida específico')
+    
+    args = parser.parse_args()
+    
+    # Configuración del proyecto
     project_root = Path(__file__).parent.parent.parent
     sys.path.append(str(project_root))
     from config.settings import settings
     
-    # Buscar archivos PDF en los directorios configurados
-    questions_dir = settings.get_raw_questions_path()
-    answers_dir = settings.get_raw_answers_path()
+    # Crear el patrón de examen dinámicamente
+    exam_pattern = create_per_pattern(
+        community=args.community,
+        year=args.year,
+        call=args.call,
+        test_code=args.test,
+        total_questions=args.total_questions
+    )
     
-    # Buscar archivo de preguntas
-    pdf_questions_list = list(questions_dir.glob("*.pdf"))
-    if pdf_questions_list:
-        pdf_questions = str(pdf_questions_list[0])
-        print(f"📄 Usando PDF de preguntas: {Path(pdf_questions).name}")
+    print(f"🚢 Configuración del examen:")
+    print(f"   📍 Comunidad: {exam_pattern.community}")
+    print(f"   📅 Año: {exam_pattern.year}")
+    print(f"   📢 Convocatoria: {exam_pattern.call}")
+    print(f"   🔢 Test: {exam_pattern.test_code}")
+    print(f"   ❓ Preguntas esperadas: {exam_pattern.total_questions}")
+    
+    # Determinar el archivo PDF a procesar
+    pdf_questions = None
+    
+    if args.pdf_file:
+        # Archivo específico proporcionado
+        if os.path.exists(args.pdf_file):
+            pdf_questions = args.pdf_file
+            print(f"📄 Usando archivo específico: {Path(pdf_questions).name}")
+        else:
+            print(f"❌ Error: El archivo {args.pdf_file} no existe")
+            return
     else:
-        print(f"❌ Error: No se encuentra archivo PDF en {questions_dir}")
-        return
+        # Buscar archivo PDF basado en patrón
+        questions_dir = settings.get_raw_questions_path()
+        
+        if args.pdf_pattern:
+            # Usar patrón personalizado
+            search_pattern = args.pdf_pattern
+        else:
+            # Generar patrón automáticamente
+            community_clean = args.community.lower().replace(" ", "-")
+            call_clean = args.call.lower().replace(" ", "-")
+            search_pattern = f"{community_clean}-{args.year}-{call_clean}"
+        
+        print(f"� Buscando PDF con patrón: {search_pattern}")
+        pdf_questions = find_pdf_file(questions_dir, search_pattern)
+        
+        if not pdf_questions:
+            print(f"❌ Error: No se encontró archivo PDF con patrón '{search_pattern}' en {questions_dir}")
+            print(f"📁 Archivos disponibles:")
+            for pdf_file in questions_dir.glob("*.pdf"):
+                print(f"   - {pdf_file.name}")
+            print(f"\n💡 Consejos:")
+            print(f"   - Usa --pdf-pattern para especificar un patrón personalizado")
+            print(f"   - Usa --pdf-file para especificar la ruta completa del archivo")
+            return
+        
+        print(f"📄 Usando PDF encontrado: {Path(pdf_questions).name}")
     
-    # Buscar archivo de respuestas  
-    pdf_answers_list = list(answers_dir.glob("*.pdf"))
-    if pdf_answers_list:
-        pdf_answers = str(pdf_answers_list[0])
-        print(f"📄 Usando PDF de respuestas: {Path(pdf_answers).name}")
-    else:
-        print(f"❌ Error: No se encuentra archivo PDF en {answers_dir}")
-        return
-    
-    # Extraer el examen de PER Madrid 2025 Código de Test 01
-    exam_data = extractor.extract_exam(pdf_questions, PER_MADRID_2025_TEST_01)
+    # Extraer el examen
+    extractor = ParametricExamExtractor()
+    exam_data = extractor.extract_exam(pdf_questions, exam_pattern)
     
     if not exam_data:
         print("❌ No se pudo extraer el examen")
         return
     
-    # Generar nombre de archivo automáticamente usando configuración
-    output_path = extractor.generate_filename(PER_MADRID_2025_TEST_01, str(settings.get_exams_path()))
+    # Determinar archivo de salida
+    if args.output_file:
+        output_path = args.output_file
+    else:
+        output_dir = args.output_dir or str(settings.get_exams_path())
+        output_path = extractor.generate_filename(exam_pattern, output_dir)
+    
     extractor.save_to_yaml(exam_data, output_path)
     
     # Mostrar estadísticas
@@ -697,6 +864,10 @@ def main():
     for cat_id, cat_data in exam_data['categories'].items():
         questions_with_answers = sum(1 for q in cat_data['questions'] if q['correct_answer'] is not None)
         print(f"  {cat_id:2d}. {cat_data['name']:<25}: {len(cat_data['questions']):2d} preguntas ({questions_with_answers} con respuesta)")
+    
+    print(f"\n💡 Próximos pasos:")
+    print(f"   1. Ejecuta el extractor de respuestas para completar el examen")
+    print(f"   2. Usa: python madrid_extract_answers.py --exam-file '{output_path}'")
 
 if __name__ == "__main__":
     main()
