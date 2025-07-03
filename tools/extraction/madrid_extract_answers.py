@@ -282,10 +282,12 @@ class PDFAnswerExtractor:
     
     def extract_answers_from_text(self, text: str) -> Dict[int, str]:
         """
-        Extrae las respuestas numeradas del texto de una página
+        Extrae las respuestas numeradas del texto de una página con limpieza de errores de OCR
         """
         answers = {}
         lines = text.split('\n')
+        
+        print(f"   📋 Procesando {len(lines)} líneas de texto...")
         
         # Patrones para detectar respuestas numeradas
         answer_patterns = [
@@ -299,6 +301,11 @@ class PDFAnswerExtractor:
             if not line:
                 continue
             
+            original_line = line
+            
+            # Pre-procesar línea para corregir errores comunes de OCR
+            line = self._clean_ocr_line(line)
+            
             # Buscar respuestas con patrones básicos
             for pattern in answer_patterns:
                 match = re.match(pattern, line)
@@ -310,11 +317,13 @@ class PDFAnswerExtractor:
                         # Validar que es una respuesta válida
                         if answer in ['a', 'b', 'c', 'd'] and 1 <= question_num <= 100:
                             answers[question_num] = answer
+                            print(f"   ✅ Pregunta {question_num}: {answer.upper()}")
+                            break
                     except (ValueError, IndexError):
                         continue
             
             # Patrón especial para "Cc" -> "c", etc. (errores comunes de OCR)
-            cc_pattern = r'^(\d+)\s*(Cc|Aa|Bb|Dd)(?:\s|$)'
+            cc_pattern = r'^(\d+)\s*(Cc|Aa|Bb|Dd|CC|AA|BB|DD)(?:\s|$)'
             cc_match = re.match(cc_pattern, line)
             if cc_match:
                 try:
@@ -322,40 +331,47 @@ class PDFAnswerExtractor:
                     ocr_answer = cc_match.group(2)
                     
                     # Convertir errores de OCR comunes
-                    if ocr_answer == 'Cc':
-                        answer = 'c'
-                    elif ocr_answer == 'Aa':
-                        answer = 'a'
-                    elif ocr_answer == 'Bb':
-                        answer = 'b'
-                    elif ocr_answer == 'Dd':
-                        answer = 'd'
-                    else:
-                        continue
+                    answer = self._fix_ocr_answer(ocr_answer)
                     
-                    if 1 <= question_num <= 100:
+                    if answer and 1 <= question_num <= 100:
                         answers[question_num] = answer
+                        print(f"   🔧 Pregunta {question_num}: {answer.upper()} (corregido de {ocr_answer})")
                 except (ValueError, IndexError):
                     continue
             
-            # Patrón especial para errores como "177 2A" -> "17 A"
-            error_pattern = r'^(\d{2,3})\s*(\d)([ABCDabcd])(?:\s|$)'
+            # Patrón especial para errores como "358 A" -> "35 A"
+            error_pattern = r'^(\d{2,3})\s*([ABCDabcd])(?:\s|$)'
             error_match = re.match(error_pattern, line)
             if error_match:
                 try:
-                    # Extraer el número correcto: "177" -> "17", "2" -> usar el dígito simple
                     full_num = error_match.group(1)
-                    single_digit = int(error_match.group(2))
-                    answer = error_match.group(3).lower()
+                    answer = error_match.group(2).lower()
                     
-                    # Si el número completo es de 3 dígitos, tomar los primeros 2
+                    # Si el número es de 3 dígitos, usar los primeros 2
                     if len(full_num) == 3:
                         question_num = int(full_num[:2])
                     else:
-                        question_num = single_digit
+                        question_num = int(full_num)
+                    
+                    if answer in ['a', 'b', 'c', 'd'] and 1 <= question_num <= 100:
+                        # Solo agregar si no existe ya una respuesta para esta pregunta
+                        if question_num not in answers:
+                            answers[question_num] = answer
+                            print(f"   🔧 Pregunta {question_num}: {answer.upper()} (corregido de {full_num})")
+                except (ValueError, IndexError):
+                    continue
+            
+            # Patrón especial para errores como "21. OD" -> "21 D"
+            od_pattern = r'^(\d+)[.\s]*O([ABCDabcd])(?:\s|$)'
+            od_match = re.match(od_pattern, line)
+            if od_match:
+                try:
+                    question_num = int(od_match.group(1))
+                    answer = od_match.group(2).lower()
                     
                     if answer in ['a', 'b', 'c', 'd'] and 1 <= question_num <= 100:
                         answers[question_num] = answer
+                        print(f"   🔧 Pregunta {question_num}: {answer.upper()} (corregido de O{od_match.group(2)})")
                 except (ValueError, IndexError):
                     continue
             
@@ -368,10 +384,117 @@ class PDFAnswerExtractor:
                         question_num = int(num_match.group(1))
                         if 1 <= question_num <= 100:
                             answers[question_num] = "ANULADA"
+                            print(f"   🚫 Pregunta {question_num}: ANULADA")
                     except ValueError:
                         continue
         
         return answers
+    
+    def _clean_ocr_line(self, line: str) -> str:
+        """
+        Limpia y normaliza una línea de texto OCR
+        """
+        # Eliminar caracteres extraños comunes en OCR
+        line = re.sub(r'[|\\]', '', line)
+        
+        # Normalizar espacios múltiples
+        line = re.sub(r'\s+', ' ', line)
+        
+        return line.strip()
+    
+    def _fix_ocr_answer(self, ocr_answer: str) -> Optional[str]:
+        """
+        Corrige errores comunes en las respuestas extraídas por OCR
+        """
+        ocr_answer = ocr_answer.upper()
+        
+        # Mapeo de errores comunes de OCR
+        ocr_fixes = {
+            'CC': 'c',
+            'Cc': 'c',
+            'AA': 'a',
+            'Aa': 'a',
+            'BB': 'b',
+            'Bb': 'b',
+            'DD': 'd',
+            'Dd': 'd',
+            'OA': 'a',
+            'OB': 'b',
+            'OC': 'c',
+            'OD': 'd',
+        }
+        
+        return ocr_fixes.get(ocr_answer)
+    
+    def _validate_and_fix_answers(self, answers: Dict[int, str], expected_count: int = 45) -> Dict[int, str]:
+        """
+        Valida y corrige las respuestas extraídas, detectando preguntas faltantes
+        """
+        print(f"   🔍 Validando respuestas extraídas...")
+        print(f"   📊 Encontradas: {len(answers)}, Esperadas: {expected_count}")
+        
+        # Detectar preguntas faltantes
+        expected_questions = set(range(1, expected_count + 1))
+        found_questions = set(answers.keys())
+        missing_questions = expected_questions - found_questions
+        
+        if missing_questions:
+            print(f"   ⚠️  Preguntas faltantes: {sorted(missing_questions)}")
+            
+            # Intentar recuperar preguntas faltantes con patrones más flexibles
+            # (Esto se haría procesando el texto original nuevamente)
+            
+        else:
+            print(f"   ✅ Todas las {expected_count} preguntas encontradas")
+        
+        # Validar que todas las respuestas son válidas
+        invalid_answers = []
+        for q_num, answer in answers.items():
+            if answer not in ['a', 'b', 'c', 'd', 'ANULADA']:
+                invalid_answers.append((q_num, answer))
+        
+        if invalid_answers:
+            print(f"   ⚠️  Respuestas inválidas encontradas: {invalid_answers}")
+            # Limpiar respuestas inválidas
+            for q_num, _ in invalid_answers:
+                del answers[q_num]
+        
+        print(f"   ✅ Validación completada: {len(answers)} respuestas válidas")
+        return answers
+    
+    def _attempt_recovery_of_missing_answers(self, text: str, missing_questions: set) -> Dict[int, str]:
+        """
+        Intenta recuperar preguntas faltantes con patrones más flexibles
+        """
+        recovered = {}
+        lines = text.split('\n')
+        
+        print(f"   🔄 Intentando recuperar {len(missing_questions)} preguntas faltantes...")
+        
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue
+            
+            # Buscar líneas que contengan números de las preguntas faltantes
+            for missing_q in missing_questions:
+                # Patrones más flexibles para preguntas problemáticas
+                flexible_patterns = [
+                    rf'\b{missing_q}\s*([ABCDabcd])\b',  # Número con respuesta
+                    rf'{missing_q}[.\s]*([ABCDabcd])',    # Con punto o espacio
+                    rf'{missing_q}([ABCDabcd])',          # Pegado
+                ]
+                
+                for pattern in flexible_patterns:
+                    match = re.search(pattern, line)
+                    if match:
+                        answer = match.group(1).lower()
+                        if answer in ['a', 'b', 'c', 'd']:
+                            recovered[missing_q] = answer
+                            print(f"   🔧 Recuperada pregunta {missing_q}: {answer.upper()}")
+                            break
+        
+        return recovered
     
     def process_all_pages(self) -> Dict:
         """
@@ -416,7 +539,28 @@ class PDFAnswerExtractor:
                 
                 # Extraer respuestas
                 answers = self.extract_answers_from_text(text)
-                print(f"   📝 Respuestas encontradas: {len(answers)}")
+                print(f"   📝 Respuestas iniciales encontradas: {len(answers)}")
+                
+                # Validar y corregir respuestas
+                if exam_type == 'PER':  # Para exámenes PER esperamos 45 preguntas
+                    validated_answers = self._validate_and_fix_answers(answers, expected_count=45)
+                    
+                    # Si faltan preguntas, intentar recuperarlas
+                    if len(validated_answers) < 45:
+                        missing_questions = set(range(1, 46)) - set(validated_answers.keys())
+                        recovered = self._attempt_recovery_of_missing_answers(text, missing_questions)
+                        validated_answers.update(recovered)
+                        print(f"   🔄 Después de recuperación: {len(validated_answers)} respuestas")
+                    
+                    answers = validated_answers
+                else:
+                    # Para otros tipos de examen, usar validación básica
+                    answers = self._validate_and_fix_answers(answers, expected_count=len(answers))
+                
+                print(f"   ✅ Respuestas finales: {len(answers)}")
+                
+                # Validar y corregir respuestas
+                answers = self._validate_and_fix_answers(answers)
                 
                 if answers:
                     # Organizar por tipo de examen y modelo

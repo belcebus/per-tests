@@ -259,12 +259,24 @@ class ParametricExamExtractor:
             
             # Verificar si la línea es una pregunta numerada de forma más específica
             # Debe ser: número al inicio + espacio + texto que no sea solo número
+            # Y NO debe ser parte de una regla del RIPA
             question_match = re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', line)
             if question_match:
                 question_num = int(question_match.group(1))
+                question_text_start = question_match.group(2)
                 
                 # Solo procesar preguntas en el rango válido
                 if question_num < 1 or question_num > pattern.total_questions:
+                    i += 1
+                    continue
+                
+                # Verificar que NO sea parte de una regla del RIPA
+                is_ripa_rule = (re.search(r'del\s+RIPA', question_text_start, re.IGNORECASE) or
+                               re.search(r'de\s+la\s+Regla', question_text_start, re.IGNORECASE) or
+                               re.search(r'Regla\s+\d+', line, re.IGNORECASE))
+                
+                if is_ripa_rule:
+                    # Es parte de una regla, no una nueva pregunta, continuar agregando al contenido actual
                     i += 1
                     continue
                 
@@ -277,11 +289,26 @@ class ParametricExamExtractor:
                     next_line = lines[i].strip()
                     
                     # Parar si encontramos la siguiente pregunta numerada
-                    # Ser más específico: número válido + espacio + texto que no sea solo número
-                    if re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', next_line):
-                        next_question_num = int(re.match(r'^\s*(\d{1,2})', next_line).group(1))
-                        # Solo parar si es un número de pregunta válido y mayor al actual
-                        if 1 <= next_question_num <= pattern.total_questions and next_question_num > question_num:
+                    # Ser MUY específico para evitar confundir números de reglas RIPA con números de pregunta
+                    # Debe ser: número al inicio + espacio + texto que NO empiece con "del RIPA" o patrones similares
+                    question_pattern_match = re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', next_line)
+                    if question_pattern_match:
+                        potential_question_num = int(question_pattern_match.group(1))
+                        question_text_start = question_pattern_match.group(2)
+                        
+                        # Solo parar si:
+                        # 1. Es un número de pregunta válido y mayor al actual
+                        # 2. NO es parte de una regla del RIPA (ej: "32 del RIPA", "13 del RIPA")
+                        # 3. NO es parte de un texto de regla (ej: "Regla 32", "Regla 13")
+                        is_valid_question_num = (1 <= potential_question_num <= pattern.total_questions and 
+                                               potential_question_num > question_num)
+                        
+                        # Detectar si es parte de una regla del RIPA
+                        is_ripa_rule = (re.search(r'del\s+RIPA', question_text_start, re.IGNORECASE) or
+                                       re.search(r'de\s+la\s+Regla', question_text_start, re.IGNORECASE) or
+                                       re.search(r'Regla\s+\d+', next_line, re.IGNORECASE))
+                        
+                        if is_valid_question_num and not is_ripa_rule:
                             break
                     
                     # Parar si encontramos una nueva categoría
@@ -447,6 +474,28 @@ class ParametricExamExtractor:
         
         # Patrones específicos para PER (se puede extender para otros exámenes)
         if categories == PER_CATEGORIES:
+            # **DETECCIÓN PRIORITARIA DE RIPA**: Si menciona "ripa" o "regla X del ripa", es categoría 6
+            # Patrones más amplios y específicos para detectar preguntas del RIPA
+            ripa_patterns = [
+                r'\bripa\b',  # Menciona "ripa" explícitamente
+                r'regla\s+\d+\s+del\s+ripa',  # "regla X del ripa"
+                r'según\s+la\s+regla\s+\d+',  # "según la regla X"
+                r'conforme\s+a\s+la\s+regla\s+\d+',  # "conforme a la regla X"
+                r'de\s+acuerdo\s+con\s+la\s+regla\s+\d+',  # "de acuerdo con la regla X"
+                r'regla\s+\d+.*ripa',  # "regla X ... ripa"
+                r'con\s+arreglo\s+a\s+la\s+regla\s+\d+',  # "con arreglo a la regla X"
+                r'lo\s+establecido\s+en\s+la\s+regla\s+\d+',  # "lo establecido en la regla X"
+                r'por\s+la\s+regla\s+\d+',  # "por la regla X"
+                r'en\s+la\s+regla\s+\d+',  # "en la regla X"
+                r'la\s+regla\s+\d+\s+establece',  # "la regla X establece"
+                r'aplicación.*regla\s+\d+',  # "aplicación ... regla X"
+                r'ámbito\s+de\s+aplicación.*regla',  # "ámbito de aplicación ... regla"
+            ]
+            
+            for pattern in ripa_patterns:
+                if re.search(pattern, question_lower):
+                    return 6  # Categoría RIPA
+            
             # Primero verificar reglas específicas para casos problemáticos
             if any(word in question_lower for word in ["nudo", "gaza", "cornamusa", "chicote", "amarrar", "fondear", "cabo"]):
                 # Si menciona múltiples términos de amarre, es categoría 2
@@ -466,7 +515,7 @@ class ParametricExamExtractor:
                 5: ["boya", "baliza", "faro", "luz", "señal", "cardinal", "lateral", "marca", "enfilación",
                     "sector", "destellos", "ocultaciones", "ritmo", "alcance"],
                 6: ["abordaje", "rumbo", "cruce", "alcance", "maniobra", "preferencia", "paso", "ripa",
-                    "buque", "embarcación", "motor", "vela", "fondeado", "visibilidad"],
+                    "buque", "embarcación", "motor", "vela", "fondeado", "visibilidad", "luces", "marcas", "señales", "acústicas", "luminosas"],
                 7: ["rumbo", "derrota", "posición", "navegación", "maniobra", "gobierno", "caída",
                     "arribada", "orzada", "virada", "trasluchada", "ceñida", "largo", "través"],
                 8: ["abandono", "emergencia", "socorro", "supervivencia", "situación", "peligro",

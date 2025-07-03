@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 1
       options:
         a: Mecha.
@@ -14,7 +14,7 @@ categories:
       question: 'El tubo dentro del cual gira el eje del timón se denomina:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 2
       options:
         a: Válvula colocada por debajo de la línea de flotación, normalmente en el
@@ -27,7 +27,7 @@ categories:
       question: ¿Qué es un imbornal?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 3
       options:
         a: Cuadernas.
@@ -38,7 +38,7 @@ categories:
         la cubierta?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 4
       options:
         a: La distancia medida verticalmente entre la quilla y la cubierta.
@@ -48,23 +48,12 @@ categories:
         d: La distancia medida horizontalmente entre la línea de flotación sin carga
           y la cubierta.
       question: 'En una embarcación de recreo, el francobordo es:'
-    - category: 1
-      category_name: Nomenclatura náutica
-      correct_answer: null
-      id: 27
-      options:
-        a: Mayor de 22,5° a popa del través de este último.
-        b: Menor de 22,5° a popa del través de este último.
-        c: Mayor de 22,5° a proa del través de este último.
-        d: Menor de 22,5° a proa del través de este último.
-      question: 'Según la Regla 13 del RIPA, “Buque que alcanza“, se considerará buque
-        que alcanza a todo buque que se aproxime a otro viniendo desde una marcación:'
   2:
     name: Elementos de amarre y fondeo
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 5
       options:
         a: Fondeo a la gira.
@@ -76,7 +65,7 @@ categories:
         filada, describirá lo que se conoce como:'
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 6
       options:
         a: La curvatura que forma un cabo cuando este no trabaja o cuando se hace
@@ -90,7 +79,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 7
       options:
         a: Correr el temporal.
@@ -100,7 +89,7 @@ categories:
       question: 'La expresión  “a son de mar” se refiere a:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 8
       options:
         a: No complemente las señales luminosas obligatorias llevando a bordo espejos,
@@ -111,7 +100,7 @@ categories:
       question: 'Con relación al material pirotécnico, señale la recomendación INCORRECTA:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 9
       options:
         a: Active la radiobaliza, ya que no dispone de los dispositivos de salvamento
@@ -125,7 +114,7 @@ categories:
         se recomienda actuar?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 10
       options:
         a: El balance es el movimiento de oscilación longitudinal del barco.
@@ -140,7 +129,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 11
       options:
         a: Tengo un buzo sumergido. Manténgase en comunicación con su embarcación
@@ -153,7 +142,7 @@ categories:
         de la bandera «Alfa» izada aisladamente indica que:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 12
       options:
         a: Desplazarse a velocidad inferior a 3 nudos para vararla.
@@ -167,7 +156,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 13
       options:
         a: Con bandas horizontales amarillas y negras.
@@ -177,7 +166,7 @@ categories:
       question: 'Las Marcas Cardinales siempre estarán pintadas:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 14
       options:
         a: Una única esfera roja.
@@ -188,7 +177,7 @@ categories:
         compuesta por:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 15
       options:
         a: Pueden ir con letras o numeradas.
@@ -199,7 +188,7 @@ categories:
       question: ¿Cuál de las siguientes afirmaciones sobre Marcas Especiales es INCORRECTA?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 16
       options:
         a: Dado que navegamos en contra del sentido convencional de balizamiento,
@@ -213,7 +202,7 @@ categories:
         cilíndrica roja, ¿cuál sería la manera correcta de maniobrar?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 17
       options:
         a: La Marca de Peligro Aislado, se colocará encima, amarrada, o próxima a
@@ -225,49 +214,26 @@ categories:
           para identificar dichas
       question: En relación con las Marcas de Peligro Aislado, indique cuál de las
         siguientes afirmaciones es CORRECTA.
-    - category: 5
-      category_name: Balizamiento
-      correct_answer: null
-      id: 22
-      options:
-        a: Las Reglas relativas a las luces deberán cumplirse únicamente desde la
-          puesta del sol hasta su
-        b: Las Reglas relativas a las marcas deberán cumplirse tanto de día como de
-          noche.
-        c: Las Reglas de esta Parte deberán cumplirse en todas las condiciones meteorológicas.
-        d: Las luces preceptuadas por estas Reglas podrán no exhibirse desde la salida
-          hasta la puesta del
-      question: De acuerdo con la Regla 20 del RIPA, “Ámbito de aplicación” de la
-        Parte C. Luces y Marcas, señale la afirmación CORRECTA.
-    - category: 5
-      category_name: Balizamiento
-      correct_answer: null
-      id: 26
-      options:
-        a: Un sonido de una duración aproximada de 4 a 6 segundos.
-        b: Un sonido de una duración aproximada de 8 a 10 segundos.
-        c: Un sonido de una duración de 7 segundos.
-        d: Un sonido de una duración de 8 segundos.
-      question: 'Según la Regla 32 del RIPA, “Definiciones de Señales acústicas y
-        luminosas”, la expresión «pitada larga» significa:'
   6:
     name: Reglamento (RIPA)
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 18
       options:
-        a: Opción A (contenido incompleto)
-        b: Opción B (contenido incompleto)
-        c: Opción C (contenido incompleto)
-        d: Opción D (contenido incompleto)
-      question: Si de noche fondeamos con nuestra embarcación de 6 metros de eslora
+        a: Tendremos la obligación de exhibir una luz blanca todo horizonte para indicar
+          que estamos
+        b: No tendremos la obligación de exhibir la luz blanca todo horizonte de fondeo.
+        c: Estamos obligados a exhibir una marca con forma de bola.
+        d: No podremos utilizar luces para iluminar la zona de cubierta ni la bañera,
+          debiendo exhibir
+      question: 'Si de noche fondeamos con nuestra embarcación de 6 metros de eslora
         en una zona alejada de cualquier canal angosto, paso, fondeadero o zona de
-        navegación frecuente, de acuerdo con la Regla
+        navegación frecuente, de acuerdo con la Regla 30 del RIPA:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 19
       options:
         a: Mantenernos a rumbo ya que en ningún caso debemos maniobrar por tener preferencia
@@ -284,19 +250,19 @@ categories:
         el abordaje”, deberemos:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 20
       options:
-        a: Varado.
-        b: Fondeado.
-        c: Restringido por su calado.
-        d: Sin gobierno.
+        a: Mayor de 22,5° a popa del través de este último.
+        b: Menor de 22,5° a popa del través de este último.
+        c: Mayor de 22,5° a proa del través de este último.
+        d: Menor de 22,5° a proa del través de este último.
       question: 'Si nos encontramos navegando de noche y visualizamos por la proa
         a un buque que, en el lugar más visible, exhibe 3 luces rojas en línea vertical,
         de acuerdo con la Regla 28 del RIPA, estará indicando que está:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 21
       options:
         a: Siempre que no disponga de maquinaria propulsora instalada a bordo.
@@ -308,7 +274,21 @@ categories:
         “buque de vela” significa todo buque navegando a vela:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
+      id: 22
+      options:
+        a: Las Reglas relativas a las luces deberán cumplirse únicamente desde la
+          puesta del sol hasta su
+        b: Las Reglas relativas a las marcas deberán cumplirse tanto de día como de
+          noche.
+        c: Las Reglas de esta Parte deberán cumplirse en todas las condiciones meteorológicas.
+        d: Las luces preceptuadas por estas Reglas podrán no exhibirse desde la salida
+          hasta la puesta del
+      question: De acuerdo con la Regla 20 del RIPA, “Ámbito de aplicación” de la
+        Parte C. Luces y Marcas, señale la afirmación CORRECTA.
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
       id: 23
       options:
         a: Dos luces todo horizonte en línea vertical, blanca la superior y verde
@@ -325,7 +305,7 @@ categories:
         horizontalmente a partir del buque?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 24
       options:
         a: Podrá usar la zona de navegación costera.
@@ -339,7 +319,7 @@ categories:
         tráfico”, un buque de 15 metros de eslora:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 25
       options:
         a: Un buque de propulsión mecánica en navegación.
@@ -351,20 +331,32 @@ categories:
         general, nos mantendremos apartados de la derrota de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
-      id: 30
+      correct_answer: a
+      id: 26
+      options:
+        a: Un sonido de una duración aproximada de 4 a 6 segundos.
+        b: Un sonido de una duración aproximada de 8 a 10 segundos.
+        c: Un sonido de una duración de 7 segundos.
+        d: Un sonido de una duración de 8 segundos.
+      question: 'Según la Regla 32 del RIPA, “Definiciones de Señales acústicas y
+        luminosas”, la expresión «pitada larga» significa:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 27
       options:
         a: Mayor de 22,5° a popa del través de este último.
         b: Menor de 22,5° a popa del través de este último.
         c: Mayor de 22,5° a proa del través de este último.
         d: Menor de 22,5° a proa del través de este último.
-      question: 'del RIPA:'
+      question: 'Según la Regla 13 del RIPA, “Buque que alcanza“, se considerará buque
+        que alcanza a todo buque que se aproxime a otro viniendo desde una marcación:'
   7:
     name: Maniobra y navegación
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 28
       options:
         a: Dificulta la maniobra.
@@ -375,7 +367,7 @@ categories:
         nos afecta?
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 29
       options:
         a: La popa caerá a babor.
@@ -390,7 +382,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 30
       options:
         a: La limera del timón y la bocina.
@@ -401,7 +393,7 @@ categories:
         un mayor riesgo de que se produzca una vía de agua?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 31
       options:
         a: No se deben trasladar pesos para cambiar el asiento.
@@ -414,7 +406,7 @@ categories:
         fondo fangoso:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 32
       options:
         a: Únicamente se podrá solicitar por el Canal 70 de VHF.
@@ -430,7 +422,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 33
       options:
         a: El número de horas que el viento sopla en la misma dirección con cambios
@@ -443,7 +435,7 @@ categories:
       question: 'El fetch es:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 34
       options:
         a: La ebullición del agua.
@@ -454,7 +446,7 @@ categories:
         de la escala centígrada?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 35
       options:
         a: Es un viento o brisa nocturna de tierra a mar.
@@ -466,7 +458,7 @@ categories:
       question: 'El terral:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 36
       options:
         a: Las condiciones meteorológicas mejorarán a lo largo del día.
@@ -481,7 +473,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 37
       options:
         a: El Norte de aguja y el Norte verdadero.
@@ -491,7 +483,7 @@ categories:
       question: 'Se denomina declinación magnética al ángulo formado entre:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 38
       options:
         a: La variación anual.
@@ -501,7 +493,7 @@ categories:
       question: 'El rumbo de aguja se diferencia del rumbo magnético en:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 39
       options:
         a: El ángulo formado entre la proa del barco y la visual a un objeto.
@@ -511,7 +503,7 @@ categories:
       question: 'La marcación se define como:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 40
       options:
         a: La distancia entre la línea de flotación y el fondo del mar.
@@ -521,7 +513,7 @@ categories:
       question: ¿Qué mide la sonda en una embarcación?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 41
       options:
         a: La hora de la bajamar y la hora de la siguiente pleamar.
@@ -535,7 +527,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 42
       options:
         a: l= 36° 03,8´N; L= 005° 24,9´W.
@@ -553,7 +545,7 @@ categories:
         a Hrb: 16:24.'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 43
       options:
         a: l=36º 09,2' N; L=005º 13,7' W.
@@ -566,7 +558,7 @@ categories:
         situación más aproximada en dicho instante?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 44
       options:
         a: 9,32 metros.
@@ -578,7 +570,7 @@ categories:
         la carta de 8,9 metros.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 45
       options:
         a: Ra = 039°; Hrb = 13:36.
@@ -601,5 +593,5 @@ exam_info:
   subtitle: Código de Test 01
   test_code: test01
   title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
-  total_questions: 46
+  total_questions: 45
   year: 2024
