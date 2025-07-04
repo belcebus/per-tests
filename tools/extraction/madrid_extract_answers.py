@@ -208,10 +208,10 @@ class PDFAnswerExtractor:
         if image.mode != 'L':
             image = image.convert('L')
         
-        # 1. Redimensionado ultra-agresivo para máxima calidad
+        # 1. Redimensionado optimizado para máxima calidad
         width, height = image.size
-        if width < 4000:  # Aumentamos significativamente el umbral
-            scale_factor = 4000 / width  # Duplicamos el factor de escala
+        if width < 4500:  # Umbral optimizado para calidad y rendimiento
+            scale_factor = 4500 / width  # Factor de escala balanceado
             new_width = int(width * scale_factor)
             new_height = int(height * scale_factor)
             image = image.resize((new_width, new_height), Image.Resampling.LANCZOS)
@@ -228,75 +228,21 @@ class PDFAnswerExtractor:
         clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
         img_array = clahe.apply(img_array)
         
-        # 5. Binarización adaptativa múltiple para encontrar la mejor
-        # Método 1: Umbralización adaptativa gaussiana
-        binary1 = cv2.adaptiveThreshold(img_array, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
-                                       cv2.THRESH_BINARY, 21, 10)
-        
-        # Método 2: Umbralización adaptativa media
-        binary2 = cv2.adaptiveThreshold(img_array, 255, cv2.ADAPTIVE_THRESH_MEAN_C, 
-                                       cv2.THRESH_BINARY, 21, 10)
-        
-        # Método 3: Umbralización de Otsu
-        _, binary3 = cv2.threshold(img_array, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-        
-        # Método 4: Umbralización de Otsu con filtro gaussiano previo
-        blur = cv2.GaussianBlur(img_array, (5, 5), 0)
-        _, binary4 = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-        
-        # 6. Seleccionar la mejor binarización basada en la cantidad de texto detectado
-        binaries = [
-            ('gaussian', binary1),
-            ('mean', binary2), 
-            ('otsu', binary3),
-            ('otsu_blur', binary4)
-        ]
-        
-        best_binary = None
-        best_score = 0
-        best_method = None
-        
-        for method, binary in binaries:
-            # Evaluar calidad basada en contornos de texto
-            contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-            text_contours = 0
-            for contour in contours:
-                area = cv2.contourArea(contour)
-                if 100 < area < 10000:  # Tamaño típico de caracteres
-                    text_contours += 1
-            
-            if text_contours > best_score:
-                best_score = text_contours
-                best_binary = binary
-                best_method = method
-        
-        if best_binary is not None:
-            img_array = best_binary
-            print(f"   🎯 Mejor binarización: {best_method} con {best_score} contornos de texto")
-        
-        # 7. Operaciones morfológicas para limpiar la imagen
-        kernel = np.ones((2, 2), np.uint8)
-        img_array = cv2.morphologyEx(img_array, cv2.MORPH_CLOSE, kernel)
-        img_array = cv2.morphologyEx(img_array, cv2.MORPH_OPEN, kernel)
-        
-        # 8. Dilatación ligera para fortalecer el texto
-        kernel = np.ones((1, 1), np.uint8)
-        img_array = cv2.dilate(img_array, kernel, iterations=1)
-        
-        # 9. Erosión para afinar el texto
-        img_array = cv2.erode(img_array, kernel, iterations=1)
+        # 5. Sin binarización - mejor resultado según pruebas OCR
+        # Mantener la imagen procesada sin binarización adicional
+        print(f"   🎯 Usando procesamiento sin binarización (configuración óptima)")
         
         # 10. Convertir de vuelta a PIL Image
         image = Image.fromarray(img_array)
         
         # 11. Aplicar mejoras adicionales con PIL
-        # Contraste final
+        # Contraste final (aumentado para mejor OCR)
         enhancer = ImageEnhance.Contrast(image)
-        image = enhancer.enhance(1.5)
+        image = enhancer.enhance(2.2)  # Optimizado a 2.2 según pruebas OCR
         
-        # Nitidez final
+        # Nitidez final (aumentada para mejor definición)
         enhancer = ImageEnhance.Sharpness(image)
-        image = enhancer.enhance(2.0)
+        image = enhancer.enhance(3.2)  # Optimizado a 3.2 según pruebas OCR
         
         print(f"   ✅ Imagen procesada con técnicas avanzadas para OCR de máxima calidad")
         return image
@@ -311,7 +257,7 @@ class PDFAnswerExtractor:
         print(f"📄 Procesando PDF: {self.pdf_path}")
         print("🔄 Convirtiendo páginas a imágenes...")
         
-        # Convertir PDF a imágenes (DPI alto para mejor calidad)
+        # Convertir PDF a imágenes (DPI balanceado para calidad y rendimiento)
         images = convert_from_path(str(self.pdf_path), dpi=600)
         print(f"✅ {len(images)} páginas convertidas")
         
@@ -873,7 +819,16 @@ class PDFAnswerExtractor:
                     rf'\b{first_digit}\s+([ABCDabcd])\b',     # "4 A"
                     rf'\b{first_digit}([ABCDabcd])\b',        # "4A"
                     rf'^{first_digit}\s*([ABCDabcd])$',       # "4 A" como línea completa
+                    rf'{first_digit}\s*([ABCDabcd])',         # "4 A" flexible
                 ]
+                
+                # Patrones específicos para números problemáticos
+                if missing_q == 41:
+                    incomplete_patterns.extend([
+                        r'\b4\s*1\s*([ABCDabcd])\b',           # "4 1 A" (41 separado)
+                        r'\b44\s*([ABCDabcd])\b',              # "44 A" puede ser 41
+                        r'\b4.*?([ABCDabcd])\b',               # "4..." cualquier cosa y respuesta
+                    ])
                 
                 for line in lines:
                     if found:
@@ -1151,36 +1106,81 @@ class PDFAnswerExtractor:
             # Solo generar archivos específicos automáticamente si NO hay filtros activos
             # (evita duplicar archivos cuando se usan filtros específicos)
             if not (self.target_exam_type or self.target_test_model):
-                # Archivo específico para PER Test 01 con nuevo patrón de nomenclatura
-                if 'PER' in all_exams and 'TEST01' in all_exams['PER']:
-                    per_test01 = all_exams['PER']['TEST01']
-                    
-                    # Generar nombre de archivo siguiendo el nuevo patrón
-                    new_filename = self._generate_output_filename('PER', 'TEST01')
-                    per_file_new = self.output_dir / new_filename
-                    
-                    # Mantener archivo de compatibilidad con nombre anterior
-                    per_file_legacy = self.output_dir / "per_test01_answers.json"
-                    
-                    per_data = {
-                        'exam_type': 'PER',
-                        'test_model': 'TEST01',
-                        'total_answers': per_test01['total_answers'],
-                        'answers': per_test01['answers'],
-                        'source_pdf': self.pdf_path.name,
-                        'generated_at': per_test01.get('generated_at'),
-                        'pdf_info': self.pdf_info
-                    }
-                    
-                    # Guardar con nuevo nombre
-                    with open(per_file_new, 'w', encoding='utf-8') as f:
-                        json.dump(per_data, f, indent=2, ensure_ascii=False)
-                    print(f"🎯 PER Test 01 (nuevo formato): {per_file_new}")
-                    
-                    # Guardar también con nombre legacy para compatibilidad
-                    with open(per_file_legacy, 'w', encoding='utf-8') as f:
-                        json.dump(per_data, f, indent=2, ensure_ascii=False)
-                    print(f"🎯 PER Test 01 (compatibilidad): {per_file_legacy}")
+                print("🔧 Generando archivos individuales para todos los exámenes encontrados...")
+                
+                # Generar archivos para TODOS los exámenes encontrados
+                for exam_type, models in all_exams.items():
+                    for model, exam_data in models.items():
+                        print(f"   📝 Generando archivo para {exam_type} {model}...")
+                        
+                        # Preparar datos del examen
+                        ordered_answers = dict(sorted(exam_data['answers'].items(), key=lambda x: int(x[0])))
+                        
+                        # Para PER, filtrar solo respuestas en rango 1-45
+                        if exam_type == 'PER':
+                            filtered_answers = {k: v for k, v in ordered_answers.items() if 1 <= int(k) <= 45}
+                            actual_total = len(filtered_answers)
+                        else:
+                            filtered_answers = ordered_answers
+                            actual_total = len(filtered_answers)
+                        
+                        # Generar nombres de archivo
+                        if exam_type == 'PER':
+                            # Usar nuevo formato para PER
+                            new_filename = self._generate_output_filename(exam_type, model)
+                            exam_file_new = self.output_dir / new_filename
+                            
+                            # Archivo de compatibilidad
+                            legacy_filename = f"{exam_type.lower()}_{model.lower()}_answers.json"
+                            exam_file_legacy = self.output_dir / legacy_filename
+                            
+                            complete_data = {
+                                'exam_type': exam_type,
+                                'test_model': model,
+                                'total_answers': actual_total,
+                                'answers': filtered_answers,
+                                'source_pdf': self.pdf_path.name,
+                                'generated_at': exam_data.get('generated_at'),
+                                'pdf_info': self.pdf_info
+                            }
+                            
+                            # Guardar con nuevo formato
+                            with open(exam_file_new, 'w', encoding='utf-8') as f:
+                                json.dump(complete_data, f, indent=2, ensure_ascii=False)
+                            print(f"   ✅ {exam_file_new}")
+                            
+                            # Guardar con formato legacy
+                            legacy_data = {
+                                'exam_type': exam_type,
+                                'test_model': model,
+                                'page': exam_data['page'],
+                                'total_answers': actual_total,
+                                'answers': filtered_answers
+                            }
+                            with open(exam_file_legacy, 'w', encoding='utf-8') as f:
+                                json.dump(legacy_data, f, indent=2, ensure_ascii=False)
+                            print(f"   ✅ {exam_file_legacy} (compatibilidad)")
+                            
+                        else:
+                            # Para otros tipos de examen, usar formato completo con metadatos
+                            new_filename = self._generate_output_filename(exam_type, model)
+                            exam_file_new = self.output_dir / new_filename
+                            
+                            complete_data = {
+                                'exam_type': exam_type,
+                                'test_model': model,
+                                'total_answers': actual_total,
+                                'answers': filtered_answers,
+                                'source_pdf': self.pdf_path.name,
+                                'generated_at': exam_data.get('generated_at'),
+                                'pdf_info': self.pdf_info
+                            }
+                            
+                            with open(exam_file_new, 'w', encoding='utf-8') as f:
+                                json.dump(complete_data, f, indent=2, ensure_ascii=False)
+                            print(f"   ✅ {exam_file_new}")
+                        
+                        print(f"      📊 {actual_total} respuestas")
             
             # Resumen general
             summary_file = self.output_dir / "exam_summary.json"
