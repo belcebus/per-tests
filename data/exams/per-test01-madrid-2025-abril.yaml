@@ -298,7 +298,7 @@ categories:
         de las siguientes actuaciones es la CORRECTA ante la situación descrita?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: b
+      correct_answer: a
       id: 23
       options:
         a: En cualquier caso, usará la zona de navegación costera.
@@ -457,7 +457,7 @@ categories:
         es INCORRECTA.
     - category: 9
       category_name: Meteorología
-      correct_answer: a
+      correct_answer: c
       id: 34
       options:
         a: Los vientos circulan en sentido antihorario y el valor de las isobaras
@@ -563,7 +563,7 @@ categories:
         270º.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: b
+      correct_answer: a
       id: 43
       options:
         a: l= 36°06,4´N; L= 005° 31,6´W.
