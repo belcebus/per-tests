@@ -31,6 +31,9 @@ pytesseract==0.3.13
 Pillow==10.1.0
 pdf2image==1.17.0
 
+# Procesamiento avanzado de imágenes para OCR
+opencv-python==4.11.0.86
+
 # Análisis adicional de PDFs (para pdf_analyzer.py)
 pdfplumber==0.10.3
 

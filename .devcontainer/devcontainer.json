@@ -15,7 +15,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo apt update && sudo apt install -y poppler-utils tesseract-ocr tesseract-ocr-spa && pip3 install --user -r requirements.txt",
+	"postCreateCommand": "sudo apt update && sudo apt install -y poppler-utils tesseract-ocr tesseract-ocr-spa tesseract-ocr-eng libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev libgomp1 && pip3 install --user -r requirements.txt",
 
 	// Configure tool-specific properties.
 	"customizations": {

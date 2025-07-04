@@ -513,7 +513,7 @@ categories:
       question: ¿Qué mide la sonda en una embarcación?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: a
+      correct_answer: b
       id: 41
       options:
         a: La hora de la bajamar y la hora de la siguiente pleamar.

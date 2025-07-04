@@ -51,6 +51,12 @@ SALIDA:
 - extracted_answers/exam_answers_complete.json: Todas las respuestas extraídas
 """
 
+# OPTIMIZACIONES APLICADAS:
+# - DPI aumentado a 600 para mejor calidad OCR
+# - Preparado para usar PyMuPDF cuando esté disponible
+# - Sistema de puntuación mejorado para seleccionar mejor resultado
+
+
 from pdf2image import convert_from_path
 import pytesseract
 from PIL import Image, ImageEnhance, ImageFilter
@@ -116,6 +122,9 @@ class PDFAnswerExtractor:
                 r'(?:aa)?(?:AND|ANG|ANB).*(?:AANDC|AANDA|AND)',  # Para "aaANDCAANDA" type patterns
                 r'Cd{1,2}0{1,2}[dl]0{1,2}[1-4]',  # Para "Cdd01", "Cd001", etc.
                 r'(?:Cc|C){1,2}[d]{1,2}0{1,2}[dl]0{1,2}[1-4]',  # Variaciones OCR del código
+                # Patrones específicos para errores severos de OCR (como aaANDANDBACACNDC)
+                r'(?:aa)?(?:AND|ANG|ANB|ANC)(?:AND|ANG|ANB|ANC)?(?:B|D|C)?(?:A|B|C|D)(?:C|A|B|D)(?:A|B|C|D)(?:C|N|M)(?:D|B|A)(?:C|D|A)',
+                r'(?:aa)?(?:AND){1,2}(?:BAC|DAC|CAC|BAD)(?:AC|AD|AB)(?:NDC|CDC|NDA)',  # Específico para "aaANDANDBACACNDC"
             ],
             'PATRON_YATE': [
                 r'PATRÓN DE YATE',
@@ -188,41 +197,108 @@ class PDFAnswerExtractor:
 
     def enhance_image_for_ocr(self, image: Image.Image) -> Image.Image:
         """
-        Mejora la imagen para obtener mejor precisión en el OCR con múltiples técnicas
+        Mejora la imagen para obtener máxima precisión en el OCR con técnicas avanzadas
+        Prioriza calidad sobre recursos de procesamiento
         """
+        import cv2
+        import numpy as np
+        from PIL import ImageOps
+        
         # Convertir a escala de grises si no lo está
         if image.mode != 'L':
             image = image.convert('L')
         
-        # 1. Redimensionar si es necesario (OCR funciona mejor con imágenes más grandes)
+        # 1. Redimensionado ultra-agresivo para máxima calidad
         width, height = image.size
-        if width < 1500:  # Si la imagen es pequeña, aumentar el tamaño
-            scale_factor = 1500 / width
+        if width < 4000:  # Aumentamos significativamente el umbral
+            scale_factor = 4000 / width  # Duplicamos el factor de escala
             new_width = int(width * scale_factor)
             new_height = int(height * scale_factor)
             image = image.resize((new_width, new_height), Image.Resampling.LANCZOS)
+            print(f"   🔍 Imagen redimensionada a {new_width}x{new_height} para máxima calidad OCR")
         
-        # 2. Aumentar contraste de manera adaptativa
+        # 2. Convertir a numpy array para procesamiento avanzado con OpenCV
+        img_array = np.array(image)
+        
+        # 3. Aplicar filtros de suavizado para reducir artefactos
+        img_array = cv2.medianBlur(img_array, 3)
+        img_array = cv2.GaussianBlur(img_array, (3, 3), 0)
+        
+        # 4. Mejora de contraste adaptativa con CLAHE
+        clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
+        img_array = clahe.apply(img_array)
+        
+        # 5. Binarización adaptativa múltiple para encontrar la mejor
+        # Método 1: Umbralización adaptativa gaussiana
+        binary1 = cv2.adaptiveThreshold(img_array, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
+                                       cv2.THRESH_BINARY, 21, 10)
+        
+        # Método 2: Umbralización adaptativa media
+        binary2 = cv2.adaptiveThreshold(img_array, 255, cv2.ADAPTIVE_THRESH_MEAN_C, 
+                                       cv2.THRESH_BINARY, 21, 10)
+        
+        # Método 3: Umbralización de Otsu
+        _, binary3 = cv2.threshold(img_array, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        
+        # Método 4: Umbralización de Otsu con filtro gaussiano previo
+        blur = cv2.GaussianBlur(img_array, (5, 5), 0)
+        _, binary4 = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        
+        # 6. Seleccionar la mejor binarización basada en la cantidad de texto detectado
+        binaries = [
+            ('gaussian', binary1),
+            ('mean', binary2), 
+            ('otsu', binary3),
+            ('otsu_blur', binary4)
+        ]
+        
+        best_binary = None
+        best_score = 0
+        best_method = None
+        
+        for method, binary in binaries:
+            # Evaluar calidad basada en contornos de texto
+            contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            text_contours = 0
+            for contour in contours:
+                area = cv2.contourArea(contour)
+                if 100 < area < 10000:  # Tamaño típico de caracteres
+                    text_contours += 1
+            
+            if text_contours > best_score:
+                best_score = text_contours
+                best_binary = binary
+                best_method = method
+        
+        if best_binary is not None:
+            img_array = best_binary
+            print(f"   🎯 Mejor binarización: {best_method} con {best_score} contornos de texto")
+        
+        # 7. Operaciones morfológicas para limpiar la imagen
+        kernel = np.ones((2, 2), np.uint8)
+        img_array = cv2.morphologyEx(img_array, cv2.MORPH_CLOSE, kernel)
+        img_array = cv2.morphologyEx(img_array, cv2.MORPH_OPEN, kernel)
+        
+        # 8. Dilatación ligera para fortalecer el texto
+        kernel = np.ones((1, 1), np.uint8)
+        img_array = cv2.dilate(img_array, kernel, iterations=1)
+        
+        # 9. Erosión para afinar el texto
+        img_array = cv2.erode(img_array, kernel, iterations=1)
+        
+        # 10. Convertir de vuelta a PIL Image
+        image = Image.fromarray(img_array)
+        
+        # 11. Aplicar mejoras adicionales con PIL
+        # Contraste final
         enhancer = ImageEnhance.Contrast(image)
-        image = enhancer.enhance(1.8)  # Aumento más agresivo
+        image = enhancer.enhance(1.5)
         
-        # 3. Aumentar nitidez para mejorar la definición de números
+        # Nitidez final
         enhancer = ImageEnhance.Sharpness(image)
-        image = enhancer.enhance(2.0)  # Nitidez más fuerte
+        image = enhancer.enhance(2.0)
         
-        # 4. Aplicar filtro de reducción de ruido más específico
-        image = image.filter(ImageFilter.MedianFilter(size=3))
-        
-        # 5. Aplicar umbralización adaptativa para mejor separación de texto/fondo
-        image_array = np.array(image)
-        # Umbralización de Otsu
-        from PIL import ImageOps
-        image = ImageOps.autocontrast(image, cutoff=2)
-        
-        # 6. Aplicar erosión y dilatación para limpiar caracteres
-        image = image.filter(ImageFilter.MinFilter(size=3))
-        image = image.filter(ImageFilter.MaxFilter(size=3))
-        
+        print(f"   ✅ Imagen procesada con técnicas avanzadas para OCR de máxima calidad")
         return image
     
     def extract_text_from_pdf(self) -> List[str]:
@@ -236,7 +312,7 @@ class PDFAnswerExtractor:
         print("🔄 Convirtiendo páginas a imágenes...")
         
         # Convertir PDF a imágenes (DPI alto para mejor calidad)
-        images = convert_from_path(str(self.pdf_path), dpi=300)
+        images = convert_from_path(str(self.pdf_path), dpi=600)
         print(f"✅ {len(images)} páginas convertidas")
         
         extracted_texts = []
@@ -247,18 +323,17 @@ class PDFAnswerExtractor:
             # Mejorar imagen para OCR
             enhanced_image = self.enhance_image_for_ocr(image)
             
-            # Aplicar OCR con configuración optimizada para números y letras
+            # Aplicar OCR con múltiples configuraciones especializadas
             try:
-                # Primera pasada: configuración general
+                # Configuración 1: General para texto completo
                 config_general = '--oem 3 --psm 6'
-                
-                text = pytesseract.image_to_string(
+                text_general = pytesseract.image_to_string(
                     enhanced_image,
                     lang='spa+eng',
                     config=config_general
                 )
                 
-                # Segunda pasada: configuración específica para números y respuestas
+                # Configuración 2: Específica para números y respuestas
                 config_specific = '--oem 3 --psm 6 -c tessedit_char_whitelist=0123456789ABCDabcdANULADA.():=- '
                 text_specific = pytesseract.image_to_string(
                     enhanced_image,
@@ -266,7 +341,7 @@ class PDFAnswerExtractor:
                     config=config_specific
                 )
                 
-                # Tercera pasada: configuración optimizada para líneas individuales
+                # Configuración 3: Optimizada para líneas individuales
                 config_lines = '--oem 3 --psm 13 -c tessedit_char_whitelist=0123456789ABCDabcd.():=- '
                 text_lines = pytesseract.image_to_string(
                     enhanced_image,
@@ -274,20 +349,77 @@ class PDFAnswerExtractor:
                     config=config_lines
                 )
                 
-                # Seleccionar el mejor resultado basado en contenido útil
-                candidates = [
-                    ('general', text, len(re.findall(r'\d+\s*[ABCDabcd]', text))),
-                    ('specific', text_specific, len(re.findall(r'\d+\s*[ABCDabcd]', text_specific))),
-                    ('lines', text_lines, len(re.findall(r'\d+\s*[ABCDabcd]', text_lines)))
-                ]
+                # Configuración 4: Muy específica para números (problemas como 41→4)
+                config_numbers = '--oem 3 --psm 8 -c tessedit_char_whitelist=0123456789ABCDabcd'
+                text_numbers = pytesseract.image_to_string(
+                    enhanced_image,
+                    lang='eng',
+                    config=config_numbers
+                )
                 
-                # Elegir la configuración que detectó más patrones de respuesta
-                best_config, text, pattern_count = max(candidates, key=lambda x: x[2])
+                # Configuración 5: Para encabezados y texto completo (más permisiva)
+                config_headers = '--oem 3 --psm 4'
+                text_headers = pytesseract.image_to_string(
+                    enhanced_image,
+                    lang='spa+eng',
+                    config=config_headers
+                )
                 
-                if pattern_count > 0:
-                    print(f"   ✅ Mejor resultado con configuración '{best_config}': {pattern_count} patrones detectados")
+                # Configuración 6: Bloques de texto completo con motor LSTM
+                config_lstm = '--oem 1 --psm 6'
+                text_lstm = pytesseract.image_to_string(
+                    enhanced_image,
+                    lang='spa+eng',
+                    config=config_lstm
+                )
+                
+                # Evaluar cada configuración basándose en diferentes criterios
+                candidates = []
+                
+                # Contar patrones de respuesta (formato: número + letra)
+                pattern_answers = r'\d+\s*[ABCDabcd]'
+                
+                # Contar palabras clave de encabezados
+                header_keywords = ['EXAMEN', 'RESPUESTAS', 'MADRID', 'PER', 'PATRON', 'CAPITAN', 'YATE', 'TEST']
+                
+                for config_name, text in [
+                    ('general', text_general),
+                    ('specific', text_specific), 
+                    ('lines', text_lines),
+                    ('numbers', text_numbers),
+                    ('headers', text_headers),
+                    ('lstm', text_lstm)
+                ]:
+                    answer_count = len(re.findall(pattern_answers, text))
+                    header_count = sum(1 for keyword in header_keywords if keyword in text.upper())
+                    
+                    # Puntuación combinada: priorizamos respuestas pero también encabezados
+                    score = answer_count * 2 + header_count
+                    
+                    candidates.append((config_name, text, answer_count, header_count, score))
+                
+                # Seleccionar la mejor configuración
+                best_config, text, answer_count, header_count, best_score = max(candidates, key=lambda x: x[4])
+                
+                print(f"   🎯 Mejor configuración: {best_config} (respuestas: {answer_count}, encabezados: {header_count}, puntuación: {best_score})")
+                
+                # Si ninguna configuración detectó respuestas, usar la que detectó más encabezados
+                if answer_count == 0:
+                    header_candidates = [(name, txt, h_count) for name, txt, a_count, h_count, score in candidates if h_count > 0]
+                    if header_candidates:
+                        best_config, text, header_count = max(header_candidates, key=lambda x: x[2])
+                        print(f"   📋 Configuración alternativa por encabezados: {best_config} (encabezados: {header_count})")
+                
+                # Si aún no hay resultados útiles, usar la configuración general
+                if answer_count == 0 and header_count == 0:
+                    text = text_general
+                    best_config = 'general'
+                    print(f"   ⚠️  Usando configuración general como respaldo")
+                
+                if answer_count > 0:
+                    print(f"   ✅ Mejor resultado con configuración '{best_config}': {answer_count} respuestas detectadas")
                 else:
-                    print(f"   ⚠️  No se detectaron patrones claros, usando resultado general")
+                    print(f"   ⚠️  No se detectaron respuestas claras, usando resultado general")
                 
                 extracted_texts.append(text)
                 
@@ -378,47 +510,42 @@ class PDFAnswerExtractor:
     
     def extract_answers_from_text(self, text: str) -> Dict[int, str]:
         """
-        Extrae las respuestas numeradas del texto de una página con detección inteligente de secuencias
+        Extrae las respuestas numeradas del texto de una página con lógica de numeración consecutiva
         """
         answers = {}
         lines = text.split('\n')
         
         print(f"   📋 Procesando {len(lines)} líneas de texto...")
         
-        # Patrones para detectar respuestas numeradas (mejorados)
+        # Contador para numeración consecutiva
+        expected_next_question = 1
+        last_valid_question = 0
+        
+        # Patrones para detectar respuestas numeradas (simplificados)
         answer_patterns = [
             r'^(\d{1,2})\s*[\.\)\:\-]*\s*([ABCDabcd])(?:\s|$)',  # "1 A", "1. B", "1) C", "1: D", "1- A"
             r'^(\d{1,2})([ABCDabcd])(?:\s|$)',  # "1A", "2B"
             r'(\d{1,2})\s*[\.\)\:\-]*\s*([ABCDabcd])(?:\s|$)',  # Números en cualquier parte de la línea
         ]
         
-        # Patrones especiales para errores de OCR
-        special_patterns = [
-            r'^(\d{1,2})\s*(Cc|Aa|Bb|Dd|CC|AA|BB|DD)(?:\s|$)',  # Errores de duplicación
-            r'^(\d{1,2})\s*O([ABCDabcd])(?:\s|$)',  # "O" en lugar de espacios  
-            r'^(\d{1,2})\s*o([ABCDabcd])(?:\s|$)',  # "o" minúscula en lugar de "O"
-            r'^(\d{3,})\s*([ABCDabcd])(?:\s|$)',  # Números de 3+ dígitos mal leídos (ej: "177" -> "17")
+        # Patrones para detectar líneas que contienen respuestas pero con números problemáticos
+        answer_with_bad_number_patterns = [
+            r'^(\d+)\s*[\.\)\:\-]*\s*([ABCDabcd])(?:\s|$)',  # Cualquier número + respuesta
+            r'^([^\s]*)\s*[\.\)\:\-]*\s*([ABCDabcd])(?:\s|$)',  # Cualquier "número" + respuesta
+            r'([ABCDabcd])(?:\s|$)',  # Solo respuesta, sin número claro
         ]
         
-        # Patrones específicos para errores comunes de OCR con números
-        number_ocr_patterns = [
-            r'^(\d{2,3})(\d)\s*([ABCDabcd])(?:\s|$)',  # "177 A" -> "17" + "7 A" (ignorar el 7)
-            r'^(\d{1,2})(\d{1,2})\s*(\d)([ABCDabcd])(?:\s|$)',  # "17 2A" -> "17" + " A" (ignorar 2)
-        ]
-        
-        # Primera pasada: extracción básica
         for line_num, line in enumerate(lines):
             line = line.strip()
             if not line:
                 continue
             
             original_line = line
-            
-            # Pre-procesar línea para corregir errores comunes de OCR
             line = self._clean_ocr_line(line)
             
-            # Buscar respuestas con patrones básicos
             found_answer = False
+            
+            # Primera pasada: intentar detectar números válidos (1-2 dígitos en rango 1-45)
             for pattern in answer_patterns:
                 matches = re.finditer(pattern, line)
                 for match in matches:
@@ -428,9 +555,11 @@ class PDFAnswerExtractor:
                         
                         # Validar que es una respuesta válida y número en rango correcto
                         if answer in ['a', 'b', 'c', 'd'] and 1 <= question_num <= 45:
-                            # Solo agregar si no existe ya
+                            # Para números válidos de 1-2 dígitos en rango, ser permisivo
                             if question_num not in answers:
                                 answers[question_num] = answer
+                                last_valid_question = question_num
+                                expected_next_question = max(expected_next_question, question_num + 1)
                                 print(f"   ✅ Pregunta {question_num}: {answer.upper()}")
                                 found_answer = True
                         elif question_num > 45:
@@ -441,121 +570,107 @@ class PDFAnswerExtractor:
             if found_answer:
                 continue
             
-            # Buscar con patrones especiales para errores de OCR
-            for pattern in special_patterns:
+            # Segunda pasada: aplicar lógica consecutiva para números problemáticos
+            for pattern in answer_with_bad_number_patterns:
                 match = re.match(pattern, line)
                 if match:
                     try:
-                        full_num = match.group(1)
-                        ocr_answer = match.group(2) if len(match.groups()) > 1 else None
+                        # Extraer la respuesta (siempre será el último grupo que matchee [ABCDabcd])
+                        answer = None
+                        for group in match.groups():
+                            if group and group.lower() in ['a', 'b', 'c', 'd']:
+                                answer = group.lower()
+                                break
                         
-                        # Para números de 3+ dígitos, usar solo los primeros 2
-                        if len(full_num) >= 3:
-                            question_num = int(full_num[:2])
-                        else:
-                            question_num = int(full_num)
-                        
-                        # Validar que el número de pregunta esté en rango válido
-                        if not (1 <= question_num <= 45):
-                            if question_num > 45:
-                                print(f"   ⚠️  Ignorando pregunta {question_num} (fuera de rango 1-45)")
+                        if not answer:
                             continue
                         
-                        # Corregir respuesta OCR si es necesario
-                        if ocr_answer:
-                            answer = self._fix_ocr_answer(ocr_answer)
-                            if not answer:
-                                answer = ocr_answer.lower()
-                        else:
-                            # Buscar la respuesta en el resto de la línea
-                            answer_match = re.search(r'([ABCDabcd])', line)
-                            if answer_match:
-                                answer = answer_match.group(1).lower()
-                            else:
-                                continue
+                        # Obtener el "número" problemático para logging
+                        problematic_number = match.group(1) if len(match.groups()) >= 2 else "sin número"
                         
-                        if answer in ['a', 'b', 'c', 'd'] and question_num not in answers:
-                            answers[question_num] = answer
-                            print(f"   🔧 Pregunta {question_num}: {answer.upper()} (corregido de {original_line[:30]}...)")
+                        # Aplicar numeración consecutiva
+                        corrected_num = expected_next_question
+                        
+                        if corrected_num <= 45 and corrected_num not in answers:
+                            answers[corrected_num] = answer
+                            last_valid_question = corrected_num
+                            expected_next_question = corrected_num + 1
+                            print(f"   🔧 Pregunta {corrected_num}: {answer.upper()} (numeración consecutiva, era '{problematic_number}')")
                             found_answer = True
                             break
                     except (ValueError, IndexError):
                         continue
             
-            if found_answer:
-                continue
-            
-            # Buscar con patrones específicos para errores de números OCR
-            for pattern in number_ocr_patterns:
-                match = re.match(pattern, line)
-                if match:
-                    try:
-                        if len(match.groups()) == 4:  # Patrón "17 2A" -> grupos: "17", "2", "A"
-                            question_num = int(match.group(1))
-                            # Ignorar el dígito intermedio (match.group(2))
-                            # El tercer grupo puede ser otro dígito a ignorar
-                            answer = match.group(4).lower()
-                        elif len(match.groups()) == 3:  # Patrón "177 A" -> grupos: "17", "7", "A"
-                            question_num = int(match.group(1))
-                            # Ignorar el dígito extra (match.group(2))
-                            answer = match.group(3).lower()
-                        else:
-                            continue
-                        
-                        # Validar que el número de pregunta esté en rango válido
-                        if not (1 <= question_num <= 45):
-                            if question_num > 45:
-                                print(f"   ⚠️  Ignorando pregunta {question_num} (fuera de rango 1-45)")
-                            continue
-                        
-                        if answer in ['a', 'b', 'c', 'd'] and question_num not in answers:
-                            answers[question_num] = answer
-                            print(f"   🔧 Pregunta {question_num}: {answer.upper()} (corregido OCR numérico de {original_line[:30]}...)")
-                            found_answer = True
-                            break
-                    except (ValueError, IndexError):
-                        continue
-            
-            # Buscar respuestas anuladas
-            if re.search(r'anulada|nula', line, re.IGNORECASE):
-                # Buscar número de pregunta cerca
+            # Tercera pasada: buscar respuestas anuladas
+            if not found_answer and re.search(r'anulada|nula', line, re.IGNORECASE):
+                # Buscar si hay un número en la línea
                 num_match = re.search(r'(\d+)', line)
                 if num_match:
                     try:
                         question_num = self._normalize_question_number(num_match.group(1))
-                        if question_num and question_num not in answers:
-                            answers[question_num] = "ANULADA"
-                            print(f"   🚫 Pregunta {question_num}: ANULADA")
+                        if question_num and 1 <= question_num <= 45:
+                            if self._is_consecutive_valid(question_num, expected_next_question, last_valid_question):
+                                if question_num not in answers:
+                                    answers[question_num] = "ANULADA"
+                                    last_valid_question = question_num
+                                    expected_next_question = question_num + 1
+                                    print(f"   🚫 Pregunta {question_num}: ANULADA")
+                            else:
+                                # Aplicar lógica consecutiva para anuladas también
+                                corrected_num = expected_next_question
+                                if corrected_num <= 45 and corrected_num not in answers:
+                                    answers[corrected_num] = "ANULADA"
+                                    last_valid_question = corrected_num
+                                    expected_next_question = corrected_num + 1
+                                    print(f"   🚫 Pregunta {corrected_num}: ANULADA (corregido por lógica consecutiva)")
                     except ValueError:
                         continue
-            
-            # Patrón especial para casos como "4 oC" que debería ser "44 C"
-            special_case_pattern = r'^(\d+)\s*o([ABCDabcd])(?:\s|$)'
-            special_match = re.match(special_case_pattern, line, re.IGNORECASE)
-            if special_match:
-                try:
-                    partial_num = special_match.group(1)
-                    answer = special_match.group(2).lower()
-                    
-                    # Si es un dígito solo, probablemente falta el segundo dígito
-                    if len(partial_num) == 1:
-                        # Buscar el segundo dígito en la misma línea o asumir que es el dígito + "4"
-                        probable_question_num = int(partial_num + "4")  # "4" -> "44"
-                    else:
-                        probable_question_num = int(partial_num)
-                    
-                    if answer in ['a', 'b', 'c', 'd'] and 1 <= probable_question_num <= 45:
-                        if probable_question_num not in answers:
-                            answers[probable_question_num] = answer
-                            print(f"   🔧 Pregunta {probable_question_num}: {answer.upper()} (corregido de {line[:30]}...)")
-                except (ValueError, IndexError):
-                    continue
-        
-        # Segunda pasada: detección inteligente de secuencias para números problemáticos
-        answers = self._detect_sequential_patterns(text, answers)
+                else:
+                    # Si no hay número, usar consecutiva
+                    corrected_num = expected_next_question
+                    if corrected_num <= 45 and corrected_num not in answers:
+                        answers[corrected_num] = "ANULADA"
+                        last_valid_question = corrected_num
+                        expected_next_question = corrected_num + 1
+                        print(f"   🚫 Pregunta {corrected_num}: ANULADA (numeración consecutiva)")
         
         print(f"   📊 Total respuestas extraídas: {len(answers)}")
+        print(f"   � Última pregunta procesada: {last_valid_question}")
+        print(f"   🔄 Siguiente pregunta esperada: {expected_next_question}")
+        
         return answers
+    
+    def _is_consecutive_valid(self, question_num: int, expected_next: int, last_valid: int) -> bool:
+        """
+        Verifica si un número de pregunta es válido considerando la secuencia consecutiva
+        """
+        # Si es la primera pregunta
+        if last_valid == 0:
+            return question_num == 1
+        
+        # Si es exactamente la siguiente esperada
+        if question_num == expected_next:
+            return True
+        
+        # Permitir saltos hacia adelante razonables (hasta 5 preguntas)
+        # Esto maneja casos donde el OCR se saltó algunas líneas
+        if expected_next <= question_num <= expected_next + 5:
+            return True
+        
+        # Permitir números hacia atrás solo si son cercanos (máximo 3 preguntas)
+        # Esto maneja casos donde el OCR detectó preguntas fuera de orden
+        if expected_next - 3 <= question_num < expected_next:
+            return True
+        
+        # Para números muy grandes (probablemente errores OCR como 465)
+        if question_num > 45:
+            return False
+        
+        # Para otros casos, ser más permisivo y aceptar el número si está en rango válido
+        if 1 <= question_num <= 45:
+            return True
+        
+        return False
     
     def _normalize_question_number(self, raw_number: str) -> Optional[int]:
         """
@@ -1161,28 +1276,321 @@ class PDFAnswerExtractor:
         lines = text.split('\n')
         recovered = {}
         
-        # Para cada pregunta faltante, intentar detectarla usando contexto secuencial
+        # Analizar líneas para encontrar patrones problemáticos específicos
+        line_analysis = self._analyze_lines_for_sequence_errors(lines, found_questions)
+        
+        # Para cada pregunta faltante, intentar detectarla usando múltiples estrategias
         for missing_q in missing_questions:
             print(f"   🔍 Buscando pregunta {missing_q}...")
             
-            # Estrategia 1: Buscar números que podrían ser esta pregunta con errores
-            candidates = self._find_number_candidates(lines, missing_q)
+            # Estrategia 1: Buscar números incompletos que podrían ser esta pregunta
+            incomplete_candidates = self._find_incomplete_number_patterns(lines, missing_q, found_questions)
             
-            if candidates:
-                # Evaluar cada candidato usando contexto secuencial
-                best_candidate = self._evaluate_candidates_by_context(candidates, missing_q, found_questions)
+            # Estrategia 2: Buscar números con dígitos extra que podrían ser esta pregunta
+            extra_digit_candidates = self._find_extra_digit_patterns(lines, missing_q, found_questions)
+            
+            # Estrategia 3: Buscar en posición secuencial esperada
+            position_candidates = self._find_by_sequential_position(lines, missing_q, found_questions)
+            
+            # Combinar todos los candidatos
+            all_candidates = incomplete_candidates + extra_digit_candidates + position_candidates
+            
+            if all_candidates:
+                # Evaluar cada candidato usando contexto secuencial mejorado
+                best_candidate = self._evaluate_candidates_by_context_advanced(all_candidates, missing_q, found_questions, line_analysis)
                 
                 if best_candidate:
-                    line_text, answer, confidence = best_candidate
+                    line_text, answer, confidence, strategy = best_candidate
                     recovered[missing_q] = answer
                     found_questions.add(missing_q)  # Actualizar conjunto para próximas búsquedas
-                    print(f"   ✅ Pregunta {missing_q}: {answer.upper()} (confianza: {confidence:.2f}, línea: {line_text[:50]}...)")
+                    print(f"   ✅ Pregunta {missing_q}: {answer.upper()} (confianza: {confidence:.2f}, estrategia: {strategy}, línea: {line_text[:50]}...)")
         
         # Añadir preguntas recuperadas
         answers.update(recovered)
         
         print(f"   📊 Preguntas recuperadas: {len(recovered)}")
         return answers
+    
+    def _analyze_lines_for_sequence_errors(self, lines: List[str], found_questions: set) -> Dict:
+        """
+        Analiza las líneas para identificar patrones comunes de errores secuenciales
+        """
+        analysis = {
+            'line_to_question': {},
+            'question_to_line': {},
+            'suspicious_patterns': []
+        }
+        
+        for line_idx, line in enumerate(lines):
+            line = line.strip()
+            if not line:
+                continue
+            
+            # Buscar números de pregunta conocidos
+            for q_num in found_questions:
+                if re.search(rf'\b{q_num}\b', line):
+                    analysis['line_to_question'][line_idx] = q_num
+                    analysis['question_to_line'][q_num] = line_idx
+            
+            # Identificar patrones sospechosos
+            if re.search(r'\d{3,}', line):  # Números de 3+ dígitos
+                analysis['suspicious_patterns'].append(('extra_digits', line_idx, line))
+            
+            if re.search(r'^\d\s+[ABCDabcd]', line):  # Un solo dígito seguido de respuesta
+                analysis['suspicious_patterns'].append(('single_digit', line_idx, line))
+        
+        return analysis
+    
+    def _find_incomplete_number_patterns(self, lines: List[str], target_question: int, found_questions: set) -> List[Tuple[str, str, float, str]]:
+        """
+        Busca números incompletos que podrían ser la pregunta objetivo (ej: "4" en lugar de "41")
+        """
+        candidates = []
+        target_str = str(target_question)
+        
+        if len(target_str) < 2:
+            return candidates
+        
+        # Buscar patrones donde falta el primer dígito
+        first_digit = target_str[0]
+        second_digit = target_str[1]
+        
+        for line_idx, line in enumerate(lines):
+            line = line.strip()
+            if not line:
+                continue
+            
+            # Patrón: segundo dígito seguido de respuesta (ej: "1 A" para pregunta 41)
+            pattern = rf'^{second_digit}\s+([ABCDabcd])\b'
+            match = re.match(pattern, line)
+            if match:
+                answer = match.group(1).lower()
+                if answer in ['a', 'b', 'c', 'd']:
+                    # Verificar contexto: debe estar cerca de preguntas similares
+                    context_score = self._calculate_context_score_for_incomplete(line_idx, target_question, found_questions, lines)
+                    candidates.append((line, answer, context_score, 'incomplete_number'))
+            
+            # Patrón: primer dígito seguido de punto y respuesta (ej: "4. A" para pregunta 44)
+            pattern2 = rf'^{second_digit}\.?\s*([ABCDabcd])\b'
+            match2 = re.match(pattern2, line)
+            if match2:
+                answer = match2.group(1).lower()
+                if answer in ['a', 'b', 'c', 'd']:
+                    context_score = self._calculate_context_score_for_incomplete(line_idx, target_question, found_questions, lines)
+                    candidates.append((line, answer, context_score, 'incomplete_with_dot'))
+        
+        return candidates
+    
+    def _find_extra_digit_patterns(self, lines: List[str], target_question: int, found_questions: set) -> List[Tuple[str, str, float, str]]:
+        """
+        Busca números con dígitos extra que podrían ser la pregunta objetivo (ej: "358" en lugar de "35")
+        """
+        candidates = []
+        target_str = str(target_question)
+        
+        for line_idx, line in enumerate(lines):
+            line = line.strip()
+            if not line:
+                continue
+            
+            # Buscar números que empiecen con los dígitos objetivo
+            pattern = rf'^({target_str}\d+)\s*([ABCDabcd])\b'
+            match = re.match(pattern, line)
+            if match:
+                full_number = match.group(1)
+                answer = match.group(2).lower()
+                
+                if answer in ['a', 'b', 'c', 'd'] and len(full_number) > len(target_str):
+                    context_score = self._calculate_context_score_for_extra_digits(line_idx, target_question, found_questions, lines)
+                    candidates.append((line, answer, context_score, 'extra_digits'))
+        
+        return candidates
+    
+    def _find_by_sequential_position(self, lines: List[str], target_question: int, found_questions: set) -> List[Tuple[str, str, float, str]]:
+        """
+        Busca respuestas basándose en la posición secuencial esperada
+        """
+        candidates = []
+        
+        # Encontrar la posición esperada basándose en preguntas cercanas conocidas
+        expected_line_range = self._estimate_line_position(target_question, found_questions, lines)
+        
+        if expected_line_range:
+            start_line, end_line = expected_line_range
+            
+            for line_idx in range(max(0, start_line), min(len(lines), end_line + 1)):
+                line = lines[line_idx].strip()
+                if not line:
+                    continue
+                
+                # Buscar líneas que tengan respuesta pero número problemático
+                answer_match = re.search(r'([ABCDabcd])\b', line)
+                if answer_match:
+                    answer = answer_match.group(1).lower()
+                    if answer in ['a', 'b', 'c', 'd']:
+                        # Verificar que no sea una pregunta ya asignada
+                        existing_q = None
+                        for q in found_questions:
+                            if re.search(rf'\b{q}\b', line):
+                                existing_q = q
+                                break
+                        
+                        if not existing_q:
+                            context_score = self._calculate_positional_context_score(line_idx, target_question, found_questions, lines)
+                            candidates.append((line, answer, context_score, 'sequential_position'))
+        
+        return candidates
+    
+    def _calculate_context_score_for_incomplete(self, line_idx: int, target_question: int, found_questions: set, lines: List[str]) -> float:
+        """
+        Calcula puntuación de contexto para números incompletos
+        """
+        score = 0.0
+        
+        # Buscar preguntas cercanas conocidas
+        nearby_questions = []
+        for offset in [-3, -2, -1, 1, 2, 3]:
+            check_idx = line_idx + offset
+            if 0 <= check_idx < len(lines):
+                for q in found_questions:
+                    if re.search(rf'\b{q}\b', lines[check_idx]):
+                        nearby_questions.append(q)
+        
+        if nearby_questions:
+            min_distance = min(abs(q - target_question) for q in nearby_questions)
+            score += 0.8 / (min_distance + 1)
+        
+        # Bonificación si está en la zona esperada (preguntas 35-45 al final)
+        if target_question >= 35:
+            total_lines = len([l for l in lines if l.strip()])
+            relative_position = line_idx / total_lines if total_lines > 0 else 0
+            if relative_position > 0.7:  # En el último 30% del texto
+                score += 0.3
+        
+        return score
+    
+    def _calculate_context_score_for_extra_digits(self, line_idx: int, target_question: int, found_questions: set, lines: List[str]) -> float:
+        """
+        Calcula puntuación de contexto para números con dígitos extra
+        """
+        score = 0.5  # Puntuación base alta porque es un patrón común
+        
+        # Verificar secuencia local
+        prev_line = lines[line_idx - 1] if line_idx > 0 else ""
+        next_line = lines[line_idx + 1] if line_idx < len(lines) - 1 else ""
+        
+        # Buscar pregunta anterior
+        for q in range(target_question - 3, target_question):
+            if q in found_questions and re.search(rf'\b{q}\b', prev_line):
+                score += 0.4
+                break
+        
+        # Buscar pregunta posterior
+        for q in range(target_question + 1, target_question + 4):
+            if q in found_questions and re.search(rf'\b{q}\b', next_line):
+                score += 0.4
+                break
+        
+        return score
+    
+    def _calculate_positional_context_score(self, line_idx: int, target_question: int, found_questions: set, lines: List[str]) -> float:
+        """
+        Calcula puntuación de contexto basada en posición secuencial
+        """
+        score = 0.2  # Puntuación base baja, requiere evidencia fuerte
+        
+        # Verificar que esté en la posición secuencial correcta
+        expected_position = self._estimate_exact_line_position(target_question, found_questions, lines)
+        if expected_position and abs(line_idx - expected_position) <= 2:
+            score += 0.6
+        
+        return score
+    
+    def _estimate_line_position(self, target_question: int, found_questions: set, lines: List[str]) -> Optional[Tuple[int, int]]:
+        """
+        Estima el rango de líneas donde debería estar la pregunta objetivo
+        """
+        question_positions = []
+        
+        for q in found_questions:
+            for line_idx, line in enumerate(lines):
+                if re.search(rf'\b{q}\b', line):
+                    question_positions.append((q, line_idx))
+        
+        if len(question_positions) < 2:
+            return None
+        
+        # Ordenar por número de pregunta
+        question_positions.sort()
+        
+        # Interpolar posición esperada
+        for i in range(len(question_positions) - 1):
+            q1, line1 = question_positions[i]
+            q2, line2 = question_positions[i + 1]
+            
+            if q1 < target_question < q2:
+                # Interpolación lineal
+                ratio = (target_question - q1) / (q2 - q1)
+                estimated_line = int(line1 + ratio * (line2 - line1))
+                return (estimated_line - 2, estimated_line + 2)
+        
+        return None
+    
+    def _estimate_exact_line_position(self, target_question: int, found_questions: set, lines: List[str]) -> Optional[int]:
+        """
+        Estima la línea exacta donde debería estar la pregunta objetivo
+        """
+        range_result = self._estimate_line_position(target_question, found_questions, lines)
+        if range_result:
+            start_line, end_line = range_result
+            return (start_line + end_line) // 2
+        return None
+    
+    def _evaluate_candidates_by_context_advanced(self, candidates: List[Tuple[str, str, float, str]], 
+                                               target_question: int, found_questions: set, line_analysis: Dict) -> Optional[Tuple[str, str, float, str]]:
+        """
+        Evalúa candidatos usando contexto secuencial avanzado
+        """
+        if not candidates:
+            return None
+        
+        best_candidate = None
+        best_confidence = 0.0
+        
+        for line_text, answer, base_score, strategy in candidates:
+            confidence = base_score
+            
+            # Factor 1: Calidad de la respuesta
+            if answer in ['a', 'b', 'c', 'd']:
+                confidence += 0.2
+            
+            # Factor 2: Estrategia específica
+            strategy_bonus = {
+                'incomplete_number': 0.3,
+                'incomplete_with_dot': 0.25,
+                'extra_digits': 0.4,
+                'sequential_position': 0.1
+            }
+            confidence += strategy_bonus.get(strategy, 0.0)
+            
+            # Factor 3: Ausencia de ambigüedad
+            other_numbers = re.findall(r'\d+', line_text)
+            if len(other_numbers) <= 1:
+                confidence += 0.15
+            
+            # Factor 4: Patrón específico para finales de secuencia (35-45)
+            if target_question >= 35:
+                confidence += 0.1
+            
+            if confidence > best_confidence:
+                best_confidence = confidence
+                best_candidate = (line_text, answer, confidence, strategy)
+        
+        # Solo devolver si la confianza es suficiente
+        if best_confidence > 0.4:  # Umbral más alto para mayor precisión
+            return best_candidate
+        
+        return None
     
     def _find_number_candidates(self, lines: List[str], target_question: int) -> List[Tuple[str, str, List[int]]]:
         """
