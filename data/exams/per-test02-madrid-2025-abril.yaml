@@ -95,7 +95,7 @@ categories:
         una recomendación de uso y estiba?
     - category: 3
       category_name: Seguridad
-      correct_answer: c
+      correct_answer: b
       id: 8
       options:
         a: Es un equipo personal adaptado a la talla de cada tripulante.
@@ -531,7 +531,7 @@ categories:
       question: 'El abatimiento es:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: b
+      correct_answer: a
       id: 41
       options:
         a: Navegación costera.
