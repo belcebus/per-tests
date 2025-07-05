@@ -145,6 +145,28 @@ class Settings(BaseSettings):
         description="Tiempo de vida de exámenes en memoria (horas)"
     )
     
+    # Configuración de simulacro de examen
+    simulacro_distribution: dict = Field(
+        default={
+            1: 4,   # Nomenclatura náutica
+            2: 2,   # Elementos de amarre y fondeo
+            3: 4,   # Seguridad
+            4: 2,   # Legislación
+            5: 5,   # Balizamiento
+            6: 10,  # Reglamento (RIPA)
+            7: 2,   # Maniobra y navegación
+            8: 3,   # Emergencias en la mar
+            9: 4,   # Meteorología
+            10: 5,  # Teoría de la navegación
+            11: 4   # Carta de navegación
+        },
+        description="Distribución fija de preguntas por categoría para el simulacro (por id de categoría)"
+    )
+    simulacro_max_time_minutes: int = Field(
+        default=90,
+        description="Tiempo máximo (minutos) para el simulacro de examen"
+    )
+    
     # ==========================================
     # CONFIGURACIÓN DE PROCESAMIENTO
     # ==========================================

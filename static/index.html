@@ -22,6 +22,19 @@
             <div class="card">
                 <h2>Configurar Examen</h2>
                 
+                <!-- Selector de tipo de examen -->
+                <div class="form-group">
+                    <label for="tipo-examen"><strong>Tipo de examen:</strong></label>
+                    <select id="tipo-examen">
+                        <option value="normal">Examen normal</option>
+                        <option value="simulacro">Simulacro oficial</option>
+                    </select>
+                </div>
+                <div id="simulacro-info" style="display:none; color:#0a58ca; margin-bottom:8px;">
+                    <b>Simulacro:</b> Se generará un examen con la distribución oficial de preguntas por categoría y tiempo máximo. No puedes elegir categorías, años ni comunidades.
+                </div>
+                <div id="simulacro-max-time" style="display:none; color:#b85c00; font-weight:bold; margin-bottom:8px;"></div>
+
                 <div class="form-group">
                     <label for="num-preguntas">Número de preguntas:</label>
                     <select id="num-preguntas">
@@ -42,6 +55,7 @@
                     <small class="form-help">Entre 1 y 100 preguntas</small>
                 </div>
 
+                <!-- Selección de categorías -->
                 <div class="form-group">
                     <label>Categorías (deja vacío para todas):</label>
                     <div id="categorias-container" class="checkbox-group">

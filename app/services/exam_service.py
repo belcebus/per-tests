@@ -150,7 +150,8 @@ class ExamService:
                 texto_respuesta_correcta=texto_respuesta_correcta,
                 es_correcta=is_correct,
                 enunciado=question.enunciado,
-                opciones=question.opciones
+                opciones=question.opciones,
+                metadata=question.metadata
             )
             question_results.append(question_result)
             
@@ -233,6 +234,58 @@ class ExamService:
             "examenes_activos": self.get_active_exams_count(),
             "ttl_examenes": f"{self.exam_ttl.total_seconds() / 3600} horas"
         }
+    
+    def generate_simulacro_exam(self, request: ExamGenerationRequest) -> GeneratedExam:
+        """
+        Genera un simulacro de examen con distribución fija por categoría.
+        Ignora la selección de categorías del usuario.
+        """
+        print(f"🎯 Generando simulacro de examen: distribución fija")
+        distribution = settings.simulacro_distribution
+        available_questions = question_loader.all_questions.copy()
+        # Agrupar preguntas por id de categoría (numérico)
+        questions_by_cat = {}
+        for q in available_questions:
+            # El id de categoría es numérico en el banco, pero puede estar como str
+            cat_id = None
+            if hasattr(q.metadata, 'categoria') and q.metadata.categoria:
+                try:
+                    cat_id = int(q.metadata.categoria)
+                except Exception:
+                    continue
+            if cat_id is not None:
+                questions_by_cat.setdefault(cat_id, []).append(q)
+        # Seleccionar preguntas según la distribución
+        selected_questions = []
+        for cat_id, num in distribution.items():
+            cat_questions = questions_by_cat.get(cat_id, [])
+            if len(cat_questions) < num:
+                raise ValueError(f"No hay suficientes preguntas en la categoría {cat_id} para el simulacro")
+            selected_questions.extend(random.sample(cat_questions, num))
+        # Mezclar el orden final
+        random.shuffle(selected_questions)
+        exam_id = f"simulacro_{uuid.uuid4().hex[:8]}"
+        cached_exam = CachedExam(
+            questions=selected_questions,
+            metadata=request,
+            timestamp=datetime.now()
+        )
+        self.active_exams[exam_id] = cached_exam
+        client_questions = [
+            QuestionForClient(
+                id=q.id,
+                enunciado=q.enunciado,
+                opciones=q.opciones,
+                metadata=q.metadata
+            ) for q in selected_questions
+        ]
+        self._cleanup_expired_exams()
+        print(f"✅ Simulacro generado con ID: {exam_id}")
+        return GeneratedExam(
+            exam_id=exam_id,
+            questions=client_questions,
+            metadata=request
+        )
 
 
 # Instancia global del servicio de exámenes

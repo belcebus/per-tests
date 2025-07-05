@@ -25,7 +25,8 @@ router = APIRouter(prefix="/api/exams", tags=["exams"])
 @router.post("/generate", response_model=GeneratedExam)
 async def generate_exam(request: ExamGenerationRequest) -> GeneratedExam:
     """
-    Genera un nuevo examen aleatorio.
+    Genera un nuevo examen aleatorio o simulacro.
+    Si request.tipo_examen == 'simulacro', usa la distribución fija.
     
     **Cómo funciona:**
     1. El cliente envía criterios (número de preguntas, categorías, etc.)
@@ -54,7 +55,10 @@ async def generate_exam(request: ExamGenerationRequest) -> GeneratedExam:
         HTTPException: Si no hay suficientes preguntas o hay error
     """
     try:
-        exam = exam_service.generate_exam(request)
+        if hasattr(request, 'tipo_examen') and request.tipo_examen == 'simulacro':
+            exam = exam_service.generate_simulacro_exam(request)
+        else:
+            exam = exam_service.generate_exam(request)
         return exam
     except ValueError as e:
         # Si no hay suficientes preguntas, devolver error 400
@@ -160,9 +164,10 @@ async def get_categories() -> Dict[str, list]:
     **Útil para:** Crear listas desplegables en el frontend.
     
     Returns:
-        Lista de categorías disponibles
+        Lista de categorías disponibles (cada una con id y nombre)
     """
     try:
+        # Usar el método del question_loader que ya devuelve el formato correcto
         return {
             "categorias": question_loader.get_available_categories(),
             "años": question_loader.get_available_years(),

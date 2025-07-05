@@ -18,6 +18,10 @@ let currentQuestionIndex = 0;    // Índice de pregunta actual
 let userAnswers = {};           // Respuestas del usuario
 let examStartTime = null;       // Tiempo de inicio del examen
 let timerInterval = null;       // Intervalo del cronómetro
+let examType = 'normal';        // 'normal' o 'simulacro'
+
+// Mapeo global de categorías id → nombre
+let categoryIdNameMap = {};
 
 // ================================
 // CONFIGURACIÓN DE LA API
@@ -134,15 +138,19 @@ function displaySystemInfo(info) {
  * Rellena las opciones de los formularios
  */
 function populateFormOptions(data) {
+    // Construir el mapeo global de categorías
+    categoryIdNameMap = {};
+    data.categorias.forEach(catObj => {
+        categoryIdNameMap[catObj.id] = catObj.nombre;
+    });
     // Categorías
     const categoriasContainer = document.getElementById('categorias-container');
-    categoriasContainer.innerHTML = data.categorias.map(cat => `
+    categoriasContainer.innerHTML = data.categorias.map(catObj => `
         <div class="checkbox-item">
-            <input type="checkbox" id="cat-${cat}" value="${cat}">
-            <label for="cat-${cat}">${cat.replace(/_/g, ' ')}</label>
+            <input type="checkbox" id="cat-${catObj.id}" value="${catObj.id}">
+            <label for="cat-${catObj.id}">${catObj.nombre}</label>
         </div>
     `).join('');
-    
     // Años
     const añosContainer = document.getElementById('años-container');
     añosContainer.innerHTML = data.años.map(año => `
@@ -151,7 +159,6 @@ function populateFormOptions(data) {
             <label for="año-${año}">${año}</label>
         </div>
     `).join('');
-    
     // Comunidades
     const comunidadesContainer = document.getElementById('comunidades-container');
     comunidadesContainer.innerHTML = data.comunidades.map(com => `
@@ -171,24 +178,20 @@ function populateFormOptions(data) {
  */
 async function generateExam() {
     showLoading(true);
-    
     try {
-        // Recoger configuración del formulario
         const config = getExamConfig();
-        
-        // Generar examen
+        // Añadir tipo_examen si es simulacro
+        if (examType === 'simulacro') {
+            config.tipo_examen = 'simulacro';
+        }
         const exam = await apiRequest('/exams/generate', {
             method: 'POST',
             body: JSON.stringify(config)
         });
-        
-        // Guardar examen y empezar
         currentExam = exam;
         currentQuestionIndex = 0;
         userAnswers = {};
-        
         startExam();
-        
     } catch (error) {
         console.error('Error generando examen:', error);
     } finally {
@@ -289,7 +292,73 @@ function showQuestion(index) {
     document.getElementById('progress-fill').style.width = `${progressPercent}%`;
     
     // Mostrar pregunta
-    document.getElementById('question-number').textContent = index + 1;
+    const questionNumberElem = document.getElementById('question-number');
+    questionNumberElem.textContent = index + 1;
+    questionNumberElem.style.cursor = question.metadata ? 'pointer' : '';
+    // Eliminar popover previo si existe
+    let metaPopoverElem = document.getElementById('meta-popover-exam');
+    if (metaPopoverElem) metaPopoverElem.remove();
+    if (question.metadata) {
+        // Crear popover
+        const popover = document.createElement('div');
+        popover.className = 'question-metadata-popover';
+        popover.id = 'meta-popover-exam';
+        popover.tabIndex = -1;
+        popover.innerHTML = `
+            <button class="close-metadata-popover" aria-label="Cerrar">&times;</button>
+            <strong>Apareció en:</strong><br>
+            <span><b>Comunidad:</b> ${question.metadata.community || ''}</span><br>
+            <span><b>Año:</b> ${question.metadata.year || ''}</span><br>
+            <span><b>Convocatoria:</b> ${question.metadata.call || ''}</span><br>
+            <span><b>Modelo:</b> ${question.metadata.test_code || ''}</span>
+        `;
+        popover.style.display = 'none';
+        popover.style.position = 'absolute';
+        popover.style.left = '50%';
+        popover.style.transform = 'translateX(-50%)';
+        popover.style.top = '120%';
+        popover.style.zIndex = '20';
+        popover.style.background = '#fff';
+        popover.style.color = '#222';
+        popover.style.border = '1px solid #d1d5db';
+        popover.style.boxShadow = '0 2px 8px rgba(0,0,0,0.12)';
+        popover.style.padding = '12px 16px 8px 16px';
+        popover.style.borderRadius = '8px';
+        popover.style.fontSize = '0.95em';
+        popover.style.textAlign = 'left';
+        // Forzar estilos para evitar herencia del span del número
+        popover.querySelectorAll('span, strong, b').forEach(el => {
+            el.style.background = 'none';
+            el.style.color = '#222';
+            el.style.borderRadius = '0';
+            el.style.display = 'inline';
+            el.style.padding = '0';
+        });
+        // Insertar popover en el mismo contenedor padre
+        questionNumberElem.parentElement.style.position = 'relative';
+        questionNumberElem.parentElement.appendChild(popover);
+        // Evento click en el número
+        questionNumberElem.onclick = function(e) {
+            e.stopPropagation();
+            document.querySelectorAll('.question-metadata-popover').forEach(pop => pop.style.display = 'none');
+            popover.style.display = 'block';
+        };
+        // Cerrar al hacer click fuera
+        document.addEventListener('click', function(e) {
+            popover.style.display = 'none';
+        }, { once: true });
+        // Cerrar con aspa
+        popover.querySelector('.close-metadata-popover').addEventListener('click', function(e) {
+            e.stopPropagation();
+            popover.style.display = 'none';
+        });
+        // Cerrar al perder el foco
+        popover.addEventListener('blur', function() {
+            setTimeout(() => { popover.style.display = 'none'; }, 100);
+        });
+    } else {
+        questionNumberElem.onclick = null;
+    }
     document.getElementById('question-text').textContent = question.enunciado;
     
     // Mostrar opciones
@@ -317,6 +386,26 @@ function showQuestion(index) {
     
     // Actualizar botones de navegación
     updateNavigationButtons(index);
+}
+
+/**
+ * Inicia el examen
+ */
+function startExam() {
+    showScreen('exam-screen');
+    examStartTime = Date.now();
+    startTimer();
+    showQuestion(0);
+}
+
+/**
+ * Inicia el examen
+ */
+function startExam() {
+    showScreen('exam-screen');
+    examStartTime = Date.now();
+    startTimer();
+    showQuestion(0);
 }
 
 /**
@@ -439,34 +528,35 @@ function showResults(result) {
     
     // Resultados por categoría
     const categoryContainer = document.getElementById('category-results');
-    categoryContainer.innerHTML = Object.entries(result.desglose_por_categoria).map(([category, data]) => `
-        <div class="category-result">
-            <div class="category-name">${category.replace(/_/g, ' ')}</div>
-            <div class="category-score">${data.correctas}/${data.total} (${data.porcentaje}%)</div>
-        </div>
-    `).join('');
+    categoryContainer.innerHTML = Object.entries(result.desglose_por_categoria).map(([category, data]) => {
+        // Usar el mapeo global para mostrar el nombre legible
+        let categoryName = categoryIdNameMap[category] || category.replace(/_/g, ' ');
+        return `
+            <div class="category-result">
+                <div class="category-name">${categoryName}</div>
+                <div class="category-score">${data.correctas}/${data.total} (${data.porcentaje}%)</div>
+            </div>
+        `;
+    }).join('');
     
     // Detalle de preguntas
     const questionsContainer = document.getElementById('question-details');
     questionsContainer.innerHTML = result.preguntas_detalle.map((detail, index) => {
-        // Preparar información de respuestas
-        let respuestaUsuarioInfo = '';
-        let respuestaCorrectaInfo = '';
-        
-        if (detail.respuesta_usuario) {
-            respuestaUsuarioInfo = `
-                <span class="answer-letter">${detail.respuesta_usuario.toUpperCase()}</span>
-                <span class="answer-text">${detail.texto_respuesta_usuario}</span>
-            `;
-        } else {
-            respuestaUsuarioInfo = '<span class="no-answer">Sin responder</span>';
-        }
-        
-        respuestaCorrectaInfo = `
-            <span class="answer-letter correct">${detail.respuesta_correcta.toUpperCase()}</span>
-            <span class="answer-text">${detail.texto_respuesta_correcta}</span>
+        const meta = detail.metadata;
+        const popoverId = `meta-popover-${index}`;
+        const metaHtml = `
+            <button class="question-metadata-link" tabindex="0" aria-label="Ver metadatos de la pregunta" data-popover="${popoverId}">
+                ℹ️
+            </button>
+            <div class="question-metadata-popover" id="${popoverId}" tabindex="-1">
+                <button class="close-metadata-popover" aria-label="Cerrar">&times;</button>
+                <strong>Apareció en:</strong><br>
+                <span><b>Comunidad:</b> ${meta.community}</span><br>
+                <span><b>Año:</b> ${meta.year}</span><br>
+                <span><b>Convocatoria:</b> ${meta.call}</span><br>
+                <span><b>Modelo:</b> ${meta.test_code}</span>
+            </div>
         `;
-        
         // Mostrar todas las opciones para referencia
         const opcionesHtml = Object.entries(detail.opciones).map(([letra, texto]) => {
             let claseOpcion = 'option-reference';
@@ -476,7 +566,6 @@ function showResults(result) {
             if (letra === detail.respuesta_usuario && !detail.es_correcta) {
                 claseOpcion += ' user-wrong-option';
             }
-            
             return `
                 <div class="${claseOpcion}">
                     <span class="option-letter-ref">${letra.toUpperCase()}</span>
@@ -486,11 +575,25 @@ function showResults(result) {
                 </div>
             `;
         }).join('');
-        
         return `
             <div class="question-detail ${detail.es_correcta ? 'correct' : 'incorrect'}">
                 <div class="question-detail-header">
-                    <span class="question-number-detail">Pregunta ${index + 1}</span>
+                    <span class="question-number-detail">
+                        Pregunta ${index + 1}
+                        <span class="metadata-popover-container" style="position: relative; display: inline-block;">
+                            <button class="question-metadata-link" tabindex="0" aria-label="Ver metadatos de la pregunta" data-popover="${popoverId}" style="margin-left: 0.4em; vertical-align: middle;">
+                                ℹ️
+                            </button>
+                            <div class="question-metadata-popover" id="${popoverId}" tabindex="-1">
+                                <button class="close-metadata-popover" aria-label="Cerrar">&times;</button>
+                                <strong>Apareció en:</strong><br>
+                                <span><b>Comunidad:</b> ${meta.community}</span><br>
+                                <span><b>Año:</b> ${meta.year}</span><br>
+                                <span><b>Convocatoria:</b> ${meta.call}</span><br>
+                                <span><b>Modelo:</b> ${meta.test_code}</span>
+                            </div>
+                        </span>
+                    </span>
                     <span class="question-status ${detail.es_correcta ? 'correct' : 'incorrect'}">
                         ${detail.es_correcta ? '✅ Correcta' : '❌ Incorrecta'}
                     </span>
@@ -499,27 +602,8 @@ function showResults(result) {
                     <div class="question-text-detail">
                         <strong>Pregunta:</strong> ${detail.enunciado}
                     </div>
-                    
-                    <div class="answers-comparison">
-                        <div class="answer-row">
-                            <div class="answer-label">Tu respuesta:</div>
-                            <div class="answer-content ${detail.es_correcta ? 'correct-answer' : 'wrong-answer'}">
-                                ${respuestaUsuarioInfo}
-                            </div>
-                        </div>
-                        
-                        ${!detail.es_correcta ? `
-                            <div class="answer-row">
-                                <div class="answer-label">Respuesta correcta:</div>
-                                <div class="answer-content correct-answer">
-                                    ${respuestaCorrectaInfo}
-                                </div>
-                            </div>
-                        ` : ''}
-                    </div>
-                    
                     <div class="all-options">
-                        <div class="options-label">Todas las opciones:</div>
+                        <div class="options-label">Opciones:</div>
                         <div class="options-list">
                             ${opcionesHtml}
                         </div>
@@ -528,6 +612,37 @@ function showResults(result) {
             </div>
         `;
     }).join('');
+
+    // Lógica para mostrar/cerrar popovers de metadatos
+    document.querySelectorAll('.question-metadata-link').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            // Cerrar otros popovers
+            document.querySelectorAll('.question-metadata-popover').forEach(pop => pop.style.display = 'none');
+            // Abrir el correspondiente
+            const popover = document.getElementById(btn.dataset.popover);
+            if (popover) {
+                popover.style.display = 'block';
+            }
+        });
+    });
+    // Cerrar al hacer click fuera
+    document.addEventListener('click', function(e) {
+        document.querySelectorAll('.question-metadata-popover').forEach(pop => pop.style.display = 'none');
+    });
+    // Cerrar con aspa
+    document.querySelectorAll('.close-metadata-popover').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            btn.parentElement.style.display = 'none';
+        });
+    });
+    // Cerrar al perder el foco
+    document.querySelectorAll('.question-metadata-popover').forEach(pop => {
+        pop.addEventListener('blur', function() {
+            setTimeout(() => { pop.style.display = 'none'; }, 100);
+        });
+    });
 }
 
 /**
@@ -579,7 +694,52 @@ document.addEventListener('DOMContentLoaded', () => {
             e.target.style.backgroundColor = 'white';
         }
     });
+    
+    // Configurar selector de tipo de examen
+    setupExamTypeSelector();
 });
+
+// ================================
+// NUEVO: SOPORTE PARA SIMULACRO
+// ================================
+
+function setupExamTypeSelector() {
+    const typeSelect = document.getElementById('tipo-examen');
+    if (!typeSelect) return;
+    typeSelect.addEventListener('change', function() {
+        examType = this.value;
+        const disable = examType === 'simulacro';
+        // Deshabilitar selección de categorías, años y comunidades
+        document.querySelectorAll('#categorias-container input, #años-container input, #comunidades-container input').forEach(cb => {
+            cb.disabled = disable;
+        });
+        // Deshabilitar selector de número de preguntas
+        document.getElementById('num-preguntas').disabled = disable;
+        // Mostrar/ocultar aviso de simulacro
+        const simulacroInfo = document.getElementById('simulacro-info');
+        if (simulacroInfo) simulacroInfo.style.display = disable ? 'block' : 'none';
+        // Ocultar grupo de preguntas personalizadas en simulacro
+        document.getElementById('custom-questions-group').style.display = 'none';
+    });
+}
+
+// OPCIONAL: MOSTRAR TIEMPO MÁXIMO EN SIMULACRO
+function showMaxTimeIfSimulacro() {
+    const maxTimeElem = document.getElementById('simulacro-max-time');
+    if (!maxTimeElem) return;
+    if (examType === 'simulacro' && currentExam && currentExam.max_time_minutes) {
+        maxTimeElem.textContent = `⏱️ Tiempo máximo: ${currentExam.max_time_minutes} minutos`;
+        maxTimeElem.style.display = 'block';
+    } else {
+        maxTimeElem.style.display = 'none';
+    }
+}
+// Llamar a showMaxTimeIfSimulacro() en startExam()
+const originalStartExam = startExam;
+startExam = function() {
+    originalStartExam();
+    showMaxTimeIfSimulacro();
+};
 
 // ================================
 // UTILIDADES ADICIONALES
