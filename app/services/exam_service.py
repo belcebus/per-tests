@@ -150,7 +150,8 @@ class ExamService:
                 texto_respuesta_correcta=texto_respuesta_correcta,
                 es_correcta=is_correct,
                 enunciado=question.enunciado,
-                opciones=question.opciones
+                opciones=question.opciones,
+                metadata=question.metadata
             )
             question_results.append(question_result)
             

@@ -195,6 +195,7 @@ class QuestionResult(BaseModel):
     - es_correcta: Si acertó o no
     - enunciado: El texto de la pregunta (para referencia)
     - opciones: Todas las opciones disponibles
+    - metadata: Metadatos de la pregunta (comunidad, año, convocatoria, modelo, etc.)
     """
     question_id: str
     respuesta_usuario: Optional[str]
@@ -204,6 +205,7 @@ class QuestionResult(BaseModel):
     es_correcta: bool
     enunciado: str
     opciones: Dict[str, str]
+    metadata: QuestionMetadata
 
 
 class ExamResult(BaseModel):
