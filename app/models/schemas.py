@@ -49,6 +49,7 @@ class QuestionMetadata(BaseModel):
     
     # Campos de compatibilidad (opcionales)
     categoria: Optional[str] = None
+    categoria_nombre: Optional[str] = None  # <-- Añadir explícitamente el campo
     convocatoria: Optional[str] = None
     año: Optional[int] = None
     comunidad_autonoma: Optional[str] = None

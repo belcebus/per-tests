@@ -134,13 +134,10 @@ class QuestionLoader:
                     for question_data in category_questions:
                         # Las opciones ya vienen como diccionario en el formato actual
                         opciones = question_data.get('options', {})
-                        
                         # La respuesta correcta ya viene como letra o "ANULADA"
                         respuesta_correcta = question_data.get('correct_answer', 'a')
-                        
                         # Extraer información del examen del archivo si está disponible
                         exam_info = yaml_data.get('exam_info', {})
-                        
                         question = Question(
                             id=str(question_data.get('id', f"{file_path.stem}_{category_id}_{len(questions)}")),
                             enunciado=question_data.get('question', ''),
@@ -156,7 +153,8 @@ class QuestionLoader:
                                 call=exam_info.get('call', 'Ordinaria'),
                                 test_code=exam_info.get('test_code', 'Test01'),
                                 # Campos de compatibilidad
-                                categoria=category_name,
+                                categoria=str(category_id),  # <-- Usar el id numérico como string
+                                categoria_nombre=category_name,  # <-- Nuevo campo para nombre legible
                                 convocatoria=exam_info.get('call', 'Ordinaria'),
                                 año=exam_info.get('year', 2025),
                                 comunidad_autonoma=exam_info.get('community', 'Madrid'),
@@ -227,15 +225,28 @@ class QuestionLoader:
         print(f"🔍 Filtrado: {len(filtered_questions)} preguntas encontradas")
         return filtered_questions
     
-    def get_available_categories(self) -> List[str]:
+    def get_category_id_name_map(self) -> Dict[str, str]:
         """
-        Devuelve todas las categorías disponibles.
-        
-        Returns:
-            Lista de nombres de categorías
+        Devuelve un diccionario {id: nombre} de todas las categorías cargadas.
         """
-        return list(self.questions_cache.keys())
-    
+        result = {}
+        for cat_id, questions in self.questions_cache.items():
+            # Buscar el primer nombre legible disponible
+            nombre = None
+            for q in questions:
+                if hasattr(q.metadata, 'categoria_nombre') and q.metadata.categoria_nombre:
+                    nombre = q.metadata.categoria_nombre
+                    break
+            result[cat_id] = nombre or f"Categoría {cat_id}"
+        return result
+
+    def get_available_categories(self) -> list:
+        """
+        Devuelve todas las categorías disponibles como lista de dicts {id, nombre}.
+        """
+        cat_map = self.get_category_id_name_map()
+        return [{"id": k, "nombre": v} for k, v in cat_map.items()]
+
     def get_available_years(self) -> List[int]:
         """
         Devuelve todos los años disponibles.

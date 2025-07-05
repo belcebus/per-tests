@@ -18,6 +18,7 @@ let currentQuestionIndex = 0;    // Índice de pregunta actual
 let userAnswers = {};           // Respuestas del usuario
 let examStartTime = null;       // Tiempo de inicio del examen
 let timerInterval = null;       // Intervalo del cronómetro
+let examType = 'normal';        // 'normal' o 'simulacro'
 
 // ================================
 // CONFIGURACIÓN DE LA API
@@ -136,13 +137,12 @@ function displaySystemInfo(info) {
 function populateFormOptions(data) {
     // Categorías
     const categoriasContainer = document.getElementById('categorias-container');
-    categoriasContainer.innerHTML = data.categorias.map(cat => `
+    categoriasContainer.innerHTML = data.categorias.map(catObj => `
         <div class="checkbox-item">
-            <input type="checkbox" id="cat-${cat}" value="${cat}">
-            <label for="cat-${cat}">${cat.replace(/_/g, ' ')}</label>
+            <input type="checkbox" id="cat-${catObj.id}" value="${catObj.id}">
+            <label for="cat-${catObj.id}">${catObj.nombre}</label>
         </div>
     `).join('');
-    
     // Años
     const añosContainer = document.getElementById('años-container');
     añosContainer.innerHTML = data.años.map(año => `
@@ -151,7 +151,6 @@ function populateFormOptions(data) {
             <label for="año-${año}">${año}</label>
         </div>
     `).join('');
-    
     // Comunidades
     const comunidadesContainer = document.getElementById('comunidades-container');
     comunidadesContainer.innerHTML = data.comunidades.map(com => `
@@ -171,24 +170,20 @@ function populateFormOptions(data) {
  */
 async function generateExam() {
     showLoading(true);
-    
     try {
-        // Recoger configuración del formulario
         const config = getExamConfig();
-        
-        // Generar examen
+        // Añadir tipo_examen si es simulacro
+        if (examType === 'simulacro') {
+            config.tipo_examen = 'simulacro';
+        }
         const exam = await apiRequest('/exams/generate', {
             method: 'POST',
             body: JSON.stringify(config)
         });
-        
-        // Guardar examen y empezar
         currentExam = exam;
         currentQuestionIndex = 0;
         userAnswers = {};
-        
         startExam();
-        
     } catch (error) {
         console.error('Error generando examen:', error);
     } finally {
@@ -386,6 +381,26 @@ function showQuestion(index) {
 }
 
 /**
+ * Inicia el examen
+ */
+function startExam() {
+    showScreen('exam-screen');
+    examStartTime = Date.now();
+    startTimer();
+    showQuestion(0);
+}
+
+/**
+ * Inicia el examen
+ */
+function startExam() {
+    showScreen('exam-screen');
+    examStartTime = Date.now();
+    startTimer();
+    showQuestion(0);
+}
+
+/**
  * Selecciona una opción
  */
 function selectOption(optionElement) {
@@ -505,12 +520,33 @@ function showResults(result) {
     
     // Resultados por categoría
     const categoryContainer = document.getElementById('category-results');
-    categoryContainer.innerHTML = Object.entries(result.desglose_por_categoria).map(([category, data]) => `
-        <div class="category-result">
-            <div class="category-name">${category.replace(/_/g, ' ')}</div>
-            <div class="category-score">${data.correctas}/${data.total} (${data.porcentaje}%)</div>
-        </div>
-    `).join('');
+    categoryContainer.innerHTML = Object.entries(result.desglose_por_categoria).map(([category, data]) => {
+        // Soportar tanto string como objeto {id, nombre}
+        let categoryName = '';
+        if (typeof category === 'object' && category !== null && 'nombre' in category) {
+            categoryName = category.nombre;
+        } else if (typeof category === 'string') {
+            try {
+                // Intentar parsear si es un stringificable
+                const parsed = JSON.parse(category);
+                if (parsed && typeof parsed === 'object' && 'nombre' in parsed) {
+                    categoryName = parsed.nombre;
+                } else {
+                    categoryName = category.replace(/_/g, ' ');
+                }
+            } catch {
+                categoryName = category.replace(/_/g, ' ');
+            }
+        } else {
+            categoryName = String(category);
+        }
+        return `
+            <div class="category-result">
+                <div class="category-name">${categoryName}</div>
+                <div class="category-score">${data.correctas}/${data.total} (${data.porcentaje}%)</div>
+            </div>
+        `;
+    }).join('');
     
     // Detalle de preguntas
     const questionsContainer = document.getElementById('question-details');
@@ -667,7 +703,52 @@ document.addEventListener('DOMContentLoaded', () => {
             e.target.style.backgroundColor = 'white';
         }
     });
+    
+    // Configurar selector de tipo de examen
+    setupExamTypeSelector();
 });
+
+// ================================
+// NUEVO: SOPORTE PARA SIMULACRO
+// ================================
+
+function setupExamTypeSelector() {
+    const typeSelect = document.getElementById('tipo-examen');
+    if (!typeSelect) return;
+    typeSelect.addEventListener('change', function() {
+        examType = this.value;
+        const disable = examType === 'simulacro';
+        // Deshabilitar selección de categorías, años y comunidades
+        document.querySelectorAll('#categorias-container input, #años-container input, #comunidades-container input').forEach(cb => {
+            cb.disabled = disable;
+        });
+        // Deshabilitar selector de número de preguntas
+        document.getElementById('num-preguntas').disabled = disable;
+        // Mostrar/ocultar aviso de simulacro
+        const simulacroInfo = document.getElementById('simulacro-info');
+        if (simulacroInfo) simulacroInfo.style.display = disable ? 'block' : 'none';
+        // Ocultar grupo de preguntas personalizadas en simulacro
+        document.getElementById('custom-questions-group').style.display = 'none';
+    });
+}
+
+// OPCIONAL: MOSTRAR TIEMPO MÁXIMO EN SIMULACRO
+function showMaxTimeIfSimulacro() {
+    const maxTimeElem = document.getElementById('simulacro-max-time');
+    if (!maxTimeElem) return;
+    if (examType === 'simulacro' && currentExam && currentExam.max_time_minutes) {
+        maxTimeElem.textContent = `⏱️ Tiempo máximo: ${currentExam.max_time_minutes} minutos`;
+        maxTimeElem.style.display = 'block';
+    } else {
+        maxTimeElem.style.display = 'none';
+    }
+}
+// Llamar a showMaxTimeIfSimulacro() en startExam()
+const originalStartExam = startExam;
+startExam = function() {
+    originalStartExam();
+    showMaxTimeIfSimulacro();
+};
 
 // ================================
 // UTILIDADES ADICIONALES
