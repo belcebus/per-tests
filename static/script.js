@@ -20,6 +20,9 @@ let examStartTime = null;       // Tiempo de inicio del examen
 let timerInterval = null;       // Intervalo del cronómetro
 let examType = 'normal';        // 'normal' o 'simulacro'
 
+// Mapeo global de categorías id → nombre
+let categoryIdNameMap = {};
+
 // ================================
 // CONFIGURACIÓN DE LA API
 // ================================
@@ -135,6 +138,11 @@ function displaySystemInfo(info) {
  * Rellena las opciones de los formularios
  */
 function populateFormOptions(data) {
+    // Construir el mapeo global de categorías
+    categoryIdNameMap = {};
+    data.categorias.forEach(catObj => {
+        categoryIdNameMap[catObj.id] = catObj.nombre;
+    });
     // Categorías
     const categoriasContainer = document.getElementById('categorias-container');
     categoriasContainer.innerHTML = data.categorias.map(catObj => `
@@ -521,25 +529,8 @@ function showResults(result) {
     // Resultados por categoría
     const categoryContainer = document.getElementById('category-results');
     categoryContainer.innerHTML = Object.entries(result.desglose_por_categoria).map(([category, data]) => {
-        // Soportar tanto string como objeto {id, nombre}
-        let categoryName = '';
-        if (typeof category === 'object' && category !== null && 'nombre' in category) {
-            categoryName = category.nombre;
-        } else if (typeof category === 'string') {
-            try {
-                // Intentar parsear si es un stringificable
-                const parsed = JSON.parse(category);
-                if (parsed && typeof parsed === 'object' && 'nombre' in parsed) {
-                    categoryName = parsed.nombre;
-                } else {
-                    categoryName = category.replace(/_/g, ' ');
-                }
-            } catch {
-                categoryName = category.replace(/_/g, ' ');
-            }
-        } else {
-            categoryName = String(category);
-        }
+        // Usar el mapeo global para mostrar el nombre legible
+        let categoryName = categoryIdNameMap[category] || category.replace(/_/g, ' ');
         return `
             <div class="category-result">
                 <div class="category-name">${categoryName}</div>
