@@ -741,8 +741,8 @@ function setupExamTypeSelector() {
     typeSelect.addEventListener('change', function() {
         examType = this.value;
         const disable = examType === 'simulacro';
-        // Deshabilitar selección de categorías, años y comunidades
-        document.querySelectorAll('#categorias-container input, #años-container input, #comunidades-container input').forEach(cb => {
+        // Deshabilitar selección de categorías y años (pero NO comunidades)
+        document.querySelectorAll('#categorias-container input, #años-container input').forEach(cb => {
             cb.disabled = disable;
         });
         // Deshabilitar selector de número de preguntas

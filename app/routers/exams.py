@@ -22,6 +22,27 @@ from app.services.question_loader import question_loader
 router = APIRouter(prefix="/api/exams", tags=["exams"])
 
 
+def _validate_communities(comunidades: list) -> None:
+    """
+    Valida que las comunidades especificadas existan en los datos disponibles.
+    
+    Args:
+        comunidades: Lista de comunidades a validar
+        
+    Raises:
+        ValueError: Si alguna comunidad no existe
+    """
+    available_communities = question_loader.get_available_communities()
+    
+    for comunidad in comunidades:
+        if comunidad not in available_communities:
+            available_str = ", ".join(sorted(available_communities))
+            raise ValueError(
+                f"La comunidad '{comunidad}' no está disponible. "
+                f"Comunidades disponibles: {available_str}"
+            )
+
+
 @router.post("/generate", response_model=GeneratedExam)
 async def generate_exam(request: ExamGenerationRequest) -> GeneratedExam:
     """
@@ -55,6 +76,10 @@ async def generate_exam(request: ExamGenerationRequest) -> GeneratedExam:
         HTTPException: Si no hay suficientes preguntas o hay error
     """
     try:
+        # Validar comunidades antes de generar el examen
+        if request.comunidades:
+            _validate_communities(request.comunidades)
+        
         if hasattr(request, 'tipo_examen') and request.tipo_examen == 'simulacro':
             exam = exam_service.generate_simulacro_exam(request)
         else:

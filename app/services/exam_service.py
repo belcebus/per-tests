@@ -238,11 +238,19 @@ class ExamService:
     def generate_simulacro_exam(self, request: ExamGenerationRequest) -> GeneratedExam:
         """
         Genera un simulacro de examen con distribución fija por categoría.
-        Ignora la selección de categorías del usuario.
+        Ignora la selección de categorías del usuario, pero respeta años y comunidades.
         """
         print(f"🎯 Generando simulacro de examen: distribución fija")
         distribution = settings.simulacro_distribution
-        available_questions = question_loader.all_questions.copy()
+        
+        # Filtrar preguntas por años y comunidades (si se especifican)
+        available_questions = question_loader.get_questions_by_criteria(
+            categorias=None,  # No filtrar por categorías en simulacro
+            años=request.años,
+            comunidades=request.comunidades,
+            tipo_examen=request.tipo_examen
+        )
+        
         # Agrupar preguntas por id de categoría (numérico)
         questions_by_cat = {}
         for q in available_questions:
