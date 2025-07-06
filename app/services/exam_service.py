@@ -238,11 +238,24 @@ class ExamService:
     def generate_simulacro_exam(self, request: ExamGenerationRequest) -> GeneratedExam:
         """
         Genera un simulacro de examen con distribución fija por categoría.
-        Ignora la selección de categorías del usuario.
+        Ignora la selección de categorías del usuario, pero respeta años y comunidades.
+        
+        Las preguntas se organizan por categorías (como en un examen real):
+        - Primero aparecen todas las preguntas de la categoría 1
+        - Luego las de la categoría 2, etc.
+        - Dentro de cada categoría, las preguntas están en orden aleatorio
         """
-        print(f"🎯 Generando simulacro de examen: distribución fija")
+        print(f"🎯 Generando simulacro de examen: distribución fija por categorías")
         distribution = settings.simulacro_distribution
-        available_questions = question_loader.all_questions.copy()
+        
+        # Filtrar preguntas por años y comunidades (si se especifican)
+        available_questions = question_loader.get_questions_by_criteria(
+            categorias=None,  # No filtrar por categorías en simulacro
+            años=request.años,
+            comunidades=request.comunidades,
+            tipo_examen=request.tipo_examen
+        )
+        
         # Agrupar preguntas por id de categoría (numérico)
         questions_by_cat = {}
         for q in available_questions:
@@ -255,15 +268,30 @@ class ExamService:
                     continue
             if cat_id is not None:
                 questions_by_cat.setdefault(cat_id, []).append(q)
-        # Seleccionar preguntas según la distribución
+        
+        # Seleccionar preguntas según la distribución, agrupadas por categoría
         selected_questions = []
-        for cat_id, num in distribution.items():
+        
+        # Procesar las categorías en orden numérico para mantener estructura del examen real
+        for cat_id in sorted(distribution.keys()):
+            num_questions = distribution[cat_id]
             cat_questions = questions_by_cat.get(cat_id, [])
-            if len(cat_questions) < num:
+            
+            if len(cat_questions) < num_questions:
                 raise ValueError(f"No hay suficientes preguntas en la categoría {cat_id} para el simulacro")
-            selected_questions.extend(random.sample(cat_questions, num))
-        # Mezclar el orden final
-        random.shuffle(selected_questions)
+            
+            # Seleccionar preguntas aleatorias de esta categoría
+            selected_category_questions = random.sample(cat_questions, num_questions)
+            
+            # Mezclar el orden dentro de la categoría
+            random.shuffle(selected_category_questions)
+            
+            # Añadir las preguntas de esta categoría al final del examen
+            selected_questions.extend(selected_category_questions)
+        
+        # NO mezclamos el orden final para mantener agrupación por categorías
+        # Las preguntas ya están aleatorias dentro de cada categoría
+        
         exam_id = f"simulacro_{uuid.uuid4().hex[:8]}"
         cached_exam = CachedExam(
             questions=selected_questions,
@@ -271,6 +299,7 @@ class ExamService:
             timestamp=datetime.now()
         )
         self.active_exams[exam_id] = cached_exam
+        
         client_questions = [
             QuestionForClient(
                 id=q.id,
@@ -279,8 +308,9 @@ class ExamService:
                 metadata=q.metadata
             ) for q in selected_questions
         ]
+        
         self._cleanup_expired_exams()
-        print(f"✅ Simulacro generado con ID: {exam_id}")
+        print(f"✅ Simulacro generado con ID: {exam_id} (preguntas agrupadas por categorías)")
         return GeneratedExam(
             exam_id=exam_id,
             questions=client_questions,

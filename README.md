@@ -26,15 +26,19 @@ per-tests/
 │   ├── __init__.py          # Paquete de configuración
 │   └── settings.py          # Configuración principal
 ├── data/                    # Archivos YAML con preguntas
-│   ├── exams/               # Archivos YAML de exámenes
-│   ├── raw/                 # PDFs originales
-│   │   ├── questions/       # PDFs de preguntas
-│   │   └── answers/         # PDFs de respuestas
-│   └── backups/             # Backups de archivos YAML
+│   ├── exams/               # Archivos YAML de exámenes procesados
+│   │   └── answers/         # Respuestas oficiales en formato JSON
+│   │       └── madrid/      # Respuestas organizadas por comunidad
+│   │           ├── 2024/    # Respuestas del año 2024
+│   │           └── 2025/    # Respuestas del año 2025
+│   └── raw/                 # PDFs originales sin procesar
+│       ├── questions/       # PDFs de preguntas oficiales
+│       └── answers/         # PDFs de respuestas oficiales
 ├── static/                  # Frontend (HTML, CSS, JS)
 ├── tools/                   # Scripts de extracción y procesamiento
 │   ├── extraction/          # Scripts de extracción de datos
-│   │   ├── madrid_extract_questions.py   # Extractor de preguntas de PDFs
+│   │   ├── madrid_extract_questions.py   # Extractor de preguntas 
+de PDFs
 │   │   ├── madrid_extract_answers.py     # Extractor OCR de respuestas
 │   │   └── README.md        # Documentación de extracción
 │   ├── processing/          # Scripts de procesamiento de datos
