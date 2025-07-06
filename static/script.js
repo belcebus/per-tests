@@ -167,6 +167,33 @@ function populateFormOptions(data) {
             <label for="com-${com}">${com}</label>
         </div>
     `).join('');
+    
+    // Actualizar indicadores de scroll después de llenar los contenedores
+    setTimeout(() => {
+        updateScrollIndicators();
+    }, 100);
+}
+
+/**
+ * Detecta si un contenedor checkbox tiene contenido que requiere scroll
+ * y aplica la clase correspondiente
+ */
+function updateScrollIndicators() {
+    const checkboxGroups = document.querySelectorAll('.checkbox-group');
+    
+    checkboxGroups.forEach((group, index) => {
+        // Verificar si el contenido excede la altura del contenedor
+        const hasScroll = group.scrollHeight > group.clientHeight;
+        
+        if (hasScroll) {
+            group.classList.add('has-scroll');
+            // Agregar título para indicar que se puede hacer scroll
+            group.setAttribute('title', 'Desliza hacia abajo para ver más opciones');
+        } else {
+            group.classList.remove('has-scroll');
+            group.removeAttribute('title');
+        }
+    });
 }
 
 // ================================
@@ -697,6 +724,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Configurar selector de tipo de examen
     setupExamTypeSelector();
+    
+    // Actualizar indicadores de scroll al redimensionar ventana
+    window.addEventListener('resize', () => {
+        setTimeout(updateScrollIndicators, 100);
+    });
 });
 
 // ================================
