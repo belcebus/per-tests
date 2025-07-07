@@ -912,15 +912,25 @@ El archivo de salida seguirá el formato: per-{test}-{comunidad}-{año}-{convoca
     
     args = parser.parse_args()
     
-    # Mapear el código de test al patrón correspondiente
-    test_patterns = {
-        'test01': PER_MADRID_2025_TEST_01,
-        'test02': PER_MADRID_2025_TEST_02,
-        'test03': PER_MADRID_2025_TEST_03,
-        'test04': PER_MADRID_2025_TEST_04
-    }
+    # Detectar automáticamente año y convocatoria desde el nombre del archivo PDF
+    pdf_filename = os.path.basename(args.pdf)
     
-    pattern = test_patterns[args.test]
+    # Extraer información del nombre del archivo (formato: madrid-YYYY-convocatoria.pdf)
+    import re
+    match = re.search(r'madrid-(\d{4})-(\w+)\.pdf', pdf_filename)
+    
+    if match:
+        year = int(match.group(1))
+        call = match.group(2)
+        print(f"📅 Detectado automáticamente: Año {year}, Convocatoria {call}")
+    else:
+        # Valores por defecto si no se puede detectar
+        year = 2025
+        call = "abril"
+        print(f"⚠️  No se pudo detectar año/convocatoria del nombre del archivo, usando valores por defecto: {year} {call}")
+    
+    # Crear patrón dinámicamente basado en los parámetros
+    pattern = create_per_pattern("Madrid", year, call, args.test)
     
     print(f"🚢 Extractor de Preguntas PER")
     print(f"📋 Examen: {pattern.title}")
