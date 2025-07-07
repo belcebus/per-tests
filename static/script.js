@@ -337,7 +337,8 @@ function showQuestion(index) {
             <span><b>Comunidad:</b> ${question.metadata.community || ''}</span><br>
             <span><b>Año:</b> ${question.metadata.year || ''}</span><br>
             <span><b>Convocatoria:</b> ${question.metadata.call || ''}</span><br>
-            <span><b>Modelo:</b> ${question.metadata.test_code || ''}</span>
+            <span><b>Modelo:</b> ${question.metadata.test_code || ''}</span><br>
+            <span><b>Pregunta original:</b> ${question.metadata.numero_pregunta || 'N/A'}</span>
         `;
         popover.style.display = 'none';
         popover.style.position = 'absolute';
@@ -581,7 +582,8 @@ function showResults(result) {
                 <span><b>Comunidad:</b> ${meta.community}</span><br>
                 <span><b>Año:</b> ${meta.year}</span><br>
                 <span><b>Convocatoria:</b> ${meta.call}</span><br>
-                <span><b>Modelo:</b> ${meta.test_code}</span>
+                <span><b>Modelo:</b> ${meta.test_code}</span><br>
+                <span><b>Pregunta original:</b> ${meta.numero_pregunta || 'N/A'}</span>
             </div>
         `;
         // Mostrar todas las opciones para referencia
