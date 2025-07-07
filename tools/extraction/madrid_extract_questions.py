@@ -80,10 +80,24 @@ PER_MADRID_2025_TEST_02 = ExamPattern(
     test_code="test02"
 )
 
+# Definir el patrón para PER Madrid 2025 Código de Test 04
+PER_MADRID_2025_TEST_04 = ExamPattern(
+    title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
+    subtitle="Código de Test 04",
+    answer_prefix="Respuestas al",
+    total_questions=45,
+    categories=PER_CATEGORIES,
+    community="Madrid",
+    year=2025,
+    call="abril",
+    test_code="test04"
+)
+
 # Mantener compatibilidad con nombres anteriores
 PER_TEST_01 = PER_MADRID_2025_TEST_01
 PER_TEST_02 = PER_MADRID_2025_TEST_02
 PER_TEST_03 = PER_MADRID_2025_TEST_03
+PER_TEST_04 = PER_MADRID_2025_TEST_04
 
 def create_per_pattern(community: str, year: int, call: str, test_code: str, 
                       total_questions: int = 45) -> ExamPattern:
@@ -853,3 +867,108 @@ class ParametricExamExtractor:
         # Elegir el candidato con mayor puntuación
         best_candidate = max(valid_candidates, key=quality_score)
         return best_candidate
+
+
+def main():
+    """
+    Función principal para ejecutar el extractor desde línea de comandos.
+    
+    Extrae preguntas de exámenes PER desde archivos PDF oficiales y las organiza
+    por categorías en formato YAML estructurado.
+    """
+    import argparse
+    
+    parser = argparse.ArgumentParser(
+        description='🚢 Extractor de Preguntas de Exámenes PER desde PDFs',
+        epilog='''
+Ejemplos de uso:
+  %(prog)s --pdf data/raw/questions/madrid-2025-abril.pdf --test test01
+  %(prog)s --pdf /ruta/completa/examen.pdf --test test04 --output-dir mi_directorio
+  
+Este script extrae preguntas de exámenes PER de archivos PDF oficiales y las
+organiza automáticamente por categorías (Nomenclatura, RIPA, Seguridad, etc.)
+generando archivos YAML estructurados listos para su procesamiento.
+
+Categorías PER soportadas:
+  1. Nomenclatura náutica        7. Maniobra y navegación
+  2. Elementos de amarre         8. Emergencias en la mar  
+  3. Seguridad                   9. Meteorología
+  4. Legislación                10. Teoría de la navegación
+  5. Balizamiento               11. Carta de navegación
+  6. Reglamento (RIPA)
+
+El archivo de salida seguirá el formato: per-{test}-{comunidad}-{año}-{convocatoria}.yaml
+        ''',
+        formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+    
+    parser.add_argument('--pdf', required=True, 
+                       help='Ruta al archivo PDF con las preguntas del examen')
+    parser.add_argument('--test', required=True, 
+                       choices=['test01', 'test02', 'test03', 'test04'], 
+                       help='Código del test a extraer. Disponibles: test01, test02, test03, test04')
+    parser.add_argument('--output-dir', default='data/exams', 
+                       help='Directorio donde guardar el archivo YAML (por defecto: data/exams)')
+    
+    args = parser.parse_args()
+    
+    # Mapear el código de test al patrón correspondiente
+    test_patterns = {
+        'test01': PER_MADRID_2025_TEST_01,
+        'test02': PER_MADRID_2025_TEST_02,
+        'test03': PER_MADRID_2025_TEST_03,
+        'test04': PER_MADRID_2025_TEST_04
+    }
+    
+    pattern = test_patterns[args.test]
+    
+    print(f"🚢 Extractor de Preguntas PER")
+    print(f"📋 Examen: {pattern.title}")
+    print(f"🏷️  Test: {pattern.subtitle}")
+    print(f"📄 PDF origen: {args.pdf}")
+    print(f"📁 Directorio salida: {args.output_dir}")
+    print("-" * 60)
+    
+    # Verificar que el archivo PDF existe
+    if not os.path.exists(args.pdf):
+        print(f"❌ Error: No se encuentra el archivo PDF: {args.pdf}")
+        print(f"💡 Verifica que la ruta sea correcta y que el archivo exista")
+        return 1
+    
+    # Crear el extractor y procesar
+    extractor = ParametricExamExtractor()
+    
+    try:
+        # Extraer el examen
+        exam_data = extractor.extract_exam(args.pdf, pattern)
+        
+        if not exam_data:
+            print("❌ Error: No se pudo extraer el examen")
+            return 1
+        
+        # Generar nombre de archivo de salida
+        output_file = extractor.generate_filename(pattern, args.output_dir)
+        
+        # Guardar en YAML
+        extractor.save_to_yaml(exam_data, output_file)
+        
+        # Mostrar resumen
+        exam_info = exam_data.get('exam_info', {})
+        print(f"\n📊 Resumen de extracción:")
+        print(f"   ✅ Preguntas extraídas: {exam_info.get('total_questions', 0)}/{exam_info.get('expected_questions', 0)}")
+        print(f"   📚 Categorías encontradas: {exam_info.get('categories', 0)}")
+        print(f"   📝 Preguntas con respuestas: {exam_info.get('questions_with_answers', 0)}")
+        print(f"   💾 Archivo guardado: {output_file}")
+        print(f"\n💡 Para agregar respuestas, usa:")
+        print(f"   python madrid_extract_answers.py --exam-type PER --test-model {args.test.upper()}")
+        
+        return 0
+        
+    except Exception as e:
+        print(f"❌ Error durante la extracción: {str(e)}")
+        print(f"💡 Verifica que el PDF contenga el examen especificado ({pattern.subtitle})")
+        return 1
+
+
+if __name__ == "__main__":
+    exit(main())

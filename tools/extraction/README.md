@@ -5,49 +5,80 @@ Scripts especializados en extraer información de documentos PDF oficiales de ex
 ## 📄 Scripts Disponibles
 
 ### `madrid_extract_questions.py`
-**Propósito**: Extrae preguntas y estructura de exámenes desde PDFs oficiales. **Ahora completamente parametrizable**.
+# Extraction Tools - Herramientas de Extracción
+
+Scripts especializados en extraer información de documentos PDF oficiales de exámenes PER.
+
+## 📄 Scripts Disponibles
+
+### `madrid_extract_questions.py`
+**Propósito**: Extrae preguntas y estructura de exámenes desde PDFs oficiales de forma parametrizable.
 
 **Características**:
-- ✨ **Extracción parametrizable**: Soporte para diferentes comunidades, años y convocatorias
-- 🔍 **Búsqueda inteligente de PDFs**: Encuentra automáticamente archivos basándose en parámetros
-- 📂 **Múltiples opciones de salida**: Personaliza directorios y nombres de archivo
-- 🏷️ **Categorización automática**: Organiza preguntas por categorías oficiales del PER
-- 🔧 **Manejo robusto de errores**: Suggestions y validaciones útiles
+- 🚢 **Extracción especializada PER**: Soporte específico para exámenes de Patrón de Embarcaciones de Recreo
+- 🔍 **Reconocimiento inteligente**: Identifica automáticamente categorías y estructura del examen
+- 📂 **Salida estructurada**: Genera archivos YAML organizados por las 11 categorías oficiales PER
+- 🔧 **Recuperación automática**: Detecta y recupera preguntas que podrían haberse perdido en la extracción inicial
+- ✅ **Validación robusta**: Verifica la integridad y completitud de las preguntas extraídas
 
-#### Parámetros de Línea de Comandos
+#### Uso desde Línea de Comandos
 
-- `--community`: Comunidad autónoma (ej: Madrid, Valencia, Barcelona)
-- `--year`: Año del examen (ej: 2024, 2025)
-- `--call`: Convocatoria (ej: abril, junio, septiembre, noviembre)
-- `--test`: Código del test (ej: test01, test02, test03)
-- `--total-questions`: Número total de preguntas esperadas (por defecto: 45)
-- `--pdf-file`: Especificar archivo PDF completo
-- `--pdf-pattern`: Patrón personalizado para buscar PDF
-- `--output-dir`: Directorio de salida personalizado
-- `--output-file`: Nombre de archivo de salida específico
+```bash
+python madrid_extract_questions.py --pdf RUTA_PDF --test CODIGO_TEST [--output-dir DIRECTORIO]
+```
+
+#### Parámetros Obligatorios
+
+- `--pdf`: Ruta al archivo PDF que contiene las preguntas del examen
+- `--test`: Código del test a extraer (`test01`, `test02`, `test03`, `test04`)
+
+#### Parámetros Opcionales
+
+- `--output-dir`: Directorio donde guardar el archivo YAML (por defecto: `data/exams`)
 
 #### Ejemplos de Uso
 
 ```bash
-# Uso básico (por defecto: Madrid 2025 abril test01)
-python madrid_extract_questions.py
+# Extraer Test 01 de Madrid 2025 abril
+python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test01
 
-# Extraer test específico
-python madrid_extract_questions.py --test test03
+# Extraer Test 04 y guardarlo en directorio personalizado
+python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test04 --output-dir mis_examenes
 
-# Extraer de diferentes comunidades/años
-python madrid_extract_questions.py --community Valencia --year 2024 --call junio
+# Usar ruta absoluta al PDF
+python madrid_extract_questions.py --pdf /workspaces/per-tests/data/raw/questions/madrid-2025-abril.pdf --test test02
 
-# Usar archivo PDF específico
-python madrid_extract_questions.py --pdf-file "/ruta/completa/al/archivo.pdf"
-
-# Con archivo de salida personalizado
-python madrid_extract_questions.py --output-file "mi-examen.yaml"
+# Ver ayuda completa del script
+python madrid_extract_questions.py --help
 ```
+
+#### Categorías PER Soportadas
+
+El script organiza automáticamente las preguntas en las 11 categorías oficiales del PER:
+
+1. **Nomenclatura náutica** - Terminología básica de embarcaciones
+2. **Elementos de amarre y fondeo** - Cabos, nudos, anclas y maniobras de puerto  
+3. **Seguridad** - Equipos de seguridad y supervivencia
+4. **Legislación** - Normativa y regulaciones náuticas
+5. **Balizamiento** - Señalización marítima y ayudas a la navegación
+6. **Reglamento (RIPA)** - Reglas Internacionales para Prevenir Abordajes
+7. **Maniobra y navegación** - Técnicas de gobierno y maniobra
+8. **Emergencias en la mar** - Procedimientos de emergencia y rescate
+9. **Meteorología** - Tiempo, viento y condiciones meteorológicas
+10. **Teoría de la navegación** - Conceptos fundamentales de navegación
+11. **Carta de navegación** - Interpretación y uso de cartas náuticas
 
 #### Nomenclatura de Archivos
 
 **Archivos de Entrada (PDFs)**:
+- Formato esperado: `{comunidad}-{año}-{convocatoria}.pdf`
+- Ejemplos: `madrid-2025-abril.pdf`, `valencia-2024-junio.pdf`
+
+**Archivos de Salida (YAML)**:
+- Formato generado: `per-{test}-{comunidad}-{año}-{convocatoria}.yaml`
+- Ejemplos: `per-test01-madrid-2025-abril.yaml`, `per-test04-madrid-2025-abril.yaml`
+
+**Salida**: Archivos YAML estructurados en el directorio especificado con preguntas organizadas por categorías.
 - Patrón: `{comunidad}-{año}-{convocatoria}.pdf`
 - Ejemplos: `madrid-2025-abril.pdf`, `valencia-2024-junio.pdf`
 
@@ -96,26 +127,45 @@ python madrid_extract_answers.py --exam-type PER --test-model TEST01 --pdf-path 
 
 ## 🔄 Flujo de Trabajo Completo
 
-### Para Madrid 2025 abril (por defecto):
+### Extracción de Preguntas de Madrid 2025 abril:
 ```bash
 cd /workspaces/per-tests/tools/extraction
 
-# 1. Extraer preguntas (test01)
-python madrid_extract_questions.py
+# Extraer Test 01
+python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test01
 
-# 2. Extraer respuestas (test01)
-python madrid_extract_answers.py --exam-type PER --test-model TEST01
+# Extraer Test 02  
+python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test02
+
+# Extraer Test 03
+python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test03
+
+# Extraer Test 04
+python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test04
 ```
 
-### Para otros años/convocatorias:
+### Flujo Completo (Preguntas + Respuestas):
 ```bash
 cd /workspaces/per-tests/tools/extraction
 
-# 1. Extraer preguntas de Madrid 2024 noviembre test01
-python madrid_extract_questions.py --year 2024 --call noviembre --test test01
+# 1. Extraer preguntas del test deseado
+python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test01
 
-# 2. Extraer respuestas del mismo examen
-python madrid_extract_answers.py --exam-type PER --test-model TEST01 --pdf-path "/workspaces/per-tests/data/raw/answers/madrid-2024-noviembre.pdf"
+# 2. Extraer respuestas del mismo test
+python madrid_extract_answers.py --exam-type PER --test-model TEST01
+
+# 3. Verificar archivos generados
+ls -la ../../data/exams/per-test01-madrid-2025-abril.yaml
+ls -la extracted_answers/
+```
+
+### Para otros archivos PDF:
+```bash
+# Usar rutas absolutas para PDFs en otras ubicaciones
+python madrid_extract_questions.py --pdf /ruta/completa/al/pdf/examen.pdf --test test02
+
+# Especificar directorio de salida personalizado
+python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test03 --output-dir mis_examenes
 ```
 
 ### Flujo Completo:
@@ -159,7 +209,37 @@ tesseract --list-langs
 
 ## 🔧 Solución de Problemas
 
-### Errores Comunes:
+### Errores Comunes del Extractor de Preguntas:
+
+**`No se encuentra el archivo PDF`**:
+```bash
+# Verificar que el archivo existe
+ls -la data/raw/questions/madrid-2025-abril.pdf
+
+# Usar ruta absoluta si es necesario
+python madrid_extract_questions.py --pdf /workspaces/per-tests/data/raw/questions/madrid-2025-abril.pdf --test test01
+```
+
+**`No se encontró el patrón de inicio del examen`**:
+- Verifica que el PDF contiene el test especificado (test01, test02, test03, test04)
+- Algunos PDFs pueden tener variaciones en el formato del título
+- Revisa el contenido del PDF manualmente para confirmar la presencia del examen
+
+**`Preguntas faltantes detectadas`**:
+- El script intentará recuperar automáticamente las preguntas faltantes
+- Esto es normal y suele resolverse satisfactoriamente
+- Si persisten faltantes, puede indicar un problema en el formato del PDF
+
+**Error de permisos de escritura**:
+```bash
+# Crear directorio si no existe
+mkdir -p data/exams
+
+# Verificar permisos
+ls -la data/
+```
+
+### Errores Comunes del Extractor de Respuestas:
 
 **`PDFInfoNotInstalledError`**:
 ```bash
@@ -171,14 +251,17 @@ sudo apt install poppler-utils
 sudo apt install tesseract-ocr tesseract-ocr-spa
 ```
 
-**No encuentra PDF**:
-- Verifica la nomenclatura: `{comunidad}-{año}-{convocatoria}.pdf`
-- Usa `--pdf-file` para rutas específicas
-- Usa `--pdf-pattern` para patrones personalizados
+### Verificación de Instalación de Dependencias:
+```bash
+# Verificar poppler
+pdfinfo --version
 
-**Año/convocatoria incorrectos**:
-- Los metadatos del archivo YAML reflejan los parámetros usados
-- Para Madrid 2024 noviembre, usa: `--year 2024 --call noviembre`
+# Verificar tesseract
+tesseract --version
+
+# Verificar idiomas disponibles
+tesseract --list-langs
+```
 
 ## 📋 Integración con Otros Scripts
 
@@ -187,9 +270,22 @@ Los archivos generados son compatibles con:
 - Aplicación web: Para visualizar exámenes
 - Scripts de procesamiento: Para análisis adicional
 
-## 💡 Consejos
+## 💡 Consejos y Mejores Prácticas
 
-- Usar nombres descriptivos para archivos de salida cuando trabajes con múltiples convocatorias
+### Para el Extractor de Preguntas:
+- Usar siempre rutas absolutas cuando trabajas con PDFs en diferentes directorios
+- Verificar la integridad del PDF antes de la extracción
+- Revisar el resumen de extracción para confirmar que se obtuvieron todas las preguntas
+- Los archivos YAML generados mantienen el orden secuencial de las preguntas (1-45)
+
+### Para el Extractor de Respuestas:
 - Los filtros de `madrid_extract_answers.py` permiten extraer solo las respuestas necesarias
-- El OCR funciona mejor con PDFs de alta resolución (300+ DPI)
+- El OCR funciona mejor con PDFs de alta resolución (300+ DPI)  
 - Revisar siempre los archivos de salida para validar la extracción
+
+### Flujo de Trabajo Recomendado:
+1. Colocar PDFs originales en `data/raw/questions/` y `data/raw/answers/`
+2. Extraer preguntas usando `madrid_extract_questions.py`
+3. Extraer respuestas usando `madrid_extract_answers.py`
+4. Verificar archivos generados antes de continuar con el procesamiento
+5. Usar herramientas de `processing/` para combinar y analizar los datos
