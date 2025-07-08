@@ -17,7 +17,7 @@ Proyecto de aplicación para generar exámenes aleatorios de PER España. La apl
 ### Estructura del Proyecto
 ```
 per-tests/
-├── app/                      # Código de la aplicación
+├── app/                     # Código de la aplicación
 │   ├── main.py              # Punto de entrada de FastAPI
 │   ├── models/              # Modelos Pydantic
 │   ├── services/            # Lógica de negocio
