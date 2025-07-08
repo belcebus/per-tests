@@ -8,11 +8,12 @@ categories:
       id: 1
       options:
         a: Cables o cabos que, sostenido por los candeleros, se colocan en las bandas
-          para seguridad de la
+          para seguridad de la tripulación.
         b: Piezas en forma de «T» o «doble T» que suelen ir en cubierta para amarrar
-          cabos ligeros o en un
+          cabos ligeros o en un palo para amarrar las drizas de las banderas.
         c: Piezas dobles verticales o ligeramente inclinadas que van fijas a la cubierta
-          y que sirven para
+          y que sirven para amarrar las estachas y amarras en general en forma de
+          ocho.
         d: Claraboyas o tragaluces situadas sobre una cubierta para dar luz.
       question: 'Los guardamancebos son:'
     - category: 1
@@ -67,11 +68,12 @@ categories:
       id: 6
       options:
         a: En el momento del fondeo se recomienda llevar una ligera arrancada atrás
-          con objeto de que, al
+          con objeto de que, al caer el ancla, la cadena se extienda correctamente
+          por el fondo.
         b: De forma general, la longitud de cadena para un fondeo con buen tiempo
-          no será inferior a tres
+          no será inferior a tres veces la sonda del lugar de fondeo.
         c: La aproximación al lugar de fondeo se hará a la velocidad máxima de la
-          embarcación, dando la
+          embarcación, dando la proa al viento.
         d: Si se comprueba que la embarcación garrea, se recomienda virar el ancla
           y volver a fondear.
       question: En relación con el fondeo, ¿cuál de las siguientes afirmaciones es
@@ -88,7 +90,7 @@ categories:
         b: Librar al náufrago de la hélice, parar el motor, lanzarle ayudas y saltar
           al agua en su busca.
         c: Dar atrás y acercarnos lentamente por la popa, sin perder de vista al náufrago,
-          para evitar que la
+          para evitar que la proa pueda dañarlo.
         d: Saltar al agua en su busca para evitar que se ahogue.
       question: Cuando se haya producido la caída accidental al agua de una persona
         a bordo, ¿cuál de las siguientes recomendaciones debemos seguir?
@@ -100,11 +102,11 @@ categories:
         a: Un sistema de detección de barcos que es obligatorio en cualquier tipo
           de embarcación.
         b: Un elemento de ayuda para que las embarcaciones de casco no metálico produzcan
-          ecos en las
+          ecos en las pantallas de radar de otros barcos.
         c: Un dispositivo destinado a evitar la detección de nuestra embarcación por
-          el radar de otros
+          el radar de otros barcos, por motivos de protección.
         d: La antena del sistema de radar del barco, siendo obligatorio sólo en embarcaciones
-          de fibra o
+          de fibra o madera.
       question: 'El reflector radar es:'
     - category: 3
       category_name: Seguridad
@@ -124,9 +126,9 @@ categories:
       options:
         a: Al capear el temporal debemos reducir la velocidad incluso parando la arrancada.
         b: Correr el temporal es una maniobra cómoda, pero, con mal tiempo, existe
-          el problema de que
+          el problema de que pueden embarcar fuertes golpes de mar.
         c: Elegir capear o correr el temporal dependerá de la embarcación y del grado
-          de fuerza del
+          de fuerza del temporal.
         d: Para capear el temporal nos podemos ayudar mediante el uso de un ancla
           flotante.
       question: En relación con la derrota a seguir con mal tiempo, señale la afirmación
@@ -140,13 +142,14 @@ categories:
       id: 11
       options:
         a: Cuando las basuras estén mezcladas con otras sustancias cuya descarga esté
-          prohibida o para las
+          prohibida o para las que rijan distintas prescripciones de descarga, se
+          aplicarán las prescripciones más rigurosas.
         b: Los aditivos de limpieza contenidos en las aguas de lavado podrán descargarse
-          al mar, aunque
+          al mar, aunque sean perjudiciales para el medio marino.
         c: La descarga de basuras en el mar fuera de las zonas especiales está prohibida
           sin excepciones.
         d: Los restos de alimentos a descargar estarán desmenuzados de manera que
-          puedan pasar por cribas
+          puedan pasar por cribas con mallas de una abertura máxima de 25 cm.
       question: De acuerdo con la Regla 4 del Anexo V del Convenio MARPOL, indique
         cuál de las siguientes afirmaciones es CORRECTA.
     - category: 4
@@ -202,7 +205,7 @@ categories:
       options:
         a: Si tienen luz, es amarilla.
         b: Indican una zona o una configuración particular cuya naturaleza exacta
-          está indicada en la carta u
+          está indicada en la carta u otro documento náutico.
         c: No señalan ningún peligro.
         d: Si tienen marca de tope es una única esfera verde.
       question: 'Las Marcas de Aguas Navegables:'
@@ -236,7 +239,7 @@ categories:
       id: 19
       options:
         a: Exhibirá luces que, por sus características y situación, sean lo más parecidas
-          posible a las
+          posible a las prescritas en dicha regla.
         b: Tendrá prohibida la navegación.
         c: Lo indicará colocando en el lugar más visible una luz amarilla de centelleos
           todo horizonte.
@@ -252,7 +255,7 @@ categories:
       id: 20
       options:
         a: Exhibirá luces que, por sus características y situación, sean lo más parecidas
-          posible a las
+          posible a las prescritas en dicha regla.
         b: Tendrá prohibida la navegación.
         c: Lo indicará colocando en el lugar más visible una luz amarilla de centelleos
           todo horizonte.
@@ -269,7 +272,7 @@ categories:
       options:
         a: Navegue a vela y no sea propulsado mecánicamente.
         b: Navegue a vela, no sea propulsado mecánicamente y se encuentre sin arrancada
-          por falta de
+          por falta de viento.
         c: Navegue a vela y también sea propulsado mecánicamente.
         d: Navegue solo propulsado mecánicamente.
       question: 'En caso de ver por nuestra proa las dos luces de tope de un barco
@@ -281,13 +284,13 @@ categories:
       id: 22
       options:
         a: El resplandor de las luces de tierra siempre beneficiará la distinción
-          de otros buques o marcas de
+          de otros buques o marcas de balizamiento de noche.
         b: Un equipo radar funcionando correctamente nunca debe ser utilizado para
-          determinar la
+          determinar la velocidad de seguridad en condiciones de mala visibilidad.
         c: En condiciones de mala visibilidad, se debe aumentar la velocidad al máximo
-          para evitar pasar
+          para evitar pasar más tiempo de lo necesario expuestos a posibles peligros.
         d: La densidad de tráfico, incluidas las concentraciones de buques de pesca,
-          condicionará la
+          condicionará la maniobra adecuada y eficaz para evitar un abordaje.
       question: 'Conforme a la Regla 6 del RIPA, “Velocidad de seguridad”, para determinar
         la velocidad de seguridad, se tendrá en cuenta que:'
     - category: 6
@@ -296,12 +299,12 @@ categories:
       id: 23
       options:
         a: A babor respecto a un buque situado a proa del través, salvo que el otro
-          buque esté siendo
+          buque esté siendo alcanzado.
         b: A estribor respecto a un buque situado a proa del través, especialmente
-          si el otro buque está
+          si el otro buque está siendo alcanzado.
         c: A babor respecto a todo buque situado a popa del través.
         d: A estribor respecto a un buque situado a proa del través, si el otro buque
-          no está siendo
+          no está siendo alcanzado.
       question: 'De acuerdo con la Regla 19 del RIPA “Conducta de los buques en condiciones
         de visibilidad reducida”, todo buque que detecte únicamente por medio del
         radar la presencia de otro buque, y determine que se está creando una situación
@@ -317,9 +320,10 @@ categories:
         b: Exclusivamente cuando estén en ruta hacia un puerto dentro de la zona de
           navegación costera.
         c: Por ser un buque menor de 30 metros de eslora puede utilizar la zona de
-          navegación costera
+          navegación costera siempre que lo necesite.
         d: Únicamente en el caso de que deba maniobrar a un buque que tenga preferencia
-          de paso, y el
+          de paso, y el ancho del dispositivo no sea suficiente para realizar la maniobra
+          con seguridad.
       question: De acuerdo con la Regla 10 del RIPA, “Dispositivos de separación del
         tráfico”, ¿en qué caso podrá un buque de propulsión mecánica de 25 metros
         de eslora navegar por la zona de navegación costera?
@@ -330,7 +334,7 @@ categories:
       options:
         a: Navegue a vela y no sea propulsado mecánicamente.
         b: Navegue a vela, no sea propulsado mecánicamente y se encuentre sin arrancada
-          por falta de
+          por falta de viento.
         c: Navegue a vela y también sea propulsado mecánicamente.
         d: Navegue solo propulsado mecánicamente.
       question: 'De acuerdo con la regla 25 del RIPA, “Buques de vela en navegación
@@ -375,7 +379,7 @@ categories:
       id: 28
       options:
         a: Dar máquina atrás hasta tener arrancada y aproximarnos a la boya popa al
-          viento para facilitar el
+          viento para facilitar el amarre.
         b: Aproximarnos a la boya por su barlovento para facilitar el amarre.
         c: Aproximarnos a la boya por su sotavento para facilitar el amarre.
         d: Abortar la maniobra al no estar permitido en el RIPA el amarre a boyas.
@@ -402,11 +406,11 @@ categories:
       id: 30
       options:
         a: Lo primero que debemos hacer siempre, es, lo antes posible, separar las
-          embarcaciones
+          embarcaciones involucradas en el abordaje.
         b: La evaluación de las averías sufridas debe realizarse durante la peritación
-          de los daños una vez
+          de los daños una vez llegados a puerto.
         c: Estamos obligados a prestar asistencia legal al patrón de la otra embarcación
-          involucrada en caso
+          involucrada en caso de que lo necesite.
         d: La evaluación de las averías sufridas debe realizarse a la mayor brevedad
           posible.
       question: 'Tras sufrir un abordaje:'
@@ -417,7 +421,7 @@ categories:
       options:
         a: Inmediatamente después de emitir el mensaje de socorro MAYDAY por VHF.
         b: Cuando tengamos la certeza de que puede ser avistado desde otra embarcación,
-          unidad aérea o
+          unidad aérea o desde la costa cercana.
         c: Sólo cuando sea de noche.
         d: Inmediatamente después de embarcar en la balsa salvavidas.
       question: En el caso de abandono de nuestra embarcación, ¿cuándo se deben usar
@@ -429,7 +433,7 @@ categories:
       options:
         a: Sofocar el fuego mediante la eliminación del comburente.
         b: Poner la embarcación en la misma dirección que sopla el viento y a la misma
-          velocidad para que
+          velocidad para que el viento aparente sea cero.
         c: Confinar el fuego para eliminar el combustible.
         d: Neutralizar los radicales libres que actúan en la reacción en cadena.
       question: En un incendio a bordo, ¿qué entendemos por socairear el fuego?
@@ -477,7 +481,7 @@ categories:
         b: Transmisiones radio en onda media y VHF por las Estaciones Radiocosteras.
         c: Servicio telefónico de la Autoridad Portuaria Radiocostera.
         d: Transmisiones por medio del sistema NAVTEX a través de los cuatro centros
-          emisores de
+          emisores de Salvamento Marítimo.
       question: La información meteorológica para las zonas marítimas tiene una amplia
         difusión por diferentes medios a través del SMSSM (Sistema Mundial de Socorro
         y Seguridad Marítima), ¿cuál de los siguientes medios NO forma parte de ese
@@ -506,7 +510,7 @@ categories:
         c: Es el círculo máximo que pasando por los polos pasa por los diferentes
           lugares del observador.
         d: Es el arco de ecuador contado desde el meridiano de Greenwich hasta el
-          pie del meridiano que
+          pie del meridiano que pasa por el lugar.
       question: ¿Cuál es la definición de latitud?
     - category: 10
       category_name: Teoría de la navegación

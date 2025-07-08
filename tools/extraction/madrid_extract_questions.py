@@ -398,18 +398,89 @@ class ParametricExamExtractor:
         question_lines = []
         options = {}  # Cambiar a diccionario con letras como claves
         options_started = False
+        current_option_letter = None
         
-        for line in lines:
+        i = 0
+        while i < len(lines):
+            line = lines[i]
+            
             # Buscar opciones a), b), c), d)
             option_match = re.match(r'^([a-d])\)\s*(.+)', line, re.IGNORECASE)
             if option_match:
                 options_started = True
-                option_letter = option_match.group(1).lower()
+                current_option_letter = option_match.group(1).lower()
                 option_text = option_match.group(2).strip()
-                options[option_letter] = option_text
+                
+                # Continuar leyendo líneas hasta encontrar la siguiente opción o el final
+                i += 1
+                while i < len(lines):
+                    next_line = lines[i]
+                    # Verificar si la siguiente línea es una nueva opción
+                    next_option_match = re.match(r'^([a-d])\)\s*(.+)', next_line, re.IGNORECASE)
+                    if next_option_match:
+                        # Es una nueva opción, no procesamos esta línea aquí
+                        break
+                    
+                    # Verificar si es texto administrativo que no debería estar en la opción
+                    admin_patterns = [
+                        r'SUBDIRECCIÓN GENERAL',
+                        r'ÁREA FUNCIONAL',
+                        r'MINISTERIO',
+                        r'DIRECCIÓN GENERAL',
+                        r'CAPITANÍA MARÍTIMA',
+                        r'GOBIERNO DE',
+                        r'COMUNIDAD AUTÓNOMA',
+                        r'CONSEJERÍA',
+                        r'DEPARTAMENTO',
+                        r'PÁGINA \d+',
+                        r'^\d+\s*$',  # Solo números
+                        r'^\d+\s*/\s*\d+\s*$',  # Numeración de páginas como "3/45"
+                        r'EXAMEN DE PATRÓN',
+                        r'CÓDIGO DE TEST',
+                        r'MADRID\s*\d{4}',  # "MADRID 2025" etc.
+                        r'ABRIL\s*\d{4}',   # "ABRIL 2025" etc.
+                        r'JUNIO\s*\d{4}',   # "JUNIO 2024" etc.
+                        r'NOVIEMBRE\s*\d{4}', # "NOVIEMBRE 2024" etc.
+                        r'CONVOCATORIA',
+                        r'ORDINARIA',
+                        r'EXTRAORDINARIA',
+                        r'NÁUTICA DE RECREO',
+                        r'SEGURIDAD.*MARÍTIMA',
+                        r'INSPECCIÓN MARÍTIMA',
+                        r'CONTAMINACIÓN',
+                        r'MADRID\s*[-–]\s*\d{4}',  # "MADRID - 2025" etc.
+                        r'^\s*\d{1,2}\s*$'  # Líneas con solo números del 1-99
+                    ]
+                    
+                    is_admin_text = any(re.search(pattern, next_line, re.IGNORECASE) for pattern in admin_patterns)
+                    if is_admin_text:
+                        # No incluir texto administrativo en la opción
+                        break
+                    
+                    # Verificar si es muy similar al texto ya existente (posible repetición)
+                    if len(option_text) > 20 and next_line.strip() in option_text:
+                        break
+                    
+                    # Verificar si la línea podría ser el inicio de una nueva pregunta
+                    potential_question_match = re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', next_line)
+                    if potential_question_match:
+                        potential_num = int(potential_question_match.group(1))
+                        if 1 <= potential_num <= 45:  # Rango válido de preguntas
+                            break
+                    
+                    # Es continuación de la opción actual
+                    if next_line.strip():  # Solo agregar si no está vacía
+                        option_text += ' ' + next_line.strip()
+                    i += 1
+                
+                options[current_option_letter] = option_text
+                # No incrementamos i aquí porque el bucle while ya lo hizo
+                continue
             elif not options_started:
                 # Si no hemos empezado con opciones, es parte de la pregunta
                 question_lines.append(line)
+            
+            i += 1
         
         # Construir pregunta
         question_text = ' '.join(question_lines).strip()

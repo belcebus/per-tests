@@ -29,7 +29,7 @@ categories:
       id: 3
       options:
         a: Los imbornales son aberturas en los costados que sirven para evacuar el
-          agua de las zonas de
+          agua de las zonas de cubierta.
         b: La aleta es la parte de los costados entre el través y la proa.
         c: El través es la parte media, en sentido longitudinal, de cada uno de los
           costados.
@@ -55,11 +55,12 @@ categories:
       id: 5
       options:
         a: Un noray es cada uno de los postes de madera o hierro que, asegurados a
-          la cubierta en las
+          la cubierta en las proximidades de la proa, sirven para dar vuelta a los
+          cabos cuando se fondea.
         b: El chicote es un palo con punta y gancho metálico en un extremo que sirve
-          para tomarse o abrirse
+          para tomarse o abrirse al atracar o desatracar la embarcación.
         c: Un muerto es un bloque de cemento o ancla de gran peso depositado en el
-          fondo que, unido por
+          fondo que, unido por un orinque a la superficie, permite anclar una embarcación.
         d: El As de guía permite unir dos cabos de la misma mena que vayan a trabajar
           en tensión.
       question: ¿Cuál de las siguientes definiciones es CORRECTA?
@@ -71,11 +72,11 @@ categories:
         a: Se estudiará la carta y el derrotero para elegir un lugar protegido y un
           tenedero de fondo rocoso.
         b: La aproximación al lugar de fondeo se hará a la mínima velocidad de gobierno
-          y con el viento por
+          y con el viento por la proa.
         c: Se comprobará que no haya obstáculos en un círculo de borneo de radio igual
-          a la eslora de la
+          a la eslora de la embarcación.
         d: En el momento del fondeo aumentaremos la arrancada dando marcha avante
-          y largaremos cadena,
+          y largaremos cadena, para que esta se extienda correctamente por el fondo.
       question: En relación con la maniobra de fondeo, ¿cuál de las siguientes afirmaciones
         es CORRECTA?
   3:
@@ -100,7 +101,7 @@ categories:
       options:
         a: Es un equipo personal adaptado a la talla de cada tripulante.
         b: Utilice el arnés de cinta en lugar de cabo. Así se evita que, al pisar
-          el arnés, ruede y pueda
+          el arnés, ruede y pueda resbalar.
         c: Su función es mantenerle unido a la embarcación si se cae por la borda.
         d: Es preferible el arnés más completo, fijado al cuerpo bajo los brazos y
           entre las piernas.
@@ -121,7 +122,7 @@ categories:
       id: 10
       options:
         a: Llevar la mar por la amura con poca arrancada, pero la suficiente para
-          permitir el gobierno de la
+          permitir el gobierno de la embarcación.
         b: Llevar la mar por la aleta con una velocidad prudencial para evitar los
           movimientos de cabeceo.
         c: Buscar refugio de forma inmediata.
@@ -148,13 +149,13 @@ categories:
       id: 12
       options:
         a: Un incidente o accidente que afecte a la seguridad de la embarcación tales
-          como abordajes,
+          como abordajes, varadas o daños.
         b: La decisión de fondear en calas o lugares de baño, siempre que no estén
-          balizados y no pongan en
+          balizados y no pongan en peligro la seguridad de la navegación.
         c: La visualización de cualquier mancha de materiales contaminantes o contenedores
-          a la deriva en
+          a la deriva en el mar.
         d: Un incidente o accidente que comprometa la seguridad de la navegación o
-          que puedan afectar a la
+          que puedan afectar a la maniobrabilidad.
       question: En relación con la “Notificación de incidentes y accidentes en el
         mar”, indique cuál de las siguientes situaciones NO requiere su comunicación
         a la estación costera.
@@ -181,7 +182,7 @@ categories:
           rojas.
         c: Su marca de tope estará formada por dos esferas negras superpuestas
         d: Su luz tendrá ritmo de Grupo de dos destellos GpD (2) para distinguirlas
-          de las Marcas
+          de las Marcas cardinales.
       question: En relación con las Marcas de Peligro Aislado, indique cuál de las
         siguientes afirmaciones es INCORRECTA.
     - category: 5
@@ -248,9 +249,11 @@ categories:
       options:
         a: Un pito.
         b: No tendremos obligación de llevar ningún dispositivo de señales acuáticas,
-          ya que solamente son
+          ya que solamente son obligatorios para buques cuya eslora es mayor de 12
+          metros.
         c: No tendremos obligación de llevar los dispositivos de señales acústicas
-          prescritos de esta Regla,
+          prescritos de esta Regla, pero debemos ir dotados de otros medios para hacer
+          señales acústicas eficaces.
         d: Una campana y un pito.
       question: Según lo indicado en la Regla 33 del RIPA “Equipo para señales acústicas”,
         si nos encontramos navegando en una embarcación de 12 metros de eslora, ¿qué
@@ -276,7 +279,7 @@ categories:
         a: Con una frecuencia de 120 o más centelleos por minuto, a intervalos regulares.
         b: Con una frecuencia de 60 o menos centelleos por minuto, a intervalos regulares.
         c: Con una duración cada centelleo de 1 segundo aproximadamente, con un intervalo
-          entre
+          entre centelleos de 1 segundo aproximadamente.
         d: Con una duración cada centelleo de medio segundo aproximadamente, a intervalos
           irregulares.
       question: 'De acuerdo con la Regla 21, “Definiciones”, de la Parte C “Luces
@@ -287,7 +290,7 @@ categories:
       id: 22
       options:
         a: Empujando a otro, cuando forman una unidad compuesta y la longitud del
-          conjunto es superior a
+          conjunto es superior a 200 metros.
         b: Remolcando a otro, cuando la longitud del remolque es inferior a 200 metros.
         c: Remolcando a otro, cuando la longitud del remolque es superior a 200 metros.
         d: Remolcado por otro, cuando la longitud del remolque es inferior a 200 metros.
@@ -300,10 +303,12 @@ categories:
       id: 23
       options:
         a: Blanca, que muestra su luz en un arco de horizonte de 225 grados, de forma
-          que sea visible desde
+          que sea visible desde la proa hasta 22,5 grados a popa del través de cada
+          costado, visible a una distancia mínima de 3 millas.
         b: Blanca todo horizonte visible a una distancia mínima de 5 millas.
         c: Amarilla, que muestra su luz en un arco de horizonte de 225 grados, de
-          forma que sea visible
+          forma que sea visible desde la proa hasta 22,5 grados a popa del través
+          de cada costado, visible a una distancia máxima de
         d: Opción D (contenido incompleto)
       question: 'Conforme a lo indicado en la Regla 34 del RIPA “Señales de maniobra
         y advertencia”, si un buque complementa las señales acústicas mediante señales
@@ -318,7 +323,7 @@ categories:
         b: Suprimirá su arrancada, si fuese necesario.
         c: Navegará con extremada precaución hasta que desaparezca el peligro de abordaje.
         d: Aumentará su velocidad hasta la máxima de gobierno para minimizar la aproximación
-          excesiva y
+          excesiva y en ningún caso se quedará sin arrancada.
       question: 'Señale la afirmación INCORRECTA. De acuerdo con la Regla 19 del RIPA,
         “Conducta de los buques en condiciones de visibilidad reducida”, salvo en
         los casos en que se haya comprobado que no existe riesgo de abordaje, todo
@@ -343,13 +348,15 @@ categories:
       id: 26
       options:
         a: Que puede existir riesgo aun cuando sea evidente una variación apreciable
-          de la demora, en
+          de la demora, en particular al aproximarse a un buque de pequeño tamaño
+          a mucha distancia.
         b: Que existe el riesgo, si la demora de un buque que se aproxima no varía
           en forma apreciable.
         c: Que un equipo de radar funcionando correctamente no es una fuente de información
-          fiable a tener
+          fiable a tener en cuenta.
         d: Que puede existir riesgo aun cuando sea evidente una variación apreciable
-          de la demora, en
+          de la demora, en particular al aproximarse en la lejanía un buque de pequeño
+          tamaño a poca velocidad.
       question: Nos encontramos navegando de noche con nuestra embarcación y visualizamos
         por proa un buque que muestra una luz de tope, ambas luces de costado y, en
         el lugar más visible, tres luces rojas todo horizonte, de acuerdo con la Regla
@@ -360,13 +367,15 @@ categories:
       id: 27
       options:
         a: Que puede existir riesgo aun cuando sea evidente una variación apreciable
-          de la demora, en
+          de la demora, en particular al aproximarse a un buque de pequeño tamaño
+          a mucha distancia.
         b: Que existe el riesgo, si la demora de un buque que se aproxima no varía
           en forma apreciable.
         c: Que un equipo de radar funcionando correctamente no es una fuente de información
-          fiable a tener
+          fiable a tener en cuenta.
         d: Que puede existir riesgo aun cuando sea evidente una variación apreciable
-          de la demora, en
+          de la demora, en particular al aproximarse en la lejanía un buque de pequeño
+          tamaño a poca velocidad.
       question: De acuerdo con la Regla 7 del RIPA, “Riesgo de abordaje”, para determinar
         si existe riesgo de abordaje, entre otras, ¿cuál de las siguientes consideraciones
         se tendrá en cuenta?
@@ -405,10 +414,10 @@ categories:
       options:
         a: Nunca es de utilidad trasladar pesos para cambiar el asiento.
         b: Es de utilidad esperar al mejor momento de la marea si, en la zona y momento
-          en el que nos
+          en el que nos encontramos, la hay.
         c: Nunca es de utilidad trasladar pesos para cambiar la escora.
         d: Siempre será necesario el servicio de un remolcador, de manera que deberemos
-          ponernos en
+          ponernos en contacto con quien preste dicho servicio.
       question: 'En relación con el reflote de una embarcación de recreo varada:'
     - category: 8
       category_name: Emergencias en la mar
@@ -416,11 +425,11 @@ categories:
       id: 31
       options:
         a: Desnudar la zona afectada, recortar cuidadosamente todas las ampollas y
-          frotar la quemadura con
+          frotar la quemadura con alcohol para desinfectarla.
         b: Cubrir la quemadura, una vez limpia, con gasas grasas y un vendaje que
           la comprima.
         c: En el caso de la mano, inmovilizarla vendando todos los dedos juntos y
-          colocando un
+          colocando un almohadillado para mantener las articulaciones en ligera flexión.
         d: Evacuar inmediatamente al accidentado a un centro hospitalario para su
           tratamiento.
       question: 'Ante una quemadura de primer grado que afecte a un 30% de la superficie
@@ -479,9 +488,9 @@ categories:
       options:
         a: Es el que existe en un momento dado, con nuestra embarcación parada.
         b: 'Es la resultante de dos componentes: el viento real y, por otro lado,
-          el rumbo y la velocidad'
+          el rumbo y la velocidad efectiva del buque en sentido contrario.'
         c: Es el que genera el propio barco, cuando avanzamos, siempre en dirección
-          opuesta a nuestro
+          opuesta a nuestro rumbo.
         d: Nunca es posible obtenerlo a partir de cálculos matemáticos.
       question: 'El viento aparente:'
   10:

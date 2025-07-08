@@ -65,13 +65,13 @@ categories:
       id: 6
       options:
         a: Se debe elegir siempre que sea posible un tenedero rocoso o con algas,
-          para facilitar el agarre del
+          para facilitar el agarre del ancla.
         b: Se deben tomar referencias a tierra para asegurarnos que el ancla no garrea,
-          y vigilar la sonda
+          y vigilar la sonda marcando un fondo mínimo con la alarma.
         c: Si se opta por el fondeo a la gira, se utilizarán dos anclas de forma que
-          las líneas de fondeo
+          las líneas de fondeo formen un ángulo de entre 90º y 120º.
         d: Nuestra embarcación debe disponer de una línea de fondeo cuya longitud
-          será tres veces la
+          será tres veces la eslora.
       question: 'En el fondeo:'
   3:
     name: Seguridad
@@ -85,7 +85,7 @@ categories:
         b: Todas las lumbreras están herméticamente cerradas.
         c: Se ha comunicado el Plan de navegación a alguien en tierra.
         d: La batería del móvil está cargada, para utilizarlo siempre como vía para
-          realizar una llamada de
+          realizar una llamada de emergencia.
       question: 'Antes de salir a la mar hay que asegurarse que:'
     - category: 3
       category_name: Seguridad
@@ -105,11 +105,11 @@ categories:
       options:
         a: Deben colocarse en la proa sujetos por medios de fijación permanente.
         b: Si pierde un aro salvavidas en el mar no debe tomar ninguna acción mientras
-          siga teniendo aros
+          siga teniendo aros salvavidas suficientes a bordo.
         c: No deben ir identificados con el nombre de la embarcación, ya que deben
-          cumplir un estándar
+          cumplir un estándar igual para todos.
         d: Deben colocarse en las bandas (aletas) o en popa y estibados de modo que
-          sea posible soltarlos
+          sea posible soltarlos rápidamente.
       question: En relación con los aros salvavidas, ¿cuál de las siguientes recomendaciones
         debemos tener en cuenta para que sean útiles?
     - category: 3
@@ -148,9 +148,10 @@ categories:
       id: 12
       options:
         a: A cualquier distancia de la tierra más próxima, siempre que los desechos
-          puedan pasar por cribas
+          puedan pasar por cribas con mallas de una abertura mínima de 50 mm.
         b: Estando la embarcación en ruta al menos a tres millas marinas de la tierra
-          más próxima y siempre
+          más próxima y siempre que los desechos puedan pasar por cribas con mallas
+          de una abertura máxima de 25 mm.
         c: Si se realiza tan lejos como sea posible de la tierra más próxima, pero
           en ningún caso a menos de
         d: A cualquier distancia de la tierra más próxima, siempre que el buque esté
@@ -186,12 +187,14 @@ categories:
       id: 15
       options:
         a: Están destinadas a señalar canales u obstrucciones, al no ofrecer el IALA
-          alternativas más
+          alternativas más apropiadas.
         b: Pueden ir con letras o numeradas y, también, pueden incluir el uso de un
-          pictograma para indicar
+          pictograma para indicar su finalidad, usando la simbología de la Organización
+          Hidrográfica Internacional (OIH), cuando proceda.
         c: Se utilizan para señalizar una vía navegable.
         d: Pueden llevar una marca de tope en forma de X, preferiblemente tridimensional,
-          para ser visible
+          para ser visible en todas las direcciones y, si tuvieran luz, ésta será
+          blanca.
       question: 'Las Marcas especiales indican una zona o una configuración particular
         cuya naturaleza exacta está indicada en la carta u otro documento náutico.
         Además:'
@@ -226,13 +229,17 @@ categories:
       id: 18
       options:
         a: En un arco del horizonte de 110 grados, fijada de forma que sea visible
-          en un arco de 55 grados,
+          en un arco de 55 grados, contados a partir de la popa hacia cada una de
+          las bandas del buque.
         b: En un arco del horizonte de 135 grados, fijada de forma que sea visible
-          en un arco de 67,5
+          en un arco de 67,5 grados, contados a partir de la popa hacia cada una de
+          las bandas del buque.
         c: En un arco del horizonte de 125 grados, fijada de forma que sea visible
-          en un arco de 62,5
+          en un arco de 62,5 grados, contados a partir de la proa hacia cada una de
+          las bandas del buque.
         d: En un arco del horizonte de 115 grados, fijada de forma que sea visible
-          en un arco de 57,5
+          en un arco de 57,5 grados, contados a partir de la popa hacia cada una de
+          las bandas del buque.
       question: Según la regla 21 del RIPA, “Definiciones” de la Parte C. Luces y
         marcas, ¿en qué arco del horizonte debe mostrar su luz sin interrupción una
         luz de alcance?
@@ -242,13 +249,16 @@ categories:
       id: 19
       options:
         a: Dos luces todo horizonte en línea vertical, blanca la superior y verde
-          la inferior, una luz de tope a
+          la inferior, una luz de tope a popa y más elevada que la luz verde todo
+          horizonte.
         b: Dos luces todo horizonte en línea vertical, roja la superior y blanca la
-          inferior, una luz de tope a
+          inferior, una luz de tope a popa y más elevada que la luz verde todo horizonte,
+          luces de costado y una luz de alcance.
         c: Dos luces todo horizonte en línea vertical, roja la superior y blanca la
-          inferior, luces de costado y
+          inferior, luces de costado y una luz de alcance.
         d: Dos luces todo horizonte en línea vertical, verde la superior y blanca
-          la inferior, una luz de tope a
+          la inferior, una luz de tope a popa y más elevada que la luz verde todo
+          horizonte, luces de costado y una luz de alcance.
       question: Según la regla 26 del RIPA, “Buques de pesca”, ¿qué luces exhibirá
         un buque de eslora mayor de 50 metros dedicado a la pesca de arrastre que
         vaya con arrancada?
@@ -324,13 +334,16 @@ categories:
       id: 25
       options:
         a: Podría ser necesario apartarse de este Reglamento, para evitar un peligro
-          inmediato, al tomar en
+          inmediato, al tomar en consideración todos aquellos peligros de navegación
+          y todas las circunstancias especiales.
         b: En ningún caso el propietario o capitán del buque podrá apartarse de las
-          reglas estipuladas en el
+          reglas estipuladas en el presente Reglamento incurriendo en la correspondiente
+          responsabilidad.
         c: El propietario o capitán del buque podrá apartarse de lo establecido en
-          este Reglamento
+          este Reglamento solamente cuando reciba una recomendación de un servicio
+          de control de tráfico marítimo.
         d: El propietario o capitán de un buque sin gobierno estará exento de seguir
-          lo estipulado en este
+          lo estipulado en este Reglamento.
       question: Navegando en zona de visibilidad reducida oímos una pitada larga a
         intervalos que no exceden de dos minutos. Según lo indicado en la regla 35
         del RIPA “Señales acústicas en visibilidad reducida”, ¿de qué buque se trataría?
@@ -354,13 +367,16 @@ categories:
       id: 27
       options:
         a: Podría ser necesario apartarse de este Reglamento, para evitar un peligro
-          inmediato, al tomar en
+          inmediato, al tomar en consideración todos aquellos peligros de navegación
+          y todas las circunstancias especiales.
         b: En ningún caso el propietario o capitán del buque podrá apartarse de las
-          reglas estipuladas en el
+          reglas estipuladas en el presente Reglamento incurriendo en la correspondiente
+          responsabilidad.
         c: El propietario o capitán del buque podrá apartarse de lo establecido en
-          este Reglamento
+          este Reglamento solamente cuando reciba una recomendación de un servicio
+          de control de tráfico marítimo.
         d: El propietario o capitán de un buque sin gobierno estará exento de seguir
-          lo estipulado en este
+          lo estipulado en este Reglamento.
       question: 'Conforme a la Regla 2 del RIPA, “Responsabilidad”:'
   7:
     name: Maniobra y navegación
@@ -395,10 +411,10 @@ categories:
       options:
         a: Manténgase en continuo movimiento para conservar el calor.
         b: Beba agua del mar en pequeñas cantidades, a medida que lo necesite, para
-          evitar la
+          evitar la deshidratación.
         c: Adopte la postura fetal o flote abrazado a otros supervivientes, sin nadar.
         d: Si hay varios supervivientes, quítense el chaleco salvavidas y permanezcan
-          abrazados para
+          abrazados para mantener el calor corporal.
       question: 'En el caso de que se vea obligado a abandonar una embarcación y permanecer
         flotando en el agua:'
     - category: 8
@@ -419,9 +435,9 @@ categories:
       id: 32
       options:
         a: Empapar la ropa con agua limpia o suero y desprenderla de un tirón, para
-          desnudar la zona
+          desnudar la zona afectada.
         b: Recortar las ampollas de la quemadura que se hayan roto y cubrirlas con
-          gasas grasas y un
+          gasas grasas y un vendaje de compresión.
         c: Evacuar inmediatamente a un centro hospitalario para su tratamiento.
         d: Inmovilizar la zona y administrar un antibiótico para prevenir la infección.
       question: 'En caso de un accidente que produzca quemaduras de 1er grado que
@@ -454,7 +470,7 @@ categories:
           embarcación.
         c: El viento relativo es la resultante del viento real y del rumbo de la embarcación.
         d: El viento real es el que medimos cuando nuestra embarcación está navegando
-          con arrancada y
+          con arrancada y con viento presente.
       question: ¿Cuál de las siguientes afirmaciones es CORRECTA en relación con los
         diferentes tipos de vientos?
     - category: 9

@@ -54,11 +54,12 @@ categories:
       id: 5
       options:
         a: Una pieza de metal con forma de ranura por la que se hace pasar un cabo
-          con el fin de evitar el
+          con el fin de evitar el roce.
         b: Un poste de madera o de hierro que, asegurado a la cubierta en las proximidades
-          de la proa, sirve
+          de la proa, sirve para dar vuelta a los cables del ancla cuando se fondea
+          la embarcación.
         c: Una pieza de metal o madera que, encorvada en sus extremos y fija por su
-          punto medio, sirve
+          punto medio, sirve para amarrar los cabos.
         d: Una rueda acanalada por donde corre el cabo en un motón.
       question: 'Una roldana es:'
     - category: 2
@@ -67,12 +68,12 @@ categories:
       id: 6
       options:
         a: El orinque es el cabo que se amarra por un chicote al ancla y por el otro
-          a la proa de la
+          a la proa de la embarcación.
         b: A la hora de elegir el lugar de fondeo, uno de los aspectos fundamentales
-          a tener en cuenta es la
+          a tener en cuenta es la sonda existente en la zona.
         c: De forma general, se seleccionarán para fondear tenederos de fondo blando.
         d: Hay que tomar referencias a tierra para asegurarnos que el ancla no garrea,
-          y vigilar la sonda
+          y vigilar la sonda marcando un fondo mínimo con la alarma.
       question: En relación con el fondeo, ¿cuál de las siguientes afirmaciones es
         INCORRECTA?
   3:
@@ -95,7 +96,7 @@ categories:
       id: 8
       options:
         a: Desplácese deprisa por cubierta, alejándose de cualquier equipo de seguridad
-          para no dañarlo en
+          para no dañarlo en caso de caída.
         b: Si no dispone de aseos, tenga mucho cuidado si decide hacer sus necesidades
           por la borda.
         c: Agárrese al menos con una mano a la embarcación.
@@ -112,9 +113,9 @@ categories:
           Marítimo.
         b: En navegación en zona 4 la flotabilidad mínima del chaleco será de 150N.
         c: Se deben mantener en perfectas condiciones, con las hebillas, pasadores
-          y cierres limpios y
+          y cierres limpios y engrasados.
         d: La embarcación debe disponer, como mínimo, de un chaleco para cada persona
-          a bordo adaptado
+          a bordo adaptado a su talla, peso y edad.
       question: Con relación a los chalecos salvavidas, señale la afirmación INCORRECTA.
     - category: 3
       category_name: Seguridad
@@ -138,11 +139,13 @@ categories:
         a: Está obligado, en cualquier circunstancia, a acudir a toda máquina en su
           auxilio.
         b: La obligación de prestar auxilio es independiente de la nacionalidad y
-          la condición jurídica de
+          la condición jurídica de dichas personas y de las circunstancias en que
+          hayan sido encontradas.
         c: Si no puede prestar auxilio, o si dadas las circunstancias especiales del
-          caso estima irrazonable o
+          caso estima irrazonable o innecesario hacerlo, anotará en el diario de navegación
+          la razón por la que no acudió a prestar auxilio.
         d: En caso de que acuda a toda máquina en su auxilio, informará de ello, si
-          es posible, a dichas
+          es posible, a dichas personas o al servicio de búsqueda y salvamento.
       question: Si el capitán de un buque recibe una señal de socorro que le indique
         que hay personas en peligro en el mar, ¿cuál de las siguientes afirmaciones
         es INCORRECTA?
@@ -155,7 +158,7 @@ categories:
         b: 50 metros.
         c: 200 metros.
         d: A aquella que a criterio del patrón se considere suficiente para garantizar
-          la seguridad del
+          la seguridad del buceador.
       question: Navegando con una embarcación para uso privado se divisa un dispositivo
         de balizamiento en superficie de un buceador, ¿a qué distancia mínima de seguridad
         deberemos mantenernos de esa zona de buceo?
@@ -170,11 +173,11 @@ categories:
         a: Tienen la boya cilíndrica, de castillete o espeque y la marca de tope cilíndrica
           roja.
         b: No se pueden utilizar para indicar la entrada de un canal, la aproximación
-          a un puerto o estuario,
+          a un puerto o estuario, o un punto de recalada.
         c: Tienen la boya esférica, de castillete o espeque y la marca de tope, si
-          la tiene, es una única esfera
+          la tiene, es una única esfera roja.
         d: Se utilizan para llamar la atención sobre una característica de un canal,
-          como una curva, una
+          como una curva, una bifurcación o el final de un banco de arena.
       question: 'Las Marcas de aguas navegables:'
     - category: 5
       category_name: Balizamiento
@@ -194,13 +197,15 @@ categories:
       id: 15
       options:
         a: Pueden ir con letras o numeradas y, también, pueden incluir el uso de un
-          pictograma para indicar
+          pictograma para indicar su finalidad, usando la simbología de la Organización
+          Hidrográfica Internacional (OIH), cuando proceda.
         b: Indican una zona o una configuración particular cuya naturaleza exacta
-          está indicada en la carta u
+          está indicada en la carta u otro documento náutico.
         c: También se pueden utilizar como una ayuda móvil a la navegación (MAtoN),
-          sujetándola a
+          sujetándola a objetos flotantes que pudieran suponer un peligro de colisión.
         d: Son de color amarillo y podrán llevar una marca de tope en forma de X,
-          preferiblemente
+          preferiblemente tridimensional, para ser visible en todas las direcciones
+          y, si tuvieran luz, esta será roja.
       question: En referencia a las Marcas especiales, ¿cuál de las siguientes afirmaciones
         es INCORRECTA?
     - category: 5
@@ -237,7 +242,7 @@ categories:
         a: Mantenernos apartados de la derrota del buque a barlovento.
         b: Seguir a rumbo, ya que será el buque a barlovento quién deberá maniobrar.
         c: Seguir a rumbo y realizar las señales correspondientes para avisar de nuestras
-          intenciones si fuera
+          intenciones si fuera necesario.
         d: Parar siempre nuestro buque hasta que el buque a barlovento quede en franquía.
       question: 'Conforme a la regla 12 del RIPA, cuando avistamos un buque de vela
         a barlovento pero no podemos determinar la banda por la que este recibe el
@@ -260,13 +265,14 @@ categories:
       id: 20
       options:
         a: De noche, el resplandor de las luces de tierra ilumina nuestro entorno
-          aumentando la capacidad
+          aumentando la capacidad de detección de las luces de navegación de otros
+          buques en las inmediaciones.
         b: Se deberá aumentar al máximo la velocidad en zonas de alta densidad de
-          tráfico para reducir el
+          tráfico para reducir el tiempo de exposición al riesgo.
         c: En ningún caso se hará uso del radar para determinar con exactitud la visibilidad
           existente.
         d: Se tendrá en cuenta la posibilidad de no detectar en el radar, a distancia
-          adecuada, buques
+          adecuada, buques pequeños, hielos y otros objetos flotantes.
       question: 'Navegando en un velero de 6 metros por un canal angosto, vemos aproximarse
         de vuelta encontrada a un portacontenedores de 100 metros de eslora. De acuerdo
         con la regla 9 del RIPA, “Canales angostos”, en general se deberá:'
@@ -291,11 +297,11 @@ categories:
       options:
         a: El buque que sigue a rumbo mantendrá siempre su rumbo y velocidad.
         b: El buque que cede el paso no está eximido, de acuerdo con esta regla, de
-          su obligación de
+          su obligación de mantenerse apartado de la derrota del otro.
         c: El buque que sigue a rumbo mantendrá siempre su rumbo, pero puede actuar
-          variando la
+          variando la velocidad para ayudar a evitar el abordaje.
         d: El buque que cede el paso mantendrá siempre su velocidad, y actuará cambiando
-          el rumbo para
+          el rumbo para ayudar a evitar el abordaje.
       question: De conformidad con la Regla 17 del RIPA, “Maniobra del buque que sigue
         a rumbo”, señale la afirmación CORRECTA.
     - category: 6
@@ -305,7 +311,7 @@ categories:
       options:
         a: Una luz blanca todo horizonte y una luz de alcance.
         b: Luces de costado, una luz de alcance y una luz de remolque en línea vertical
-          y por encima de la
+          y por encima de la luz de alcance.
         c: Luces de costado y una luz de alcance.
         d: Luces de costado y una luz blanca todo horizonte.
       question: Según la regla 24 del RIPA, “Buques remolcando y empujando”, ¿qué
@@ -317,11 +323,11 @@ categories:
       id: 24
       options:
         a: Deberá, en cualquier caso, utilizar las vías de circulación siguiendo la
-          dirección general de la
+          dirección general de la corriente de tráfico.
         b: Navegará exclusivamente por la zona de separación del tráfico para no estorbar
-          el tránsito de los
+          el tránsito de los buques mercantes.
         c: Quedará exento del cumplimiento de esta regla en la medida necesaria para
-          llevar a cabo dicha
+          llevar a cabo dicha operación.
         d: Deberá en cualquier caso utilizar la zona de navegación costera.
       question: 'Conforme a la Regla 10 del RIPA, “Dispositivos de separación del
         tráfico”, un buque con capacidad de maniobra restringida realizando labores
@@ -344,13 +350,14 @@ categories:
       id: 26
       options:
         a: De noche, el resplandor de las luces de tierra ilumina nuestro entorno
-          aumentando la capacidad
+          aumentando la capacidad de detección de las luces de navegación de otros
+          buques en las inmediaciones.
         b: Se deberá aumentar al máximo la velocidad en zonas de alta densidad de
-          tráfico para reducir el
+          tráfico para reducir el tiempo de exposición al riesgo.
         c: En ningún caso se hará uso del radar para determinar con exactitud la visibilidad
           existente.
         d: Se tendrá en cuenta la posibilidad de no detectar en el radar, a distancia
-          adecuada, buques
+          adecuada, buques pequeños, hielos y otros objetos flotantes.
       question: Conforme a la Regla 6 del RIPA, “Velocidad de seguridad”, ¿cuál de
         las siguientes afirmaciones es CORRECTA a la hora de determinar la velocidad
         de seguridad?
@@ -360,11 +367,13 @@ categories:
       id: 27
       options:
         a: Está fondeado y las luces que muestra son adecuadas, tanto por sus características,
-          número y su
+          número y su ubicación a bordo.
         b: Está fondeado y el número y las características de las luces que muestra
-          son las correctas, pero la
+          son las correctas, pero la de popa debería situarse a una altura superior
+          a la de proa.
         c: Está mostrando luces de fondeo que no se corresponden con su eslora, ya
-          que los de menos de
+          que los de menos de 100 metros exhibirán únicamente una luz blanca todo
+          horizonte en el lugar más visible.
         d: Está varado.
       question: 'Si un buque de 40 metros de eslora muestra únicamente una luz blanca
         todo horizonte en la parte de proa y otra luz blanca todo horizonte en la
@@ -411,7 +420,7 @@ categories:
         a: Dar pequeños sorbos de agua fresca.
         b: Llevar a un lugar fresco, seco y bien ventilado, para que le baje la temperatura.
         c: Acostar en horizontal, salvo si pierde el conocimiento; en este caso se
-          colocará en la posición
+          colocará en la posición lateral de seguridad.
         d: Quitar la ropa y aplicarle compresas de agua fría.
       question: 'En caso de un accidente a bordo que produzca una hemorragia interna,
         al afectado se le debe:'
@@ -446,11 +455,11 @@ categories:
       id: 33
       options:
         a: Magnitud física que caracteriza el movimiento aleatorio medio de las moléculas
-          de una sustancia
+          de una sustancia e informa del calor o energía térmica de la misma.
         b: Energía que pasa de un cuerpo a otro y que causa la dilatación y los cambios
           de estado de estos.
         c: Razón entre la variación del valor de una magnitud en dos puntos próximos
-          y la distancia que los
+          y la distancia que los separa.
         d: Energía ondulatoria o partículas materiales que se propagan a través del
           espacio.
       question: ¿Cuál es la definición de temperatura?
@@ -463,7 +472,7 @@ categories:
         b: Transmisiones radio en onda media y VHF por las Estaciones Radiocosteras.
         c: El sistema NAVTEX.
         d: El canal 69 de VHF comunicándose a través del servicio de meteorología
-          de la Autoridad
+          de la Autoridad Portuaria correspondiente en cualquier momento.
       question: ¿A través de cuál de las siguientes formas NO se puede obtener la
         previsión meteorológica?
     - category: 9
@@ -527,12 +536,12 @@ categories:
       id: 40
       options:
         a: De 0º a 180º, por cada banda, a partir de la proa, considerándose negativas
-          las tomadas por
+          las tomadas por estribor y positivas las tomadas por babor.
         b: De 0º a 360º desde la proa en sentido contrario a las agujas del reloj.
         c: De 0º a 180º, por cada banda, a partir de la proa, considerándose positivas
-          las tomadas por
+          las tomadas por estribor y negativas las tomadas por babor.
         d: De 0º a 360º desde la proa en el sentido de las agujas del reloj en cuyo
-          caso, su signo siempre
+          caso, su signo siempre será negativo al operar con ellas.
       question: 'Las marcaciones se miden:'
     - category: 10
       category_name: Teoría de la navegación

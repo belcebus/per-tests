@@ -31,11 +31,13 @@ categories:
       id: 3
       options:
         a: Válvula colocada por debajo de la línea de flotación, normalmente en el
-          fondo del barco, con el
+          fondo del barco, con el objeto de dar o cortar el paso de agua utilizada
+          para la refrigeración del motor y otros servicios.
         b: Parte trasera y descubierta de la embarcación donde suele ir alojada la
           tripulación.
         c: Agujero o registro en los costados de la embarcación para dar salida a
-          las aguas que se depositan
+          las aguas que se depositan en las respectivas cubiertas, y muy especialmente
+          a la que embarca el buque en los golpes de mar.
         d: Aperturas que permiten el acceso a un compartimento inferior.
       question: ¿Qué es un imbornal?
     - category: 1
@@ -85,7 +87,7 @@ categories:
         a: El balance es el movimiento de oscilación longitudinal del barco.
         b: La estabilidad longitudinal no depende de la posición del centro de carena.
         c: La estabilidad transversal depende de la posición relativa del centro de
-          carena y del centro de
+          carena y del centro de gravedad.
         d: Un fuerte movimiento de cabezada es consecuencia directa de la mala estabilidad
           transversal.
       question: En relación con la estabilidad, señale la afirmación CORRECTA.
@@ -109,7 +111,7 @@ categories:
         b: Informe al pasaje de que será obligatorio navegar con el chaleco salvavidas
           puesto.
         c: Salga al mar repitiendo su última travesía. Si no lo encuentra, solicite
-          ayuda a embarcaciones
+          ayuda a embarcaciones cercanas.
         d: Informe a Salvamento Marítimo para evitar la activación de una falsa alarma.
       question: Si detecta que ha perdido un aro salvavidas antes de zarpar, ¿cómo
         se recomienda actuar?
@@ -119,7 +121,7 @@ categories:
       id: 10
       options:
         a: No complemente las señales luminosas obligatorias llevando a bordo espejos,
-          lámparas de
+          lámparas de destellos y luces químicas, ya que podrían crear confusión.
         b: Debe almacenarlo en un lugar seco.
         c: Lea y aprenda de memoria las instrucciones de uso.
         d: Respete las fechas de caducidad.
@@ -181,12 +183,14 @@ categories:
       id: 15
       options:
         a: Dado que navegamos en contra del sentido convencional de balizamiento,
-          deberemos dejar la
+          deberemos dejar la boya por estribor ya que ésta es una Marca Lateral de
+          estribor.
         b: Dado que navegamos en el sentido convencional de balizamiento, deberemos
-          dejar la boya por
+          dejar la boya por babor ya que ésta es una Marca Lateral de babor.
         c: Deberemos alejarnos de dicha Marca ya que indica un peligro aislado.
         d: Deberemos consultar la carta náutica para saber si nos queremos dirigir
-          al canal principal o al
+          al canal principal o al secundario ya que ésta Marca indica el punto de
+          bifurcación del canal principal a babor.
       question: Navegando de entrada en Puerto Sherry, avistamos por proa una boya
         cilíndrica roja, ¿cuál sería la manera correcta de maniobrar?
     - category: 5
@@ -198,7 +202,7 @@ categories:
         b: Generalmente no están destinadas a señalar canales u obstrucciones.
         c: Pueden utilizarse para indicar la aproximación a un puerto o estuario.
         d: Cuando la visibilidad no sea buena, los ritmos de las luces amarillas serán
-          distintos a los
+          distintos a los empleados en las luces blancas.
       question: ¿Cuál de las siguientes afirmaciones sobre Marcas Especiales es INCORRECTA?
     - category: 5
       category_name: Balizamiento
@@ -206,12 +210,12 @@ categories:
       id: 17
       options:
         a: La Marca de Peligro Aislado, se colocará encima, amarrada, o próxima a
-          un peligro, que esté
+          un peligro, que esté rodeado, por todas partes, de aguas navegables.
         b: Su marca de tope es una esfera negra.
         c: La Marca de Peligro Aislado se colocará encima, amarrada, o próxima a aguas
-          navegables, que
+          navegables, que estén próximas, en alguna dirección, a algún peligro aislado.
         d: Sobre su numeración o rotulación, no podrán utilizarse números o letras
-          para identificar dichas
+          para identificar dichas marcas de Peligro Aislado.
       question: En relación con las Marcas de Peligro Aislado, indique cuál de las
         siguientes afirmaciones es CORRECTA.
   6:
@@ -223,13 +227,17 @@ categories:
       id: 18
       options:
         a: Dos luces todo horizonte en línea vertical, blanca la superior y verde
-          la inferior, una luz de tope a
+          la inferior, una luz de tope a popa y más elevada que la luz verde todo
+          horizonte.
         b: Dos luces todo horizonte en línea vertical, blanca la superior y roja la
-          inferior, una luz de tope a
+          inferior, una luz de tope a popa y más elevada que la luz verde todo horizonte,
+          además de las luces de costado y una luz de alcance.
         c: Dos luces todo horizonte en línea vertical, roja la superior y blanca la
-          inferior, una luz blanca
+          inferior, una luz blanca todo horizonte en la dirección del aparejo, además
+          de las luces de costado y una luz de alcance.
         d: Dos luces todo horizonte en línea vertical, verde la superior y blanca
-          la inferior, una luz blanca
+          la inferior, una luz blanca todo horizonte en la dirección del aparejo,
+          además de las luces de costado y una luz de alcance.
       question: Según la regla 26 del RIPA, “Buques de pesca”, ¿qué luces exhibirá
         de noche un buque dedicado a la pesca, que NO sea de arrastre, que vaya con
         arrancada, cuando el aparejo largado se extienda más de 150 metros medidos
@@ -240,12 +248,13 @@ categories:
       id: 19
       options:
         a: Las Reglas relativas a las luces deberán cumplirse únicamente desde la
-          puesta del sol hasta su
+          puesta del sol hasta su salida.
         b: Las Reglas relativas a las marcas deberán cumplirse tanto de día como de
           noche.
         c: Las Reglas de esta Parte deberán cumplirse en todas las condiciones meteorológicas.
         d: Las luces preceptuadas por estas Reglas podrán no exhibirse desde la salida
-          hasta la puesta del
+          hasta la puesta del sol aunque haya visibilidad reducida, si el patrón no
+          lo considera necesario.
       question: De acuerdo con la Regla 20 del RIPA, “Ámbito de aplicación” de la
         Parte C. Luces y Marcas, señale la afirmación CORRECTA.
     - category: 6
@@ -302,9 +311,9 @@ categories:
       options:
         a: Podrá usar la zona de navegación costera.
         b: Deberá en cualquier caso utilizar las vías de circulación siguiendo la
-          dirección general de la
+          dirección general de la corriente de tráfico.
         c: Navegará exclusivamente por la zona de separación del tráfico para no estorbar
-          el tránsito de los
+          el tránsito de los buques mercantes.
         d: En caso de necesidad de cruce del dispositivo, deberá hacerlo siguiendo
           un rumbo que en la
       question: 'Conforme a la Regla 10 del RIPA, “Dispositivos de separación del
@@ -326,13 +335,15 @@ categories:
       id: 26
       options:
         a: Mantenernos a rumbo ya que en ningún caso debemos maniobrar por tener preferencia
-          frente a un
+          frente a un buque dedicado a la pesca.
         b: Aumentar la velocidad ligeramente para tratar de propiciar que la otra
-          embarcación haga la
+          embarcación haga la maniobra ante el posible peligro de abordaje, y así
+          evitar un cambio de rumbo en nuestra derrota.
         c: Si las circunstancias del caso lo permiten, realizar cambios de rumbo y
-          velocidad amplios que
+          velocidad amplios que sean fácilmente percibidos por la otra embarcación.
         d: Cambiar de rumbo ligeramente para desviar nuestra derrota lo menos posible
-          y, ante todo, nunca
+          y, ante todo, nunca suprimir la arrancada ya que una disminución de la velocidad
+          siempre se traduce en una pérdida de capacidad de maniobra.
       question: 'Navegando a vela cerca de la Isla de Tambo, nos vemos envueltos en
         una posible situación de riesgo de abordaje al aproximarse una embarcación
         dedicada a la pesca. Conforme a la Regla 8 del RIPA, “maniobras para evitar
@@ -396,10 +407,10 @@ categories:
       options:
         a: Únicamente se podrá solicitar por el Canal 70 de VHF.
         b: Está disponible todos los días del año, solamente entre las 6:00 y las
-          00:00 horas (hora de
+          00:00 horas (hora de Madrid).
         c: Es gratuita y se realiza en español e inglés.
         d: Se recomienda realizar las consultas no urgentes o de control entre las
-          9:00 y las 15:00 horas
+          9:00 y las 15:00 horas (hora de Madrid).
       question: En relación con la asistencia médica de urgencia a distancia del servicio
         Centro Radio-Médico Español, ¿cuál de las siguientes afirmaciones es CORRECTA?
     - category: 8
@@ -410,7 +421,7 @@ categories:
         a: No se deben trasladar pesos para cambiar el asiento.
         b: Es de ayuda esperar al mejor momento de la marea, si la hay.
         c: En ningún caso se balanceará el barco para que se despegue del fondo ya
-          que el fango hace de
+          que el fango hace de ventosa.
         d: Siempre será necesario el servicio de un remolcador, ya que el fango hace
           de ventosa.
       question: 'En relación con el reflote de una embarcación de recreo varada en
@@ -426,9 +437,9 @@ categories:
         a: Es un viento o brisa nocturna de tierra a mar.
         b: Es un viento o brisa diurna de tierra a mar.
         c: Se produce por cambios súbitos en la temperatura de la superficie terrestre
-          debido a fenómenos
+          debido a fenómenos meteorológicos puntuales y no periódicos.
         d: Se produce por cambios súbitos en la temperatura de la superficie del mar
-          debido a fenómenos
+          debido a fenómenos meteorológicos puntuales y no periódicos.
       question: 'El terral:'
     - category: 9
       category_name: Meteorología
@@ -437,7 +448,7 @@ categories:
       options:
         a: Las condiciones meteorológicas mejorarán a lo largo del día.
         b: Aumentará la fuerza del viento de componente sur en el hemisferio Sur y
-          de componente norte en
+          de componente norte en el hemisferio Norte.
         c: Empeorarán las condiciones meteorológicas.
         d: Aumentará la temperatura y bajará el viento.
       question: 'Durante la navegación observamos en el barómetro una bajada lenta
@@ -464,7 +475,7 @@ categories:
           un tiempo suficiente.
         c: Un cese momentáneo del viento.
         d: La extensión o alcance que tiene el viento sobre la mar cuando sopla con
-          una dirección y fuerza
+          una dirección y fuerza constantes.
       question: 'El fetch es:'
   10:
     name: Teoría de la navegación
@@ -508,7 +519,7 @@ categories:
         b: Los momentos en que tienen lugar dos bajamares consecutivas.
         c: Los momentos en que tienen lugar dos pleamares consecutivas.
         d: La hora en que la altura de marea se encuentra en el cero hidrográfico
-          y la hora en que se alcanza
+          y la hora en que se alcanza la bajamar escorada.
       question: 'La duración de la marea es el tiempo transcurrido entre:'
     - category: 10
       category_name: Teoría de la navegación
