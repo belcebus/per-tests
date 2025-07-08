@@ -403,14 +403,7 @@ function showQuestion(index) {
         option.addEventListener('click', () => selectOption(option));
     });
     
-    // Mostrar respuesta previa si existe
-    const previousAnswer = userAnswers[question.id];
-    if (previousAnswer) {
-        const selectedOption = document.querySelector(`[data-value="${previousAnswer}"]`);
-        if (selectedOption) {
-            selectOption(selectedOption);
-        }
-    }
+    // No mostrar respuestas previas - cada pregunta debe aparecer limpia
     
     // Actualizar botones de navegación
     updateNavigationButtons(index);
