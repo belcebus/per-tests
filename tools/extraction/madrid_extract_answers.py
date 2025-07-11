@@ -5,51 +5,9 @@ Script para extraer respuestas del PDF de respuestas oficiales usando OCR
 PROPÓSITO:
 Este script procesa el PDF de respuestas oficiales y extrae las respuestas correctas 
 usando OCR (Reconocimiento Óptico de Caracteres).
-
-ESTRUCTURA DEL PDF:
-- Cada página contiene respuestas de un tipo de examen específico
-- Al inicio de cada página se indica el tipo de examen y modelo
-- Las respuestas están numeradas consecutivamente (1, 2, 3, ...)
-- Los valores válidos son: a, b, c, d, o "ANULADA"
-
-TIPOS DE EXAMEN SOPORTADOS:
-- PER: Patrón de Embarcación de Recreo
-- PATRON_YATE: Patrón de Yate  
-- CAPITAN_YATE: Capitán de Yate
-- LICENCIA_NAVEGACION: Licencia de Navegación
-
-IMPORTANTE - RUTA DEL PDF OBLIGATORIA:
-El script requiere que especifiques la ruta completa al archivo PDF de respuestas.
-No hay autodescubrimiento automático para evitar confusiones cuando hay múltiples PDFs.
-
-INFORMACIÓN EXTRAÍDA DEL NOMBRE DEL ARCHIVO:
-Del nombre del archivo PDF se extrae automáticamente:
-- Comunidad (ej: madrid)
-- Año (ej: 2025)
-- Convocatoria (ej: abril)
-Patrón esperado: comunidad-año-convocatoria.pdf
-
-EJEMPLOS DE USO:
-# Extraer respuestas de un examen específico
-python madrid_extract_answers.py --pdf-path "data/raw/answers/madrid-2025-abril.pdf" --exam-type PER --test-model TEST02
-
-# Extraer todas las respuestas de todos los exámenes del PDF
-python madrid_extract_answers.py --pdf-path "data/raw/answers/madrid-2024-noviembre.pdf"
-
-# Extraer respuestas de un tipo específico
-python madrid_extract_answers.py --pdf-path "data/raw/answers/madrid-2025-abril.pdf" --exam-type PER
-
-PARÁMETROS:
---pdf-path: Ruta al archivo PDF (OBLIGATORIO)
---exam-type: Tipo de examen a extraer (PER, PATRON_YATE, CAPITAN_YATE, LICENCIA_NAVEGACION)
---test-model: Modelo específico del test (TEST01, TEST02, etc.)
---output-dir: Directorio de salida (por defecto: extracted_answers)
-
-SALIDA:
-- extracted_answers/: Directorio con archivos de texto por página
-- extracted_answers/[exam_type]_[test_model]_answers.json: Respuestas específicas
-- extracted_answers/exam_answers_complete.json: Todas las respuestas extraídas
 """
+print("🚀 Iniciando script de extracción de respuestas...")
+print("📋 Verificando imports...")
 
 # OPTIMIZACIONES APLICADAS:
 # - DPI aumentado a 600 para mejor calidad OCR
@@ -68,12 +26,34 @@ import sys
 import os
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
+import cv2
+
+# OCR engines adicionales
+try:
+    import easyocr
+    EASYOCR_AVAILABLE = False  # Temporalmente deshabilitado para estabilidad
+    print("⚠️  EasyOCR temporalmente deshabilitado")
+except ImportError:
+    EASYOCR_AVAILABLE = False
+    print("⚠️  EasyOCR no disponible (pip install easyocr)")
+
+try:
+    from paddleocr import PaddleOCR
+    PADDLEOCR_AVAILABLE = False  # Temporalmente deshabilitado para estabilidad
+    print("⚠️  PaddleOCR temporalmente deshabilitado")
+except ImportError:
+    PADDLEOCR_AVAILABLE = False
+    print("⚠️  PaddleOCR no disponible (pip install paddlepaddle paddleocr)")
 
 # Añadir el directorio del proyecto al path para importaciones
+print("📂 Configurando path del proyecto...")
 project_root = Path(__file__).parent.parent.parent
 sys.path.append(str(project_root))
 
+print("⚙️  Importando configuración...")
 from config.settings import settings
+
+print("✅ Imports completados correctamente")
 
 class PDFAnswerExtractor:
     """
@@ -82,16 +62,21 @@ class PDFAnswerExtractor:
     
     def __init__(self, pdf_path: str, output_dir: str = None, 
                  target_exam_type: Optional[str] = None, target_test_model: Optional[str] = None):
+        print("🔧 Inicializando PDFAnswerExtractor...")
+        
         # La ruta del PDF es obligatoria
         if pdf_path is None:
             raise ValueError("La ruta del archivo PDF es obligatoria. Use --pdf-path para especificarla.")
             
         self.pdf_path = Path(pdf_path)
+        print(f"📄 PDF path configurado: {self.pdf_path}")
         
         # Verificar que el archivo PDF existe
         if not self.pdf_path.exists():
             raise FileNotFoundError(f"El archivo PDF no existe: {self.pdf_path}")
             
+        print("✅ PDF existe")
+        
         if output_dir is None:
             # Usar directorio configurado para archivos extraídos
             output_dir = settings.get_extracted_path()
@@ -100,55 +85,65 @@ class PDFAnswerExtractor:
             
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(exist_ok=True)
+        print(f"📁 Directorio salida configurado: {self.output_dir}")
         
         # Filtros específicos
         self.target_exam_type = target_exam_type
         self.target_test_model = target_test_model
         
         # Extraer información del PDF para generar nombres de archivo
+        print("📋 Extrayendo información del PDF...")
         self.pdf_info = self._extract_pdf_info_from_name()
         
         print(f"📄 Usando archivo PDF: {self.pdf_path}")
         print(f"📁 Directorio salida: {self.output_dir}")
         
-        # Patrones para detectar tipos de examen (mejorados para OCR)
+        # Patrones para detectar tipos de examen (simplificados y robustos)
+        print("🔍 Configurando patrones de detección...")
         self.exam_patterns = {
             'PER': [
                 r'PATRÓN DE EMBARCACIONES DE RECREO',
                 r'PATRON DE EMBARCACIONES DE RECREO',
                 r'EMBARCACIONES DE RECREO',
                 r'PER',
-                # Patrones más flexibles para OCR problemático
-                r'(?:aa)?(?:AND|ANG|ANB).*(?:AANDC|AANDA|AND)',  # Para "aaANDCAANDA" type patterns
-                r'Cd{1,2}0{1,2}[dl]0{1,2}[1-4]',  # Para "Cdd01", "Cd001", etc.
-                r'(?:Cc|C){1,2}[d]{1,2}0{1,2}[dl]0{1,2}[1-4]',  # Variaciones OCR del código
-                # Patrones específicos para errores severos de OCR (como aaANDANDBACACNDC)
-                r'(?:aa)?(?:AND|ANG|ANB|ANC)(?:AND|ANG|ANB|ANC)?(?:B|D|C)?(?:A|B|C|D)(?:C|A|B|D)(?:A|B|C|D)(?:C|N|M)(?:D|B|A)(?:C|D|A)',
-                r'(?:aa)?(?:AND){1,2}(?:BAC|DAC|CAC|BAD)(?:AC|AD|AB)(?:NDC|CDC|NDA)',  # Específico para "aaANDANDBACACNDC"
+                r'RESPUESTAS.*PER',
+                r'EXAMEN.*PER',
             ],
             'PATRON_YATE': [
                 r'PATRÓN DE YATE',
-                r'PATRON DE YATE'
+                r'PATRON DE YATE',
+                r'RESPUESTAS.*YATE',
+                r'EXAMEN.*YATE',
             ],
             'CAPITAN_YATE': [
                 r'CAPITÁN DE YATE',
-                r'CAPITAN DE YATE'
+                r'CAPITAN DE YATE',
+                r'RESPUESTAS.*CAPITAN',
+                r'EXAMEN.*CAPITAN',
             ],
             'LICENCIA_NAVEGACION': [
                 r'LICENCIA DE NAVEGACIÓN',
-                r'LICENCIA DE NAVEGACION'
+                r'LICENCIA DE NAVEGACION',
+                r'RESPUESTAS.*LICENCIA',
+                r'EXAMEN.*LICENCIA',
             ]
         }
-        
-        # Patrones para detectar modelos de test (mejorados)
+
+        # Patrones para detectar modelos de test (simplificados)
         self.test_patterns = [
             r'CÓDIGO DE TEST\s*(\d+)',
             r'CODIGO DE TEST\s*(\d+)',
             r'TEST\s*(\d+)',
-            r'Cdd(\d+)',  # Patrón específico que aparece en el OCR
-            r'Cd0?d0?(\d+)',  # Variaciones del patrón Cdd01
-            r'(?:Cc|C){1,2}[d]{1,2}0{1,2}[dl]0{1,2}([1-4])',  # Patrones OCR más flexibles
+            r'MODELO\s*(\d+)',
+            r'Cdd(\d+)',  # Patrón específico común en OCR
+            r'C[a-z]*(\d+)',  # Patrones C seguido de números
+            r'(\d+)(?=\s*$)',  # Dígito aislado al final de línea
         ]
+        
+        # Inicializar engines de OCR adicionales
+        print("🤖 Inicializando engines de OCR...")
+        self._init_ocr_engines()
+        print("✅ Inicialización completada")
     
     def _extract_pdf_info_from_name(self) -> dict:
         """
@@ -197,55 +192,119 @@ class PDFAnswerExtractor:
 
     def enhance_image_for_ocr(self, image: Image.Image) -> Image.Image:
         """
-        Mejora la imagen para obtener máxima precisión en el OCR con técnicas avanzadas
-        Prioriza calidad sobre recursos de procesamiento
+        Mejora avanzada de imagen para OCR con múltiples técnicas optimizadas
         """
-        import cv2
-        import numpy as np
-        from PIL import ImageOps
+        print(f"   🔍 Mejorando imagen para OCR...")
         
         # Convertir a escala de grises si no lo está
         if image.mode != 'L':
             image = image.convert('L')
         
-        # 1. Redimensionado optimizado para máxima calidad
+        # 1. Redimensionar para resolución óptima (manteniendo aspecto original)
         width, height = image.size
-        if width < 4500:  # Umbral optimizado para calidad y rendimiento
-            scale_factor = 4500 / width  # Factor de escala balanceado
+        target_width = 10000  # Resolución muy alta para OCR
+        scale_factor = target_width / width
+        if scale_factor > 1:  # Solo ampliar si es necesario
             new_width = int(width * scale_factor)
             new_height = int(height * scale_factor)
             image = image.resize((new_width, new_height), Image.Resampling.LANCZOS)
-            print(f"   🔍 Imagen redimensionada a {new_width}x{new_height} para máxima calidad OCR")
+            print(f"   📐 Redimensionado a {new_width}x{new_height} para máxima resolución")
         
-        # 2. Convertir a numpy array para procesamiento avanzado con OpenCV
+        # 2. Convertir a numpy para procesamiento avanzado con OpenCV
         img_array = np.array(image)
         
-        # 3. Aplicar filtros de suavizado para reducir artefactos
+        # 3. Técnicas avanzadas de preprocesamiento
+        # Eliminación de ruido preservando texto
         img_array = cv2.medianBlur(img_array, 3)
         img_array = cv2.GaussianBlur(img_array, (3, 3), 0)
         
-        # 4. Mejora de contraste adaptativa con CLAHE
+        # 4. Mejora de contraste adaptativa (CLAHE)
         clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
         img_array = clahe.apply(img_array)
         
-        # 5. Sin binarización - mejor resultado según pruebas OCR
-        # Mantener la imagen procesada sin binarización adicional
-        print(f"   🎯 Usando procesamiento sin binarización (configuración óptima)")
+        # 5. NO ROTAR - mantener imagen completamente recta
+        print(f"   📐 Manteniendo imagen original sin rotación")
         
-        # 10. Convertir de vuelta a PIL Image
+        # 6. Morfología suave para limpiar caracteres
+        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1, 1))
+        img_array = cv2.morphologyEx(img_array, cv2.MORPH_CLOSE, kernel)
+        
+        # 7. Múltiples métodos de binarización y selección automática
+        methods = {}
+        
+        # Método 1: Binarización adaptativa Gaussiana
+        methods['adaptive_gaussian'] = cv2.adaptiveThreshold(
+            img_array, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2
+        )
+        
+        # Método 2: Binarización adaptativa de media
+        methods['adaptive_mean'] = cv2.adaptiveThreshold(
+            img_array, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2
+        )
+        
+        # Método 3: Otsu
+        _, methods['otsu'] = cv2.threshold(img_array, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        
+        # Método 4: Escala de grises mejorada (sin binarizar)
+        methods['enhanced_gray'] = cv2.convertScaleAbs(img_array, alpha=1.5, beta=20)
+        
+        # Seleccionar el mejor método basado en análisis de contenido
+        best_method = self._select_best_binarization(methods, img_array)
+        img_array = methods[best_method]
+        print(f"   🎯 Usando método: {best_method}")
+        
+        # 8. Conversión final a PIL
         image = Image.fromarray(img_array)
         
-        # 11. Aplicar mejoras adicionales con PIL
-        # Contraste final (aumentado para mejor OCR)
-        enhancer = ImageEnhance.Contrast(image)
-        image = enhancer.enhance(2.2)  # Optimizado a 2.2 según pruebas OCR
+        # 9. Ajustes finales de calidad
+        if best_method == 'enhanced_gray':
+            # Solo para escala de grises, aplicar mejoras adicionales
+            enhancer = ImageEnhance.Contrast(image)
+            image = enhancer.enhance(1.3)
+            
+            enhancer = ImageEnhance.Sharpness(image)
+            image = enhancer.enhance(1.2)
         
-        # Nitidez final (aumentada para mejor definición)
-        enhancer = ImageEnhance.Sharpness(image)
-        image = enhancer.enhance(3.2)  # Optimizado a 3.2 según pruebas OCR
-        
-        print(f"   ✅ Imagen procesada con técnicas avanzadas para OCR de máxima calidad")
+        print(f"   ✅ Imagen optimizada para OCR de máxima calidad")
         return image
+    
+    def _select_best_binarization(self, methods: dict, original: np.ndarray) -> str:
+        """
+        Selecciona automáticamente el mejor método de binarización
+        """
+        scores = {}
+        
+        for method_name, image in methods.items():
+            score = 0
+            
+            # Criterio 1: Porcentaje de píxeles de texto (debe estar en rango razonable)
+            if method_name != 'enhanced_gray':
+                text_ratio = np.sum(image == 0) / image.size
+                if 0.05 <= text_ratio <= 0.25:  # Rango óptimo para texto
+                    score += 30
+                elif 0.03 <= text_ratio <= 0.35:  # Rango aceptable
+                    score += 15
+            else:
+                score += 25  # Bonificación por mantener información completa
+            
+            # Criterio 2: Preservación de bordes
+            edges = cv2.Canny(image if method_name != 'enhanced_gray' else original, 50, 150)
+            edge_density = np.sum(edges > 0) / edges.size
+            if 0.01 <= edge_density <= 0.1:
+                score += 20
+            
+            # Criterio 3: Uniformidad (evitar exceso de ruido)
+            if method_name != 'enhanced_gray':
+                # Para imágenes binarias, verificar que no haya demasiado ruido
+                contours, _ = cv2.findContours(255 - image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+                if len(contours) < image.size * 0.01:  # No demasiados contornos pequeños
+                    score += 15
+            
+            scores[method_name] = score
+        
+        # Retornar el método con mejor puntuación
+        best = max(scores.items(), key=lambda x: x[1])
+        return best[0]
     
     def extract_text_from_pdf(self) -> List[str]:
         """
@@ -266,116 +325,40 @@ class PDFAnswerExtractor:
         for i, image in enumerate(images):
             print(f"🔍 Procesando página {i+1}/{len(images)}...")
             
+            # Guardar imagen original para comparación
+            original_file = self.output_dir / f"page_{i+1}_original.png"
+            image.save(original_file, 'PNG', optimize=True, quality=95)
+            print(f"   📸 Imagen original guardada: {original_file}")
+            
             # Mejorar imagen para OCR
             enhanced_image = self.enhance_image_for_ocr(image)
             
-            # Aplicar OCR con múltiples configuraciones especializadas
+            # Aplicar OCR con múltiples engines
             try:
-                # Configuración 1: General para texto completo
-                config_general = '--oem 3 --psm 6'
-                text_general = pytesseract.image_to_string(
-                    enhanced_image,
-                    lang='spa+eng',
-                    config=config_general
-                )
+                print(f"   🤖 Aplicando OCR con múltiples engines especializados...")
                 
-                # Configuración 2: Específica para números y respuestas
-                config_specific = '--oem 3 --psm 6 -c tessedit_char_whitelist=0123456789ABCDabcdANULADA.():=- '
-                text_specific = pytesseract.image_to_string(
-                    enhanced_image,
-                    lang='spa+eng', 
-                    config=config_specific
-                )
+                # Usar el nuevo sistema multi-engine
+                extracted_text = self.extract_text_multi_engine(enhanced_image)
                 
-                # Configuración 3: Optimizada para líneas individuales
-                config_lines = '--oem 3 --psm 13 -c tessedit_char_whitelist=0123456789ABCDabcd.():=- '
-                text_lines = pytesseract.image_to_string(
-                    enhanced_image,
-                    lang='spa+eng',
-                    config=config_lines
-                )
+                extracted_texts.append(extracted_text)
                 
-                # Configuración 4: Muy específica para números (problemas como 41→4)
-                config_numbers = '--oem 3 --psm 8 -c tessedit_char_whitelist=0123456789ABCDabcd'
-                text_numbers = pytesseract.image_to_string(
-                    enhanced_image,
-                    lang='eng',
-                    config=config_numbers
-                )
+                # Guardar imagen procesada para análisis
+                image_file = self.output_dir / f"page_{i+1}_processed.png"
+                enhanced_image.save(image_file, 'PNG', optimize=True, quality=95)
+                print(f"   🖼️  Imagen procesada guardada: {image_file}")
                 
-                # Configuración 5: Para encabezados y texto completo (más permisiva)
-                config_headers = '--oem 3 --psm 4'
-                text_headers = pytesseract.image_to_string(
-                    enhanced_image,
-                    lang='spa+eng',
-                    config=config_headers
-                )
-                
-                # Configuración 6: Bloques de texto completo con motor LSTM
-                config_lstm = '--oem 1 --psm 6'
-                text_lstm = pytesseract.image_to_string(
-                    enhanced_image,
-                    lang='spa+eng',
-                    config=config_lstm
-                )
-                
-                # Evaluar cada configuración basándose en diferentes criterios
-                candidates = []
-                
-                # Contar patrones de respuesta (formato: número + letra)
-                pattern_answers = r'\d+\s*[ABCDabcd]'
-                
-                # Contar palabras clave de encabezados
-                header_keywords = ['EXAMEN', 'RESPUESTAS', 'MADRID', 'PER', 'PATRON', 'CAPITAN', 'YATE', 'TEST']
-                
-                for config_name, text in [
-                    ('general', text_general),
-                    ('specific', text_specific), 
-                    ('lines', text_lines),
-                    ('numbers', text_numbers),
-                    ('headers', text_headers),
-                    ('lstm', text_lstm)
-                ]:
-                    answer_count = len(re.findall(pattern_answers, text))
-                    header_count = sum(1 for keyword in header_keywords if keyword in text.upper())
-                    
-                    # Puntuación combinada: priorizamos respuestas pero también encabezados
-                    score = answer_count * 2 + header_count
-                    
-                    candidates.append((config_name, text, answer_count, header_count, score))
-                
-                # Seleccionar la mejor configuración
-                best_config, text, answer_count, header_count, best_score = max(candidates, key=lambda x: x[4])
-                
-                print(f"   🎯 Mejor configuración: {best_config} (respuestas: {answer_count}, encabezados: {header_count}, puntuación: {best_score})")
-                
-                # Si ninguna configuración detectó respuestas, usar la que detectó más encabezados
-                if answer_count == 0:
-                    header_candidates = [(name, txt, h_count) for name, txt, a_count, h_count, score in candidates if h_count > 0]
-                    if header_candidates:
-                        best_config, text, header_count = max(header_candidates, key=lambda x: x[2])
-                        print(f"   📋 Configuración alternativa por encabezados: {best_config} (encabezados: {header_count})")
-                
-                # Si aún no hay resultados útiles, usar la configuración general
-                if answer_count == 0 and header_count == 0:
-                    text = text_general
-                    best_config = 'general'
-                    print(f"   ⚠️  Usando configuración general como respaldo")
-                
-                if answer_count > 0:
-                    print(f"   ✅ Mejor resultado con configuración '{best_config}': {answer_count} respuestas detectadas")
-                else:
-                    print(f"   ⚠️  No se detectaron respuestas claras, usando resultado general")
-                
-                extracted_texts.append(text)
+                # Mostrar resumen del texto extraído
+                lines = extracted_text.strip().split('\n')
+                answer_pattern = r'\d+\s*[ABCDabcd]'
+                answer_count = len(re.findall(answer_pattern, extracted_text, re.IGNORECASE))
+                print(f"   � Texto extraído: {len(extracted_text)} caracteres, {answer_count} respuestas detectadas")
+                print(f"   🖼️  Imagen procesada guardada: {image_file}")
                 
                 # Guardar texto extraído para revisión
                 text_file = self.output_dir / f"page_{i+1}_text.txt"
                 with open(text_file, 'w', encoding='utf-8') as f:
                     f.write(f"=== PÁGINA {i+1} ===\n\n")
-                    f.write(text)
-                
-                print(f"   📝 Texto extraído: {len(text)} caracteres")
+                    f.write(extracted_text)
                 
             except Exception as e:
                 print(f"   ❌ Error en OCR página {i+1}: {e}")
@@ -386,71 +369,57 @@ class PDFAnswerExtractor:
     def detect_exam_info(self, text: str) -> Tuple[Optional[str], Optional[str]]:
         """
         Detecta el tipo de examen y modelo en el texto de una página
+        Enfoque simplificado basado en palabras clave claras
         """
         text_upper = text.upper()
         
-        # Primero verificar si hay exclusiones (exámenes que NO son PER aunque lo parezcan)
-        exclusion_patterns = [
-            r'CON PNB LIBERADO',
-            r'PNB LIBERADO',
-            r'LIBERADO',
-        ]
-        
-        for exclusion_pattern in exclusion_patterns:
-            if re.search(exclusion_pattern, text_upper):
-                print(f"   🚫 Página excluida por patrón: {exclusion_pattern}")
-                return None, None
-        
-        # Detectar tipo de examen
+        # Detectar tipo de examen con patrones simples y claros
         exam_type = None
         for exam, patterns in self.exam_patterns.items():
             for pattern in patterns:
                 if re.search(pattern, text_upper):
                     exam_type = exam
+                    print(f"   � Tipo detectado: {exam_type} (patrón: {pattern})")
                     break
             if exam_type:
                 break
         
-        # Detectar modelo de test con lógica mejorada
-        test_model = None
+        # Si no se detectó tipo pero hay respuestas numeradas, asumir PER como fallback
+        if not exam_type:
+            answer_pattern = r'\d+\s*[ABCDabcd]'
+            answer_count = len(re.findall(answer_pattern, text))
+            if answer_count >= 10:  # Si hay muchas respuestas, probablemente es PER
+                exam_type = 'PER'
+                print(f"   📂 Tipo inferido: PER (por {answer_count} respuestas encontradas)")
         
-        # Primero intentar con patrones específicos
+        # Detectar modelo de test
+        test_model = None
         for pattern in self.test_patterns:
             match = re.search(pattern, text_upper)
             if match:
                 try:
                     test_num = int(match.group(1))
-                    test_model = f"TEST{test_num:02d}"
-                    break
+                    if 1 <= test_num <= 10:  # Validar rango razonable
+                        test_model = f"TEST{test_num:02d}"
+                        print(f"   🔖 Modelo detectado: {test_model} (patrón: {pattern})")
+                        break
                 except (ValueError, IndexError):
                     continue
         
-        # Si no se encontró modelo específico, inferir por contexto
-        if not test_model and exam_type == 'PER':
-            # Lógica de inferencia basada en patrones comunes del contenido
-            # Si contiene "Cdd01" o similar, probablemente es TEST01
-            if re.search(r'Cd{1,2}0{1,2}[dl]0{1,2}1', text_upper):
-                test_model = "TEST01"
-            # Si contiene "Cdd02" o similar, probablemente es TEST02  
-            elif re.search(r'Cd{1,2}0{1,2}[dl]0{1,2}2', text_upper):
-                test_model = "TEST02"
-            # Si contiene "Cdd03" o similar, probablemente es TEST03
-            elif re.search(r'Cd{1,2}0{1,2}[dl]0{1,2}3', text_upper):
-                test_model = "TEST03"
-            # Estrategia de inferencia por posición de página (basada en experiencia previa)
-            else:
-                # Analizar el contenido de las respuestas para hacer inferencia más inteligente
-                lines = text.split('\n')
-                response_count = 0
-                for line in lines:
-                    if re.search(r'\d+\s*[ABCDabcd]', line):
-                        response_count += 1
-                
-                # Si hay muchas respuestas y patrones específicos, puede ser TEST01
-                if response_count >= 40:  # La mayoría de respuestas están presentes
-                    # Buscar patrones específicos que sugieran TEST01
-                    if re.search(r'(?:aa)?(?:AND|ANG|ANB).*(?:AANDC|AANDA|AND)', text_upper):
-                        test_model = "TEST01"
+        # Si no se encontró modelo específico, intentar inferir por posición o contexto
+        if not test_model and exam_type:
+            # Buscar dígitos aislados que podrían ser el número del test
+            isolated_numbers = re.findall(r'\b([1-4])\b', text_upper)
+            if isolated_numbers:
+                # Usar el primer número válido encontrado
+                test_num = int(isolated_numbers[0])
+                test_model = f"TEST{test_num:02d}"
+                print(f"   🔖 Modelo inferido: {test_model} (número aislado)")
+        
+        if exam_type:
+            print(f"   ✅ Información detectada: {exam_type}" + (f" {test_model}" if test_model else ""))
+        else:
+            print(f"   ⚠️  No se pudo detectar el tipo de examen")
         
         return exam_type, test_model
     
@@ -497,7 +466,8 @@ class PDFAnswerExtractor:
                 for match in matches:
                     try:
                         question_num = int(match.group(1))
-                        answer = match.group(2).lower()
+                        raw_answer = match.group(2)
+                        answer = self._fix_ocr_answer(raw_answer)
                         
                         # Validar que es una respuesta válida y número en rango correcto
                         if answer in ['a', 'b', 'c', 'd'] and 1 <= question_num <= 45:
@@ -506,7 +476,10 @@ class PDFAnswerExtractor:
                                 answers[question_num] = answer
                                 last_valid_question = question_num
                                 expected_next_question = max(expected_next_question, question_num + 1)
-                                print(f"   ✅ Pregunta {question_num}: {answer.upper()}")
+                                if raw_answer != answer:
+                                    print(f"   ✅ Pregunta {question_num}: {answer.upper()} (corregido de '{raw_answer}')")
+                                else:
+                                    print(f"   ✅ Pregunta {question_num}: {answer.upper()}")
                                 found_answer = True
                         elif question_num > 45:
                             print(f"   ⚠️  Ignorando pregunta {question_num} (fuera de rango 1-45)")
@@ -522,13 +495,19 @@ class PDFAnswerExtractor:
                 if match:
                     try:
                         # Extraer la respuesta (siempre será el último grupo que matchee [ABCDabcd])
-                        answer = None
+                        raw_answer = None
                         for group in match.groups():
-                            if group and group.lower() in ['a', 'b', 'c', 'd']:
-                                answer = group.lower()
+                            if group and group.upper() in ['A', 'B', 'C', 'D', 'OA', 'OB', 'OC', 'OD']:
+                                raw_answer = group
                                 break
                         
-                        if not answer:
+                        if not raw_answer:
+                            continue
+                        
+                        # Corregir errores de OCR
+                        answer = self._fix_ocr_answer(raw_answer)
+                        
+                        if answer not in ['a', 'b', 'c', 'd']:
                             continue
                         
                         # Obtener el "número" problemático para logging
@@ -541,7 +520,10 @@ class PDFAnswerExtractor:
                             answers[corrected_num] = answer
                             last_valid_question = corrected_num
                             expected_next_question = corrected_num + 1
-                            print(f"   🔧 Pregunta {corrected_num}: {answer.upper()} (numeración consecutiva, era '{problematic_number}')")
+                            if raw_answer != answer:
+                                print(f"   🔧 Pregunta {corrected_num}: {answer.upper()} (consecutiva, era '{problematic_number}', corregido de '{raw_answer}')")
+                            else:
+                                print(f"   🔧 Pregunta {corrected_num}: {answer.upper()} (numeración consecutiva, era '{problematic_number}')")
                             found_answer = True
                             break
                     except (ValueError, IndexError):
@@ -657,30 +639,63 @@ class PDFAnswerExtractor:
         
         return line.strip()
     
-    def _fix_ocr_answer(self, ocr_answer: str) -> Optional[str]:
+    def _fix_ocr_answer(self, ocr_answer: str) -> str:
         """
         Corrige errores comunes en las respuestas extraídas por OCR
         """
-        ocr_answer = ocr_answer.upper()
+        if not ocr_answer:
+            return ocr_answer
+            
+        original = ocr_answer
+        ocr_answer = ocr_answer.upper().strip()
         
-        # Mapeo de errores comunes de OCR
+        # Mapeo de errores comunes de OCR más completo
         ocr_fixes = {
-            'CC': 'c',
-            'Cc': 'c',
-            'AA': 'a',
-            'Aa': 'a',
-            'BB': 'b',
-            'Bb': 'b',
-            'DD': 'd',
-            'Dd': 'd',
-            'OA': 'a',
-            'OB': 'b',
-            'OC': 'c',
-            'OD': 'd',  # Muy común en el OCR
-            'Od': 'd',
+            # Problema principal: OD en lugar de D
+            'OD': 'D',
+            'Od': 'D',
+            'oD': 'D',
+            'od': 'D',
+            '0D': 'D',
+            '0d': 'D',
+            
+            # Otros errores comunes
+            'OA': 'A',
+            'OB': 'B', 
+            'OC': 'C',
+            
+            # Duplicaciones
+            'AA': 'A',
+            'BB': 'B',
+            'CC': 'C',
+            'DD': 'D',
+            
+            # Con espacios
+            'O D': 'D',
+            'O A': 'A',
+            'O B': 'B',
+            'O C': 'C',
+            
+            # Errores de forma
+            '0': 'D',  # Cero confundido con D
+            'Q': 'D',  # Q confundida con D
+            '6': 'G',  # 6 confundido con G (menos común)
+            '8': 'B',  # 8 confundido con B (menos común)
         }
         
-        return ocr_fixes.get(ocr_answer)
+        # Intentar corrección directa
+        if ocr_answer in ocr_fixes:
+            corrected = ocr_fixes[ocr_answer]
+            if corrected != original:
+                print(f"   🔧 OCR corregido: '{original}' → '{corrected}'")
+            return corrected.lower()
+        
+        # Si es una respuesta válida, devolverla en minúscula
+        if ocr_answer in ['A', 'B', 'C', 'D']:
+            return ocr_answer.lower()
+            
+        # Si no se puede corregir, devolver original
+        return original
     
     def _validate_and_fix_answers(self, answers: Dict[int, str], expected_count: int = 45) -> Dict[int, str]:
         """
@@ -899,7 +914,7 @@ class PDFAnswerExtractor:
             if self.target_exam_type:
                 print(f"   📂 Tipo de examen: {self.target_exam_type}")
             if self.target_test_model:
-                print(f"   🔖 Modelo de test: {self.target_test_model}")
+                print(f"   🔖 Modelo: {self.target_test_model}")
         
         try:
             # Extraer texto de todas las páginas
@@ -1616,8 +1631,7 @@ class PDFAnswerExtractor:
                     answer_match = re.search(r'([ABCDabcd])', line)
                     if answer_match:
                         answer = answer_match.group(1).lower()
-                        if answer in ['a', 'b', 'c', 'd']:
-                            candidates.append((line, answer, [line_idx]))
+                        candidates.append((line, answer, [line_idx]))
         
         return candidates
     
@@ -1748,111 +1762,316 @@ class PDFAnswerExtractor:
         return None
         
 
-def parse_arguments():
+    def _init_ocr_engines(self):
+        """
+        Inicializa múltiples engines de OCR para mejorar la precisión
+        """
+        self.ocr_engines = {}
+        
+        # Tesseract (ya existente)
+        self.ocr_engines['tesseract'] = True
+        print("✅ Tesseract disponible")
+        
+        # EasyOCR (inicialización lazy)
+        if EASYOCR_AVAILABLE:
+            self.ocr_engines['easyocr'] = 'available'  # Inicialización lazy
+            print("✅ EasyOCR disponible (inicialización lazy)")
+        else:
+            self.ocr_engines['easyocr'] = None
+            print("⚠️  EasyOCR no disponible")
+            
+        # PaddleOCR (inicialización lazy)
+        if PADDLEOCR_AVAILABLE:
+            self.ocr_engines['paddleocr'] = 'available'  # Inicialización lazy
+            print("✅ PaddleOCR disponible (inicialización lazy)")
+        else:
+            self.ocr_engines['paddleocr'] = None
+            print("⚠️  PaddleOCR no disponible")
+    
+    def extract_text_multi_engine(self, image: Image.Image) -> str:
+        """
+        Extrae texto usando múltiples engines de OCR y selecciona el mejor resultado
+        """
+        results = {}
+        
+        # Engine 1: Tesseract con múltiples configuraciones
+        try:
+            tesseract_results = self._extract_with_tesseract(image)
+            results.update(tesseract_results)
+        except Exception as e:
+            print(f"   ⚠️  Error con Tesseract: {e}")
+        
+        # Engine 2: EasyOCR (solo si está disponible y funciona)
+        if self.ocr_engines.get('easyocr'):
+            try:
+                easyocr_result = self._extract_with_easyocr(image)
+                results['easyocr'] = easyocr_result
+            except Exception as e:
+                print(f"   ⚠️  Error con EasyOCR: {e}")
+        
+        # Engine 3: PaddleOCR (solo si está disponible y funciona)
+        if self.ocr_engines.get('paddleocr'):
+            try:
+                paddleocr_result = self._extract_with_paddleocr(image)
+                results['paddleocr'] = paddleocr_result
+            except Exception as e:
+                print(f"   ⚠️  Error con PaddleOCR: {e}")
+        
+        # Evaluar y seleccionar el mejor resultado
+        if results:
+            best_result = self._select_best_ocr_result(results)
+            return best_result
+        else:
+            print("   ❌ No se pudo extraer texto con ningún engine")
+            return ""
+    
+    def _extract_with_tesseract(self, image: Image.Image) -> dict:
+        """
+        Extrae texto con Tesseract usando múltiples configuraciones optimizadas
+        """
+        results = {}
+        
+        configs = {
+            'structured': '--oem 1 --psm 6 -c tessedit_char_whitelist=0123456789ABCDabcd\\ .-:',
+            'lines': '--oem 1 --psm 4 -c tessedit_char_whitelist=0123456789ABCDabcd\\ .-:()',
+            'headers': '--oem 1 --psm 3',
+            'simple': '--oem 1 --psm 8 -c tessedit_char_whitelist=0123456789ABCD',
+            'lstm': '--oem 1 --psm 6',
+            'block': '--oem 1 --psm 6 -c preserve_interword_spaces=1',
+        }
+        
+        for config_name, config in configs.items():
+            try:
+                lang = 'spa+eng' if config_name in ['headers', 'structured', 'lstm'] else 'eng'
+                text = pytesseract.image_to_string(image, lang=lang, config=config)
+                results[f'tesseract_{config_name}'] = text
+            except Exception as e:
+                print(f"   ⚠️  Error en configuración {config_name}: {e}")
+                
+        return results
+    
+    def _extract_with_easyocr(self, image: Image.Image) -> str:
+        """
+        Extrae texto con EasyOCR (con inicialización lazy)
+        """
+        # Inicialización lazy del engine
+        if self.ocr_engines.get('easyocr') == 'available':
+            try:
+                import easyocr
+                self.ocr_engines['easyocr'] = easyocr.Reader(['es', 'en'], gpu=False)
+                print("   🔧 EasyOCR inicializado (lazy)")
+            except Exception as e:
+                print(f"   ⚠️  Error inicializando EasyOCR: {e}")
+                return ""
+        
+        if not self.ocr_engines.get('easyocr') or self.ocr_engines['easyocr'] == 'available':
+            return ""
+            
+        # Convertir PIL a array numpy
+        img_array = np.array(image)
+        
+        # EasyOCR funciona mejor con imágenes RGB
+        if len(img_array.shape) == 2:  # Escala de grises
+            img_array = cv2.cvtColor(img_array, cv2.COLOR_GRAY2RGB)
+        
+        # Extraer texto
+        results = self.ocr_engines['easyocr'].readtext(img_array, paragraph=True)
+        
+        # Combinar todos los textos detectados
+        text_parts = []
+        for (bbox, text, confidence) in results:
+            if confidence > 0.5:  # Solo texto con alta confianza
+                text_parts.append(text)
+        
+        return '\n'.join(text_parts)
+    
+    def _extract_with_paddleocr(self, image: Image.Image) -> str:
+        """
+        Extrae texto con PaddleOCR (con inicialización lazy)
+        """
+        # Inicialización lazy del engine
+        if self.ocr_engines.get('paddleocr') == 'available':
+            try:
+                from paddleocr import PaddleOCR
+                self.ocr_engines['paddleocr'] = PaddleOCR(use_angle_cls=True, lang='es', use_gpu=False)
+                print("   🔧 PaddleOCR inicializado (lazy)")
+            except Exception as e:
+                print(f"   ⚠️  Error inicializando PaddleOCR: {e}")
+                return ""
+        
+        if not self.ocr_engines.get('paddleocr') or self.ocr_engines['paddleocr'] == 'available':
+            return ""
+            
+        # Convertir PIL a array numpy
+        img_array = np.array(image)
+        
+        # PaddleOCR funciona con imágenes en formato BGR
+        if len(img_array.shape) == 2:  # Escala de grises
+            img_array = cv2.cvtColor(img_array, cv2.COLOR_GRAY2BGR)
+        elif len(img_array.shape) == 3:  # RGB a BGR
+            img_array = cv2.cvtColor(img_array, cv2.COLOR_RGB2BGR)
+        
+        # Extraer texto
+        results = self.ocr_engines['paddleocr'].ocr(img_array, cls=True)
+        
+        # Procesar resultados
+        text_parts = []
+        if results and results[0]:
+            for line in results[0]:
+                if line and len(line) >= 2:
+                    text = line[1][0]  # Texto extraído
+                    confidence = line[1][1]  # Confianza
+                    if confidence > 0.5:
+                        text_parts.append(text)
+        
+        return '\n'.join(text_parts)
+    
+    def _select_best_ocr_result(self, results: dict) -> str:
+        """
+        Selecciona el mejor resultado de OCR basado en múltiples criterios
+        """
+        if not results:
+            return ""
+        
+        scored_results = []
+        
+        for engine_name, text in results.items():
+            score = self._score_ocr_result(text, engine_name)
+            scored_results.append((score, engine_name, text))
+            print(f"   📊 {engine_name}: score={score:.1f}")
+        
+        # Ordenar por puntuación y devolver el mejor
+        scored_results.sort(key=lambda x: x[0], reverse=True)
+        best_score, best_engine, best_text = scored_results[0]
+        
+        print(f"   🎯 Mejor engine: {best_engine} (score: {best_score:.1f})")
+        return best_text
+    
+    def _score_ocr_result(self, text: str, engine_name: str) -> float:
+        """
+        Puntúa un resultado de OCR basado en criterios de calidad
+        """
+        if not text or not text.strip():
+            return 0.0
+        
+        score = 0.0
+        lines = text.strip().split('\n')
+        
+        # Criterio 1: Detección de respuestas (patrón número + letra)
+        answer_pattern = r'\b\d+\s*[ABCDabcd]\b'
+        answer_matches = re.findall(answer_pattern, text, re.IGNORECASE)
+        score += len(answer_matches) * 5
+        
+        # Criterio 2: Detección de headers de examen
+        header_patterns = [
+            r'RESPUESTAS.*EXAMEN',
+            r'PATRÓN.*EMBARCACIONES',
+            r'PATRON.*EMBARCACIONES',
+            r'CÓDIGO.*TEST',
+            r'CODIGO.*TEST',
+            r'TEST\s*\d+',
+        ]
+        for pattern in header_patterns:
+            if re.search(pattern, text, re.IGNORECASE):
+                score += 10
+        
+        # Criterio 3: Calidad del texto (menos caracteres extraños)
+        clean_chars = sum(1 for c in text if c.isalnum() or c.isspace() or c in '.-:()[]')
+        text_quality = clean_chars / len(text) if text else 0
+        score += text_quality * 20
+        
+        # Criterio 4: Longitud razonable (ni muy corto ni muy largo)
+        text_length = len(text.strip())
+        if 50 <= text_length <= 2000:
+            score += 10
+        elif 20 <= text_length <= 5000:
+            score += 5
+        
+        # Criterio 5: Bonificación por engine específico
+        engine_bonuses = {
+            'tesseract_structured': 5,
+            'tesseract_lstm': 3,
+            'easyocr': 8,  # EasyOCR suele ser muy bueno
+            'paddleocr': 6,
+        }
+        score += engine_bonuses.get(engine_name, 0)
+        
+        return score
+
+def main():
     """
-    Parsea los argumentos de línea de comandos
+    Función principal del script
     """
+    print("📋 Configurando argumentos de línea de comandos...")
+    
     parser = argparse.ArgumentParser(
-        description="Extractor de respuestas de PDFs de exámenes oficiales usando OCR",
+        description="Extractor de respuestas del PDF oficial usando OCR mejorado",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
-EJEMPLOS DE USO:
-
-  # Extraer respuestas de un examen específico
-  python madrid_extract_answers.py --pdf-path "data/raw/answers/madrid-2025-abril.pdf" --exam-type PER --test-model TEST02
-
-  # Extraer todas las respuestas de todos los exámenes del PDF
-  python madrid_extract_answers.py --pdf-path "data/raw/answers/madrid-2024-noviembre.pdf"
-
-  # Extraer respuestas de un tipo específico
-  python madrid_extract_answers.py --pdf-path "data/raw/answers/madrid-2025-abril.pdf" --exam-type PER
-
-  # Especificar directorio de salida personalizado
-  python madrid_extract_answers.py --pdf-path "data/raw/answers/madrid-2025-abril.pdf" --output-dir "mis_respuestas" --exam-type PER
-
-IMPORTANTE:
-  La ruta al archivo PDF (--pdf-path) es OBLIGATORIA. No hay autodescubrimiento automático.
+Ejemplos de uso:
+  # Extraer respuestas específicas
+  python madrid_extract_answers.py --pdf-path "data/raw/answers/madrid-2024-abril.pdf" --exam-type PER --test-model TEST01
   
-  Del nombre del archivo se extrae automáticamente:
-  - Comunidad, año y convocatoria (patrón: comunidad-año-convocatoria.pdf)
-  - Ejemplo: madrid-2025-abril.pdf -> madrid, 2025, abril
-
-TIPOS DE EXAMEN SOPORTADOS:
-  - PER: Patrón de Embarcación de Recreo
-  - PATRON_YATE: Patrón de Yate  
-  - CAPITAN_YATE: Capitán de Yate
-  - LICENCIA_NAVEGACION: Licencia de Navegación
-
-MODELOS DE TEST COMUNES:
-  - TEST01, TEST02, TEST03, etc.
-
-EXCLUSIONES AUTOMÁTICAS:
-  - Páginas con "PNB LIBERADO" son excluidas automáticamente (no son exámenes PER estándar)
+  # Extraer todas las respuestas
+  python madrid_extract_answers.py --pdf-path "data/raw/answers/madrid-2024-abril.pdf"
         """
-    )
-    
-    parser.add_argument(
-        '--exam-type',
-        type=str,
-        choices=['PER', 'PATRON_YATE', 'CAPITAN_YATE', 'LICENCIA_NAVEGACION'],
-        help='Tipo de examen a extraer (filtro opcional)'
-    )
-    
-    parser.add_argument(
-        '--test-model',
-        type=str,
-        help='Modelo específico del test a extraer (ej: TEST01, TEST02, etc.)'
     )
     
     parser.add_argument(
         '--pdf-path',
         type=str,
         required=True,
-        help='Ruta al archivo PDF de respuestas (OBLIGATORIO). Ejemplo: data/raw/answers/madrid-2025-abril.pdf'
+        help='Ruta al archivo PDF de respuestas (OBLIGATORIO)'
+    )
+    
+    parser.add_argument(
+        '--exam-type',
+        type=str,
+        choices=['PER', 'PATRON_YATE', 'CAPITAN_YATE', 'LICENCIA_NAVEGACION'],
+        help='Tipo de examen a extraer (opcional, si no se especifica se extraen todos)'
+    )
+    
+    parser.add_argument(
+        '--test-model',
+        type=str,
+        help='Modelo específico del test (ej: TEST01, TEST02, etc.)'
     )
     
     parser.add_argument(
         '--output-dir',
         type=str,
-        help='Directorio de salida para los archivos JSON (default: usar configuración global)'
+        help='Directorio de salida (por defecto: extracted_answers)'
     )
     
-    return parser.parse_args()
-
-
-def main():
-    """
-    Función principal
-    """
+    args = parser.parse_args()
+    print("✅ Argumentos parseados correctamente")
+    
     try:
-        # Parsear argumentos
-        args = parse_arguments()
-        
-        # Mostrar encabezado
         print("🚀 EXTRACTOR DE RESPUESTAS OCR - PDF OFICIAL")
-        print("="*60)
+        print("=" * 60)
         
-        if args.exam_type:
-            print(f"🎯 Filtro tipo examen: {args.exam_type}")
-        if args.test_model:
-            print(f"🔖 Filtro modelo test: {args.test_model}")
-        
-        if not args.exam_type and not args.test_model:
-            print("📋 Modo: Extraer TODOS los exámenes del PDF")
-        else:
+        # Mostrar filtros aplicados
+        if args.exam_type or args.test_model:
+            if args.exam_type:
+                print(f"🎯 Filtro tipo examen: {args.exam_type}")
+            if args.test_model:
+                print(f"🔖 Filtro modelo test: {args.test_model}")
             print("🎯 Modo: Extracción FILTRADA")
+        else:
+            print("🎯 Modo: Extracción COMPLETA")
+        print("=" * 60)
         
-        print("="*60)
-        
-        # Crear extractor con los parámetros especificados
+        # Crear instancia del extractor
+        print("🔧 Creando extractor...")
         extractor = PDFAnswerExtractor(
-            pdf_path=args.pdf_path,  # Siempre obligatorio
-            output_dir=args.output_dir if args.output_dir else None,  # None usa configuración global
+            pdf_path=args.pdf_path,
+            output_dir=args.output_dir,
             target_exam_type=args.exam_type,
             target_test_model=args.test_model
         )
         
-        # Procesar páginas
+        # Procesar todas las páginas
+        print("🔄 Procesando páginas...")
         all_exams = extractor.process_all_pages()
         
         # Guardar resultados
@@ -1861,38 +2080,24 @@ def main():
         # Mostrar resumen
         extractor.print_summary(all_exams)
         
-        if all_exams:
-            print("\\n🎉 ¡Extracción completada exitosamente!")
-            
-            # Sugerencias de próximos pasos
-            print("\\n💡 PRÓXIMOS PASOS:")
-            if args.exam_type == 'PER' and args.test_model == 'TEST01':
-                print("   1. Revisar: extracted_answers/per_test01_answers.json")
-                print("   2. Ejecutar: python madrid_merge_exam.py")
-                print("   3. Reiniciar el servidor de la aplicación")
-            else:
-                print("   1. Revisar los archivos JSON generados en el directorio de salida")
-                print("   2. Usar madrid_merge_exam.py para aplicar las respuestas al YAML correspondiente")
+        print("\n🎉 ¡Extracción completada exitosamente!")
+        
+        print("\n💡 PRÓXIMOS PASOS:")
+        if args.exam_type and args.test_model:
+            print(f"   1. Revisar: extracted_answers/{args.exam_type.lower()}_{args.test_model.lower()}_answers.json")
         else:
-            print("\\n⚠️  No se encontraron exámenes que coincidan con los filtros especificados")
-            print("\\n💡 SUGERENCIAS:")
-            print("   - Verificar que el PDF contiene el tipo de examen especificado")
-            print("   - Probar sin filtros para ver todos los exámenes disponibles:")
-            print(f"     python madrid_extract_answers.py --pdf-path '{args.pdf_path}'")
-            print("   - Verificar que el nombre del archivo sigue el patrón: comunidad-año-convocatoria.pdf")
-            return 1
-            
-        return 0
+            print("   1. Revisar: extracted_answers/exam_answers_complete.json")
+        print("   2. Ejecutar: python madrid_merge_exam.py")
+        print("   3. Reiniciar el servidor de la aplicación")
         
     except KeyboardInterrupt:
-        print("\\n❌ Proceso interrumpido por el usuario")
-        return 1
+        print("\n⚠️  Operación cancelada por el usuario")
+        sys.exit(1)
     except Exception as e:
-        print(f"❌ Error durante la extracción: {e}")
+        print(f"\n❌ Error durante la extracción: {e}")
         import traceback
         traceback.print_exc()
-        return 1
-
+        sys.exit(1)
 
 if __name__ == "__main__":
-    exit(main())
+    main()
