@@ -1,3 +1,7 @@
+pdf2image
+pillow
+pytesseract
+pdf2image
 # =============================================================================
 # DEPENDENCIAS CORE DE LA APLICACIÓN WEB
 # =============================================================================
@@ -42,4 +46,21 @@ pdfplumber==0.10.3
 # =============================================================================
 
 # Análisis numérico (usado en algunos scripts OCR para mejores resultados)
-numpy==2.3.1
+numpy==1.26.4
+
+# =============================================================================
+# DEPENDENCIAS OPCIONALES PARA OCR AVANZADO
+# =============================================================================
+
+# OCR engines adicionales (opcionales, pueden habilitarse en el código)
+# easyocr==1.7.1
+# paddlepaddle==2.6.1
+# paddleocr==2.8.1
+
+# Poppler para pdf2image (requerido en algunos sistemas)
+# En macOS: brew install poppler
+# En Ubuntu/Debian: apt-get install poppler-utils
+
+# Tesseract OCR (requerido para pytesseract)
+# En macOS: brew install tesseract
+# En Ubuntu/Debian: apt-get install tesseract-ocr

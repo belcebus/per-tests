@@ -29,21 +29,25 @@ from typing import Dict, List, Tuple, Optional
 import cv2
 
 # OCR engines adicionales
-try:
-    import easyocr
-    EASYOCR_AVAILABLE = False  # Temporalmente deshabilitado para estabilidad
-    print("⚠️  EasyOCR temporalmente deshabilitado")
-except ImportError:
-    EASYOCR_AVAILABLE = False
-    print("⚠️  EasyOCR no disponible (pip install easyocr)")
+EASYOCR_AVAILABLE = True  # Habilitado temporalmente para mejor reconocimiento de cabeceras
+print("✅ EasyOCR habilitado para mejorar reconocimiento de cabeceras")
+# try:
+#     import easyocr
+#     EASYOCR_AVAILABLE = True
+#     print("✅ EasyOCR disponible")
+# except ImportError:
+#     EASYOCR_AVAILABLE = False
+#     print("⚠️  EasyOCR no disponible (pip install easyocr)")
 
-try:
-    from paddleocr import PaddleOCR
-    PADDLEOCR_AVAILABLE = False  # Temporalmente deshabilitado para estabilidad
-    print("⚠️  PaddleOCR temporalmente deshabilitado")
-except ImportError:
-    PADDLEOCR_AVAILABLE = False
-    print("⚠️  PaddleOCR no disponible (pip install paddlepaddle paddleocr)")
+PADDLEOCR_AVAILABLE = False  # Temporalmente deshabilitado para estabilidad
+print("⚠️  PaddleOCR temporalmente deshabilitado")
+# try:
+#     from paddleocr import PaddleOCR
+#     PADDLEOCR_AVAILABLE = True
+#     print("✅ PaddleOCR disponible")
+# except ImportError:
+#     PADDLEOCR_AVAILABLE = False
+#     print("⚠️  PaddleOCR no disponible (pip install paddlepaddle paddleocr)")
 
 # Añadir el directorio del proyecto al path para importaciones
 print("📂 Configurando path del proyecto...")
@@ -193,79 +197,88 @@ class PDFAnswerExtractor:
     def enhance_image_for_ocr(self, image: Image.Image) -> Image.Image:
         """
         Mejora avanzada de imagen para OCR con múltiples técnicas optimizadas
+        ENFOQUE: Preservar tanto respuestas como cabeceras de texto
         """
-        print(f"   🔍 Mejorando imagen para OCR...")
+        print(f"   🔍 Mejorando imagen para OCR completo (respuestas + cabeceras)...")
         
         # Convertir a escala de grises si no lo está
         if image.mode != 'L':
+        """
+        Mejora simple y robusta para OCR: escala de grises, contraste y nitidez.
+        """
+        print(f"   � Mejorando imagen para OCR (simple y robusto)...")
+        # 1. Convertir a escala de grises
+        if image.mode != 'L':
             image = image.convert('L')
-        
-        # 1. Redimensionar para resolución óptima (manteniendo aspecto original)
-        width, height = image.size
-        target_width = 10000  # Resolución muy alta para OCR
-        scale_factor = target_width / width
-        if scale_factor > 1:  # Solo ampliar si es necesario
-            new_width = int(width * scale_factor)
-            new_height = int(height * scale_factor)
-            image = image.resize((new_width, new_height), Image.Resampling.LANCZOS)
-            print(f"   📐 Redimensionado a {new_width}x{new_height} para máxima resolución")
-        
-        # 2. Convertir a numpy para procesamiento avanzado con OpenCV
-        img_array = np.array(image)
-        
-        # 3. Técnicas avanzadas de preprocesamiento
-        # Eliminación de ruido preservando texto
-        img_array = cv2.medianBlur(img_array, 3)
-        img_array = cv2.GaussianBlur(img_array, (3, 3), 0)
-        
-        # 4. Mejora de contraste adaptativa (CLAHE)
-        clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
-        img_array = clahe.apply(img_array)
-        
-        # 5. NO ROTAR - mantener imagen completamente recta
-        print(f"   📐 Manteniendo imagen original sin rotación")
-        
-        # 6. Morfología suave para limpiar caracteres
-        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1, 1))
-        img_array = cv2.morphologyEx(img_array, cv2.MORPH_CLOSE, kernel)
-        
-        # 7. Múltiples métodos de binarización y selección automática
-        methods = {}
-        
-        # Método 1: Binarización adaptativa Gaussiana
-        methods['adaptive_gaussian'] = cv2.adaptiveThreshold(
-            img_array, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2
-        )
-        
-        # Método 2: Binarización adaptativa de media
-        methods['adaptive_mean'] = cv2.adaptiveThreshold(
-            img_array, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2
-        )
-        
-        # Método 3: Otsu
-        _, methods['otsu'] = cv2.threshold(img_array, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-        
-        # Método 4: Escala de grises mejorada (sin binarizar)
-        methods['enhanced_gray'] = cv2.convertScaleAbs(img_array, alpha=1.5, beta=20)
-        
-        # Seleccionar el mejor método basado en análisis de contenido
-        best_method = self._select_best_binarization(methods, img_array)
-        img_array = methods[best_method]
-        print(f"   🎯 Usando método: {best_method}")
-        
-        # 8. Conversión final a PIL
-        image = Image.fromarray(img_array)
-        
-        # 9. Ajustes finales de calidad
-        if best_method == 'enhanced_gray':
-            # Solo para escala de grises, aplicar mejoras adicionales
+        # 2. Mejorar contraste suavemente
+        try:
+            from PIL import ImageEnhance
             enhancer = ImageEnhance.Contrast(image)
-            image = enhancer.enhance(1.3)
-            
+            image = enhancer.enhance(1.5)
+        except Exception as e:
+            print(f"   ⚠️  Error mejorando contraste: {e}")
+        # 3. Mejorar nitidez suavemente
+        try:
             enhancer = ImageEnhance.Sharpness(image)
             image = enhancer.enhance(1.2)
+        except Exception as e:
+            print(f"   ⚠️  Error mejorando nitidez: {e}")
+        # 4. (Opcional) Binarización adaptativa si la imagen es muy plana
+        img_array = np.array(image)
+        if img_array.std() < 18:  # Imagen muy plana, poco contraste
+            try:
+                import cv2
+                img_array = cv2.adaptiveThreshold(img_array, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 15, 3)
+                image = Image.fromarray(img_array)
+                print("   🟢 Binarización adaptativa aplicada (imagen plana)")
+            except Exception as e:
+                print(f"   ⚠️  Error en binarización adaptativa: {e}")
+        print(f"   ✅ Imagen lista para OCR (simple)")
+        return image
+                contours, _ = cv2.findContours(255 - image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+                if len(contours) < image.size * 0.005:  # Menos estricto
+                    score += 15
+            else:
+                # Para escala de grises, bonificar por mantener información completa
+                score += 20
+            
+            # Criterio 5: Bonificación por método específico
+            method_bonus = {
+                'enhanced_gray': 15,      # Mejor para texto mixto
+                'high_contrast': 12,      # Bueno para texto difícil
+                'adaptive_gaussian': 8,   # Bueno para texto binario
+                'otsu': 5                 # Básico pero funcional
+            }
+            score += method_bonus.get(method_name, 0)
+            
+            scores[method_name] = score
         
-        print(f"   ✅ Imagen optimizada para OCR de máxima calidad")
+        # Retornar el método con mejor puntuación
+        best = max(scores.items(), key=lambda x: x[1])
+        return best[0]
+        
+        # 7. Conversión final a PIL
+        try:
+            image = Image.fromarray(img_array)
+            print(f"   ✅ Conversión a PIL exitosa: {image.size}")
+        except Exception as e:
+            print(f"   ❌ Error en conversión a PIL: {e}")
+            return None
+        
+        # 8. Ajustes finales suaves
+        if best_method in ['enhanced_gray', 'high_contrast']:
+            try:
+                # Para escala de grises, aplicar mejoras muy suaves
+                enhancer = ImageEnhance.Contrast(image)
+                image = enhancer.enhance(1.2)
+                
+                enhancer = ImageEnhance.Sharpness(image)
+                image = enhancer.enhance(1.1)
+                print(f"   ✅ Mejoras finales aplicadas")
+            except Exception as e:
+                print(f"   ⚠️  Error en mejoras finales: {e}")
+        
+        print(f"   ✅ Imagen optimizada para OCR completo (respuestas + cabeceras)")
         return image
     
     def _select_best_binarization(self, methods: dict, original: np.ndarray) -> str:
@@ -1744,7 +1757,7 @@ class PDFAnswerExtractor:
             
             # Factor 3: Claridad del patrón en la línea
             if re.search(rf'\b{target_question}\b.*[ABCDabcd]', line_text):
-                confidence += 0.2
+                confidence +=
             
             # Factor 4: Ausencia de ambigüedad
             other_numbers = re.findall(r'\d+', line_text)
@@ -1792,34 +1805,47 @@ class PDFAnswerExtractor:
         """
         Extrae texto usando múltiples engines de OCR y selecciona el mejor resultado
         """
+        print(f"   🤖 Aplicando OCR multi-engine...")
+        
+        if image is None:
+            print(f"   ❌ Error: imagen es None")
+            return ""
+        
         results = {}
         
         # Engine 1: Tesseract con múltiples configuraciones
         try:
+            print(f"   🔧 Probando Tesseract...")
             tesseract_results = self._extract_with_tesseract(image)
             results.update(tesseract_results)
+            print(f"   ✅ Tesseract completado: {len(tesseract_results)} resultados")
         except Exception as e:
             print(f"   ⚠️  Error con Tesseract: {e}")
         
         # Engine 2: EasyOCR (solo si está disponible y funciona)
         if self.ocr_engines.get('easyocr'):
             try:
+                print(f"   🔧 Probando EasyOCR...")
                 easyocr_result = self._extract_with_easyocr(image)
                 results['easyocr'] = easyocr_result
+                print(f"   ✅ EasyOCR completado: {len(easyocr_result)} caracteres")
             except Exception as e:
                 print(f"   ⚠️  Error con EasyOCR: {e}")
         
         # Engine 3: PaddleOCR (solo si está disponible y funciona)
         if self.ocr_engines.get('paddleocr'):
             try:
+                print(f"   🔧 Probando PaddleOCR...")
                 paddleocr_result = self._extract_with_paddleocr(image)
                 results['paddleocr'] = paddleocr_result
+                print(f"   ✅ PaddleOCR completado: {len(paddleocr_result)} caracteres")
             except Exception as e:
                 print(f"   ⚠️  Error con PaddleOCR: {e}")
         
         # Evaluar y seleccionar el mejor resultado
         if results:
             best_result = self._select_best_ocr_result(results)
+            print(f"   🎯 Mejor resultado: {len(best_result)} caracteres")
             return best_result
         else:
             print("   ❌ No se pudo extraer texto con ningún engine")
@@ -1831,22 +1857,47 @@ class PDFAnswerExtractor:
         """
         results = {}
         
+        if image is None:
+            print(f"   ❌ Error: imagen es None en _extract_with_tesseract")
+            return results
+        
         configs = {
+            # Configuración para cabeceras y texto completo (sin restricciones)
+            'full_text': '--oem 1 --psm 3',
+            'headers': '--oem 1 --psm 6',
+            'document': '--oem 1 --psm 1',
+            
+            # Configuraciones para respuestas específicas
             'structured': '--oem 1 --psm 6 -c tessedit_char_whitelist=0123456789ABCDabcd\\ .-:',
             'lines': '--oem 1 --psm 4 -c tessedit_char_whitelist=0123456789ABCDabcd\\ .-:()',
-            'headers': '--oem 1 --psm 3',
             'simple': '--oem 1 --psm 8 -c tessedit_char_whitelist=0123456789ABCD',
-            'lstm': '--oem 1 --psm 6',
-            'block': '--oem 1 --psm 6 -c preserve_interword_spaces=1',
+            
+            # Configuraciones adicionales para mejor reconocimiento
+            'lstm_best': '--oem 1 --psm 6 -c preserve_interword_spaces=1',
+            'legacy': '--oem 0 --psm 6',
+            'mixed': '--oem 3 --psm 6',
         }
         
         for config_name, config in configs.items():
             try:
-                lang = 'spa+eng' if config_name in ['headers', 'structured', 'lstm'] else 'eng'
-                text = pytesseract.image_to_string(image, lang=lang, config=config)
+                # Verificar que tenemos una imagen válida
+                if not isinstance(image, Image.Image):
+                    print(f"   ❌ Error: imagen no es PIL.Image en {config_name}")
+                    continue
+                
+                # Usar solo inglés para mayor compatibilidad
+                text = pytesseract.image_to_string(image, lang='eng', config=config)
                 results[f'tesseract_{config_name}'] = text
+                print(f"   ✅ {config_name}: {len(text)} caracteres")
             except Exception as e:
                 print(f"   ⚠️  Error en configuración {config_name}: {e}")
+                # Intento de recuperación con configuración mínima
+                try:
+                    text = pytesseract.image_to_string(image)
+                    results[f'tesseract_{config_name}_fallback'] = text
+                    print(f"   🔄 {config_name} (fallback): {len(text)} caracteres")
+                except Exception as e2:
+                    print(f"   ❌ Fallback también falló para {config_name}: {e2}")
                 
         return results
     
@@ -1960,62 +2011,49 @@ class PDFAnswerExtractor:
         # Criterio 1: Detección de respuestas (patrón número + letra)
         answer_pattern = r'\b\d+\s*[ABCDabcd]\b'
         answer_matches = re.findall(answer_pattern, text, re.IGNORECASE)
-        score += len(answer_matches) * 5
+        score += len(answer_matches) * 3  # Reducido para dar más peso a las cabeceras
         
-        # Criterio 2: Detección de headers de examen
+        # Criterio 2: Detección de headers de examen (MUY IMPORTANTE)
         header_patterns = [
             r'RESPUESTAS.*EXAMEN',
             r'PATRÓN.*EMBARCACIONES',
             r'PATRON.*EMBARCACIONES',
+            r'EMBARCACIONES.*RECREO',
             r'CÓDIGO.*TEST',
             r'CODIGO.*TEST',
             r'TEST\s*\d+',
+            r'PER\b',
+            r'YATE',
+            r'CAPITÁN',
+            r'CAPITAN',
+            r'LICENCIA.*NAVEGACIÓN',
+            r'LICENCIA.*NAVEGACION',
+            r'EXAMEN.*TEÓRICO',
+            r'EXAMEN.*TEORICO',
+            r'RESPUESTAS.*CORRECTAS',
         ]
+        header_score = 0
         for pattern in header_patterns:
-            if re.search(pattern, text, re.IGNORECASE):
-                score += 10
+            matches = len(re.findall(pattern, text, re.IGNORECASE))
+            if matches > 0:
+                header_score += matches * 15  # Puntuación muy alta por cabeceras
+        score += header_score
+        
+        # Bonificación extra si contiene tanto respuestas como cabeceras
+        if len(answer_matches) > 10 and header_score > 0:
+            score += 25  # Bonificación por combinar ambos tipos de información
         
         # Criterio 3: Calidad del texto (menos caracteres extraños)
-        clean_chars = sum(1 for c in text if c.isalnum() or c.isspace() or c in '.-:()[]')
+        clean_chars = sum(1 for c in text if c.isalnum() or c.isspace() or c in '.-:()[]áéíóúüñÁÉÍÓÚÜÑ')
         text_quality = clean_chars / len(text) if text else 0
-        score += text_quality * 20
+        score += text_quality * 15
         
         # Criterio 4: Longitud razonable (ni muy corto ni muy largo)
         text_length = len(text.strip())
-        if 50 <= text_length <= 2000:
-            score += 10
-        elif 20 <= text_length <= 5000:
-            score += 5
-        
-        # Criterio 5: Bonificación por engine específico
-        engine_bonuses = {
-            'tesseract_structured': 5,
-            'tesseract_lstm': 3,
-            'easyocr': 8,  # EasyOCR suele ser muy bueno
-            'paddleocr': 6,
-        }
-        score += engine_bonuses.get(engine_name, 0)
-        
-        return score
-
-def main():
-    """
-    Función principal del script
-    """
-    print("📋 Configurando argumentos de línea de comandos...")
-    
-    parser = argparse.ArgumentParser(
-        description="Extractor de respuestas del PDF oficial usando OCR mejorado",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Ejemplos de uso:
-  # Extraer respuestas específicas
-  python madrid_extract_answers.py --pdf-path "data/raw/answers/madrid-2024-abril.pdf" --exam-type PER --test-model TEST01
-  
-  # Extraer todas las respuestas
-  python madrid_extract_answers.py --pdf-path "data/raw/answers/madrid-2024-abril.pdf"
-        """
-    )
+        if 100 <= text_length <= 3000:
+            score += 15
+        elif 50 <= text_length <= 5000:
+            score += 8
     
     parser.add_argument(
         '--pdf-path',
@@ -2034,6 +2072,43 @@ Ejemplos de uso:
     parser.add_argument(
         '--test-model',
         type=str,
+        help='Modelo específico del test (ej: TEST01, TEST02, etc.)'
+    )
+    
+    parser.add_argument(
+        '--output-dir',
+        type=str,
+        help='Directorio de salida (por defecto: extracted_answers)'
+    )
+    
+    args = parser.parse_args()
+    print("✅ Argumentos parseados correctamente")
+    
+    try:
+        print("🚀 EXTRACTOR DE RESPUESTAS OCR - PDF OFICIAL")
+        print("=" * 60)
+        
+        # Mostrar filtros aplicados
+        if args.exam_type or args.test_model:
+            if args.exam_type:
+                print(f"🎯 Filtro tipo examen: {args.exam_type}")
+            if args.test_model:
+                print(f"🔖 Filtro modelo test: {args.test_model}")
+            print("🎯 Modo: Extracción FILTRADA")
+        else:
+            print("🎯 Modo: Extracción COMPLETA")
+        print("=" * 60)
+        
+        # Crear instancia del extractor
+        print("🔧 Creando extractor...")
+        extractor = PDFAnswerExtractor(
+            pdf_path=args.pdf_path,
+            output_dir=args.output_dir,
+            target_exam_type=args.exam_type,
+            target_test_model=args.test_model
+        )
+        
+        # Procesar todas las páginas
         help='Modelo específico del test (ej: TEST01, TEST02, etc.)'
     )
     
