@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 1
       options:
         a: El número de palas que tiene unidas al núcleo es par.
@@ -17,7 +17,7 @@ categories:
         a una hélice dextrógira?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 2
       options:
         a: Guardín.
@@ -28,7 +28,7 @@ categories:
         banda, la pala del timón lo hace a la banda contraria?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: La obra muerta es la sección del casco situada por debajo del plano de
@@ -42,7 +42,7 @@ categories:
       question: 'En una embarcación:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 4
       options:
         a: Virar es cobrar cabo o cadena de la línea de fondeo al levar anclas o en
@@ -57,7 +57,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 5
       options:
         a: Al giro de una embarcación fondeada en torno al ancla, por efecto del viento
@@ -72,7 +72,7 @@ categories:
         CORRECTA?
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 6
       options:
         a: Guía.
@@ -86,7 +86,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: El squat o sobrecalado de la embarcación.
@@ -97,7 +97,7 @@ categories:
         al navegar en aguas someras?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 8
       options:
         a: Lanzamiento de ayudas.
@@ -108,7 +108,7 @@ categories:
         NO se recomienda tomar?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 9
       options:
         a: Capear o correr el temporal.
@@ -119,7 +119,7 @@ categories:
         se debe:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 10
       options:
         a: Cabezada.
@@ -133,7 +133,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 11
       options:
         a: Podrán izarse en puertos nacionales y aguas interiores en solitario, pero
@@ -149,7 +149,7 @@ categories:
         Autónomas:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 12
       options:
         a: Todos los objetos flotantes destinados a la navegación de recreo y deportiva
@@ -170,7 +170,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 13
       options:
         a: Indicar dónde pueden encontrarse las aguas más profundas en esa zona.
@@ -182,7 +182,7 @@ categories:
       question: 'Una Marca cardinal NO puede ser utilizada para:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 14
       options:
         a: Indican una zona o una configuración particular cuya naturaleza exacta
@@ -195,7 +195,7 @@ categories:
       question: 'Las Marcas especiales:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 15
       options:
         a: Únicamente las Marcas laterales de babor.
@@ -207,7 +207,7 @@ categories:
       question: 'Las Marcas laterales que emiten una luz roja son:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 16
       options:
         a: A elegir, pero sin que pueda prestarse a confusión con las marcas laterales,
@@ -219,7 +219,7 @@ categories:
       question: 'La forma de las Marcas de aguas navegables es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 17
       options:
         a: Seguir el lado de babor o estribor de la derrota que indica la señal.
@@ -236,7 +236,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 18
       options:
         a: En aerodeslizadores, cuando operen en la condición sin desplazamiento.
@@ -251,7 +251,7 @@ categories:
         “Maniobras para evitar el abordaje”, deberemos:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 19
       options:
         a: Tres luces rojas todo horizonte en línea vertical o un cilindro.
@@ -263,7 +263,7 @@ categories:
         por su calado podrá exhibir en el lugar más visible:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 20
       options:
         a: Deberá en cualquier caso utilizar las vías de circulación siguiendo la
@@ -277,7 +277,7 @@ categories:
         tráfico”, un buque de propulsión mecánica de 15 metros de eslora:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 21
       options:
         a: La anchura del buque remolcador es superior a 25 metros.
@@ -289,7 +289,7 @@ categories:
         una marca bicónica en el lugar más visible, estará indicando que:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 22
       options:
         a: Con redes, líneas, aparejos de arrastre u otros artes de pesca que restrinjan
@@ -305,7 +305,7 @@ categories:
         dedicado a la pesca” significa todo buque que esté pescando:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 23
       options:
         a: Cinco pitadas cortas y rápidas.
@@ -320,7 +320,7 @@ categories:
         lo menos:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 24
       options:
         a: Que es visible sin interrupción en un arco de horizonte de 360 grados.
@@ -332,7 +332,7 @@ categories:
         C relativa a Luces y Marcas”, la luz de remolque es una luz amarilla:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 25
       options:
         a: No es posible usar el aparato de señales de niebla para esta finalidad.
@@ -344,7 +344,7 @@ categories:
         peligro o necesidad de ayuda mediante un aparato de señales de niebla?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Cuando uno de los dos buques deba mantenerse apartado de la derrota del
@@ -363,7 +363,7 @@ categories:
         a rumbo”, indique cuál de las siguientes afirmaciones es CORRECTA.
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 27
       options:
         a: En aerodeslizadores, cuando operen en la condición sin desplazamiento.
@@ -380,7 +380,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 28
       options:
         a: Tener el suficiente resguardo de seguridad entre la embarcación y la costa
@@ -393,7 +393,7 @@ categories:
       question: ¿Qué significa “libre a sotavento”?
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 29
       options:
         a: Cobrar del largo de proa y del esprín de popa, lascando a su vez y dentro
@@ -409,7 +409,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 30
       options:
         a: Hacer una llamada de socorro y activar la radiobaliza manualmente.
@@ -422,7 +422,7 @@ categories:
         de las siguientes medidas NO debe tomar?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 31
       options:
         a: Inclinar la cabeza hacia atrás y taponar las fosas nasales con una gasa
@@ -435,7 +435,7 @@ categories:
         se debe hacer en un primer momento para detener el sangrado?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 32
       options:
         a: El tipo de fondo, ya que la maniobra depende de si se trata de un fondo
@@ -455,7 +455,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 33
       options:
         a: El número de horas que el viento sopla en la misma dirección.
@@ -466,7 +466,7 @@ categories:
       question: 'Se denomina “Fetch” a:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 34
       options:
         a: El generado por el avance de la embarcación.
@@ -476,7 +476,7 @@ categories:
       question: ¿Qué es el viento real?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 35
       options:
         a: La presión atmosférica.
@@ -486,7 +486,7 @@ categories:
       question: ¿Qué parámetro mide el barómetro aneroide?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 36
       options:
         a: En el sentido contrario a las agujas del reloj en las capas bajas, convergiendo
@@ -504,7 +504,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: La sonda en la carta.
@@ -515,7 +515,7 @@ categories:
         se define como:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 38
       options:
         a: Con el compás, tomando la distancia y trasladando esta en la escala de
@@ -529,7 +529,7 @@ categories:
       question: ¿Cómo se debe medir una distancia entre dos puntos en la carta náutica?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 39
       options:
         a: Los rumbos se cuentan a partir del Norte de 0º a 360º en el sentido de
@@ -548,7 +548,7 @@ categories:
         indique la respuesta CORRECTA.
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 40
       options:
         a: Declinación magnética.
@@ -559,7 +559,7 @@ categories:
         en un punto específico de la Tierra se denomina:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 41
       options:
         a: Giróscopo.
@@ -573,7 +573,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 42
       options:
         a: Ra= 319°; Hrb= 12:00.
@@ -590,7 +590,7 @@ categories:
         es de 5°E.'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 43
       options:
         a: l= 35°52,0´N;  L= 005°50,4´W.
@@ -607,7 +607,7 @@ categories:
         es 3°W.'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 44
       options:
         a: 7,50 metros.
@@ -619,7 +619,7 @@ categories:
         en la carta de 7,2 metros.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 45
       options:
         a: l= 35º50,5'N; L= 005º15' W.

@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 1
       options:
         a: Roda.
@@ -15,7 +15,7 @@ categories:
         la parte inferior del barco y en que se asienta todo su armazón?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 2
       options:
         a: Cuelgue y esté lista para fondear.
@@ -25,7 +25,7 @@ categories:
       question: 'Al poner el ancla a la pendura pretendemos que:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 3
       options:
         a: La distancia vertical medida sobre el costado de la embarcación desde la
@@ -39,7 +39,7 @@ categories:
       question: 'El francobordo es:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 4
       options:
         a: Barlovento es la parte hacia donde se dirige el viento.
@@ -55,7 +55,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 5
       options:
         a: Ballestrinque.
@@ -66,7 +66,7 @@ categories:
         un cabo se denomina:'
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 6
       options:
         a: El orinque es el cabo que se amarra por un chicote al ancla y por el otro
@@ -86,7 +86,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: Debe estar perfectamente establecida y sin ningún tipo de interrupción
@@ -100,7 +100,7 @@ categories:
         tormentas eléctricas, señale la afirmación INCORRECTA.
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 8
       options:
         a: Llamar por teléfono al 112.
@@ -111,7 +111,7 @@ categories:
         Salvamento Marítimo?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 9
       options:
         a: El estado de los alimentos que se lleven a bordo.
@@ -122,7 +122,7 @@ categories:
       question: 'Antes de hacerse a la mar es indispensable comprobar:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 10
       options:
         a: Arneses.
@@ -136,7 +136,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 11
       options:
         a: Siempre, ya que se encuentran navegando por espacios marítimos españoles.
@@ -149,7 +149,7 @@ categories:
         aguas marítimas interiores?
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 12
       options:
         a: Tienen, en todo caso, la obligación de abanderamiento y matriculación,
@@ -170,7 +170,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 13
       options:
         a: Están destinadas a señalar canales u obstrucciones.
@@ -182,7 +182,7 @@ categories:
       question: 'Las Marcas especiales:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 14
       options:
         a: Franjas horizontales rojas y blancas.
@@ -192,7 +192,7 @@ categories:
       question: 'Las Marcas de aguas navegables se distinguen por tener:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 15
       options:
         a: Los peligros aislados de dimensiones limitadas enteramente rodeadas de
@@ -207,7 +207,7 @@ categories:
       question: 'Las Marcas de peligro aislado sirven para indicar:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 16
       options:
         a: La existencia de un peligro en el canal principal.
@@ -218,7 +218,7 @@ categories:
         horizontales rojas o verdes, indicará:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 17
       options:
         a: Oeste.
@@ -233,7 +233,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 18
       options:
         a: Luz de tope.
@@ -247,7 +247,7 @@ categories:
         se corresponde con la:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 19
       options:
         a: Una luz de tope a proa, una luz de tope a popa más alta que la de proa,
@@ -262,7 +262,7 @@ categories:
         propulsión mecánica:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 20
       options:
         a: La escala que esté usando el radar puede imponer restricciones a la hora
@@ -278,7 +278,7 @@ categories:
         correctamente, se deberá tener en cuenta que:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 21
       options:
         a: Dos pitadas largas consecutivas separadas por un intervalo de unos dos
@@ -293,7 +293,7 @@ categories:
         pero parado y sin arrancada?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 22
       options:
         a: Los buques de propulsión mecánica, en navegación, se mantendrán apartados
@@ -309,7 +309,7 @@ categories:
         de buques”, indique cuál de las siguientes afirmaciones es INCORRECTA.
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 23
       options:
         a: Las Reglas de esta Parte deberán cumplirse en todas las condiciones meteorológicas.
@@ -328,7 +328,7 @@ categories:
         es INCORRECTA.
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 24
       options:
         a: Cualquier medio para hacer señales acústicas eficaces.
@@ -339,7 +339,7 @@ categories:
         deberá llevar un buque de 24 metros de eslora?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 25
       options:
         a: En cualquier embarcación de vela que no supere los 7 metros de eslora y
@@ -354,7 +354,7 @@ categories:
         RIPA, “Buque que alcanza”, ¿cuál será la manera correcta de maniobrar?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 26
       options:
         a: En cualquier embarcación de vela que no supere los 7 metros de eslora y
@@ -370,7 +370,7 @@ categories:
         su uso inmediato?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 27
       options:
         a: Dado que se trata de una situación de alcance, deberemos mantenernos siempre
@@ -390,7 +390,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 28
       options:
         a: Cazarlo.
@@ -400,7 +400,7 @@ categories:
       question: ¿Qué efecto conseguiremos al amollar un cabo?
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 29
       options:
         a: Proa al viento.
@@ -413,7 +413,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 30
       options:
         a: Realizar una llamada de socorro, si no puede detener la entrada de agua.
@@ -425,7 +425,7 @@ categories:
         es lo que NO se debe hacer?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 31
       options:
         a: En condiciones de escasa visibilidad, emplear la bocina de niebla.
@@ -437,7 +437,7 @@ categories:
         recomendaciones NO es adecuada?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: El tipo de agente extintor que se utiliza.
@@ -450,7 +450,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 33
       options:
         a: A través del NAVTEX.
@@ -460,7 +460,7 @@ categories:
       question: ¿Cuál de las siguientes NO es una forma de obtener la previsión meteorológica?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 34
       options:
         a: Un aumento en la intensidad del viento.
@@ -470,7 +470,7 @@ categories:
       question: 'Se denomina rolar a:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 35
       options:
         a: Nocturna que tiene dirección desde tierra hacia el mar.
@@ -480,7 +480,7 @@ categories:
       question: 'El terral es un viento o brisa:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 36
       options:
         a: Es una superficie de igual presión atmosférica entre el nivel del mar y
@@ -497,7 +497,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: Deriva.
@@ -508,7 +508,7 @@ categories:
         la acción del viento sobre su obra muerta se denomina:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 38
       options:
         a: Carta de escalas variadas superiores a 1/25.000 que muestra el detalle
@@ -523,7 +523,7 @@ categories:
         carta de navegación costera?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 39
       options:
         a: 110º.
@@ -533,7 +533,7 @@ categories:
       question: Convertir el rumbo cuadrantal S70W a circular.
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 40
       options:
         a: Puede sufrir perturbaciones debido a las tormentas eléctricas.
@@ -545,7 +545,7 @@ categories:
         es INCORRECTA?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 41
       options:
         a: Si la medimos en circulares en sentido de las agujas del reloj, es negativa.
@@ -559,7 +559,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 42
       options:
         a: Ra= 301°.
@@ -574,7 +574,7 @@ categories:
         para toda la zona de navegación es de 2°(W).
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 43
       options:
         a: l= 35°45,4´N; L= 005°14,8´W.
@@ -589,7 +589,7 @@ categories:
         200 metros.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: ANULADA
       id: 44
       options:
         a: 9,30 metros / 9,95 metros.
@@ -604,7 +604,7 @@ categories:
         el momento de la bajamar y pleamar respectivamente?'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 45
       options:
         a: l= 36º03,8' N; L= 005º15,6'W.
