@@ -90,7 +90,7 @@ El script organiza automáticamente las preguntas en las 11 categorías oficiale
 
 ---
 
-### `madrid_extract_answers.py`
+### `madrid_extract_answers_v2.py`
 **Propósito**: Extrae respuestas oficiales de PDFs usando OCR (Reconocimiento Óptico de Caracteres).
 
 **Características**:
@@ -111,19 +111,19 @@ El script organiza automáticamente las preguntas en las 11 categorías oficiale
 
 ```bash
 # Extraer todas las respuestas
-python madrid_extract_answers.py
+python madrid_extract_answers_v2.py
 
 # Extraer respuestas de un tipo específico
-python madrid_extract_answers.py --exam-type PER
+python madrid_extract_answers_v2.py --exam-type PER
 
 # Extraer respuestas de un modelo específico
-python madrid_extract_answers.py --exam-type PER --test-model TEST01
+python madrid_extract_answers_v2.py --exam-type PER --test-model TEST01
 
 # Especificar archivo PDF personalizado (para otros años/convocatorias)
-python madrid_extract_answers.py --exam-type PER --test-model TEST01 --pdf-path "/ruta/madrid-2024-noviembre.pdf"
+python madrid_extract_answers_v2.py --exam-type PER --test-model TEST01 --pdf-path "/ruta/madrid-2024-noviembre.pdf"
 ```
 
-**Salida**: Archivos JSON en `extracted_answers/` con respuestas extraídas.
+**Salida**: Archivos JSON en `extracted-answers/` con respuestas extraídas.
 
 ## 🔄 Flujo de Trabajo Completo
 
@@ -152,7 +152,7 @@ cd /workspaces/per-tests/tools/extraction
 python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test01
 
 # 2. Extraer respuestas del mismo test
-python madrid_extract_answers.py --exam-type PER --test-model TEST01
+python madrid_extract_answers_v2.py --exam-type PER --test-model TEST01
 
 # 3. Verificar archivos generados
 ls -la ../../data/exams/per-test01-madrid-2025-abril.yaml
@@ -171,7 +171,7 @@ python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pd
 ### Flujo Completo:
 1. **Preparar PDFs**: Colocar PDFs originales en `data/raw/questions/` y `data/raw/answers/`
 2. **Extraer preguntas**: Ejecutar `madrid_extract_questions.py` con parámetros apropiados
-3. **Extraer respuestas**: Ejecutar `madrid_extract_answers.py` con PDF correcto
+3. **Extraer respuestas**: Ejecutar `madrid_extract_answers_v2.py` con PDF correcto
 4. **Procesar datos**: Continuar con herramientas de `processing/`
 
 ## 🛠️ Dependencias del Sistema

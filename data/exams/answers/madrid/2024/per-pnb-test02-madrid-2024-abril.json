@@ -1,0 +1,32 @@
+{
+  "exam_type": "PER-PNB",
+  "test_model": "TEST02",
+  "total_answers": 18,
+  "answers": {
+    "28": "a",
+    "29": "b",
+    "30": "b",
+    "31": "d",
+    "32": "c",
+    "33": "b",
+    "34": "d",
+    "35": "b",
+    "36": "a",
+    "37": "c",
+    "38": "c",
+    "39": "b",
+    "40": "c",
+    "41": "b",
+    "42": "b",
+    "43": "b",
+    "44": "a",
+    "45": null
+  },
+  "source_pdf": "madrid-2024-abril.pdf",
+  "generated_at": null,
+  "pdf_info": {
+    "comunidad": "madrid",
+    "año": "2024",
+    "convocatoria": "abril"
+  }
+}
