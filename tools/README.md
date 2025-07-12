@@ -13,10 +13,6 @@ Scripts especializados en extraer información de PDFs:
 Scripts para procesar y transformar datos extraídos:
 - **`madrid_merge_exam.py`** - Aplica respuestas extraídas a archivos YAML
 
-### 🛠️ `utils/` - Utilidades y Análisis
-Herramientas de desarrollo y análisis:
-- **`pdf_analyzer.py`** - Análisis de estructura de PDFs para desarrollo
-
 ## 🚀 Flujo de Procesamiento End-to-End
 
 ### Paso 1: Extracción de Preguntas
