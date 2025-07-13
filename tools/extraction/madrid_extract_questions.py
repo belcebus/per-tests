@@ -837,8 +837,7 @@ class ParametricExamExtractor:
         # 4. Validar que las opciones tengan contenido mínimo
         for letter, option_text in options.items():
             if len(option_text.strip()) < 3:
-                print(f"❌ Pregunta {question_data.get('id')} rechazada: opción {letter} muy corta")
-                return False
+                print(f"⚠️  Pregunta {question_data.get('id')} opción {letter} muy corta: '{option_text.strip()}' (revisar manualmente)")
         
         # 5. Validar que la pregunta tenga estructura de pregunta (signos de interrogación, etc.)
         # o al menos contenido sustancial

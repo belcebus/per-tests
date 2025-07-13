@@ -1,0 +1,32 @@
+{
+  "exam_type": "PER-PNB",
+  "test_model": "TEST02",
+  "total_answers": 18,
+  "answers": {
+    "28": "b",
+    "29": "d",
+    "30": "a",
+    "31": "d",
+    "32": "c",
+    "33": "a",
+    "34": "d",
+    "35": "c",
+    "36": "c",
+    "37": "a",
+    "38": "c",
+    "39": "c",
+    "40": "a",
+    "41": "c",
+    "42": "c",
+    "43": "d",
+    "44": "b",
+    "45": "b"
+  },
+  "source_pdf": "madrid-2023-noviembre.pdf",
+  "generated_at": null,
+  "pdf_info": {
+    "comunidad": "madrid",
+    "año": "2023",
+    "convocatoria": "noviembre"
+  }
+}

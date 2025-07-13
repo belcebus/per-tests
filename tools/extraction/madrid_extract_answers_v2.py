@@ -78,7 +78,6 @@ def parse_exam_pages_dual(texts_full: list, texts_left: list, pdf_name: str) -> 
         # Buscar tipo de examen con distinción PER vs PER-PNB
         exam_type, exam_key = None, None
         lines = [l.strip().upper() for l in page_text.splitlines()]
-        exam_type, exam_key = None, None
         for idx, line in enumerate(lines):
             # PER y PER-PNB
             if re.search(r"PATR[ÓO]N\s+DE\s+EMBARCACIONES?\s+DE\s+RECREO", line):
@@ -89,17 +88,14 @@ def parse_exam_pages_dual(texts_full: list, texts_left: list, pdf_name: str) -> 
                     exam_type = "PATRÓN DE EMBARCACIONES DE RECREO"
                 exam_key = EXAM_TYPES[exam_type]["key"]
                 break
-            # PATRÓN DE YATE
             elif re.search(r"PATR[ÓO]N\s+DE\s+YATE", line):
                 exam_type = "PATRÓN DE YATE"
                 exam_key = EXAM_TYPES[exam_type]["key"]
                 break
-            # CAPITÁN DE YATE
             elif re.search(r"CAPIT[ÁA]N\s+DE\s+YATE", line):
                 exam_type = "CAPITÁN DE YATE"
                 exam_key = EXAM_TYPES[exam_type]["key"]
                 break
-            # Coincidencia exacta por si acaso
             elif line in EXAM_TYPES:
                 exam_type = line
                 exam_key = EXAM_TYPES[line]["key"]
@@ -110,24 +106,82 @@ def parse_exam_pages_dual(texts_full: list, texts_left: list, pdf_name: str) -> 
         # Buscar modelo
         model_match = re.search(r"C[ÓO]DIGO DE TEST\s*(\d{2})", page_text, re.IGNORECASE)
         test_model = f"TEST{model_match.group(1)}" if model_match else "UNKNOWN"
-        # Buscar respuestas SOLO en la zona izquierda
-        answers = []
-        for line in page_left.splitlines():
-            m = re.match(r"^\s*(\d{1,2})\s*([ABCDabcd])\s*$", line)
-            if m:
-                answers.append(m.group(2).lower())
-            else:
-                m2 = re.match(r"^\s*([ABCDabcd])\s*$", line)
-                if m2:
-                    answers.append(m2.group(1).lower())
-        # Numeración consecutiva robusta
+
+        # --- Mejorado: Parseo robusto de respuestas ---
+        valid_answers = {"a", "b", "c", "d", "anulada"}
         valid_range = [str(n) for n in EXAM_TYPES[exam_type]["range"]]
+        expected_num = int(valid_range[0])
         final_answers = {}
-        for idx, num in enumerate(valid_range):
-            if idx < len(answers):
-                final_answers[num] = answers[idx]
-            else:
-                final_answers[num] = None
+        used_numbers = set()
+        for line in page_left.splitlines():
+            # Limpiar línea y buscar patrón flexible
+            line = line.strip()
+            # Buscar ANULADA explícito
+            if re.search(r"anul[ao]da", line, re.IGNORECASE):
+                final_answers[str(expected_num)] = "anulada"
+                used_numbers.add(expected_num)
+                expected_num += 1
+                continue
+            # Buscar patrón: número (1-3 cifras) + letra (a-d)
+            m = re.match(r"^(\d{1,3})\s*([ABCDabcd])$", line)
+            if m:
+                num, ans = m.group(1), m.group(2).lower()
+                num_int = int(num)
+                # Comprobar si el número es el esperado
+                if num_int != expected_num:
+                    print(f"[WARN] Número no consecutivo detectado en línea '{line}'. Esperado: {expected_num}, Detectado: {num_int}. Se usará el esperado.")
+                    num_int = expected_num
+                if ans not in valid_answers:
+                    print(f"[WARN] Respuesta no válida '{ans}' en línea '{line}'. Se marcará como 'anulada'.")
+                    ans = "anulada"
+                final_answers[str(num_int)] = ans
+                used_numbers.add(num_int)
+                expected_num += 1
+                continue
+            # Buscar patrón: número pegado a letra, pero con errores de OCR (ej: 146B, 353A, 410A, 465B)
+            m2 = re.match(r"^(\d{2,})([ABCDabcd])$", line)
+            if m2:
+                num, ans = m2.group(1), m2.group(2).lower()
+                # Intentar extraer el número correcto (últimos dos dígitos suelen ser el número de pregunta)
+                num_int = int(num[-2:])
+                if num_int != expected_num:
+                    print(f"[WARN] Número OCR dudoso '{num}' en línea '{line}'. Esperado: {expected_num}, Usando: {expected_num}.")
+                    num_int = expected_num
+                if ans not in valid_answers:
+                    print(f"[WARN] Respuesta no válida '{ans}' en línea '{line}'. Se marcará como 'anulada'.")
+                    ans = "anulada"
+                final_answers[str(num_int)] = ans
+                used_numbers.add(num_int)
+                expected_num += 1
+                continue
+            # Buscar patrón: solo letra (puede ser respuesta suelta)
+            m3 = re.match(r"^([ABCDabcd])$", line)
+            if m3:
+                ans = m3.group(1).lower()
+                if ans not in valid_answers:
+                    print(f"[WARN] Respuesta no válida '{ans}' en línea '{line}'. Se marcará como 'anulada'.")
+                    ans = "anulada"
+                final_answers[str(expected_num)] = ans
+                used_numbers.add(expected_num)
+                expected_num += 1
+                continue
+            # Buscar patrón: número solo (puede ser error, ignorar)
+            m4 = re.match(r"^(\d{1,3})$", line)
+            if m4:
+                print(f"[WARN] Línea con solo número '{line}', ignorada.")
+                continue
+            # Si no coincide nada, ignorar o marcar como anulada
+            if line:
+                print(f"[WARN] Línea no reconocida: '{line}'. Se marcará como 'anulada'.")
+                final_answers[str(expected_num)] = "anulada"
+                used_numbers.add(expected_num)
+                expected_num += 1
+
+        # Completar las que falten
+        for num in valid_range:
+            if int(num) not in used_numbers:
+                final_answers[num] = "anulada"
+
         # Estructura de salida
         exams.append({
             "exam_type": exam_key.upper() if exam_key else exam_type,

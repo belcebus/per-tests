@@ -1,0 +1,651 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 1
+      options:
+        a: Gira en el sentido de las agujas del reloj cuando la embarcación avanza.
+        b: Gira en el sentido de las agujas del reloj cuando la embarcación retrocede.
+        c: En marcha avante hace que la popa caiga a babor.
+        d: En marcha atrás hace que la popa caiga a estribor.
+      question: 'Se dice que una hélice es dextrógira cuando:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 2
+      options:
+        a: Adrizada.
+        b: Escorada.
+        c: Con asiento positivo.
+        d: Con asiento negativo.
+      question: 'Considerando que no hay fuerzas externas, cuando la posición del
+        centro de gravedad de una embarcación NO se encuentra en el plano de crujía
+        podemos afirmar que la embarcación estará:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 3
+      options:
+        a: Cada uno de los dos cabos o cadenas que van sujetos a la caña del timón
+          y por medio de los cuales se maneja.
+        b: Los herrajes de la pala que permiten situar el timón sobre el espejo de
+          popa de la embarcación.
+        c: Las piezas que ensamblan la caña con la pala.
+        d: Los elementos que permiten bloquear la rueda del timón.
+      question: 'Los guardines del timón son:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 4
+      options:
+        a: El eje de simetría longitudinal de la proyección horizontal del casco.
+        b: La línea sobre el casco que coincide con la superficie del agua cuando
+          flota en su calado de diseño.
+        c: La línea vertical del plano de crujía que pasa por el centro de carena.
+        d: La línea transversal al plano de crujía que pasa por el centro de gravedad.
+      question: 'La “línea de crujía” de una embarcación es:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 5
+      options:
+        a: Nos acercaremos al lugar de fondeo elegido con el ancla a la pendura, dando
+          la popa al viento y con velocidad de gobierno con arrancada.
+        b: El punto de fondeo debe elegirse de forma que como mínimo se mantenga libre
+          de obstáculos un círculo de radio igual a la longitud de la cadena filada
+          más la eslora de la embarcación.
+        c: Se utilizarán dos anclas, cuyos ángulos de fondeo formen un ángulo entre
+          60º y 120º.
+        d: Se utilizarán dos anclas, una por proa y otra por popa.
+      question: 'Si optamos por el fondeo a la gira:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 6
+      options:
+        a: La gaza es el arco o curvatura que forma el cabo entre los extremos cuando
+          éste no trabaja o cuando se hace un nudo.
+        b: El as de guía es un nudo que sirve para unir por sus chicotes dos cabos
+          de una misma mena.
+        c: Un noray es una pieza de hierro, de forma cilíndrica ensanchada en su parte
+          superior, fijada en los muelles para hacer firmes las amarras de los barcos.
+        d: Una boya es una pieza que se coloca en el costado de la embarcación para
+          evitar que se dañe cuando está amarrada.
+      question: En relación con los elementos de amarre, ¿cuál de las siguientes afirmaciones
+        es CORRECTA?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 7
+      options:
+        a: La temperatura del aceite.
+        b: La temperatura del combustible.
+        c: El pararrayos.
+        d: El desvío de la aguja.
+      question: ¿Qué es prioritario comprobar tras una tormenta eléctrica que sucede
+        en las proximidades de la embarcación?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 8
+      options:
+        a: En llevar la mar por la aleta, navegando a una velocidad que evite sincronizarse
+          con las olas.
+        b: En llevar la mar por la amura, navegando a una velocidad reducida para
+          sincronizarse con las olas.
+        c: En llevar la mar por la amura, navegando a una velocidad que evite sincronizarse
+          con las olas.
+        d: En llevar la mar por la aleta, navegando a una velocidad reducida para
+          sincronizarse con las olas.
+      question: ¿En qué consiste “correr el temporal” y cuál es la forma adecuada
+        de hacerlo?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 9
+      options:
+        a: Llevar la máxima velocidad disponible.
+        b: Llevar un ancla lista para fondear.
+        c: Gobernar con poco timón, procurando no levantarlo en ningún momento.
+        d: Al maniobrar a un barco que navegue de “vuelta encontrada”, hacerlo inmediatamente
+          metiendo mucho timón.
+      question: ¿Cuál de las siguientes sería una precaución a tomar navegando en
+        aguas someras?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 10
+      options:
+        a: 36º C.
+        b: 35º C.
+        c: 33º C.
+        d: 32º C.
+      question: ¿Cuál es el límite de temperatura corporal por debajo del cual aparece
+        la hipotermia?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 26
+      options:
+        a: A intervalos que no excedan de dos minutos, dos pitadas largas consecutivas
+          separadas por un intervalo de unos dos segundos entre ambas.
+        b: A intervalos que no excedan de dos minutos, dos pitadas cortas consecutivas
+          separadas por un intervalo de unos dos segundos entre ambas.
+        c: Una pitada larga a intervalos que no excedan de dos minutos.
+        d: Una pitada corta a intervalos que no excedan de dos minutos.
+      question: 'Conforme a la Regla 35.b del RIPA, “Señales acústicas en visibilidad
+        reducida”, en las proximidades o dentro de una zona de visibilidad reducida,
+        un buque de propulsión mecánica en navegación, pero parado y sin arrancada,
+        emitirá:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 11
+      options:
+        a: Está prohibida en todo caso, sin que quepa excepción alguna.
+        b: Está permitida si se realiza a menos de 12 millas marinas de la tierra
+          más próxima y siempre que no esté contaminado con otro tipo de basuras.
+        c: Está prohibida a no ser que se deba a una pérdida accidental de basuras
+          resultante de una avería y se hubieran tomado toda suerte de precauciones
+          razonables para impedir o reducir a un mínimo tal pérdida.
+        d: Está permitida siempre que se realice a más de 12 millas marinas de la
+          tierra más próxima, mientras la embarcación no se encuentre en ruta y junto
+          a los demás desechos de alimentos que deberán estar desmenuzados o triturados
+          de manera que puedan pasar por cribas con mallas de una abertura máxima
+          de 25 mm.
+      question: 'Conforme a lo dispuesto en el Anexo V, Regla 3, del Convenio Internacional
+        para prevenir la contaminación por los buques (Convenio MARPOL), la descarga
+        en el mar de aceite de cocina:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 12
+      options:
+        a: A una distancia superior a 3 millas náuticas de la tierra más próxima si
+          las aguas sucias han sido previamente desmenuzadas y desinfectadas mediante
+          un sistema dotado de medios que permitan almacenarlas temporalmente, siempre
+          que sea aprobado u homologado por la Administración Marítima española.
+        b: A una distancia superior a 3 millas náuticas e inferior a 12 millas náuticas
+          de la tierra más próxima, hayan sido o no previamente desmenuzadas y desinfectadas,
+          si han estado almacenadas en sistemas de retención que se descarguen a un
+          régimen moderado.
+        c: A una distancia no superior a zona 7, si se utiliza algún sistema de retención
+          por el que las aguas sucias se descarguen instantáneamente, hallándose la
+          embarcación en ruta navegando a velocidad no inferior a 4 nudos.
+        d: Fuera de zona 7, si las aguas sucias han estado almacenadas en algún sistema
+          de retención que se descargue instantáneamente aprobado u homologado por
+          la Administración Marítima española, hallándose la embarcación en ruta navegando
+          a velocidad no superior a 4 nudos.
+      question: 'El Real Decreto 339/2021, de 18 de mayo, prohíbe la descarga de aguas
+        sucias por las embarcaciones de recreo en aguas en las que España ejerce soberanía,
+        derechos soberanos o jurisdicción, salvo que esta se efectúe:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 13
+      options:
+        a: Serán siempre de color blanco y su luz (si tiene) tendrá un ritmo de ocultaciones,
+          un destello largo cada 10 segundos.
+        b: Consistirán en franjas horizontales negras sobre blanco y su luz (si tiene)
+          será de color amarillo.
+        c: Serán de color negro con una o varias anchas bandas diagonales rojas y
+          su luz (si tiene) tendrá un ritmo de grupos de dos destellos GpD (2).
+        d: Serán siempre de color rojo y blanco en franjas verticales y su luz (si
+          tiene) será de color blanco.
+      question: 'Las Marcas de Aguas Navegables:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 14
+      options:
+        a: Que para salvar un peligro debemos navegar por el cuadrante Norte de la
+          Marca.
+        b: Que las aguas más profundas en esa zona se encuentran en el cuadrante Este.
+        c: Que hay una confluencia en el cuadrante Sur.
+        d: Que para salvar un peligro debemos navegar por el cuadrante Oeste de la
+          Marca.
+      question: Arribando a la zona de la Isla de Ons, observamos una Marca de balizamiento
+        con una marca de tope conformada por dos conos negros superpuestos opuestos
+        por sus vértices, ¿qué información nos está dando dicha Marca?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 15
+      options:
+        a: De forma cónica de color rojo con una banda ancha horizontal verde.
+        b: De forma cónica de color verde con una banda ancha horizontal roja.
+        c: De forma cilíndrica de color rojo con una banda ancha horizontal verde.
+        d: De forma cilíndrica de color verde con una banda ancha horizontal roja.
+      question: 'En el punto de bifurcación de un canal, siguiendo el sentido convencional
+        de balizamiento, el canal principal a estribor se indicará mediante una Marca
+        Lateral modificada cuya boya será:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 16
+      options:
+        a: Roja y continua.
+        b: Blanca y destellos en grupo de dos.
+        c: Amarilla y ritmo centelleante rápido.
+        d: Verde con un destello largo cada diez segundos.
+      question: 'Las Marcas de Peligro Aislado, si tienen luz, esta será:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 17
+      options:
+        a: Su presencia conlleva para el navegante la necesidad de consultar la carta
+          y las publicaciones náuticas porque indican una zona o configuración particular
+          cuya naturaleza se indica en ellas.
+        b: Tienen como objetivo principal señalar canales u obstrucciones e indicar
+          zonas o configuraciones particulares de carácter especial.
+        c: Se utilizan para llamar la atención sobre una configuración especial de
+          un canal, tal como un recodo una confluencia, una bifurcación o el extremo
+          de un bajo fondo.
+        d: Su uso principal es indicar el sentido convencional del balizamiento, que
+          debe indicarse en los documentos náuticos apropiados, en zonas con una configuración
+          especial.
+      question: En relación con las Marcas Especiales, indique la afirmación CORRECTA.
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 18
+      options:
+        a: Una luz blanca todo horizonte y luces de costado.
+        b: Únicamente una luz de tope a proa.
+        c: Únicamente una luz blanca todo horizonte.
+        d: Una luz blanca todo horizonte y, si es posible, exhibirán también luces
+          de costado.
+      question: Estando usted navegando a vela por la Ría de Muros, se le aproxima
+        otro buque de vela con riesgo de abordaje. Conforme a la Regla 12 del RIPA,
+        “Buques de vela”, ¿cuál será la manera correcta en que tendrá usted que maniobrar
+        si ambas embarcaciones reciben el viento por la misma banda y el otro buque
+        está a barlovento?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 19
+      options:
+        a: Dos luces todo horizonte en línea vertical, verde la superior y blanca
+          la inferior.
+        b: Las luces de costado y una luz de alcance.
+        c: Las luces de costado, una luz de alcance y una luz verde todo horizonte.
+        d: Dos luces blancas todo horizonte en línea vertical.
+      question: 'Conforme a la Regla 26 del RIPA, “Buques de pesca”, los buques dedicados
+        a la pesca que NO sean de arrastre y con aparejos largados que se extiendan
+        140 metros, cuando vayan con arrancada exhibirán adicionalmente a las luces
+        prescritas:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 20
+      options:
+        a: Una luz blanca colocada lo más cerca posible de la proa que muestra su
+          luz sin interrupción en todo un arco del horizonte de 360 grados.
+        b: Una luz blanca colocada lo más cerca posible de la popa que muestra su
+          luz sin interrupción en todo un arco del horizonte de 135 grados, fijada
+          de forma que sea visible en un arco de 67,5 grados, contados a partir de
+          la popa hacia cada una de las bandas del buque.
+        c: Una luz blanca colocada lo más cerca posible de la popa que muestra su
+          luz centelleante en todo un arco del horizonte de 135 grados, fijada de
+          forma que sea visible en un arco de 67,5 grados, contados a partir de la
+          popa hacia cada una de las bandas del buque.
+        d: Una luz amarilla colocada lo más cerca posible de la proa que muestra su
+          luz sin interrupción en todo un arco del horizonte de 360 grados.
+      question: 'Conforme a la Regla 21 del RIPA, “Definiciones”, la “luz de alcance”
+        es:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 21
+      options:
+        a: Cuando dos buques de propulsión mecánica se crucen con riesgo de abordaje,
+          el buque que tenga al otro por su costado de estribor se mantendrá apartado
+          de la derrota de este otro y, si las circunstancias lo permiten, evitará
+          cortarle la proa.
+        b: Cuando dos buques o embarcaciones, con independencia del tipo de propulsión
+          que tengan, se crucen con riesgo de abordaje, el buque que tenga al otro
+          por su costado de estribor se mantendrá apartado de la derrota de este otro
+          y, si las circunstancias lo permiten, evitará cortarle la proa.
+        c: Cuando dos buques de propulsión mecánica se crucen con riesgo de abordaje,
+          el buque que tenga al otro por su costado de babor se mantendrá apartado
+          de la derrota de este otro y, si las circunstancias lo permiten, evitará
+          cortarle la proa.
+        d: Cuando dos buques o embarcaciones, con independencia del tipo que sean,
+          se crucen con riesgo de abordaje, el buque que tenga al otro por su costado
+          de babor se mantendrá apartado de la derrota
+      question: Conforme a la Regla 15 del RIPA, “Situación «de cruce»”, indique cuál
+        de las siguientes afirmaciones es CORRECTA.
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 22
+      options:
+        a: Una luz blanca todo horizonte y luces de costado.
+        b: Únicamente una luz de tope a proa.
+        c: Únicamente una luz blanca todo horizonte.
+        d: Una luz blanca todo horizonte y, si es posible, exhibirán también luces
+          de costado.
+      question: 'Conforme a la Regla 23 del RIPA, “Buques de propulsión mecánica en
+        navegación”, si navegamos en un buque de propulsión mecánica de 5 metros de
+        eslora y con una velocidad máxima de 10 nudos, en lugar de las luces prescritas
+        para los buques de propulsión mecánica en navegación, podremos exhibir:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 23
+      options:
+        a: La demora de un buque que se aproxima no varía en forma apreciable.
+        b: La demora de un buque que se aproxima varía en forma apreciable.
+        c: Principalmente la velocidad del buque que se aproxima está por encima de
+          la velocidad de
+        d: Una luz amarilla de centelleos todo horizonte.
+      question: Navegando de noche cerca de la Punta de Sa Pedrera, distinguimos cada
+        vez más cerca de nuestra popa una luz de color blanca y las dos de costado
+        de otro buque de propulsión mecánica, ¿cuál es la forma correcta de maniobrar?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 24
+      options:
+        a: Dos luces de alcance en línea horizontal, de forma que quede señalizada
+          la manga máxima del buque que remolca y del buque remolcado.
+        b: Dos luces de tope en línea vertical.
+        c: Una luz de alcance amarilla.
+        d: Una luz amarilla de centelleos todo horizonte.
+      question: 'Conforme a la Regla 24 del RIPA, “Buques remolcando y empujando”,
+        todo buque de propulsión mecánica, cuando remolque a otro siendo la longitud
+        del remolque inferior a 200 metros, exhibirá:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 25
+      options:
+        a: La demora de un buque que se aproxima no varía en forma apreciable.
+        b: La demora de un buque que se aproxima varía en forma apreciable.
+        c: Principalmente la velocidad del buque que se aproxima está por encima de
+          la velocidad de
+        d: Opción D (contenido incompleto)
+      question: 'Conforme a la Regla 7 del RIPA, “Riesgo de abordaje”, se considerará
+        que existe riesgo de abordaje si, entre otras consideraciones:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 27
+      options:
+        a: Naranja.
+        b: Amarillo.
+        c: Rojo.
+        d: Negro.
+      question: Conforme al Anexo IV del RIPA, “Señales de peligro”, ¿de qué color
+        es la densa humareda producida por una señal fumígena que indica peligro o
+        necesidad de ayuda?
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 28
+      options:
+        a: La corriente.
+        b: El viento.
+        c: Las olas.
+        d: El garete.
+      question: Maniobrando para atracar en el pantalán de espera de la Marina de
+        Vilamoura, notamos un fuerte efecto de abatimiento que nos aleja del pantalán,
+        ¿qué agente está influyendo en nuestra maniobra?
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: d
+      id: 29
+      options:
+        a: El viento real es nulo. El viento aparente viene de proa con una velocidad
+          constante.
+        b: El viento real es nulo. El viento aparente viene de popa con una velocidad
+          constante.
+        c: El viento aparente es nulo. El viento real viene de proa con una velocidad
+          igual a la del barco.
+        d: El viento aparente es nulo. El viento real viene de popa con una velocidad
+          igual a la del barco.
+      question: 'Si en navegación con arrancada avante tenemos la impresión de que
+        no hay viento, podemos interpretar que:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 30
+      options:
+        a: La pleamar, que es el momento en que la marea está más alta.
+        b: La bajamar, que es el momento en que la marea está más alta.
+        c: La pleamar, que es el momento en que la marea está más baja.
+        d: La bajamar, que es el momento en que la marea está más baja.
+      question: 'En caso de varada, para liberar una embarcación por medios propios
+        utilizando las mareas, deberá esperar a:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 31
+      options:
+        a: Si dispone de balsa salvavidas, tire de la driza para abrirla automáticamente
+          sin amarrarla previamente a bordo.
+        b: Realice una llamada de socorro y active la radiobaliza manualmente únicamente
+          una vez haya abandonado la embarcación.
+        c: Si precisa voltear la balsa, colóquese a barlovento, súbase sobre la botella
+          de aíre comprimido y tire de las cinchas que cruzan la parte inferior de
+          la balsa.
+        d: Si no dispone de balsa salvavidas, salte al agua y adopte la postura fetal,
+          sin nadar, o flote abrazado a sus compañeros, para evitar la hipotermia.
+      question: En el caso de que se vea obligado a abandonar una embarcación y si
+        las circunstancias lo permiten, ¿cuál de las siguientes acciones es CORRECTA?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 32
+      options:
+        a: Chorro de agua.
+        b: Agua pulverizada.
+        c: Polvo seco.
+        d: Arena.
+      question: Si se produce un incendio a bordo en el tanque de combustible, ¿qué
+        agente extintor es el más adecuado para su extinción?
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 33
+      options:
+        a: El anemómetro se utiliza para determinar la velocidad del viento.
+        b: El anemómetro se utiliza para determinar la dirección del viento.
+        c: La veleta se utiliza para determinar la velocidad del viento.
+        d: El catavientos se ubica en la parte más alta del palo mayor de la embarcación.
+      question: En relación con los anemómetros, las veletas y los catavientos, ¿cuál
+        de las siguientes afirmaciones es CORRECTA?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 34
+      options:
+        a: 1,013.
+        b: '1.'
+        c: '13.'
+        d: '1013.'
+      question: 'La presión atmosférica a nivel del mar, expresada en milibares, es
+        aproximadamente de:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 35
+      options:
+        a: Su proceso de formación se denomina ciclogénesis.
+        b: El aire fluye hacia el exterior de los anticiclones y desciende desde allí,
+          lo que produce formación de nubosidad y precipitaciones.
+        c: Se llaman también altas presiones o, simplemente, altas.
+        d: La presión más baja se localiza siempre en el centro.
+      question: En relación con los anticiclones, ¿cuál de las siguientes afirmaciones
+        es CORRECTA?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 36
+      options:
+        a: El número de horas que el viento sopla en la misma dirección.
+        b: La rapidez con la que el viento cambia de dirección.
+        c: La velocidad con la que sopla el viento.
+        d: La extensión o alcance que tiene el viento sobre la mar cuando este sopla
+          con una dirección y fuerza constantes.
+      question: 'Se denomina “Intensidad” a:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 37
+      options:
+        a: Deriva.
+        b: Abatimiento.
+        c: Rumbo de superficie.
+        d: Intensidad de abatimiento.
+      question: 'La variación en el rumbo de una embarcación producida por la incidencia
+        del movimiento del medio sobre el que se desplaza en su obra viva, se denomina:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 38
+      options:
+        a: El chapitel.
+        b: La línea de fe.
+        c: El estilo.
+        d: El domo.
+      question: ¿Sobre qué pieza afilada de la aguja náutica descansa y oscila la
+        rosa?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 39
+      options:
+        a: Oposición.
+        b: Marcación.
+        c: Enfilación.
+        d: Veril.
+      question: 'La línea de posición trazada por la alineación de dos objetos visibles
+        de la costa o reconocibles en una carta náutica recibe el nombre de:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 40
+      options:
+        a: Es la suma algebraica de la declinación magnética y el desvío, y su resultado
+          se aplica al rumbo de aguja para obtener el rumbo verdadero.
+        b: Es la declinación magnética actualizada al año en curso.
+        c: 'Se calcula usando la siguiente fórmula: Ct = Rm - ∆.'
+        d: Es la suma algebraica de la declinación magnética y el desvío, y su resultado
+          se aplica al rumbo magnético para obtener el rumbo verdadero.
+      question: En relación con la Corrección Total, ¿cuál de las siguientes afirmaciones
+        es CORRECTA?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 41
+      options:
+        a: Publicaciones náuticas relativas a primeros auxilios y seguridad marítima.
+        b: Representaciones con información relativa a la costa, impresas sobre la
+          carta náutica en la parte inferior derecha.
+        c: Publicaciones con información adicional sobre la costa.
+        d: Documentos que contienen información sobre balizamiento, radiocomunicaciones,
+          seguridad marítima e instrucciones emitidas por SASEMAR.
+      question: 'Los derroteros son:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 42
+      options:
+        a: l= 35º 49'8 N;  L= 005º 49'5 W.
+        b: l= 35º 50' N ;   L= 005º 49'5 W.
+        c: l= 35º 50'1 N;  L= 006º 00'7 W.
+        d: l= 36º 50'1 N;  L= 006º 00' W.
+      question: Sabiendo que nuestra embarcación a Hrb 12:00 está a 5 millas de Cabo
+        Espartel, tomamos demora verdadera de Punta Malabata Dv=94º. Sabiendo que
+        a esta hora estábamos al Oeste del Cabo Espartel, se pide cuál es la situación
+        a las 12:00 h.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 43
+      options:
+        a: 8,02 metros.
+        b: 7,16 metros.
+        c: 7,82 metros.
+        d: 7,62 metros.
+      question: Hallar la sonda en la primera pleamar del día 8 de noviembre de 2023
+        en Algeciras, sabiendo que la presión atmosférica es de 1033 mb en un punto
+        de sonda en la carta de 6,9 metros.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 44
+      options:
+        a: Ra= 068°.
+        b: Ra= 064°.
+        c: Ra= 060°.
+        d: Ra= 070°.
+      question: Siendo Hrb 14:00 situados en el veril (línea isobática) de los 200
+        metros, navegando con rumbo de aguja= 085° y un desvío de 3° (-) se toma marcación
+        al Faro de Cabo Espartel= 63° Estribor. Una vez situados, se pide calcular
+        el rumbo de aguja para pasar a 5 millas al Norte verdadero del Faro de Punta
+        Malabata, siendo el desvío para el nuevo rumbo de 4° (+). La declinación magnética
+        para toda la zona de navegación es de 2°(W).
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 45
+      options:
+        a: l= 36° 00,4´N; L= 005° 33,3´W.
+        b: l= 35° 59,4´N; L= 005° 33,4´W.
+        c: l= 35° 58,9´N; L= 005° 34,8´W.
+        d: l= 35° 57,5´N; L= 005° 30,9´W.
+      question: Navegando en demanda del Estrecho de Gibraltar con rumbo ESE y declinación
+        magnética 2°W, a Hrb  12:00 nos encontramos al Sur verdadero del Faro de Barbate
+        y a 11 millas del Faro de Cabo Espartel. En esa situación damos rumbo al Faro
+        de la Isla de Tarifa. Puestos a rumbo el desvío es 2°(+). Cuando el Faro de
+        Punta Paloma nos demora por el través de babor, ponemos un rumbo de aguja
+        de 091°. Puestos a rumbo el desvío es 1°(+). Calcular la posición de nuestra
+        embarcación a Hrb 13:48, sabiendo que la velocidad de máquinas para todo el
+        ejercicio es de 10 nudos.
+exam_info:
+  call: noviembre
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 02
+  test_code: test02
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2023

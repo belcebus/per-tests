@@ -237,3 +237,6 @@ $RECYCLE.BIN/
 
 # Linux
 *~
+
+# temporary files
+extracted-answers/
