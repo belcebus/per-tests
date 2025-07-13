@@ -172,16 +172,18 @@ class ParametricExamExtractor:
         Encuentra la sección del examen específico en el texto.
         Retorna: (texto_seccion, posicion_inicio, posicion_fin)
         """
-        # Construir patrón de búsqueda para el inicio del examen
-        start_pattern = rf"{re.escape(pattern.title)}\s*{re.escape(pattern.subtitle)}"
-        
-        print(f"🔍 Buscando patrón: {start_pattern}")
-        
+        # Permitir cabeceras intermedias entre el título y el subtítulo (hasta 200 caracteres)
+        start_pattern = rf"{re.escape(pattern.title)}(.{{0,200}}?){re.escape(pattern.subtitle)}"
+        print(f"🔍 Buscando patrón tolerante: {start_pattern}")
         start_match = re.search(start_pattern, text, re.IGNORECASE | re.DOTALL)
         if not start_match:
-            print(f"❌ No se encontró el patrón de inicio del examen")
-            return "", 0, 0
-        
+            # Si no encuentra, intentar patrón clásico por compatibilidad
+            fallback_pattern = rf"{re.escape(pattern.title)}\s*{re.escape(pattern.subtitle)}"
+            print(f"🔍 Buscando patrón clásico: {fallback_pattern}")
+            start_match = re.search(fallback_pattern, text, re.IGNORECASE | re.DOTALL)
+            if not start_match:
+                print(f"❌ No se encontró el patrón de inicio del examen")
+                return "", 0, 0
         start_pos = start_match.start()
         print(f"✅ Examen encontrado en posición: {start_pos}")
         
@@ -275,7 +277,6 @@ class ParametricExamExtractor:
         i = 0
         while i < len(lines):
             line = lines[i].strip()
-            
             # Verificar si la línea es un título de categoría
             line_lower = line.lower().rstrip('.')
             if line_lower in category_title_map:
@@ -284,77 +285,77 @@ class ParametricExamExtractor:
                 print(f"� Encontrada categoría: {current_category} - {current_category_name}")
                 i += 1
                 continue
-            
-            # Verificar si la línea es una pregunta numerada de forma más específica
-            # Debe ser: número al inicio + espacio + texto que no sea solo número
-            # Y NO debe ser parte de una regla del RIPA
+            # Verificar si la línea es una pregunta numerada con texto en la misma línea
             question_match = re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', line)
             if question_match:
                 question_num = int(question_match.group(1))
                 question_text_start = question_match.group(2)
-                
                 # Solo procesar preguntas en el rango válido
                 if question_num < 1 or question_num > pattern.total_questions:
                     i += 1
                     continue
-                
                 # Verificar que NO sea parte de una regla del RIPA
                 is_ripa_rule = (re.search(r'del\s+RIPA', question_text_start, re.IGNORECASE) or
                                re.search(r'de\s+la\s+Regla', question_text_start, re.IGNORECASE) or
                                re.search(r'Regla\s+\d+', line, re.IGNORECASE))
-                
                 if is_ripa_rule:
-                    # Es parte de una regla, no una nueva pregunta, continuar agregando al contenido actual
                     i += 1
                     continue
-                
                 # Recopilar todo el contenido de la pregunta
                 question_content = question_match.group(2)
                 i += 1
-                
                 # Continuar leyendo líneas hasta encontrar la siguiente pregunta o categoría
                 while i < len(lines):
                     next_line = lines[i].strip()
-                    
-                    # Parar si encontramos la siguiente pregunta numerada
-                    # Ser MUY específico para evitar confundir números de reglas RIPA con números de pregunta
-                    # Debe ser: número al inicio + espacio + texto que NO empiece con "del RIPA" o patrones similares
                     question_pattern_match = re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', next_line)
                     if question_pattern_match:
                         potential_question_num = int(question_pattern_match.group(1))
                         question_text_start = question_pattern_match.group(2)
-                        
-                        # Solo parar si:
-                        # 1. Es un número de pregunta válido y mayor al actual
-                        # 2. NO es parte de una regla del RIPA (ej: "32 del RIPA", "13 del RIPA")
-                        # 3. NO es parte de un texto de regla (ej: "Regla 32", "Regla 13")
                         is_valid_question_num = (1 <= potential_question_num <= pattern.total_questions and 
                                                potential_question_num > question_num)
-                        
-                        # Detectar si es parte de una regla del RIPA
                         is_ripa_rule = (re.search(r'del\s+RIPA', question_text_start, re.IGNORECASE) or
                                        re.search(r'de\s+la\s+Regla', question_text_start, re.IGNORECASE) or
                                        re.search(r'Regla\s+\d+', next_line, re.IGNORECASE))
-                        
                         if is_valid_question_num and not is_ripa_rule:
                             break
-                    
-                    # Parar si encontramos una nueva categoría
                     next_line_lower = next_line.lower().rstrip('.')
                     if next_line_lower in category_title_map:
                         break
-                    
-                    # Añadir la línea al contenido de la pregunta
                     if next_line:
                         question_content += '\n' + next_line
                     i += 1
-                
-                # Procesar el contenido completo de la pregunta
                 question_data = self._parse_single_question(question_num, question_content, current_category, current_category_name)
                 if question_data and self._is_valid_question(question_data):
                     questions.append(question_data)
-            else:
+                continue
+            # NUEVO: Verificar si la línea es solo el número de pregunta (ej: '42') y el texto empieza en la siguiente línea
+            question_number_only = re.match(r'^\s*(\d{1,2})\s*$', line)
+            if question_number_only:
+                question_num = int(question_number_only.group(1))
+                if question_num < 1 or question_num > pattern.total_questions:
+                    i += 1
+                    continue
+                # Recoger el texto de la pregunta de la(s) siguiente(s) línea(s)
                 i += 1
+                question_content_lines = []
+                while i < len(lines):
+                    next_line = lines[i].strip()
+                    # Parar si encontramos la siguiente pregunta numerada o categoría
+                    next_question_match = re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', next_line)
+                    next_question_number_only = re.match(r'^\s*(\d{1,2})\s*$', next_line)
+                    next_line_lower = next_line.lower().rstrip('.')
+                    if (next_question_match or next_question_number_only or next_line_lower in category_title_map):
+                        break
+                    if next_line:
+                        question_content_lines.append(next_line)
+                    i += 1
+                question_content = '\n'.join(question_content_lines)
+                question_data = self._parse_single_question(question_num, question_content, current_category, current_category_name)
+                if question_data and self._is_valid_question(question_data):
+                    questions.append(question_data)
+                continue
+            # Si no es pregunta ni categoría, avanzar
+            i += 1
         
         # Ordenar por ID para asegurar orden secuencial
         questions.sort(key=lambda x: x['id'])
@@ -845,7 +846,8 @@ class ParametricExamExtractor:
             '?' in question_text or
             ':' in question_text or  # Muchas preguntas terminan con ":"
             question_text.lower().startswith(('qué', 'cuál', 'cómo', 'dónde', 'cuándo', 'por qué', 'indique', 'señale', 'conforme', 'según', 'de acuerdo', 'en relación', 'con respecto', 'ante una', 'en caso de', 'se define', 'todo buque', 'un buque')) or
-            len(question_text.split()) >= 5  # Al menos 5 palabras
+            len(question_text.split()) >= 4 or  # Relajado: al menos 4 palabras
+            question_text.strip().endswith('...')  # O termina en puntos suspensivos
         )
         
         if not has_question_structure:
