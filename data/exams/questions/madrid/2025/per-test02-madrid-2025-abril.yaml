@@ -96,7 +96,7 @@ categories:
         una recomendación de uso y estiba?
     - category: 3
       category_name: Seguridad
-      correct_answer: b
+      correct_answer: b,c
       id: 8
       options:
         a: Es un equipo personal adaptado a la talla de cada tripulante.
