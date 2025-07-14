@@ -568,18 +568,36 @@ function showResults(result) {
         // Mostrar todas las opciones para referencia
         const opcionesHtml = Object.entries(detail.opciones).map(([letra, texto]) => {
             let claseOpcion = 'option-reference';
-            if (letra === detail.respuesta_correcta) {
+            const esCorrecta = detail.respuestas_correctas_lista.includes(letra);
+            const esRespuestaUsuario = letra === detail.respuesta_usuario;
+            
+            if (esCorrecta) {
                 claseOpcion += ' correct-option';
             }
-            if (letra === detail.respuesta_usuario && !detail.es_correcta) {
+            if (esRespuestaUsuario && !detail.es_correcta) {
                 claseOpcion += ' user-wrong-option';
             }
+            
+            // Indicadores especiales
+            let indicadores = '';
+            if (esCorrecta) {
+                if (detail.es_anulada) {
+                    indicadores = '<span class="correct-indicator">✓ (anulada)</span>';
+                } else if (detail.respuestas_correctas_lista.length > 1) {
+                    indicadores = '<span class="correct-indicator">✓</span>';
+                } else {
+                    indicadores = '<span class="correct-indicator">✓</span>';
+                }
+            }
+            if (esRespuestaUsuario && !detail.es_correcta) {
+                indicadores += '<span class="wrong-indicator">✗</span>';
+            }
+            
             return `
                 <div class="${claseOpcion}">
                     <span class="option-letter-ref">${letra.toUpperCase()}</span>
                     <span class="option-text-ref">${texto}</span>
-                    ${letra === detail.respuesta_correcta ? '<span class="correct-indicator">✓</span>' : ''}
-                    ${letra === detail.respuesta_usuario && !detail.es_correcta ? '<span class="wrong-indicator">✗</span>' : ''}
+                    ${indicadores}
                 </div>
             `;
         }).join('');
@@ -616,6 +634,12 @@ function showResults(result) {
                         <div class="options-list">
                             ${opcionesHtml}
                         </div>
+                        ${detail.es_anulada ? 
+                            '<div class="answer-info anulada-info">🔺 Pregunta anulada: todas las opciones son válidas</div>' :
+                            detail.respuestas_correctas_lista.length > 1 ? 
+                                `<div class="answer-info multiple-info">ℹ️ Múltiples respuestas válidas: ${detail.respuestas_correctas_lista.map(r => r.toUpperCase()).join(', ')}</div>` :
+                                ''
+                        }
                     </div>
                 </div>
             </div>

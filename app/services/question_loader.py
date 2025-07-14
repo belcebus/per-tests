@@ -347,7 +347,10 @@ class QuestionLoader:
                         if 0 <= respuesta_correcta < len(letters):
                             respuesta_correcta = letters[respuesta_correcta]
                     elif respuesta_correcta == "ANULADA":
-                        respuesta_correcta = "ANULADA"
+                        respuesta_correcta = "anulada"  # Normalizar a minúsculas
+                    elif isinstance(respuesta_correcta, str):
+                        # Normalizar múltiples respuestas: "A,B" -> "a,b"
+                        respuesta_correcta = respuesta_correcta.lower().replace(" ", "")
                     
                     question = Question(
                         id=str(question_data.get('id', f"{file_path.stem}_{len(questions)}")),
