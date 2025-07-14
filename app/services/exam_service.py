@@ -75,15 +75,29 @@ class ExamService:
         # 3. Crear ID único para el examen
         exam_id = f"exam_{uuid.uuid4().hex[:8]}"
         
-        # 4. Guardar examen completo en memoria (con respuestas correctas)
+        # 4. Asignar IDs únicos temporales a las preguntas para evitar colisiones
+        # Esto resuelve el problema de IDs duplicados entre diferentes tests
+        questions_with_unique_ids = []
+        for i, question in enumerate(selected_questions):
+            # Crear una copia de la pregunta con ID único temporal
+            unique_question = Question(
+                id=f"{exam_id}_q{i+1}",  # ID único: exam_abc123_q1, exam_abc123_q2, etc.
+                enunciado=question.enunciado,
+                opciones=question.opciones,
+                respuesta_correcta=question.respuesta_correcta,
+                metadata=question.metadata
+            )
+            questions_with_unique_ids.append(unique_question)
+        
+        # 5. Guardar examen completo en memoria (con respuestas correctas)
         cached_exam = CachedExam(
-            questions=selected_questions,
+            questions=questions_with_unique_ids,
             metadata=request,
             timestamp=datetime.now()
         )
         self.active_exams[exam_id] = cached_exam
         
-        # 5. Crear versión para cliente (sin respuestas correctas)
+        # 6. Crear versión para cliente (sin respuestas correctas)
         client_questions = [
             QuestionForClient(
                 id=q.id,
@@ -91,13 +105,14 @@ class ExamService:
                 opciones=q.opciones,
                 metadata=q.metadata
             )
-            for q in selected_questions
+            for q in questions_with_unique_ids
         ]
         
-        # 6. Limpiar exámenes expirados
+        # 7. Limpiar exámenes expirados
         self._cleanup_expired_exams()
         
         print(f"✅ Examen generado con ID: {exam_id}")
+        print(f"🔑 IDs únicos asignados: {[q.id for q in questions_with_unique_ids[:3]]}...")
         
         return GeneratedExam(
             exam_id=exam_id,

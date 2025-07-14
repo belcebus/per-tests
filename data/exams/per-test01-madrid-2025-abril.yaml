@@ -59,7 +59,7 @@ categories:
         b: La gaza es la curvatura que forma el cabo cuando este no trabaja o cuando
           se hace un nudo.
         c: La cornamusa es una pieza de metal o madera que, encorvada en sus extremos
-          y fija por su punto
+          y fija por su punto medio, sirve para amarrar los cabos.
         d: El chicote es un bucle en el cabo que queda al anudarlo.
       question: ¿Cuál de las siguientes definiciones es CORRECTA?
     - category: 2
@@ -85,7 +85,7 @@ categories:
       options:
         a: Son elementos de seguridad en el caso de persona al agua.
         b: Deben estibarse a proa y en el interior de la embarcación, para evitar
-          que sufran las inclemencias
+          que sufran las inclemencias del tiempo.
         c: El nombre de la embarcación debe figurar en ellos.
         d: Si pierde uno durante la navegación debe informar a Salvamento Marítimo.
       question: En relación con los aros salvavidas, ¿cuál de las siguientes afirmaciones
@@ -110,7 +110,7 @@ categories:
         b: El centro de gravedad y el centro de carena de la embarcación.
         c: El centro de la flotación y el centro geométrico de la embarcación.
         d: El centro de gravedad de los pesos por encima de la cubierta y el centro
-          de carena de la
+          de carena de la embarcación.
       question: 'La estabilidad estática de una embarcación depende de la posición
         simultánea de:'
     - category: 3
@@ -133,13 +133,16 @@ categories:
       id: 11
       options:
         a: Se permite la descarga en el mar de desechos de alimentos a menos de 12
-          millas marinas de la
+          millas marinas de la tierra más próxima cuando la embarcación no esté en
+          ruta.
         b: Los desechos de alimentos podrán descargarse sin excepciones, incluso si
-          están contaminados
+          están contaminados con otro tipo de basuras.
         c: La descarga en el mar de desechos de alimentos se realizará tan lejos como
-          sea posible de la tierra
+          sea posible de la tierra más próxima, pero nunca a menos de 12 millas marinas
+          de la tierra más próxima.
         d: Se permite la descarga en el mar de desechos de alimentos a menos de 12
-          millas marinas de la
+          millas marinas de la tierra más próxima si los desechos están desmenuzados
+          o triturados de forma que pasen por cribas de abertura máxima de 15 mm.
       question: De acuerdo con la Regla 6 del Anexo V del Convenio MARPOL “Descarga
         de basuras dentro de zonas especiales”, seleccione la respuesta CORRECTA.
     - category: 4
@@ -148,13 +151,15 @@ categories:
       id: 12
       options:
         a: Si el buque que recibe la alerta de socorro no puede prestar auxilio, el
-          patrón anotará en la carta
+          patrón anotará en la carta de navegación la razón por la cual no acudió
+          en auxilio de las personas en peligro.
         b: Los patrones de las embarcaciones que embarquen a personas en peligro en
-          el mar tratarán a esas
+          el mar tratarán a esas personas con humanidad, conforme a la capacidad de
+          la embarcación.
         c: La obligación de prestar auxilio es independiente de la nacionalidad y
-          de las circunstancias en
+          de las circunstancias en que hayan sido encontradas.
         d: El patrón de la embarcación que se halle en peligro tiene derecho a requerir
-          auxilio de uno o
+          auxilio de uno o varios de los buques que mejor auxilio puedan prestarle.
       question: Respecto a la seguridad en la navegación y los mensajes de socorro,
         señale la opción INCORRECTA.
   5:
@@ -197,12 +202,12 @@ categories:
       id: 16
       options:
         a: La marca de tope, formada por dos esferas superpuestas, es la característica
-          diurna más
+          diurna más importante de la marca.
         b: Una aplicación importante de la Marca es la de señalizar un canal/área
-          de interés para una clase
+          de interés para una clase particular de buque.
         c: Si la Marca tuviese luz, sería amarilla.
         d: La Marca puede incluir el uso de un pictograma para indicar su finalidad,
-          usando la simbología
+          usando la simbología de la Organización Hidrográfica Internacional (OHI).
       question: 'Señale la afirmación que NO aplica a las Marcas Especiales:'
     - category: 5
       category_name: Balizamiento
@@ -243,13 +248,13 @@ categories:
       id: 19
       options:
         a: Cambiando el rumbo con anticipación suficiente y manteniendo de forma decidida
-          siempre
+          siempre nuestra velocidad para quedar bien francos del otro buque.
         b: Maniobrando con anticipación suficiente y de forma decidida para quedar
-          bien francos del otro
+          bien francos del otro buque.
         c: Manteniendo siempre nuestro rumbo y modificando con anticipación suficiente
-          la velocidad de
+          la velocidad de forma decidida para evitar el abordaje.
         d: Manteniendo de forma decidida nuestro rumbo y velocidad para no generar
-          dudas de nuestras
+          dudas de nuestras intenciones al otro buque.
       question: De conformidad con la Regla 16 del RIPA, “Maniobra del buque que «cede
         el paso»”, si estamos obligados a mantenernos apartados de la derrota de otro
         buque, en la medida de lo posible, ¿cómo debemos actuar?
@@ -258,14 +263,12 @@ categories:
       correct_answer: b
       id: 20
       options:
-        a: Mantenernos a rumbo ya que en ningún caso debemos maniobrar por tener preferencia
-          frente a un
-        b: Maniobrar de forma clara, con antelación y respetando las buenas prácticas
-          marineras para
-        c: Aumentar la velocidad ligeramente para tratar de propiciar que la otra
-          embarcación haga la
-        d: Maniobrar cambiando de rumbo ligeramente con poca antelación para no confundir
-          a la otra
+        a: Dirigir un haz de luz de nuestro proyector en la dirección del peligro,
+          haciéndolo de forma que no moleste a otros buques.
+        b: Utilizar luces intermitentes de gran intensidad.
+        c: Utilizar luces giratorias de gran intensidad, como las luces estroboscópicas.
+        d: Hacer cualquier señal acústica o luminosa de las autorizadas en cualquiera
+          de las reglas del RIPA.
       question: 'Navegando en una motora nos encontramos en una situación de cruce
         por nuestro costado de estribor con un velero que exhibe una marca cónica
         con el vértice hacia abajo. Conforme a la Regla 8 del RIPA, “Maniobras para
@@ -276,7 +279,7 @@ categories:
       id: 21
       options:
         a: Dirigir un haz de luz de nuestro proyector en la dirección del peligro,
-          haciéndolo de forma que no
+          haciéndolo de forma que no moleste a otros buques.
         b: Utilizar luces intermitentes de gran intensidad.
         c: Utilizar luces giratorias de gran intensidad, como las luces estroboscópicas.
         d: Hacer cualquier señal acústica o luminosa de las autorizadas en cualquiera
@@ -288,10 +291,10 @@ categories:
       correct_answer: a
       id: 22
       options:
-        a: Cada uno caerá a estribor de forma que pase por la banda de babor del otro.
-        b: Cada uno caerá a babor de forma que pase por la banda de estribor del otro.
-        c: El yate caerá a babor y el buque de recreo a estribor.
-        d: El yate caerá a estribor y el buque de recreo a babor.
+        a: Buque sin gobierno.
+        b: Buque de pesca.
+        c: Buque con capacidad de maniobra restringida.
+        d: Buque restringido por su calado.
       question: Navegando en un yate a motor al rumbo 178º se observa por proa un
         buque de recreo que también navega a motor al rumbo 358º, con riesgo de abordaje.
         De acuerdo con la Regla 14 del RIPA, "Situación de vuelta encontrada", ¿cuál
@@ -305,7 +308,7 @@ categories:
         b: Deberá utilizar las vías de circulación siguiendo la dirección general
           de la corriente de tráfico.
         c: Navegará exclusivamente por la zona de separación del tráfico para no estorbar
-          el tránsito de los
+          el tránsito de los buques mercantes.
         d: En caso de necesidad de cruce del dispositivo, deberá hacerlo siguiendo
           un rumbo que en la
       question: 'Conforme a la Regla 10 del RIPA, “Dispositivos de separación del
@@ -316,9 +319,9 @@ categories:
       id: 24
       options:
         a: Luces de costado, una luz de alcance y dos luces todo horizonte en línea
-          vertical, roja la superior
+          vertical, roja la superior y verde la inferior.
         b: Luces de costado y una luz de alcance en un farol combinado en el tope
-          del palo o cerca de él, en
+          del palo o cerca de él, en el lugar más visible.
         c: Luces de costado y una luz blanca todo horizonte.
         d: Luces de costado y una luz de alcance.
       question: De acuerdo con la Regla 25 del RIPA, “Buques de vela en navegación
@@ -331,13 +334,16 @@ categories:
       id: 25
       options:
         a: Un tope, las luces de costado, la luz de alcance, la luz de remolque y
-          tres luces rojas todo
+          tres luces rojas todo horizonte, en el lugar más visible.
         b: Dos topes, las luces de costado, luz de alcance y, además, tres luces todo
-          horizonte en línea
+          horizonte en línea vertical, en el lugar más visible. De estas últimas,
+          la más elevada y la más baja de estas luces serán rojas y la luz central
+          será blanca.
         c: Dos topes, las luces de costado, luz de alcance y tres luces rojas todo
-          horizonte, en el lugar más
+          horizonte, en el lugar más visible.
         d: Un tope, las luces de costado, la luz de alcance, y, además, dos luces
-          todo horizonte en línea
+          todo horizonte en línea vertical, en el lugar más visible. De estas últimas,
+          será roja la superior y blanca la inferior.
       question: De acuerdo con las Reglas 23 y 27 del RIPA, ¿qué conjunto de luces
         exhibirá de noche un buque de 60 metros de eslora, de propulsión mecánica,
         con arrancada y con capacidad de maniobra restringida, sabiendo que no se
@@ -404,11 +410,12 @@ categories:
       id: 30
       options:
         a: Lo primero que debemos hacer siempre es separar las embarcaciones involucradas
-          en el abordaje
+          en el abordaje lo antes posible.
         b: El modo de proceder será siempre el mismo, sin importar si el abordaje
-          resulta en una avería por
+          resulta en una avería por debajo o por encima de la línea de flotación.
         c: En caso de que seamos responsables del mismo, estamos obligados a prestar
-          asistencia legal al
+          asistencia legal al patrón de la otra embarcación involucrada en caso de
+          que lo necesite.
         d: La evaluación de las averías sufridas debe realizarse a la mayor brevedad
           posible.
       question: 'Tras sufrir un abordaje:'
@@ -420,10 +427,10 @@ categories:
         a: Avisar a Salvamento Marítimo y esperar instrucciones sin tomar ninguna
           otra medida.
         b: Comenzar a achicar el agua utilizando la bomba de achique y proceder, si
-          es posible, al
+          es posible, al taponamiento de los orificios con espiches o colchonetas.
         c: Poner de inmediato rumbo a puerto sin intentar achicar el agua.
         d: Detener el motor y vaciar el depósito de agua dulce al mínimo imprescindible
-          para aumentar la
+          para aumentar la flotabilidad.
       question: 'Si se detecta una vía de agua a bordo, se deberá inmediatamente:'
     - category: 8
       category_name: Emergencias en la mar
@@ -431,12 +438,13 @@ categories:
       id: 32
       options:
         a: Salte al agua con las piernas y rodillas juntas y encogidas, sujetando
-          el chaleco y tapándose la
+          el chaleco y tapándose la nariz.
         b: No intente nadar y si tiene que hacerlo, hágalo de espaldas.
         c: Deje la radiobaliza en la embarcación, para facilitar su localización por
           salvamento marítimo.
         d: Si precisa voltear una balsa, colóquese a barlovento y súbase sobre la
-          botella de aíre comprimido,
+          botella de aíre comprimido, tirando de las cinchas que cruzan la parte inferior
+          de la balsa.
       question: Si se ve obligado a abandonar la embarcación, ¿cuál de las siguientes
         indicaciones a seguir es CORRECTA?
   9:
@@ -452,7 +460,7 @@ categories:
           y fuerza constantes.
         c: A mayor valor, mayor será el oleaje.
         d: Se expresa en horas, refiriéndose al tiempo que un determinado viento sopla
-          en una dirección
+          en una dirección determinada.
       question: En relación con el fetch, indique cuál de las siguientes afirmaciones
         es INCORRECTA.
     - category: 9
@@ -461,13 +469,13 @@ categories:
       id: 34
       options:
         a: Los vientos circulan en sentido antihorario y el valor de las isobaras
-          disminuye desde la periferia
+          disminuye desde la periferia hacia el centro.
         b: Los vientos circulan en sentido antihorario y el valor de las isobaras
-          aumenta desde la periferia
+          aumenta desde la periferia hacia el centro.
         c: Los vientos circulan en sentido horario y el valor de las isobaras disminuye
-          desde la periferia
+          desde la periferia hacia el centro.
         d: Los vientos circulan en sentido horario y el valor de las isobaras aumenta
-          desde la periferia hacia
+          desde la periferia hacia el centro.
       question: ¿Cuáles son las características de una borrasca en el Hemisferio Norte?
     - category: 9
       category_name: Meteorología

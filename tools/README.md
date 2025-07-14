@@ -7,15 +7,11 @@ Este directorio contiene los scripts esenciales para procesar los PDFs oficiales
 ### 🔍 `extraction/` - Extracción de Datos
 Scripts especializados en extraer información de PDFs:
 - **`madrid_extract_questions.py`** - Extrae preguntas y estructura de exámenes de Madrid
-- **`madrid_extract_answers.py`** - Extrae respuestas oficiales de Madrid usando OCR
+- **`madrid_extract_answers_v2.py`** - Extrae respuestas oficiales de Madrid usando OCR
 
 ### ⚙️ `processing/` - Procesamiento de Datos  
 Scripts para procesar y transformar datos extraídos:
 - **`madrid_merge_exam.py`** - Aplica respuestas extraídas a archivos YAML
-
-### 🛠️ `utils/` - Utilidades y Análisis
-Herramientas de desarrollo y análisis:
-- **`pdf_analyzer.py`** - Análisis de estructura de PDFs para desarrollo
 
 ## 🚀 Flujo de Procesamiento End-to-End
 
@@ -23,7 +19,7 @@ Herramientas de desarrollo y análisis:
 **`extraction/madrid_extract_questions.py`** - Extractor principal que procesa PDFs de exámenes de Madrid y genera archivos YAML con las preguntas estructuradas por categorías.
 
 ### Paso 2: Extracción de Respuestas OCR  
-**`extraction/madrid_extract_answers.py`** - Extrae respuestas oficiales de PDFs de Madrid usando OCR (reconocimiento óptico de caracteres). Procesa múltiples tipos de examen y genera archivos JSON con las respuestas.
+**`extraction/madrid_extract_answers_v2.py`** - Extrae respuestas oficiales de PDFs de Madrid usando OCR (reconocimiento óptico de caracteres). Procesa múltiples tipos de examen y genera archivos JSON con las respuestas.
 
 ### Paso 3: Aplicación de Respuestas
 **`processing/madrid_merge_exam.py`** - Aplica las respuestas extraídas por OCR al archivo YAML de preguntas, generando un backup automático del archivo original.
@@ -40,7 +36,7 @@ Herramientas de desarrollo y análisis:
 python tools/extraction/madrid_extract_questions.py
 
 # 2. Extraer respuestas oficiales usando OCR
-python tools/extraction/madrid_extract_answers.py
+python tools/extraction/madrid_extract_answers_v2.py
 
 # 3. Aplicar respuestas al archivo YAML
 python tools/processing/madrid_merge_exam.py
@@ -56,7 +52,7 @@ python tools/utils/pdf_analyzer.py
 
 ### Archivos de Salida
 - `data/` - Archivos YAML finales para la aplicación
-- `extracted_answers/` - Respuestas extraídas por OCR en formato JSON
+- `extracted-answers/` - Respuestas extraídas por OCR en formato JSON
 
 ## ✅ Proceso Verificado
 

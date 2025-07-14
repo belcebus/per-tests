@@ -337,7 +337,8 @@ function showQuestion(index) {
             <span><b>Comunidad:</b> ${question.metadata.community || ''}</span><br>
             <span><b>Año:</b> ${question.metadata.year || ''}</span><br>
             <span><b>Convocatoria:</b> ${question.metadata.call || ''}</span><br>
-            <span><b>Modelo:</b> ${question.metadata.test_code || ''}</span>
+            <span><b>Modelo:</b> ${question.metadata.test_code || ''}</span><br>
+            <span><b>Pregunta original:</b> ${question.metadata.numero_pregunta || 'N/A'}</span>
         `;
         popover.style.display = 'none';
         popover.style.position = 'absolute';
@@ -402,14 +403,7 @@ function showQuestion(index) {
         option.addEventListener('click', () => selectOption(option));
     });
     
-    // Mostrar respuesta previa si existe
-    const previousAnswer = userAnswers[question.id];
-    if (previousAnswer) {
-        const selectedOption = document.querySelector(`[data-value="${previousAnswer}"]`);
-        if (selectedOption) {
-            selectOption(selectedOption);
-        }
-    }
+    // No mostrar respuestas previas - cada pregunta debe aparecer limpia
     
     // Actualizar botones de navegación
     updateNavigationButtons(index);
@@ -571,19 +565,6 @@ function showResults(result) {
     questionsContainer.innerHTML = result.preguntas_detalle.map((detail, index) => {
         const meta = detail.metadata;
         const popoverId = `meta-popover-${index}`;
-        const metaHtml = `
-            <button class="question-metadata-link" tabindex="0" aria-label="Ver metadatos de la pregunta" data-popover="${popoverId}">
-                ℹ️
-            </button>
-            <div class="question-metadata-popover" id="${popoverId}" tabindex="-1">
-                <button class="close-metadata-popover" aria-label="Cerrar">&times;</button>
-                <strong>Apareció en:</strong><br>
-                <span><b>Comunidad:</b> ${meta.community}</span><br>
-                <span><b>Año:</b> ${meta.year}</span><br>
-                <span><b>Convocatoria:</b> ${meta.call}</span><br>
-                <span><b>Modelo:</b> ${meta.test_code}</span>
-            </div>
-        `;
         // Mostrar todas las opciones para referencia
         const opcionesHtml = Object.entries(detail.opciones).map(([letra, texto]) => {
             let claseOpcion = 'option-reference';
@@ -617,7 +598,8 @@ function showResults(result) {
                                 <span><b>Comunidad:</b> ${meta.community}</span><br>
                                 <span><b>Año:</b> ${meta.year}</span><br>
                                 <span><b>Convocatoria:</b> ${meta.call}</span><br>
-                                <span><b>Modelo:</b> ${meta.test_code}</span>
+                                <span><b>Modelo:</b> ${meta.test_code}</span><br>
+                                <span><b>Pregunta original:</b> ${meta.numero_pregunta || 'N/A'}</span>
                             </div>
                         </span>
                     </span>
