@@ -146,24 +146,39 @@ class ExamService:
             # Obtener respuesta del usuario
             user_answer = submission.respuestas.get(question.id)
             
-            # Verificar si es correcta
-            is_correct = user_answer == question.respuesta_correcta
+            # Verificar si es correcta (soporta múltiples respuestas correctas)
+            is_correct = self._is_answer_correct(user_answer, question.respuesta_correcta)
             
             # Obtener textos de las opciones
             texto_respuesta_usuario = None
             if user_answer and user_answer in question.opciones:
                 texto_respuesta_usuario = question.opciones[user_answer]
             
-            texto_respuesta_correcta = question.opciones.get(question.respuesta_correcta, "Opción no encontrada")
+            # Obtener lista de respuestas correctas
+            respuestas_correctas_lista = self._get_correct_answers_list(question.respuesta_correcta)
+            es_anulada = question.respuesta_correcta.lower() == "anulada"
             
+            # Texto de la primera respuesta correcta (para compatibilidad)
+            primera_correcta = respuestas_correctas_lista[0] if respuestas_correctas_lista else question.respuesta_correcta
+            texto_respuesta_correcta = question.opciones.get(primera_correcta, "Opción no encontrada")
+            
+            # Textos de todas las respuestas correctas
+            textos_respuestas_correctas = {}
+            for respuesta in respuestas_correctas_lista:
+                if respuesta in question.opciones:
+                    textos_respuestas_correctas[respuesta] = question.opciones[respuesta]
+
             # Crear resultado de la pregunta
             question_result = QuestionResult(
                 question_id=question.id,
                 respuesta_usuario=user_answer,
                 respuesta_correcta=question.respuesta_correcta,
+                respuestas_correctas_lista=respuestas_correctas_lista,
                 texto_respuesta_usuario=texto_respuesta_usuario,
                 texto_respuesta_correcta=texto_respuesta_correcta,
+                textos_respuestas_correctas=textos_respuestas_correctas,
                 es_correcta=is_correct,
+                es_anulada=es_anulada,
                 enunciado=question.enunciado,
                 opciones=question.opciones,
                 metadata=question.metadata
@@ -331,6 +346,60 @@ class ExamService:
             questions=client_questions,
             metadata=request
         )
+    
+    def _is_answer_correct(self, user_answer: Optional[str], correct_answer: str) -> bool:
+        """
+        Verifica si la respuesta del usuario es correcta.
+        Soporta múltiples respuestas correctas y preguntas anuladas.
+        
+        Args:
+            user_answer: Respuesta del usuario (ej: 'a', 'b', etc.)
+            correct_answer: Respuesta(s) correcta(s) (ej: 'a', 'a,b', 'anulada')
+            
+        Returns:
+            True si la respuesta es correcta, False en caso contrario
+        """
+        if not user_answer:
+            return False
+        
+        # Normalizar respuestas a minúsculas
+        user_answer = user_answer.lower()
+        correct_answer = correct_answer.lower()
+        
+        # Caso especial: pregunta anulada - cualquier respuesta es válida
+        if correct_answer == "anulada":
+            return True
+        
+        # Si hay múltiples respuestas correctas separadas por comas
+        if "," in correct_answer:
+            valid_answers = [answer.strip() for answer in correct_answer.split(",")]
+            return user_answer in valid_answers
+        
+        # Caso simple: una sola respuesta correcta
+        return user_answer == correct_answer
+
+    def _get_correct_answers_list(self, correct_answer: str) -> List[str]:
+        """
+        Obtiene la lista de respuestas correctas desde el string de respuesta.
+        
+        Args:
+            correct_answer: Respuesta(s) correcta(s) (ej: 'a', 'a,b', 'anulada')
+            
+        Returns:
+            Lista de respuestas correctas válidas
+        """
+        correct_answer = correct_answer.lower()
+        
+        # Caso especial: pregunta anulada
+        if correct_answer == "anulada":
+            return ["a", "b", "c", "d"]  # Todas las opciones son válidas
+        
+        # Si hay múltiples respuestas separadas por comas
+        if "," in correct_answer:
+            return [answer.strip() for answer in correct_answer.split(",")]
+        
+        # Caso simple: una sola respuesta
+        return [correct_answer]
 
 
 # Instancia global del servicio de exámenes

@@ -190,10 +190,13 @@ class QuestionResult(BaseModel):
     Muestra:
     - question_id: ID de la pregunta
     - respuesta_usuario: Lo que respondió el usuario (letra)
-    - respuesta_correcta: La respuesta correcta (letra)
+    - respuesta_correcta: La respuesta correcta original (letra o múltiples)
+    - respuestas_correctas_lista: Lista de todas las respuestas válidas
     - texto_respuesta_usuario: Texto de la opción que eligió el usuario
-    - texto_respuesta_correcta: Texto de la opción correcta
+    - texto_respuesta_correcta: Texto de la opción correcta (o primera válida)
+    - textos_respuestas_correctas: Textos de todas las opciones correctas
     - es_correcta: Si acertó o no
+    - es_anulada: Si la pregunta fue anulada
     - enunciado: El texto de la pregunta (para referencia)
     - opciones: Todas las opciones disponibles
     - metadata: Metadatos de la pregunta (comunidad, año, convocatoria, modelo, etc.)
@@ -201,9 +204,12 @@ class QuestionResult(BaseModel):
     question_id: str
     respuesta_usuario: Optional[str]
     respuesta_correcta: str
+    respuestas_correctas_lista: List[str]  # Nueva: lista de todas las respuestas válidas
     texto_respuesta_usuario: Optional[str]
     texto_respuesta_correcta: str
+    textos_respuestas_correctas: Dict[str, str]  # Nueva: textos de todas las respuestas válidas
     es_correcta: bool
+    es_anulada: bool  # Nueva: indica si la pregunta fue anulada
     enunciado: str
     opciones: Dict[str, str]
     metadata: QuestionMetadata
