@@ -41,28 +41,33 @@ per-tests/
 │   │           └── 2025/    # Respuestas del año 2025
 │   ├── backups/             # Archivos YAML de respaldo (estructura antigua)
 │   └── raw/                 # PDFs originales sin procesar
-│       ├── questions/       # PDFs de preguntas oficiales
-│       └── answers/         # PDFs de respuestas oficiales
+│       ├── questions/       # PDFs de preguntas oficiales organizados jerárquicamente
+│       │   └── madrid/      # PDFs por comunidad autónoma
+│       │       ├── 2022/    # PDFs del año 2022
+│       │       ├── 2023/    # PDFs del año 2023
+│       │       ├── 2024/    # PDFs del año 2024
+│       │       └── 2025/    # PDFs del año 2025
+│       └── answers/         # PDFs de respuestas oficiales organizados jerárquicamente
+│           └── madrid/      # PDFs por comunidad autónoma
+│               ├── 2022/    # PDFs del año 2022
+│               ├── 2023/    # PDFs del año 2023
+│               ├── 2024/    # PDFs del año 2024
+│               └── 2025/    # PDFs del año 2025
 ├── static/                  # Frontend (HTML, CSS, JS)
 ├── tools/                   # Scripts de extracción y procesamiento
 │   ├── extraction/          # Scripts de extracción de datos
-│   │   ├── madrid_extract_questions.py   # Extractor de preguntas 
-de PDFs
-│   │   ├── madrid_extract_answers.py     # Extractor OCR de respuestas
+│   │   ├── madrid_extract_questions.py   # Extractor de preguntas de PDFs
+│   │   ├── madrid_extract_answers_v2.py  # Extractor OCR de respuestas
 │   │   └── README.md        # Documentación de extracción
 │   ├── processing/          # Scripts de procesamiento de datos
-│   │   ├── madrid_merge_exam.py         # Aplicador de respuestas
+│   │   ├── madrid_merge_exam.py          # Aplicador de respuestas
 │   │   └── README.md        # Documentación de procesamiento
-│   ├── utils/               # Utilidades y análisis
-│   │   ├── pdf_analyzer.py  # Analizador de PDFs
-│   │   └── README.md        # Documentación de utilidades
 │   └── README.md            # Documentación general de herramientas
+├── extracted-answers/       # Respuestas extraídas por OCR (temporal)
 ├── .env.example             # Plantilla de variables de entorno
 ├── requirements.txt         # Dependencias completas
-└── requirements-minimal.txt # Dependencias mínimas
-├── extracted_answers/       # Respuestas extraídas por OCR
-├── requirements.txt        # Dependencias Python
-└── README.md
+├── requirements-minimal.txt # Dependencias mínimas
+└── README.md               # Este archivo
 ```
 
 ## Instalación y Ejecución
@@ -223,7 +228,7 @@ El proyecto incluye herramientas especializadas para procesar documentos oficial
 - `--output-file`: Archivo de salida personalizado
 
 ### `madrid_extract_answers_v2.py` - Extractor OCR
-Extrae respuestas oficiales de PDFs usando reconocimiento óptico de caracteres. Usa la versión robusta y actualizada del script para todos los exámenes oficiales.
+Extrae respuestas oficiales de PDFs usando reconocimiento óptico de caracteres. Es la versión robusta y actualizada del script para todos los exámenes oficiales.
 
 #### Características:
 - 🤖 **OCR avanzado**: Reconocimiento óptico con preprocesamiento
@@ -260,7 +265,7 @@ python tools/processing/madrid_merge_exam.py
 python tools/extraction/madrid_extract_questions.py --year 2024 --call noviembre --test test01
 
 # 2. Extraer respuestas (especificando PDF correcto)
-python tools/extraction/madrid_extract_answers_v2.py --exam-type PER --test-model TEST01 --pdf-path "data/raw/answers/madrid-2024-noviembre.pdf"
+python tools/extraction/madrid_extract_answers_v2.py --exam-type PER --test-model TEST01 --pdf-path "data/raw/answers/madrid/2024/madrid-2024-noviembre.pdf"
 
 # 3. Combinar datos
 python tools/processing/madrid_merge_exam.py
@@ -273,7 +278,7 @@ python tools/processing/madrid_merge_exam.py
 python tools/extraction/madrid_extract_questions.py --community Valencia --year 2024 --call junio --test test02
 
 # 2. Extraer respuestas
-python tools/extraction/madrid_extract_answers_v2.py --exam-type PER --test-model TEST02 --pdf-path "data/raw/answers/valencia-2024-junio.pdf"
+python tools/extraction/madrid_extract_answers_v2.py --exam-type PER --test-model TEST02 --pdf-path "data/raw/answers/valencia/2024/valencia-2024-junio.pdf"
 
 # 3. Combinar datos
 python tools/processing/madrid_merge_exam.py
@@ -292,7 +297,7 @@ python tools/extraction/madrid_extract_answers_v2.py --exam-type PER
 python tools/extraction/madrid_extract_answers_v2.py --exam-type PER --test-model TEST01
 
 # Especificar archivo PDF personalizado
-python tools/extraction/madrid_extract_answers_v2.py --pdf-path "data/raw/answers/otro-examen.pdf" --exam-type PATRON_YATE
+python tools/extraction/madrid_extract_answers_v2.py --pdf-path "data/raw/answers/madrid/2023/madrid-2023-junio.pdf" --exam-type PATRON_YATE
 ```
 
 ### Aplicar Respuestas Extraídas
