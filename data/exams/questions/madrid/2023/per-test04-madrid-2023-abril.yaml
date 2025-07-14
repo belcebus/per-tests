@@ -191,7 +191,7 @@ categories:
       question: 'La luz de una Marca de Aguas Navegables:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: c
+      correct_answer: c,d
       id: 14
       options:
         a: Opuestos por sus bases.
@@ -420,7 +420,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: a
+      correct_answer: a,b
       id: 30
       options:
         a: Se realizará inmediatamente una evaluación rápida de los daños sufridos.

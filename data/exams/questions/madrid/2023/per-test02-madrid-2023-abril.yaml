@@ -179,7 +179,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: c
+      correct_answer: c,d
       id: 13
       options:
         a: Opuestos por sus bases.
@@ -446,7 +446,7 @@ categories:
         de las siguientes afirmaciones es CORRECTA?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: a
+      correct_answer: a,b
       id: 32
       options:
         a: Se realizará inmediatamente una evaluación rápida de los daños sufridos.
