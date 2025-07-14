@@ -27,10 +27,19 @@ per-tests/
 │   └── settings.py          # Configuración principal
 ├── data/                    # Archivos YAML con preguntas
 │   ├── exams/               # Archivos YAML de exámenes procesados
+│   │   ├── questions/       # Preguntas organizadas jerárquicamente
+│   │   │   └── madrid/      # Preguntas por comunidad autónoma
+│   │   │       ├── 2022/    # Exámenes del año 2022
+│   │   │       ├── 2023/    # Exámenes del año 2023
+│   │   │       ├── 2024/    # Exámenes del año 2024
+│   │   │       └── 2025/    # Exámenes del año 2025
 │   │   └── answers/         # Respuestas oficiales en formato JSON
 │   │       └── madrid/      # Respuestas organizadas por comunidad
+│   │           ├── 2022/    # Respuestas del año 2022
+│   │           ├── 2023/    # Respuestas del año 2023
 │   │           ├── 2024/    # Respuestas del año 2024
 │   │           └── 2025/    # Respuestas del año 2025
+│   ├── backups/             # Archivos YAML de respaldo (estructura antigua)
 │   └── raw/                 # PDFs originales sin procesar
 │       ├── questions/       # PDFs de preguntas oficiales
 │       └── answers/         # PDFs de respuestas oficiales
@@ -82,6 +91,40 @@ uvicorn app.main:app --reload
 - API: http://localhost:8000
 - Documentación: http://localhost:8000/docs
 - Cliente Web: http://localhost:8000/static/index.html
+
+## Estructura de Datos
+
+### Organización de Archivos YAML y JSON
+
+Los archivos con las preguntas de examen (YAML) y respuestas (JSON) están organizados jerárquicamente:
+
+```
+data/exams/
+├── questions/
+│   └── madrid/                      # Comunidad autónoma
+│       ├── 2022/                    # Año del examen
+│       ├── 2023/                    # Año del examen
+│       ├── 2024/                    # Año del examen
+│       └── 2025/                    # Año del examen
+└── answers/
+    └── madrid/                      # Comunidad autónoma
+        ├── 2022/                    # Año del examen
+        ├── 2023/                    # Año del examen
+        ├── 2024/                    # Año del examen
+        └── 2025/                    # Año del examen
+```
+
+### Nomenclatura de Archivos
+
+Los archivos siguen el mismo patrón para preguntas (YAML) y respuestas (JSON):
+
+**Preguntas**: `per-test{XX}-{comunidad}-{año}-{convocatoria}.yaml`
+**Respuestas**: `per-test{XX}-{comunidad}-{año}-{convocatoria}.json`
+
+- **test**: Numeración secuencial (test01, test02, test03, test04)
+- **comunidad**: Madrid, Valencia, Barcelona, etc.
+- **año**: 2022, 2023, 2024, 2025...
+- **convocatoria**: abril, junio, noviembre, diciembre, octubre
 
 ## Dependencias del Proyecto
 
@@ -199,6 +242,7 @@ Extrae respuestas oficiales de PDFs usando reconocimiento óptico de caracteres.
 #### Para Madrid 2025 abril (por defecto):
 ```bash
 # 1. Extraer preguntas del PDF oficial
+# Resultado: data/exams/questions/madrid/2025/per-test01-madrid-2025-abril.yaml
 python tools/extraction/madrid_extract_questions.py
 
 # 2. Extraer respuestas usando OCR del PDF oficial
@@ -212,6 +256,7 @@ python tools/processing/madrid_merge_exam.py
 ```bash
 # Ejemplo: Madrid 2024 noviembre test01
 # 1. Extraer preguntas
+# Resultado: data/exams/questions/madrid/2024/per-test01-madrid-2024-noviembre.yaml
 python tools/extraction/madrid_extract_questions.py --year 2024 --call noviembre --test test01
 
 # 2. Extraer respuestas (especificando PDF correcto)
@@ -224,6 +269,7 @@ python tools/processing/madrid_merge_exam.py
 #### Para Valencia 2024 junio (ejemplo):
 ```bash
 # 1. Extraer preguntas
+# Resultado: data/exams/questions/valencia/2024/per-test02-valencia-2024-junio.yaml
 python tools/extraction/madrid_extract_questions.py --community Valencia --year 2024 --call junio --test test02
 
 # 2. Extraer respuestas
@@ -285,7 +331,8 @@ La aplicación utiliza un sistema de configuración centralizada basado en varia
    
    # Rutas de archivos
    PER_DATA_DIR=data
-   PER_EXAMS_DIR=data/exams
+   PER_EXAMS_DIR=data/exams/questions
+   PER_ANSWERS_DIR=data/exams/answers
    
    # Configuración de exámenes
    PER_DEFAULT_NUM_QUESTIONS=45
@@ -298,5 +345,7 @@ Si no se define ninguna variable de entorno, la aplicación utilizará los valor
 - **Puerto**: 8002
 - **Host**: 0.0.0.0 (todas las interfaces)
 - **Directorio de datos**: `data/`
+- **Directorio de preguntas**: `data/exams/questions/`
+- **Directorio de respuestas**: `data/exams/answers/`
 - **Preguntas por examen**: 45
 - **Tiempo de vida de exámenes**: 2 horas
