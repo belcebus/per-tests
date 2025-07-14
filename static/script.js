@@ -403,30 +403,17 @@ function showQuestion(index) {
         option.addEventListener('click', () => selectOption(option));
     });
     
-    // No mostrar respuestas previas - cada pregunta debe aparecer limpia
+    // Restaurar respuesta previa si existe (solo dentro del mismo examen)
+    const questionId = question.id;
+    if (userAnswers[questionId]) {
+        const selectedOption = document.querySelector(`.option[data-value="${userAnswers[questionId]}"]`);
+        if (selectedOption) {
+            selectedOption.classList.add('selected');
+        }
+    }
     
     // Actualizar botones de navegación
     updateNavigationButtons(index);
-}
-
-/**
- * Inicia el examen
- */
-function startExam() {
-    showScreen('exam-screen');
-    examStartTime = Date.now();
-    startTimer();
-    showQuestion(0);
-}
-
-/**
- * Inicia el examen
- */
-function startExam() {
-    showScreen('exam-screen');
-    examStartTime = Date.now();
-    startTimer();
-    showQuestion(0);
 }
 
 /**
