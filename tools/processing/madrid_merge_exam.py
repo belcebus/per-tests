@@ -9,7 +9,7 @@ import sys
 import os
 import argparse
 from pathlib import Path
-from typing import Dict
+from typing import Dict, Union, List
 
 # Añadir el directorio del proyecto al path para importaciones
 project_root = Path(__file__).parent.parent.parent
@@ -17,7 +17,13 @@ sys.path.append(str(project_root))
 
 from config.settings import settings
 
-def load_extracted_answers(answers_file: str = None) -> Dict[str, str]:
+def convert_array_to_comma_format(answer: Union[str, List[str]]) -> str:
+    """Convierte arrays a formato de comas para YAML"""
+    if isinstance(answer, list):
+        return ",".join(answer)
+    return answer
+
+def load_extracted_answers(answers_file: str = None) -> Dict[str, Union[str, List[str]]]:
     """Carga las respuestas extraídas del archivo JSON"""
     if answers_file is None:
         # Intentar buscar el archivo con el nuevo patrón de nomenclatura primero
@@ -45,7 +51,7 @@ def load_extracted_answers(answers_file: str = None) -> Dict[str, str]:
     
     return data['answers']
 
-def apply_answers_to_yaml(yaml_file: Path, extracted_answers: Dict[str, str]) -> int:
+def apply_answers_to_yaml(yaml_file: Path, extracted_answers: Dict[str, Union[str, List[str]]]) -> int:
     """Aplica las respuestas extraídas al archivo YAML"""
     print(f"📝 Procesando {yaml_file.name}...")
     
@@ -82,15 +88,24 @@ def apply_answers_to_yaml(yaml_file: Path, extracted_answers: Dict[str, str]) ->
                 old_answer = question.get('correct_answer', 'N/A')
                 new_answer = extracted_answers[str(question_id)]
                 
-                # Aplicar la nueva respuesta
-                question['correct_answer'] = new_answer
+                # Convertir array a formato de comas para YAML
+                yaml_answer = convert_array_to_comma_format(new_answer)
+                
+                # Aplicar la nueva respuesta en formato YAML
+                question['correct_answer'] = yaml_answer
                 
                 # Mostrar el cambio
-                if old_answer != new_answer:
-                    print(f"   🔄 Pregunta {question_id}: {old_answer} → {new_answer}")
+                if old_answer != yaml_answer:
+                    if isinstance(new_answer, list):
+                        print(f"   🔄 Pregunta {question_id}: {old_answer} → {yaml_answer} (convertido de array {new_answer})")
+                    else:
+                        print(f"   🔄 Pregunta {question_id}: {old_answer} → {yaml_answer}")
                     updates_count += 1
                 else:
-                    print(f"   ✅ Pregunta {question_id}: {new_answer} (sin cambios)")
+                    if isinstance(new_answer, list):
+                        print(f"   ✅ Pregunta {question_id}: {yaml_answer} (array {new_answer}, sin cambios)")
+                    else:
+                        print(f"   ✅ Pregunta {question_id}: {yaml_answer} (sin cambios)")
     
     # Guardar el archivo actualizado
     with open(yaml_file, 'w', encoding='utf-8') as f:
@@ -103,30 +118,51 @@ def apply_answers_to_yaml(yaml_file: Path, extracted_answers: Dict[str, str]) ->
     
     return updates_count
 
-def validate_answers(extracted_answers: Dict[str, str]):
+def validate_answers(extracted_answers: Dict[str, Union[str, List[str]]]):
     """Valida las respuestas extraídas"""
     print("🔍 Validando respuestas extraídas...")
     
     valid_answers = {'a', 'b', 'c', 'd', 'ANULADA'}
     total_answers = len(extracted_answers)
     valid_count = 0
+    multiple_answers_count = 0
     
     for q_id, answer in extracted_answers.items():
-        if answer.lower() in [v.lower() for v in valid_answers]:
-            valid_count += 1
+        # Verificar si es un array (múltiples respuestas)
+        if isinstance(answer, list):
+            multiple_answers_count += 1
+            # Validar cada respuesta en el array
+            all_valid = all(ans.lower() in [v.lower() for v in valid_answers] for ans in answer)
+            if all_valid:
+                valid_count += 1
+                comma_format = convert_array_to_comma_format(answer)
+                print(f"   ✅ Pregunta {q_id}: {answer} → se convertirá a '{comma_format}'")
+            else:
+                invalid_answers = [ans for ans in answer if ans.lower() not in [v.lower() for v in valid_answers]]
+                print(f"   ⚠️  Pregunta {q_id}: respuestas inválidas en array {invalid_answers}")
         else:
-            print(f"   ⚠️  Pregunta {q_id}: respuesta inválida '{answer}'")
+            # Respuesta simple (string)
+            if answer.lower() in [v.lower() for v in valid_answers]:
+                valid_count += 1
+            else:
+                print(f"   ⚠️  Pregunta {q_id}: respuesta inválida '{answer}'")
     
     print(f"   ✅ Respuestas válidas: {valid_count}/{total_answers}")
+    if multiple_answers_count > 0:
+        print(f"   🔢 Preguntas con múltiples respuestas: {multiple_answers_count}")
     
-    # Mostrar resumen de respuestas
+    # Mostrar resumen de respuestas (formato que se aplicará al YAML)
     answer_counts = {}
     for answer in extracted_answers.values():
-        answer_counts[answer] = answer_counts.get(answer, 0) + 1
+        yaml_format = convert_array_to_comma_format(answer)
+        answer_counts[yaml_format] = answer_counts.get(yaml_format, 0) + 1
     
-    print("   📊 Distribución de respuestas:")
+    print("   📊 Distribución de respuestas (formato YAML):")
     for answer, count in sorted(answer_counts.items()):
-        print(f"      {answer}: {count}")
+        if "," in answer:
+            print(f"      {answer}: {count} (múltiples respuestas)")
+        else:
+            print(f"      {answer}: {count}")
 
 def main():
     """Función principal"""

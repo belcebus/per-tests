@@ -224,7 +224,7 @@ categories:
       question: 'Las Marcas de aguas navegables tendrán:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: a
+      correct_answer: a,b
       id: 17
       options:
         a: Grupos de (2+1) destello.

@@ -541,7 +541,7 @@ categories:
         NW. Por lo tanto, se sabe que la embarcación:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: a
+      correct_answer: a,c
       id: 41
       options:
         a: Un minuto de arco de ecuador.
