@@ -41,74 +41,19 @@ PER_CATEGORIES = {
     11: "Carta de navegación"
 }
 
-# Definir el patrón para PER Madrid 2025 Código de Test 01
-PER_MADRID_2025_TEST_01 = ExamPattern(
-    title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
-    subtitle="Código de Test 01",
-    answer_prefix="Respuestas al",
-    total_questions=45,
-    categories=PER_CATEGORIES,
-    community="Madrid",
-    year=2025,
-    call="abril",  # Actualizado para coincidir con el PDF madrid-2025-abril.pdf
-    test_code="test01"  # Actualizado para coincidir con el formato de archivo
-)
+# Nota: Los patrones específicos han sido eliminados.
+# Ahora se generan dinámicamente usando create_per_pattern() basándose en los parámetros.
 
-# Definir el patrón para PER Madrid 2025 Código de Test 03 (que tiene pregunta anulada)
-PER_MADRID_2025_TEST_03 = ExamPattern(
-    title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
-    subtitle="Código de Test 03",
-    answer_prefix="Respuestas al",
-    total_questions=45,
-    categories=PER_CATEGORIES,
-    community="Madrid",
-    year=2025,
-    call="abril",  # Actualizado para coincidir con el PDF madrid-2025-abril.pdf
-    test_code="test03"  # Actualizado para coincidir con el formato de archivo
-)
-
-# Definir el patrón para PER Madrid 2025 Código de Test 02
-PER_MADRID_2025_TEST_02 = ExamPattern(
-    title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
-    subtitle="Código de Test 02",
-    answer_prefix="Respuestas al",
-    total_questions=45,
-    categories=PER_CATEGORIES,
-    community="Madrid",
-    year=2025,
-    call="abril",
-    test_code="test02"
-)
-
-# Definir el patrón para PER Madrid 2025 Código de Test 04
-PER_MADRID_2025_TEST_04 = ExamPattern(
-    title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
-    subtitle="Código de Test 04",
-    answer_prefix="Respuestas al",
-    total_questions=45,
-    categories=PER_CATEGORIES,
-    community="Madrid",
-    year=2025,
-    call="abril",
-    test_code="test04"
-)
-
-# Mantener compatibilidad con nombres anteriores
-PER_TEST_01 = PER_MADRID_2025_TEST_01
-PER_TEST_02 = PER_MADRID_2025_TEST_02
-PER_TEST_03 = PER_MADRID_2025_TEST_03
-PER_TEST_04 = PER_MADRID_2025_TEST_04
-
-def create_per_pattern(community: str, year: int, call: str, test_code: str, 
+def create_per_pattern(community: str, year: int, call: str, test_number: str, 
                       total_questions: int = 45) -> ExamPattern:
     """
-    Función helper para crear nuevos patrones de examen PER fácilmente.
+    Función para crear patrones de examen PER dinámicamente.
     
     Args:
         community: Nombre de la comunidad autónoma (ej: "Madrid", "Barcelona", "Valencia")
         year: Año de realización (ej: 2025, 2024)
         call: Convocatoria (ej: "Ordinaria", "Extraordinaria", "Enero", "Junio")
-        test_code: Código del test (ej: "Test01", "Test02", "Test03")
+        test_number: Número del test de 2 dígitos (ej: "01", "02", "03", "04", "05")
         total_questions: Número total de preguntas (por defecto 45)
     
     Returns:
@@ -116,11 +61,16 @@ def create_per_pattern(community: str, year: int, call: str, test_code: str,
     
     Ejemplo:
         # Para un examen de Valencia de junio 2024, test 02
-        pattern = create_per_pattern("Valencia", 2024, "Junio", "Test02")
+        pattern = create_per_pattern("Valencia", 2024, "Junio", "02")
     """
-    # Determinar el subtítulo basado en el código de test
-    test_number = test_code.replace("Test", "").replace("test", "").zfill(2)
-    subtitle = f"Código de Test {test_number}"
+    # Asegurar que el número del test tenga 2 dígitos
+    test_number_formatted = test_number.zfill(2)
+    
+    # Generar el código de test en formato testXX
+    test_code = f"test{test_number_formatted}"
+    
+    # Generar el subtítulo
+    subtitle = f"Código de Test {test_number_formatted}"
     
     return ExamPattern(
         title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
@@ -135,8 +85,8 @@ def create_per_pattern(community: str, year: int, call: str, test_code: str,
     )
 
 # Ejemplos de uso para otros exámenes:
-# PER_VALENCIA_2024_JUNIO_TEST02 = create_per_pattern("Valencia", 2024, "Junio", "Test02")
-# PER_BARCELONA_2023_EXTRAORDINARIA_TEST01 = create_per_pattern("Barcelona", 2023, "Extraordinaria", "Test01")
+# PER_VALENCIA_2024_JUNIO_TEST02 = create_per_pattern("Valencia", 2024, "Junio", "02")
+# PER_BARCELONA_2023_EXTRAORDINARIA_TEST01 = create_per_pattern("Barcelona", 2023, "Extraordinaria", "01")
 
 class ParametricExamExtractor:
     def __init__(self):
@@ -954,8 +904,8 @@ def main():
         description='🚢 Extractor de Preguntas de Exámenes PER desde PDFs',
         epilog='''
 Ejemplos de uso:
-  %(prog)s --input-file data/raw/questions/madrid-2025-abril.pdf --test-code test01
-  %(prog)s --input-file /ruta/completa/examen.pdf --test-code test04 --output-dir mi_directorio --verbose
+  %(prog)s --input-file data/raw/questions/madrid-2025-abril.pdf --test-code 01
+  %(prog)s --input-file /ruta/completa/examen.pdf --test-code 05 --output-dir mi_directorio --verbose
   
 Este script extrae preguntas de exámenes PER de archivos PDF oficiales y las
 organiza automáticamente por categorías (Nomenclatura, RIPA, Seguridad, etc.)
@@ -977,8 +927,8 @@ El archivo de salida seguirá el formato: per-{test}-{comunidad}-{año}-{convoca
     parser.add_argument('--input-file', required=True, 
                        help='Archivo PDF con las preguntas del examen')
     parser.add_argument('--test-code', required=True, 
-                       choices=['test01', 'test02', 'test03', 'test04'], 
-                       help='Código del test a extraer. Disponibles: test01, test02, test03, test04')
+                       choices=['01', '02', '03', '04', '05'], 
+                       help='Número del test a extraer. Disponibles: 01, 02, 03, 04, 05')
     parser.add_argument('--output-dir', default='data/exams', 
                        help='Directorio donde guardar el archivo YAML (default: data/exams)')
     parser.add_argument('--verbose', action='store_true',

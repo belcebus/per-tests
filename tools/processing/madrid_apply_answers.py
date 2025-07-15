@@ -32,8 +32,8 @@ def load_extracted_answers(answers_file: str = None) -> Dict[str, Union[str, Lis
         # Intentar buscar el archivo con el nuevo patrón de nomenclatura primero
         extracted_dir = settings.get_extracted_path()
         
-        # Buscar archivos que sigan el patrón per-test01-*.json
-        pattern_files = list(extracted_dir.glob("per-test01-*.json"))
+        # Buscar archivos que sigan el patrón per-test0X-*.json (donde X puede ser 1-5)
+        pattern_files = list(extracted_dir.glob("per-test0[1-5]-*.json"))
         
         if pattern_files:
             # Usar el primer archivo encontrado con el nuevo patrón
@@ -179,7 +179,7 @@ EJEMPLOS DE USO:
   python madrid_apply_answers.py
 
   # Especificar archivos específicos
-  python madrid_apply_answers.py --input-file per-test01-madrid-2025-abril.json --target-file per-test01-madrid-2025-abril.yaml
+  python madrid_apply_answers.py --input-file per-test05-madrid-2025-abril.json --target-file per-test05-madrid-2025-abril.yaml
 
   # Modo detallado
   python madrid_apply_answers.py --input-file respuestas.json --target-file examen.yaml --verbose
@@ -233,7 +233,7 @@ EJEMPLOS DE USO:
             if args.input_file:
                 # Extraer información del nombre del archivo JSON para encontrar el YAML correspondiente
                 input_path = Path(args.input_file)
-                # Ejemplo: per-test01-madrid-2025-abril.json -> per-test01-madrid-2025-abril.yaml
+                # Ejemplo: per-test05-madrid-2025-abril.json -> per-test05-madrid-2025-abril.yaml
                 yaml_name = input_path.stem + ".yaml"
                 yaml_file = settings.get_exams_path() / yaml_name
                 

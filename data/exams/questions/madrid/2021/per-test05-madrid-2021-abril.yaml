@@ -1,0 +1,577 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 1
+      options:
+        a: Lumbreras.
+        b: Imbornales.
+        c: Portillos.
+        d: Manguerotes.
+      question: ¿Qué nombre reciben las aberturas practicadas en el casco para que
+        pueda salir el agua embarcada en la cubierta?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 2
+      options:
+        a: Amura.
+        b: Aleta.
+        c: Codaste.
+        d: Roda.
+      question: 'La parte curvada trasera del costado que converge hacia popa se denomina:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 3
+      options:
+        a: Rezón.
+        b: Ancla multibrazo.
+        c: Ancla Danforth.
+        d: Arganeo.
+      question: ¿Qué nombre recibe el `anclote´de más de dos brazos sin cepo?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 4
+      options:
+        a: Levar.
+        b: Virar.
+        c: Zarpar.
+        d: Filar.
+      question: ¿Qué nombre recibe la maniobra de largar o arriar cabo o cadena?
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 5
+      options:
+        a: El radio.
+        b: El diámetro.
+        c: La longitud de su circunferencia.
+        d: El grosor.
+      question: 'La mena de un cabo es:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 6
+      options:
+        a: En las cornamusas.
+        b: En los norays.
+        c: En las bitas.
+        d: En cualquiera de los anteriores.
+      question: ¿Dónde se afirman los cabos de amarre en tierra?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 7
+      options:
+        a: Es recomendable empujar por la popa en lugar de tirar por proa, ya que
+          de esta forma se acortan las distancias de maniobra.
+        b: Hay que intentar mantener una distancia entre el remolcador y el remolcado
+          equivalente a 7 esloras de la embarcación remolcada.
+        c: El remolcador y el remolcado deberán navegar lo más juntos posible, teniendo
+          en cuenta que a menor velocidad deberá ser mayor la longitud del remolque.
+        d: Ambas embarcaciones estarán abarloadas y unidas por los cabos oportunos.
+      question: ¿Cuál de las siguientes formas de realizar un remolque es recomendable
+        en un río angosto o dentro de un puerto?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 8
+      options:
+        a: Tener todos los objetos a bordo correctamente estibados y trincados.
+        b: No permitir la existencia de carenas líquidas a bordo.
+        c: Mantener cerrados los grifos de fondo y cualquier conducto bajo la línea
+          de flotación no necesario para la navegación.
+        d: Aumentar si es posible el calado para incrementar la estabilidad.
+      question: Respecto a las medidas a tomar a bordo con mal tiempo, ¿cuál de las
+        siguientes afirmaciones NO ES CORRECTA?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 9
+      options:
+        a: Estar en cubierta, fuera de su embalaje y listas para su uso en caso de
+          emergencia.
+        b: Mantenerse dentro de su embalaje, salvo en las comprobaciones periódicas
+          de funcionamiento.
+        c: Guardarse en lugar húmedo para evitar su encendido accidental y llevar
+          siempre impresas sus instrucciones de uso.
+        d: Guardarse en un recipiente completamente estanco, fácilmente accesible
+          y llevar siempre impresas sus instrucciones de uso.
+      question: 'Respecto a su estiba y conservación, las bengalas de mano deben:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 10
+      options:
+        a: Dar máquina toda atrás cuando nos percatemos de su caída.
+        b: Realizar la maniobra de Anderson o la maniobra de Beaufort.
+        c: Realizar una maniobra de exploración en espiral cuadrada.
+        d: Realizar la maniobra de Boutakow.
+      question: 'Para recoger a una persona en el agua, lo más recomendable cuando
+        se ve al náufrago es:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 11
+      options:
+        a: Espacio marino del Tinto y del Odiel.
+        b: Cabo de Creus.
+        c: Isla Medes.
+        d: Acantilados de Maro-Cerro Gordo.
+      question: ¿Cuál de los siguientes espacios no está comprendido en la lista ZEPIM
+        (Zonas Especialmente Protegidas de Importancia para el Mediterráneo)?
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 12
+      options:
+        a: Navegarán a una velocidad de seguridad que según la Regla 6 del RIPA se
+          estima en 3 nudos.
+        b: Evitarán interferir el tráfico normal de los mismos, no debiendo en ningún
+          caso dar ocasión a que los buques que se encuentren navegando se vean obligados
+          a maniobrarles.
+        c: No podrán navegar por el interior de los puertos.
+        d: Sólo están obligadas a navegar a velocidades que no formen olas que puedan
+          producir situaciones peligrosas para embarcaciones de pequeño porte.
+      question: 'Las embarcaciones deportivas en el interior de los puertos y sus
+        canales de acceso:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 13
+      options:
+        a: Dos conos superpuestos con los vértices hacia arriba.
+        b: Dos conos superpuestos con los vértices hacia abajo.
+        c: Dos esferas superpuestas.
+        d: Un cono con base sobre una esfera.
+      question: 'La marca de tope de una Marca Cardinal Norte es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 14
+      options:
+        a: Una esfera negra.
+        b: Una esfera naranja.
+        c: Una esfera roja.
+        d: Una esfera blanca.
+      question: 'La marca de tope de una Marca de Aguas Navegables es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 15
+      options:
+        a: La marca de peligro aislado se coloca siempre sobre o próxima a un peligro
+          rodeado por todas partes de aguas navegables, especificando siempre el tamaño
+          del peligro.
+        b: La marca de peligro aislado se coloca siempre sobre o próxima a un peligro
+          rodeado por todas partes de aguas navegables, especificando siempre la distancia
+          a la marca a la que se puede navegar con seguridad.
+        c: La marca de peligro aislado contendrá toda la información necesaria sobre
+          dicho peligro, de modo que no será necesario consultar cartas ni publicaciones
+          náuticas.
+        d: La marca de peligro aislado no puede especificar el tamaño del peligro
+          y la distancia al mismo a la que se puede navegar con seguridad, por lo
+          que el navegante deberá consultar la carta y las publicaciones náuticas.
+      question: ¿Qué afirmación sobre las Marcas de Peligro Aislado  ES CORRECTA?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 16
+      options:
+        a: Amarillo.
+        b: Rojo.
+        c: Rojo y negro.
+        d: Rojo y amarillo.
+      question: 'Una Marca Especial será de color:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 17
+      options:
+        a: Marcas de aguas navegables.
+        b: Marcas especiales.
+        c: Marcas de peligro aislado.
+        d: Marcas cardinales.
+      question: ¿Qué tipo de marcas están rodeadas de aguas seguras, pero no señalan
+        ningún peligro?
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 18
+      options:
+        a: Cuando un peligro de navegación, riesgo de abordaje o circunstancias especiales,
+          incluidas las limitaciones de los buques interesados, que han de tomarse
+          en consideración al interpretar y cumplir el Reglamento, hagan necesario
+          apartarse del mismo para evitar un peligro inmediato.
+        b: Cuando un peligro de navegación, riesgo de abordaje o circunstancias especiales,
+          incluidas las limitaciones de los buques interesados, que han de tomarse
+          en consideración al interpretar y cumplir el Reglamento, hagan necesario
+          apartarse del mismo para evitar un peligro potencial.
+        c: En ningún caso.
+        d: Sólo para cumplir una regla especial establecida por la autoridad competente.
+      question: 'De acuerdo con la Regla 2.b del RIPA, un buque puede apartarse de
+        dicho Reglamento:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 19
+      options:
+        a: Una bandera cuadrada que tenga debajo de ella una bola.
+        b: Una bandera cuadrada que tenga debajo de ella tres bolas.
+        c: Una bandera cuadrada que tenga debajo de ella dos bolas.
+        d: Una bandera cuadrada que tenga encima de ella dos bolas.
+      question: Conforme al Anexo IV del RIPA, ¿cuál de las siguientes señales es
+        indicativa de peligro y necesidad de ayuda?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 20
+      options:
+        a: i) en la parte de proa, una luz roja todo horizonte o una bola; y ii) en
+          la popa, o cerca de ella, y a una altura inferior a la de la luz prescrita
+          en el apartado i), una luz roja todo horizonte.
+        b: i) en la parte de proa, una luz roja todo horizonte o un cilindro; y ii)
+          en la popa, o cerca de ella, y a una altura inferior a la de la luz prescrita
+          en el apartado i), una luz roja todo horizonte.
+        c: i) en la parte de proa, una luz blanca todo horizonte o una bola; y ii)
+          en la popa, o cerca de ella, y a una altura inferior a la de la luz prescrita
+          en el apartado i), una luz blanca todo horizonte.
+        d: i) en la parte de proa, una luz blanca todo horizonte o una marca bicónica;
+          y ii) en la popa, o cerca de ella, y a una altura superior a la de la luz
+          prescrita en el apartado i), una luz blanca todo horizonte.
+      question: 'La Regla 30 del RIPA determina que un buque fondeado exhibirá en
+        el lugar más visible:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 21
+      options:
+        a: La derrota de un buque dedicado a la pesca.
+        b: La derrota de un buque de propulsión mecánica.
+        c: La derrota de cualquier otro buque de vela que tenga cazada la mayor de
+          las velas de cuchillo.
+        d: La derrota de cualquier otra embarcación.
+      question: 'Según la Regla 18 del RIPA, los buques de vela en navegación se mantendrán
+        apartados de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 22
+      options:
+        a: El buque remolcador y el remolcado pueden apartarse, en todo caso, de mi
+          derrota sin problemas.
+        b: El buque remolcado llevará las luces y marcas de buque "sin gobierno".
+        c: Puede tratarse de un buque, el remolcado, con capacidad de maniobra restringida
+          ya que no lleva máquina.
+        d: Puede tratarse de que ambos buques, remolcador y remolcado, se hallan con
+          capacidad de maniobra restringida. Esta circunstancia se advertirá en las
+          luces y marcas desplegadas por los buques.
+      question: 'Aproximándose, vemos un buque remolcando a otro. En esta situación,
+        y atendiendo a la Regla 27 del RIPA, debemos considerar que:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 23
+      options:
+        a: Nunca.
+        b: Siempre.
+        c: Siempre que utilice la máquina propulsora.
+        d: Siempre y cuando tenga la vela izada.
+      question: A efectos de la Regla 3 del RIPA, ¿puede ser considerado un "buque
+        de vela" como un "buque de propulsión mecánica"?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 24
+      options:
+        a: Una luz de alcance.
+        b: Una luz blanca todo horizonte.
+        c: Una luz de tope.
+        d: Una luz verde en la banda de estribor y una luz roja en la banda de babor.
+      question: Según la Regla 34.b del RIPA, cuando se lleven señales luminosas para
+        complementar las pitadas prescritas para que todo buque de propulsión mecánica
+        en navegación indique su maniobra, ¿qué luz será la utilizada para estas señales?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 25
+      options:
+        a: De día.
+        b: Desde la puesta del sol hasta su salida.
+        c: Únicamente cuando hay visibilidad reducida.
+        d: Cuando el buque esté en peligro y requiera ayuda.
+      question: 'Con arreglo a la Regla 20.d del RIPA, las reglas relativas a las
+        marcas deberán cumplirse:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 26
+      options:
+        a: Dos luces todo horizonte en línea vertical, roja la superior y blanca la
+          inferior.
+        b: Dos luces todo horizonte en línea vertical, blanca la superior y roja la
+          inferior.
+        c: Dos luces rojas todo horizonte en línea vertical.
+        d: Tres luces rojas todo horizonte en línea vertical.
+      question: Conforme a la Regla 27 del RIPA, ¿cuál de los siguientes conjuntos
+        de luces debe exhibir en el lugar más visible un buque sin gobierno?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 27
+      options:
+        a: Que existe riesgo de abordaje.
+        b: Que las variaciones de demora son irrelevantes, las que importan son las
+          variaciones de marcación.
+        c: Que debemos mantener nuestro rumbo y velocidad.
+        d: Que iremos cambiando el rumbo hacia babor repetidas veces pero con pocos
+          grados cada vez.
+      question: Encontrándonos en navegación, observamos por nuestro costado de estribor,
+        hacia proa del través, una embarcación que demora al 030º. Veinte minutos
+        más tarde vemos que la demora apenas ha variado, estando al 030,5º. Según
+        la Regla 7 del RIPA, ¿qué hemos de considerar?
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 28
+      options:
+        a: Arriar o dejar ir un cabo o cadena que está trabajando.
+        b: Dejar libre totalmente el cabo.
+        c: Tirar de un cabo para recoger el seno o para tensarlo.
+        d: Tirar el cabo al agua.
+      question: Faenando con cabos, ¿qué significa el término "cobrar"?
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 29
+      options:
+        a: Aflojar o arriar un poco un cabo que esta tenso.
+        b: Tirar de un cabo para tensarlo.
+        c: Largar el esprín de proa.
+        d: Poner el timón a una banda.
+      question: ¿A qué se denomina "lascar"?
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 30
+      options:
+        a: Cada cuarto de hora.
+        b: Cada hora.
+        c: Cada dos horas.
+        d: No se debe aflojar nunca.
+      question: Según la Guía Médica del Instituto Social de la Marina, ¿cada cuánto
+        tiempo se debe aflojar un torniquete a un accidentado con hemorragia?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 31
+      options:
+        a: En fuegos con presencia de electricidad.
+        b: En incendios de metales.
+        c: En fuegos tipo A.
+        d: En incendios de gases.
+      question: ¿Cuándo es más conveniente elegir el agua como agente extintor?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 32
+      options:
+        a: Nunca.
+        b: Sólo cuando se produzca un incendio.
+        c: Sin precipitarnos, cuando tengamos la completa seguridad de que se va a
+          hundir.
+        d: Sólo cuando tengamos la completa certeza de que otro barco nos está viendo.
+      question: ¿Cuándo abandonaremos el barco?
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 33
+      options:
+        a: A través del servicio móvil de la AEMET.
+        b: A través del equipo de VHF.
+        c: Midiendo la temperatura del agua.
+        d: Realizando una Llamada Selectiva Digital.
+      question: 'Navegando a 12 millas de la costa, si no disponemos de teléfono móvil,
+        televisión por satélite ni de conexión a internet de ningún tipo, obtendremos
+        la previsión meteorológica:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 34
+      options:
+        a: Presión por debajo de 760 mm de columna de mercurio.
+        b: Presión por encima de 760 mm de columna de mercurio.
+        c: Presión por encima de 1013,2 milibares.
+        d: Presión por debajo de 980 mm de columna de agua.
+      question: En metereología, ¿hasta que límite se considera baja presión?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 35
+      options:
+        a: La tierra hacia el mar y perpendicular a la costa durante las horas nocturnas.
+        b: El mar a la tierra y perpendicular a la costa durante las horas nocturnas.
+        c: La tierra hacia el mar y perpendicular a la costa durante las horas diurnas.
+        d: El mar a la tierra y perpendicular a la costa durante las horas diurnas.
+      question: 'El terral es un viento que se desplaza desde:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 36
+      options:
+        a: Cambiar de dirección.
+        b: Disminuir de intensidad.
+        c: Aumentar de intensidad.
+        d: Disminuir su temperatura.
+      question: 'La expresión "refrescar", relativa al viento, significa:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 37
+      options:
+        a: Desvío de la aguja.
+        b: Declinación magnética.
+        c: Corrección total.
+        d: Demora de aguja.
+      question: 'A la diferencia entre el rumbo verdadero y el rumbo de aguja se denomina:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 38
+      options:
+        a: Es el ángulo horizontal que nos da el sextante hasta la visual de un objeto.
+        b: En la aleta de babor, tiene un valor entre 90° y 180°.
+        c: Es el ángulo horizontal medido desde nuestro rumbo hasta la visual de un
+          objeto.
+        d: Es el ángulo horizontal medido desde el Norte hasta la visual de un objeto.
+      question: 'Señale la afirmación CORRECTA sobre la demora:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 39
+      options:
+        a: El desvío es el mismo para cada aguja que tengamos a bordo.
+        b: El desvío no varía con el rumbo que lleva la embarcación.
+        c: El desvío es el ángulo que forma el norte magnético con el norte de aguja.
+        d: La tablilla de desvíos se calibra siempre cada 10º.
+      question: 'Señale cuál de las siguientes afirmaciones es CORRECTA:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 40
+      options:
+        a: Demora.
+        b: Enfilación.
+        c: Isóbara.
+        d: Distancia.
+      question: De las siguientes líneas de una carta náutica, ¿cuál NO se considera
+        una línea de posición?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 41
+      options:
+        a: Altura de marea.
+        b: Amplitud de marea.
+        c: Media de marea.
+        d: Cero Hidrográfico.
+      question: ¿Cómo se denomina a la diferencia expresada en metros entre la altura
+        de la marea en la bajamar más próxima y la altura de marea en la pleamar más
+        próxima?
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 42
+      options:
+        a: l = 36º 01,8´N  L = 005º 14,5´W.
+        b: l = 36º 00,6´N  L = 005º 14,2´W.
+        c: l = 35º 58,9´N  L = 005º 23,0´W.
+        d: l = 36º 00,0´N  L = 005º 23,3´W.
+      question: Calcular la situación verdadera de una embarcación que se encuentra
+        situada en la zona de precaución del sistema de organización del tráfico del
+        Estrecho de Gibraltar, a 8 millas del faro de Punta Almina y a 7 millas del
+        faro de Punta Europa.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 43
+      options:
+        a: 32,1 millas náuticas.
+        b: 32,3 millas náuticas.
+        c: 31,5 millas náuticas.
+        d: 31,8 millas náuticas.
+      question: ¿Cuál es la distancia entre los faros de Cabo Trafalgar y Punta Círes?.
+        Se pide precisión en el resultado.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 44
+      options:
+        a: l= 36° - 10,0' N   L=006° - 05,0' W.
+        b: l= 36° - 10,0' N   L=005° - 05,0' W.
+        c: l= 36° - 16,0' N   L=006° - 05,0' W.
+        d: l= 36° - 16,0' N   L=005° - 05,0' W.
+      question: Una embarcación se encuentra en l=36° - 04,0' N y L=006° - 05,0' W,
+        navegando al norte verdadero a 12 nudos. Calcular la situación tras 30 minutos
+        navegando a ese rumbo y velocidad.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 45
+      options:
+        a: 074, 5º.
+        b: 090º.
+        c: 070, 5º.
+        d: 092, 8º.
+      question: Año 2021, una embarcación situada a 1,5´ al SE del faro de Isla de
+        Tarifa navega hacia el NE buscando recalar en la bahía de Algeciras, su rumbo
+        verdadero es paralelo al dispositivo de separación de tráfico del Estrecho
+        de Gibraltar en sentido NE que tiene por su costado de estribor. Sabiendo
+        que el desvío para el rumbo actual es de 1º W, ¿cuál de los siguientes rumbos
+        de aguja se aproxima más al que lleva la embarcación en ese momento?
+exam_info:
+  call: abril
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 05
+  test_code: test05
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2021
