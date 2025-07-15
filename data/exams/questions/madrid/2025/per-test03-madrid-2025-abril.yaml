@@ -132,6 +132,23 @@ categories:
       correct_answer: a
       id: 11
       options:
+        a: Si el buque que recibe la alerta de socorro no puede prestar auxilio, el
+          patrón anotará en la carta de navegación la razón por la cual no acudió
+          en auxilio de las personas en peligro.
+        b: Los patrones de las embarcaciones que embarquen a personas en peligro en
+          el mar tratarán a esas personas con humanidad, conforme a la capacidad de
+          la embarcación.
+        c: La obligación de prestar auxilio es independiente de la nacionalidad y
+          de las circunstancias en que hayan sido encontradas.
+        d: El patrón de la embarcación que se halle en peligro tiene derecho a requerir
+          auxilio de uno o varios de los buques que mejor auxilio puedan prestarle.
+      question: Respecto a la seguridad en la navegación y los mensajes de socorro,
+        señale la opción INCORRECTA.
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 12
+      options:
         a: Se permite la descarga en el mar de desechos de alimentos a menos de 12
           millas marinas de la tierra más próxima cuando la embarcación no esté en
           ruta.
@@ -143,8 +160,8 @@ categories:
         d: Se permite la descarga en el mar de desechos de alimentos a menos de 12
           millas marinas de la tierra más próxima si los desechos están desmenuzados
           o triturados de forma que pasen por cribas de abertura máxima de 15 mm.
-      question: Respecto a la seguridad en la navegación y los mensajes de socorro,
-        señale la opción INCORRECTA.
+      question: De acuerdo con la Regla 6 del Anexo V del Convenio MARPOL “Descarga
+        de basuras dentro de zonas especiales”, seleccione la respuesta CORRECTA.
   5:
     name: Balizamiento
     questions:
@@ -214,24 +231,6 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: c
-      id: 12
-      options:
-        a: Se permite la descarga en el mar de desechos de alimentos a menos de 12
-          millas marinas de la tierra más próxima cuando la embarcación no esté en
-          ruta.
-        b: Los desechos de alimentos podrán descargarse sin excepciones, incluso si
-          están contaminados con otro tipo de basuras.
-        c: La descarga en el mar de desechos de alimentos se realizará tan lejos como
-          sea posible de la tierra más próxima, pero nunca a menos de 12 millas marinas
-          de la tierra más próxima.
-        d: Se permite la descarga en el mar de desechos de alimentos a menos de 12
-          millas marinas de la tierra más próxima si los desechos están desmenuzados
-          o triturados de forma que pasen por cribas de abertura máxima de 15 mm.
-      question: De acuerdo con la Regla 6 del Anexo V del Convenio MARPOL “Descarga
-        de basuras dentro de zonas especiales”, seleccione la respuesta CORRECTA.
-    - category: 6
-      category_name: Reglamento (RIPA)
       correct_answer: b
       id: 18
       options:
@@ -269,10 +268,11 @@ categories:
       correct_answer: a
       id: 20
       options:
-        a: El hidroavión amarado.
-        b: El buque de propulsión mecánica en navegación.
-        c: El buque de vela.
-        d: El buque dedicado a la pesca.
+        a: Una embarcación de 20 metros de eslora varada.
+        b: Un buque de 100 metros de eslora al cual estamos visualizando por su costado
+          de babor.
+        c: Un pesquero de arrastre faenando con su aparejo tendido.
+        d: Una embarcación de prácticos sin arrancada.
       question: 'Si nos encontramos de noche navegando con nuestra embarcación en
         una zona cercana a costa, y visualizamos únicamente dos luces rojas sobre
         una luz blanca en la misma vertical, de acuerdo con la Regla 30 del RIPA,
@@ -310,12 +310,15 @@ categories:
       correct_answer: b
       id: 23
       options:
-        a: Dirigir un haz de luz de nuestro proyector en la dirección del peligro,
-          haciéndolo de forma que no moleste a otros buques.
-        b: Utilizar luces intermitentes de gran intensidad.
-        c: Utilizar luces giratorias de gran intensidad, como las luces estroboscópicas.
-        d: Hacer cualquier señal acústica o luminosa de las autorizadas en cualquiera
-          de las reglas del RIPA.
+        a: Mantenernos a rumbo ya que en ningún caso debemos maniobrar por tener preferencia
+          frente a un velero.
+        b: Maniobrar de forma clara, con antelación y respetando las buenas prácticas
+          marineras para apartarnos de su derrota.
+        c: Aumentar la velocidad ligeramente para tratar de propiciar que la otra
+          embarcación haga la maniobra ante el posible peligro de abordaje, y así
+          evitar un cambio de rumbo en nuestra derrota.
+        d: Maniobrar cambiando de rumbo ligeramente con poca antelación para no confundir
+          a la otra embarcación y que ella maniobre por tener obligación de hacerlo.
       question: 'Navegando en una motora nos encontramos en una situación de cruce
         por nuestro costado de estribor con un velero que exhibe una marca cónica
         con el vértice hacia abajo. Conforme a la Regla 8 del RIPA, “Maniobras para

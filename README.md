@@ -62,6 +62,9 @@ per-tests/
 │   ├── processing/          # Scripts de procesamiento de datos
 │   │   ├── madrid_apply_answers.py       # Aplicador de respuestas
 │   │   └── README.md        # Documentación de procesamiento
+│   ├── utils/               # Herramientas de utilidad y verificación
+│   │   ├── check_exam_consistency.py     # Verificador de consistencia
+│   │   └── README.md        # Documentación de utilidades
 │   └── README.md            # Documentación general de herramientas
 ├── extracted-answers/       # Respuestas extraídas por OCR (temporal)
 ├── .env.example             # Plantilla de variables de entorno
