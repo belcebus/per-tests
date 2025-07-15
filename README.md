@@ -60,7 +60,7 @@ per-tests/
 │   │   ├── madrid_extract_answers_v2.py  # Extractor OCR de respuestas
 │   │   └── README.md        # Documentación de extracción
 │   ├── processing/          # Scripts de procesamiento de datos
-│   │   ├── madrid_merge_exam.py          # Aplicador de respuestas
+│   │   ├── madrid_apply_answers.py       # Aplicador de respuestas
 │   │   └── README.md        # Documentación de procesamiento
 │   └── README.md            # Documentación general de herramientas
 ├── extracted-answers/       # Respuestas extraídas por OCR (temporal)
@@ -254,7 +254,7 @@ python tools/extraction/madrid_extract_questions.py
 python tools/extraction/madrid_extract_answers_v2.py --exam-type PER --test-model TEST01
 
 # 3. Combinar preguntas y respuestas
-python tools/processing/madrid_merge_exam.py
+python tools/processing/madrid_apply_answers.py
 ```
 
 #### Para otros años/comunidades/convocatorias:
@@ -281,7 +281,7 @@ python tools/extraction/madrid_extract_questions.py --community Valencia --year 
 python tools/extraction/madrid_extract_answers_v2.py --exam-type PER --test-model TEST02 --pdf-path "data/raw/answers/valencia/2024/valencia-2024-junio.pdf"
 
 # 3. Combinar datos
-python tools/processing/madrid_merge_exam.py
+python tools/processing/madrid_apply_answers.py
 ```
 
 ### Extracción Avanzada de Respuestas
@@ -304,7 +304,7 @@ python tools/extraction/madrid_extract_answers_v2.py --pdf-path "data/raw/answer
 
 ```bash
 # Aplicar respuestas OCR al archivo YAML
-python tools/processing/madrid_merge_exam.py
+python tools/processing/madrid_apply_answers.py
 ```
 
 **Tipos de examen soportados:**

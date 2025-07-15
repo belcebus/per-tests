@@ -24,29 +24,30 @@ Scripts especializados en extraer información de documentos PDF oficiales de ex
 #### Uso desde Línea de Comandos
 
 ```bash
-python madrid_extract_questions.py --pdf RUTA_PDF --test CODIGO_TEST [--output-dir DIRECTORIO]
+python madrid_extract_questions.py --input-file RUTA_PDF --test-code CODIGO_TEST [--output-dir DIRECTORIO] [--verbose]
 ```
 
 #### Parámetros Obligatorios
 
-- `--pdf`: Ruta al archivo PDF que contiene las preguntas del examen
-- `--test`: Código del test a extraer (`test01`, `test02`, `test03`, `test04`)
+- `--input-file`: Archivo PDF que contiene las preguntas del examen
+- `--test-code`: Código del test a extraer (`test01`, `test02`, `test03`, `test04`)
 
 #### Parámetros Opcionales
 
-- `--output-dir`: Directorio donde guardar el archivo YAML (por defecto: `data/exams`)
+- `--output-dir`: Directorio donde guardar el archivo YAML (default: `data/exams`)
+- `--verbose`: Mostrar información detallada del procesamiento
 
 #### Ejemplos de Uso
 
 ```bash
 # Extraer Test 01 de Madrid 2025 abril
-python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test01
+python madrid_extract_questions.py --input-file data/raw/questions/madrid-2025-abril.pdf --test-code test01
 
-# Extraer Test 04 y guardarlo en directorio personalizado
-python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test04 --output-dir mis_examenes
+# Extraer Test 04 con información detallada y directorio personalizado
+python madrid_extract_questions.py --input-file data/raw/questions/madrid-2025-abril.pdf --test-code test04 --output-dir mis_examenes --verbose
 
 # Usar ruta absoluta al PDF
-python madrid_extract_questions.py --pdf /workspaces/per-tests/data/raw/questions/madrid-2025-abril.pdf --test test02
+python madrid_extract_questions.py --input-file /workspaces/per-tests/data/raw/questions/madrid-2025-abril.pdf --test-code test02 --verbose
 
 # Ver ayuda completa del script
 python madrid_extract_questions.py --help
@@ -102,25 +103,21 @@ El script organiza automáticamente las preguntas en las 11 categorías oficiale
 
 #### Parámetros de Línea de Comandos
 
-- `--exam-type`: Tipo de examen (PER, PATRON_YATE, CAPITAN_YATE, LICENCIA_NAVEGACION)
-- `--test-model`: Modelo específico (TEST01, TEST02, TEST03, etc.)
-- `--pdf-path`: Ruta al archivo PDF de respuestas
-- `--output-dir`: Directorio de salida para archivos JSON
+- `--input-file`: Archivo PDF de respuestas oficiales (obligatorio)
+- `--output-dir`: Directorio de salida para archivos JSON (default: extracted-answers)
+- `--verbose`: Mostrar información detallada del procesamiento
 
 #### Ejemplos de Uso
 
 ```bash
-# Extraer todas las respuestas
-python madrid_extract_answers_v2.py
+# Extraer respuestas con archivo específico
+python madrid_extract_answers_v2.py --input-file madrid-2025-abril-respuestas.pdf
 
-# Extraer respuestas de un tipo específico
-python madrid_extract_answers_v2.py --exam-type PER
+# Extraer con información detallada y directorio personalizado
+python madrid_extract_answers_v2.py --input-file respuestas.pdf --output-dir mi_directorio --verbose
 
-# Extraer respuestas de un modelo específico
-python madrid_extract_answers_v2.py --exam-type PER --test-model TEST01
-
-# Especificar archivo PDF personalizado (para otros años/convocatorias)
-python madrid_extract_answers_v2.py --exam-type PER --test-model TEST01 --pdf-path "/ruta/madrid-2024-noviembre.pdf"
+# Especificar archivo PDF completo
+python madrid_extract_answers_v2.py --input-file "/ruta/madrid-2024-noviembre-respuestas.pdf" --verbose
 ```
 
 **Salida**: Archivos JSON en `extracted-answers/` con respuestas extraídas.
@@ -266,7 +263,7 @@ tesseract --list-langs
 ## 📋 Integración con Otros Scripts
 
 Los archivos generados son compatibles con:
-- `madrid_merge_exam.py`: Para combinar preguntas y respuestas
+- `madrid_apply_answers.py`: Para aplicar respuestas extraídas a los archivos YAML
 - Aplicación web: Para visualizar exámenes
 - Scripts de procesamiento: Para análisis adicional
 

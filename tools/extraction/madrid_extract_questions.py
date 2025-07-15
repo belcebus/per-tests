@@ -954,8 +954,8 @@ def main():
         description='🚢 Extractor de Preguntas de Exámenes PER desde PDFs',
         epilog='''
 Ejemplos de uso:
-  %(prog)s --pdf data/raw/questions/madrid-2025-abril.pdf --test test01
-  %(prog)s --pdf /ruta/completa/examen.pdf --test test04 --output-dir mi_directorio
+  %(prog)s --input-file data/raw/questions/madrid-2025-abril.pdf --test-code test01
+  %(prog)s --input-file /ruta/completa/examen.pdf --test-code test04 --output-dir mi_directorio --verbose
   
 Este script extrae preguntas de exámenes PER de archivos PDF oficiales y las
 organiza automáticamente por categorías (Nomenclatura, RIPA, Seguridad, etc.)
@@ -974,18 +974,20 @@ El archivo de salida seguirá el formato: per-{test}-{comunidad}-{año}-{convoca
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
     
-    parser.add_argument('--pdf', required=True, 
-                       help='Ruta al archivo PDF con las preguntas del examen')
-    parser.add_argument('--test', required=True, 
+    parser.add_argument('--input-file', required=True, 
+                       help='Archivo PDF con las preguntas del examen')
+    parser.add_argument('--test-code', required=True, 
                        choices=['test01', 'test02', 'test03', 'test04'], 
                        help='Código del test a extraer. Disponibles: test01, test02, test03, test04')
     parser.add_argument('--output-dir', default='data/exams', 
-                       help='Directorio donde guardar el archivo YAML (por defecto: data/exams)')
+                       help='Directorio donde guardar el archivo YAML (default: data/exams)')
+    parser.add_argument('--verbose', action='store_true',
+                       help='Mostrar información detallada del procesamiento')
     
     args = parser.parse_args()
     
     # Detectar automáticamente año y convocatoria desde el nombre del archivo PDF
-    pdf_filename = os.path.basename(args.pdf)
+    pdf_filename = os.path.basename(args.input_file)
     
     # Extraer información del nombre del archivo (formato: madrid-YYYY-convocatoria.pdf)
     import re
@@ -994,26 +996,29 @@ El archivo de salida seguirá el formato: per-{test}-{comunidad}-{año}-{convoca
     if match:
         year = int(match.group(1))
         call = match.group(2)
-        print(f"📅 Detectado automáticamente: Año {year}, Convocatoria {call}")
+        if args.verbose:
+            print(f"📅 Detectado automáticamente: Año {year}, Convocatoria {call}")
     else:
         # Valores por defecto si no se puede detectar
         year = 2025
         call = "abril"
-        print(f"⚠️  No se pudo detectar año/convocatoria del nombre del archivo, usando valores por defecto: {year} {call}")
+        if args.verbose:
+            print(f"⚠️  No se pudo detectar año/convocatoria del nombre del archivo, usando valores por defecto: {year} {call}")
     
     # Crear patrón dinámicamente basado en los parámetros
-    pattern = create_per_pattern("Madrid", year, call, args.test)
+    pattern = create_per_pattern("Madrid", year, call, args.test_code)
     
-    print(f"🚢 Extractor de Preguntas PER")
-    print(f"📋 Examen: {pattern.title}")
-    print(f"🏷️  Test: {pattern.subtitle}")
-    print(f"📄 PDF origen: {args.pdf}")
-    print(f"📁 Directorio salida: {args.output_dir}")
-    print("-" * 60)
+    if args.verbose:
+        print(f"🚢 Extractor de Preguntas PER")
+        print(f"📋 Examen: {pattern.title}")
+        print(f"🏷️  Test: {pattern.subtitle}")
+        print(f"📄 PDF origen: {args.input_file}")
+        print(f"📁 Directorio salida: {args.output_dir}")
+        print("-" * 60)
     
     # Verificar que el archivo PDF existe
-    if not os.path.exists(args.pdf):
-        print(f"❌ Error: No se encuentra el archivo PDF: {args.pdf}")
+    if not os.path.exists(args.input_file):
+        print(f"❌ Error: No se encuentra el archivo PDF: {args.input_file}")
         print(f"💡 Verifica que la ruta sea correcta y que el archivo exista")
         return 1
     
@@ -1022,7 +1027,7 @@ El archivo de salida seguirá el formato: per-{test}-{comunidad}-{año}-{convoca
     
     try:
         # Extraer el examen
-        exam_data = extractor.extract_exam(args.pdf, pattern)
+        exam_data = extractor.extract_exam(args.input_file, pattern)
         
         if not exam_data:
             print("❌ Error: No se pudo extraer el examen")
@@ -1041,8 +1046,10 @@ El archivo de salida seguirá el formato: per-{test}-{comunidad}-{año}-{convoca
         print(f"   📚 Categorías encontradas: {exam_info.get('categories', 0)}")
         print(f"   📝 Preguntas con respuestas: {exam_info.get('questions_with_answers', 0)}")
         print(f"   💾 Archivo guardado: {output_file}")
-        print(f"\n💡 Para agregar respuestas, usa:")
-        print(f"   python madrid_extract_answers.py --exam-type PER --test-model {args.test.upper()}")
+        
+        if args.verbose:
+            print(f"\n💡 Para agregar respuestas, usa:")
+            print(f"   python madrid_extract_answers_v2.py --input-file respuestas.pdf")
         
         return 0
         
