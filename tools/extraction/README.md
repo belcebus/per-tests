@@ -24,13 +24,13 @@ Scripts especializados en extraer información de documentos PDF oficiales de ex
 #### Uso desde Línea de Comandos
 
 ```bash
-python madrid_extract_questions.py --input-file RUTA_PDF --test-code CODIGO_TEST [--output-dir DIRECTORIO] [--verbose]
+python madrid_extract_questions.py --input-file RUTA_PDF --test-code NUMERO_TEST [--output-dir DIRECTORIO] [--verbose]
 ```
 
 #### Parámetros Obligatorios
 
 - `--input-file`: Archivo PDF que contiene las preguntas del examen
-- `--test-code`: Código del test a extraer (`test01`, `test02`, `test03`, `test04`)
+- `--test-code`: Número del test a extraer (`01`, `02`, `03`, `04`, `05`)
 
 #### Parámetros Opcionales
 
@@ -41,13 +41,13 @@ python madrid_extract_questions.py --input-file RUTA_PDF --test-code CODIGO_TEST
 
 ```bash
 # Extraer Test 01 de Madrid 2025 abril
-python madrid_extract_questions.py --input-file data/raw/questions/madrid-2025-abril.pdf --test-code test01
+python madrid_extract_questions.py --input-file data/raw/questions/madrid-2025-abril.pdf --test-code 01
 
 # Extraer Test 04 con información detallada y directorio personalizado
-python madrid_extract_questions.py --input-file data/raw/questions/madrid-2025-abril.pdf --test-code test04 --output-dir mis_examenes --verbose
+python madrid_extract_questions.py --input-file data/raw/questions/madrid-2025-abril.pdf --test-code 04 --output-dir mis_examenes --verbose
 
 # Usar ruta absoluta al PDF
-python madrid_extract_questions.py --input-file /workspaces/per-tests/data/raw/questions/madrid-2025-abril.pdf --test-code test02 --verbose
+python madrid_extract_questions.py --input-file /workspaces/per-tests/data/raw/questions/madrid-2025-abril.pdf --test-code 02 --verbose
 
 # Ver ayuda completa del script
 python madrid_extract_questions.py --help
@@ -129,16 +129,19 @@ python madrid_extract_answers_v2.py --input-file "/ruta/madrid-2024-noviembre-re
 cd /workspaces/per-tests/tools/extraction
 
 # Extraer Test 01
-python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test01
+python madrid_extract_questions.py --input-file data/raw/questions/madrid-2025-abril.pdf --test-code 01
 
 # Extraer Test 02  
-python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test02
+python madrid_extract_questions.py --input-file data/raw/questions/madrid-2025-abril.pdf --test-code 02
 
 # Extraer Test 03
-python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test03
+python madrid_extract_questions.py --input-file data/raw/questions/madrid-2025-abril.pdf --test-code 03
 
 # Extraer Test 04
-python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test04
+python madrid_extract_questions.py --input-file data/raw/questions/madrid-2025-abril.pdf --test-code 04
+
+# Extraer Test 05
+python madrid_extract_questions.py --input-file data/raw/questions/madrid-2025-abril.pdf --test-code 05
 ```
 
 ### Flujo Completo (Preguntas + Respuestas):
@@ -146,7 +149,7 @@ python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pd
 cd /workspaces/per-tests/tools/extraction
 
 # 1. Extraer preguntas del test deseado
-python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test01
+python madrid_extract_questions.py --input-file data/raw/questions/madrid-2025-abril.pdf --test-code 01
 
 # 2. Extraer respuestas del mismo test
 python madrid_extract_answers_v2.py --exam-type PER --test-model TEST01
@@ -159,10 +162,10 @@ ls -la extracted_answers/
 ### Para otros archivos PDF:
 ```bash
 # Usar rutas absolutas para PDFs en otras ubicaciones
-python madrid_extract_questions.py --pdf /ruta/completa/al/pdf/examen.pdf --test test02
+python madrid_extract_questions.py --input-file /ruta/completa/al/pdf/examen.pdf --test-code 02
 
 # Especificar directorio de salida personalizado
-python madrid_extract_questions.py --pdf data/raw/questions/madrid-2025-abril.pdf --test test03 --output-dir mis_examenes
+python madrid_extract_questions.py --input-file data/raw/questions/madrid-2025-abril.pdf --test-code 03 --output-dir mis_examenes
 ```
 
 ### Flujo Completo:
@@ -214,11 +217,11 @@ tesseract --list-langs
 ls -la data/raw/questions/madrid-2025-abril.pdf
 
 # Usar ruta absoluta si es necesario
-python madrid_extract_questions.py --pdf /workspaces/per-tests/data/raw/questions/madrid-2025-abril.pdf --test test01
+python madrid_extract_questions.py --input-file /workspaces/per-tests/data/raw/questions/madrid-2025-abril.pdf --test-code 01
 ```
 
 **`No se encontró el patrón de inicio del examen`**:
-- Verifica que el PDF contiene el test especificado (test01, test02, test03, test04)
+- Verifica que el PDF contiene el test especificado (01, 02, 03, 04, 05)
 - Algunos PDFs pueden tener variaciones en el formato del título
 - Revisa el contenido del PDF manualmente para confirmar la presencia del examen
 

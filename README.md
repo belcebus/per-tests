@@ -261,27 +261,27 @@ python tools/processing/madrid_apply_answers.py
 ```bash
 # Ejemplo: Madrid 2024 noviembre test01
 # 1. Extraer preguntas
-# Resultado: data/exams/questions/madrid/2024/per-test01-madrid-2024-noviembre.yaml
-python tools/extraction/madrid_extract_questions.py --year 2024 --call noviembre --test test01
+# Resultado: data/exams/per-test01-madrid-2024-noviembre.yaml
+python tools/extraction/madrid_extract_questions.py --input-file data/raw/questions/madrid-2024-noviembre.pdf --test-code 01
 
 # 2. Extraer respuestas (especificando PDF correcto)
-python tools/extraction/madrid_extract_answers_v2.py --exam-type PER --test-model TEST01 --pdf-path "data/raw/answers/madrid/2024/madrid-2024-noviembre.pdf"
+python tools/extraction/madrid_extract_answers_v2.py --input-file "data/raw/answers/madrid/2024/madrid-2024-noviembre.pdf"
 
 # 3. Combinar datos
-python tools/processing/madrid_merge_exam.py
+python tools/processing/madrid_apply_answers.py --input-file per-test01-madrid-2024-noviembre.json --target-file per-test01-madrid-2024-noviembre.yaml
 ```
 
 #### Para Valencia 2024 junio (ejemplo):
 ```bash
 # 1. Extraer preguntas
-# Resultado: data/exams/questions/valencia/2024/per-test02-valencia-2024-junio.yaml
-python tools/extraction/madrid_extract_questions.py --community Valencia --year 2024 --call junio --test test02
+# Resultado: data/exams/per-test02-valencia-2024-junio.yaml
+python tools/extraction/madrid_extract_questions.py --input-file data/raw/questions/valencia-2024-junio.pdf --test-code 02
 
 # 2. Extraer respuestas
-python tools/extraction/madrid_extract_answers_v2.py --exam-type PER --test-model TEST02 --pdf-path "data/raw/answers/valencia/2024/valencia-2024-junio.pdf"
+python tools/extraction/madrid_extract_answers_v2.py --input-file "data/raw/answers/valencia/2024/valencia-2024-junio.pdf"
 
 # 3. Combinar datos
-python tools/processing/madrid_apply_answers.py
+python tools/processing/madrid_apply_answers.py --input-file per-test02-valencia-2024-junio.json --target-file per-test02-valencia-2024-junio.yaml
 ```
 
 ### Extracción Avanzada de Respuestas

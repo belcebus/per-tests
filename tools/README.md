@@ -36,7 +36,7 @@ Todos los scripts ahora usan una nomenclatura consistente:
 
 ```bash
 # 1. Extraer preguntas del PDF de examen
-python tools/extraction/madrid_extract_questions.py --input-file examen.pdf --test-code test01 --verbose
+python tools/extraction/madrid_extract_questions.py --input-file examen.pdf --test-code 01 --verbose
 
 # 2. Extraer respuestas oficiales usando OCR  
 python tools/extraction/madrid_extract_answers_v2.py --input-file respuestas.pdf --verbose
