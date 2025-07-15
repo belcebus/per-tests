@@ -244,11 +244,15 @@ class ParametricExamExtractor:
                 if question_num < 1 or question_num > pattern.total_questions:
                     i += 1
                     continue
-                # Verificar que NO sea parte de una regla del RIPA
-                is_ripa_rule = (re.search(r'del\s+RIPA', question_text_start, re.IGNORECASE) or
-                               re.search(r'de\s+la\s+Regla', question_text_start, re.IGNORECASE) or
-                               re.search(r'Regla\s+\d+', line, re.IGNORECASE))
-                if is_ripa_rule:
+                # Verificar que NO sea solo una referencia a regla del RIPA (sin ser una pregunta real)
+                # Las preguntas reales suelen empezar con palabras como "Según", "Conforme", "De acuerdo", etc.
+                is_ripa_reference_only = (
+                    # Solo filtramos si es una referencia sin contexto de pregunta
+                    re.match(r'^\s*del\s+RIPA\s*$', question_text_start, re.IGNORECASE) or
+                    re.match(r'^\s*de\s+la\s+Regla\s+\d+\s*$', question_text_start, re.IGNORECASE) or
+                    re.match(r'^\s*Regla\s+\d+\s*$', question_text_start, re.IGNORECASE)
+                )
+                if is_ripa_reference_only:
                     i += 1
                     continue
                 # Recopilar todo el contenido de la pregunta
@@ -263,10 +267,13 @@ class ParametricExamExtractor:
                         question_text_start = question_pattern_match.group(2)
                         is_valid_question_num = (1 <= potential_question_num <= pattern.total_questions and 
                                                potential_question_num > question_num)
-                        is_ripa_rule = (re.search(r'del\s+RIPA', question_text_start, re.IGNORECASE) or
-                                       re.search(r'de\s+la\s+Regla', question_text_start, re.IGNORECASE) or
-                                       re.search(r'Regla\s+\d+', next_line, re.IGNORECASE))
-                        if is_valid_question_num and not is_ripa_rule:
+                        # Solo filtrar referencias de RIPA que no son preguntas reales
+                        is_ripa_reference_only = (
+                            re.match(r'^\s*del\s+RIPA\s*$', question_text_start, re.IGNORECASE) or
+                            re.match(r'^\s*de\s+la\s+Regla\s+\d+\s*$', question_text_start, re.IGNORECASE) or
+                            re.match(r'^\s*Regla\s+\d+\s*$', question_text_start, re.IGNORECASE)
+                        )
+                        if is_valid_question_num and not is_ripa_reference_only:
                             break
                     next_line_lower = next_line.lower().rstrip('.')
                     if next_line_lower in category_title_map:
@@ -364,8 +371,13 @@ class ParametricExamExtractor:
                 
                 # Continuar leyendo líneas hasta encontrar la siguiente opción o el final
                 i += 1
-                while i < len(lines):
+                option_line_count = 0  # Contador para evitar opciones infinitas
+                max_option_lines = 15  # Límite máximo de líneas por opción (para casos complejos)
+                
+                while i < len(lines) and option_line_count < max_option_lines:
                     next_line = lines[i]
+                    option_line_count += 1
+                    
                     # Verificar si la siguiente línea es una nueva opción
                     next_option_match = re.match(r'^([a-d])\)\s*(.+)', next_line, re.IGNORECASE)
                     if next_option_match:
@@ -413,15 +425,25 @@ class ParametricExamExtractor:
                         break
                     
                     # Verificar si la línea podría ser el inicio de una nueva pregunta
+                    # IMPORTANTE: No confundir sub-elementos i), ii), iii) con números de pregunta
                     potential_question_match = re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', next_line)
                     if potential_question_match:
                         potential_num = int(potential_question_match.group(1))
                         if 1 <= potential_num <= 45:  # Rango válido de preguntas
                             break
                     
+                    # Verificar si es un sub-elemento de la opción (i), ii), iii), etc.)
+                    # Estos deben ser incluidos en la opción actual
+                    is_sub_element = re.match(r'^\s*[ivx]+\)\s+', next_line, re.IGNORECASE)
+                    
                     # Es continuación de la opción actual
                     if next_line.strip():  # Solo agregar si no está vacía
-                        option_text += ' ' + next_line.strip()
+                        if is_sub_element:
+                            # Para sub-elementos, agregar con un separado visual
+                            option_text += '; ' + next_line.strip()
+                        else:
+                            # Para texto normal, agregar con espacio
+                            option_text += ' ' + next_line.strip()
                     i += 1
                 
                 options[current_option_letter] = option_text
