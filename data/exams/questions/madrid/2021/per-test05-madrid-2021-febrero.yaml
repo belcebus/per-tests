@@ -75,7 +75,7 @@ categories:
         b: Sobre el que gira el cabo en las poleas, motones y pastecas.
         c: Que a bordo de una embarcación sirve para afirmar drizas, escotas y amarras.
         d: Fuertemente asegurado a la cubierta, que sirve para hacer firmes los cabos
-          de amarre al atracar. Seguridad.
+          de amarre al atracar.
       question: 'Una roldana es un elemento:'
   3:
     name: Seguridad
@@ -121,7 +121,7 @@ categories:
         a: Aguas profundas que suponen un peligro para la navegación.
         b: Aguas poco profundas que suponen un peligro para la navegación.
         c: Aguas profundas que no suponen un peligro para la navegación.
-        d: Aguas poco profundas que no suponen un peligro para la navegación. Legislación.
+        d: Aguas poco profundas que no suponen un peligro para la navegación.
       question: 'Las aguas someras son:'
   4:
     name: Legislación
@@ -154,7 +154,7 @@ categories:
         c: Ésta ocupa una franja de marca contigua a la costa de una anchura de 200
           metros en las playas y 50 metros en el resto de la costa.
         d: El lanzamiento o varada de embarcaciones deberá hacerse a través de canales
-          debidamente señalizados. Balizamiento.
+          debidamente señalizados.
       question: 'En los tramos de costa que no estén balizados como zona de baño:'
   5:
     name: Balizamiento
@@ -210,7 +210,7 @@ categories:
         a: Amarillo.
         b: Rojo.
         c: Rojo y negro.
-        d: Rojo y amarillo. Reglamento (RIPA).
+        d: Rojo y amarillo.
       question: 'Una marca especial será de color:'
   6:
     name: Reglamento (RIPA)
@@ -386,7 +386,7 @@ categories:
         a: Largo.
         b: Través.
         c: Codera.
-        d: Spring. Emergencias en la mar.
+        d: Spring.
       question: Si se amarra una embarcación de costado al muelle, ¿cuál de los siguientes
         cabos se da por el costado opuesto al muelle, y es muy útil para ayudar a
         desatracar?
@@ -429,7 +429,7 @@ categories:
         c: Aislar la inundación cerrando tambuchos, puertas, escotillas y válvulas
           estancas al objeto de aislar el compartimento en que se produjo la avería.
         d: Emplear la bomba de refrigeración del motor para achicar el agua si ésta
-          tiene la tubería de aspiración próxima al compartimento inundado. Meteorología.
+          tiene la tubería de aspiración próxima al compartimento inundado.
       question: Ante la certeza de una vía de agua, ¿cuál de las siguientes actuaciones
         NO es CORRECTA?
   9:
@@ -479,8 +479,7 @@ categories:
           riesgo de temporal.
         c: Una tendencia a la mejoría que indica que se afianza el buen tiempo seco
           y encalmado, de anticiclón.
-        d: Una tendencia a la mejoría sin poder asegurar su persistencia. Teoría de
-          la navegación.
+        d: Una tendencia a la mejoría sin poder asegurar su persistencia.
       question: ¿Qué nos indica una subida brusca y rápida en la presión indicada
         por el barómetro aneroide?
   10:
@@ -542,8 +541,7 @@ categories:
         a: Varía con el rumbo de la embarcación.
         b: Es igual para todas las agujas náuticas de una embarcación.
         c: No depende del emplazamiento de la aguja en la embarcación.
-        d: Depende de la situación geográfica cuando la embarcación navega. Carta
-          de navegación.
+        d: Depende de la situación geográfica cuando la embarcación navega.
       question: ¿Cuál de las siguientes afirmaciones sobre el desvío de la aguja es
         cierta?
   11:

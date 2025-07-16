@@ -76,7 +76,7 @@ categories:
         c: Un noray es una pieza de hierro, de forma cilíndrica ensanchada en su parte
           superior, fijada en los muelles para hacer firmes las amarras de los barcos.
         d: Una boya es una pieza que se coloca en el costado de la embarcación para
-          evitar que se dañe cuando está amarrada. Seguridad.
+          evitar que se dañe cuando está amarrada.
       question: En relación con los elementos de amarre, ¿cuál de las siguientes afirmaciones
         es CORRECTA?
   3:
@@ -128,7 +128,7 @@ categories:
         a: 36º C.
         b: 35º C.
         c: 33º C.
-        d: 32º C. Legislación.
+        d: 32º C.
       question: ¿Cuál es el límite de temperatura corporal por debajo del cual aparece
         la hipotermia?
   4:
@@ -244,7 +244,7 @@ categories:
           de un bajo fondo.
         d: Su uso principal es indicar el sentido convencional del balizamiento, que
           debe indicarse en los documentos náuticos apropiados, en zonas con una configuración
-          especial. Reglamento (RIPA).
+          especial.
       question: En relación con las Marcas Especiales, indique la afirmación CORRECTA.
   6:
     name: Reglamento (RIPA)
@@ -400,7 +400,7 @@ categories:
         a: Naranja.
         b: Amarillo.
         c: Rojo.
-        d: Negro. Maniobra y navegación.
+        d: Negro.
       question: Conforme al Anexo IV del RIPA, “Señales de peligro”, ¿de qué color
         es la densa humareda producida por una señal fumígena que indica peligro o
         necesidad de ayuda?
@@ -431,7 +431,7 @@ categories:
         c: El viento aparente es nulo. El viento real viene de proa con una velocidad
           igual a la del barco.
         d: El viento aparente es nulo. El viento real viene de popa con una velocidad
-          igual a la del barco. Emergencias en la mar.
+          igual a la del barco.
       question: 'Si en navegación con arrancada avante tenemos la impresión de que
         no hay viento, podemos interpretar que:'
   8:
@@ -521,7 +521,7 @@ categories:
         b: La rapidez con la que el viento cambia de dirección.
         c: La velocidad con la que sopla el viento.
         d: La extensión o alcance que tiene el viento sobre la mar cuando este sopla
-          con una dirección y fuerza constantes. Teoría de la navegación.
+          con una dirección y fuerza constantes.
       question: 'Se denomina “Intensidad” a:'
   10:
     name: Teoría de la navegación
@@ -582,7 +582,7 @@ categories:
           carta náutica en la parte inferior derecha.
         c: Publicaciones con información adicional sobre la costa.
         d: Documentos que contienen información sobre balizamiento, radiocomunicaciones,
-          seguridad marítima e instrucciones emitidas por SASEMAR. Carta de navegación.
+          seguridad marítima e instrucciones emitidas por SASEMAR.
       question: 'Los derroteros son:'
   11:
     name: Carta de navegación

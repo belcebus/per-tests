@@ -800,6 +800,27 @@ class ParametricExamExtractor:
                         # No incluir texto administrativo en la opción
                         break
                     
+                    # NUEVA VERIFICACIÓN: Verificar si es un título de categoría PER
+                    category_titles = [
+                        "Nomenclatura náutica",
+                        "Elementos de amarre y fondeo", 
+                        "Seguridad",
+                        "Legislación",
+                        "Balizamiento",
+                        "Reglamento (RIPA)",
+                        "Maniobra y navegación",
+                        "Emergencias en la mar",
+                        "Meteorología",
+                        "Teoría de la navegación",
+                        "Carta de navegación"
+                    ]
+                    
+                    next_line_clean = next_line.strip().rstrip('.')
+                    is_category_title = any(next_line_clean.lower() == title.lower() for title in category_titles)
+                    if is_category_title:
+                        print(f"🛑 DETENIDO: Título de categoría detectado en opción: '{next_line_clean}' (pregunta {question_num})")
+                        break
+                    
                     # Verificar si es muy similar al texto ya existente (posible repetición)
                     if len(option_text) > 20 and next_line.strip() in option_text:
                         break

@@ -77,7 +77,7 @@ categories:
           más la eslora de la embarcación.
         c: Se utilizarán dos anclas, cuyos ángulos de fondeo formen un ángulo entre
           60º y 120º.
-        d: Se utilizarán dos anclas, una por proa y otra por popa. Seguridad.
+        d: Se utilizarán dos anclas, una por proa y otra por popa.
       question: 'Si optamos por el fondeo a la gira:'
   3:
     name: Seguridad
@@ -128,7 +128,7 @@ categories:
         b: Llevar un ancla lista para fondear.
         c: Gobernar con poco timón, procurando no levantarlo en ningún momento.
         d: Al maniobrar a un barco que navegue de “vuelta encontrada”, hacerlo inmediatamente
-          metiendo mucho timón. Legislación.
+          metiendo mucho timón.
       question: ¿Cuál de las siguientes sería una precaución a tomar navegando en
         aguas someras?
   4:
@@ -244,7 +244,7 @@ categories:
         c: Serán de color negro con una o varias anchas bandas diagonales rojas y
           su luz (si tiene) tendrá un ritmo de grupos de dos destellos GpD (2).
         d: Serán siempre de color rojo y blanco en franjas verticales y su luz (si
-          tiene) será de color blanco. Reglamento (RIPA).
+          tiene) será de color blanco.
       question: 'Las Marcas de Aguas Navegables:'
   6:
     name: Reglamento (RIPA)
@@ -400,7 +400,7 @@ categories:
         a: Naranja.
         b: Amarillo.
         c: Rojo.
-        d: Negro. Maniobra y navegación.
+        d: Negro.
       question: Conforme al Anexo IV del RIPA, “Señales de peligro”, ¿de qué color
         es la densa humareda producida por una señal fumígena que indica peligro o
         necesidad de ayuda?
@@ -431,7 +431,7 @@ categories:
         c: El viento aparente es nulo. El viento real viene de proa con una velocidad
           igual a la del barco.
         d: El viento aparente es nulo. El viento real viene de popa con una velocidad
-          igual a la del barco. Emergencias en la mar.
+          igual a la del barco.
       question: 'Si en navegación con arrancada avante tenemos la impresión de que
         no hay viento, podemos interpretar que:'
   8:
@@ -520,7 +520,7 @@ categories:
         b: El aire fluye hacia el exterior de los anticiclones y desciende desde allí,
           lo que produce formación de nubosidad y precipitaciones.
         c: Se llaman también altas presiones o, simplemente, altas.
-        d: La presión más baja se localiza siempre en el centro. Teoría de la navegación.
+        d: La presión más baja se localiza siempre en el centro.
       question: En relación con los anticiclones, ¿cuál de las siguientes afirmaciones
         es CORRECTA?
   10:
@@ -581,7 +581,7 @@ categories:
         b: Es la declinación magnética actualizada al año en curso.
         c: 'Se calcula usando la siguiente fórmula: Ct = Rm - ∆.'
         d: Es la suma algebraica de la declinación magnética y el desvío, y su resultado
-          se aplica al rumbo magnético para obtener el rumbo verdadero. Carta de navegación.
+          se aplica al rumbo magnético para obtener el rumbo verdadero.
       question: En relación con la Corrección Total, ¿cuál de las siguientes afirmaciones
         es CORRECTA?
   11:
