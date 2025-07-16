@@ -77,7 +77,7 @@ categories:
           más la eslora de la embarcación.
         c: Se utilizarán dos anclas, cuyos ángulos de fondeo formen un ángulo entre
           60º y 120º.
-        d: Se utilizarán dos anclas, una por proa y otra por popa.
+        d: Se utilizarán dos anclas, una por proa y otra por popa. Seguridad.
       question: 'Si optamos por el fondeo a la gira:'
   3:
     name: Seguridad
@@ -128,52 +128,9 @@ categories:
         b: Llevar un ancla lista para fondear.
         c: Gobernar con poco timón, procurando no levantarlo en ningún momento.
         d: Al maniobrar a un barco que navegue de “vuelta encontrada”, hacerlo inmediatamente
-          metiendo mucho timón.
+          metiendo mucho timón. Legislación.
       question: ¿Cuál de las siguientes sería una precaución a tomar navegando en
         aguas someras?
-    - category: 3
-      category_name: Seguridad
-      correct_answer: a
-      id: 20
-      options:
-        a: A intervalos que no excedan de dos minutos, dos pitadas largas consecutivas
-          separadas por un intervalo de unos dos segundos entre ambas.
-        b: A intervalos que no excedan de dos minutos, dos pitadas cortas consecutivas
-          separadas por un intervalo de unos dos segundos entre ambas.
-        c: Una pitada larga a intervalos que no excedan de dos minutos.
-        d: Una pitada corta a intervalos que no excedan de dos minutos.
-      question: 'Conforme a la Regla 35.b del RIPA, “Señales acústicas en visibilidad
-        reducida”, en las proximidades o dentro de una zona de visibilidad reducida,
-        un buque de propulsión mecánica en navegación, pero parado y sin arrancada,
-        emitirá:'
-    - category: 3
-      category_name: Seguridad
-      correct_answer: b
-      id: 22
-      options:
-        a: Se deberá maniobrar para mantenernos apartados de su derrota.
-        b: Se deberá mantener el rumbo, ya que debe de ser el otro buque el que maniobre.
-        c: Para la situación indicada no hay norma y por tanto se deberá tener en
-          cuenta lo indicado para la situación de vuelta encontrada.
-        d: Se deberá maniobrar para caer a estribor de forma que se pase por la banda
-          de babor del velero contrario.
-      question: Estando usted navegando a vela por la Ría de Muros, se le aproxima
-        otro buque de vela con riesgo de abordaje. Conforme a la Regla 12 del RIPA,
-        “Buques de vela”, ¿cuál será la manera correcta en que tendrá usted que maniobrar
-        si ambas embarcaciones reciben el viento por la misma banda y el otro buque
-        está a barlovento?
-    - category: 3
-      category_name: Seguridad
-      correct_answer: d
-      id: 23
-      options:
-        a: Naranja.
-        b: Amarillo.
-        c: Rojo.
-        d: Negro.
-      question: Navegando de noche cerca de la Punta de Sa Pedrera, distinguimos cada
-        vez más cerca de nuestra popa una luz de color blanca y las dos de costado
-        de otro buque de propulsión mecánica, ¿cuál es la forma correcta de maniobrar?
   4:
     name: Legislación
     questions:
@@ -181,6 +138,29 @@ categories:
       category_name: Legislación
       correct_answer: a
       id: 11
+      options:
+        a: A una distancia superior a 3 millas náuticas de la tierra más próxima si
+          las aguas sucias han sido previamente desmenuzadas y desinfectadas mediante
+          un sistema dotado de medios que permitan almacenarlas temporalmente, siempre
+          que sea aprobado u homologado por la Administración Marítima española.
+        b: A una distancia superior a 3 millas náuticas e inferior a 12 millas náuticas
+          de la tierra más próxima, hayan sido o no previamente desmenuzadas y desinfectadas,
+          si han estado almacenadas en sistemas de retención que se descarguen a un
+          régimen moderado.
+        c: A una distancia no superior a zona 7, si se utiliza algún sistema de retención
+          por el que las aguas sucias se descarguen instantáneamente, hallándose la
+          embarcación en ruta navegando a velocidad no inferior a 4 nudos.
+        d: Fuera de zona 7, si las aguas sucias han estado almacenadas en algún sistema
+          de retención que se descargue instantáneamente aprobado u homologado por
+          la Administración Marítima española, hallándose la embarcación en ruta navegando
+          a velocidad no superior a 4 nudos.
+      question: 'El Real Decreto 339/2021, de 18 de mayo, prohíbe la descarga de aguas
+        sucias por las embarcaciones de recreo en aguas en las que España ejerce soberanía,
+        derechos soberanos o jurisdicción, salvo que esta se efectúe:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 12
       options:
         a: Está prohibida en todo caso, sin que quepa excepción alguna.
         b: Está permitida si se realiza a menos de 12 millas marinas de la tierra
@@ -193,9 +173,9 @@ categories:
           a los demás desechos de alimentos que deberán estar desmenuzados o triturados
           de manera que puedan pasar por cribas con mallas de una abertura máxima
           de 25 mm.
-      question: 'El Real Decreto 339/2021, de 18 de mayo, prohíbe la descarga de aguas
-        sucias por las embarcaciones de recreo en aguas en las que España ejerce soberanía,
-        derechos soberanos o jurisdicción, salvo que esta se efectúe:'
+      question: 'Conforme a lo dispuesto en el Anexo V, Regla 3, del Convenio Internacional
+        para prevenir la contaminación por los buques (Convenio MARPOL), la descarga
+        en el mar de aceite de cocina:'
   5:
     name: Balizamiento
     questions:
@@ -264,30 +244,11 @@ categories:
         c: Serán de color negro con una o varias anchas bandas diagonales rojas y
           su luz (si tiene) tendrá un ritmo de grupos de dos destellos GpD (2).
         d: Serán siempre de color rojo y blanco en franjas verticales y su luz (si
-          tiene) será de color blanco.
+          tiene) será de color blanco. Reglamento (RIPA).
       question: 'Las Marcas de Aguas Navegables:'
   6:
     name: Reglamento (RIPA)
     questions:
-    - category: 6
-      category_name: Reglamento (RIPA)
-      correct_answer: c
-      id: 12
-      options:
-        a: Está prohibida en todo caso, sin que quepa excepción alguna.
-        b: Está permitida si se realiza a menos de 12 millas marinas de la tierra
-          más próxima y siempre que no esté contaminado con otro tipo de basuras.
-        c: Está prohibida a no ser que se deba a una pérdida accidental de basuras
-          resultante de una avería y se hubieran tomado toda suerte de precauciones
-          razonables para impedir o reducir a un mínimo tal pérdida.
-        d: Está permitida siempre que se realice a más de 12 millas marinas de la
-          tierra más próxima, mientras la embarcación no se encuentre en ruta y junto
-          a los demás desechos de alimentos que deberán estar desmenuzados o triturados
-          de manera que puedan pasar por cribas con mallas de una abertura máxima
-          de 25 mm.
-      question: 'Conforme a lo dispuesto en el Anexo V, Regla 3, del Convenio Internacional
-        para prevenir la contaminación por los buques (Convenio MARPOL), la descarga
-        en el mar de aceite de cocina:'
     - category: 6
       category_name: Reglamento (RIPA)
       correct_answer: b
@@ -310,10 +271,25 @@ categories:
         a: La demora de un buque que se aproxima no varía en forma apreciable.
         b: La demora de un buque que se aproxima varía en forma apreciable.
         c: Principalmente la velocidad del buque que se aproxima está por encima de
-          la velocidad de
-        d: Opción D (contenido incompleto)
+          la velocidad de seguridad.
+        d: La demora del buque que se aleja varía en forma apreciable.
       question: 'Conforme a la Regla 7 del RIPA, “Riesgo de abordaje”, se considerará
         que existe riesgo de abordaje si, entre otras consideraciones:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 20
+      options:
+        a: A intervalos que no excedan de dos minutos, dos pitadas largas consecutivas
+          separadas por un intervalo de unos dos segundos entre ambas.
+        b: A intervalos que no excedan de dos minutos, dos pitadas cortas consecutivas
+          separadas por un intervalo de unos dos segundos entre ambas.
+        c: Una pitada larga a intervalos que no excedan de dos minutos.
+        d: Una pitada corta a intervalos que no excedan de dos minutos.
+      question: 'Conforme a la Regla 35.b del RIPA, “Señales acústicas en visibilidad
+        reducida”, en las proximidades o dentro de una zona de visibilidad reducida,
+        un buque de propulsión mecánica en navegación, pero parado y sin arrancada,
+        emitirá:'
     - category: 6
       category_name: Reglamento (RIPA)
       correct_answer: a
@@ -333,9 +309,43 @@ categories:
           cortarle la proa.
         d: Cuando dos buques o embarcaciones, con independencia del tipo que sean,
           se crucen con riesgo de abordaje, el buque que tenga al otro por su costado
-          de babor se mantendrá apartado de la derrota
+          de babor se mantendrá apartado de la derrota de este otro y, si las circunstancias
+          lo permiten, evitará cortarle la proa.
       question: Conforme a la Regla 15 del RIPA, “Situación «de cruce»”, indique cuál
         de las siguientes afirmaciones es CORRECTA.
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 22
+      options:
+        a: Se deberá maniobrar para mantenernos apartados de su derrota.
+        b: Se deberá mantener el rumbo, ya que debe de ser el otro buque el que maniobre.
+        c: Para la situación indicada no hay norma y por tanto se deberá tener en
+          cuenta lo indicado para la situación de vuelta encontrada.
+        d: Se deberá maniobrar para caer a estribor de forma que se pase por la banda
+          de babor del velero contrario.
+      question: Estando usted navegando a vela por la Ría de Muros, se le aproxima
+        otro buque de vela con riesgo de abordaje. Conforme a la Regla 12 del RIPA,
+        “Buques de vela”, ¿cuál será la manera correcta en que tendrá usted que maniobrar
+        si ambas embarcaciones reciben el viento por la misma banda y el otro buque
+        está a barlovento?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 23
+      options:
+        a: Dado que se trata de una situación de buque que alcanza, deberemos mantenernos
+          siempre apartados de la otra embarcación y maniobrar en consecuencia.
+        b: Dado que se trata de una vuelta encontrada, deberemos caer a estribor de
+          forma que pasemos por la banda de babor del otro.
+        c: Dado que se trata de una situación de cruce con riesgo de abordaje, maniobraremos
+          por estar al costado de babor.
+        d: Dado que se trata de una maniobra de buque que sigue a rumbo, mantendremos
+          rumbo y velocidad excepto si observamos que la otra embarcación no efectúa
+          la maniobra necesaria para evitar el abordaje.
+      question: Navegando de noche cerca de la Punta de Sa Pedrera, distinguimos cada
+        vez más cerca de nuestra popa una luz de color blanca y las dos de costado
+        de otro buque de propulsión mecánica, ¿cuál es la forma correcta de maniobrar?
     - category: 6
       category_name: Reglamento (RIPA)
       correct_answer: b
@@ -390,7 +400,7 @@ categories:
         a: Naranja.
         b: Amarillo.
         c: Rojo.
-        d: Negro.
+        d: Negro. Maniobra y navegación.
       question: Conforme al Anexo IV del RIPA, “Señales de peligro”, ¿de qué color
         es la densa humareda producida por una señal fumígena que indica peligro o
         necesidad de ayuda?
@@ -421,7 +431,7 @@ categories:
         c: El viento aparente es nulo. El viento real viene de proa con una velocidad
           igual a la del barco.
         d: El viento aparente es nulo. El viento real viene de popa con una velocidad
-          igual a la del barco.
+          igual a la del barco. Emergencias en la mar.
       question: 'Si en navegación con arrancada avante tenemos la impresión de que
         no hay viento, podemos interpretar que:'
   8:
@@ -462,7 +472,7 @@ categories:
         a: La pleamar, que es el momento en que la marea está más alta.
         b: La bajamar, que es el momento en que la marea está más alta.
         c: La pleamar, que es el momento en que la marea está más baja.
-        d: La bajamar, que es el momento en que la marea está más baja.
+        d: La bajamar, que es el momento en que la marea está más baja. Meteorología
       question: 'En caso de varada, para liberar una embarcación por medios propios
         utilizando las mareas, deberá esperar a:'
   9:
@@ -510,7 +520,7 @@ categories:
         b: El aire fluye hacia el exterior de los anticiclones y desciende desde allí,
           lo que produce formación de nubosidad y precipitaciones.
         c: Se llaman también altas presiones o, simplemente, altas.
-        d: La presión más baja se localiza siempre en el centro.
+        d: La presión más baja se localiza siempre en el centro. Teoría de la navegación.
       question: En relación con los anticiclones, ¿cuál de las siguientes afirmaciones
         es CORRECTA?
   10:
@@ -571,7 +581,7 @@ categories:
         b: Es la declinación magnética actualizada al año en curso.
         c: 'Se calcula usando la siguiente fórmula: Ct = Rm - ∆.'
         d: Es la suma algebraica de la declinación magnética y el desvío, y su resultado
-          se aplica al rumbo magnético para obtener el rumbo verdadero.
+          se aplica al rumbo magnético para obtener el rumbo verdadero. Carta de navegación.
       question: En relación con la Corrección Total, ¿cuál de las siguientes afirmaciones
         es CORRECTA?
   11:

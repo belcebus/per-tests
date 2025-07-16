@@ -5,6 +5,18 @@ categories:
     - category: 1
       category_name: Nomenclatura náutica
       correct_answer: null
+      id: 1
+      options:
+        a: Despejar la cubierta de todo material y equipos que puedan salir volando.
+        b: Lanzar un cohete provisto de paracaídas para identificar nuestra posición.
+        c: En el caso de ser un velero, mantener las velas izadas y arrancar el motor.
+        d: Esperar las instrucciones del comandante del helicóptero para ver qué elementos
+          de cubierta deben fijarse.
+      question: 'En una maniobra de rescate desde un helicóptero de Salvamento Marítimo,
+        se debe:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
       id: 2
       options:
         a: Mover los pesos de forma que el centro de carena de la embarcación se sitúe
@@ -19,39 +31,6 @@ categories:
     - category: 1
       category_name: Nomenclatura náutica
       correct_answer: null
-      id: 6
-      options:
-        a: Situado en la regala para protegerla y donde se acoplan los eslabones de
-          la cadena.
-        b: Sobre el que gira el cabo en las poleas, motones y pastecas.
-        c: Que a bordo de una embarcación sirve para afirmar drizas, escotas y amarras.
-        d: Fuertemente asegurado a la cubierta, que sirve para hacer firmes los cabos
-          de amarre al atracar.
-      question: 'Una roldana es un elemento:'
-  2:
-    name: Elementos de amarre y fondeo
-    questions:
-    - category: 2
-      category_name: Elementos de amarre y fondeo
-      correct_answer: null
-      id: 5
-      options:
-        a: Amarrar el cable o guía en alguna parte de nuestra embarcación para no
-          perderlo.
-        b: Seguir las instrucciones de la tripulación del helicóptero, excepto si
-          éstas nos parecen complicadas.
-        c: El patrón dirigirá las operaciones de rescate en el momento de la llegada
-          del helicóptero.
-        d: Esperar que el cable de izado toque primero el agua o el barco, a fin de
-          que descargue la electricidad estática.
-      question: Respecto a las acciones a llevar a cabo a la llegada del helicóptero
-        de Salvamento Marítimo, ¿cuál de las siguientes afirmaciones es CORRECTA?
-  3:
-    name: Seguridad
-    questions:
-    - category: 3
-      category_name: Seguridad
-      correct_answer: null
       id: 3
       options:
         a: Esperar a que la radiobaliza trasmita automáticamente, nunca la activaremos
@@ -61,8 +40,8 @@ categories:
         d: Soltar la driza de la balsas salvavidas antes de lanzarla al agua.
       question: En caso de emergencia, ¿qué debemos hacer si se tuviera que abandonar
         la embarcación?
-    - category: 3
-      category_name: Seguridad
+    - category: 1
+      category_name: Nomenclatura náutica
       correct_answer: null
       id: 4
       options:
@@ -72,6 +51,35 @@ categories:
         d: 30 días.
       question: ¿Cuantos días habrá de resistir a flote como mínimo una balsa salvavidas,
         independientemente del estado de la mar?
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 5
+      options:
+        a: La sonda del lugar a elegir.
+        b: La eslora de la embarcación.
+        c: El círculo de garreo de la embarcación.
+        d: La regulación sobre fondeo aplicable en la zona a elegir.
+      question: ¿Cuál de los siguientes aspectos NO influirá en la elección del lugar
+        de fondeo?
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 6
+      options:
+        a: Situado en la regala para protegerla y donde se acoplan los eslabones de
+          la cadena.
+        b: Sobre el que gira el cabo en las poleas, motones y pastecas.
+        c: Que a bordo de una embarcación sirve para afirmar drizas, escotas y amarras.
+        d: Fuertemente asegurado a la cubierta, que sirve para hacer firmes los cabos
+          de amarre al atracar. Seguridad.
+      question: 'Una roldana es un elemento:'
+  3:
+    name: Seguridad
+    questions:
     - category: 3
       category_name: Seguridad
       correct_answer: null
@@ -113,129 +121,8 @@ categories:
         a: Aguas profundas que suponen un peligro para la navegación.
         b: Aguas poco profundas que suponen un peligro para la navegación.
         c: Aguas profundas que no suponen un peligro para la navegación.
-        d: Aguas poco profundas que no suponen un peligro para la navegación.
+        d: Aguas poco profundas que no suponen un peligro para la navegación. Legislación.
       question: 'Las aguas someras son:'
-    - category: 3
-      category_name: Seguridad
-      correct_answer: null
-      id: 28
-      options:
-        a: Son circunferencias menores paralelas al Ecuador y perpendiculares al eje
-          terrestre.
-        b: En las proyecciones Mercatorianas, son circunferencias paralelas al Ecuador
-          y perpendiculares al eje terrestre.
-        c: Son circunferencias del mismo diámetro, paralelas al Ecuador y perpendiculares
-          al eje terrestre.
-        d: Son líneas imaginarias que dividen el globo terráqueo en longitudes.
-      question: ¿Cómo se definen los paralelos?
-    - category: 3
-      category_name: Seguridad
-      correct_answer: null
-      id: 31
-      options:
-        a: l = 35º 54,2’N   L = 005º 51,0’W.
-        b: l = 35º 53,7’N   L = 005º 50,6’W.
-        c: l = 35º 55,0’N   L = 005º 50,6’W.
-        d: l = 35º 53,2’N   L = 005º 51,5’W.
-      question: Hallar nuestra situación simultánea estando situados en la demora
-        verdadera =208º del faro de Cabo Espartel y la demora verdadera = 136º del
-        faro de Punta Malabata.
-    - category: 3
-      category_name: Seguridad
-      correct_answer: null
-      id: 32
-      options:
-        a: l = 36º 02,2’N   L = 005º 58,0’W.
-        b: l = 36º 01,3’N   L = 005º 59,0’W.
-        c: l = 36º 00,3’N   L = 005º 59,0’W.
-        d: l = 36º 02,3’N   L = 005º 58,5’W.
-      question: Navegando al rumbo de aguja = 284,5º a una velocidad de máquinas de
-        7 nudos, observamos a la Hrb 11:12 el faro de punto Gracia con una demora
-        de aguja de 350º. Manteniendo rumbo y velocidad observamos nuevamente el faro
-        de Punta Gracia con una demora de aguja = 060º a la Hrb 12:36. Hallar la situación
-        no simultánea a la Hrb 12:36 si la Corrección Total = 4º (+).
-    - category: 3
-      category_name: Seguridad
-      correct_answer: null
-      id: 33
-      options:
-        a: l = 35º 59,5’N   L = 005º 16,0’W.
-        b: l = 36º 02,2’N   L = 005º 16,4’W.
-        c: l = 36º 03,8’N   L = 005º 17,8’W.
-        d: l = 35º 02,2’N   L = 005º 18,5’W.
-      question: Navegando al rumbo verdadero =072º a una velocidad de máquinas de
-        8 nudos, observamos a la Hrb 16:06 el faro de Punta Europa con una demora
-        verdadera de 020º. Manteniendo rumbo y velocidad observamos el faro de Punta
-        Almina con una demora verdadera =175º a la Hrb 16:36. Hallar la situación
-        no simultánea a la Hrb 16:36.
-    - category: 3
-      category_name: Seguridad
-      correct_answer: null
-      id: 34
-      options:
-        a: 149º.
-        b: 141º.
-        c: 135º.
-        d: 144º.
-      question: Situados en la demora verdadera del faro de Cabo Trafalgar = 340º
-        y una distancia del mismo de 3 millas, damos rumbo para pasar a 6,1 millas
-        del faro de Punta de Gracia. Calcular el rumbo de aguja si el desvío de la
-        aguja es 2ºW, la declinación magnética es la de la carta para 2021 y tenemos
-        un viento del NE que nos provoca un abatimiento de 4º.
-    - category: 3
-      category_name: Seguridad
-      correct_answer: null
-      id: 37
-      options:
-        a: Rºa = 184º    Vef = 10,4’.
-        b: Rºa = 191º    Vef = 9,8’.
-        c: Rºa = 185º    Vef = 9,9’.
-        d: Rºa = 187º    Vef = 10,1’.
-      question: Siendo el rumbo de la corriente = 130º, la intensidad horaria de la
-        corriente 3 nudos y estando situados a 5 millas del faro de Cabo Trafalgar
-        y a 9,2 millas del faro de Punta de Gracia, ponemos rumbo al faro de Cabo
-        Espartel. Hallar el rumbo de aguja y la velocidad efectiva, si la Corrección
-        Total = 4º (-) y la velocidad de máquinas = 8 nudos.
-    - category: 3
-      category_name: Seguridad
-      correct_answer: null
-      id: 38
-      options:
-        a: l = 35º 56,0’N   L = 006º 07,6’W.
-        b: l = 35º 55,5’N   L = 006º 07,0’W.
-        c: l = 35º 57,0’N   L = 006º 06,6’W.
-        d: l = 35º 54,9’N   L = 006º 08,8’W.
-      question: A la Hrb 11:06 estamos situados en l = 35º 45,2’N y L= 006º 00,5’W
-        con rumbo de aguja = 300º, viento del W que nos abate 4º y una corriente de
-        intensidad horaria de 2,5 nudos y rumbo 045º. Hallar la situación estimada
-        a la Hrb 13:06 si la Corrección Total es de 3º (-) y la velocidad de máquinas
-        es de 6 nudos.
-    - category: 3
-      category_name: Seguridad
-      correct_answer: null
-      id: 39
-      options:
-        a: 6,50 m.
-        b: 6,90 m.
-        c: 7,70 m.
-        d: 7,10 m.
-      question: Hallar la sonda en el momento de la primera bajamar, el día 27 de
-        febrero de 2021 en Tarifa, con una presión atmosférica de 1003 Mb y una sonda
-        en la carta de 6,8 m.
-    - category: 3
-      category_name: Seguridad
-      correct_answer: null
-      id: 40
-      options:
-        a: Meridiano vertical.
-        b: Meridiano inferior del lugar.
-        c: Meridiano superior del lugar.
-        d: Meridiano primario.
-      question: A la Hrb 16:00 salimos del faro de la punta del espigón del Puerto
-        de Tánger con un rumbo verdadero = 350º y una velocidad de máquinas de 7 nudos.
-        A la Hrb 17:30 observamos el faro de Punta de Gracia a 6,1 millas y el faro
-        de Punta Paloma a 4,2 millas. ¿Cuál es el rumbo e intensidad horaria de la
-        corriente?
   4:
     name: Legislación
     questions:
@@ -267,11 +154,21 @@ categories:
         c: Ésta ocupa una franja de marca contigua a la costa de una anchura de 200
           metros en las playas y 50 metros en el resto de la costa.
         d: El lanzamiento o varada de embarcaciones deberá hacerse a través de canales
-          debidamente señalizados.
+          debidamente señalizados. Balizamiento.
       question: 'En los tramos de costa que no estén balizados como zona de baño:'
   5:
     name: Balizamiento
     questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 13
+      options:
+        a: Amarillo sobre negro.
+        b: Negro sobre amarillo.
+        c: Verde sobre fondo rojo.
+        d: Rojo sobre fondo verde.
+      question: 'Los colores de la marca cardinal Norte son:'
     - category: 5
       category_name: Balizamiento
       correct_answer: null
@@ -285,21 +182,39 @@ categories:
         d: Próximas a un peligro, siempre junto a una marca cardinal que indique la
           posición de dicho peligro.
       question: 'Las marcas de peligro aislado se colocan:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 15
+      options:
+        a: Negro.
+        b: Rojo y negro.
+        c: Rojo y blanco.
+        d: Rojo.
+      question: 'La marca de tope de una marca de aguas navegables será de color:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 16
+      options:
+        a: Cilíndrica o esférica.
+        b: Cónica o esférica.
+        c: Esférica.
+        d: Cilíndrica o cónica.
+      question: 'La forma de las marcas laterales en la región A puede ser:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 17
+      options:
+        a: Amarillo.
+        b: Rojo.
+        c: Rojo y negro.
+        d: Rojo y amarillo. Reglamento (RIPA).
+      question: 'Una marca especial será de color:'
   6:
     name: Reglamento (RIPA)
     questions:
-    - category: 6
-      category_name: Reglamento (RIPA)
-      correct_answer: null
-      id: 1
-      options:
-        a: Despejar la cubierta de todo material y equipos que puedan salir volando.
-        b: Lanzar un cohete provisto de paracaídas para identificar nuestra posición.
-        c: En el caso de ser un velero, mantener las velas izadas y arrancar el motor.
-        d: Esperar las instrucciones del comandante del helicóptero para ver qué elementos
-          de cubierta deben fijarse.
-      question: 'En una maniobra de rescate desde un helicóptero de Salvamento Marítimo,
-        se debe:'
     - category: 6
       category_name: Reglamento (RIPA)
       correct_answer: null
@@ -316,6 +231,18 @@ categories:
       question: Estando a bordo de nuestra embarcación necesitamos pedir ayuda, ¿cuál
         de las siguientes señales sería correcta de acuerdo con el anexo IV de señales
         de peligro del RIPA?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 19
+      options:
+        a: Un buque restringido por su calado.
+        b: Una moto náutica.
+        c: Un hidroavión amarado.
+        d: Un buque sin gobierno, un buque con capacidad de maniobra restringida o
+          un buque dedicado a la pesca.
+      question: 'Según la Regla 18.b del RIPA, los buques de vela, en navegación,
+        se mantendrán apartados de la derrota de:'
     - category: 6
       category_name: Reglamento (RIPA)
       correct_answer: null
@@ -444,12 +371,22 @@ categories:
     - category: 7
       category_name: Maniobra y navegación
       correct_answer: null
+      id: 28
+      options:
+        a: Atracamos al costado de otra embarcación.
+        b: Atracamos con el costado al muelle.
+        c: Adelantamos por estribor a otra embarcación.
+        d: Atracamos popa con popa.
+      question: 'Nos abarloamos a otra embarcación si:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
       id: 29
       options:
         a: Largo.
         b: Través.
         c: Codera.
-        d: Spring.
+        d: Spring. Emergencias en la mar.
       question: Si se amarra una embarcación de costado al muelle, ¿cuál de los siguientes
         cabos se da por el costado opuesto al muelle, y es muy útil para ayudar a
         desatracar?
@@ -471,79 +408,56 @@ categories:
           o bien por teléfono.
       question: 'Si necesitamos una consulta médica mientras estamos navegando, debemos
         contactar con:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 31
+      options:
+        a: 'Clase C: fuegos de combustibles líquidos o sólidos licuables.'
+        b: 'Clase A: fuegos de combustibles sólidos.'
+        c: 'Clase F: fuegos de metales.'
+        d: 'Clase B: fuegos de gases.'
+      question: Según la clasificación UNE de los incendios, ¿cuál de estas afirmaciones
+        es correcta?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 32
+      options:
+        a: No se debe poner en marcha el motor de la embarcación.
+        b: Activar la bomba de achique.
+        c: Aislar la inundación cerrando tambuchos, puertas, escotillas y válvulas
+          estancas al objeto de aislar el compartimento en que se produjo la avería.
+        d: Emplear la bomba de refrigeración del motor para achicar el agua si ésta
+          tiene la tubería de aspiración próxima al compartimento inundado. Meteorología.
+      question: Ante la certeza de una vía de agua, ¿cuál de las siguientes actuaciones
+        NO es CORRECTA?
   9:
     name: Meteorología
     questions:
     - category: 9
       category_name: Meteorología
       correct_answer: null
-      id: 13
+      id: 33
       options:
-        a: El viento suele ser de intensidad moderada a fuerte y gira paralelo a las
-          isobaras y en el sentido de las agujas del reloj (en el Hemisferio Norte)
-          debido a la aceleración de Coriolis.
-        b: Las presiones en su interior suelen situarse por encima de los 760 mmHg.
-        c: La presión en su interior es menor que la existente en la región que la
-          rodea.
-        d: La presión es máxima en el centro y debe estar rodeada al menos, por una
-          isobara cerrada.
-      question: 'En una borrasca:'
+        a: Girar el viento, es decir, cambiar de dirección.
+        b: Empeorar el tiempo a lo que el viento se refiere, es decir, aumentar la
+          intensidad.
+        c: Aumento brusco y momentáneo de la fuerza del viento.
+        d: Decrecer la fuerza del viento.
+      question: ¿Qué significa “rolar”?
     - category: 9
       category_name: Meteorología
       correct_answer: null
-      id: 15
+      id: 34
       options:
-        a: Al tiempo, en segundos, que tarda un seno en recorrer dos veces la distancia
-          entre crestas.
-        b: Al tiempo, en segundos, que tardan dos crestas sucesivas en pasar por un
-          mismo punto.
-        c: Al tiempo, en segundos, que tardan un seno y una cresta consecutivos en
-          recorrer el fetch del viento que forma la ola.
-        d: Al tiempo, en segundos, que tarda una cresta en recorrer dos veces la distancia
-          entre senos.
-      question: 'Se entiende por periodo de ola:'
-    - category: 9
-      category_name: Meteorología
-      correct_answer: null
-      id: 16
-      options:
-        a: Oeste, debido a que el Mar Mediterráneo tiene mayor salinidad que el Océano
-          Atlántico.
-        b: Este, debido al déficit de agua en el Mar Mediterráneo con respecto al
-          Océano Atlántico.
-        c: Este, debido al déficit de agua en el Océano Atlántico con respecto al
-          Mar Mediterráneo.
-        d: Oeste, debido a que el Mar Mediterráneo tiene menor salinidad que el Océano
-          Atlántico.
-      question: 'La corriente de superficie, en general, en el Estrecho de Gibraltar
-        es de rumbo:'
-    - category: 9
-      category_name: Meteorología
-      correct_answer: null
-      id: 17
-      options:
-        a: La humedad relativa es del 0%.
-        b: La humedad absoluta es del 100%.
-        c: Se llega al punto de rocío.
-        d: La temperatura desciende.
-      question: 'Cuando el aire se satura de vapor de agua:'
-    - category: 9
-      category_name: Meteorología
-      correct_answer: null
-      id: 19
-      options:
-        a: La velocidad del viento que circula entre dichas isobaras.
-        b: La distancia entre los puntos de las isobaras.
-        c: La fuerza que empuja al aire situado en el punto de más presión hacia el
-          aire situado en el de menos presión, haciendo que el aire se mueva desde
-          las bajas a las altas presiones con una aceleración igual al gradiente de
-          presión por unidad de volumen.
-        d: La fuerza que empuja al aire situado en el punto de menos presión hacia
-          el aire situado en el de más presión, haciendo que el aire se mueva desde
-          las altas a las bajas presiones con una aceleración igual al gradiente de
-          presión por unidad de volumen.
-      question: 'En los mapas meteorológicos de superficie en los que viene dibujadas
-        las isobaras, el gradiente de presión nos indica:'
+        a: Es función del gradiente barométrico, es decir, cuanto más cercanas están
+          las isobaras más fuerte será el viento.
+        b: Es función del gradiente barométrico, es decir, cuanto más cercanas están
+          las isobaras más débil será el viento.
+        c: Es función de la presión hidrostática del agua.
+        d: Es función de la presión hidrostática del agua y de su salinidad.
+      question: 'La intensidad del viento:'
     - category: 9
       category_name: Meteorología
       correct_answer: null
@@ -565,7 +479,8 @@ categories:
           riesgo de temporal.
         c: Una tendencia a la mejoría que indica que se afianza el buen tiempo seco
           y encalmado, de anticiclón.
-        d: Una tendencia a la mejoría sin poder asegurar su persistencia.
+        d: Una tendencia a la mejoría sin poder asegurar su persistencia. Teoría de
+          la navegación.
       question: ¿Qué nos indica una subida brusca y rápida en la presión indicada
         por el barómetro aneroide?
   10:
@@ -574,12 +489,61 @@ categories:
     - category: 10
       category_name: Teoría de la navegación
       correct_answer: null
+      id: 37
+      options:
+        a: El ángulo formado por la dirección de la proa y el meridiano magnético
+          del lugar.
+        b: La suma algebraica de la declinación magnética y el desvío.
+        c: La suma de la declinación magnética y el desvío cuando este último queda
+          a la izquierda del norte magnético.
+        d: El ángulo que forma la dirección de la proa con el meridiano verdadero
+          del lugar de signo opuesto al mismo.
+      question: 'La corrección total es:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 38
+      options:
+        a: El rumbo verdadero, el rumbo de superficie y el rumbo magnético.
+        b: El rumbo verdadero, el rumbo de superficie y el rumbo efectivo.
+        c: El rumbo verdadero, el rumbo de aguja y el rumbo magnético.
+        d: el rumbo verdadero, el rumbo de aguja y el rumbo de superficie.
+      question: En función del meridiano que consideremos para medir el rumbo, ¿qué
+        tres clases de rumbo existen?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 39
+      options:
+        a: 280º.
+        b: 300º.
+        c: 120º.
+        d: 240º.
+      question: 'La conversión del rumbo S60E a rumbo circular es:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 40
+      options:
+        a: La relación entre el rumbo de aguja y la marcación queda definida por la
+          fórmula Da = Ra + M.
+        b: Las marcaciones se cuentan de 0º a 180º desde la proa hacia estribor o
+          babor.
+        c: La relación entre el rumbo y la marcación queda definida por la fórmula
+          D = R + M.
+        d: Las marcaciones se cuentan de 0º a 360º en el sentido de las agujas del
+          reloj.
+      question: 'Señale cuál de las afirmaciones siguientes NO es CORRECTA:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
       id: 41
       options:
         a: Varía con el rumbo de la embarcación.
         b: Es igual para todas las agujas náuticas de una embarcación.
         c: No depende del emplazamiento de la aguja en la embarcación.
-        d: Depende de la situación geográfica cuando la embarcación navega.
+        d: Depende de la situación geográfica cuando la embarcación navega. Carta
+          de navegación.
       question: ¿Cuál de las siguientes afirmaciones sobre el desvío de la aguja es
         cierta?
   11:
@@ -628,13 +592,10 @@ categories:
       correct_answer: null
       id: 45
       options:
-        a: Durante el izado deben mantenerse los brazos pegados al cuerpo o cruzados
-          en el pecho.
-        b: Durante el rescate nunca nos tiraremos al agua para ser rescatados, aunque
-          nos lo indique el comandante del helicóptero.
-        c: Previamente al izado, debe asegurarse bien el arnés y mantener la calma.
-        d: Los rescatadores serán los encargados de introducir a bordo del helicóptero
-          a la persona rescatada.
+        a: Meridiano vertical.
+        b: Meridiano inferior del lugar.
+        c: Meridiano superior del lugar.
+        d: Meridiano primario.
       question: Situada una embarcación al 350º verdadero y a 5 millas del faro de
         Punta Malabata, se emprende a las 16 horas 18 minutos navegación con rumbo
         verdadero 307º con una velocidad de 12 nudos. Calcular la situación de estima
