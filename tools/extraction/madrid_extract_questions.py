@@ -1298,8 +1298,8 @@ El archivo de salida seguirá el formato: per-{test}-{comunidad}-{año}-{convoca
     parser.add_argument('--input-file', required=True, 
                        help='Archivo PDF con las preguntas del examen')
     parser.add_argument('--test-code', required=True, 
-                       choices=['01', '02', '03', '04', '05'], 
-                       help='Número del test a extraer. Disponibles: 01, 02, 03, 04, 05')
+                       choices=['01', '02', '03', '04', '05', '06'], 
+                       help='Número del test a extraer. Disponibles: 01, 02, 03, 04, 05, 06')
     parser.add_argument('--output-dir', default='data/exams', 
                        help='Directorio donde guardar el archivo YAML (default: data/exams)')
     parser.add_argument('--start-page', type=int, 

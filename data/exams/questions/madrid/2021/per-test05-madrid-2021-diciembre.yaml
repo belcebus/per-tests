@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 1
       options:
         a: Parte de los lados del buque donde este empieza a estrecharse para formar
@@ -15,7 +15,7 @@ categories:
       question: 'Se define “costado” como:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 2
       options:
         a: El francobordo influye en la estabilidad transversal, ya que, al aumentar
@@ -29,7 +29,7 @@ categories:
       question: 'De las siguientes afirmaciones indique cuál es la CORRECTA:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: El rezón es un ancla pequeña, de tres uñas y sin cepo, que sirve para embarcaciones
@@ -44,7 +44,7 @@ categories:
         es CORRECTA:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 4
       options:
         a: La superficie total de la pala, la longitud de la mecha y de la forma del
@@ -61,7 +61,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: a
       id: 5
       options:
         a: El tenedero es un palo o percha larga, con un gancho metálico en un extremo,
@@ -76,7 +76,7 @@ categories:
       question: ¿Cuál de las siguientes afirmaciones relativas al fondeo es INCORRECTA?
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 6
       options:
         a: La vuelta de rezón se genera con una gaza corrediza y es derivado del as
@@ -91,7 +91,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 7
       options:
         a: Únicamente a través del teléfono 112 o 900 202 202.
@@ -103,7 +103,7 @@ categories:
         Marítimo?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 8
       options:
         a: La embarcación se vuelve más inestable al elevarse el centro de gravedad.
@@ -113,7 +113,7 @@ categories:
       question: 'En una embarcación de recreo, al aumentar los pesos en cubierta:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 9
       options:
         a: Evitar el balance excesivo.
@@ -124,7 +124,7 @@ categories:
         más eficaz de:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 10
       options:
         a: 6 cohetes con luz roja y paracaídas, 6 Bengalas de mano y 1 Señal fumígena
@@ -140,7 +140,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 11
       options:
         a: Las aguas sucias que hayan estado almacenadas en los sistemas de retención
@@ -160,7 +160,7 @@ categories:
         de recreo:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 12
       options:
         a: Las banderas y enseñas reconocidas en los Estatutos de las Comunidades
@@ -180,7 +180,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 13
       options:
         a: Esféricas, o de castillete o espeque, con franjas verticales rojas y blancas.
@@ -192,7 +192,7 @@ categories:
       question: 'Las marcas de aguas navegables son:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 14
       options:
         a: El color será blanco y emitirá grupos de dos destellos.
@@ -203,7 +203,7 @@ categories:
         de la región A que indique el canal principal a Babor?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 15
       options:
         a: Franjas verticales rojas y blancas.
@@ -213,7 +213,7 @@ categories:
       question: 'El color de las boyas de las marcas de peligro aislado será:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 16
       options:
         a: Una esfera negra.
@@ -223,7 +223,7 @@ categories:
       question: 'La marca de tope de las marcas de peligro aislado será:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 17
       options:
         a: La luz, si tiene, será siempre de color blanco.
@@ -237,7 +237,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 18
       options:
         a: Encenderá la luz de alcance intermitentemente para avisar del peligro al
@@ -253,7 +253,7 @@ categories:
         otro buque:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 19
       options:
         a: Una nave de vuelo rasante que navegue por la superficie.
@@ -265,7 +265,7 @@ categories:
         a la pesca, en navegación, se mantendrán apartados de la derrota de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 20
       options:
         a: Existirá riesgo, si la demora de un buque que se aproxima no varía en forma
@@ -279,7 +279,7 @@ categories:
         se tendrán en cuenta, entre otras, las siguientes consideraciones:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 21
       options:
         a: Cada uno de ellos caerá a babor de forma que pase por la banda de estribor
@@ -293,7 +293,7 @@ categories:
         de abordaje:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 22
       options:
         a: Una señal fumígena que produzca una densa humareda de color naranja.
@@ -304,7 +304,7 @@ categories:
         peligro y necesidad de ayuda?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 23
       options:
         a: La longitud del remolque es superior a 100 metros.
@@ -316,7 +316,7 @@ categories:
         que:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 24
       options:
         a: Deberá reducir su velocidad hasta la mínima de gobierno.
@@ -330,7 +330,7 @@ categories:
         a proa de su través, la señal de niebla de otro buque:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 25
       options:
         a: El buque reducirá su velocidad, pero sin llegar nunca a suprimir su arrancada.
@@ -343,7 +343,7 @@ categories:
         de las siguientes afirmaciones es CORRECTA?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Navegar en la vía de circulación apropiada, siguiendo la dirección general
@@ -357,7 +357,7 @@ categories:
         de separación del tráfico deberán, siempre que puedan, evitar:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 27
       options:
         a: En determinadas circunstancias el capitán puede ser eximido de dicha responsabilidad.
@@ -372,7 +372,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 28
       options:
         a: Fase inicial.
@@ -385,7 +385,7 @@ categories:
         las demás fuerzas que actúan sobre la embarcación, se denomina:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 29
       options:
         a: Disminuye la acción del timón con marcha avante y hélice avante.
@@ -398,7 +398,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 30
       options:
         a: En caso de sufrir “mal de mar”, al afectado se le mantendrá sentado en
@@ -414,7 +414,7 @@ categories:
       question: ¿Cuál de las siguientes afirmaciones es CORRECTA?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 31
       options:
         a: Los daños en la obra viva y las posibles vías de agua.
@@ -425,7 +425,7 @@ categories:
         ¿cuál de los siguientes aspectos NO es primordial tener en cuenta?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 32
       options:
         a: La mejor manera de prevenir un abordaje es navegar siempre a un régimen
@@ -443,7 +443,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 33
       options:
         a: La escala Beaufort clasifica los estados de la mar en 13 grados tomando
@@ -457,7 +457,7 @@ categories:
       question: ¿Cuál de las siguientes afirmaciones es CORRECTA?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 34
       options:
         a: Son regiones donde la presión atmosférica es más baja que la del aire circundante.
@@ -471,7 +471,7 @@ categories:
         es CORRECTA?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 35
       options:
         a: Equivalente a una atmósfera de presión.
@@ -481,7 +481,7 @@ categories:
       question: 'Un milibar es:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 36
       options:
         a: Es la extensión o alcance que tiene el viento sobre la mar cuando sopla
@@ -497,7 +497,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 37
       options:
         a: El viento.
@@ -507,79 +507,86 @@ categories:
       question: 'El rumbo es el ángulo formado entre la dirección de la proa y:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 38
-      options:
+      options: null
       a: Es siempre el mismo para todos los barcos y ha de actualizarse con el tiempo.
       b: Viene expresado para distintos rumbos en la tablilla de desvíos.
       c: Es el ángulo formado entre el Norte verdadero y el Norte de Aguja.
-      d: Una vez calculado para los diferentes rumbos, permanece inalterable en el tiempo.
+      d: Una vez calculado para los diferentes rumbos, permanece inalterable en el
+        tiempo.
       question: 'El desvío de la aguja:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 39
-      options:
-      a: El ángulo entre el meridiano de referencia y el meridiano que pasa por este punto.
+      options: null
+      a: El ángulo entre el meridiano de referencia y el meridiano que pasa por este
+        punto.
       b: La distancia que mide el arco terrestre desde dicho punto al ecuador.
-      c: El ángulo entre el plano ecuatorial y la línea que pasa por este punto y el centro de la tierra.
-      d: La distancia que mide el arco terrestre desde dicho punto al meridiano de Greenwich.
+      c: El ángulo entre el plano ecuatorial y la línea que pasa por este punto y
+        el centro de la tierra.
+      d: La distancia que mide el arco terrestre desde dicho punto al meridiano de
+        Greenwich.
       question: 'La latitud de un punto en la superficie de la Tierra es:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 40
-      options:
+      options: null
       a: Cartas de aproches o recalada a escala 1/25.000.
-      b: Información incluida en la carta sobre la declinación magnética y su variación anual.
+      b: Información incluida en la carta sobre la declinación magnética y su variación
+        anual.
       c: Información sobre la naturaleza del fondo.
-      d: Representaciones de una determinada zona a mayor escala por su importancia para la navegación.
+      d: Representaciones de una determinada zona a mayor escala por su importancia
+        para la navegación.
       question: 'La expresión "cartucho" en una carta náutica se refiere a:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 41
-      options:
+      options: null
       a: En cada lugar es diferente para cada barco ya que depende del rumbo.
       b: Es siempre la misma en cada lugar.
       c: Las cartas náuticas incluyen la declinación magnética y su variación anual.
       d: Es el ángulo formado entre el norte verdadero y el meridiano geográfico.
-      question: 'En relación con la declinación magnética, ¿cuál de las siguientes afirmaciones es CORRECTA?'
+      question: En relación con la declinación magnética, ¿cuál de las siguientes
+        afirmaciones es CORRECTA?
   11:
     name: Carta de navegación
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 42
-      options:
-      a: "Ra= 327,5º; l: 36º 00,8'N, L: 005º21,6'W y Ra=260,5º"
-      b: "Ra= 327,5º; l: 36º 00,8'N, L: 005º21,6'W y Ra=265,5º"
-      c: "Ra= 337,5º; l: 36º 00,5'N, L: 005º22'W y Ra=266,5º"
-      d: "Ra= 332,5º; l: 36º 00'N, L: 005º22,4'W y Ra=256º"
-      question: 'El 20 de marzo de 2021 estamos puntas del puerto de Ceuta y ponemos proa al 
-        faro de Punta Carnero. Al ser HRB= 03:00, aproados al Ra= 340º, tomamos marcaciones
-        de los faros Punta Carnero M= 350º y Punta Europa M=035º. Δ= 0º. Situados, ponemos
-        rumbo para pasar a una distancia de 1.5 millas del faro de Punta Tarifa. Δ= -0.5º.
-        Para todo el ejercicio la declinación magnética (dm) = - 5º. ¿Cuál de las siguientes
-        respuestas es correcta?'
+      options: null
+      a: 'Ra= 327,5º; l: 36º 00,8''N, L: 005º21,6''W y Ra=260,5º'
+      b: 'Ra= 327,5º; l: 36º 00,8''N, L: 005º21,6''W y Ra=265,5º'
+      c: 'Ra= 337,5º; l: 36º 00,5''N, L: 005º22''W y Ra=266,5º'
+      d: 'Ra= 332,5º; l: 36º 00''N, L: 005º22,4''W y Ra=256º'
+      question: El 20 de marzo de 2021 estamos puntas del puerto de Ceuta y ponemos
+        proa al faro de Punta Carnero. Al ser HRB= 03:00, aproados al Ra= 340º, tomamos
+        marcaciones de los faros Punta Carnero M= 350º y Punta Europa M=035º. Δ= 0º.
+        Situados, ponemos rumbo para pasar a una distancia de 1.5 millas del faro
+        de Punta Tarifa. Δ= -0.5º. Para todo el ejercicio la declinación magnética
+        (dm) = - 5º. ¿Cuál de las siguientes respuestas es correcta?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 43
-      options:
+      options: null
       a: l= 36º 10,0'N; L=005º 20,0'W
       b: l= 36º 8,0'N; L=005º 20,0'W
       c: l= 36º 7,0'N; L=005º 17,0'W
       d: l= 36º 08,0'N; L=005º 22,8'W
-      question: 'Navegando ponemos la proa a Punta Europa, tomando Da= S40ºE y después se
-        pone la proa a Punta Carnero obteniendo Da= S40ºW. En la tablilla de desvío se indica
-        que para el Rumbo S40ºE un desvío (Δ) =-2, y para el rumbo S40W un desvío (Δ) = +2.
-        La declinación magnética es de 9,5º NW. ¿Cuál de las siguientes respuestas más se
-        aproxima a nuestra situación?'
+      question: Navegando ponemos la proa a Punta Europa, tomando Da= S40ºE y después
+        se pone la proa a Punta Carnero obteniendo Da= S40ºW. En la tablilla de desvío
+        se indica que para el Rumbo S40ºE un desvío (Δ) =-2, y para el rumbo S40W
+        un desvío (Δ) = +2. La declinación magnética es de 9,5º NW. ¿Cuál de las siguientes
+        respuestas más se aproxima a nuestra situación?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 44
       options:
         a: 4,19 m.
@@ -592,7 +599,7 @@ categories:
         respuestas más se aproxima a la sonda en la segunda bajamar?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 45
       options:
         a: l=36º 05,3´N   L=005º 55,6´W

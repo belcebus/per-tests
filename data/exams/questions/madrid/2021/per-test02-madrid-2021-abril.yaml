@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 1
       options:
         a: Aletas.
@@ -15,7 +15,7 @@ categories:
         proa se denominan:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 2
       options:
         a: Zarpar.
@@ -26,7 +26,7 @@ categories:
         de fondeo al levar anclas?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 3
       options:
         a: El desplazamiento de la embarcación aumenta.
@@ -36,7 +36,7 @@ categories:
       question: 'El francobordo disminuirá si:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 4
       options:
         a: Piezas en forma de capuchón que protegen los orificos donde va el eje.
@@ -51,7 +51,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 5
       options:
         a: Atravesado al viento y con arrancada avante.
@@ -62,7 +62,7 @@ categories:
         a la zona de fondeo:'
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 6
       options:
         a: El extremo del cabo.
@@ -76,7 +76,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: Llamando por teléfono al 900102102 en cualquier zona de navegación en la
@@ -89,7 +89,7 @@ categories:
         la llamada?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 8
       options:
         a: El centro de empuje se situa en un punto tal que el par adrizante igual
@@ -103,7 +103,7 @@ categories:
       question: 'En la estabilidad estática transversal el equilibrio se alcanza cuando:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 9
       options:
         a: Aumentar la velocidad.
@@ -113,7 +113,7 @@ categories:
       question: 'Para evitar un excesivo balance, la mejor medida a tomar es:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 10
       options:
         a: Disminuir la resistencia a la propulsión y aumentar las cualidades de maniobra
@@ -130,7 +130,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 11
       options:
         a: Trimestralmente ante la Autoridad Portuaria competente.
@@ -144,7 +144,7 @@ categories:
         con la siguiente periodicidad:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 12
       options:
         a: Se permite con tratamiento, y que además, el efluente no produzca sólidos
@@ -161,7 +161,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 13
       options:
         a: Grupo de seis centelleos rápidos más un destello largo cada diez segundos
@@ -180,7 +180,7 @@ categories:
         Cardinal Sur?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 14
       options:
         a: Rojo con una o varias anchas bandas horizontales negras.
@@ -190,7 +190,7 @@ categories:
       question: 'El color de las Marcas de Peligro Aislado es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 15
       options:
         a: Dos conos negros superpuestos.
@@ -200,7 +200,7 @@ categories:
       question: 'La marca de tope de una Marca de Peligro Aislado es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 16
       options:
         a: Dos conos negros superpuestos con los vértices hacia arriba.
@@ -210,7 +210,7 @@ categories:
       question: 'La marca de tope de una Marca Cardinal Norte es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 17
       options:
         a: Color verde y con forma cónica, de castillete o espeque.
@@ -224,7 +224,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 18
       options:
         a: Utilizaremos o exhibiremos, juntas o por separado, las distintas señales
@@ -238,7 +238,7 @@ categories:
         ayuda:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 19
       options:
         a: Sólo si su eslora es inferior a 12 metros.
@@ -252,7 +252,7 @@ categories:
         evitar el abordaje?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 20
       options:
         a: Una pitada larga a intervalos que no excedan de dos minutos, si el buque
@@ -268,7 +268,7 @@ categories:
         con arrancada, emitirá de noche:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 21
       options:
         a: Un trozo de lona de color naranja con un cuadrado negro y un círculo, u
@@ -282,7 +282,7 @@ categories:
         se utilizará:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 22
       options:
         a: Un buque dedicado a la pesca.
@@ -294,7 +294,7 @@ categories:
         su maquinaria propulsora mientras se dedica a la pesca con curricán se considera:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 23
       options:
         a: Buques de vela siempre que su maquinaria propulsora no se esté utilizando.
@@ -306,7 +306,7 @@ categories:
         buques NO se calificaría como "buque con capacidad de maniobra restringida":'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 24
       options:
         a: Un buque con capacidad de maniobra restringida.
@@ -318,7 +318,7 @@ categories:
         blanca?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 25
       options:
         a: Un disparo de cañón, u otra señal detonante, repetidos a intervalos de
@@ -332,7 +332,7 @@ categories:
         indica peligro y necesidad de ayuda?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Un buque solo tendrá obligación de navegar a la velocidad de seguridad
@@ -347,7 +347,7 @@ categories:
         es CORRECTA?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 27
       options:
         a: Deberán acercarse a él lo máximo posible.
@@ -361,7 +361,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 28
       options:
         a: Realizar la aproximación proa al viento y a la boya, con poca arrancada,
@@ -375,7 +375,7 @@ categories:
       question: 'Para amarrarnos a una boya, se recomienda:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 29
       options:
         a: Es mayor.
@@ -389,7 +389,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 30
       options:
         a: Clase A.
@@ -400,7 +400,7 @@ categories:
         como:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 31
       options:
         a: Canal 07.
@@ -411,7 +411,7 @@ categories:
         una Llamada Selectiva Digital a través del
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 32
       options:
         a: En la obra viva.
@@ -424,7 +424,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 33
       options:
         a: Un viento que se desplaza desde la tierra hacia el mar y perpendicular
@@ -438,7 +438,7 @@ categories:
       question: 'El terral es:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 34
       options:
         a: Es una medida empírica de la intensidad del viento basada principalmente
@@ -451,7 +451,7 @@ categories:
       question: ¿Qué es el Fetch?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 35
       options:
         a: Aumenta al aumentar la altura sobre el mar.
@@ -461,7 +461,7 @@ categories:
       question: 'La presión atmosférica:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 36
       options:
         a: Veleta.
@@ -476,7 +476,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 37
       options:
         a: 290º.
@@ -486,7 +486,7 @@ categories:
       question: 'La conversión del rumbo N70W a rumbo circular es:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 38
       options:
         a: Los rumbos verdaderos y su corrección total de 15 en 15 grados.
@@ -496,7 +496,7 @@ categories:
       question: 'En la tablilla de desvíos figuran:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 39
       options:
         a: Un rumbo.
@@ -506,7 +506,7 @@ categories:
       question: ¿Cuál de los siguientes conceptos NO es una línea de posición?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 40
       options:
         a: Estilo.
@@ -517,7 +517,7 @@ categories:
         360º que representa al horizonte?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 41
       options:
         a: '-14.'
@@ -531,7 +531,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 42
       options:
         a: l= 35º56,1’ N; L= 005º27,1’ W.
@@ -544,7 +544,7 @@ categories:
         total (CT) = -6º?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 43
       options:
         a: l = 36º 13,2´N  L = 006º 07,6´W.
@@ -555,7 +555,7 @@ categories:
         a 10 metros?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 44
       options:
         a: l=35°54' N L=005°40' E.
@@ -567,7 +567,7 @@ categories:
         la respuesta que más se aproxime)
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 45
       options:
         a: 78º.

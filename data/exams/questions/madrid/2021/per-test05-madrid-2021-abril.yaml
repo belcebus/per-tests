@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 1
       options:
         a: Lumbreras.
@@ -15,7 +15,7 @@ categories:
         pueda salir el agua embarcada en la cubierta?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 2
       options:
         a: Amura.
@@ -25,7 +25,7 @@ categories:
       question: 'La parte curvada trasera del costado que converge hacia popa se denomina:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 3
       options:
         a: Rezón.
@@ -35,7 +35,7 @@ categories:
       question: ¿Qué nombre recibe el `anclote´de más de dos brazos sin cepo?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 4
       options:
         a: Levar.
@@ -48,7 +48,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c,d
       id: 5
       options:
         a: El radio.
@@ -58,7 +58,7 @@ categories:
       question: 'La mena de un cabo es:'
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 6
       options:
         a: En las cornamusas.
@@ -71,7 +71,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: Es recomendable empujar por la popa en lugar de tirar por proa, ya que
@@ -85,7 +85,7 @@ categories:
         en un río angosto o dentro de un puerto?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 8
       options:
         a: Tener todos los objetos a bordo correctamente estibados y trincados.
@@ -97,7 +97,7 @@ categories:
         siguientes afirmaciones NO ES CORRECTA?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 9
       options:
         a: Estar en cubierta, fuera de su embalaje y listas para su uso en caso de
@@ -111,7 +111,7 @@ categories:
       question: 'Respecto a su estiba y conservación, las bengalas de mano deben:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 10
       options:
         a: Dar máquina toda atrás cuando nos percatemos de su caída.
@@ -125,7 +125,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 11
       options:
         a: Espacio marino del Tinto y del Odiel.
@@ -136,7 +136,7 @@ categories:
         (Zonas Especialmente Protegidas de Importancia para el Mediterráneo)?
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 12
       options:
         a: Navegarán a una velocidad de seguridad que según la Regla 6 del RIPA se
@@ -154,7 +154,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 13
       options:
         a: Dos conos superpuestos con los vértices hacia arriba.
@@ -164,7 +164,7 @@ categories:
       question: 'La marca de tope de una Marca Cardinal Norte es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 14
       options:
         a: Una esfera negra.
@@ -174,7 +174,7 @@ categories:
       question: 'La marca de tope de una Marca de Aguas Navegables es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 15
       options:
         a: La marca de peligro aislado se coloca siempre sobre o próxima a un peligro
@@ -192,7 +192,7 @@ categories:
       question: ¿Qué afirmación sobre las Marcas de Peligro Aislado  ES CORRECTA?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 16
       options:
         a: Amarillo.
@@ -202,7 +202,7 @@ categories:
       question: 'Una Marca Especial será de color:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 17
       options:
         a: Marcas de aguas navegables.
@@ -216,7 +216,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 18
       options:
         a: Cuando un peligro de navegación, riesgo de abordaje o circunstancias especiales,
@@ -233,7 +233,7 @@ categories:
         dicho Reglamento:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 19
       options:
         a: Una bandera cuadrada que tenga debajo de ella una bola.
@@ -244,7 +244,7 @@ categories:
         indicativa de peligro y necesidad de ayuda?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 20
       options:
         a: i) en la parte de proa, una luz roja todo horizonte o una bola; y ii) en
@@ -263,7 +263,7 @@ categories:
         el lugar más visible:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 21
       options:
         a: La derrota de un buque dedicado a la pesca.
@@ -275,7 +275,7 @@ categories:
         apartados de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 22
       options:
         a: El buque remolcador y el remolcado pueden apartarse, en todo caso, de mi
@@ -290,7 +290,7 @@ categories:
         y atendiendo a la Regla 27 del RIPA, debemos considerar que:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 23
       options:
         a: Nunca.
@@ -301,7 +301,7 @@ categories:
         de vela" como un "buque de propulsión mecánica"?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 24
       options:
         a: Una luz de alcance.
@@ -313,7 +313,7 @@ categories:
         en navegación indique su maniobra, ¿qué luz será la utilizada para estas señales?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 25
       options:
         a: De día.
@@ -324,7 +324,7 @@ categories:
         marcas deberán cumplirse:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 26
       options:
         a: Dos luces todo horizonte en línea vertical, roja la superior y blanca la
@@ -337,7 +337,7 @@ categories:
         de luces debe exhibir en el lugar más visible un buque sin gobierno?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 27
       options:
         a: Que existe riesgo de abordaje.
@@ -355,7 +355,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 28
       options:
         a: Arriar o dejar ir un cabo o cadena que está trabajando.
@@ -365,7 +365,7 @@ categories:
       question: Faenando con cabos, ¿qué significa el término "cobrar"?
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 29
       options:
         a: Aflojar o arriar un poco un cabo que esta tenso.
@@ -378,7 +378,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 30
       options:
         a: Cada cuarto de hora.
@@ -389,7 +389,7 @@ categories:
         tiempo se debe aflojar un torniquete a un accidentado con hemorragia?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 31
       options:
         a: En fuegos con presencia de electricidad.
@@ -399,7 +399,7 @@ categories:
       question: ¿Cuándo es más conveniente elegir el agua como agente extintor?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: Nunca.
@@ -413,7 +413,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 33
       options:
         a: A través del servicio móvil de la AEMET.
@@ -425,7 +425,7 @@ categories:
         la previsión meteorológica:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 34
       options:
         a: Presión por debajo de 760 mm de columna de mercurio.
@@ -435,7 +435,7 @@ categories:
       question: En metereología, ¿hasta que límite se considera baja presión?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 35
       options:
         a: La tierra hacia el mar y perpendicular a la costa durante las horas nocturnas.
@@ -445,7 +445,7 @@ categories:
       question: 'El terral es un viento que se desplaza desde:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 36
       options:
         a: Cambiar de dirección.
@@ -458,7 +458,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 37
       options:
         a: Desvío de la aguja.
@@ -468,7 +468,7 @@ categories:
       question: 'A la diferencia entre el rumbo verdadero y el rumbo de aguja se denomina:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 38
       options:
         a: Es el ángulo horizontal que nos da el sextante hasta la visual de un objeto.
@@ -479,7 +479,7 @@ categories:
       question: 'Señale la afirmación CORRECTA sobre la demora:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 39
       options:
         a: El desvío es el mismo para cada aguja que tengamos a bordo.
@@ -489,7 +489,7 @@ categories:
       question: 'Señale cuál de las siguientes afirmaciones es CORRECTA:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 40
       options:
         a: Demora.
@@ -500,7 +500,7 @@ categories:
         una línea de posición?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 41
       options:
         a: Altura de marea.
@@ -515,7 +515,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 42
       options:
         a: l = 36º 01,8´N  L = 005º 14,5´W.
@@ -528,7 +528,7 @@ categories:
         faro de Punta Europa.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 43
       options:
         a: 32,1 millas náuticas.
@@ -539,7 +539,7 @@ categories:
         Se pide precisión en el resultado.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 44
       options:
         a: l= 36° - 10,0' N   L=006° - 05,0' W.
@@ -551,7 +551,7 @@ categories:
         navegando a ese rumbo y velocidad.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 45
       options:
         a: 074, 5º.

@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 1
       options:
         a: Es la semisuma del francobordo y del calado de la embarcación.
@@ -16,7 +16,7 @@ categories:
       question: ¿Qué es el puntal?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 2
       options:
         a: De forma general una embarcación adrizada tendrá una escora nula.
@@ -29,7 +29,7 @@ categories:
       question: ¿Cuál de las siguientes afirmaciones NO es correcta?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 3
       options:
         a: Orificio por donde la mecha, o el eje del timón, atraviesa el casco.
@@ -39,7 +39,7 @@ categories:
       question: ¿Qué es la limera?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 4
       options:
         a: La banda contraria a la que recibimos el viento.
@@ -53,7 +53,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 5
       options:
         a: Encapillar un cabo a un noray.
@@ -63,7 +63,7 @@ categories:
       question: 'El nudo llano se emplea para:'
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 6
       options:
         a: En la maniobra de fondeo hay que elegir el fondeadero y su tenedero en
@@ -81,7 +81,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: Estar en cubierta, fuera de su embalaje y listas para su uso en caso de
@@ -95,7 +95,7 @@ categories:
       question: 'Respecto a su estiba y conservación, las bengalas de mano deben:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 8
       options:
         a: Tratar de presentar la amura a la mar logrando así un movimiento de deriva
@@ -107,7 +107,7 @@ categories:
       question: 'Definición de capear:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 9
       options:
         a: Nada, podríamos dañar al náufrago.
@@ -118,7 +118,7 @@ categories:
       question: En el caso de hombre al agua, ¿qué ayudas lanzaremos?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 10
       options:
         a: Radiogoniómetro.
@@ -132,7 +132,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 11
       options:
         a: No se puede fondear.
@@ -144,7 +144,7 @@ categories:
         franja que ocupa 200 metros en las playas y 50 metros en el resto de la costa:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 12
       options:
         a: Navegarán a una velocidad de seguridad, que según la Regla 6 del RIPA se
@@ -162,7 +162,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 13
       options:
         a: Tienen forma cónica, de castillete o espeque y son de color rojo.
@@ -172,7 +172,7 @@ categories:
       question: 'Las marcas laterales de babor de la región A:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 14
       options:
         a: Negras, con una o más bandas anchas horizontales rojas. Su marca de tope
@@ -187,7 +187,7 @@ categories:
         son:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 15
       options:
         a: Una esfera.
@@ -197,7 +197,7 @@ categories:
       question: 'La marca de tope de una marca de aguas navegables será:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 16
       options:
         a: Dos conos negros superpuestos opuestos por sus bases y una banda amarilla
@@ -211,7 +211,7 @@ categories:
       question: 'La marca cardinal Este se caracteriza por tener:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 17
       options:
         a: Un aspa amarilla.
@@ -224,7 +224,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 18
       options:
         a: Luces de situación y señales luminosas o marcas adicionales a las prescritas
@@ -239,7 +239,7 @@ categories:
         pueda aplicar reglas especiales en cuanto a utilizar:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 19
       options:
         a: Las luces de los buques de vela en navegación.
@@ -251,7 +251,7 @@ categories:
         la condición sin desplazamiento, exhibirán:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 20
       options:
         a: A intervalos que no excedan de un minuto dos pitadas consecutivas, a saber,
@@ -269,7 +269,7 @@ categories:
         reducida, ya sea de día o de noche, emitirá las siguientes señales:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 21
       options:
         a: Se mantendrá apartado de la derrota del otro.
@@ -284,7 +284,7 @@ categories:
         estribor:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 22
       options:
         a: Utilizaremos o exhibiremos, juntas o por separado, las distintas señales
@@ -297,7 +297,7 @@ categories:
       question: 'En caso de peligro y de que necesitemos ayuda:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 23
       options:
         a: No se le aplica el RIPA porque este Reglamento sólo es aplicable en el
@@ -313,7 +313,7 @@ categories:
         podemos afirmar que:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 24
       options:
         a: Una señal emitida con la radiobaliza consistente en la palabra “MAYDAY”.
@@ -325,7 +325,7 @@ categories:
         una embarcación propulsada a vela en caso de peligro?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 25
       options:
         a: Dos luces verdes todo horizonte en línea vertical, en el lugar más visible,
@@ -340,7 +340,7 @@ categories:
         exhibirá:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Le permita cambiar de rumbo en una distancia equivalente a tres veces la
@@ -356,7 +356,7 @@ categories:
         una velocidad de seguridad tal que:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 27
       options:
         a: Dos luces todo horizonte en línea vertical, blanca la superior y roja la
@@ -376,7 +376,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 28
       options:
         a: A la vía.
@@ -387,7 +387,7 @@ categories:
         inicialmente el timón:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: d
       id: 29
       options:
         a: Acuñar.
@@ -400,7 +400,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 30
       options:
         a: Espontaneidad.
@@ -410,7 +410,7 @@ categories:
       question: 'El tetraedro del fuego NO tiene como factor:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 31
       options:
         a: Intentaremos separarlos lo antes posible para evitar daños mayores, comprobando
@@ -424,7 +424,7 @@ categories:
       question: 'Si tras un abordaje los dos barcos quedan unidos:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: Nunca.
@@ -438,7 +438,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 33
       options:
         a: De Noreste a Oeste.
@@ -448,7 +448,7 @@ categories:
       question: En el Hemisferio Norte, ¿cuál es la trayectoria de las borrascas?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 34
       options:
         a: Cuando el viento, originado por diferencia de temperaturas y por lo tanto
@@ -463,7 +463,7 @@ categories:
       question: 'Virazón es:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 35
       options:
         a: Un anticiclón consiste en un conjunto de isobaras cerradas en las que la
@@ -477,7 +477,7 @@ categories:
       question: 'Cuál de las siguientes afirmaciones NO es correcta:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 36
       options:
         a: Cambia de dirección.
@@ -490,7 +490,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: Es un término en desuso que se atribuye a las cartas de navegación costera
@@ -502,7 +502,7 @@ categories:
       question: En relación a las cartas de navegación costera, ¿qué es un cartucho?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 38
       options:
         a: Que el viento va hacia el NE.
@@ -512,7 +512,7 @@ categories:
       question: 'Cuando decimos que el viento es NE, quiere decir:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 39
       options:
         a: Arcilla.
@@ -523,7 +523,7 @@ categories:
         al tipo de fondo?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 40
       options:
         a: Estilo.
@@ -533,7 +533,7 @@ categories:
       question: ¿Cuál de los siguientes elementos es una parte de la aguja náutica?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 41
       options:
         a: No es posible, es invariable.
@@ -549,7 +549,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 42
       options:
         a: 36º 08,8´ N  005º 57´W
@@ -560,7 +560,7 @@ categories:
         marca cardinal Este situada al sur de Barbate?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 43
       options:
         a: 10,2 millas náuticas.
@@ -570,7 +570,7 @@ categories:
       question: ¿Cuál es la distancia entre los faros de Punta Paloma y Punta Malabata?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 44
       options:
         a: 245º +
@@ -583,7 +583,7 @@ categories:
         la corrección total más aproximada de las siguientes respuestas?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 45
       options:
         a: 090º

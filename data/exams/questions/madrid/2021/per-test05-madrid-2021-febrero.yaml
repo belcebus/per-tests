@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 1
       options:
         a: Despejar la cubierta de todo material y equipos que puedan salir volando.
@@ -16,7 +16,7 @@ categories:
         se debe:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 2
       options:
         a: Mover los pesos de forma que el centro de carena de la embarcación se sitúe
@@ -30,7 +30,7 @@ categories:
       question: 'Para mejorar la estabilidad de una embarcación debemos:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 3
       options:
         a: Esperar a que la radiobaliza trasmita automáticamente, nunca la activaremos
@@ -42,7 +42,7 @@ categories:
         la embarcación?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 4
       options:
         a: 15 días.
@@ -56,7 +56,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 5
       options:
         a: La sonda del lugar a elegir.
@@ -67,7 +67,7 @@ categories:
         de fondeo?
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 6
       options:
         a: Situado en la regala para protegerla y donde se acoplan los eslabones de
@@ -82,7 +82,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 7
       options:
         a: Dar a beber alcohol para aumentar la temperatura corporal.
@@ -92,7 +92,7 @@ categories:
       question: 'Medida a tomar en caso de hipotermia:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 8
       options:
         a: Es un receptor de radio con antena direccional que emite una señal radar.
@@ -104,7 +104,7 @@ categories:
       question: 'El reflector radar:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 9
       options:
         a: Mediante un nudo que no pueda ser deshecho bajo tensión.
@@ -115,7 +115,7 @@ categories:
       question: Cuando tomemos remolque, ¿cómo lo amarraremos?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 10
       options:
         a: Aguas profundas que suponen un peligro para la navegación.
@@ -128,7 +128,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 11
       options:
         a: Sólo está obligado a acudir en su auxilio si está en condiciones de prestar
@@ -143,7 +143,7 @@ categories:
         le indique que hay personas en peligro en el mar:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 12
       options:
         a: Se permiten vertidos desde las embarcaciones en los términos que se determina
@@ -161,7 +161,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 13
       options:
         a: Amarillo sobre negro.
@@ -171,7 +171,7 @@ categories:
       question: 'Los colores de la marca cardinal Norte son:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 14
       options:
         a: En aguas navegables, indicando siempre en qué dirección se encuentra el
@@ -184,7 +184,7 @@ categories:
       question: 'Las marcas de peligro aislado se colocan:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 15
       options:
         a: Negro.
@@ -194,7 +194,7 @@ categories:
       question: 'La marca de tope de una marca de aguas navegables será de color:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 16
       options:
         a: Cilíndrica o esférica.
@@ -204,7 +204,7 @@ categories:
       question: 'La forma de las marcas laterales en la región A puede ser:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 17
       options:
         a: Amarillo.
@@ -217,7 +217,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 18
       options:
         a: Emitir un sonido producido por cualquier aparato de señales de niebla,
@@ -233,7 +233,7 @@ categories:
         de peligro del RIPA?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 19
       options:
         a: Un buque restringido por su calado.
@@ -245,7 +245,7 @@ categories:
         se mantendrán apartados de la derrota de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 20
       options:
         a: Siempre pegados a las boyas verdes.
@@ -258,7 +258,7 @@ categories:
         Regla 9.a del RIPA?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 21
       options:
         a: Cualquier buque que, por razón de su calado en relación con la profundidad
@@ -273,7 +273,7 @@ categories:
       question: 'La Regla 3 del RIPA define a un buque restringido por su calado como:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 22
       options:
         a: Se pondrá en comunicación con el otro buque a través del canal 16 de VHF,
@@ -286,7 +286,7 @@ categories:
         de si existe una situación de vuelta encontrada:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 23
       options:
         a: Dos luces verdes todo horizonte en línea vertical, en el lugar más visible,
@@ -301,7 +301,7 @@ categories:
         exhibirá:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 24
       options:
         a: Una marca bicónica en el lugar más visible, cuando la longitud del remolque
@@ -314,7 +314,7 @@ categories:
         sea visible y no esté parcialmente sumergido, exhibirá:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 25
       options:
         a: Sí, debemos encender una luz tal y como prescribe la Regla 27 del RIPA.
@@ -330,7 +330,7 @@ categories:
         todos a echar una cabezada. ¿Es correcto este proceder?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 26
       options:
         a: i) en la parte de proa, una luz roja todo horizonte o una bola; y ii) en
@@ -349,7 +349,7 @@ categories:
         en el lugar más visible:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 27
       options:
         a: A intervalos que no excedan de un minuto dos pitadas consecutivas, a saber,
@@ -370,7 +370,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 28
       options:
         a: Atracamos al costado de otra embarcación.
@@ -380,7 +380,7 @@ categories:
       question: 'Nos abarloamos a otra embarcación si:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 29
       options:
         a: Largo.
@@ -395,7 +395,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 30
       options:
         a: El hospital más cercano a la costa, ya que España no dispone de Centro
@@ -410,7 +410,7 @@ categories:
         contactar con:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 31
       options:
         a: 'Clase C: fuegos de combustibles líquidos o sólidos licuables.'
@@ -421,7 +421,7 @@ categories:
         es correcta?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 32
       options:
         a: No se debe poner en marcha el motor de la embarcación.
@@ -437,7 +437,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 33
       options:
         a: Girar el viento, es decir, cambiar de dirección.
@@ -448,7 +448,7 @@ categories:
       question: ¿Qué significa “rolar”?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 34
       options:
         a: Es función del gradiente barométrico, es decir, cuanto más cercanas están
@@ -460,7 +460,7 @@ categories:
       question: 'La intensidad del viento:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 35
       options:
         a: Las altas presiones llevan una trayectoria de Este a Oeste.
@@ -471,7 +471,7 @@ categories:
       question: ¿Cómo es la trayectoria de las borrascas en el Hemisferio Norte?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 36
       options:
         a: Una tendencia al empeoramiento.
@@ -487,7 +487,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: El ángulo formado por la dirección de la proa y el meridiano magnético
@@ -500,7 +500,7 @@ categories:
       question: 'La corrección total es:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 38
       options:
         a: El rumbo verdadero, el rumbo de superficie y el rumbo magnético.
@@ -511,7 +511,7 @@ categories:
         tres clases de rumbo existen?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 39
       options:
         a: 280º.
@@ -521,7 +521,7 @@ categories:
       question: 'La conversión del rumbo S60E a rumbo circular es:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: anulada
       id: 40
       options:
         a: La relación entre el rumbo de aguja y la marcación queda definida por la
@@ -535,7 +535,7 @@ categories:
       question: 'Señale cuál de las afirmaciones siguientes NO es CORRECTA:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 41
       options:
         a: Varía con el rumbo de la embarcación.
@@ -549,7 +549,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 42
       options:
         a: Ct = 0º.
@@ -561,7 +561,7 @@ categories:
         igual a 323º. Calcular la corrección total (Ct) de la aguja náutica.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 43
       options:
         a: Ra = 159º.
@@ -575,7 +575,7 @@ categories:
         del Estrecho de Gibraltar para 2021.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 44
       options:
         a: l = 36º 04,8’N  L = 005º 51,9’W
@@ -587,7 +587,7 @@ categories:
         y en la demora verdadera 084º del faro de Punta Paloma.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 45
       options:
         a: Meridiano vertical.
