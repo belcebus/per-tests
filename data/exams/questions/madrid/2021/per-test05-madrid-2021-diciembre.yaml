@@ -509,47 +509,47 @@ categories:
       category_name: Teoría de la navegación
       correct_answer: b
       id: 38
-      options: null
-      a: Es siempre el mismo para todos los barcos y ha de actualizarse con el tiempo.
-      b: Viene expresado para distintos rumbos en la tablilla de desvíos.
-      c: Es el ángulo formado entre el Norte verdadero y el Norte de Aguja.
-      d: Una vez calculado para los diferentes rumbos, permanece inalterable en el
-        tiempo.
+      options:
+        a: Es siempre el mismo para todos los barcos y ha de actualizarse con el tiempo.
+        b: Viene expresado para distintos rumbos en la tablilla de desvíos.
+        c: Es el ángulo formado entre el Norte verdadero y el Norte de Aguja.
+        d: Una vez calculado para los diferentes rumbos, permanece inalterable en el
+          tiempo.
       question: 'El desvío de la aguja:'
     - category: 10
       category_name: Teoría de la navegación
       correct_answer: c
       id: 39
-      options: null
-      a: El ángulo entre el meridiano de referencia y el meridiano que pasa por este
-        punto.
-      b: La distancia que mide el arco terrestre desde dicho punto al ecuador.
-      c: El ángulo entre el plano ecuatorial y la línea que pasa por este punto y
-        el centro de la tierra.
-      d: La distancia que mide el arco terrestre desde dicho punto al meridiano de
-        Greenwich.
+      options:
+        a: El ángulo entre el meridiano de referencia y el meridiano que pasa por este
+          punto.
+        b: La distancia que mide el arco terrestre desde dicho punto al ecuador.
+        c: El ángulo entre el plano ecuatorial y la línea que pasa por este punto y
+          el centro de la tierra.
+        d: La distancia que mide el arco terrestre desde dicho punto al meridiano de
+          Greenwich.
       question: 'La latitud de un punto en la superficie de la Tierra es:'
     - category: 10
       category_name: Teoría de la navegación
       correct_answer: d
       id: 40
-      options: null
-      a: Cartas de aproches o recalada a escala 1/25.000.
-      b: Información incluida en la carta sobre la declinación magnética y su variación
-        anual.
-      c: Información sobre la naturaleza del fondo.
-      d: Representaciones de una determinada zona a mayor escala por su importancia
-        para la navegación.
+      options:
+        a: Cartas de aproches o recalada a escala 1/25.000.
+        b: Información incluida en la carta sobre la declinación magnética y su variación
+          anual.
+        c: Información sobre la naturaleza del fondo.
+        d: Representaciones de una determinada zona a mayor escala por su importancia
+          para la navegación.
       question: 'La expresión "cartucho" en una carta náutica se refiere a:'
     - category: 10
       category_name: Teoría de la navegación
       correct_answer: c
       id: 41
-      options: null
-      a: En cada lugar es diferente para cada barco ya que depende del rumbo.
-      b: Es siempre la misma en cada lugar.
-      c: Las cartas náuticas incluyen la declinación magnética y su variación anual.
-      d: Es el ángulo formado entre el norte verdadero y el meridiano geográfico.
+      options:
+        a: En cada lugar es diferente para cada barco ya que depende del rumbo.
+        b: Es siempre la misma en cada lugar.
+        c: Las cartas náuticas incluyen la declinación magnética y su variación anual.
+        d: Es el ángulo formado entre el norte verdadero y el meridiano geográfico.
       question: En relación con la declinación magnética, ¿cuál de las siguientes
         afirmaciones es CORRECTA?
   11:
@@ -559,11 +559,11 @@ categories:
       category_name: Carta de navegación
       correct_answer: c
       id: 42
-      options: null
-      a: 'Ra= 327,5º; l: 36º 00,8''N, L: 005º21,6''W y Ra=260,5º'
-      b: 'Ra= 327,5º; l: 36º 00,8''N, L: 005º21,6''W y Ra=265,5º'
-      c: 'Ra= 337,5º; l: 36º 00,5''N, L: 005º22''W y Ra=266,5º'
-      d: 'Ra= 332,5º; l: 36º 00''N, L: 005º22,4''W y Ra=256º'
+      options:
+        a: 'Ra= 327,5º; l: 36º 00,8''N, L: 005º21,6''W y Ra=260,5º'
+        b: 'Ra= 327,5º; l: 36º 00,8''N, L: 005º21,6''W y Ra=265,5º'
+        c: 'Ra= 337,5º; l: 36º 00,5''N, L: 005º22''W y Ra=266,5º'
+        d: 'Ra= 332,5º; l: 36º 00''N, L: 005º22,4''W y Ra=256º'
       question: El 20 de marzo de 2021 estamos puntas del puerto de Ceuta y ponemos
         proa al faro de Punta Carnero. Al ser HRB= 03:00, aproados al Ra= 340º, tomamos
         marcaciones de los faros Punta Carnero M= 350º y Punta Europa M=035º. Δ= 0º.
@@ -574,11 +574,11 @@ categories:
       category_name: Carta de navegación
       correct_answer: d
       id: 43
-      options: null
-      a: l= 36º 10,0'N; L=005º 20,0'W
-      b: l= 36º 8,0'N; L=005º 20,0'W
-      c: l= 36º 7,0'N; L=005º 17,0'W
-      d: l= 36º 08,0'N; L=005º 22,8'W
+      options:
+        a: l= 36º 10,0'N; L=005º 20,0'W
+        b: l= 36º 8,0'N; L=005º 20,0'W
+        c: l= 36º 7,0'N; L=005º 17,0'W
+        d: l= 36º 08,0'N; L=005º 22,8'W
       question: Navegando ponemos la proa a Punta Europa, tomando Da= S40ºE y después
         se pone la proa a Punta Carnero obteniendo Da= S40ºW. En la tablilla de desvío
         se indica que para el Rumbo S40ºE un desvío (Δ) =-2, y para el rumbo S40W
@@ -619,5 +619,5 @@ exam_info:
   subtitle: Código de Test 05
   test_code: test05
   title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
-  total_questions: 39
+  total_questions: 45
   year: 2021
