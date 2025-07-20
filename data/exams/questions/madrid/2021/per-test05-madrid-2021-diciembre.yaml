@@ -1,0 +1,623 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 1
+      options:
+        a: Parte de los lados del buque donde este empieza a estrecharse para formar
+          la proa.
+        b: Prolongación de la parte superior de la popa de algunas embarcaciones.
+        c: Canto superior de los lados de un buque.
+        d: Cada uno de los dos lados del casco de un buque.
+      question: 'Se define “costado” como:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 2
+      options:
+        a: El francobordo influye en la estabilidad transversal, ya que, al aumentar
+          el francobordo, el ángulo para el cual se anula la estabilidad disminuye.
+        b: El francobordo influye en la estabilidad longitudinal, ya que, al aumentar
+          el francobordo, el ángulo para el cual se anula la estabilidad, también
+          aumenta.
+        c: El desplazamiento se define como la distancia recorrida por una embarcación.
+        d: El desplazamiento se define como la cantidad de agua que desplaza el volumen
+          sumergido de la embarcación y es equivalente al peso del barco.
+      question: 'De las siguientes afirmaciones indique cuál es la CORRECTA:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 3
+      options:
+        a: El rezón es un ancla pequeña, de tres uñas y sin cepo, que sirve para embarcaciones
+          menores.
+        b: El ancla Danforth tiene una forma plana, mucho agarre y grandes dimensiones.
+          Se trata de un ancla que se recomienda para cualquier tipo de fondo.
+        c: El ancla sin cepo ofrece mejor maniobrabilidad, operación de recogida y
+          menor peso que el ancla de cepo.
+        d: El ancla de arado es capaz de anclar, aunque se encuentre en zonas de barro,
+          arena o algas, pero es en zonas rocosas donde es más recomendable.
+      question: 'En relación con el ancla, indique cuál de las siguientes afirmaciones
+        es CORRECTA:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 4
+      options:
+        a: La superficie total de la pala, la longitud de la mecha y de la forma del
+          codaste.
+        b: La superficie total de la pala, su disposición respecto a la hélice y el
+          sentido de giro de la hélice.
+        c: La superficie total de la pala, su disposición respecto a la hélice y la
+          longitud de los guardines.
+        d: La superficie total de la pala, su disposición respecto a la hélice y de
+          la forma del codaste.
+      question: 'La eficacia del timón dependerá de:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: a
+      id: 5
+      options:
+        a: El tenedero es un palo o percha larga, con un gancho metálico en un extremo,
+          para coger las guías o las amarras.
+        b: Durante el fondeo se tomarán varias marcaciones o enfilaciones a tierra,
+          para asegurarnos que el ancla ha agarrado, y se tomará la sonda bajo la
+          quilla.
+        c: Los barcos deben llevar una longitud total de cadena de cinco veces su
+          eslora.
+        d: El garreo de un ancla se puede producir si no se ha filado suficiente cadena
+          para el fondo o el viento reinante, o si el fondo es duro o demasiado blando.
+      question: ¿Cuál de las siguientes afirmaciones relativas al fondeo es INCORRECTA?
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 6
+      options:
+        a: La vuelta de rezón se genera con una gaza corrediza y es derivado del as
+          de guía.
+        b: El nudo llano sirve para unir dos cabos de una misma mena.
+        c: El as de guía es un nudo corredizo que se usa para acortar los cabos.
+        d: El ballestrinque se utiliza para poder encapillar un cabo, al formar una
+          gaza que no es corrediza.
+      question: ¿Cuál de las siguientes afirmaciones es CORRECTA?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 7
+      options:
+        a: Únicamente a través del teléfono 112 o 900 202 202.
+        b: Mediante el uso de la estación de radio de a bordo.
+        c: A través de los Avisos a Navegantes.
+        d: Mediante el teléfono habilitado para ello en la Dirección General de la
+          Marina Mercante.
+      question: Ante una emergencia, ¿cuál es la forma de contactar con Salvamento
+        Marítimo?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 8
+      options:
+        a: La embarcación se vuelve más inestable al elevarse el centro de gravedad.
+        b: La embarcación se vuelve más estable al bajar el centro de gravedad.
+        c: La embarcación se vuelve más estable al tener más peso.
+        d: La embarcación pierde flotabilidad al bajar el centro de gravedad.
+      question: 'En una embarcación de recreo, al aumentar los pesos en cubierta:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 9
+      options:
+        a: Evitar el balance excesivo.
+        b: Evitar la cabezada excesiva.
+        c: Evitar el sincronismo transversal.
+        d: No atravesarse a la mar.
+      question: 'Navegando con la mar por proa, modificar la velocidad es la forma
+        más eficaz de:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 10
+      options:
+        a: 6 cohetes con luz roja y paracaídas, 6 Bengalas de mano y 1 Señal fumígena
+          flotante.
+        b: 3 Cohetes con luz roja y paracaídas y 3 Bengalas de mano.
+        c: 3 Bengalas de mano y 1 Señal fumígena flotante.
+        d: 6 cohetes con luz roja y paracaídas, 6 Bengalas de mano y 2 Señales fumígenas
+          flotantes.
+      question: ¿Qué señales pirotécnicas debe llevar reglamentariamente una embarcación
+        que esté autorizada a navegar en zona 4 hasta 12 millas de la costa?
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 11
+      options:
+        a: Las aguas sucias que hayan estado almacenadas en los sistemas de retención
+          no se descargarán instantáneamente, sino a un régimen moderado, hallándose
+          la embarcación en ruta navegando a velocidad no inferior a 4 nudos.
+        b: Las aguas sucias que hayan estado almacenadas en los sistemas de retención
+          no se descargarán instantáneamente, sino a un régimen moderado, hallándose
+          la embarcación en ruta navegando a velocidad no inferior a 3 nudos.
+        c: Las aguas sucias que hayan estado almacenadas en los sistemas de retención
+          se descargarán instantáneamente o a un régimen moderado, hallándose la embarcación
+          en ruta navegando a velocidad no inferior a 3 nudos.
+        d: Las aguas sucias que hayan estado almacenadas en los sistemas de retención
+          se descargarán instantáneamente o a un régimen moderado, hallándose la embarcación
+          en ruta navegando a velocidad no inferior a 4 nudos.
+      question: 'Conforme al Real Decreto 339/2021, de 18 de mayo, por el que se regula
+        el equipo de seguridad y de prevención de la contaminación de las embarcaciones
+        de recreo:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: b
+      id: 12
+      options:
+        a: Las banderas y enseñas reconocidas en los Estatutos de las Comunidades
+          Autónomas podrán permanecer izadas en puertos nacionales y aguas interiores
+          españolas, aun cuando no esté izada la Bandera de España.
+        b: Se reservará el asta de popa y el pico del palo mayor para la Bandera de
+          España.
+        c: Las dimensiones de las banderas y enseñas reconocidas en los Estatutos
+          de las Comunidades Autónomas serán superiores a un tercio del área del pabellón
+          nacional.
+        d: No hará falta llevar izado su pabellón nacional cuando naveguen por las
+          aguas interiores marítimas españolas o se hallen surtos en puerto o terminal
+          nacional.
+      question: 'En las embarcaciones de recreo nacionales:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 13
+      options:
+        a: Esféricas, o de castillete o espeque, con franjas verticales rojas y blancas.
+        b: Esféricas, o de castillete o espeque, con franjas horizontales rojas y
+          blancas.
+        c: Esféricas, o de castillete o espeque, con franjas verticales rojas o blancas.
+        d: Esféricas, o de castillete o espeque, con franjas horizontales rojas o
+          blancas.
+      question: 'Las marcas de aguas navegables son:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 14
+      options:
+        a: El color será blanco y emitirá grupos de dos destellos.
+        b: El color será verde y emitirá grupos de dos destellos.
+        c: El color será verde y emitirá grupos de dos más un destello.
+        d: El color será amarillo y emitirá grupos de tres más un destello.
+      question: ¿Qué ritmo y color tendrá la luz de una marca lateral de bifurcación
+        de la región A que indique el canal principal a Babor?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 15
+      options:
+        a: Franjas verticales rojas y blancas.
+        b: Negro con una o varias bandas anchas horizontales rojas.
+        c: Franjas verticales amarillas y blancas.
+        d: Negro con una o varias bandas anchas horizontales amarillas.
+      question: 'El color de las boyas de las marcas de peligro aislado será:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 16
+      options:
+        a: Una esfera negra.
+        b: Una esfera amarilla.
+        c: Dos esferas negras superpuestas.
+        d: Dos esferas amarillas superpuestas.
+      question: 'La marca de tope de las marcas de peligro aislado será:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 17
+      options:
+        a: La luz, si tiene, será siempre de color blanco.
+        b: Las boyas serán esféricas.
+        c: El ritmo de la luz, si tiene, será isofase, de ocultaciones, un destello
+          largo cada 10 segundos.
+        d: La marca de tope, si tiene, será un aspa amarilla.
+      question: 'En las marcas especiales:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 18
+      options:
+        a: Encenderá la luz de alcance intermitentemente para avisar del peligro al
+          otro buque.
+        b: Maniobrará, en lo posible, con anticipación suficiente y de forma decidida
+          para quedar bien franco del otro buque.
+        c: No debe maniobrar en ningún caso, sino que parará máquinas y suprimirá
+          la arrancada hasta que le haya rebasado el otro buque.
+        d: Caerá obligatoriamente a estribor de forma que pase por la banda de babor
+          del otro.
+      question: 'De acuerdo a la Regla 16 del RIPA, maniobra del buque que cede el
+        paso, todo buque que esté obligado a mantenerse apartado de la derrota de
+        otro buque:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 19
+      options:
+        a: Una nave de vuelo rasante que navegue por la superficie.
+        b: Un buque de vela.
+        c: Un buque con capacidad de maniobra restringida.
+        d: Un buque de propulsión mecánica.
+      question: 'De acuerdo a la Regla 18 del RIPA, obligaciones entre categorías
+        de buques, sin perjuicio de lo dispuesto en otras reglas, los buques dedicados
+        a la pesca, en navegación, se mantendrán apartados de la derrota de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 20
+      options:
+        a: Existirá riesgo, si la demora de un buque que se aproxima no varía en forma
+          apreciable.
+        b: Siempre existirá riesgo si es evidente una variación apreciable de la demora.
+        c: Si existe alguna duda sobre el riesgo de abordaje, se considerará que no
+          existe.
+        d: La información obtenida por radar tendrá preferencia respecto a la obtenida
+          por otros medios de que disponga el buque a bordo.
+      question: 'Según la Regla 7 del RIPA, para determinar si existe riesgo de abordaje,
+        se tendrán en cuenta, entre otras, las siguientes consideraciones:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 21
+      options:
+        a: Cada uno de ellos caerá a babor de forma que pase por la banda de estribor
+          del otro.
+        b: Cada uno de ellos caerá a estribor de forma que pase por la banda de babor
+          del otro.
+        c: Si existe dudas sobre tal situación, se supondrá que no existe.
+        d: Tras maniobrar, no podrán seguir navegando a rumbos opuestos o casi opuestos.
+      question: 'Según la Regla 14 del RIPA, cuando dos buques de propulsión mecánica
+        naveguen de vuelta encontrada a rumbos opuestos o casi opuestos, con riesgo
+        de abordaje:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 22
+      options:
+        a: Una señal fumígena que produzca una densa humareda de color naranja.
+        b: Un disparo de cañón u otra señal detonante aislada.
+        c: Un sonido intermitente producido por un aparato de señales de niebla.
+        d: La señal "HL" del Código Internacional de Señales.
+      question: Según el anexo IV del RIPA, ¿cuál de las siguientes señales indica
+        peligro y necesidad de ayuda?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 23
+      options:
+        a: La longitud del remolque es superior a 100 metros.
+        b: La longitud del remolque es inferior a 100 metros.
+        c: La longitud del remolque es inferior a 200 metros.
+        d: La longitud del remolque es superior a 200 metros.
+      question: 'Según la Regla 24.a.v) del RIPA, cuando un buque de propulsión mecánica
+        que remolque a otro exhiba una marca bicónica en el lugar más visible, significará
+        que:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 24
+      options:
+        a: Deberá reducir su velocidad hasta la mínima de gobierno.
+        b: Deberá mantener rumbo y velocidad.
+        c: Deberá caer a la banda de babor y hará sonar su señal de niebla para que
+          el otro buque caiga a estribor.
+        d: Deberá caer a la banda de babor y hará sonar su señal de niebla para que
+          el otro buque caiga a también a babor.
+      question: 'De acuerdo a la Regla 19 del RIPA, salvo en los casos en que se haya
+        comprobado que no existe riesgo de abordaje, todo buque que oiga, al parecer
+        a proa de su través, la señal de niebla de otro buque:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 25
+      options:
+        a: El buque reducirá su velocidad, pero sin llegar nunca a suprimir su arrancada.
+        b: En ningún caso el buque llegará a invertir sus medios de propulsión.
+        c: La eficacia de la maniobra se deberá ir comprobando hasta el momento en
+          que el otro buque esté pasado y en franquía.
+        d: Si las circunstancias del caso lo permiten, los cambios de rumbo y/o velocidad
+          que se efectúen para evitar un abordaje serán sucesivos y pequeños.
+      question: Según la Regla 8 del RIPA, maniobras para evitar el abordaje, ¿cuál
+        de las siguientes afirmaciones es CORRECTA?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 26
+      options:
+        a: Navegar en la vía de circulación apropiada, siguiendo la dirección general
+          de la corriente de tráfico indicada para dicha vía.
+        b: Mantener su rumbo fuera de la línea de separación o de la zona de separación
+          del tráfico.
+        c: Al entrar o salir de una vía de circulación, hacerlo por sus extremos.
+        d: Fondear dentro de un dispositivo de separación del tráfico o en las zonas
+          próximas a sus extremos.
+      question: 'Según la Regla 10 del RIPA, los buques que utilicen un dispositivo
+        de separación del tráfico deberán, siempre que puedan, evitar:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 27
+      options:
+        a: En determinadas circunstancias el capitán puede ser eximido de dicha responsabilidad.
+        b: Se limita la responsabilidad únicamente al propietario.
+        c: La dotación está eximida de toda responsabilidad.
+        d: Ninguna disposición exime a un buque, o a su propietario, al Capitán o
+          a la dotación del mismo.
+      question: 'Según la Regla 2 del RIPA, respecto de la responsabilidad derivada
+        de negligencias en el cumplimiento del Reglamento, este indica que:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 28
+      options:
+        a: Fase inicial.
+        b: Fase variable.
+        c: Fase de maniobra.
+        d: Fase uniforme.
+      question: 'En la curva de evolución de una embarcación, la parte de la curva
+        descrita por G en el intervalo transcurrido desde el final de la metida del
+        timón hasta que la fuerza centrífuga, creada por la evolución, equilibra a
+        las demás fuerzas que actúan sobre la embarcación, se denomina:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 29
+      options:
+        a: Disminuye la acción del timón con marcha avante y hélice avante.
+        b: Aumenta la acción del timón con marcha avante y hélice avante.
+        c: Disminuye la acción del timón con marcha atrás y hélice atrás.
+        d: Aumenta la acción del timón con marcha atrás y hélice avante.
+      question: 'La corriente de aspiración provoca el siguiente efecto:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 30
+      options:
+        a: En caso de sufrir “mal de mar”, al afectado se le mantendrá sentado en
+          cubierta, para que esté fresco y aireado, y permanecerá en ayunas hasta
+          que remita el mareo.
+        b: La Guía sanitaria a bordo, la edita el Ministerio de Sanidad y se puede
+          descargar gratuitamente en su página Web.
+        c: Una forma de contactar con el Centro Radio Médico Español es llamando por
+          telefonía móvil al número 900 002 202.
+        d: La gravedad de las quemaduras reside en la extensión superficial de piel
+          quemada, considerándose grave si abarca más del 33% de la piel y leve si
+          es menos del 10%.
+      question: ¿Cuál de las siguientes afirmaciones es CORRECTA?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 31
+      options:
+        a: Los daños en la obra viva y las posibles vías de agua.
+        b: La resistencia estructural del casco y su estabilidad.
+        c: La naturaleza del fondo en el que ha varado.
+        d: La disponibilidad del ancla y del equipo de fondeo para facilitar la operación.
+      question: A la hora de reflotar una embarcación tras una varada involuntaria,
+        ¿cuál de los siguientes aspectos NO es primordial tener en cuenta?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 32
+      options:
+        a: La mejor manera de prevenir un abordaje es navegar siempre a un régimen
+          moderado, no superando nunca los 6 nudos.
+        b: La maniobra que se efectúe para evitar un abordaje será tal que el buque
+          pase a una distancia segura del otro, comprobándose su eficacia hasta que
+          el otro buque esté pasado y en franquía.
+        c: Tras un abordaje hay que abandonar inmediatamente la embarcación.
+        d: Cuando se tenga la certeza de no ser el culpable del abordaje es muy conveniente
+          formular una declaración de lesividad ante el juzgado.
+      question: En relación con los abordajes, ¿cuál de las siguientes afirmaciones
+        es CORRECTA?
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 33
+      options:
+        a: La escala Beaufort clasifica los estados de la mar en 13 grados tomando
+          como referencia la altura de las olas.
+        b: La escala Douglas clasifica los estados de la mar en 10 grados tomando
+          como referencia la altura de las olas.
+        c: La escala Beaufort mide la intensidad del viento en 10 grados, basándose
+          en el estado de la mar y su oleaje.
+        d: La escala Douglas mide la intensidad del viento en 13 grados, basándose
+          en el estado de la mar y su oleaje.
+      question: ¿Cuál de las siguientes afirmaciones es CORRECTA?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 34
+      options:
+        a: Son regiones donde la presión atmosférica es más baja que la del aire circundante.
+        b: El aire fluye hacia su interior y desciende desde allí, lo que produce
+          formación de nubosidad y precipitaciones.
+        c: El aire fluye desde su interior y desciende desde allí, lo que produce
+          formación de nubosidad y precipitaciones.
+        d: Son regiones donde la presión atmosférica es más elevada que la del aire
+          circundante para el mismo nivel.
+      question: En relación con las borrascas, ¿cuál de las siguientes afirmaciones
+        es CORRECTA?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 35
+      options:
+        a: Equivalente a una atmósfera de presión.
+        b: Equivalente a un Pascal.
+        c: Equivalente a un hectoPascal.
+        d: Una unidad del Sistema Internacional (SI).
+      question: 'Un milibar es:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 36
+      options:
+        a: Es la extensión o alcance que tiene el viento sobre la mar cuando sopla
+          con dirección y fuerza constantes.
+        b: Es el número de horas que ha soplado el viento en la misma dirección y
+          con la misma intensidad.
+        c: Se mide en millas náuticas.
+        d: Cuanto mayor es, mayor será la altura de las olas.
+      question: En relación con el Fetch, ¿cuál de las siguientes afirmaciones es
+        INCORRECTA?
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 37
+      options:
+        a: El viento.
+        b: El norte verdadero.
+        c: El norte de aguja.
+        d: El meridiano del lugar.
+      question: 'El rumbo es el ángulo formado entre la dirección de la proa y:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 38
+      options:
+        a: Es siempre el mismo para todos los barcos y ha de actualizarse con el tiempo.
+        b: Viene expresado para distintos rumbos en la tablilla de desvíos.
+        c: Es el ángulo formado entre el Norte verdadero y el Norte de Aguja.
+        d: Una vez calculado para los diferentes rumbos, permanece inalterable en el
+          tiempo.
+      question: 'El desvío de la aguja:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 39
+      options:
+        a: El ángulo entre el meridiano de referencia y el meridiano que pasa por este
+          punto.
+        b: La distancia que mide el arco terrestre desde dicho punto al ecuador.
+        c: El ángulo entre el plano ecuatorial y la línea que pasa por este punto y
+          el centro de la tierra.
+        d: La distancia que mide el arco terrestre desde dicho punto al meridiano de
+          Greenwich.
+      question: 'La latitud de un punto en la superficie de la Tierra es:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 40
+      options:
+        a: Cartas de aproches o recalada a escala 1/25.000.
+        b: Información incluida en la carta sobre la declinación magnética y su variación
+          anual.
+        c: Información sobre la naturaleza del fondo.
+        d: Representaciones de una determinada zona a mayor escala por su importancia
+          para la navegación.
+      question: 'La expresión "cartucho" en una carta náutica se refiere a:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 41
+      options:
+        a: En cada lugar es diferente para cada barco ya que depende del rumbo.
+        b: Es siempre la misma en cada lugar.
+        c: Las cartas náuticas incluyen la declinación magnética y su variación anual.
+        d: Es el ángulo formado entre el norte verdadero y el meridiano geográfico.
+      question: En relación con la declinación magnética, ¿cuál de las siguientes
+        afirmaciones es CORRECTA?
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 42
+      options:
+        a: 'Ra= 327,5º; l: 36º 00,8''N, L: 005º21,6''W y Ra=260,5º'
+        b: 'Ra= 327,5º; l: 36º 00,8''N, L: 005º21,6''W y Ra=265,5º'
+        c: 'Ra= 337,5º; l: 36º 00,5''N, L: 005º22''W y Ra=266,5º'
+        d: 'Ra= 332,5º; l: 36º 00''N, L: 005º22,4''W y Ra=256º'
+      question: El 20 de marzo de 2021 estamos puntas del puerto de Ceuta y ponemos
+        proa al faro de Punta Carnero. Al ser HRB= 03:00, aproados al Ra= 340º, tomamos
+        marcaciones de los faros Punta Carnero M= 350º y Punta Europa M=035º. Δ= 0º.
+        Situados, ponemos rumbo para pasar a una distancia de 1.5 millas del faro
+        de Punta Tarifa. Δ= -0.5º. Para todo el ejercicio la declinación magnética
+        (dm) = - 5º. ¿Cuál de las siguientes respuestas es correcta?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 43
+      options:
+        a: l= 36º 10,0'N; L=005º 20,0'W
+        b: l= 36º 8,0'N; L=005º 20,0'W
+        c: l= 36º 7,0'N; L=005º 17,0'W
+        d: l= 36º 08,0'N; L=005º 22,8'W
+      question: Navegando ponemos la proa a Punta Europa, tomando Da= S40ºE y después
+        se pone la proa a Punta Carnero obteniendo Da= S40ºW. En la tablilla de desvío
+        se indica que para el Rumbo S40ºE un desvío (Δ) =-2, y para el rumbo S40W
+        un desvío (Δ) = +2. La declinación magnética es de 9,5º NW. ¿Cuál de las siguientes
+        respuestas más se aproxima a nuestra situación?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 44
+      options:
+        a: 4,19 m.
+        b: 4,14 m.
+        c: 5,19 m.
+        d: 4,99 m.
+      question: El día 12 de diciembre de 2021 nos encontramos navegando en las inmediaciones
+        del puerto de Santa Uxía de Ribeira. Sabiendo que la sonda en la carta es
+        de 4 metros y la presión atmosférica de 1003 milibares, ¿cuál de las siguientes
+        respuestas más se aproxima a la sonda en la segunda bajamar?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 45
+      options:
+        a: l=36º 05,3´N   L=005º 55,6´W
+        b: l=36º 06,5´N   L=006º 02,4´W
+        c: l=36º 05,3´N   L=006º 04,2´W
+        d: l=36º 06,5´N   L=005º 57,5´W
+      question: 'El día 18 de diciembre de 2010 a HRB: 11:42, situados en l: 36º 01´N  L:
+        006º 01´W navegamos con rumbo de aguja = 020º a una velocidad de 4 nudos.
+        Sabiendo que el desvío de aguja es 3º oeste, ¿cuál de las siguientes coordenadas
+        más se aproxima a nuestra posición a HRB:13:12?'
+exam_info:
+  call: diciembre
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 05
+  test_code: test05
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2021

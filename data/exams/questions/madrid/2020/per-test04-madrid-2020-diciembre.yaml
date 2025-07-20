@@ -1,0 +1,572 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 1
+      options:
+        a: Una.
+        b: Cuatro.
+        c: Tres.
+        d: Dos.
+      question: ¿Cuántas uñas tiene el ancla de Danforth?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 2
+      options:
+        a: Conectadas con alarmas para proteger la embarcación de posibles robos en
+          puerto.
+        b: Por todo el casco de la embarcación para protegerlo contra posibles colisiones.
+        c: Provisionalmente entre el costado del barco y el muelle para evitar posibles
+          rozamientos o golpes.
+        d: Sobre los portillos para aislarlos del agua de lluvia.
+      question: 'Las defensas se colocan:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 3
+      options:
+        a: Limera.
+        b: Núcleo.
+        c: Mecha.
+        d: Rueda.
+      question: ¿Qué nombre recibe el eje giratorio del timón?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 4
+      options:
+        a: Los cables por los que se transmite a la pala del timón el giro de la hélice.
+        b: Parte de los costados entre el través y la proa para evitar caídas por
+          la borda.
+        c: Los cables por los que se transmite a la pala del timón el giro de la rueda.
+        d: Barandillas que sirven para asirse o de protección.
+      question: ¿Qué son los guardines?
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: a
+      id: 5
+      options:
+        a: Para hacer firme cualquier jarcia de labor.
+        b: Para afirmar un remolque en mar abierto.
+        c: Para abrir y cerrar las escotillas.
+        d: Para poder pescar al curricán ó palangre.
+      question: ¿Para qué se utilizan las cornamusas generalmente?
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: a
+      id: 6
+      options:
+        a: Tres veces la longitud de la sonda.
+        b: Cuatro veces la longitud de la sonda.
+        c: Cinco veces la longitud de la sonda.
+        d: Seis veces la longitud de la sonda.
+      question: ¿Cuál es la longitud mínima de cadena a filar?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b,d
+      id: 7
+      options:
+        a: Amarillo.
+        b: Un color muy visible independientemente del mismo.
+        c: Rojo.
+        d: Naranja.
+      question: ¿De qué color es la nube de humo producida por las señales fumígenas
+        flotantes?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 8
+      options:
+        a: Es el periodo de oscilación natural de una embarcación en sentido longitudinal.
+        b: No se ve afectado por el estado de la mar.
+        c: Tiene un valor mucho menor que el periodo de balance.
+        d: Depende de cada embarcación.
+      question: Señale la respuesta incorrecta. El periodo de cabezada...
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 9
+      options:
+        a: Mejora con la elevación de pesos.
+        b: Se ve perjudicada con la elevación de pesos.
+        c: No se ve afectada por el movimiento vertical de pesos.
+        d: Depende del oleaje.
+      question: 'La estabilidad transversal:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 10
+      options:
+        a: Curvatura longitudinal de la cubierta de manera que las extremidades de
+          proa y popa queden más altas que el centro.
+        b: Movimiento del buque inclinándose alternativamente hacia uno u otro de
+          sus costados.
+        c: Movimiento de deriva.
+        d: Movimiento del buque levantando y bajando alternativamente la proa.
+      question: 'Definición de cabezada:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 11
+      options:
+        a: Con carácter solidario, los sujetos responsables de la infracción por contaminación.
+        b: Sólo el patrón que hubiera cometido la infracción.
+        c: El propietario de la embarcación y subsidiariamente el patrón, si fuera
+          distinto de aquel.
+        d: La Administración Marítima es la única obligada a ejecutar las operaciones
+          que pudieran resultar necesarias para la preservación del medio ambiente.
+      question: 'En las infracciones por contaminación del medio marino quedarán obligados
+        a reparar el daño causado:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 12
+      options:
+        a: Trimestralmente.
+        b: Semestralmente.
+        c: Anualmente.
+        d: Cada vez que entren en puerto.
+      question: 'Las embarcaciones deportivas o de recreo autorizadas para un máximo
+        de doce pasajeros, con base en un puerto español, realizarán la notificación
+        reducida de desechos, del Anexo V, del Real Decreto 1381/2002, de 20 de diciembre,
+        con la siguiente periodicidad:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 13
+      options:
+        a: Rojas con una o varias bandas anchas horizontales verdes.
+        b: Marcas colocadas o fondeadas sobre un peligro a cuyo alrededor las aguas
+          son navegables.
+        c: Marcas colocadas o fondeadas sobre aguas navegables a cuyo alrededor existe
+          un peligro.
+        d: Negras con una o varias bandas anchas horizontales verdes.
+      question: 'Las Marcas de Peligro Aislado son:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 14
+      options:
+        a: Siempre de espeque.
+        b: De libre elección, pero que no se preste a confusión con otras marcas de
+          ayudas a la navegación.
+        c: Siempre esférica.
+        d: Siempre de castillete.
+      question: ¿Qué forma tienen las marcas especiales?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 15
+      options:
+        a: Negro con ancha banda horizontal amarilla.
+        b: Amarillo con una ancha banda horizontal negra.
+        c: Amarillo sobre negro.
+        d: Negro sobre amarillo.
+      question: 'La marca cardinal norte es una boya de castillete o espeque pintada
+        de:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 16
+      options:
+        a: Amarillo sobre negro.
+        b: Amarillo.
+        c: Negro sobre amarillo.
+        d: Negro con una ancha banda horizontal amarilla.
+      question: 'El color de las marcas para indicar las zonas reservadas al recreo
+        es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 17
+      options:
+        a: No puede emplearse una marca lateral modificada.
+        b: Puede utilizarse una marca lateral sin modificar.
+        c: Puede utilizarse una marca lateral modificada.
+        d: No existe marca que lo indique.
+      question: 'En el punto de bifurcación de un canal, la marca a emplear para indicar
+        el canal principal es:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 18
+      options:
+        a: Ninguna disposición del RIPA eximirá al Capitán de un buque de las consecuencias
+          de negligencias en observar cualquier precaución que pudiera exigir la práctica
+          normal del marino o las circunstancias especiales del caso.
+        b: Si, el cumplimiento de la Ley es la mejor salvaguarda para la Seguridad
+          Marítima.
+        c: La Regla 2 del RIPA exime al Capitán de cualquier responsabilidad inherente
+          a un abordaje siempre que se demuestre que no se ha apartado de su cumplimiento.
+        d: La Regla 2 del RIPA exime al Capitán únicamente en el caso de que la decisión
+          equivocada haya sido de buena fe y con la intención de evitar un peligro
+          inmediato.
+      question: ¿Cabe la certeza de que únicamente cumpliendo las disposiciones del
+        RIPA estaremos exentos de responsabilidad ante un abordaje?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 19
+      options:
+        a: Únicamente en condiciones de buena visibilidad.
+        b: Únicamente en condiciones de visibilidad reducida.
+        c: En cualquier condición de visibilidad.
+        d: A todos los buques, excepto a aquellos que realizan navegación en solitario.
+      question: 'Según la Regla 5 del RIPA, todos los buques mantendrán en todo momento
+        una eficaz vigilancia visual y auditiva, utilizando asimismo todos los medios
+        disponibles que sean apropiados a las circunstancias y condiciones del momento,
+        para evaluar plenamente la situación y el riesgo de abordaje. Esta regla es
+        de aplicación:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 20
+      options:
+        a: En cualquier caso porque tiene preferencia de paso.
+        b: Salvo que se encuentre tan próximo al otro que no pueda evitarse el abordaje
+          por la sola maniobra del buque que cede el paso, en cuyo caso ejecutará
+          la maniobra que mejor pueda ayudar a evitar el abordaje.
+        c: Dependerá de las obligaciones existentes entre las distintas categorías
+          de buques.
+        d: Si existe riesgo evidente de abordaje sólo podrá cambiar de rumbo a babor
+          o estribor, según el criterio del piloto.
+      question: 'A tenor de la regla 17 del RIPA, cuando uno de los dos buques deba
+        mantenerse apartado de la derrota del otro, este último mantendrá su rumbo
+        y velocidad:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 21
+      options:
+        a: Cuando un buque se encuentra en zona de visibilidad reducida.
+        b: Cuando un buque presenta algún tipo de limitación en su maniobra.
+        c: Cuando se quiere llamar la atención de otro buque.
+        d: Cuando un buque esté en peligro y requiera ayuda.
+      question: ¿Cuándo se utilizarán las señales prescritas en el anexo IV del Reglamento
+        Internacional para prevenir los abordajes?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 22
+      options:
+        a: Todo buque navegando a vela siempre que su maquinaria propulsora, caso
+          de llevarla, no se esté utilizando.
+        b: Todo buque que cuente al menos con una vela cuadra, marconi, cangreja o
+          latina.
+        c: Todo buque navegando a vela independientemente de si se está utilizando
+          o no su maquinaria propulsora.
+        d: Todo buque navegando a vela que cuente con un motor fueraborda.
+      question: Según las definciones que aparecen en el RIPA, ¿qué entendemos por
+        un buque de vela?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 23
+      options:
+        a: Se mantendrán lo más cerca posible del límite exterior del paso o canal
+          que quede por su costado de estribor, siempre que puedan hacerlo sin que
+          ello entrañe peligro.
+        b: Se mantendrán lo más cerca posible del límite interior o exterior del paso
+          o canal, en función de su maniobrabilidad.
+        c: Se mantendrán lo más cerca posible del límite exterior del paso o canal
+          que quede por su costado de babor.
+        d: Se mantendrán lo más cerca posible del límite interior del paso o canal.
+      question: 'Los buques que naveguen a lo largo de un canal angosto:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 24
+      options:
+        a: Cruce.
+        b: Alcance.
+        c: Vuelta encontrada.
+        d: Paso por el través de estribor.
+      question: 'Si navegando de noche observamos por la proa la luz de tope y las
+        dos de costado de otro buque, estaremos ante una situación de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 25
+      options:
+        a: Un disparo de cañón.
+        b: Cohetes de color rojo.
+        c: Una llamada por teléfono móvil al 112.
+        d: Una alerta de socorro mediante llamada selectiva digital.
+      question: 'Cuando un buque esté en peligro y requiera ayuda, utilizará o exhibirá
+        las señales descritas en el RIPA. Diga cuál de las respuestas propuestas no
+        se encuentra en dicho reglamento:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 26
+      options:
+        a: Tan sólo los buques dedicados a la pesca.
+        b: Los buques de vela exclusivamente.
+        c: Ningún buque bajo ninguna circunstancia.
+        d: Los buques de eslora inferior a 20 metros, los buques de vela y los buques
+          de pesca.
+      question: 'Podrán utillizar la zona de navegación costera adyacente a un dispositivo
+        de separación de tráfico, en lugar de la vía de circulación de dicho dispositivo:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 27
+      options:
+        a: Visible sin interrupción en un arco de horizonte de 360 grados.
+        b: Visible sin interrupción en un arco de horizonte de 180 grados, visto desde
+          la popa.
+        c: Visible sin interrupción en un arco de horizonte de 90 grados a cada banda.
+        d: Visible sin interrupción en un arco de horizonte de 180 grados, visto desde
+          proa.
+      question: 'La "luz todo horizonte" es:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: a,d
+      id: 28
+      options:
+        a: La proa.
+        b: La popa.
+        c: El centro del barco.
+        d: El través.
+      question: 'Una codera se da a un muerto desde:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: d
+      id: 29
+      options:
+        a: Popa al viento y a la corriente.
+        b: Con viento de popa.
+        c: Con viento de estribor.
+        d: Proa al viento y a la corriente.
+      question: 'Para atracar de costado a un muelle es mucho más fácil hacerlo:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: anulada
+      id: 30
+      options:
+        a: Siempre que se pueda se pueda se empleará el agua para apagar un fuego.
+        b: Nunca se utilizarará un chorro de agua para apagar un fuego de clase B.
+        c: La niebla de agua se puede utilizar para apagar un fuego de clase B.
+        d: Nunca se puede utilizar para apagar incendios de clase C.
+      question: El agua es el agente extintor más abundante, ¿Cuál de las siguientes
+        afirmaciones no es cierta?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 31
+      options:
+        a: Siempre que se pueda se empleará el agua para apagar un fuego.
+        b: Nunca se utilizará un chorro de agua para apagar un fuego de clase B.
+        c: Se puede utilizar para apagar incendios de clase C.
+        d: La niebla de agua se puede utilizar para apagar un fuego de clase B.
+      question: El agua es el agente extintor más abundante, ¿cuál de las siguientes
+        afirmaciones NO es cierta?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 32
+      options:
+        a: Clase D.
+        b: Clase C.
+        c: Clase A.
+        d: Clase F.
+      question: ¿Con qué tipo de fuegos podemos usar el agua como agente extintor?
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 33
+      options:
+        a: Medir la fuerza del viento.
+        b: Medir la persistencia del viento.
+        c: Medir la intensidad del mar.
+        d: Determinar el estado del mar.
+      question: 'La escala de Douglas se utiliza para:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 34
+      options:
+        a: La Organización Hidragráfica Internacional.
+        b: La Agencia Estatal de Meteorología.
+        c: La Organización Internacional del Trabajo.
+        d: Salvamento Marítimo.
+      question: 'En España, el Organismo que se encarga de elaborar la informacion
+        meterorológica es:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 35
+      options:
+        a: Su definición procede del principio cero de la termodinámica que establece
+          que dos cuerpos en equilibrio térmico con un tercero están en equilibrio
+          térmico entre sí.
+        b: Es una magnitud física que caracteriza el movimiento aleatorio medio de
+          las moléculas de una sustancia e informa del calor o energía térmica de
+          la misma.
+        c: En la escala centígrada el punto de evaporación del agua es la temperatura
+          más alta que se puede medir.
+        d: Para indicar la temperatura de un cuerpo se usan escalas arbitrarias de
+          referencia, entre las que se encuentra la escala Celsius.
+      question: ¿Cuál de las siguientes afirmaciones relativas a la temperatura es
+        FALSA?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 36
+      options:
+        a: El grado de calor del aire que rodea la superficie de la tierra.
+        b: La cantidad de calor que varía por los cambios de presión.
+        c: El grado de calor de la tierra a nivel del mar.
+        d: La variación que expresa una medida de la cantidad de energía absorbida
+          o cedida por un sistema termodinámico.
+      question: 'La temperatura en meteorología se define como:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 37
+      options:
+        a: Hora del buque.
+        b: Hora oficial.
+        c: Hora legal.
+        d: Hora del reloj de bitácora.
+      question: 'La hora que marca el reloj de a bordo se llama:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 38
+      options:
+        a: La oposición es una línea de posición en la cual observamos dos puntos
+          reconocibles en la carta y separados por un ángulo de 180º.
+        b: Cuanto más alejados estén los objetos alineados más fiable será la enfilación.
+        c: Las líneas isobáticas son isolíneas que se trazan siguiendo puntos de la
+          misma presión en mm de hg.
+        d: Podemos usar el radar como ayuda a la navegación para trazar líneas de
+          posición más fiables.
+      question: 'Señale cuál de las siguientes afirmaciones NO es correcta:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 39
+      options:
+        a: El rumbo verdadero y el rumbo efectivo.
+        b: El rumbo verdadero y el rumbo de superficie.
+        c: El rumbo verdadero y el rumbo de corriente.
+        d: El rumbo verdadero y el rumbo eficaz.
+      question: 'A efectos de cálculos llamamos abatimiento al ángulo formado entre:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 40
+      options:
+        a: Sí es posible, para ello utilizaremos los datos que nos ofrece la carta
+          náutica que utilicemos y calcularemos la declinación para el año en curso.
+        b: No es posible, es invariable.
+        c: Sí es posible, si la carta no tiene más de diez años de antigüedad y compramos
+          una actualización de la carta de navegación.
+        d: Es posible si la carta no tiene más de 5 años de antigüedad.
+      question: ¿Es posible actualizar el valor de la declinación magnética?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 41
+      options:
+        a: El año en curso para la actualización.
+        b: La declinación magnética en la carta.
+        c: La variación anual.
+        d: El desvío de la aguja.
+      question: ¿Cuál de los siguientes datos NO se utiliza en la actualización de
+        la declinación magnética?
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 42
+      options:
+        a: Rºa= 018º.
+        b: Rºa=015º.
+        c: Rºa= 017º.
+        d: Rºa= 019º.
+      question: Estando situados en la luz roja del Puerto de Ceuta, ponemos rumbo
+        para pasar a 5,2 millas del faro de Punta Europa, dejándolo a poniente. Hallar
+        el rumbo de aguja si el desvío es 1,5º E y la declinación magnética es la
+        de la carta para el año 2008.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 43
+      options:
+        a: l = 35º 49,2´N  L = 005º 45,7´W.
+        b: l = 35º 49,6´N  L = 005º 46,5´W.
+        c: l = 35º 49,1´N  L = 005º 49,4´W.
+        d: l = 35º 48,6´N  L = 005º 49,9´W.
+      question: Calcular la situación verdadera de una embarcación que se sitúa a
+        2,2 millas náuticas del faro del dique del puerto de Tánger en la línea isobática
+        de 50 metros, que observa la luz blanca del faro (de ocultaciones) de El Xarf.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 44
+      options:
+        a: l = 35º 49,1´N  L = 006º 16,7´W.
+        b: l = 36º 46,0´N  L = 005º 15,8´W.
+        c: l = 35º 46,0´N  L = 005º 16,6´W.
+        d: l = 35º 45,2´N  L = 005º 15,8´W.
+      question: Obtener la situación verdadera de una embarcación que se encuentra
+        en la oposición de los faros de Punta Almina y Cabo Negro y una distancia
+        de 4,8 millas de este último.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 45
+      options:
+        a: l=35º 53,7' N L= 005º 39,6' W.
+        b: l= 35º 54,2' N L= 005º 42,4' W.
+        c: l=35º 53,4' N L= 005º 43,2' W.
+        d: l= 35º 54,0' N L= 005º 41,0' W.
+      question: ¿Qué situación tendremos si, navegando al Rumbo verdadero S 32 E,
+        obtenemos simultáneamente marcación del faro de Punta Alcazar 30º babor y
+        marcación del faro de Punta Malabata 65º estribor?
+exam_info:
+  call: diciembre
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 04
+  test_code: test04
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2020

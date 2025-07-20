@@ -131,21 +131,6 @@ categories:
         d: 32º C.
       question: ¿Cuál es el límite de temperatura corporal por debajo del cual aparece
         la hipotermia?
-    - category: 3
-      category_name: Seguridad
-      correct_answer: a
-      id: 26
-      options:
-        a: A intervalos que no excedan de dos minutos, dos pitadas largas consecutivas
-          separadas por un intervalo de unos dos segundos entre ambas.
-        b: A intervalos que no excedan de dos minutos, dos pitadas cortas consecutivas
-          separadas por un intervalo de unos dos segundos entre ambas.
-        c: Una pitada larga a intervalos que no excedan de dos minutos.
-        d: Una pitada corta a intervalos que no excedan de dos minutos.
-      question: 'Conforme a la Regla 35.b del RIPA, “Señales acústicas en visibilidad
-        reducida”, en las proximidades o dentro de una zona de visibilidad reducida,
-        un buque de propulsión mecánica en navegación, pero parado y sin arrancada,
-        emitirá:'
   4:
     name: Legislación
     questions:
@@ -269,11 +254,12 @@ categories:
       correct_answer: b
       id: 18
       options:
-        a: Una luz blanca todo horizonte y luces de costado.
-        b: Únicamente una luz de tope a proa.
-        c: Únicamente una luz blanca todo horizonte.
-        d: Una luz blanca todo horizonte y, si es posible, exhibirán también luces
-          de costado.
+        a: Se deberá maniobrar para mantenernos apartados de su derrota.
+        b: Se deberá mantener el rumbo, ya que debe de ser el otro buque el que maniobre.
+        c: Para la situación indicada no hay norma y por tanto se deberá tener en
+          cuenta lo indicado para la situación de vuelta encontrada.
+        d: Se deberá maniobrar para caer a estribor de forma que se pase por la banda
+          de babor del velero contrario.
       question: Estando usted navegando a vela por la Ría de Muros, se le aproxima
         otro buque de vela con riesgo de abordaje. Conforme a la Regla 12 del RIPA,
         “Buques de vela”, ¿cuál será la manera correcta en que tendrá usted que maniobrar
@@ -331,7 +317,8 @@ categories:
           cortarle la proa.
         d: Cuando dos buques o embarcaciones, con independencia del tipo que sean,
           se crucen con riesgo de abordaje, el buque que tenga al otro por su costado
-          de babor se mantendrá apartado de la derrota
+          de babor se mantendrá apartado de la derrota de este otro y, si las circunstancias
+          lo permiten, evitará cortarle la proa.
       question: Conforme a la Regla 15 del RIPA, “Situación «de cruce»”, indique cuál
         de las siguientes afirmaciones es CORRECTA.
     - category: 6
@@ -353,11 +340,15 @@ categories:
       correct_answer: d
       id: 23
       options:
-        a: La demora de un buque que se aproxima no varía en forma apreciable.
-        b: La demora de un buque que se aproxima varía en forma apreciable.
-        c: Principalmente la velocidad del buque que se aproxima está por encima de
-          la velocidad de
-        d: Una luz amarilla de centelleos todo horizonte.
+        a: Dado que se trata de una situación de buque que alcanza, deberemos mantenernos
+          siempre apartados de la otra embarcación y maniobrar en consecuencia.
+        b: Dado que se trata de una vuelta encontrada, deberemos caer a estribor de
+          forma que pasemos por la banda de babor del otro.
+        c: Dado que se trata de una situación de cruce con riesgo de abordaje, maniobraremos
+          por estar al costado de babor.
+        d: Dado que se trata de una maniobra de buque que sigue a rumbo, mantendremos
+          rumbo y velocidad excepto si observamos que la otra embarcación no efectúa
+          la maniobra necesaria para evitar el abordaje.
       question: Navegando de noche cerca de la Punta de Sa Pedrera, distinguimos cada
         vez más cerca de nuestra popa una luz de color blanca y las dos de costado
         de otro buque de propulsión mecánica, ¿cuál es la forma correcta de maniobrar?
@@ -382,10 +373,25 @@ categories:
         a: La demora de un buque que se aproxima no varía en forma apreciable.
         b: La demora de un buque que se aproxima varía en forma apreciable.
         c: Principalmente la velocidad del buque que se aproxima está por encima de
-          la velocidad de
-        d: Opción D (contenido incompleto)
+          la velocidad de seguridad.
+        d: La demora del buque que se aleja varía en forma apreciable.
       question: 'Conforme a la Regla 7 del RIPA, “Riesgo de abordaje”, se considerará
         que existe riesgo de abordaje si, entre otras consideraciones:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 26
+      options:
+        a: A intervalos que no excedan de dos minutos, dos pitadas largas consecutivas
+          separadas por un intervalo de unos dos segundos entre ambas.
+        b: A intervalos que no excedan de dos minutos, dos pitadas cortas consecutivas
+          separadas por un intervalo de unos dos segundos entre ambas.
+        c: Una pitada larga a intervalos que no excedan de dos minutos.
+        d: Una pitada corta a intervalos que no excedan de dos minutos.
+      question: 'Conforme a la Regla 35.b del RIPA, “Señales acústicas en visibilidad
+        reducida”, en las proximidades o dentro de una zona de visibilidad reducida,
+        un buque de propulsión mecánica en navegación, pero parado y sin arrancada,
+        emitirá:'
     - category: 6
       category_name: Reglamento (RIPA)
       correct_answer: a
@@ -466,7 +472,7 @@ categories:
         a: Chorro de agua.
         b: Agua pulverizada.
         c: Polvo seco.
-        d: Arena.
+        d: Arena. Meteorología
       question: Si se produce un incendio a bordo en el tanque de combustible, ¿qué
         agente extintor es el más adecuado para su extinción?
   9:

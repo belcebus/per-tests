@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
-Script para aplicar respuestas extraídas por OCR al archivo YAML correspondiente
+Aplica respuestas oficiales extraídas por OCR a archivos YAML de exámenes.
+
+Este script toma respuestas extraídas en formato JSON y las aplica a los archivos YAML
+de preguntas correspondientes, creando backups automáticos y validando la consistencia.
 """
 
 import json
@@ -29,8 +32,8 @@ def load_extracted_answers(answers_file: str = None) -> Dict[str, Union[str, Lis
         # Intentar buscar el archivo con el nuevo patrón de nomenclatura primero
         extracted_dir = settings.get_extracted_path()
         
-        # Buscar archivos que sigan el patrón per-test01-*.json
-        pattern_files = list(extracted_dir.glob("per-test01-*.json"))
+        # Buscar archivos que sigan el patrón per-test0X-*.json (donde X puede ser 1-5)
+        pattern_files = list(extracted_dir.glob("per-test0[1-5]-*.json"))
         
         if pattern_files:
             # Usar el primer archivo encontrado con el nuevo patrón
@@ -167,51 +170,85 @@ def validate_answers(extracted_answers: Dict[str, Union[str, List[str]]]):
 def main():
     """Función principal"""
     parser = argparse.ArgumentParser(
-        description="Aplicar respuestas extraídas por OCR al archivo YAML correspondiente",
+        description="🚢 Aplica respuestas oficiales extraídas por OCR a archivos YAML de exámenes",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 EJEMPLOS DE USO:
 
   # Aplicar respuestas usando auto-detección de archivos
-  python madrid_merge_exam.py
+  python madrid_apply_answers.py
 
-  # Especificar archivo de respuestas específico
-  python madrid_merge_exam.py --answers-file per-test01-madrid-2025-abril.json
+  # Especificar archivos específicos
+  python madrid_apply_answers.py --input-file per-test05-madrid-2025-abril.json --target-file per-test05-madrid-2025-abril.yaml
 
-  # Especificar tanto archivo de respuestas como YAML objetivo
-  python madrid_merge_exam.py --answers-file per-test01-madrid-2025-abril.json --yaml-file per-test01-madrid-2025-abril.yaml
+  # Modo detallado
+  python madrid_apply_answers.py --input-file respuestas.json --target-file examen.yaml --verbose
         """
     )
     
     parser.add_argument(
-        '--answers-file',
+        '--input-file',
         type=str,
         help='Archivo JSON con las respuestas extraídas (default: auto-detectar)'
     )
     
     parser.add_argument(
-        '--yaml-file',
+        '--target-file',
         type=str,
-        help='Archivo YAML del examen a actualizar (default: per-test01-madrid-2025-abril.yaml)'
+        help='Archivo YAML del examen a actualizar (obligatorio si no hay auto-detección)'
+    )
+    
+    parser.add_argument(
+        '--output-dir',
+        type=str,
+        help='Directorio de salida (default: mismo directorio que target-file)'
+    )
+    
+    parser.add_argument(
+        '--verbose',
+        action='store_true',
+        help='Mostrar información detallada del procesamiento'
     )
     
     args = parser.parse_args()
     
-    print("🚀 Aplicando respuestas OCR al archivo YAML correspondiente...")
+    if args.verbose:
+        print("🚀 Aplicando respuestas OCR al archivo YAML correspondiente...")
     
     try:
         # Cargar respuestas extraídas
-        extracted_answers = load_extracted_answers(args.answers_file)
-        print(f"📖 Respuestas cargadas: {len(extracted_answers)}")
+        extracted_answers = load_extracted_answers(args.input_file)
+        if args.verbose:
+            print(f"📖 Respuestas cargadas: {len(extracted_answers)}")
         
         # Validar respuestas
-        validate_answers(extracted_answers)
+        if args.verbose:
+            validate_answers(extracted_answers)
         
         # Determinar archivo YAML objetivo
-        if args.yaml_file:
-            yaml_file = settings.get_exams_path() / args.yaml_file
+        if args.target_file:
+            yaml_file = settings.get_exams_path() / args.target_file
         else:
-            yaml_file = settings.get_exams_path() / "per-test01-madrid-2025-abril.yaml"
+            # Intentar auto-detectar basándose en el archivo de respuestas
+            if args.input_file:
+                # Extraer información del nombre del archivo JSON para encontrar el YAML correspondiente
+                input_path = Path(args.input_file)
+                # Ejemplo: per-test05-madrid-2025-abril.json -> per-test05-madrid-2025-abril.yaml
+                yaml_name = input_path.stem + ".yaml"
+                yaml_file = settings.get_exams_path() / yaml_name
+                
+                if not yaml_file.exists():
+                    print(f"❌ No se pudo auto-detectar archivo YAML correspondiente.")
+                    print(f"   Archivo esperado: {yaml_file}")
+                    print(f"   Por favor, especifica --target-file manualmente.")
+                    return
+                else:
+                    if args.verbose:
+                        print(f"🔍 Auto-detectado archivo YAML: {yaml_file}")
+            else:
+                print(f"❌ Debes especificar --target-file o --input-file para auto-detección.")
+                print(f"   Uso: python madrid_apply_answers.py --input-file respuestas.json --target-file examen.yaml")
+                return
         
         if not yaml_file.exists():
             print(f"❌ Archivo YAML no encontrado: {yaml_file}")
@@ -220,7 +257,8 @@ EJEMPLOS DE USO:
         updates = apply_answers_to_yaml(yaml_file, extracted_answers)
         
         print(f"\n🎉 Proceso completado exitosamente!")
-        print(f"   📈 Total actualizaciones: {updates}")
+        if args.verbose:
+            print(f"   📈 Total actualizaciones: {updates}")
         
         if updates > 0:
             print("\n💡 Recomendaciones:")

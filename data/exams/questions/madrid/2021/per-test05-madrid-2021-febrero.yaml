@@ -1,0 +1,611 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 1
+      options:
+        a: Despejar la cubierta de todo material y equipos que puedan salir volando.
+        b: Lanzar un cohete provisto de paracaídas para identificar nuestra posición.
+        c: En el caso de ser un velero, mantener las velas izadas y arrancar el motor.
+        d: Esperar las instrucciones del comandante del helicóptero para ver qué elementos
+          de cubierta deben fijarse.
+      question: 'En una maniobra de rescate desde un helicóptero de Salvamento Marítimo,
+        se debe:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 2
+      options:
+        a: Mover los pesos de forma que el centro de carena de la embarcación se sitúe
+          lo más bajo posible.
+        b: Mover los pesos para conseguir elevar el centro de gravedad de la embarcación,
+          de esta forma la altura metacéntrica transversal (GM) será mayor.
+        c: Mover los pesos de forma que el centro de gravedad de la embarcación se
+          sitúe lo más bajo posible.
+        d: Mover los pesos horizontalmente, de proa a popa, para que solo se vea afectada
+          la posición horizontal del centro de gravedad de la embarcación.
+      question: 'Para mejorar la estabilidad de una embarcación debemos:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 3
+      options:
+        a: Esperar a que la radiobaliza trasmita automáticamente, nunca la activaremos
+          manualmente, para no confundir a Salvamento Marítimo.
+        b: Hacer una llamada de socorro y activar la radiobaliza manualmente.
+        c: Disparar todas las bengalas de mano antes de embarcar en la balsa salvavidas.
+        d: Soltar la driza de la balsas salvavidas antes de lanzarla al agua.
+      question: En caso de emergencia, ¿qué debemos hacer si se tuviera que abandonar
+        la embarcación?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 4
+      options:
+        a: 15 días.
+        b: 20 días.
+        c: 25 días.
+        d: 30 días.
+      question: ¿Cuantos días habrá de resistir a flote como mínimo una balsa salvavidas,
+        independientemente del estado de la mar?
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 5
+      options:
+        a: La sonda del lugar a elegir.
+        b: La eslora de la embarcación.
+        c: El círculo de garreo de la embarcación.
+        d: La regulación sobre fondeo aplicable en la zona a elegir.
+      question: ¿Cuál de los siguientes aspectos NO influirá en la elección del lugar
+        de fondeo?
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 6
+      options:
+        a: Situado en la regala para protegerla y donde se acoplan los eslabones de
+          la cadena.
+        b: Sobre el que gira el cabo en las poleas, motones y pastecas.
+        c: Que a bordo de una embarcación sirve para afirmar drizas, escotas y amarras.
+        d: Fuertemente asegurado a la cubierta, que sirve para hacer firmes los cabos
+          de amarre al atracar.
+      question: 'Una roldana es un elemento:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 7
+      options:
+        a: Dar a beber alcohol para aumentar la temperatura corporal.
+        b: No quitar la ropa mojada para evitar un mayor enfriamiento.
+        c: Quitar toda la ropa mojada y secar sin frotar.
+        d: Quitar toda la ropa mojada frotando con fuerza.
+      question: 'Medida a tomar en caso de hipotermia:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 8
+      options:
+        a: Es un receptor de radio con antena direccional que emite una señal radar.
+        b: Mide la velocidad de la embarcación sobre el agua y la distancia navegada.
+        c: Tiene como objeto el hacer más visible a la embarcación ante el radar de
+          otras naves.
+        d: Es un dispositivo pasivo o activo que evita las interferencias de otros
+          equipos electrónicos con la señal radar.
+      question: 'El reflector radar:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 9
+      options:
+        a: Mediante un nudo que no pueda ser deshecho bajo tensión.
+        b: Mediante un nudo que pueda ser deshecho bajo tensión por el operador.
+        c: Mediante un nudo que, a más tensión, más apretado esté y más difícil sea
+          su suelta.
+        d: Mediante cualquier nudo, todos son válidos.
+      question: Cuando tomemos remolque, ¿cómo lo amarraremos?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 10
+      options:
+        a: Aguas profundas que suponen un peligro para la navegación.
+        b: Aguas poco profundas que suponen un peligro para la navegación.
+        c: Aguas profundas que no suponen un peligro para la navegación.
+        d: Aguas poco profundas que no suponen un peligro para la navegación.
+      question: 'Las aguas someras son:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 11
+      options:
+        a: Sólo está obligado a acudir en su auxilio si está en condiciones de prestar
+          ayuda.
+        b: Sólo está obligado a informar al servicio de búsqueda y salvamento pertinente,
+          debiendo anotarlo en el diario de navegación.
+        c: Está obligado siempre a acudir a toda máquina en su auxilio.
+        d: La obligación de prestar auxilio depende de la condición jurídica de las
+          personas en peligro.
+      question: 'De conformidad con la Regala 33.1 del Capítulo V del Convenio Internacional
+        SOLAS, el capitán de un buque que, estando en el mar, reciba una señal que
+        le indique que hay personas en peligro en el mar:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 12
+      options:
+        a: Se permiten vertidos desde las embarcaciones en los términos que se determina
+          en la Orden FOM/1144/2003.
+        b: Siempre que se adopten las precauciones necesarias para evitar riesgos
+          a la seguridad de la vida humana en la mar, se podrá navegar a una velocidad
+          superior a tres nudos.
+        c: Ésta ocupa una franja de marca contigua a la costa de una anchura de 200
+          metros en las playas y 50 metros en el resto de la costa.
+        d: El lanzamiento o varada de embarcaciones deberá hacerse a través de canales
+          debidamente señalizados.
+      question: 'En los tramos de costa que no estén balizados como zona de baño:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 13
+      options:
+        a: Amarillo sobre negro.
+        b: Negro sobre amarillo.
+        c: Verde sobre fondo rojo.
+        d: Rojo sobre fondo verde.
+      question: 'Los colores de la marca cardinal Norte son:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 14
+      options:
+        a: En aguas navegables, indicando siempre en qué dirección se encuentra el
+          peligro.
+        b: Sobre, o próximas, a un peligro rodeado por todas partes de aguas navegables.
+        c: Rodeando una zona peligrosa, por lo que siempre se deben emplear varias
+          a la vez.
+        d: Próximas a un peligro, siempre junto a una marca cardinal que indique la
+          posición de dicho peligro.
+      question: 'Las marcas de peligro aislado se colocan:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 15
+      options:
+        a: Negro.
+        b: Rojo y negro.
+        c: Rojo y blanco.
+        d: Rojo.
+      question: 'La marca de tope de una marca de aguas navegables será de color:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 16
+      options:
+        a: Cilíndrica o esférica.
+        b: Cónica o esférica.
+        c: Esférica.
+        d: Cilíndrica o cónica.
+      question: 'La forma de las marcas laterales en la región A puede ser:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 17
+      options:
+        a: Amarillo.
+        b: Rojo.
+        c: Rojo y negro.
+        d: Rojo y amarillo.
+      question: 'Una marca especial será de color:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 18
+      options:
+        a: Emitir un sonido producido por cualquier aparato de señales de niebla,
+          repetido a intervalos de un minuto.
+        b: Emitir un sonido producido por cualquier aparato de señales de niebla,
+          repetido a intervalos de 30 segundos.
+        c: Enviar una alerta de socorro mediante llamada selectiva digital, a través
+          del canal 16 de VHF.
+        d: Enviar una alerta de socorro mediante llamada selectiva digital, a través
+          del canal 70 de VHF.
+      question: Estando a bordo de nuestra embarcación necesitamos pedir ayuda, ¿cuál
+        de las siguientes señales sería correcta de acuerdo con el anexo IV de señales
+        de peligro del RIPA?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 19
+      options:
+        a: Un buque restringido por su calado.
+        b: Una moto náutica.
+        c: Un hidroavión amarado.
+        d: Un buque sin gobierno, un buque con capacidad de maniobra restringida o
+          un buque dedicado a la pesca.
+      question: 'Según la Regla 18.b del RIPA, los buques de vela, en navegación,
+        se mantendrán apartados de la derrota de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 20
+      options:
+        a: Siempre pegados a las boyas verdes.
+        b: Siempre pegados a las boyas rojas.
+        c: Por el centro del canal.
+        d: Manteniéndose lo más cerca posible del límite exterior del paso o canal
+          que queda por su costado de estribor.
+      question: Si se debe navegar a lo largo de un paso o canal angosto, siempre
+        que se pueda hacer sin que entrañe peligro, ¿cómo se debe hacer, según la
+        Regla 9.a del RIPA?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 21
+      options:
+        a: Cualquier buque que, por razón de su calado en relación con la profundidad
+          y la anchura disponibles del agua navegable, tiene una capacidad muy restringida
+          de apartarse de la derrota que está siguiendo.
+        b: Un buque de propulsión mecánica que tiene siempre una capacidad restringida
+          de apartarse de la derrota que está siguiendo.
+        c: Un buque de propulsión mecánica que, por razón de su calado en relación
+          con la profundidad y la anchura disponibles del agua navegable, tiene una
+          capacidad muy restringida de apartarse de la derrota que está siguiendo.
+        d: Un buque de propulsión mecánica con capacidad de maniobra restringida.
+      question: 'La Regla 3 del RIPA define a un buque restringido por su calado como:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 22
+      options:
+        a: Se pondrá en comunicación con el otro buque a través del canal 16 de VHF,
+          para aclarar la situación.
+        b: Mantendrá su rumbo y velocidad, para no confundir al otro buque.
+        c: Supondrá que existe y actuará en consecuencia.
+        d: Se pondrá en comunicación con el otro buque a través del canal 16 de VHF,
+          indicándole que ambos deberán caer a babor.
+      question: 'Según establece la Regla 14.c del RIPA, cuando un buque abrigue dudas
+        de si existe una situación de vuelta encontrada:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 23
+      options:
+        a: Dos luces verdes todo horizonte en línea vertical, en el lugar más visible,
+          y dos bolas o marcas similares en línea vertical, en el lugar más visible.
+        b: Tres luces rojas todo horizonte en línea vertical, en el lugar más visible,
+          y tres bolas o marcas similares en línea vertical, en el lugar más visible.
+        c: Dos luces blancas todo horizonte en línea vertical, en el lugar más visible,
+          y una marca bicónica, en el lugar más visible.
+        d: Dos luces rojas todo horizonte en línea vertical, en el lugar más visible,
+          y dos bolas o marcas similares en línea vertical, en el lugar más visible.
+      question: 'La Regla 27.a del RIPA determina que un buque sin gobierno ni arrancada
+        exhibirá:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 24
+      options:
+        a: Una marca bicónica en el lugar más visible, cuando la longitud del remolque
+          sea superior a 200 metros.
+        b: Una bola u objeto análogo en el lugar más visible.
+        c: Tres marcas en línea vertical en el lugar más visible. La más elevada y
+          la más baja de estas marcas serán bolas y la marca central será bicónica.
+        d: Una marca cilíndrica en el lugar más visible.
+      question: 'Según la Regla 24.e del RIPA, todo buque u objeto remolcado, que
+        sea visible y no esté parcialmente sumergido, exhibirá:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 25
+      options:
+        a: Sí, debemos encender una luz tal y como prescribe la Regla 27 del RIPA.
+        b: No, debemos encender dos luces rojas todo horizonte como prescribe la Regla
+          27 del RIPA.
+        c: No, debemos mantener en todo momento una eficaz vigilancia visual y auditiva,
+          como prescribe la Regla 5 del RIPA.
+        d: No, debemos encender tres luces rojas todo horizonte como prescribe la
+          Regla 27 del RIPA.
+      question: Encontrándonos en navegación, se nos hace de noche y la tripulación
+        a bordo de la embarcación deseamos descansar. Para ello, paramos el motor
+        y encendemos una luz advirtiendo de nuestra presencia, tras lo cual nos ponemos
+        todos a echar una cabezada. ¿Es correcto este proceder?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 26
+      options:
+        a: i) en la parte de proa, una luz roja todo horizonte o una bola; y ii) en
+          la popa, o cerca de ella, y a una altura inferior a la de la luz prescrita
+          en el apartado i), una luz roja todo horizonte.
+        b: i) en la parte de proa, una luz roja todo horizonte o un cilindro; y ii)
+          en la popa, o cerca de ella, y a una altura inferior a la de la luz prescrita
+          en el apartado i), una luz roja todo horizonte.
+        c: i) en la parte de proa, una luz blanca todo horizonte o una bola; y ii)
+          en la popa, o cerca de ella, y a una altura inferior a la de la luz prescrita
+          en el apartado i), una luz blanca todo horizonte.
+        d: i) en la parte de proa, una luz roja todo horizonte o una marca bicónica;
+          y ii) en la popa, o cerca de ella, y a una altura inferior a la de la luz
+          prescrita en el apartado i), una luz blanca todo horizonte.
+      question: 'Según la Regla 30 del RIPA determina que un buque fondeado exhibirá
+        en el lugar más visible:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 27
+      options:
+        a: A intervalos que no excedan de un minuto dos pitadas consecutivas, a saber,
+          una larga seguida por una corta.
+        b: A intervalos que no excedan de dos minutos dos pitadas consecutivas, a
+          saber, una larga seguida por una corta.
+        c: A intervalos que no excedan de dos minutos tres pitadas consecutivas, a
+          saber, una larga seguida por dos cortas.
+        d: A intervalos que no excedan de dos minutos tres pitadas consecutivas, a
+          saber, dos largas seguidas por una corta.
+      question: 'La Regla 35 del RIPA determina que un buque sin gobierno o con su
+        capacidad de manobra restringida, un buque restringido por su calado, un buque
+        de vela, un buque dedicado a la pesca y todo buque dedicado a remolcar o a
+        empujar a otro buque, en las proximidades o dentro de una zona de visibilidad
+        reducida, ya sea de día o de noche, emitirá las siguientes señales:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: a
+      id: 28
+      options:
+        a: Atracamos al costado de otra embarcación.
+        b: Atracamos con el costado al muelle.
+        c: Adelantamos por estribor a otra embarcación.
+        d: Atracamos popa con popa.
+      question: 'Nos abarloamos a otra embarcación si:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: c
+      id: 29
+      options:
+        a: Largo.
+        b: Través.
+        c: Codera.
+        d: Spring.
+      question: Si se amarra una embarcación de costado al muelle, ¿cuál de los siguientes
+        cabos se da por el costado opuesto al muelle, y es muy útil para ayudar a
+        desatracar?
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 30
+      options:
+        a: El hospital más cercano a la costa, ya que España no dispone de Centro
+          Radio-Médico.
+        b: El Centro Radio-Médico Español, salvo si lo hacemos en un idioma distinto
+          al castellano, en cuyo caso tendremos que esperar a llegar a tierra.
+        c: El Centro Radio-Médico Español, con el que siempre deberemos contactar
+          por teléfono.
+        d: El Centro Radio-Médico Español, bien por radiotelefonía (onda corta o media)
+          o bien por teléfono.
+      question: 'Si necesitamos una consulta médica mientras estamos navegando, debemos
+        contactar con:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 31
+      options:
+        a: 'Clase C: fuegos de combustibles líquidos o sólidos licuables.'
+        b: 'Clase A: fuegos de combustibles sólidos.'
+        c: 'Clase F: fuegos de metales.'
+        d: 'Clase B: fuegos de gases.'
+      question: Según la clasificación UNE de los incendios, ¿cuál de estas afirmaciones
+        es correcta?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 32
+      options:
+        a: No se debe poner en marcha el motor de la embarcación.
+        b: Activar la bomba de achique.
+        c: Aislar la inundación cerrando tambuchos, puertas, escotillas y válvulas
+          estancas al objeto de aislar el compartimento en que se produjo la avería.
+        d: Emplear la bomba de refrigeración del motor para achicar el agua si ésta
+          tiene la tubería de aspiración próxima al compartimento inundado.
+      question: Ante la certeza de una vía de agua, ¿cuál de las siguientes actuaciones
+        NO es CORRECTA?
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 33
+      options:
+        a: Girar el viento, es decir, cambiar de dirección.
+        b: Empeorar el tiempo a lo que el viento se refiere, es decir, aumentar la
+          intensidad.
+        c: Aumento brusco y momentáneo de la fuerza del viento.
+        d: Decrecer la fuerza del viento.
+      question: ¿Qué significa “rolar”?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 34
+      options:
+        a: Es función del gradiente barométrico, es decir, cuanto más cercanas están
+          las isobaras más fuerte será el viento.
+        b: Es función del gradiente barométrico, es decir, cuanto más cercanas están
+          las isobaras más débil será el viento.
+        c: Es función de la presión hidrostática del agua.
+        d: Es función de la presión hidrostática del agua y de su salinidad.
+      question: 'La intensidad del viento:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 35
+      options:
+        a: Las altas presiones llevan una trayectoria de Este a Oeste.
+        b: Se mueven muy lentamente siendo casi estáticas, por lo que apenas tienen
+          trayectoria.
+        c: Las bajas presiones llevan una trayectoria de Este a Oeste.
+        d: Las bajas presiones llevan una trayectoria de Oeste a Este.
+      question: ¿Cómo es la trayectoria de las borrascas en el Hemisferio Norte?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 36
+      options:
+        a: Una tendencia al empeoramiento.
+        b: Una tendencia al empeoramiento, con fuertes vientos, precipitaciones y
+          riesgo de temporal.
+        c: Una tendencia a la mejoría que indica que se afianza el buen tiempo seco
+          y encalmado, de anticiclón.
+        d: Una tendencia a la mejoría sin poder asegurar su persistencia.
+      question: ¿Qué nos indica una subida brusca y rápida en la presión indicada
+        por el barómetro aneroide?
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 37
+      options:
+        a: El ángulo formado por la dirección de la proa y el meridiano magnético
+          del lugar.
+        b: La suma algebraica de la declinación magnética y el desvío.
+        c: La suma de la declinación magnética y el desvío cuando este último queda
+          a la izquierda del norte magnético.
+        d: El ángulo que forma la dirección de la proa con el meridiano verdadero
+          del lugar de signo opuesto al mismo.
+      question: 'La corrección total es:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 38
+      options:
+        a: El rumbo verdadero, el rumbo de superficie y el rumbo magnético.
+        b: El rumbo verdadero, el rumbo de superficie y el rumbo efectivo.
+        c: El rumbo verdadero, el rumbo de aguja y el rumbo magnético.
+        d: el rumbo verdadero, el rumbo de aguja y el rumbo de superficie.
+      question: En función del meridiano que consideremos para medir el rumbo, ¿qué
+        tres clases de rumbo existen?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 39
+      options:
+        a: 280º.
+        b: 300º.
+        c: 120º.
+        d: 240º.
+      question: 'La conversión del rumbo S60E a rumbo circular es:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: anulada
+      id: 40
+      options:
+        a: La relación entre el rumbo de aguja y la marcación queda definida por la
+          fórmula Da = Ra + M.
+        b: Las marcaciones se cuentan de 0º a 180º desde la proa hacia estribor o
+          babor.
+        c: La relación entre el rumbo y la marcación queda definida por la fórmula
+          D = R + M.
+        d: Las marcaciones se cuentan de 0º a 360º en el sentido de las agujas del
+          reloj.
+      question: 'Señale cuál de las afirmaciones siguientes NO es CORRECTA:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 41
+      options:
+        a: Varía con el rumbo de la embarcación.
+        b: Es igual para todas las agujas náuticas de una embarcación.
+        c: No depende del emplazamiento de la aguja en la embarcación.
+        d: Depende de la situación geográfica cuando la embarcación navega.
+      question: ¿Cuál de las siguientes afirmaciones sobre el desvío de la aguja es
+        cierta?
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 42
+      options:
+        a: Ct = 0º.
+        b: Ct = 1º (+).
+        c: Ct = 1º (-).
+        d: Ct = 2º (+)
+      question: Una embarcación que se sitúa en la enfilación del faro de Cabo Roche
+        y el faro de Cabo Trafalgar obtiene una demora de aguja de este último faro
+        igual a 323º. Calcular la corrección total (Ct) de la aguja náutica.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 43
+      options:
+        a: Ra = 159º.
+        b: Ra = 155º.
+        c: Ra = 153º.
+        d: Ra = 157º.
+      question: Para una embarcación que se sitúa en la marca especial al Este de
+        la Línea de la Concepción, calcular el rumbo de aguja (Ra) para pasar a 4,2
+        millas del faro de Punta Almina, teniendo como desvío de aguja para ese rumbo
+        3,5ºE y declinación magnética la obtenida en la carta náutica de enseñanza
+        del Estrecho de Gibraltar para 2021.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 44
+      options:
+        a: l = 36º 04,8’N  L = 005º 51,9’W
+        b: l = 36º 04,8’N  L = 005º 45,4’W
+        c: l = 36º 03,2’N  L = 005º 44,7’W
+        d: l = 36º 03,2’N  L = 005º 51,7’W
+      question: Calcular la situación verdadera de una embarcación que se encuentra
+        dentro de la zona prohibida de pesca a 3,5 millas del faro de Punta de Gracia
+        y en la demora verdadera 084º del faro de Punta Paloma.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 45
+      options:
+        a: Meridiano vertical.
+        b: Meridiano inferior del lugar.
+        c: Meridiano superior del lugar.
+        d: Meridiano primario.
+      question: Situada una embarcación al 350º verdadero y a 5 millas del faro de
+        Punta Malabata, se emprende a las 16 horas 18 minutos navegación con rumbo
+        verdadero 307º con una velocidad de 12 nudos. Calcular la situación de estima
+        a las 17 horas 8 minutos.
+exam_info:
+  call: febrero
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 05
+  test_code: test05
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2021

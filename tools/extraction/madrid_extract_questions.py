@@ -41,74 +41,40 @@ PER_CATEGORIES = {
     11: "Carta de navegación"
 }
 
-# Definir el patrón para PER Madrid 2025 Código de Test 01
-PER_MADRID_2025_TEST_01 = ExamPattern(
-    title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
-    subtitle="Código de Test 01",
-    answer_prefix="Respuestas al",
-    total_questions=45,
-    categories=PER_CATEGORIES,
-    community="Madrid",
-    year=2025,
-    call="abril",  # Actualizado para coincidir con el PDF madrid-2025-abril.pdf
-    test_code="test01"  # Actualizado para coincidir con el formato de archivo
-)
+# Distribución fija estándar PER por números de pregunta
+PER_STANDARD_DISTRIBUTION = {
+    1: [1, 2, 3, 4],                    # Nomenclatura náutica (4 preguntas)
+    2: [5, 6],                          # Elementos de amarre y fondeo (2 preguntas)
+    3: [7, 8, 9, 10],                   # Seguridad (4 preguntas)
+    4: [11, 12],                        # Legislación (2 preguntas)
+    5: [13, 14, 15, 16, 17],            # Balizamiento (5 preguntas)
+    6: [18, 19, 20, 21, 22, 23, 24, 25, 26, 27],  # Reglamento (RIPA) (10 preguntas)
+    7: [28, 29],                        # Maniobra y navegación (2 preguntas)
+    8: [30, 31, 32],                    # Emergencias en la mar (3 preguntas)
+    9: [33, 34, 35, 36],                # Meteorología (4 preguntas)
+    10: [37, 38, 39, 40, 41],           # Teoría de la navegación (5 preguntas)
+    11: [42, 43, 44, 45]                # Carta de navegación (4 preguntas)
+}
 
-# Definir el patrón para PER Madrid 2025 Código de Test 03 (que tiene pregunta anulada)
-PER_MADRID_2025_TEST_03 = ExamPattern(
-    title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
-    subtitle="Código de Test 03",
-    answer_prefix="Respuestas al",
-    total_questions=45,
-    categories=PER_CATEGORIES,
-    community="Madrid",
-    year=2025,
-    call="abril",  # Actualizado para coincidir con el PDF madrid-2025-abril.pdf
-    test_code="test03"  # Actualizado para coincidir con el formato de archivo
-)
+# Mapeo inverso: número de pregunta -> categoría
+QUESTION_TO_CATEGORY = {}
+for category, questions in PER_STANDARD_DISTRIBUTION.items():
+    for question_id in questions:
+        QUESTION_TO_CATEGORY[question_id] = category
 
-# Definir el patrón para PER Madrid 2025 Código de Test 02
-PER_MADRID_2025_TEST_02 = ExamPattern(
-    title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
-    subtitle="Código de Test 02",
-    answer_prefix="Respuestas al",
-    total_questions=45,
-    categories=PER_CATEGORIES,
-    community="Madrid",
-    year=2025,
-    call="abril",
-    test_code="test02"
-)
+# Nota: Los patrones específicos han sido eliminados.
+# Ahora se generan dinámicamente usando create_per_pattern() basándose en los parámetros.
 
-# Definir el patrón para PER Madrid 2025 Código de Test 04
-PER_MADRID_2025_TEST_04 = ExamPattern(
-    title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
-    subtitle="Código de Test 04",
-    answer_prefix="Respuestas al",
-    total_questions=45,
-    categories=PER_CATEGORIES,
-    community="Madrid",
-    year=2025,
-    call="abril",
-    test_code="test04"
-)
-
-# Mantener compatibilidad con nombres anteriores
-PER_TEST_01 = PER_MADRID_2025_TEST_01
-PER_TEST_02 = PER_MADRID_2025_TEST_02
-PER_TEST_03 = PER_MADRID_2025_TEST_03
-PER_TEST_04 = PER_MADRID_2025_TEST_04
-
-def create_per_pattern(community: str, year: int, call: str, test_code: str, 
+def create_per_pattern(community: str, year: int, call: str, test_number: str, 
                       total_questions: int = 45) -> ExamPattern:
     """
-    Función helper para crear nuevos patrones de examen PER fácilmente.
+    Función para crear patrones de examen PER dinámicamente.
     
     Args:
         community: Nombre de la comunidad autónoma (ej: "Madrid", "Barcelona", "Valencia")
         year: Año de realización (ej: 2025, 2024)
         call: Convocatoria (ej: "Ordinaria", "Extraordinaria", "Enero", "Junio")
-        test_code: Código del test (ej: "Test01", "Test02", "Test03")
+        test_number: Número del test de 2 dígitos (ej: "01", "02", "03", "04", "05")
         total_questions: Número total de preguntas (por defecto 45)
     
     Returns:
@@ -116,11 +82,16 @@ def create_per_pattern(community: str, year: int, call: str, test_code: str,
     
     Ejemplo:
         # Para un examen de Valencia de junio 2024, test 02
-        pattern = create_per_pattern("Valencia", 2024, "Junio", "Test02")
+        pattern = create_per_pattern("Valencia", 2024, "Junio", "02")
     """
-    # Determinar el subtítulo basado en el código de test
-    test_number = test_code.replace("Test", "").replace("test", "").zfill(2)
-    subtitle = f"Código de Test {test_number}"
+    # Asegurar que el número del test tenga 2 dígitos
+    test_number_formatted = test_number.zfill(2)
+    
+    # Generar el código de test en formato testXX
+    test_code = f"test{test_number_formatted}"
+    
+    # Generar el subtítulo
+    subtitle = f"Código de Test {test_number_formatted}"
     
     return ExamPattern(
         title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
@@ -135,13 +106,204 @@ def create_per_pattern(community: str, year: int, call: str, test_code: str,
     )
 
 # Ejemplos de uso para otros exámenes:
-# PER_VALENCIA_2024_JUNIO_TEST02 = create_per_pattern("Valencia", 2024, "Junio", "Test02")
-# PER_BARCELONA_2023_EXTRAORDINARIA_TEST01 = create_per_pattern("Barcelona", 2023, "Extraordinaria", "Test01")
+# PER_VALENCIA_2024_JUNIO_TEST02 = create_per_pattern("Valencia", 2024, "Junio", "02")
+# PER_BARCELONA_2023_EXTRAORDINARIA_TEST01 = create_per_pattern("Barcelona", 2023, "Extraordinaria", "01")
 
 class ParametricExamExtractor:
     def __init__(self):
         self.questions = []
         self.answers = {}
+    
+    def validate_section_distribution(self, exam_section: str, pattern: ExamPattern) -> Dict[int, List[int]]:
+        """
+        Valida que las secciones detectadas en el PDF coincidan con la distribución estándar PER.
+        
+        Returns:
+            Dict con la distribución detectada: {categoria: [lista_de_preguntas_encontradas]}
+        """
+        print("🔍 Validando distribución de secciones vs estándar PER...")
+        
+        # Mapear títulos de categorías a números de categoría
+        category_title_map = {
+            "nomenclatura náutica": 1,
+            "elementos de amarre y fondeo": 2,
+            "seguridad": 3,
+            "legislación": 4,
+            "balizamiento": 5,
+            "reglamento (ripa)": 6,
+            "maniobra y navegación": 7,
+            "emergencias en la mar": 8,
+            "meteorología": 9,
+            "teoría de la navegación": 10,
+            "carta de navegación": 11
+        }
+        
+        # Encontrar todas las secciones de categorías en el texto
+        detected_sections = {}
+        lines = exam_section.split('\n')
+        
+        current_category = None
+        current_questions = []
+        
+        for i, line in enumerate(lines):
+            line_clean = line.strip().lower().rstrip('.')
+            
+            # Verificar si es un título de categoría
+            if line_clean in category_title_map:
+                # Guardar la categoría anterior si existe
+                if current_category is not None and current_questions:
+                    detected_sections[current_category] = current_questions.copy()
+                
+                current_category = category_title_map[line_clean]
+                current_questions = []
+                print(f"📍 Detectada sección: {current_category} - {PER_CATEGORIES[current_category]}")
+                continue
+            
+            # Buscar preguntas numeradas
+            question_match = re.match(r'^\s*(\d{1,2})\s+', line)
+            if question_match and current_category is not None:
+                question_num = int(question_match.group(1))
+                if 1 <= question_num <= pattern.total_questions:
+                    current_questions.append(question_num)
+        
+        # Guardar la última categoría
+        if current_category is not None and current_questions:
+            detected_sections[current_category] = current_questions.copy()
+        
+        # Validar contra la distribución estándar
+        print("\n📊 Comparación secciones detectadas vs distribución estándar:")
+        print("=" * 80)
+        
+        validation_warnings = []
+        all_detected_questions = set()
+        
+        for category in range(1, 12):  # Categorías 1-11
+            standard_questions = PER_STANDARD_DISTRIBUTION[category]
+            detected_questions = detected_sections.get(category, [])
+            category_name = PER_CATEGORIES[category]
+            
+            # Verificar si las preguntas detectadas coinciden con las estándar
+            standard_set = set(standard_questions)
+            detected_set = set(detected_questions)
+            
+            missing_in_section = standard_set - detected_set
+            extra_in_section = detected_set - standard_set
+            
+            status = "✅" if standard_set == detected_set else "⚠️"
+            
+            print(f"{status} Cat {category:2d} - {category_name:25s}")
+            print(f"     Estándar: {standard_questions}")
+            print(f"     Detectado: {detected_questions}")
+            
+            if missing_in_section:
+                print(f"     ❌ Faltan en sección: {sorted(missing_in_section)}")
+                validation_warnings.append(f"Categoría {category}: faltan preguntas {sorted(missing_in_section)}")
+            
+            if extra_in_section:
+                print(f"     ❌ Sobran en sección: {sorted(extra_in_section)}")
+                validation_warnings.append(f"Categoría {category}: sobran preguntas {sorted(extra_in_section)}")
+            
+            all_detected_questions.update(detected_questions)
+            print()
+        
+        # Verificar preguntas totales
+        expected_total = set(range(1, pattern.total_questions + 1))
+        missing_global = expected_total - all_detected_questions
+        extra_global = all_detected_questions - expected_total
+        
+        if missing_global:
+            print(f"🚨 Preguntas faltantes globalmente: {sorted(missing_global)}")
+            validation_warnings.append(f"Faltan preguntas globalmente: {sorted(missing_global)}")
+        
+        if extra_global:
+            print(f"🚨 Preguntas extra globalmente: {sorted(extra_global)}")
+            validation_warnings.append(f"Preguntas extra globalmente: {sorted(extra_global)}")
+        
+        if validation_warnings:
+            print("\n⚠️  ADVERTENCIAS DE VALIDACIÓN:")
+            for warning in validation_warnings:
+                print(f"   • {warning}")
+        else:
+            print("\n✅ Distribución de secciones VÁLIDA - coincide con estándar PER")
+        
+        return detected_sections
+    
+    def _is_legitimate_section_title(self, line: str, category_title_map: Dict[str, int], 
+                                   previous_lines: List[str], next_lines: List[str]) -> bool:
+        """
+        Determina si una línea es realmente un título de sección o solo una palabra coincidente.
+        
+        Criterios para ser un título legítimo:
+        1. La línea debe contener SOLO el nombre de la categoría (sin otros textos significativos)
+        2. No debe estar claramente dentro de una opción de respuesta
+        3. Debe haber indicios de que es un cambio de sección real
+        """
+        line_clean = line.strip().lower().rstrip('.')
+        
+        # Verificar que la línea coincida con un título de categoría
+        if line_clean not in category_title_map:
+            return False
+        
+        # Criterio 1: La línea debe ser PRINCIPALMENTE el título
+        # Permitir títulos que son esencialmente solo el nombre de la categoría
+        line_words = line.strip().split()
+        expected_category_words = line_clean.split()
+        
+        # Si hay muchas palabras extra, es sospechoso
+        if len(line_words) > len(expected_category_words) + 2:  # Permitir 2 palabras extra
+            return False
+        
+        # Criterio 2: Verificar que NO esté claramente dentro de opciones de respuesta
+        # Buscar evidencia clara de que estamos en opciones (múltiples opciones recientes)
+        recent_options_count = 0
+        for prev_line in previous_lines[-5:]:  # Revisar las últimas 5 líneas
+            if re.search(r'^[a-d]\)', prev_line.strip(), re.IGNORECASE):
+                recent_options_count += 1
+        
+        # Si hay 2 o más opciones recientes, probablemente estamos dentro de opciones
+        if recent_options_count >= 2:
+            return False
+        
+        # Criterio 3: Verificar si hay evidencia de fin de pregunta/opción anterior
+        # Buscar patrones que sugieren que la pregunta anterior terminó
+        has_completion_evidence = False
+        
+        if previous_lines:
+            # Revisar las últimas líneas para ver si hay evidencia de fin de pregunta
+            for i, prev_line in enumerate(previous_lines[-3:]):  # Últimas 3 líneas
+                prev_stripped = prev_line.strip()
+                
+                # Evidencia fuerte de fin de pregunta/opción
+                if (prev_stripped == '' or  # Línea vacía
+                    prev_stripped.endswith('.') or  # Termina con punto
+                    prev_stripped.endswith('?') or  # Pregunta completa
+                    re.match(r'^\d{1,2}\s+', prev_stripped) or  # Inicio de nueva pregunta
+                    re.search(r'^[a-d]\).*[.]$', prev_stripped, re.IGNORECASE)):  # Opción terminada
+                    has_completion_evidence = True
+                    break
+        
+        # Criterio 4: Si no hay evidencia clara de fin de pregunta, ser más permisivo
+        # para títulos de sección que aparecen en posiciones lógicas
+        
+        # Si hemos encontrado evidencia de fin de pregunta, es muy probable que sea legítimo
+        if has_completion_evidence:
+            return True
+        
+        # Si no hay evidencia clara, verificar si es una sola línea aislada con el título exacto
+        line_trimmed = line.strip().rstrip('.')
+        if line_trimmed.lower() == line_clean:
+            # Es exactamente el título de categoría, probablemente es legítimo
+            # A menos que claramente esté dentro de una opción
+            if previous_lines and len(previous_lines) > 0:
+                last_line = previous_lines[-1].strip()
+                # Si la línea anterior es parte de una opción incompleta, rechazar
+                if (last_line and 
+                    not last_line.endswith(('.', '?', ':', ';')) and
+                    not re.match(r'^[a-d]\)', last_line, re.IGNORECASE)):
+                    return False
+            return True
+        
+        return False
     
     def generate_filename(self, pattern: ExamPattern, base_dir: str = "data") -> str:
         """
@@ -157,21 +319,122 @@ class ParametricExamExtractor:
         filename = f"per-{test_code_clean}-{community_clean}-{pattern.year}-{call_clean}.yaml"
         return os.path.join(base_dir, filename)
         
-    def extract_text_from_pdf(self, pdf_path: str) -> str:
-        """Extrae todo el texto del PDF."""
+    def extract_text_from_pdf(self, pdf_path: str, start_page: Optional[int] = None) -> str:
+        """
+        Extrae todo el texto del PDF.
+        
+        Args:
+            pdf_path: Ruta al archivo PDF
+            start_page: Página desde la cual empezar la extracción (base 1). Si es None, extrae desde el principio.
+        """
         print(f"📄 Extrayendo texto de {pdf_path}")
+        if start_page:
+            print(f"📖 Iniciando extracción desde la página {start_page}")
+        
         doc = fitz.open(pdf_path)
         text = ""
-        for page in doc:
+        
+        # Obtener información del documento antes de procesarlo
+        total_pages = len(doc)
+        
+        # Determinar el rango de páginas
+        start_idx = (start_page - 1) if start_page else 0
+        start_idx = max(0, start_idx)  # Asegurar que no sea negativo
+        
+        # Validar que la página de inicio no exceda el total de páginas
+        if start_idx >= total_pages:
+            doc.close()
+            raise ValueError(f"La página de inicio {start_page} excede el total de páginas del documento ({total_pages})")
+        
+        for page_num in range(start_idx, total_pages):
+            page = doc[page_num]
             text += page.get_text() + "\n"
+        
         doc.close()
+        print(f"📊 Texto extraído desde página {start_idx + 1} hasta {total_pages}")
         return text
     
-    def find_exam_section(self, text: str, pattern: ExamPattern) -> Tuple[str, int, int]:
+    def find_exam_section(self, text: str, pattern: ExamPattern, start_page_specified: bool = False) -> Tuple[str, int, int]:
         """
         Encuentra la sección del examen específico en el texto.
         Retorna: (texto_seccion, posicion_inicio, posicion_fin)
+        
+        Args:
+            text: Texto completo del PDF
+            pattern: Patrón del examen a buscar
+            start_page_specified: Si se especificó una página de inicio, busca de forma más flexible
         """
+        # Si se especificó una página de inicio, intentar búsqueda más flexible
+        if start_page_specified:
+            print(f"🔍 Búsqueda flexible activada (página de inicio especificada)")
+            
+            # Intentar encontrar solo el subtítulo (código de test)
+            subtitle_pattern = rf"{re.escape(pattern.subtitle)}"
+            subtitle_match = re.search(subtitle_pattern, text, re.IGNORECASE)
+            
+            if subtitle_match:
+                print(f"✅ Encontrado subtítulo '{pattern.subtitle}' en posición: {subtitle_match.start()}")
+                start_pos = subtitle_match.start()
+                # Buscar hacia atrás para incluir posible título previo
+                search_start = max(0, start_pos - 500)
+                exam_text_from_start = text[search_start:]
+                
+                # Buscar el final del examen
+                end_pos = self._find_exam_end(exam_text_from_start, pattern)
+                exam_section = exam_text_from_start[:end_pos]
+                
+                print(f"📊 Sección del examen extraída (modo flexible): {len(exam_section)} caracteres")
+                return exam_section, search_start, search_start + end_pos
+            
+            # Si no encuentra el subtítulo, buscar patrones de pregunta directamente
+            print(f"🔍 Buscando patrones de pregunta directamente...")
+            question_pattern = r'\n\s*\d+\s+[¿A-ZÁÉÍÓÚÑ]'  # Incluir preguntas que empiezan con ¿
+            question_matches = list(re.finditer(question_pattern, text))
+            
+            if question_matches:
+                print(f"✅ Encontradas {len(question_matches)} posibles preguntas")
+                
+                # Buscar el inicio real de las preguntas
+                # Priorizar preguntas que empiecen desde el número 1
+                start_pos = question_matches[0].start()
+                for match in question_matches:
+                    match_text = text[match.start():match.start()+50]
+                    if re.search(r'\b1\s+[¿A-ZÁÉÍÓÚÑ]', match_text):
+                        start_pos = match.start()
+                        print(f"✅ Encontrada pregunta 1 en posición: {start_pos}")
+                        break
+                
+                # Tomar una sección generosa para capturar todas las preguntas
+                end_pos = len(text)
+                
+                # Buscar el final basándose en el límite de 45 preguntas
+                for i, match in enumerate(question_matches):
+                    match_text = text[match.start():match.start()+50]
+                    # Buscar el número de pregunta
+                    question_num_match = re.search(r'\b(\d+)\s+[¿A-ZÁÉÍÓÚÑ]', match_text)
+                    if question_num_match:
+                        question_num = int(question_num_match.group(1))
+                        if question_num == pattern.total_questions:  # Pregunta 45 para PER
+                            # Buscar el final de esta pregunta (hasta la siguiente pregunta o final)
+                            if i + 1 < len(question_matches):
+                                end_pos = question_matches[i + 1].start()
+                                print(f"✅ Final del test detectado: pregunta {question_num} termina en posición: {end_pos}")
+                            else:
+                                # Es la última pregunta encontrada, tomar una sección generosa
+                                end_pos = min(len(text), match.start() + 2000)
+                                print(f"✅ Final del test detectado: pregunta {question_num} (última detectada)")
+                            break
+                        elif question_num > pattern.total_questions:
+                            # Si encontramos una pregunta con número mayor, el test anterior terminó
+                            end_pos = match.start()
+                            print(f"✅ Final del test detectado: pregunta {question_num} excede límite, terminando en posición: {end_pos}")
+                            break
+                
+                exam_section = text[start_pos:end_pos]
+                print(f"📊 Sección del examen extraída (modo pregunta directa): {len(exam_section)} caracteres")
+                return exam_section, start_pos, end_pos
+        
+        # Búsqueda normal (existente)
         # Permitir cabeceras intermedias entre el título y el subtítulo (hasta 200 caracteres)
         start_pattern = rf"{re.escape(pattern.title)}(.{{0,200}}?){re.escape(pattern.subtitle)}"
         print(f"🔍 Buscando patrón tolerante: {start_pattern}")
@@ -189,7 +452,17 @@ class ParametricExamExtractor:
         
         # Buscar el final del examen (inicio del siguiente examen o final del documento)
         exam_text_from_start = text[start_pos:]
+        end_pos = self._find_exam_end(exam_text_from_start, pattern)
         
+        exam_section = exam_text_from_start[:end_pos]
+        print(f"📊 Sección del examen extraída: {len(exam_section)} caracteres")
+        
+        return exam_section, start_pos, start_pos + end_pos
+    
+    def _find_exam_end(self, exam_text_from_start: str, pattern: ExamPattern) -> int:
+        """
+        Encuentra el final de la sección del examen.
+        """
         # Patrones que indican el final del examen actual
         end_patterns = [
             rf"{re.escape(pattern.title)}\s*Código de Test \d+",  # Siguiente modelo del mismo examen
@@ -208,10 +481,7 @@ class ParametricExamExtractor:
                     print(f"✅ Final encontrado con patrón: {end_pattern[:30]}... en posición: {candidate_end}")
                     break
         
-        exam_section = exam_text_from_start[:end_pos]
-        print(f"📊 Sección del examen extraída: {len(exam_section)} caracteres")
-        
-        return exam_section, start_pos, start_pos + end_pos
+        return end_pos
     
     def find_answer_section(self, text: str, pattern: ExamPattern) -> str:
         """
@@ -277,28 +547,46 @@ class ParametricExamExtractor:
         i = 0
         while i < len(lines):
             line = lines[i].strip()
-            # Verificar si la línea es un título de categoría
+            
+            # Verificar si la línea es un título de categoría LEGÍTIMO
             line_lower = line.lower().rstrip('.')
             if line_lower in category_title_map:
-                current_category = category_title_map[line_lower]
-                current_category_name = pattern.categories[current_category]
-                print(f"� Encontrada categoría: {current_category} - {current_category_name}")
-                i += 1
-                continue
+                # Validar que sea realmente un título de sección
+                previous_lines = lines[max(0, i-5):i]  # 5 líneas anteriores
+                next_lines = lines[i+1:i+6]  # 5 líneas siguientes
+                
+                if self._is_legitimate_section_title(line, category_title_map, previous_lines, next_lines):
+                    current_category = category_title_map[line_lower]
+                    current_category_name = pattern.categories[current_category]
+                    print(f"✅ Título de sección LEGÍTIMO: {current_category} - {current_category_name}")
+                    i += 1
+                    continue
+                else:
+                    print(f"🚫 IGNORADO falso título de sección: '{line}' (parte de opción de respuesta)")
+            
             # Verificar si la línea es una pregunta numerada con texto en la misma línea
             question_match = re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', line)
             if question_match:
                 question_num = int(question_match.group(1))
                 question_text_start = question_match.group(2)
+                
                 # Solo procesar preguntas en el rango válido
                 if question_num < 1 or question_num > pattern.total_questions:
+                    # Si encontramos una pregunta mayor al límite, terminamos el parsing
+                    if question_num > pattern.total_questions:
+                        print(f"🛑 Terminando extracción: encontrada pregunta {question_num} que excede el límite de {pattern.total_questions}")
+                        break
                     i += 1
                     continue
-                # Verificar que NO sea parte de una regla del RIPA
-                is_ripa_rule = (re.search(r'del\s+RIPA', question_text_start, re.IGNORECASE) or
-                               re.search(r'de\s+la\s+Regla', question_text_start, re.IGNORECASE) or
-                               re.search(r'Regla\s+\d+', line, re.IGNORECASE))
-                if is_ripa_rule:
+                # Verificar que NO sea solo una referencia a regla del RIPA (sin ser una pregunta real)
+                # Las preguntas reales suelen empezar con palabras como "Según", "Conforme", "De acuerdo", etc.
+                is_ripa_reference_only = (
+                    # Solo filtramos si es una referencia sin contexto de pregunta
+                    re.match(r'^\s*del\s+RIPA\s*$', question_text_start, re.IGNORECASE) or
+                    re.match(r'^\s*de\s+la\s+Regla\s+\d+\s*$', question_text_start, re.IGNORECASE) or
+                    re.match(r'^\s*Regla\s+\d+\s*$', question_text_start, re.IGNORECASE)
+                )
+                if is_ripa_reference_only:
                     i += 1
                     continue
                 # Recopilar todo el contenido de la pregunta
@@ -313,14 +601,36 @@ class ParametricExamExtractor:
                         question_text_start = question_pattern_match.group(2)
                         is_valid_question_num = (1 <= potential_question_num <= pattern.total_questions and 
                                                potential_question_num > question_num)
-                        is_ripa_rule = (re.search(r'del\s+RIPA', question_text_start, re.IGNORECASE) or
-                                       re.search(r'de\s+la\s+Regla', question_text_start, re.IGNORECASE) or
-                                       re.search(r'Regla\s+\d+', next_line, re.IGNORECASE))
-                        if is_valid_question_num and not is_ripa_rule:
+                        # Solo filtrar referencias de RIPA que no son preguntas reales
+                        is_ripa_reference_only = (
+                            re.match(r'^\s*del\s+RIPA\s*$', question_text_start, re.IGNORECASE) or
+                            re.match(r'^\s*de\s+la\s+Regla\s+\d+\s*$', question_text_start, re.IGNORECASE) or
+                            re.match(r'^\s*Regla\s+\d+\s*$', question_text_start, re.IGNORECASE)
+                        )
+                        if is_valid_question_num and not is_ripa_reference_only:
                             break
+                    
+                    # Verificar si es un falso título de categoría
                     next_line_lower = next_line.lower().rstrip('.')
                     if next_line_lower in category_title_map:
-                        break
+                        # Validar si es realmente un título de sección
+                        previous_lines_for_validation = lines[max(0, i-5):i]
+                        next_lines_for_validation = lines[i+1:i+6]
+                        
+                        if self._is_legitimate_section_title(next_line, category_title_map, 
+                                                           previous_lines_for_validation, 
+                                                           next_lines_for_validation):
+                            # Es un título legítimo, parar aquí
+                            break
+                        else:
+                            # Es un falso título, continuar agregando a la pregunta
+                            print(f"🚫 IGNORADO falso título en pregunta {question_num}: '{next_line}'")
+                            if next_line:
+                                question_content += '\n' + next_line
+                            i += 1
+                            continue
+                    
+                    # Es contenido normal de la pregunta
                     if next_line:
                         question_content += '\n' + next_line
                     i += 1
@@ -333,6 +643,10 @@ class ParametricExamExtractor:
             if question_number_only:
                 question_num = int(question_number_only.group(1))
                 if question_num < 1 or question_num > pattern.total_questions:
+                    # Si encontramos una pregunta mayor al límite, terminamos el parsing
+                    if question_num > pattern.total_questions:
+                        print(f"🛑 Terminando extracción: encontrada pregunta {question_num} que excede el límite de {pattern.total_questions}")
+                        break
                     i += 1
                     continue
                 # Recoger el texto de la pregunta de la(s) siguiente(s) línea(s)
@@ -385,10 +699,33 @@ class ParametricExamExtractor:
         print(f"✅ Extraídas {len(questions)} preguntas organizadas por categorías")
         return questions
     
-    def _parse_single_question(self, question_num: int, content: str, category: int, category_name: str) -> Dict:
+    def _parse_single_question(self, question_num: int, content: str, detected_category: int, detected_category_name: str) -> Dict:
         """
         Procesa una pregunta individual y extrae su información.
+        Implementa doble validación: sección detectada vs distribución estándar PER.
         """
+        # PASO 1: Determinar la categoría estándar según el número de pregunta
+        standard_category = QUESTION_TO_CATEGORY.get(question_num)
+        if standard_category is None:
+            print(f"⚠️  Pregunta {question_num} fuera del rango estándar (1-45)")
+            return None
+        
+        standard_category_name = PER_CATEGORIES[standard_category]
+        
+        # PASO 2: Comparar categoría detectada vs estándar
+        if detected_category != standard_category:
+            print(f"🔄 Pregunta {question_num}: CORRECCIÓN de categoría")
+            print(f"   📍 Detectada en sección: {detected_category} - {detected_category_name}")
+            print(f"   ✅ Corrigiendo a estándar: {standard_category} - {standard_category_name}")
+            
+            # Usar la categoría estándar
+            final_category = standard_category
+            final_category_name = standard_category_name
+        else:
+            # Las categorías coinciden
+            print(f"✅ Pregunta {question_num}: categoría {standard_category} - {standard_category_name} (coincide)")
+            final_category = standard_category
+            final_category_name = standard_category_name
         # Separar líneas y encontrar pregunta y opciones
         lines = [line.strip() for line in content.split('\n') if line.strip()]
         
@@ -414,8 +751,13 @@ class ParametricExamExtractor:
                 
                 # Continuar leyendo líneas hasta encontrar la siguiente opción o el final
                 i += 1
-                while i < len(lines):
+                option_line_count = 0  # Contador para evitar opciones infinitas
+                max_option_lines = 15  # Límite máximo de líneas por opción (para casos complejos)
+                
+                while i < len(lines) and option_line_count < max_option_lines:
                     next_line = lines[i]
+                    option_line_count += 1
+                    
                     # Verificar si la siguiente línea es una nueva opción
                     next_option_match = re.match(r'^([a-d])\)\s*(.+)', next_line, re.IGNORECASE)
                     if next_option_match:
@@ -458,20 +800,51 @@ class ParametricExamExtractor:
                         # No incluir texto administrativo en la opción
                         break
                     
+                    # NUEVA VERIFICACIÓN: Verificar si es un título de categoría PER
+                    category_titles = [
+                        "Nomenclatura náutica",
+                        "Elementos de amarre y fondeo", 
+                        "Seguridad",
+                        "Legislación",
+                        "Balizamiento",
+                        "Reglamento (RIPA)",
+                        "Maniobra y navegación",
+                        "Emergencias en la mar",
+                        "Meteorología",
+                        "Teoría de la navegación",
+                        "Carta de navegación"
+                    ]
+                    
+                    next_line_clean = next_line.strip().rstrip('.')
+                    is_category_title = any(next_line_clean.lower() == title.lower() for title in category_titles)
+                    if is_category_title:
+                        print(f"🛑 DETENIDO: Título de categoría detectado en opción: '{next_line_clean}' (pregunta {question_num})")
+                        break
+                    
                     # Verificar si es muy similar al texto ya existente (posible repetición)
                     if len(option_text) > 20 and next_line.strip() in option_text:
                         break
                     
                     # Verificar si la línea podría ser el inicio de una nueva pregunta
+                    # IMPORTANTE: No confundir sub-elementos i), ii), iii) con números de pregunta
                     potential_question_match = re.match(r'^\s*(\d{1,2})\s+([^\d\s].*)', next_line)
                     if potential_question_match:
                         potential_num = int(potential_question_match.group(1))
                         if 1 <= potential_num <= 45:  # Rango válido de preguntas
                             break
                     
+                    # Verificar si es un sub-elemento de la opción (i), ii), iii), etc.)
+                    # Estos deben ser incluidos en la opción actual
+                    is_sub_element = re.match(r'^\s*[ivx]+\)\s+', next_line, re.IGNORECASE)
+                    
                     # Es continuación de la opción actual
                     if next_line.strip():  # Solo agregar si no está vacía
-                        option_text += ' ' + next_line.strip()
+                        if is_sub_element:
+                            # Para sub-elementos, agregar con un separado visual
+                            option_text += '; ' + next_line.strip()
+                        else:
+                            # Para texto normal, agregar con espacio
+                            option_text += ' ' + next_line.strip()
                     i += 1
                 
                 options[current_option_letter] = option_text
@@ -506,8 +879,8 @@ class ParametricExamExtractor:
             'question': question_text,
             'options': options,  # Ahora es un diccionario {'a': 'texto', 'b': 'texto', ...}
             'correct_answer': None,  # Se asignará después (será una letra a-d)
-            'category': category,
-            'category_name': category_name
+            'category': final_category,
+            'category_name': final_category_name
         }
     
     def parse_answers_from_section(self, answer_section: str) -> Dict[int, str]:
@@ -574,98 +947,41 @@ class ParametricExamExtractor:
         print(f"✅ Extraídas {len(answers)} respuestas")
         return answers
     
-    def classify_question_by_content(self, question_text: str, categories: Dict[int, str]) -> int:
-        """
-        Clasifica una pregunta en una categoría basándose en su contenido.
-        """
-        question_lower = question_text.lower()
-        
-        # Patrones específicos para PER (se puede extender para otros exámenes)
-        if categories == PER_CATEGORIES:
-            # **DETECCIÓN PRIORITARIA DE RIPA**: Si menciona "ripa" o "regla X del ripa", es categoría 6
-            # Patrones más amplios y específicos para detectar preguntas del RIPA
-            ripa_patterns = [
-                r'\bripa\b',  # Menciona "ripa" explícitamente
-                r'regla\s+\d+\s+del\s+ripa',  # "regla X del ripa"
-                r'según\s+la\s+regla\s+\d+',  # "según la regla X"
-                r'conforme\s+a\s+la\s+regla\s+\d+',  # "conforme a la regla X"
-                r'de\s+acuerdo\s+con\s+la\s+regla\s+\d+',  # "de acuerdo con la regla X"
-                r'regla\s+\d+.*ripa',  # "regla X ... ripa"
-                r'con\s+arreglo\s+a\s+la\s+regla\s+\d+',  # "con arreglo a la regla X"
-                r'lo\s+establecido\s+en\s+la\s+regla\s+\d+',  # "lo establecido en la regla X"
-                r'por\s+la\s+regla\s+\d+',  # "por la regla X"
-                r'en\s+la\s+regla\s+\d+',  # "en la regla X"
-                r'la\s+regla\s+\d+\s+establece',  # "la regla X establece"
-                r'aplicación.*regla\s+\d+',  # "aplicación ... regla X"
-                r'ámbito\s+de\s+aplicación.*regla',  # "ámbito de aplicación ... regla"
-            ]
-            
-            for pattern in ripa_patterns:
-                if re.search(pattern, question_lower):
-                    return 6  # Categoría RIPA
-            
-            # Primero verificar reglas específicas para casos problemáticos
-            if any(word in question_lower for word in ["nudo", "gaza", "cornamusa", "chicote", "amarrar", "fondear", "cabo"]):
-                # Si menciona múltiples términos de amarre, es categoría 2
-                amarre_count = sum(1 for word in ["nudo", "gaza", "cornamusa", "chicote", "amarrar", "fondear", "cabo", "filar", "virar", "levar"] if word in question_lower)
-                if amarre_count >= 2:
-                    return 2
-            
-            category_patterns = {
-                1: ["bocina", "proa", "popa", "babor", "estribor", "eslora", "manga", "puntal", "calado", 
-                    "casco", "cubierta", "timón", "roda", "codaste", "quilla", "aleta", "través", "desplazamiento", "crujía"],
-                2: ["ancla", "fondeo", "amarre", "cabo", "nudo", "bita", "cornamusa", "muerto", "rezón",
-                    "cadena", "orinque", "garreo", "virar", "filar", "levar", "zarpar", "llano", "gaza", "chicote", "amarrar", "sonda", "fondear", "lascar"],
-                3: ["chaleco", "balsa", "bengala", "extintor", "botiquín", "supervivencia", "salvavidas",
-                    "emergencia", "socorro", "epirb", "abandono", "rescate", "helicóptero", "aro", "estiba"],
-                4: ["capitanía", "despacho", "permiso", "licencia", "normativa", "ley", "reglamento",
-                    "autoridad", "certificado", "navegabilidad", "zona", "obligatorio"],
-                5: ["boya", "baliza", "faro", "luz", "señal", "cardinal", "lateral", "marca", "enfilación",
-                    "sector", "destellos", "ocultaciones", "ritmo", "alcance"],
-                6: ["abordaje", "rumbo", "cruce", "alcance", "maniobra", "preferencia", "paso", "ripa",
-                    "buque", "embarcación", "motor", "vela", "fondeado", "visibilidad", "luces", "marcas", "señales", "acústicas", "luminosas"],
-                7: ["rumbo", "derrota", "posición", "navegación", "maniobra", "gobierno", "caída",
-                    "arribada", "orzada", "virada", "trasluchada", "ceñida", "largo", "través"],
-                8: ["abandono", "emergencia", "socorro", "supervivencia", "situación", "peligro",
-                    "naufragio", "varada", "incendio", "vía", "agua", "remolque"],
-                9: ["viento", "presión", "borrasca", "anticiclón", "tiempo", "temporal", "escala",
-                    "beaufort", "marejada", "oleaje", "meteorología", "barómetro"],
-                10: ["coordenadas", "latitud", "longitud", "meridiano", "paralelo", "carta", "plotear",
-                     "estima", "situación", "demora", "marcación", "altura", "sonda"],
-                11: ["carta", "escala", "símbolo", "proyección", "meridiano", "paralelo", "rosa",
-                     "distancia", "milla", "nudo", "plotear", "navegación", "situación"]
-            }
-        else:
-            # Para otros exámenes, usar clasificación básica
-            category_patterns = {i: [] for i in categories.keys()}
-        
-        # Contar coincidencias por categoría
-        category_scores = {}
-        for category, patterns in category_patterns.items():
-            score = sum(1 for pattern in patterns if pattern in question_lower)
-            if score > 0:
-                category_scores[category] = score
-        
-        # Devolver la categoría con mayor puntuación, o la primera categoría por defecto
-        if category_scores:
-            return max(category_scores.items(), key=lambda x: x[1])[0]
-        return list(categories.keys())[0]  # Primera categoría por defecto
-    
-    def extract_exam(self, questions_pdf: str, pattern: ExamPattern) -> Dict:
+    def extract_exam(self, questions_pdf: str, pattern: ExamPattern, start_page: Optional[int] = None) -> Dict:
         """
         Extrae un examen completo usando el patrón especificado.
         Solo extrae las preguntas, sin respuestas.
+        
+        Args:
+            questions_pdf: Ruta al archivo PDF con las preguntas
+            pattern: Patrón del examen a extraer
+            start_page: Página desde la cual empezar la búsqueda (base 1). Útil cuando la cabecera está en imagen.
         """
         print(f"🚢 Extrayendo examen: {pattern.title} - {pattern.subtitle}")
+        if start_page:
+            print(f"📖 Iniciando búsqueda desde la página {start_page}")
         
         # Extraer preguntas del PDF
-        questions_text = self.extract_text_from_pdf(questions_pdf)
-        exam_section, _, _ = self.find_exam_section(questions_text, pattern)
+        questions_text = self.extract_text_from_pdf(questions_pdf, start_page)
+        exam_section, _, _ = self.find_exam_section(questions_text, pattern, start_page is not None)
         
         if not exam_section:
             print("❌ No se pudo encontrar la sección del examen")
+            if start_page:
+                print(f"💡 Verifica que el examen {pattern.subtitle} esté presente desde la página {start_page}")
+            else:
+                print(f"💡 Si la cabecera del examen está en una imagen, prueba con --start-page N")
             return {}
         
+        # VALIDACIÓN: Verificar distribución de secciones antes del parsing
+        print("\n" + "="*80)
+        print("🔍 PASO 1: VALIDACIÓN DE DISTRIBUCIÓN DE SECCIONES")
+        print("="*80)
+        detected_distribution = self.validate_section_distribution(exam_section, pattern)
+        
+        print("\n" + "="*80)
+        print("🔧 PASO 2: EXTRACCIÓN DE PREGUNTAS CON CORRECCIÓN AUTOMÁTICA")
+        print("="*80)
         questions = self.parse_questions_from_section(exam_section, pattern)
         print(f"✅ Extraídas {len(questions)} preguntas organizadas por categorías")
         
@@ -772,11 +1088,7 @@ class ParametricExamExtractor:
                                 category_name = pattern.categories[category]
                                 break
                         
-                        # Intentar clasificar por contenido si no se encontró categoría
-                        if category == 1:
-                            category = self.classify_question_by_content(content, pattern.categories)
-                            category_name = pattern.categories[category]
-                        
+                        # Si no se encontró categoría en las líneas previas, mantener la categoría por defecto
                         print(f"✅ Recuperada pregunta {missing_id} en categoría {category_name}")
                         
                         question_data = self._parse_single_question(missing_id, content, category, category_name)
@@ -954,8 +1266,17 @@ def main():
         description='🚢 Extractor de Preguntas de Exámenes PER desde PDFs',
         epilog='''
 Ejemplos de uso:
-  %(prog)s --pdf data/raw/questions/madrid-2025-abril.pdf --test test01
-  %(prog)s --pdf /ruta/completa/examen.pdf --test test04 --output-dir mi_directorio
+  %(prog)s --input-file data/raw/questions/madrid-2025-abril.pdf --test-code 01
+  %(prog)s --input-file /ruta/completa/examen.pdf --test-code 05 --output-dir mi_directorio --verbose
+  %(prog)s --input-file examen.pdf --test-code 03 --start-page 5
+  
+Uso del parámetro --start-page:
+  Cuando la cabecera del examen (título + código de test) está en una imagen
+  y no es detectada por OCR, usa --start-page para indicar desde qué página
+  empezar la búsqueda del contenido del examen.
+  
+  Ejemplo: Si el Test 03 empieza en la página 7:
+  %(prog)s --input-file examen.pdf --test-code 03 --start-page 7
   
 Este script extrae preguntas de exámenes PER de archivos PDF oficiales y las
 organiza automáticamente por categorías (Nomenclatura, RIPA, Seguridad, etc.)
@@ -974,18 +1295,22 @@ El archivo de salida seguirá el formato: per-{test}-{comunidad}-{año}-{convoca
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
     
-    parser.add_argument('--pdf', required=True, 
-                       help='Ruta al archivo PDF con las preguntas del examen')
-    parser.add_argument('--test', required=True, 
-                       choices=['test01', 'test02', 'test03', 'test04'], 
-                       help='Código del test a extraer. Disponibles: test01, test02, test03, test04')
+    parser.add_argument('--input-file', required=True, 
+                       help='Archivo PDF con las preguntas del examen')
+    parser.add_argument('--test-code', required=True, 
+                       choices=['01', '02', '03', '04', '05', '06'], 
+                       help='Número del test a extraer. Disponibles: 01, 02, 03, 04, 05, 06')
     parser.add_argument('--output-dir', default='data/exams', 
-                       help='Directorio donde guardar el archivo YAML (por defecto: data/exams)')
+                       help='Directorio donde guardar el archivo YAML (default: data/exams)')
+    parser.add_argument('--start-page', type=int, 
+                       help='Página desde la cual empezar la búsqueda del examen (base 1). Útil cuando la cabecera está en imagen y no es detectada por OCR')
+    parser.add_argument('--verbose', action='store_true',
+                       help='Mostrar información detallada del procesamiento')
     
     args = parser.parse_args()
     
     # Detectar automáticamente año y convocatoria desde el nombre del archivo PDF
-    pdf_filename = os.path.basename(args.pdf)
+    pdf_filename = os.path.basename(args.input_file)
     
     # Extraer información del nombre del archivo (formato: madrid-YYYY-convocatoria.pdf)
     import re
@@ -994,26 +1319,31 @@ El archivo de salida seguirá el formato: per-{test}-{comunidad}-{año}-{convoca
     if match:
         year = int(match.group(1))
         call = match.group(2)
-        print(f"📅 Detectado automáticamente: Año {year}, Convocatoria {call}")
+        if args.verbose:
+            print(f"📅 Detectado automáticamente: Año {year}, Convocatoria {call}")
     else:
         # Valores por defecto si no se puede detectar
         year = 2025
         call = "abril"
-        print(f"⚠️  No se pudo detectar año/convocatoria del nombre del archivo, usando valores por defecto: {year} {call}")
+        if args.verbose:
+            print(f"⚠️  No se pudo detectar año/convocatoria del nombre del archivo, usando valores por defecto: {year} {call}")
     
     # Crear patrón dinámicamente basado en los parámetros
-    pattern = create_per_pattern("Madrid", year, call, args.test)
+    pattern = create_per_pattern("Madrid", year, call, args.test_code)
     
-    print(f"🚢 Extractor de Preguntas PER")
-    print(f"📋 Examen: {pattern.title}")
-    print(f"🏷️  Test: {pattern.subtitle}")
-    print(f"📄 PDF origen: {args.pdf}")
-    print(f"📁 Directorio salida: {args.output_dir}")
-    print("-" * 60)
+    if args.verbose:
+        print(f"🚢 Extractor de Preguntas PER")
+        print(f"📋 Examen: {pattern.title}")
+        print(f"🏷️  Test: {pattern.subtitle}")
+        print(f"📄 PDF origen: {args.input_file}")
+        print(f"📁 Directorio salida: {args.output_dir}")
+        if args.start_page:
+            print(f"📖 Página inicial: {args.start_page}")
+        print("-" * 60)
     
     # Verificar que el archivo PDF existe
-    if not os.path.exists(args.pdf):
-        print(f"❌ Error: No se encuentra el archivo PDF: {args.pdf}")
+    if not os.path.exists(args.input_file):
+        print(f"❌ Error: No se encuentra el archivo PDF: {args.input_file}")
         print(f"💡 Verifica que la ruta sea correcta y que el archivo exista")
         return 1
     
@@ -1022,7 +1352,7 @@ El archivo de salida seguirá el formato: per-{test}-{comunidad}-{año}-{convoca
     
     try:
         # Extraer el examen
-        exam_data = extractor.extract_exam(args.pdf, pattern)
+        exam_data = extractor.extract_exam(args.input_file, pattern, args.start_page)
         
         if not exam_data:
             print("❌ Error: No se pudo extraer el examen")
@@ -1041,8 +1371,10 @@ El archivo de salida seguirá el formato: per-{test}-{comunidad}-{año}-{convoca
         print(f"   📚 Categorías encontradas: {exam_info.get('categories', 0)}")
         print(f"   📝 Preguntas con respuestas: {exam_info.get('questions_with_answers', 0)}")
         print(f"   💾 Archivo guardado: {output_file}")
-        print(f"\n💡 Para agregar respuestas, usa:")
-        print(f"   python madrid_extract_answers.py --exam-type PER --test-model {args.test.upper()}")
+        
+        if args.verbose:
+            print(f"\n💡 Para agregar respuestas, usa:")
+            print(f"   python madrid_extract_answers_v2.py --input-file respuestas.pdf")
         
         return 0
         

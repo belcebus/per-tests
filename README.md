@@ -60,8 +60,11 @@ per-tests/
 │   │   ├── madrid_extract_answers_v2.py  # Extractor OCR de respuestas
 │   │   └── README.md        # Documentación de extracción
 │   ├── processing/          # Scripts de procesamiento de datos
-│   │   ├── madrid_merge_exam.py          # Aplicador de respuestas
+│   │   ├── madrid_apply_answers.py       # Aplicador de respuestas
 │   │   └── README.md        # Documentación de procesamiento
+│   ├── utils/               # Herramientas de utilidad y verificación
+│   │   ├── check_exam_consistency.py     # Verificador de consistencia
+│   │   └── README.md        # Documentación de utilidades
 │   └── README.md            # Documentación general de herramientas
 ├── extracted-answers/       # Respuestas extraídas por OCR (temporal)
 ├── .env.example             # Plantilla de variables de entorno
@@ -254,34 +257,34 @@ python tools/extraction/madrid_extract_questions.py
 python tools/extraction/madrid_extract_answers_v2.py --exam-type PER --test-model TEST01
 
 # 3. Combinar preguntas y respuestas
-python tools/processing/madrid_merge_exam.py
+python tools/processing/madrid_apply_answers.py
 ```
 
 #### Para otros años/comunidades/convocatorias:
 ```bash
 # Ejemplo: Madrid 2024 noviembre test01
 # 1. Extraer preguntas
-# Resultado: data/exams/questions/madrid/2024/per-test01-madrid-2024-noviembre.yaml
-python tools/extraction/madrid_extract_questions.py --year 2024 --call noviembre --test test01
+# Resultado: data/exams/per-test01-madrid-2024-noviembre.yaml
+python tools/extraction/madrid_extract_questions.py --input-file data/raw/questions/madrid-2024-noviembre.pdf --test-code 01
 
 # 2. Extraer respuestas (especificando PDF correcto)
-python tools/extraction/madrid_extract_answers_v2.py --exam-type PER --test-model TEST01 --pdf-path "data/raw/answers/madrid/2024/madrid-2024-noviembre.pdf"
+python tools/extraction/madrid_extract_answers_v2.py --input-file "data/raw/answers/madrid/2024/madrid-2024-noviembre.pdf"
 
 # 3. Combinar datos
-python tools/processing/madrid_merge_exam.py
+python tools/processing/madrid_apply_answers.py --input-file per-test01-madrid-2024-noviembre.json --target-file per-test01-madrid-2024-noviembre.yaml
 ```
 
 #### Para Valencia 2024 junio (ejemplo):
 ```bash
 # 1. Extraer preguntas
-# Resultado: data/exams/questions/valencia/2024/per-test02-valencia-2024-junio.yaml
-python tools/extraction/madrid_extract_questions.py --community Valencia --year 2024 --call junio --test test02
+# Resultado: data/exams/per-test02-valencia-2024-junio.yaml
+python tools/extraction/madrid_extract_questions.py --input-file data/raw/questions/valencia-2024-junio.pdf --test-code 02
 
 # 2. Extraer respuestas
-python tools/extraction/madrid_extract_answers_v2.py --exam-type PER --test-model TEST02 --pdf-path "data/raw/answers/valencia/2024/valencia-2024-junio.pdf"
+python tools/extraction/madrid_extract_answers_v2.py --input-file "data/raw/answers/valencia/2024/valencia-2024-junio.pdf"
 
 # 3. Combinar datos
-python tools/processing/madrid_merge_exam.py
+python tools/processing/madrid_apply_answers.py --input-file per-test02-valencia-2024-junio.json --target-file per-test02-valencia-2024-junio.yaml
 ```
 
 ### Extracción Avanzada de Respuestas
@@ -304,7 +307,7 @@ python tools/extraction/madrid_extract_answers_v2.py --pdf-path "data/raw/answer
 
 ```bash
 # Aplicar respuestas OCR al archivo YAML
-python tools/processing/madrid_merge_exam.py
+python tools/processing/madrid_apply_answers.py
 ```
 
 **Tipos de examen soportados:**
