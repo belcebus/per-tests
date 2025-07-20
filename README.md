@@ -240,10 +240,9 @@ Extrae respuestas oficiales de PDFs usando reconocimiento óptico de caracteres.
 - 📋 **Múltiples formatos**: Soporte para diferentes layouts
 
 #### Parámetros principales:
-- `--exam-type`: Tipo de examen (PER, PATRON_YATE, etc.)
-- `--test-model`: Modelo específico (TEST01, TEST02, etc.)
-- `--pdf-path`: Ruta al PDF de respuestas
-- `--output-dir`: Directorio de salida
+- `--input-file`: Ruta al PDF de respuestas (obligatorio)
+- `--output-dir`: Directorio de salida (opcional)
+- `--verbose`: Información detallada del procesamiento (opcional)
 
 ### Flujo Completo de Procesamiento
 
@@ -251,13 +250,13 @@ Extrae respuestas oficiales de PDFs usando reconocimiento óptico de caracteres.
 ```bash
 # 1. Extraer preguntas del PDF oficial
 # Resultado: data/exams/questions/madrid/2025/per-test01-madrid-2025-abril.yaml
-python tools/extraction/madrid_extract_questions.py
+python tools/extraction/madrid_extract_questions.py --input-file data/raw/questions/madrid/2025/madrid-2025-abril.pdf --test-code 01
 
 # 2. Extraer respuestas usando OCR del PDF oficial
-python tools/extraction/madrid_extract_answers_v2.py --exam-type PER --test-model TEST01
+python tools/extraction/madrid_extract_answers_v2.py --input-file data/raw/answers/madrid/2025/madrid-2025-abril.pdf
 
 # 3. Combinar preguntas y respuestas
-python tools/processing/madrid_apply_answers.py
+python tools/processing/madrid_apply_answers.py --input-file per-test01-madrid-2025-abril.json --target-file per-test01-madrid-2025-abril.yaml
 ```
 
 #### Para otros años/comunidades/convocatorias:
@@ -290,31 +289,27 @@ python tools/processing/madrid_apply_answers.py --input-file per-test02-valencia
 ### Extracción Avanzada de Respuestas
 
 ```bash
-# Extraer todas las respuestas de todos los exámenes
-python tools/extraction/madrid_extract_answers_v2.py
+# Extraer respuestas de un PDF específico
+python tools/extraction/madrid_extract_answers_v2.py --input-file "data/raw/answers/madrid/2025/madrid-2025-abril.pdf"
 
-# Extraer respuestas de un tipo específico de examen
-python tools/extraction/madrid_extract_answers_v2.py --exam-type PER
+# Extraer respuestas con directorio personalizado
+python tools/extraction/madrid_extract_answers_v2.py --input-file "data/raw/answers/madrid/2024/madrid-2024-junio.pdf" --output-dir "mis_respuestas"
 
-# Extraer respuestas de un modelo específico
-python tools/extraction/madrid_extract_answers_v2.py --exam-type PER --test-model TEST01
-
-# Especificar archivo PDF personalizado
-python tools/extraction/madrid_extract_answers_v2.py --pdf-path "data/raw/answers/madrid/2023/madrid-2023-junio.pdf" --exam-type PATRON_YATE
+# Extraer respuestas con información detallada
+python tools/extraction/madrid_extract_answers_v2.py --input-file "data/raw/answers/madrid/2023/madrid-2023-noviembre.pdf" --verbose
 ```
 
 ### Aplicar Respuestas Extraídas
 
 ```bash
-# Aplicar respuestas OCR al archivo YAML
-python tools/processing/madrid_apply_answers.py
+# Aplicar respuestas OCR al archivo YAML (con auto-detección)
+python tools/processing/madrid_apply_answers.py --verbose
+
+# Aplicar respuestas especificando archivos
+python tools/processing/madrid_apply_answers.py --input-file respuestas.json --target-file examen.yaml --verbose
 ```
 
-**Tipos de examen soportados:**
-- `PER`: Patrón de Embarcación de Recreo
-- `PATRON_YATE`: Patrón de Yate  
-- `CAPITAN_YATE`: Capitán de Yate
-- `LICENCIA_NAVEGACION`: Licencia de Navegación
+**Nota**: El script detecta automáticamente el tipo de examen desde el contenido del PDF usando OCR.
 
 ## Despliegue en Azure Web Apps
 La aplicación está configurada para desplegarse directamente en Azure Web Apps usando el archivo `requirements.txt` y la estructura estándar de FastAPI.
