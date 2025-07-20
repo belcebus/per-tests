@@ -41,6 +41,23 @@ opencv-python==4.11.0.86
 numpy==1.26.4
 
 # =============================================================================
+# DEPENDENCIAS PARA TESTING
+# =============================================================================
+
+# Framework de testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# Testing para FastAPI
+httpx==0.25.2
+
+# Mocking y fixtures
+pytest-mock==3.12.0
+
+# Coverage de código
+pytest-cov==4.1.0
+
+# =============================================================================
 # DEPENDENCIAS OPCIONALES PARA OCR AVANZADO
 # =============================================================================
 
