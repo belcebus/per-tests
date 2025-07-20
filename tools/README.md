@@ -42,7 +42,7 @@ python madrid_extract_questions.py --input-file RUTA_PDF --test-code NUMERO_TEST
 #### Parámetros Obligatorios
 
 - `--input-file`: Archivo PDF que contiene las preguntas del examen
-- `--test-code`: Número del test a extraer (`01`, `02`, `03`, `04`, `05`)
+- `--test-code`: Número del test a extraer (`01`, `02`, `03`, `04`, `05`, `06`)
 
 #### Parámetros Opcionales
 
@@ -105,38 +105,32 @@ El script organiza automáticamente las preguntas en las 11 categorías oficiale
 #### Uso desde Línea de Comandos
 
 ```bash
-python madrid_extract_answers_v2.py [--exam-type TIPO] [--test-model MODELO] [--pdf-path RUTA] [--output-dir DIRECTORIO] [--verbose]
+python madrid_extract_answers_v2.py --input-file ARCHIVO_PDF [--output-dir DIRECTORIO] [--verbose]
 ```
+
+#### Parámetros Obligatorios
+
+- `--input-file`: Archivo PDF de respuestas oficiales
 
 #### Parámetros Opcionales
 
-- `--exam-type`: Tipo de examen (`PER`, `PATRON_YATE`, `CAPITAN_YATE`, `LICENCIA_NAVEGACION`)
-- `--test-model`: Modelo específico (`TEST01`, `TEST02`, `TEST03`, `TEST04`)
-- `--pdf-path`: Ruta específica al PDF de respuestas
 - `--output-dir`: Directorio de salida (default: `extracted-answers/`)
 - `--verbose`: Mostrar información detallada del procesamiento
 
 #### Ejemplos de Uso
 
 ```bash
-# Extraer todas las respuestas de todos los exámenes
-python madrid_extract_answers_v2.py
+# Extraer respuestas del PDF de Madrid 2025 abril
+python madrid_extract_answers_v2.py --input-file "data/raw/answers/madrid/2025/madrid-2025-abril.pdf"
 
-# Extraer respuestas de un tipo específico de examen
-python madrid_extract_answers_v2.py --exam-type PER
+# Extraer respuestas de un PDF específico con directorio personalizado
+python madrid_extract_answers_v2.py --input-file "data/raw/answers/madrid/2024/madrid-2024-junio.pdf" --output-dir "resultados_ocr"
 
-# Extraer respuestas de un modelo específico
-python madrid_extract_answers_v2.py --exam-type PER --test-model TEST01
-
-# Especificar archivo PDF personalizado
-python madrid_extract_answers_v2.py --pdf-path "data/raw/answers/madrid/2023/madrid-2023-junio.pdf" --exam-type PATRON_YATE
+# Extraer respuestas con información detallada
+python madrid_extract_answers_v2.py --input-file "data/raw/answers/madrid/2023/madrid-2023-noviembre.pdf" --verbose
 ```
 
-**Tipos de examen soportados:**
-- `PER`: Patrón de Embarcación de Recreo
-- `PATRON_YATE`: Patrón de Yate  
-- `CAPITAN_YATE`: Capitán de Yate
-- `LICENCIA_NAVEGACION`: Licencia de Navegación
+**Nota**: El script detecta automáticamente el tipo de examen y modelo desde el contenido del PDF usando OCR.
 
 ---
 
@@ -336,7 +330,7 @@ python tools/utils/check_exam_consistency.py
 - `--input-file`: Archivo principal de entrada (PDF, JSON)
 - `--output-dir`: Directorio de salida personalizable 
 - `--verbose`: Información detallada del procesamiento
-- `--test-code`: Código del test (test01, test02, test03, test04)
+- `--test-code`: Código del test (01, 02, 03, 04, 05, 06)
 - `--target-file`: Archivo objetivo a modificar (solo merge)
 
 ## 📁 Estructura de Archivos
