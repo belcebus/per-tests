@@ -25,6 +25,14 @@ per-tests/
 ├── config/                  # Configuración centralizada
 │   ├── __init__.py          # Paquete de configuración
 │   └── settings.py          # Configuración principal
+├── tests/                   # Suite de pruebas automatizadas
+│   ├── conftest.py          # Configuración y fixtures compartidas
+│   ├── fixtures/            # Datos de prueba reutilizables
+│   ├── unit/                # Tests unitarios
+│   │   ├── test_models.py       # Tests de modelos Pydantic
+│   │   ├── test_api_endpoints.py # Tests de endpoints FastAPI
+│   │   └── test_question_loader.py # Tests del cargador de preguntas
+│   └── integration/         # Tests de integración (futuro)
 ├── data/                    # Archivos YAML con preguntas
 │   ├── exams/               # Archivos YAML de exámenes procesados
 │   │   ├── questions/       # Preguntas organizadas jerárquicamente
@@ -67,6 +75,7 @@ per-tests/
 │   │   └── README.md        # Documentación de utilidades
 │   └── README.md            # Documentación general de herramientas
 ├── extracted-answers/       # Respuestas extraídas por OCR (temporal)
+├── pytest.ini              # Configuración de pytest
 ├── .env.example             # Plantilla de variables de entorno
 ├── requirements.txt         # Dependencias completas
 ├── requirements-minimal.txt # Dependencias mínimas
@@ -76,17 +85,22 @@ per-tests/
 ## Instalación y Ejecución
 
 ### Opción 1: Instalación Completa (Recomendada)
-Incluye todas las dependencias para la aplicación web y las herramientas de procesamiento:
+Incluye todas las dependencias para la aplicación web, las herramientas de procesamiento y el framework de testing:
 
 ```bash
 pip install -r requirements.txt
 ```
 
 ### Opción 2: Instalación Mínima (Solo Aplicación Web)
-Solo las dependencias necesarias para ejecutar el servidor web:
+Solo las dependencias necesarias para ejecutar el servidor web (sin herramientas de procesamiento ni tests):
 
 ```bash
 pip install -r requirements-minimal.txt
+```
+
+**Nota**: Para ejecutar tests en la instalación mínima, instalar dependencias adicionales:
+```bash
+pip install pytest pytest-asyncio pytest-cov pytest-mock httpx
 ```
 
 ### Ejecutar la Aplicación
@@ -99,6 +113,171 @@ uvicorn app.main:app --reload
 - API: http://localhost:8000
 - Documentación: http://localhost:8000/docs
 - Cliente Web: http://localhost:8000/static/index.html
+
+## Testing
+
+### Descripción General
+El proyecto incluye una suite completa de pruebas automatizadas para garantizar la calidad y funcionamiento correcto de la aplicación. Los tests están organizados en una estructura jerárquica que facilita el mantenimiento y la ejecución selectiva.
+
+### Estructura de Tests
+
+```
+tests/
+├── conftest.py              # Configuración global y fixtures compartidas
+├── fixtures/                # Datos de prueba reutilizables
+├── unit/                    # Tests unitarios (componentes aislados)
+│   ├── test_models.py       # Validación de modelos Pydantic
+│   ├── test_api_endpoints.py # Tests de endpoints FastAPI
+│   └── test_question_loader.py # Tests del servicio de carga de preguntas
+└── integration/             # Tests de integración (sistema completo)
+```
+
+### Tipos de Tests
+
+#### 🔬 **Tests Unitarios** (`tests/unit/`)
+Verifican el funcionamiento de componentes individuales de forma aislada:
+
+- **`test_models.py`**: Validación de modelos Pydantic ✅
+  - QuestionMetadata: Metadatos de exámenes (9/9 tests pasan)
+  - Question: Estructura de preguntas (todas las validaciones funcionan)
+  - ExamGenerationRequest: Solicitudes de generación de exámenes (todas funcionan)
+
+- **`test_api_endpoints.py`**: Tests de endpoints de la API FastAPI ⚠️
+  - Generación de exámenes aleatorios (requiere datos de prueba)
+  - Corrección de exámenes enviados (funcionalidad parcial)
+  - Endpoints de información y salud (básicos funcionan)
+  - Manejo de errores HTTP (algunos ajustes necesarios)
+
+- **`test_question_loader.py`**: Tests del servicio de carga de preguntas ⚠️
+  - Carga de archivos YAML (requiere actualización por cambios en API)
+  - Validación de estructura de datos (métodos privados cambiaron)
+  - Organización por comunidades y categorías (funciona con datos reales)
+  - Manejo de errores y archivos corruptos (parcialmente funcional)
+
+#### 🔗 **Tests de Integración** (`tests/integration/`)
+Verifican el funcionamiento del sistema completo con componentes reales (planificado para futuras versiones).
+
+### Configuración de Tests
+
+La configuración se encuentra en:
+- **`pytest.ini`**: Configuración principal de pytest
+- **`conftest.py`**: Fixtures compartidas y setup de tests
+
+#### Markers Disponibles
+- `@pytest.mark.unit`: Tests unitarios
+- `@pytest.mark.integration`: Tests de integración  
+- `@pytest.mark.api`: Tests específicos de API
+- `@pytest.mark.slow`: Tests que requieren más tiempo
+
+### Ejecución de Tests
+
+#### Ejecutar Todos los Tests
+```bash
+pytest
+```
+
+#### Ejecutar Tests por Categoría
+```bash
+# Solo tests unitarios
+pytest -m unit
+
+# Solo tests de API
+pytest -m api
+
+# Excluir tests lentos
+pytest -m "not slow"
+```
+
+#### Ejecutar Tests Específicos
+```bash
+# Un archivo específico
+pytest tests/unit/test_models.py
+
+# Una clase específica
+pytest tests/unit/test_models.py::TestQuestionMetadata
+
+# Un test específico
+pytest tests/unit/test_models.py::TestQuestionMetadata::test_valid_metadata
+```
+
+#### Ejecución con Información Detallada
+```bash
+# Mostrar información detallada
+pytest -v
+
+# Mostrar output de print()
+pytest -s
+
+# Mostrar resumen de cobertura
+pytest --cov=app
+
+# Combinar opciones
+pytest -v -s --cov=app tests/unit/
+```
+
+#### Ejecución en Modo de Desarrollo
+```bash
+# Parar en el primer fallo
+pytest -x
+
+# Ejecutar solo tests que fallaron en la última ejecución
+pytest --lf
+
+# Ejecutar tests en paralelo (requiere pytest-xdist)
+pytest -n auto
+```
+
+#### Ejemplos Prácticos
+
+```bash
+# Verificar que los modelos funcionan correctamente (debería pasar)
+pytest tests/unit/test_models.py -v
+
+# Ejecutar solo tests rápidos (excluyendo lentos)
+pytest -m "not slow" -v
+
+# Generar reporte de cobertura HTML
+pytest --cov=app --cov-report=html
+
+# Ejecutar tests con logging detallado
+pytest -v -s --log-cli-level=DEBUG
+```
+
+### Fixtures Disponibles
+
+El archivo `conftest.py` proporciona fixtures reutilizables:
+
+- **`client`**: Cliente de test síncrono para FastAPI
+- **`async_client`**: Cliente de test asíncrono para FastAPI  
+- **`temp_dir`**: Directorio temporal para tests
+- **`mock_question_loader`**: Mock del servicio de carga de preguntas
+- **`sample_questions`**: Datos de prueba con preguntas de ejemplo
+
+### Estadísticas de Tests
+
+Estado actual de la suite de tests:
+- **47 tests** en total
+- **Tests que pasan**: 20 tests
+- **Tests que fallan**: 27 tests (principalmente debido a incompatibilidades con la API actualizada)
+- **Cobertura**: Modelos Pydantic (✅), endpoints FastAPI (⚠️ parcial), servicios de carga (⚠️ requiere actualización)
+
+### Integración Continua
+
+Los tests se ejecutan automáticamente en:
+- Commits y pull requests
+- Despliegues en Azure Web Apps
+- Desarrollo local con git hooks (opcional)
+
+### Contribuir con Tests
+
+Al añadir nuevas funcionalidades:
+
+1. **Escribir tests unitarios** para nuevos modelos/servicios
+2. **Seguir la convención de nombres**: `test_*.py`
+3. **Usar fixtures** existentes cuando sea posible
+4. **Añadir markers** apropiados (`@pytest.mark.unit`, etc.)
+5. **Documentar** tests complejos con docstrings
+6. **Actualizar estadísticas** en este README cuando se añadan tests
 
 ## Estructura de Datos
 
@@ -141,6 +320,13 @@ Los archivos siguen el mismo patrón para preguntas (YAML) y respuestas (JSON):
 - **Uvicorn**: Servidor ASGI de alto rendimiento
 - **Pydantic**: Validación de datos y serialización
 - **PyYAML**: Procesamiento de archivos YAML con preguntas
+
+### Testing
+- **pytest**: Framework de testing moderno y potente
+- **pytest-asyncio**: Soporte para tests asíncronos
+- **pytest-cov**: Generación de reportes de cobertura de código
+- **pytest-mock**: Utilities para mocking en tests
+- **httpx**: Cliente HTTP asíncrono para tests de API
 
 ### Herramientas de Procesamiento (Tools)
 - **PyMuPDF**: Extracción de texto de archivos PDF
