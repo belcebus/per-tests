@@ -27,7 +27,10 @@ class Settings(BaseSettings):
     model_config = ConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
-        case_sensitive=False
+        case_sensitive=False,
+        validate_default=True,  # Valida defaults al crear la instancia
+        # Nota: No usamos extra="forbid" para compatibilidad con Azure/Docker
+        # que inyectan variables de entorno adicionales automáticamente
     )
     
     # ==========================================
