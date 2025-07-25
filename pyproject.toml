@@ -1,0 +1,184 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "per-tests"
+version = "1.0.0"
+description = "Aplicación de Exámenes Aleatorios de PER España"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "PER Tests Team", email = "contact@per-tests.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Education :: Testing",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+]
+keywords = ["per", "exams", "fastapi", "education", "testing"]
+requires-python = ">=3.10"
+
+# Dependencias principales (mínimas para la aplicación)
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.23.0",
+    "pydantic>=2.0.0",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+# Dependencias de desarrollo y testing
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.0.0",
+    "pytest-mock>=3.10.0",
+    "httpx>=0.24.0",
+]
+
+# Dependencias para herramientas de procesamiento
+tools = [
+    "PyMuPDF>=1.23.0",
+    "pdf2image>=3.1.0",
+    "pytesseract>=0.3.10",
+    "Pillow>=10.0.0",
+    "pdfplumber>=0.9.0",
+    "numpy>=1.24.0",
+]
+
+# Dependencias completas (aplicación + desarrollo + herramientas)
+full = [
+    "per-tests[dev,tools]",
+]
+
+# Dependencias para análisis de código
+lint = [
+    "flake8>=6.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.5.0",
+    "radon>=6.0.0",
+    "pylint>=2.17.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/belcebus/per-tests"
+Documentation = "https://github.com/belcebus/per-tests#readme"
+Repository = "https://github.com/belcebus/per-tests.git"
+Issues = "https://github.com/belcebus/per-tests/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*", "config*", "tools*"]
+exclude = ["tests*", "data*", "static*", "extracted-answers*"]
+
+[tool.pytest.ini_options]
+# Configuración de pytest (migrada desde pytest.ini)
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+asyncio_mode = "auto"
+markers = [
+    "unit: tests unitarios",
+    "integration: tests de integración",
+    "api: tests de API",
+    "slow: tests que tardan más tiempo",
+]
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(name)s: %(message)s"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning",
+]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--verbose",
+    "-ra",
+]
+
+[tool.coverage.run]
+source = ["app", "config", "tools"]
+omit = [
+    "*/tests/*",
+    "*/venv/*",
+    "*/__pycache__/*",
+    "*/migrations/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py310", "py311", "py312"]
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+  | data
+  | static
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["app", "config", "tools"]
+known_third_party = ["fastapi", "pydantic", "pytest", "yaml"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = true
+disallow_untyped_decorators = false
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "yaml.*",
+    "pdf2image.*",
+    "pytesseract.*",
+    "fitz.*",
+    "pdfplumber.*",
+]
+ignore_missing_imports = true

@@ -79,44 +79,189 @@ per-tests/
 │   └── README.md            # Documentación general de herramientas
 ├── extracted-answers/       # Respuestas extraídas por OCR (temporal)
 ├── Makefile                 # Comandos automatizados para testing y desarrollo
-├── pytest.ini               # Configuración de pytest
+├── pyproject.toml           # Configuración moderna: proyecto, dependencias, pytest, coverage
 ├── .env.example             # Plantilla de variables de entorno
-├── requirements.txt         # Dependencias completas
-├── requirements-minimal.txt # Dependencias mínimas
+├── requirements.txt         # Dependencias completas (legacy - usar pyproject.toml)
+├── requirements-minimal.txt # Dependencias mínimas (legacy - usar pyproject.toml)
 └── README.md                # Este archivo
 ```
 
 ## Instalación y Ejecución
 
-### Opción 1: Instalación Completa (Recomendada)
-Incluye todas las dependencias para la aplicación web, las herramientas de procesamiento y el framework de testing:
+### 🚀 **Instalación Moderna (Recomendada)**
+
+El proyecto utiliza `pyproject.toml` para gestión moderna de dependencias:
 
 ```bash
-pip install -r requirements.txt
+# Instalación básica (solo aplicación web)
+make install
+# o manualmente:
+pip install -e .
+
+# Instalación para desarrollo (incluye pytest, coverage, etc.)
+make install-dev
+# o manualmente:
+pip install -e ".[dev]"
+
+# Instalación con herramientas de procesamiento (OCR, PDFs)
+make install-tools
+# o manualmente:
+pip install -e ".[tools]"
+
+# Instalación completa (desarrollo + herramientas)
+make install-full
+# o manualmente:
+pip install -e ".[full]"
 ```
 
-### Opción 2: Instalación Mínima (Solo Aplicación Web)
-Solo las dependencias necesarias para ejecutar el servidor web (sin herramientas de procesamiento ni tests):
+### 📦 **Instalación Legacy (Compatibilidad)**
+
+Para sistemas que requieran el método tradicional:
 
 ```bash
+# Opción 1: Instalación completa
+pip install -r requirements.txt
+
+# Opción 2: Instalación mínima
 pip install -r requirements-minimal.txt
 ```
 
-**Nota**: Para ejecutar tests en la instalación mínima, instalar dependencias adicionales:
-```bash
-pip install pytest pytest-asyncio pytest-cov pytest-mock httpx
-```
-
-### Ejecutar la Aplicación
+### ⚡ **Instalación Rápida para Desarrollo**
 
 ```bash
-uvicorn app.main:app --reload
+# Un solo comando para desarrollo completo
+make install-dev && make test-fast
 ```
 
-### Accesos Disponibles
-- API: http://localhost:8000
-- Documentación: http://localhost:8000/docs
-- Cliente Web: http://localhost:8000/static/index.html
+## 🛠️ **Makefile - Herramienta de Desarrollo**
+
+El proyecto incluye un Makefile completo que simplifica todas las tareas de desarrollo, testing y despliegue. Es la herramienta principal recomendada para trabajar con el proyecto.
+
+### **📋 Comandos Disponibles**
+
+#### **Instalación:**
+```bash
+make install         # Dependencias básicas
+make install-dev     # + Dependencias de desarrollo
+make install-tools   # + Herramientas de procesamiento  
+make install-full    # Instalación completa
+```
+
+#### **Testing Rápido (Desarrollo):**
+```bash
+make test-fast       # Tests sin cobertura (7-8 segundos)
+make test-unit       # Solo tests unitarios
+make test-api        # Solo tests de API
+```
+
+#### **Testing con Cobertura:**
+```bash
+make test-cov        # Cobertura en terminal
+make test-cov-html   # + Reporte HTML visual
+make test-cov-xml    # + Reporte XML (CI/CD)
+make test-cov-full   # HTML + XML completo
+```
+
+#### **Ejecución de Aplicación:**
+```bash
+make run            # Desarrollo (config/settings.py)
+make run-debug      # + Debug detallado
+make run-local      # Solo localhost
+make run-azure      # Optimizado para Azure
+make run-prod       # Producción (4 workers)
+make run-custom     # Variables de entorno personalizadas
+```
+
+#### **Mantenimiento:**
+```bash
+make clean          # Limpiar archivos temporales
+make help           # Ver todos los comandos disponibles
+```
+
+### **💡 Ejemplos de Uso**
+
+```bash
+# Flujo típico de desarrollo
+make install-dev                    # Configurar entorno
+make test-fast                      # Verificar que todo funciona
+make run                           # Ejecutar aplicación
+
+# Verificar calidad antes de commit
+make test-cov                      # Ver cobertura actual
+make test-cov-html                 # Generar reporte detallado
+
+# Personalizar configuración
+PER_PORT=9000 make run             # Cambiar puerto
+PER_HOST=localhost make run-local  # Solo localhost
+```
+
+### 🖥️ **Ejecutar la Aplicación**
+
+El proyecto está optimizado para desplegarse como servidor API en Azure. Utiliza configuración centralizada en `config/settings.py` y comandos Makefile para diferentes escenarios.
+
+#### **🚀 Para Desarrollo (Recomendado)**
+
+```bash
+# Usar configuración por defecto (puerto 8002, auto-reload)
+make run
+
+# Con debug detallado
+make run-debug
+
+# Solo accesible desde localhost
+make run-local
+
+# Con configuración personalizada
+PER_PORT=9000 make run
+PER_HOST=localhost make run-custom
+```
+
+#### **☁️ Para Despliegue en Azure**
+
+```bash
+# Optimizado para Azure App Service (1 worker)
+make run-azure
+
+# Producción local (4 workers)
+make run-prod
+```
+
+#### **⚙️ Métodos Alternativos**
+
+```bash
+# Ejecución directa con Python
+python app/main.py
+
+# Control total con uvicorn
+uvicorn app.main:app --reload --port 8000
+```
+
+#### **📋 Configuración Centralizada**
+
+Configuración por defecto en `config/settings.py`:
+- **Puerto**: 8002
+- **Host**: 0.0.0.0 (accesible externamente)
+- **Auto-reload**: Habilitado en desarrollo
+- **Log level**: info
+
+**Variables de entorno disponibles:**
+- `PER_PORT`: Puerto del servidor
+- `PER_HOST`: Host del servidor  
+- `PER_RELOAD`: Auto-reload (true/false)
+- `PER_LOG_LEVEL`: Nivel de logging (debug/info/warning/error)
+
+### 🌐 **Accesos Disponibles**
+
+**Con configuración por defecto (`make run`):**
+- **API Principal**: http://localhost:8002
+- **Documentación Interactiva**: http://localhost:8002/docs
+- **Cliente Web**: http://localhost:8002/static/index.html
+- **Health Check**: http://localhost:8002/health
+
+**Con comandos de producción (`make run-prod`, `make run-azure`):**
+- **API Principal**: http://localhost:8000
+- **Documentación**: http://localhost:8000/docs
+- **Cliente Web**: http://localhost:8000/static/index.html
 
 ## Testing
 
@@ -178,8 +323,8 @@ Verifican el funcionamiento del sistema completo con componentes reales (planifi
 
 ### Configuración de Tests
 
-La configuración se encuentra en:
-- **`pytest.ini`**: Configuración principal de pytest
+La configuración se encuentra centralizada en:
+- **`pyproject.toml`**: Configuración principal de pytest, coverage y herramientas
 - **`conftest.py`**: Fixtures compartidas y setup de tests
 
 #### Markers Disponibles

@@ -121,6 +121,24 @@ async def health_check():
 # PUNTO DE ENTRADA
 # ================================
 
+def main():
+    """
+    Función principal para ejecutar la aplicación.
+    
+    Esta función se puede llamar desde el script instalado 'per-tests'
+    o ejecutando directamente 'python app/main.py'.
+    
+    Configuración basada en config/settings.py
+    """
+    uvicorn.run(
+        "app.main:app",
+        host=settings.host,
+        port=settings.port,
+        reload=settings.reload,
+        log_level=settings.log_level
+    )
+
+
 if __name__ == "__main__":
     """
     Esto se ejecuta solo si corremos el archivo directamente.
@@ -131,10 +149,4 @@ if __name__ == "__main__":
     Para producción se usa:
     uvicorn app.main:app --host 0.0.0.0 --port 8000
     """
-    uvicorn.run(
-        "app.main:app",
-        host=settings.host,
-        port=settings.port,
-        reload=settings.reload,
-        log_level=settings.log_level
-    )
+    main()
