@@ -268,46 +268,39 @@ class TestExamEndpointsAsync:
     """Tests asíncronos para endpoints de exámenes."""
     
     @pytest.mark.asyncio
-    async def test_generate_exam_async(self):
-        """Test asíncrono de generación de examen."""
-        async with AsyncClient(app=app, base_url="http://test") as async_client:
-            with patch('app.routers.exams.question_loader') as mock_loader, \
-                 patch('app.routers.exams.exam_service') as mock_service:
-        
-                # Configurar mocks
-                mock_loader.get_available_communities.return_value = ["Madrid", "Valencia"]
-                
-                # Mock del service que genera el examen  
-                expected_exam = GeneratedExam(
-                    exam_id="async-test",
-                    questions=[],
-                    metadata=ExamGenerationRequest(
-                        num_preguntas=1,
-                        categorias=["nomenclatura_nautica"],
-                        años=[2022],
-                        comunidades=["Madrid"]
-                    )
+    async def test_generate_exam_async(self, async_client):
+        """Test asíncrono de generación de examen compatible con httpx >=0.27.0."""
+        with patch('app.routers.exams.question_loader') as mock_loader, \
+             patch('app.routers.exams.exam_service') as mock_service:
+            # Configurar mocks
+            mock_loader.get_available_communities.return_value = ["Madrid", "Valencia"]
+            # Mock del service que genera el examen  
+            expected_exam = GeneratedExam(
+                exam_id="async-test",
+                questions=[],
+                metadata=ExamGenerationRequest(
+                    num_preguntas=1,
+                    categorias=["nomenclatura_nautica"],
+                    años=[2022],
+                    comunidades=["Madrid"]
                 )
-                mock_service.generate_exam.return_value = expected_exam
-        
-                response = await async_client.post("/api/exams/generate", json={
-                    "num_preguntas": 1,
-                    "comunidades": ["Madrid"]
-                })
-        
-                assert response.status_code == 200
-                data = response.json()
-                assert "exam_id" in data
-
-    @pytest.mark.asyncio
-    async def test_health_check_async(self):
-        """Test asíncrono del endpoint de salud."""
-        async with AsyncClient(app=app, base_url="http://test") as async_client:
-            response = await async_client.get("/health")
-            
+            )
+            mock_service.generate_exam.return_value = expected_exam
+            response = await async_client.post("/api/exams/generate", json={
+                "num_preguntas": 1,
+                "comunidades": ["Madrid"]
+            })
             assert response.status_code == 200
             data = response.json()
-            assert data["status"] == "healthy"
+            assert "exam_id" in data
+
+    @pytest.mark.asyncio
+    async def test_health_check_async(self, async_client):
+        """Test asíncrono del endpoint de salud compatible con httpx >=0.27.0."""
+        response = await async_client.get("/health")
+        assert response.status_code == 200
+        data = response.json()
+        assert data["status"] == "healthy"
 
 
 class TestExamValidation:
