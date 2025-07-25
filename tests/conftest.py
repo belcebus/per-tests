@@ -50,7 +50,40 @@ def temp_dir() -> Generator[Path, None, None]:
 
 @pytest.fixture
 def sample_exam_data() -> Dict[str, Any]:
-    """Datos de ejemplo para un examen."""
+    """
+    Datos de ejemplo para un examen completo.
+    Los valores se calculan dinámicamente para mantener consistencia.
+    """
+    # Definir las categorías y preguntas primero
+    categorias_data = {
+        1: {
+            "nombre": "Nomenclatura náutica",
+            "preguntas": [
+                {
+                    "numero": 1,
+                    "pregunta": "¿Cuál es la parte delantera de una embarcación?",
+                    "opciones": ["Popa", "Proa", "Babor", "Estribor"],
+                    "respuesta": "b"
+                }
+            ]
+        },
+        6: {
+            "nombre": "Reglamento (RIPA)",
+            "preguntas": [
+                {
+                    "numero": 2,
+                    "pregunta": "¿Cuál es la embarcación que debe maniobrar?",
+                    "opciones": ["La mayor", "La menor", "La que viene por estribor", "La que viene por babor"],
+                    "respuesta": "c"
+                }
+            ]
+        }
+    }
+    
+    # Calcular valores dinámicamente basándose en los datos reales
+    total_questions = sum(len(cat["preguntas"]) for cat in categorias_data.values())
+    num_categories = len(categorias_data)
+    
     return {
         "exam_info": {
             "title": "Examen Test Madrid 2025",
@@ -58,35 +91,12 @@ def sample_exam_data() -> Dict[str, Any]:
             "community": "Madrid",
             "year": 2025,
             "call": "abril",
-            "total_questions": 45,
-            "expected_questions": 45,
-            "categories": 11,
-            "questions_with_answers": 45
+            "total_questions": total_questions,  # Calculado dinámicamente: 2
+            "expected_questions": total_questions,  # Calculado dinámicamente: 2
+            "categories": num_categories,  # Calculado dinámicamente: 2
+            "questions_with_answers": total_questions  # Calculado dinámicamente: 2
         },
-        "categorias": {
-            1: {
-                "nombre": "Nomenclatura náutica",
-                "preguntas": [
-                    {
-                        "numero": 1,
-                        "pregunta": "¿Cuál es la parte delantera de una embarcación?",
-                        "opciones": ["Popa", "Proa", "Babor", "Estribor"],
-                        "respuesta": "b"
-                    }
-                ]
-            },
-            6: {
-                "nombre": "Reglamento (RIPA)",
-                "preguntas": [
-                    {
-                        "numero": 2,
-                        "pregunta": "¿Cuál es la embarcación que debe maniobrar?",
-                        "opciones": ["La mayor", "La menor", "La que viene por estribor", "La que viene por babor"],
-                        "respuesta": "c"
-                    }
-                ]
-            }
-        }
+        "categorias": categorias_data
     }
 
 

@@ -181,7 +181,9 @@ class Settings(BaseSettings):
     passing_score_percentage: float = Field(
         default=65.0,
         alias="PER_PASSING_SCORE",
-        description="Porcentaje mínimo para aprobar un examen"
+        description="Porcentaje mínimo para aprobar un examen",
+        ge=0,
+        le=100
     )
     
     # ==========================================
