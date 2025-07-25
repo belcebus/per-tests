@@ -80,9 +80,6 @@ per-tests/
 ├── extracted-answers/       # Respuestas extraídas por OCR (temporal)
 ├── Makefile                 # Comandos automatizados para testing y desarrollo
 ├── pyproject.toml           # Configuración moderna: proyecto, dependencias, pytest, coverage
-├── .env.example             # Plantilla de variables de entorno
-├── requirements.txt         # Dependencias completas (legacy - usar pyproject.toml)
-├── requirements-minimal.txt # Dependencias mínimas (legacy - usar pyproject.toml)
 └── README.md                # Este archivo
 ```
 
@@ -114,16 +111,15 @@ make install-full
 pip install -e ".[full]"
 ```
 
-### 📦 **Instalación Legacy (Compatibilidad)**
+### 📦 **Instalación Legacy (Solo si es necesario)**
 
-Para sistemas que requieran el método tradicional:
+Para sistemas muy antiguos que no soporten `pyproject.toml`:
 
 ```bash
-# Opción 1: Instalación completa
+# Generar requirements.txt desde pyproject.toml si es necesario
+pip install pip-tools
+pip-compile pyproject.toml
 pip install -r requirements.txt
-
-# Opción 2: Instalación mínima
-pip install -r requirements-minimal.txt
 ```
 
 ### ⚡ **Instalación Rápida para Desarrollo**
@@ -688,7 +684,7 @@ El devcontainer instala automáticamente las siguientes dependencias del sistema
 Las dependencias del sistema se instalan automáticamente cuando se crea el devcontainer:
 
 ```bash
-sudo apt update && sudo apt install -y poppler-utils tesseract-ocr tesseract-ocr-spa && pip3 install --user -r requirements.txt
+sudo apt update && sudo apt install -y poppler-utils tesseract-ocr tesseract-ocr-spa && pip3 install --user -e .
 ```
 
 #### ✅ Verificación de Instalación
@@ -827,43 +823,53 @@ python tools/processing/madrid_apply_answers.py --input-file respuestas.json --t
 **Nota**: El script detecta automáticamente el tipo de examen desde el contenido del PDF usando OCR.
 
 ## Despliegue en Azure Web Apps
-La aplicación está configurada para desplegarse directamente en Azure Web Apps usando el archivo `requirements.txt` y la estructura estándar de FastAPI.
+La aplicación está configurada para desplegarse directamente en Azure Web Apps utilizando el moderno `pyproject.toml` y la estructura estándar de FastAPI. Azure puede generar automáticamente un `requirements.txt` durante el proceso de construcción.
 
 ## Configuración
 
-La aplicación utiliza un sistema de configuración centralizada basado en variables de entorno. 
+La aplicación utiliza **configuración centralizada** con valores por defecto sensatos, lo que permite ejecutarla inmediatamente sin configuración adicional.
 
-### Variables de Entorno
+### Variables de Entorno (Opcionales)
 
-1. **Copiar el archivo de ejemplo:**
-   ```bash
-   cp .env.example .env
-   ```
+La aplicación funciona **out-of-the-box** con valores por defecto. Solo necesitas configurar variables de entorno para casos específicos:
 
-2. **Editar las variables según tu entorno:**
-   ```bash
-   # Configuración del servidor
-   PER_HOST=0.0.0.0
-   PER_PORT=8002
-   PER_DEBUG=false
-   
-   # Rutas de archivos
-   PER_DATA_DIR=data
-   PER_EXAMS_DIR=data/exams/questions
-   PER_ANSWERS_DIR=data/exams/answers
-   
-   # Configuración de exámenes
-   PER_DEFAULT_NUM_QUESTIONS=45
-   PER_EXAM_TTL_HOURS=2
-   ```
+#### 🔧 **Variables Principales:**
+```bash
+# Servidor (opcional - valores por defecto funcionan bien)
+PER_HOST=0.0.0.0        # Por defecto: 0.0.0.0
+PER_PORT=8002           # Por defecto: 8002  
+PER_DEBUG=false         # Por defecto: false
 
-### Configuración por Defecto
+# Rutas (opcional - la estructura por defecto está optimizada)
+PER_DATA_DIR=data                    # Por defecto: data
+PER_EXAMS_DIR=data/exams            # Por defecto: data/exams
+```
 
-Si no se define ninguna variable de entorno, la aplicación utilizará los valores por defecto:
-- **Puerto**: 8002
-- **Host**: 0.0.0.0 (todas las interfaces)
-- **Directorio de datos**: `data/`
-- **Directorio de preguntas**: `data/exams/questions/`
-- **Directorio de respuestas**: `data/exams/answers/`
-- **Preguntas por examen**: 45
-- **Tiempo de vida de exámenes**: 2 horas
+#### ⚙️ **Configuración por Entorno:**
+
+**Desarrollo local:**
+```bash
+export PER_DEBUG=true
+export PER_LOG_LEVEL=debug
+make run
+```
+
+**Producción (Azure Web Apps):**
+```bash
+# Azure configura automáticamente:
+# - PER_HOST=0.0.0.0
+# - PER_PORT=8000
+# - Variables específicas del entorno
+```
+
+#### 📋 **Lista Completa de Variables:**
+
+Todas las variables están documentadas en `config/settings.py` con tipos, valores por defecto y descripciones. Principales grupos:
+
+- **Servidor:** `PER_HOST`, `PER_PORT`, `PER_DEBUG`, `PER_RELOAD`, `PER_LOG_LEVEL`
+- **API:** `PER_API_TITLE`, `PER_API_DESCRIPTION`, `PER_API_VERSION`
+- **Rutas:** `PER_DATA_DIR`, `PER_EXAMS_DIR`, `PER_RAW_QUESTIONS_DIR`, etc.
+- **Exámenes:** `PER_DEFAULT_NUM_QUESTIONS`, `PER_EXAM_TTL_HOURS`
+- **Procesamiento:** `PER_OCR_CONFIDENCE_THRESHOLD`, `PER_PDF_DPI`
+
+> **💡 Tip:** La aplicación está diseñada para funcionar sin configuración. Solo modifica variables si necesitas un comportamiento específico.
