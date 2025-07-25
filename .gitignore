@@ -191,7 +191,7 @@ page_*_text.txt
 processing_*.log
 
 # Archivos de desarrollo temporal
-test_*.py
+# test_*.py
 debug_*.py
 temp_*.py
 
