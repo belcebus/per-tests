@@ -65,25 +65,39 @@ async def lifespan(app: FastAPI):
 # CONFIGURACIÓN DE LA APLICACIÓN
 # ================================
 
-app = FastAPI(
-    title=settings.api_title,
-    description=settings.api_description,
-    version=settings.api_version,
-    docs_url="/docs",  # Documentación automática en /docs
-    redoc_url="/redoc",  # Documentación alternativa en /redoc
-    lifespan=lifespan  # Usar el nuevo manejador de eventos
-)
 
-# ================================
-# CONFIGURACIÓN DE RUTAS
-# ================================
+def create_app() -> FastAPI:
+    """
+    Crea una nueva instancia de la aplicación FastAPI con todas las rutas y configuración.
+    Útil para tests que requieren aislamiento.
+    """
+    app = FastAPI(
+        title=settings.api_title,
+        description=settings.api_description,
+        version=settings.api_version,
+        docs_url="/docs",
+        redoc_url="/redoc",
+        lifespan=lifespan
+    )
+    app.include_router(exams.router)
+    app.mount("/static", StaticFiles(directory=str(settings.get_static_path())), name="static")
+    
+    @app.get("/")
+    async def root():
+        return RedirectResponse(url="/static/index.html")
 
-# Incluir las rutas de exámenes
-app.include_router(exams.router)
+    @app.get("/health")
+    async def health_check():
+        return {
+            "status": "healthy",
+            "message": "PER Tests API está funcionando correctamente",
+            "preguntas_cargadas": len(question_loader.all_questions)
+        }
 
-# Servir archivos estáticos (HTML, CSS, JS)
-# Esto permite que el frontend esté en la carpeta 'static'
-app.mount("/static", StaticFiles(directory=str(settings.get_static_path())), name="static")
+    return app
+
+# Instancia global para producción/servidor
+app = create_app()
 
 # ================================
 # RUTAS BÁSICAS

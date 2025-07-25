@@ -168,8 +168,8 @@ def isolated_app():
     Aplicación aislada para tests que necesitan estado limpio.
     """
     # Crear una nueva instancia de la app para este test
-    from app.main import app as base_app
-    return base_app
+    from app.main import create_app
+    return create_app()
 
 
 # Fixtures para archivos de test
