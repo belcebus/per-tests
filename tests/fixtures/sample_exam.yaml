@@ -1,0 +1,33 @@
+exam_info:
+  title: "Examen Test Madrid 2025"
+  subtitle: "Test 01"
+  community: "Madrid"
+  year: 2025
+  call: "abril"
+  total_questions: 2
+  expected_questions: 2
+  categories: 2
+
+categories:
+  1:
+    name: "Nomenclatura náutica"
+    questions:
+      - id: 1
+        question: "¿Cuál es la parte delantera de una embarcación?"
+        options: 
+          a: "Popa"
+          b: "Proa" 
+          c: "Babor"
+          d: "Estribor"
+        correct_answer: "b"
+  6:
+    name: "Reglamento (RIPA)"
+    questions:
+      - id: 2
+        question: "¿Cuál es la embarcación que debe maniobrar?"
+        options:
+          a: "La mayor"
+          b: "La menor"
+          c: "La que viene por estribor"
+          d: "La que viene por babor"
+        correct_answer: "c"

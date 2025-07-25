@@ -169,56 +169,30 @@ def isolated_app():
 @pytest.fixture
 def sample_yaml_exam(temp_dir: Path) -> Path:
     """Crear un archivo YAML de examen de muestra."""
-    exam_content = """
-exam_info:
-  title: "Examen Test Madrid 2025"
-  subtitle: "Test 01"
-  community: "Madrid"
-  year: 2025
-  call: "abril"
-  total_questions: 2
-  expected_questions: 2
-  categories: 2
-
-categories:
-  1:
-    name: "Nomenclatura náutica"
-    questions:
-      - id: 1
-        question: "¿Cuál es la parte delantera de una embarcación?"
-        options: 
-          a: "Popa"
-          b: "Proa" 
-          c: "Babor"
-          d: "Estribor"
-        correct_answer: "b"
-  6:
-    name: "Reglamento (RIPA)"
-    questions:
-      - id: 2
-        question: "¿Cuál es la embarcación que debe maniobrar?"
-        options:
-          a: "La mayor"
-          b: "La menor"
-          c: "La que viene por estribor"
-          d: "La que viene por babor"
-        correct_answer: "c"
-"""
+    # Leer el contenido del archivo de fixtures
+    fixtures_dir = Path(__file__).parent / "fixtures"
+    source_file = fixtures_dir / "sample_exam.yaml"
     
+    if not source_file.exists():
+        pytest.fail(f"Archivo de fixture no encontrado: {source_file}")
+    
+    # Copiar el archivo a la carpeta temporal de test
     exam_file = temp_dir / "test_exam.yaml"
-    exam_file.write_text(exam_content.strip())
+    exam_file.write_text(source_file.read_text(encoding='utf-8'))
     return exam_file
 
 
 @pytest.fixture
 def sample_json_answers(temp_dir: Path) -> Path:
     """Crear un archivo JSON de respuestas de muestra."""
-    answers_content = {
-        "1": "b",
-        "2": "c"
-    }
+    # Leer el contenido del archivo de fixtures
+    fixtures_dir = Path(__file__).parent / "fixtures"
+    source_file = fixtures_dir / "sample_answers.json"
     
-    import json
+    if not source_file.exists():
+        pytest.fail(f"Archivo de fixture no encontrado: {source_file}")
+    
+    # Copiar el archivo a la carpeta temporal de test
     answers_file = temp_dir / "test_answers.json"
-    answers_file.write_text(json.dumps(answers_content, indent=2))
+    answers_file.write_text(source_file.read_text(encoding='utf-8'))
     return answers_file

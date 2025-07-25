@@ -28,6 +28,9 @@ per-tests/
 ├── tests/                   # Suite de pruebas automatizadas
 │   ├── conftest.py          # Configuración y fixtures compartidas
 │   ├── fixtures/            # Datos de prueba reutilizables
+│   │   ├── README.md        # Documentación de fixtures
+│   │   ├── sample_exam.yaml # Examen de muestra para tests
+│   │   └── sample_answers.json # Respuestas de muestra para tests
 │   ├── unit/                # Tests unitarios
 │   │   ├── test_models.py       # Tests de modelos Pydantic
 │   │   ├── test_api_endpoints.py # Tests de endpoints FastAPI
@@ -75,11 +78,12 @@ per-tests/
 │   │   └── README.md        # Documentación de utilidades
 │   └── README.md            # Documentación general de herramientas
 ├── extracted-answers/       # Respuestas extraídas por OCR (temporal)
-├── pytest.ini              # Configuración de pytest
+├── Makefile                 # Comandos automatizados para testing y desarrollo
+├── pytest.ini               # Configuración de pytest
 ├── .env.example             # Plantilla de variables de entorno
 ├── requirements.txt         # Dependencias completas
 ├── requirements-minimal.txt # Dependencias mínimas
-└── README.md               # Este archivo
+└── README.md                # Este archivo
 ```
 
 ## Instalación y Ejecución
@@ -186,24 +190,40 @@ La configuración se encuentra en:
 
 ### Ejecución de Tests
 
-#### Ejecutar Todos los Tests
+#### 🚀 **Tests Rápidos (Recomendado para Desarrollo)**
+
 ```bash
+# Ejecutar todos los tests sin cobertura (más rápido)
+make test-fast
+# o simplemente
 pytest
+
+# Tests por categoría
+make test-unit      # Solo tests unitarios
+make test-api       # Solo tests de API
+pytest -m unit      # Alternativa directa
 ```
 
-#### Ejecutar Tests por Categoría
+#### 📊 **Tests con Cobertura (Para Verificación)**
+
 ```bash
-# Solo tests unitarios
-pytest -m unit
+# Cobertura básica en terminal
+make test-cov
+# o
+pytest --cov=app --cov-report=term-missing
 
-# Solo tests de API
-pytest -m api
+# Cobertura con reporte HTML visual
+make test-cov-html
+# Abre: coverage_html/index.html
 
-# Excluir tests lentos
-pytest -m "not slow"
+# Cobertura con reporte XML (para CI/CD)
+make test-cov-xml
+
+# Cobertura completa (HTML + XML)
+make test-cov-full
 ```
 
-#### Ejecutar Tests Específicos
+#### 🎯 **Tests Específicos**
 ```bash
 # Un archivo específico
 pytest tests/unit/test_models.py
@@ -213,55 +233,59 @@ pytest tests/unit/test_models.py::TestQuestionMetadata
 
 # Un test específico
 pytest tests/unit/test_models.py::TestQuestionMetadata::test_valid_metadata
+
+# Excluir tests lentos
+pytest -m "not slow"
 ```
 
-#### Ejecución con Información Detallada
-```bash
-# Mostrar información detallada
-pytest -v
-
-# Mostrar output de print()
-pytest -s
-
-# Mostrar resumen de cobertura
-pytest --cov=app
-
-# Combinar opciones
-pytest -v -s --cov=app tests/unit/
-```
-
-#### Ejecución en Modo de Desarrollo
+#### ⚡ **Opciones de Desarrollo**
 ```bash
 # Parar en el primer fallo
 pytest -x
 
-# Ejecutar solo tests que fallaron en la última ejecución
+# Ejecutar solo tests que fallaron
 pytest --lf
 
-# Ejecutar tests en paralelo (requiere pytest-xdist)
+# Tests en paralelo (requiere pytest-xdist)
 pytest -n auto
+
+# Mostrar output detallado
+pytest -v -s
 ```
 
-#### Ejemplos Prácticos
+#### 🔧 **Comandos Avanzados**
 
 ```bash
-# Verificar que los modelos funcionan correctamente (debería pasar)
+# Tests con umbral de cobertura estricto
+make test-cov-strict
+
+# Limpiar archivos de cobertura
+make clean
+
+# Ver todos los comandos disponibles
+make help
+```
+
+#### 💡 **Ejemplos de Uso Según Contexto**
+
+```bash
+# 🏃‍♂️ Durante desarrollo activo (rápido)
+make test-fast
+
+# 🔍 Verificar un módulo específico
 pytest tests/unit/test_models.py -v
 
-# Ejecutar solo tests rápidos (excluyendo lentos)
-pytest -m "not slow" -v
+# 📊 Verificar cobertura antes de commit
+make test-cov
 
-# Generar reporte de cobertura HTML
-pytest --cov=app --cov-report=html
+# 🎯 Verificar que todos los objetivos se cumplen
+make test-cov-strict
 
-# Ejecutar tests con logging detallado
-pytest -v -s --log-cli-level=DEBUG
+# 🤖 Para CI/CD automático
+make test-ci
 
-# Establecer umbral mínimo de cobertura
-pytest --cov=app --cov-fail-under=80
-
-# Mostrar líneas específicas no cubiertas
-pytest --cov=app --cov-report=term-missing
+# 🧹 Limpiar después de desarrollo
+make clean
 ```
 
 ### Medición de Completitud de Tests
