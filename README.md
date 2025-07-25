@@ -241,7 +241,130 @@ pytest --cov=app --cov-report=html
 
 # Ejecutar tests con logging detallado
 pytest -v -s --log-cli-level=DEBUG
+
+# Establecer umbral mínimo de cobertura
+pytest --cov=app --cov-fail-under=80
+
+# Mostrar líneas específicas no cubiertas
+pytest --cov=app --cov-report=term-missing
 ```
+
+### Medición de Completitud de Tests
+
+#### 📊 **Cobertura de Código (Code Coverage)**
+
+La cobertura de código es la métrica principal para medir la completitud de tests:
+
+```bash
+# Cobertura básica
+pytest --cov=app
+
+# Cobertura con detalles de líneas no cubiertas
+pytest --cov=app --cov-report=term-missing
+
+# Reporte HTML interactivo
+pytest --cov=app --cov-report=html
+# Ver en: htmlcov/index.html
+
+# Establecer umbral mínimo (falla si no se alcanza)
+pytest --cov=app --cov-fail-under=80
+```
+
+#### 🎯 **Objetivos de Cobertura Recomendados**
+
+- **Modelos Pydantic**: 100% ✅ (Ya conseguido)
+- **Servicios críticos**: 90%+ ⚠️ (Actualmente: 26% exam_service, 61% question_loader)
+- **Routers/Endpoints**: 80%+ ✅ (Actualmente: 76%)
+- **Configuración**: 70%+ ✅ 
+- **Total del proyecto**: 80%+ ⚠️ (Actualmente: 59%)
+
+#### 🔍 **Estado Actual de Cobertura**
+
+```
+📊 COBERTURA TOTAL: 59% (Mejorable)
+
+Por módulos:
+✅ app/models/schemas.py         100%  (Excelente)
+🔶 app/routers/exams.py          76%   (Bueno)
+🔶 app/services/question_loader.py  61%   (Aceptable)
+🔶 app/main.py                   59%   (Mejorable)
+❌ app/services/exam_service.py  26%   (Crítico - Requiere atención)
+
+🚨 Áreas críticas que requieren más tests:
+- Lógica de generación de exámenes (exam_service.py)
+- Corrección automática de respuestas
+- Manejo de errores en servicios
+- Endpoints de API complejos
+```
+
+#### 🧪 **Métricas Adicionales de Calidad**
+
+Además de la cobertura, considera estas métricas:
+
+```bash
+# Complejidad ciclomática (requiere radon)
+pip install radon
+radon cc app/ -a
+
+# Análisis de código estático (requiere flake8)
+pip install flake8
+flake8 app/
+
+# Detección de código duplicado (requiere pylint)
+pip install pylint
+pylint app/
+
+# Tests de mutación (requiere mutmut)
+pip install mutmut
+mutmut run
+```
+
+#### 📋 **Checklist de Completitud**
+
+**Tests Unitarios:**
+- [x] Modelos Pydantic (100%)
+- [x] Validaciones básicas
+- [ ] Servicios críticos (exam_service: 26% ⚠️)
+- [ ] Lógica de negocio compleja
+- [ ] Manejo de errores
+
+**Tests de API:**
+- [x] Endpoints básicos (health, info)
+- [ ] Generación de exámenes
+- [ ] Corrección de exámenes
+- [ ] Validación de entrada
+- [ ] Manejo de errores HTTP
+
+**Tests de Integración:**
+- [ ] Flujo completo de examen
+- [ ] Interacción entre servicios
+- [ ] Persistencia de datos
+
+#### 🎯 **Plan de Mejora Sugerido**
+
+1. **Prioridad Alta** (Semana 1):
+   ```bash
+   # Objetivo: Alcanzar 80% en exam_service.py
+   - Tests para generate_exam()
+   - Tests para correct_exam() 
+   - Tests de manejo de errores
+   ```
+
+2. **Prioridad Media** (Semana 2):
+   ```bash
+   # Objetivo: Alcanzar 85% en question_loader.py
+   - Tests para load_all_questions()
+   - Tests para get_stats()
+   - Tests de validación de archivos
+   ```
+
+3. **Prioridad Baja** (Semana 3):
+   ```bash
+   # Objetivo: Tests de integración
+   - Flujo completo de generación-corrección
+   - Tests de rendimiento
+   - Tests end-to-end
+   ```
 
 ### Fixtures Disponibles
 

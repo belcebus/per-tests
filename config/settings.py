@@ -174,6 +174,13 @@ class Settings(BaseSettings):
         description="Tiempo máximo (minutos) para el simulacro de examen"
     )
     
+    # Configuración de corrección de exámenes
+    passing_score_percentage: float = Field(
+        default=65.0,
+        alias="PER_PASSING_SCORE",
+        description="Porcentaje mínimo para aprobar un examen"
+    )
+    
     # ==========================================
     # CONFIGURACIÓN DE PROCESAMIENTO
     # ==========================================

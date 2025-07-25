@@ -197,7 +197,12 @@ class ExamService:
         # 3. Calcular resultados finales
         total_correct = sum(1 for qr in question_results if qr.es_correcta)
         total_questions = len(question_results)
-        percentage = (total_correct / total_questions) * 100
+        
+        # Manejar caso de examen sin preguntas (evitar división por cero)
+        if total_questions == 0:
+            percentage = 0.0
+        else:
+            percentage = (total_correct / total_questions) * 100
         
         # 4. Crear resultados por categoría
         category_results = {}
@@ -210,7 +215,7 @@ class ExamService:
             )
         
         # 5. Determinar si aprobó (65% mínimo)
-        passed = percentage >= 65.0
+        passed = percentage >= settings.passing_score_percentage
         
         # 6. Limpiar el examen de memoria (ya se corrigió)
         del self.active_exams[submission.exam_id]

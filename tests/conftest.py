@@ -38,7 +38,7 @@ def client() -> TestClient:
 
 
 @pytest.fixture
-async def async_client() -> AsyncClient:
+async def async_client():
     """Cliente de test asíncrono para FastAPI."""
     async with AsyncClient(app=app, base_url="http://test") as ac:
         yield ac
@@ -180,21 +180,29 @@ exam_info:
   expected_questions: 2
   categories: 2
 
-categorias:
+categories:
   1:
-    nombre: "Nomenclatura náutica"
-    preguntas:
-      - numero: 1
-        pregunta: "¿Cuál es la parte delantera de una embarcación?"
-        opciones: ["Popa", "Proa", "Babor", "Estribor"]
-        respuesta: "b"
+    name: "Nomenclatura náutica"
+    questions:
+      - id: 1
+        question: "¿Cuál es la parte delantera de una embarcación?"
+        options: 
+          a: "Popa"
+          b: "Proa" 
+          c: "Babor"
+          d: "Estribor"
+        correct_answer: "b"
   6:
-    nombre: "Reglamento (RIPA)"
-    preguntas:
-      - numero: 2
-        pregunta: "¿Cuál es la embarcación que debe maniobrar?"
-        opciones: ["La mayor", "La menor", "La que viene por estribor", "La que viene por babor"]
-        respuesta: "c"
+    name: "Reglamento (RIPA)"
+    questions:
+      - id: 2
+        question: "¿Cuál es la embarcación que debe maniobrar?"
+        options:
+          a: "La mayor"
+          b: "La menor"
+          c: "La que viene por estribor"
+          d: "La que viene por babor"
+        correct_answer: "c"
 """
     
     exam_file = temp_dir / "test_exam.yaml"
