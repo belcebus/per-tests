@@ -1,8 +1,4 @@
-"""
-Configuración de fixtures y setup para tests
 
-Este archivo contiene fixtures compartidas entre todos los tests.
-"""
 
 import pytest
 import asyncio
@@ -12,11 +8,19 @@ from pathlib import Path
 from typing import Generator, Dict, Any
 from unittest.mock import Mock, patch
 
-from fastapi.testclient import TestClient
+from starlette.testclient import TestClient  # Importación directa para evitar conflictos de versiones
 from httpx import AsyncClient
 
 from app.main import app
 from config.settings import settings
+
+@pytest.fixture
+def client() -> TestClient:
+    """
+    Cliente de test síncrono para FastAPI.
+    Usar starlette.testclient.TestClient directamente para evitar conflictos con httpx >=0.27.0.
+    """
+    return TestClient(app)
 
 
 @pytest.fixture(scope="session")
@@ -28,17 +32,17 @@ def event_loop():
     loop.close()
 
 
-@pytest.fixture
-def client() -> TestClient:
-    """Cliente de test síncrono para FastAPI."""
-    return TestClient(app)
 
 
 @pytest.fixture
 async def async_client():
-    """Cliente de test asíncrono para FastAPI."""
-    async with AsyncClient(app=app, base_url="http://test") as ac:
-        yield ac
+    """Cliente de test asíncrono para FastAPI compatible con httpx >=0.28.0 y starlette >=0.36.3."""
+    from asgi_lifespan import LifespanManager
+    from httpx import AsyncClient, ASGITransport
+    async with LifespanManager(app):
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://testserver") as ac:
+            yield ac
 
 
 @pytest.fixture
