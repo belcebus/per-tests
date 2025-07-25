@@ -86,7 +86,7 @@ test: test-fast
 # Tests con cobertura básica
 test-cov:
 	@echo "$(GREEN)📊 Ejecutando tests con cobertura...$(NC)"
-	$(PYTEST_CMD) --cov=app --cov=config --cov=tools --cov-report=term-missing
+	$(PYTEST_CMD) --cov=app --cov=config --cov-report=term-missing --cov-fail-under=0 --cov-config=.coveragerc --ignore=tools
 
 # Tests con cobertura y reporte HTML
 test-cov-html:

@@ -11,9 +11,9 @@ Este módulo proporciona configuración centralizada para:
 import os
 from pathlib import Path
 from typing import Optional
-from pydantic import Field
+from pydantic import Field, ConfigDict
 from pydantic_settings import BaseSettings
-from pydantic import ConfigDict
+
 
 
 class Settings(BaseSettings):
