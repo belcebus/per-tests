@@ -181,7 +181,7 @@ def sample_yaml_exam(temp_dir: Path) -> Path:
     source_file = fixtures_dir / "sample_exam.yaml"
     
     if not source_file.exists():
-        pytest.fail(f"Archivo de fixture no encontrado: {source_file}")
+        raise FileNotFoundError(f"Archivo de fixture no encontrado: {source_file}")
     
     # Copiar el archivo a la carpeta temporal de test
     exam_file = temp_dir / "test_exam.yaml"
@@ -197,7 +197,7 @@ def sample_json_answers(temp_dir: Path) -> Path:
     source_file = fixtures_dir / "sample_answers.json"
     
     if not source_file.exists():
-        pytest.fail(f"Archivo de fixture no encontrado: {source_file}")
+        raise FileNotFoundError(f"Archivo de fixture no encontrado: {source_file}")
     
     # Copiar el archivo a la carpeta temporal de test
     answers_file = temp_dir / "test_answers.json"
