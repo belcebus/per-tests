@@ -197,8 +197,22 @@ class ExamService:
         # 3. Calcular resultados finales
         total_correct = sum(1 for qr in question_results if qr.es_correcta)
         total_questions = len(question_results)
+
+        # Early return si no hay preguntas (evitar división por cero)
+        if total_questions == 0:
+            # Limpiar el examen de memoria (ya se "corrigió")
+            del self.active_exams[submission.exam_id]
+            print(f"✅ Examen corregido: 0/0 (0.0%)")
+            return ExamResult(
+                puntuacion_total="0/0",
+                porcentaje=0.0,
+                aprobado=False,
+                desglose_por_categoria={},
+                preguntas_detalle=[]
+            )
+
         percentage = (total_correct / total_questions) * 100
-        
+
         # 4. Crear resultados por categoría
         category_results = {}
         for category, stats in category_stats.items():
@@ -208,15 +222,15 @@ class ExamService:
                 total=stats["total"],
                 porcentaje=round(cat_percentage, 2)
             )
-        
+
         # 5. Determinar si aprobó (65% mínimo)
-        passed = percentage >= 65.0
-        
+        passed = percentage >= settings.passing_score_percentage
+
         # 6. Limpiar el examen de memoria (ya se corrigió)
         del self.active_exams[submission.exam_id]
-        
+
         print(f"✅ Examen corregido: {total_correct}/{total_questions} ({percentage:.1f}%)")
-        
+
         return ExamResult(
             puntuacion_total=f"{total_correct}/{total_questions}",
             porcentaje=round(percentage, 2),

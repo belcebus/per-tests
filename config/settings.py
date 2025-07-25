@@ -11,8 +11,9 @@ Este módulo proporciona configuración centralizada para:
 import os
 from pathlib import Path
 from typing import Optional
-from pydantic import Field
+from pydantic import Field, ConfigDict
 from pydantic_settings import BaseSettings
+
 
 
 class Settings(BaseSettings):
@@ -22,6 +23,15 @@ class Settings(BaseSettings):
     Utiliza variables de entorno con prefijo PER_
     o valores por defecto si no están definidas.
     """
+    
+    model_config = ConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        case_sensitive=False,
+        validate_default=True,  # Valida defaults al crear la instancia
+        # Nota: No usamos extra="forbid" para compatibilidad con Azure/Docker
+        # que inyectan variables de entorno adicionales automáticamente
+    )
     
     # ==========================================
     # CONFIGURACIÓN DE RUTAS Y DIRECTORIOS
@@ -36,43 +46,43 @@ class Settings(BaseSettings):
     # Directorios de datos
     data_dir: str = Field(
         default="data",
-        env="PER_DATA_DIR",
+        alias="PER_DATA_DIR",
         description="Directorio base de datos"
     )
     
     exams_dir: str = Field(
         default="data/exams",
-        env="PER_EXAMS_DIR", 
+        alias="PER_EXAMS_DIR", 
         description="Directorio de archivos YAML de exámenes"
     )
     
     raw_questions_dir: str = Field(
         default="data/raw/questions",
-        env="PER_RAW_QUESTIONS_DIR",
+        alias="PER_RAW_QUESTIONS_DIR",
         description="Directorio de PDFs de preguntas originales"
     )
     
     raw_answers_dir: str = Field(
         default="data/raw/answers", 
-        env="PER_RAW_ANSWERS_DIR",
+        alias="PER_RAW_ANSWERS_DIR",
         description="Directorio de PDFs de respuestas originales"
     )
     
     backups_dir: str = Field(
         default="data/backups",
-        env="PER_BACKUPS_DIR",
+        alias="PER_BACKUPS_DIR",
         description="Directorio de backups de archivos YAML"
     )
     
     extracted_dir: str = Field(
         default="extracted_answers",
-        env="PER_EXTRACTED_DIR",
+        alias="PER_EXTRACTED_DIR",
         description="Directorio de archivos extraídos temporalmente"
     )
     
     static_dir: str = Field(
         default="static",
-        env="PER_STATIC_DIR",
+        alias="PER_STATIC_DIR",
         description="Directorio de archivos estáticos del frontend"
     )
     
@@ -83,25 +93,25 @@ class Settings(BaseSettings):
     # Configuración de uvicorn
     host: str = Field(
         default="0.0.0.0",
-        env="PER_HOST",
+        alias="PER_HOST",
         description="Host del servidor"
     )
     
     port: int = Field(
         default=8002,
-        env="PER_PORT",
+        alias="PER_PORT",
         description="Puerto del servidor"
     )
     
     reload: bool = Field(
         default=True,
-        env="PER_RELOAD",
+        alias="PER_RELOAD",
         description="Recarga automática en desarrollo"
     )
     
     log_level: str = Field(
         default="info",
-        env="PER_LOG_LEVEL",
+        alias="PER_LOG_LEVEL",
         description="Nivel de logging"
     )
     
@@ -112,19 +122,19 @@ class Settings(BaseSettings):
     # Información de la API
     api_title: str = Field(
         default="PER Tests API",
-        env="PER_API_TITLE",
+        alias="PER_API_TITLE",
         description="Título de la API"
     )
     
     api_description: str = Field(
         default="API para generar y corregir exámenes aleatorios de PER España",
-        env="PER_API_DESCRIPTION",
+        alias="PER_API_DESCRIPTION",
         description="Descripción de la API"
     )
     
     api_version: str = Field(
         default="1.0.0",
-        env="PER_API_VERSION",
+        alias="PER_API_VERSION",
         description="Versión de la API"
     )
     
@@ -135,13 +145,13 @@ class Settings(BaseSettings):
     # Configuración de exámenes por defecto
     default_num_questions: int = Field(
         default=45,
-        env="PER_DEFAULT_NUM_QUESTIONS",
+        alias="PER_DEFAULT_NUM_QUESTIONS",
         description="Número de preguntas por defecto en exámenes"
     )
     
     exam_ttl_hours: int = Field(
         default=2,
-        env="PER_EXAM_TTL_HOURS",
+        alias="PER_EXAM_TTL_HOURS",
         description="Tiempo de vida de exámenes en memoria (horas)"
     )
     
@@ -167,6 +177,15 @@ class Settings(BaseSettings):
         description="Tiempo máximo (minutos) para el simulacro de examen"
     )
     
+    # Configuración de corrección de exámenes
+    passing_score_percentage: float = Field(
+        default=65.0,
+        alias="PER_PASSING_SCORE",
+        description="Porcentaje mínimo para aprobar un examen",
+        ge=0,
+        le=100
+    )
+    
     # ==========================================
     # CONFIGURACIÓN DE PROCESAMIENTO
     # ==========================================
@@ -174,14 +193,14 @@ class Settings(BaseSettings):
     # Configuración de OCR
     ocr_confidence_threshold: float = Field(
         default=0.7,
-        env="PER_OCR_CONFIDENCE_THRESHOLD",
+        alias="PER_OCR_CONFIDENCE_THRESHOLD",
         description="Umbral de confianza para OCR"
     )
     
     # Configuración de procesamiento de PDFs
     pdf_dpi: int = Field(
         default=300,
-        env="PER_PDF_DPI",
+        alias="PER_PDF_DPI",
         description="DPI para conversión de PDFs a imágenes"
     )
     
@@ -191,7 +210,7 @@ class Settings(BaseSettings):
     
     debug: bool = Field(
         default=False,
-        env="PER_DEBUG",
+        alias="PER_DEBUG",
         description="Modo debug"
     )
     
@@ -236,12 +255,6 @@ class Settings(BaseSettings):
     def get_static_path(self) -> Path:
         """Obtiene la ruta absoluta del directorio de archivos estáticos."""
         return self.get_absolute_path(self.static_dir)
-    
-    class Config:
-        """Configuración de Pydantic."""
-        env_file = ".env"
-        env_file_encoding = "utf-8"
-        case_sensitive = False
 
 
 # Instancia global de configuración

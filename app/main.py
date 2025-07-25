@@ -9,6 +9,7 @@ Aquí se configura:
 4. La carga inicial de preguntas
 """
 
+from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
@@ -24,40 +25,17 @@ from app.services.question_loader import question_loader
 from config.settings import settings
 
 # ================================
-# CONFIGURACIÓN DE LA APLICACIÓN
+# CONFIGURACIÓN DE LIFESPAN
 # ================================
 
-app = FastAPI(
-    title=settings.api_title,
-    description=settings.api_description,
-    version=settings.api_version,
-    docs_url="/docs",  # Documentación automática en /docs
-    redoc_url="/redoc"  # Documentación alternativa en /redoc
-)
-
-# ================================
-# CONFIGURACIÓN DE RUTAS
-# ================================
-
-# Incluir las rutas de exámenes
-app.include_router(exams.router)
-
-# Servir archivos estáticos (HTML, CSS, JS)
-# Esto permite que el frontend esté en la carpeta 'static'
-app.mount("/static", StaticFiles(directory=str(settings.get_static_path())), name="static")
-
-# ================================
-# EVENTOS DE LA APLICACIÓN
-# ================================
-
-@app.on_event("startup")
-async def startup_event():
+@asynccontextmanager
+async def lifespan(app: FastAPI):
     """
-    Se ejecuta cuando la aplicación arranca.
+    Manejador de eventos de ciclo de vida de la aplicación.
     
-    Aquí cargamos todas las preguntas desde los archivos YAML
-    para tenerlas listas en memoria.
+    Se ejecuta al inicio y al final de la aplicación.
     """
+    # STARTUP - Se ejecuta cuando la aplicación arranca
     print("🚀 Iniciando aplicación PER Tests...")
     print(f"📂 Directorio de trabajo: {os.getcwd()}")
     print(f"📁 Buscando archivos en: {question_loader.data_directory}")
@@ -77,17 +55,49 @@ async def startup_event():
     print(f"📂 Categorías cargadas: {list(question_loader.questions_cache.keys())}")
     
     print("✅ Aplicación lista!")
-
-
-@app.on_event("shutdown")
-async def shutdown_event():
-    """
-    Se ejecuta cuando la aplicación se cierra.
     
-    Aquí podríamos hacer limpieza si fuera necesario.
-    """
+    yield  # Aquí la aplicación está funcionando
+    
+    # SHUTDOWN - Se ejecuta cuando la aplicación se cierra
     print("👋 Cerrando aplicación...")
 
+# ================================
+# CONFIGURACIÓN DE LA APLICACIÓN
+# ================================
+
+
+def create_app() -> FastAPI:
+    """
+    Crea una nueva instancia de la aplicación FastAPI con todas las rutas y configuración.
+    Útil para tests que requieren aislamiento.
+    """
+    app = FastAPI(
+        title=settings.api_title,
+        description=settings.api_description,
+        version=settings.api_version,
+        docs_url="/docs",
+        redoc_url="/redoc",
+        lifespan=lifespan
+    )
+    app.include_router(exams.router)
+    app.mount("/static", StaticFiles(directory=str(settings.get_static_path())), name="static")
+    
+    @app.get("/")
+    async def root():
+        return RedirectResponse(url="/static/index.html")
+
+    @app.get("/health")
+    async def health_check():
+        return {
+            "status": "healthy",
+            "message": "PER Tests API está funcionando correctamente",
+            "preguntas_cargadas": len(question_loader.all_questions)
+        }
+
+    return app
+
+# Instancia global para producción/servidor
+app = create_app()
 
 # ================================
 # RUTAS BÁSICAS
@@ -125,6 +135,24 @@ async def health_check():
 # PUNTO DE ENTRADA
 # ================================
 
+def main():
+    """
+    Función principal para ejecutar la aplicación.
+    
+    Esta función se puede llamar desde el script instalado 'per-tests'
+    o ejecutando directamente 'python app/main.py'.
+    
+    Configuración basada en config/settings.py
+    """
+    uvicorn.run(
+        "app.main:app",
+        host=settings.host,
+        port=settings.port,
+        reload=settings.reload,
+        log_level=settings.log_level
+    )
+
+
 if __name__ == "__main__":
     """
     Esto se ejecuta solo si corremos el archivo directamente.
@@ -135,10 +163,4 @@ if __name__ == "__main__":
     Para producción se usa:
     uvicorn app.main:app --host 0.0.0.0 --port 8000
     """
-    uvicorn.run(
-        "app.main:app",
-        host=settings.host,
-        port=settings.port,
-        reload=settings.reload,
-        log_level=settings.log_level
-    )
+    main()
