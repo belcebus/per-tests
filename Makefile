@@ -1,5 +1,5 @@
 # Análisis de calidad de código (linters y analizadores)
-quality: install-lint
+quality: venv
 	@echo "$(GREEN)🔎 Análisis de calidad de código (flake8, pylint, black, isort, radon, mypy)...$(NC)"
 	venv/bin/flake8 app config tools
 	venv/bin/pylint app config tools
