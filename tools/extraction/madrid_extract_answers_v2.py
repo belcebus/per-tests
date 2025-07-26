@@ -7,13 +7,11 @@ Salida: un JSON por modelo en extracted-answers/ con la estructura de ejemplo.
 import re
 import json
 from pathlib import Path
-from typing import Dict, List, Tuple
-from datetime import datetime
+from typing import Dict
 from pdf2image import convert_from_path
 from PIL import Image, ImageEnhance
 import pytesseract
 import argparse
-import os
 
 # --- Configuración de tipos de examen ---
 EXAM_TYPES = {
@@ -22,6 +20,7 @@ EXAM_TYPES = {
     "PATRÓN DE EMBARCACIONES DE RECREO": {"key": "per", "num_questions": 45, "range": range(1, 46)},
     "(CON PNB LIBERADO)": {"key": "per-pnb", "num_questions": 18, "range": range(28, 46)},
 }
+
 
 # --- Utilidades de imagen ---
 def enhance_image_for_ocr(image: Image.Image) -> Image.Image:
@@ -39,6 +38,7 @@ def enhance_image_for_ocr(image: Image.Image) -> Image.Image:
     except Exception:
         pass
     return image
+
 
 # --- OCR de PDF ---
 def extract_text_from_pdf(pdf_path: str):
@@ -58,7 +58,7 @@ def extract_text_from_pdf(pdf_path: str):
             f.write(text_full)
         # --- Segunda pasada: solo zona izquierda para respuestas (Tesseract) ---
         w, h = img_proc.size
-        left_crop = img_proc.crop((0, 0, int(w * 0.22), h))
+        left_crop = img_proc.crop((0, 0, int(w * 0.22), h))  # noqa: E226
         left_crop_path = output_dir / f"pagina_{i+1}_izquierda.png"
         left_crop.save(left_crop_path)
         config = '--psm 6 -c tessedit_char_whitelist=0123456789ABCDabcd'
@@ -69,7 +69,6 @@ def extract_text_from_pdf(pdf_path: str):
             f.write(text_left)
     return texts_full, texts_left
 
-# --- Parsing de páginas OCR ---
 
 # --- Nuevo parseo dual: usa OCR completo para cabecera/modelo y OCR recortado para respuestas ---
 def parse_exam_pages_dual(texts_full: list, texts_left: list, pdf_name: str) -> list:
@@ -77,11 +76,11 @@ def parse_exam_pages_dual(texts_full: list, texts_left: list, pdf_name: str) -> 
     for page_num, (page_text, page_left) in enumerate(zip(texts_full, texts_left), 1):
         # Buscar tipo de examen con distinción PER vs PER-PNB
         exam_type, exam_key = None, None
-        lines = [l.strip().upper() for l in page_text.splitlines()]
+        lines = [line.strip().upper() for line in page_text.splitlines()]
         for idx, line in enumerate(lines):
             # PER y PER-PNB
             if re.search(r"PATR[ÓO]N\s+DE\s+EMBARCACIONES?\s+DE\s+RECREO", line):
-                next_line = lines[idx+1] if idx+1 < len(lines) else ""
+                next_line = lines[idx + 1] if idx + 1 < len(lines) else ""
                 if re.search(r"PNB\s*LIBERADO", next_line):
                     exam_type = "(CON PNB LIBERADO)"
                 else:
@@ -113,66 +112,66 @@ def parse_exam_pages_dual(texts_full: list, texts_left: list, pdf_name: str) -> 
         expected_num = int(valid_range[0])
         final_answers = {}
         used_numbers = set()
-        for line in page_left.splitlines():
+        for answer_line in page_left.splitlines():
             # Limpiar línea y buscar patrón flexible
-            line = line.strip()
+            answer_line = answer_line.strip()
             # Buscar ANULADA explícito
-            if re.search(r"anul[ao]da", line, re.IGNORECASE):
+            if re.search(r"anul[ao]da", answer_line, re.IGNORECASE):
                 final_answers[str(expected_num)] = "anulada"
                 used_numbers.add(expected_num)
                 expected_num += 1
                 continue
             # Buscar patrón: número (1-3 cifras) + letra (a-d)
-            m = re.match(r"^(\d{1,3})\s*([ABCDabcd])$", line)
+            m = re.match(r"^(\d{1,3})\s*([ABCDabcd])$", answer_line)
             if m:
                 num, ans = m.group(1), m.group(2).lower()
                 num_int = int(num)
                 # Comprobar si el número es el esperado
                 if num_int != expected_num:
-                    print(f"[WARN] Número no consecutivo detectado en línea '{line}'. Esperado: {expected_num}, Detectado: {num_int}. Se usará el esperado.")
+                    print(f"[WARN] Número no consecutivo detectado en línea '{answer_line}'. Esperado: {expected_num}, Detectado: {num_int}. Se usará el esperado.")
                     num_int = expected_num
                 if ans not in valid_answers:
-                    print(f"[WARN] Respuesta no válida '{ans}' en línea '{line}'. Se marcará como 'anulada'.")
+                    print(f"[WARN] Respuesta no válida '{ans}' en línea '{answer_line}'. Se marcará como 'anulada'.")
                     ans = "anulada"
                 final_answers[str(num_int)] = ans
                 used_numbers.add(num_int)
                 expected_num += 1
                 continue
             # Buscar patrón: número pegado a letra, pero con errores de OCR (ej: 146B, 353A, 410A, 465B)
-            m2 = re.match(r"^(\d{2,})([ABCDabcd])$", line)
+            m2 = re.match(r"^(\d{2,})([ABCDabcd])$", answer_line)
             if m2:
                 num, ans = m2.group(1), m2.group(2).lower()
                 # Intentar extraer el número correcto (últimos dos dígitos suelen ser el número de pregunta)
                 num_int = int(num[-2:])
                 if num_int != expected_num:
-                    print(f"[WARN] Número OCR dudoso '{num}' en línea '{line}'. Esperado: {expected_num}, Usando: {expected_num}.")
+                    print(f"[WARN] Número OCR dudoso '{num}' en línea '{answer_line}'. Esperado: {expected_num}, Usando: {expected_num}.")
                     num_int = expected_num
                 if ans not in valid_answers:
-                    print(f"[WARN] Respuesta no válida '{ans}' en línea '{line}'. Se marcará como 'anulada'.")
+                    print(f"[WARN] Respuesta no válida '{ans}' en línea '{answer_line}'. Se marcará como 'anulada'.")
                     ans = "anulada"
                 final_answers[str(num_int)] = ans
                 used_numbers.add(num_int)
                 expected_num += 1
                 continue
             # Buscar patrón: solo letra (puede ser respuesta suelta)
-            m3 = re.match(r"^([ABCDabcd])$", line)
+            m3 = re.match(r"^([ABCDabcd])$", answer_line)
             if m3:
                 ans = m3.group(1).lower()
                 if ans not in valid_answers:
-                    print(f"[WARN] Respuesta no válida '{ans}' en línea '{line}'. Se marcará como 'anulada'.")
+                    print(f"[WARN] Respuesta no válida '{ans}' en línea '{answer_line}'. Se marcará como 'anulada'.")
                     ans = "anulada"
                 final_answers[str(expected_num)] = ans
                 used_numbers.add(expected_num)
                 expected_num += 1
                 continue
             # Buscar patrón: número solo (puede ser error, ignorar)
-            m4 = re.match(r"^(\d{1,3})$", line)
+            m4 = re.match(r"^(\d{1,3})$", answer_line)
             if m4:
-                print(f"[WARN] Línea con solo número '{line}', ignorada.")
+                print(f"[WARN] Línea con solo número '{answer_line}', ignorada.")
                 continue
             # Si no coincide nada, ignorar o marcar como anulada
-            if line:
-                print(f"[WARN] Línea no reconocida: '{line}'. Se marcará como 'anulada'.")
+            if answer_line:
+                print(f"[WARN] Línea no reconocida: '{answer_line}'. Se marcará como 'anulada'.")
                 final_answers[str(expected_num)] = "anulada"
                 used_numbers.add(expected_num)
                 expected_num += 1
@@ -194,6 +193,7 @@ def parse_exam_pages_dual(texts_full: list, texts_left: list, pdf_name: str) -> 
         })
     return exams
 
+
 def extract_pdf_info_from_name(pdf_name: str) -> Dict:
     # Ejemplo: madrid-2024-junio.pdf
     stem = Path(pdf_name).stem
@@ -203,6 +203,7 @@ def extract_pdf_info_from_name(pdf_name: str) -> Dict:
         "año": parts[1] if len(parts) > 1 else "",
         "convocatoria": parts[2] if len(parts) > 2 else ""
     }
+
 
 def save_exam_json(exam: Dict, output_dir: Path):
     # Nombre: per-test01-madrid-2024-junio.json
@@ -214,6 +215,7 @@ def save_exam_json(exam: Dict, output_dir: Path):
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(exam, f, indent=2, ensure_ascii=False)
     print(f"[OK] Guardado: {output_path}")
+
 
 def main():
     parser = argparse.ArgumentParser(description="🚢 Extrae respuestas oficiales de un PDF usando OCR")
@@ -235,7 +237,7 @@ def main():
     output_dir.mkdir(exist_ok=True)
 
     if args.verbose:
-        print(f"🚀 Iniciando extracción de respuestas...")
+        print("🚀 Iniciando extracción de respuestas...")
         print(f"📄 PDF de entrada: {pdf_path}")
         print(f"📁 Directorio de salida: {output_dir}")
 
@@ -249,6 +251,7 @@ def main():
 
     if args.verbose:
         print(f"🎉 Extracción completada. {len(exams)} exámenes procesados.")
+
 
 if __name__ == "__main__":
     main()

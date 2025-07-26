@@ -8,12 +8,11 @@ Este módulo proporciona configuración centralizada para:
 - Configuración de herramientas de procesamiento
 """
 
+
 import os
 from pathlib import Path
-from typing import Optional
 from pydantic import Field, ConfigDict
 from pydantic_settings import BaseSettings
-
 
 
 class Settings(BaseSettings):

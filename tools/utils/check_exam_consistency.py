@@ -5,16 +5,13 @@ en todos los exámenes YAML contra la distribución oficial definida en settings
 """
 
 import yaml
-import os
 import sys
 from pathlib import Path
-from collections import defaultdict
+from config.settings import settings
 
 # Agregar el directorio raíz del proyecto al path de Python
 project_root = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(project_root))
-
-from config.settings import settings
 
 
 def load_exam_yaml(filepath):
@@ -154,7 +151,7 @@ def main():
             inconsistent_exams.append((exam_name, comparison_lines, total_questions, expected_questions))
 
     # Resumen final
-    print(f"\n📊 RESUMEN FINAL:")
+    print("\n📊 RESUMEN FINAL:")
     print("=" * 80)
     print(f"✅ Exámenes consistentes: {len(consistent_exams)}")
     print(f"❌ Exámenes inconsistentes: {len(inconsistent_exams)}")

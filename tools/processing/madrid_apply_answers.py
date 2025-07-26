@@ -9,22 +9,22 @@ de preguntas correspondientes, creando backups automáticos y validando la consi
 import json
 import yaml
 import sys
-import os
 import argparse
 from pathlib import Path
 from typing import Dict, Union, List
+from config.settings import settings
 
 # Añadir el directorio del proyecto al path para importaciones
 project_root = Path(__file__).parent.parent.parent
 sys.path.append(str(project_root))
 
-from config.settings import settings
 
 def convert_array_to_comma_format(answer: Union[str, List[str]]) -> str:
     """Convierte arrays a formato de comas para YAML"""
     if isinstance(answer, list):
         return ",".join(answer)
     return answer
+
 
 def load_extracted_answers(answers_file: str = None) -> Dict[str, Union[str, List[str]]]:
     """Carga las respuestas extraídas del archivo JSON"""
@@ -53,6 +53,7 @@ def load_extracted_answers(answers_file: str = None) -> Dict[str, Union[str, Lis
         data = json.load(f)
 
     return data['answers']
+
 
 def apply_answers_to_yaml(yaml_file: Path, extracted_answers: Dict[str, Union[str, List[str]]]) -> int:
     """Aplica las respuestas extraídas al archivo YAML"""
@@ -110,12 +111,13 @@ def apply_answers_to_yaml(yaml_file: Path, extracted_answers: Dict[str, Union[st
     with open(yaml_file, 'w', encoding='utf-8') as f:
         yaml.dump(data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
 
-    print(f"\\n📊 RESUMEN:")
+    print("\\n📊 RESUMEN:")
     print(f"   📄 Preguntas encontradas en YAML: {questions_found}")
     print(f"   🔄 Respuestas actualizadas: {updates_count}")
     print(f"   📁 Archivo actualizado: {yaml_file}")
 
     return updates_count
+
 
 def validate_answers(extracted_answers: Dict[str, Union[str, List[str]]]):
     """Valida las respuestas extraídas"""
@@ -162,6 +164,7 @@ def validate_answers(extracted_answers: Dict[str, Union[str, List[str]]]):
             print(f"      {answer}: {count} (múltiples respuestas)")
         else:
             print(f"      {answer}: {count}")
+
 
 def main():
     """Función principal"""
@@ -234,16 +237,16 @@ EJEMPLOS DE USO:
                 yaml_file = settings.get_exams_path() / yaml_name
 
                 if not yaml_file.exists():
-                    print(f"❌ No se pudo auto-detectar archivo YAML correspondiente.")
+                    print("❌ No se pudo auto-detectar archivo YAML correspondiente.")
                     print(f"   Archivo esperado: {yaml_file}")
-                    print(f"   Por favor, especifica --target-file manualmente.")
+                    print("   Por favor, especifica --target-file manualmente.")
                     return
                 else:
                     if args.verbose:
                         print(f"🔍 Auto-detectado archivo YAML: {yaml_file}")
             else:
-                print(f"❌ Debes especificar --target-file o --input-file para auto-detección.")
-                print(f"   Uso: python madrid_apply_answers.py --input-file respuestas.json --target-file examen.yaml")
+                print("❌ Debes especificar --target-file o --input-file para auto-detección.")
+                print("   Uso: python madrid_apply_answers.py --input-file respuestas.json --target-file examen.yaml")
                 return
 
         if not yaml_file.exists():
@@ -252,7 +255,7 @@ EJEMPLOS DE USO:
 
         updates = apply_answers_to_yaml(yaml_file, extracted_answers)
 
-        print(f"\n🎉 Proceso completado exitosamente!")
+        print("\n🎉 Proceso completado exitosamente!")
         if args.verbose:
             print(f"   📈 Total actualizaciones: {updates}")
 
@@ -266,6 +269,7 @@ EJEMPLOS DE USO:
         print(f"❌ Error: {e}")
         import traceback
         traceback.print_exc()
+
 
 if __name__ == "__main__":
     main()

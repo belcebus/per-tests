@@ -202,7 +202,7 @@ class ExamService:
         if total_questions == 0:
             # Limpiar el examen de memoria (ya se "corrigió")
             del self.active_exams[submission.exam_id]
-            print(f"✅ Examen corregido: 0/0 (0.0%)")
+            print("✅ Examen corregido: 0/0 (0.0%)")
             return ExamResult(
                 puntuacion_total="0/0",
                 porcentaje=0.0,
@@ -289,7 +289,7 @@ class ExamService:
         - Luego las de la categoría 2, etc.
         - Dentro de cada categoría, las preguntas están en orden aleatorio
         """
-        print(f"🎯 Generando simulacro de examen: distribución fija por categorías")
+        print("🎯 Generando simulacro de examen: distribución fija por categorías")
         distribution = settings.simulacro_distribution
 
         # Filtrar preguntas por años y comunidades (si se especifican)

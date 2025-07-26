@@ -101,6 +101,7 @@ class QuestionLoader:
         print(f"📂 Categorías encontradas: {list(self.questions_cache.keys())}")
 
         return self.all_questions
+
     def _load_questions_from_file(self, file_path: Path) -> List[Question]:
         """
         Carga preguntas de un archivo YAML específico.
@@ -122,7 +123,7 @@ class QuestionLoader:
             # Verificar si es el nuevo formato (con categories) o el formato anterior
             if 'categories' in yaml_data:
                 # Nuevo formato: las preguntas están organizadas por categorías
-                print(f"   📁 Procesando formato con categorías...")
+                print("   📁 Procesando formato con categorías...")
 
                 for category_id, category_data in yaml_data['categories'].items():
                     category_name = category_data.get('name', f'Categoría {category_id}')
