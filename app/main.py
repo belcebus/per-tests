@@ -9,55 +9,60 @@ Aquí se configura:
 4. La carga inicial de preguntas
 """
 
+
+import sys
+import os
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
 import uvicorn
-import sys
-import os
+from app.routers import exams
+from app.services.question_loader import question_loader
+from config.settings import settings
+
 
 # Añadir el directorio padre al path para importaciones
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from app.routers import exams
-from app.services.question_loader import question_loader
-from config.settings import settings
 
 # ================================
 # CONFIGURACIÓN DE LIFESPAN
 # ================================
 
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """
     Manejador de eventos de ciclo de vida de la aplicación.
-    
+
     Se ejecuta al inicio y al final de la aplicación.
     """
     # STARTUP - Se ejecuta cuando la aplicación arranca
     print("🚀 Iniciando aplicación PER Tests...")
     print(f"📂 Directorio de trabajo: {os.getcwd()}")
     print(f"📁 Buscando archivos en: {question_loader.data_directory}")
-    
+
     # Verificar si el directorio existe
     if question_loader.data_directory.exists():
-        print(f"✅ Directorio encontrado")
+        print("✅ Directorio encontrado")
         yaml_files = list(question_loader.data_directory.glob("**/*.yaml"))
-        print(f"📄 Archivos YAML encontrados: {[f.name for f in yaml_files]}")
+        archivos = [f.name for f in yaml_files]
+        print(f"📄 Archivos YAML encontrados: {archivos}")
     else:
         print(f"❌ Directorio no encontrado: {question_loader.data_directory}")
-    
+
     # Cargar todas las preguntas
     question_loader.load_all_questions()
-    
+
     print(f"📊 Total preguntas cargadas: {len(question_loader.all_questions)}")
-    print(f"📂 Categorías cargadas: {list(question_loader.questions_cache.keys())}")
-    
+    categorias = list(question_loader.questions_cache.keys())
+    print(f"📂 Categorías cargadas: {categorias}")
+
     print("✅ Aplicación lista!")
-    
+
     yield  # Aquí la aplicación está funcionando
-    
+
     # SHUTDOWN - Se ejecuta cuando la aplicación se cierra
     print("👋 Cerrando aplicación...")
 
@@ -68,7 +73,8 @@ async def lifespan(app: FastAPI):
 
 def create_app() -> FastAPI:
     """
-    Crea una nueva instancia de la aplicación FastAPI con todas las rutas y configuración.
+    Crea una nueva instancia de la aplicación FastAPI con todas las rutas y
+    configuración.
     Útil para tests que requieren aislamiento.
     """
     app = FastAPI(
@@ -77,11 +83,15 @@ def create_app() -> FastAPI:
         version=settings.api_version,
         docs_url="/docs",
         redoc_url="/redoc",
-        lifespan=lifespan
+        lifespan=lifespan,
     )
     app.include_router(exams.router)
-    app.mount("/static", StaticFiles(directory=str(settings.get_static_path())), name="static")
-    
+    app.mount(
+        "/static",
+        StaticFiles(directory=str(settings.get_static_path())),
+        name="static",
+    )
+
     @app.get("/")
     async def root():
         return RedirectResponse(url="/static/index.html")
@@ -91,57 +101,28 @@ def create_app() -> FastAPI:
         return {
             "status": "healthy",
             "message": "PER Tests API está funcionando correctamente",
-            "preguntas_cargadas": len(question_loader.all_questions)
+            "preguntas_cargadas": len(question_loader.all_questions),
         }
 
     return app
 
+
 # Instancia global para producción/servidor
 app = create_app()
-
-# ================================
-# RUTAS BÁSICAS
-# ================================
-
-@app.get("/")
-async def root():
-    """
-    Ruta raíz - redirige al cliente web.
-    
-    Cuando alguien visita http://localhost:8000/
-    lo redirigimos automáticamente al frontend.
-    """
-    return RedirectResponse(url="/static/index.html")
-
-
-@app.get("/health")
-async def health_check():
-    """
-    Endpoint de salud - para verificar que la API funciona.
-    
-    Útil para:
-    - Monitoreo en producción
-    - Verificar que Azure Web App está funcionando
-    - Tests automáticos
-    """
-    return {
-        "status": "healthy",
-        "message": "PER Tests API está funcionando correctamente",
-        "preguntas_cargadas": len(question_loader.all_questions)
-    }
 
 
 # ================================
 # PUNTO DE ENTRADA
 # ================================
 
+
 def main():
     """
     Función principal para ejecutar la aplicación.
-    
+
     Esta función se puede llamar desde el script instalado 'per-tests'
     o ejecutando directamente 'python app/main.py'.
-    
+
     Configuración basada en config/settings.py
     """
     uvicorn.run(
@@ -149,17 +130,17 @@ def main():
         host=settings.host,
         port=settings.port,
         reload=settings.reload,
-        log_level=settings.log_level
+        log_level=settings.log_level,
     )
 
 
 if __name__ == "__main__":
     """
     Esto se ejecuta solo si corremos el archivo directamente.
-    
+
     Para desarrollo local:
     python app/main.py
-    
+
     Para producción se usa:
     uvicorn app.main:app --host 0.0.0.0 --port 8000
     """
