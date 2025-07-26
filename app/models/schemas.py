@@ -21,7 +21,7 @@ from datetime import datetime
 class QuestionMetadata(BaseModel):
     """
     Información adicional sobre cada pregunta.
-    
+
     Esta clase define qué información extra tendrá cada pregunta:
     - title: Título del examen (ej: "EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO")
     - subtitle: Subtítulo del examen (ej: "Código de Test 01")
@@ -30,11 +30,11 @@ class QuestionMetadata(BaseModel):
     - year: Año en que se realizó el examen (ej: 2025)
     - call: Convocatoria del examen (ej: "Ordinaria", "Extraordinaria")
     - test_code: Código del test (ej: "Test01", "Test03")
-    
+
     Campos opcionales para compatibilidad con formato anterior:
     - categoria: A qué tema pertenece (mantenido por compatibilidad)
     - convocatoria: En qué convocatoria apareció (mantenido por compatibilidad)
-    - año: En qué año apareció (mantenido por compatibilidad)  
+    - año: En qué año apareció (mantenido por compatibilidad)
     - comunidad_autonoma: De qué comunidad autónoma era el examen (mantenido por compatibilidad)
     - numero_pregunta: Qué número tenía en el examen original (mantenido por compatibilidad)
     """
@@ -46,7 +46,7 @@ class QuestionMetadata(BaseModel):
     year: int
     call: str
     test_code: str
-    
+
     # Campos de compatibilidad (opcionales)
     categoria: Optional[str] = None
     categoria_nombre: Optional[str] = None  # <-- Añadir explícitamente el campo
@@ -59,7 +59,7 @@ class QuestionMetadata(BaseModel):
 class Question(BaseModel):
     """
     Modelo que representa una pregunta completa.
-    
+
     Cada pregunta tiene:
     - id: Identificador único (ej: "per_nom_001_2023_madrid_p27")
     - enunciado: El texto de la pregunta
@@ -77,7 +77,7 @@ class Question(BaseModel):
 class QuestionForClient(BaseModel):
     """
     Versión de la pregunta que se envía al cliente.
-    
+
     Es igual que Question pero SIN la respuesta correcta.
     Esto garantiza que el cliente no puede ver la respuesta correcta.
     """
@@ -94,7 +94,7 @@ class QuestionForClient(BaseModel):
 class FileMetadata(BaseModel):
     """
     Metadatos que van al principio de cada archivo YAML.
-    
+
     Nos dice:
     - exam_type: Tipo de examen ("per", "patron_yate", etc.)
     - category: Categoría de las preguntas en este archivo
@@ -108,7 +108,7 @@ class FileMetadata(BaseModel):
 class QuestionFile(BaseModel):
     """
     Estructura completa de un archivo YAML de preguntas.
-    
+
     Cada archivo YAML tendrá:
     - metadata: Información sobre el archivo
     - preguntas: Lista de todas las preguntas
@@ -124,7 +124,7 @@ class QuestionFile(BaseModel):
 class ExamGenerationRequest(BaseModel):
     """
     Petición para generar un nuevo examen.
-    
+
     El usuario puede especificar:
     - num_preguntas: Cuántas preguntas quiere (por defecto 45)
     - categorias: Lista de categorías específicas (None = todas)
@@ -142,7 +142,7 @@ class ExamGenerationRequest(BaseModel):
 class GeneratedExam(BaseModel):
     """
     Examen generado que se envía al cliente.
-    
+
     Contiene:
     - exam_id: Identificador único del examen
     - questions: Lista de preguntas (sin respuestas correctas)
@@ -160,7 +160,7 @@ class GeneratedExam(BaseModel):
 class ExamSubmission(BaseModel):
     """
     Respuestas del examen enviadas por el cliente.
-    
+
     Contiene:
     - exam_id: ID del examen que se está corrigiendo
     - respuestas: Diccionario con las respuestas {"pregunta_id": "letra"}
@@ -172,7 +172,7 @@ class ExamSubmission(BaseModel):
 class CategoryResult(BaseModel):
     """
     Resultado por categoría.
-    
+
     Para cada categoría muestra:
     - correctas: Número de respuestas correctas
     - total: Número total de preguntas de esa categoría
@@ -186,7 +186,7 @@ class CategoryResult(BaseModel):
 class QuestionResult(BaseModel):
     """
     Resultado detallado de una pregunta específica.
-    
+
     Muestra:
     - question_id: ID de la pregunta
     - respuesta_usuario: Lo que respondió el usuario (letra)
@@ -218,7 +218,7 @@ class QuestionResult(BaseModel):
 class ExamResult(BaseModel):
     """
     Resultado completo del examen corregido.
-    
+
     Incluye:
     - puntuacion_total: "correctas/total" (ej: "38/45")
     - porcentaje: Porcentaje de acierto
@@ -240,7 +240,7 @@ class ExamResult(BaseModel):
 class CachedExam(BaseModel):
     """
     Examen almacenado en memoria del servidor.
-    
+
     Guarda:
     - questions: Las preguntas completas (CON respuestas correctas)
     - metadata: Información sobre el examen

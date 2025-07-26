@@ -11,7 +11,7 @@ from fastapi import APIRouter, HTTPException
 from typing import Dict, Any
 
 from app.models.schemas import (
-    ExamGenerationRequest, GeneratedExam, 
+    ExamGenerationRequest, GeneratedExam,
     ExamSubmission, ExamResult
 )
 from app.services.exam_service import exam_service
@@ -25,7 +25,7 @@ router = APIRouter(prefix="/api/exams", tags=["exams"])
 def _validate_communities(comunidades: list) -> None:
     """
     Valida que las comunidades especificadas existan en los datos disponibles.
-    
+
     Args:
         comunidades: Lista de comunidades a validar
         
@@ -33,7 +33,7 @@ def _validate_communities(comunidades: list) -> None:
         ValueError: Si alguna comunidad no existe
     """
     available_communities = question_loader.get_available_communities()
-    
+
     for comunidad in comunidades:
         if comunidad not in available_communities:
             available_str = ", ".join(sorted(available_communities))
@@ -48,14 +48,14 @@ async def generate_exam(request: ExamGenerationRequest) -> GeneratedExam:
     """
     Genera un nuevo examen aleatorio o simulacro.
     Si request.tipo_examen == 'simulacro', usa la distribución fija.
-    
+
     **Cómo funciona:**
     1. El cliente envía criterios (número de preguntas, categorías, etc.)
     2. El servidor busca preguntas que cumplen los criterios
     3. Selecciona preguntas aleatorias
     4. Guarda el examen completo en memoria
     5. Envía al cliente solo las preguntas (sin respuestas correctas)
-    
+
     **Ejemplo de uso:**
     ```
     POST /api/exams/generate
@@ -65,7 +65,7 @@ async def generate_exam(request: ExamGenerationRequest) -> GeneratedExam:
         "años": [2022, 2023]
     }
     ```
-    
+
     Args:
         request: Criterios para generar el examen
         
@@ -97,7 +97,7 @@ async def generate_exam(request: ExamGenerationRequest) -> GeneratedExam:
 async def correct_exam(submission: ExamSubmission) -> ExamResult:
     """
     Corrige un examen enviado por el cliente.
-    
+
     **Cómo funciona:**
     1. El cliente envía el ID del examen y sus respuestas
     2. El servidor busca el examen original en memoria
@@ -105,7 +105,7 @@ async def correct_exam(submission: ExamSubmission) -> ExamResult:
     4. Calcula estadísticas generales y por categoría
     5. Elimina el examen de memoria (ya no es necesario)
     6. Devuelve resultados detallados
-    
+
     **Ejemplo de uso:**
     ```
     POST /api/exams/correct
@@ -117,7 +117,7 @@ async def correct_exam(submission: ExamSubmission) -> ExamResult:
         }
     }
     ```
-    
+
     Args:
         submission: ID del examen y respuestas del usuario
         
@@ -142,13 +142,13 @@ async def correct_exam(submission: ExamSubmission) -> ExamResult:
 async def get_exam_info() -> Dict[str, Any]:
     """
     Obtiene información sobre las preguntas disponibles.
-    
+
     **Útil para:**
     - Mostrar al usuario qué categorías hay disponibles
     - Mostrar años disponibles
     - Mostrar estadísticas generales
     - Verificar el estado del servicio
-    
+
     **Ejemplo de respuesta:**
     ```json
     {
@@ -168,7 +168,7 @@ async def get_exam_info() -> Dict[str, Any]:
         }
     }
     ```
-    
+
     Returns:
         Información completa sobre preguntas y estado del servicio
     """

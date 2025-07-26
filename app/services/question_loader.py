@@ -85,14 +85,14 @@ class QuestionLoader:
             try:
                 questions = self._load_questions_from_file(yaml_file)
                 self.all_questions.extend(questions)
-                
+
                 # Organizar por categoría
                 for question in questions:
                     category = question.metadata.categoria
                     if category not in self.questions_cache:
                         self.questions_cache[category] = []
                     self.questions_cache[category].append(question)
-                    
+
             except Exception as e:
                 print(f"❌ Error cargando {yaml_file}: {e}")
                 continue
@@ -127,10 +127,10 @@ class QuestionLoader:
                 for category_id, category_data in yaml_data['categories'].items():
                     category_name = category_data.get('name', f'Categoría {category_id}')
                     print(f"   📂 Procesando categoría {category_id}: {category_name}")
-                    
+
                     category_questions = category_data.get('questions', [])
                     print(f"   📝 Preguntas en esta categoría: {len(category_questions)}")
-                    
+
                     for question_data in category_questions:
                         # Las opciones ya vienen como diccionario en el formato actual
                         opciones = question_data.get('options', {})
@@ -164,22 +164,19 @@ class QuestionLoader:
                         questions.append(question)
                 
                 print(f"   ✅ Total preguntas procesadas del archivo: {len(questions)}")
-            
+
             elif 'preguntas' in yaml_data:
                 # Formato anterior: usar Pydantic para validar la estructura
                 question_file = QuestionFile(**yaml_data)
                 questions = question_file.preguntas
-            
             else:
                 print(f"⚠️  Formato no reconocido en {file_path}")
                 return []
-            
             return questions
-            
         except Exception as e:
             print(f"❌ Error cargando {file_path}: {e}")
             return []
-    
+
     def get_questions_by_criteria(
         self,
         categorias: List[str] = None,
@@ -189,42 +186,42 @@ class QuestionLoader:
     ) -> List[Question]:
         """
         Filtra preguntas según criterios específicos.
-        
+
         Args:
             categorias: Lista de categorías deseadas (None = todas)
             años: Lista de años deseados (None = todos)
             comunidades: Lista de comunidades deseadas (None = todas)
             tipo_examen: Tipo de examen
-            
+
         Returns:
             Lista de preguntas que cumplen los criterios
         """
         filtered_questions = self.all_questions.copy()
-        
+
         # Filtrar por categorías
         if categorias:
             filtered_questions = [
                 q for q in filtered_questions 
                 if q.metadata.categoria in categorias
             ]
-        
+
         # Filtrar por años
         if años:
             filtered_questions = [
                 q for q in filtered_questions 
                 if q.metadata.año in años
             ]
-        
+
         # Filtrar por comunidades
         if comunidades:
             filtered_questions = [
                 q for q in filtered_questions 
                 if q.metadata.comunidad_autonoma in comunidades
             ]
-        
+
         print(f"🔍 Filtrado: {len(filtered_questions)} preguntas encontradas")
         return filtered_questions
-    
+
     def get_category_id_name_map(self) -> Dict[str, str]:
         """
         Devuelve un diccionario {id: nombre} de todas las categorías cargadas.
