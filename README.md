@@ -17,6 +17,10 @@ Proyecto de aplicación para generar exámenes aleatorios de PER España. La apl
 ### Estructura del Proyecto
 ```
 per-tests/
+├── .github/
+│   └── workflows/
+│       ├── ci.yml           # Workflow de CI (tests)
+│       └── security.yml     # Workflow de análisis de seguridad (Semgrep)
 ├── app/                     # Código de la aplicación
 │   ├── main.py              # Punto de entrada de FastAPI
 │   ├── models/              # Modelos Pydantic
@@ -87,7 +91,7 @@ per-tests/
 
 ### 🚀 **Instalación Moderna (Recomendada)**
 
-El proyecto utiliza `pyproject.toml` para gestión moderna de dependencias:
+El proyecto utiliza `pyproject.toml` para gestión moderna de dependencias. Puedes instalar solo lo que necesitas:
 
 ```bash
 # Instalación básica (solo aplicación web)
@@ -95,7 +99,7 @@ make install
 # o manualmente:
 pip install -e .
 
-# Instalación para desarrollo (incluye pytest, coverage, etc.)
+# Instalación para desarrollo (tests, cobertura, etc.)
 make install-dev
 # o manualmente:
 pip install -e ".[dev]"
@@ -105,10 +109,20 @@ make install-tools
 # o manualmente:
 pip install -e ".[tools]"
 
+# Instalación para análisis de seguridad (Semgrep)
+make install-security
+# o manualmente:
+pip install -e ".[security]"
+
 # Instalación completa (desarrollo + herramientas)
 make install-full
 # o manualmente:
 pip install -e ".[full]"
+
+# Instalación para linting y análisis estático
+make install-lint
+# o manualmente:
+pip install -e ".[lint]"
 ```
 
 ### 📦 **Instalación Legacy (Solo si es necesario)**
@@ -143,6 +157,7 @@ make install-tools   # + Herramientas de procesamiento
 make install-full    # Instalación completa
 ```
 
+
 #### **Testing Rápido (Desarrollo):**
 ```bash
 make test-fast       # Tests sin cobertura (7-8 segundos)
@@ -156,6 +171,12 @@ make test-cov        # Cobertura en terminal
 make test-cov-html   # + Reporte HTML visual
 make test-cov-xml    # + Reporte XML (CI/CD)
 make test-cov-full   # HTML + XML completo
+```
+
+#### **Análisis de Seguridad:**
+```bash
+make security        # Ejecuta Semgrep con las reglas oficiales
+# Requiere tener instalado el perfil [security]
 ```
 
 #### **Ejecución de Aplicación:**
@@ -588,10 +609,12 @@ Estado actual de la suite de tests:
 
 ### Integración Continua
 
-Los tests se ejecutan automáticamente en:
-- Commits y pull requests
-- Despliegues en Azure Web Apps
-- Desarrollo local con git hooks (opcional)
+El proyecto incluye dos workflows de GitHub Actions:
+
+- **CI**: Ejecuta automáticamente los tests en cada pull request a la rama `main`, usando solo dependencias de desarrollo ([dev]). Puedes ver el workflow en `.github/workflows/ci.yml`.
+- **Security**: Ejecuta el análisis de seguridad (Semgrep) en un workflow independiente, usando solo dependencias de seguridad ([security]).
+
+Esto permite que la instalación de dependencias en CI sea más rápida y modular, y que el análisis de seguridad se ejecute solo cuando sea necesario.
 
 ### Contribuir con Tests
 
@@ -640,26 +663,46 @@ Los archivos siguen el mismo patrón para preguntas (YAML) y respuestas (JSON):
 
 ## Dependencias del Proyecto
 
+### Perfiles de dependencias
+
+- **[dev]**: Testing y desarrollo (pytest, coverage, httpx, etc.)
+- **[tools]**: Procesamiento de PDFs e imágenes (PyMuPDF, pdf2image, pytesseract, Pillow, pdfplumber, numpy)
+- **[security]**: Análisis de seguridad (Semgrep)
+- **[lint]**: Linting y análisis estático (flake8, black, isort, mypy, radon, pylint)
+- **[full]**: Todo lo anterior junto
+
 ### Core (Aplicación Web)
 - **FastAPI**: Framework web moderno para APIs REST
 - **Uvicorn**: Servidor ASGI de alto rendimiento
 - **Pydantic**: Validación de datos y serialización
 - **PyYAML**: Procesamiento de archivos YAML con preguntas
 
-### Testing
+### Testing ([dev])
 - **pytest**: Framework de testing moderno y potente
 - **pytest-asyncio**: Soporte para tests asíncronos
 - **pytest-cov**: Generación de reportes de cobertura de código
 - **pytest-mock**: Utilities para mocking en tests
 - **httpx**: Cliente HTTP asíncrono para tests de API
+- **asgi_lifespan**: Soporte para tests de ciclo de vida ASGI
 
-### Herramientas de Procesamiento (Tools)
+### Herramientas de Procesamiento ([tools])
 - **PyMuPDF**: Extracción de texto de archivos PDF
 - **pdf2image**: Conversión de PDFs a imágenes para OCR
 - **pytesseract**: Motor OCR para extraer texto de imágenes
 - **Pillow**: Procesamiento y mejora de imágenes
 - **pdfplumber**: Análisis avanzado de estructura PDF
 - **numpy**: Operaciones numéricas para procesamiento de imágenes
+
+### Análisis de Seguridad ([security])
+- **semgrep**: Análisis de seguridad y buenas prácticas multi-lenguaje
+
+### Linting y análisis estático ([lint])
+- **flake8**: Linting de código Python
+- **black**: Formateador de código
+- **isort**: Ordenador de imports
+- **mypy**: Comprobación de tipos
+- **radon**: Complejidad ciclomática
+- **pylint**: Análisis estático avanzado
 
 ### Dependencias del Sistema (DevContainer)
 
