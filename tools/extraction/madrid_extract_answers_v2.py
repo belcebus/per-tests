@@ -217,36 +217,36 @@ def save_exam_json(exam: Dict, output_dir: Path):
 
 def main():
     parser = argparse.ArgumentParser(description="🚢 Extrae respuestas oficiales de un PDF usando OCR")
-    
+
     # Argumentos estandarizados
     parser.add_argument('--input-file', required=True, help='Archivo PDF de respuestas oficiales')
     parser.add_argument('--output-dir', default='extracted-answers', help='Directorio de salida (default: extracted-answers)')
     parser.add_argument('--verbose', action='store_true', help='Mostrar información detallada del procesamiento')
-    
+
     args = parser.parse_args()
-    
+
     # Usar nombres estandarizados
     pdf_path = Path(args.input_file)
     if not pdf_path.exists():
         print(f"❌ ERROR: No existe el archivo: {pdf_path}")
         return
-    
+
     output_dir = Path(args.output_dir)
     output_dir.mkdir(exist_ok=True)
-    
+
     if args.verbose:
         print(f"🚀 Iniciando extracción de respuestas...")
         print(f"📄 PDF de entrada: {pdf_path}")
         print(f"📁 Directorio de salida: {output_dir}")
-    
+
     texts_full, texts_left = extract_text_from_pdf(str(pdf_path))
     exams = parse_exam_pages_dual(texts_full, texts_left, pdf_path.name)
-    
+
     for exam in exams:
         save_exam_json(exam, output_dir)
         if args.verbose:
             print(f"✅ Guardado examen: {exam['exam_type']} - {exam['test_model']}")
-    
+
     if args.verbose:
         print(f"🎉 Extracción completada. {len(exams)} exámenes procesados.")
 

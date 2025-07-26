@@ -52,7 +52,7 @@ class Settings(BaseSettings):
 
     exams_dir: str = Field(
         default="data/exams",
-        alias="PER_EXAMS_DIR", 
+        alias="PER_EXAMS_DIR",
         description="Directorio de archivos YAML de exámenes"
     )
 
@@ -63,7 +63,7 @@ class Settings(BaseSettings):
     )
 
     raw_answers_dir: str = Field(
-        default="data/raw/answers", 
+        default="data/raw/answers",
         alias="PER_RAW_ANSWERS_DIR",
         description="Directorio de PDFs de respuestas originales"
     )

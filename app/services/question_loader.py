@@ -20,17 +20,17 @@ from config.settings import settings
 class QuestionLoader:
     """
     Clase que maneja la carga de preguntas desde archivos YAML.
-    
+
     Es como un "bibliotecario" que:
     - Sabe dónde están los archivos
     - Los lee cuando se lo pedimos
     - Los organiza para que sea fácil buscar preguntas
     """
-    
+
     def __init__(self, data_directory: str = None):
         """
         Inicializa el cargador de preguntas.
-        
+
         Args:
             data_directory: Carpeta donde están los archivos YAML (opcional, usa configuración por defecto)
         """
@@ -47,11 +47,11 @@ class QuestionLoader:
                 self.data_directory = Path(data_directory)
         self.questions_cache: Dict[str, List[Question]] = {}
         self.all_questions: List[Question] = []
-        
+
     def load_all_questions(self) -> List[Question]:
         """
         Carga TODAS las preguntas de TODOS los archivos YAML.
-        
+
         Este método:
         1. Busca todos los archivos .yaml en la carpeta data
         2. Los lee uno por uno
@@ -59,15 +59,15 @@ class QuestionLoader:
         4. Las organiza por categorías para búsquedas rápidas
         """
         print("🔄 Cargando preguntas desde archivos YAML...")
-        
+
         # Limpiar caché anterior
         self.questions_cache.clear()
         self.all_questions.clear()
-        
+
         # Buscar archivos .yaml solo en la carpeta exams y excluir backups
         exams_dir = settings.get_exams_path()
         yaml_files = []
-        
+
         if exams_dir.exists():
             # Buscar archivos en exams/ y excluir backups
             all_yaml_files = list(exams_dir.glob("**/*.yaml"))
@@ -76,11 +76,11 @@ class QuestionLoader:
             # Fallback: buscar en el directorio principal (compatibilidad)
             all_yaml_files = list(self.data_directory.glob("*.yaml"))
             yaml_files = [f for f in all_yaml_files if not any(x in f.name.lower() for x in ['backup', 'bk_', '.bak'])]
-        
+
         if not yaml_files:
             print(f"⚠️  No se encontraron archivos YAML válidos en {self.data_directory}")
             return []
-            
+
         for yaml_file in yaml_files:
             try:
                 questions = self._load_questions_from_file(yaml_file)
@@ -96,34 +96,34 @@ class QuestionLoader:
             except Exception as e:
                 print(f"❌ Error cargando {yaml_file}: {e}")
                 continue
-        
+
         print(f"✅ Cargadas {len(self.all_questions)} preguntas de {len(yaml_files)} archivos")
         print(f"📂 Categorías encontradas: {list(self.questions_cache.keys())}")
-        
+
         return self.all_questions
     def _load_questions_from_file(self, file_path: Path) -> List[Question]:
         """
         Carga preguntas de un archivo YAML específico.
-        
+
         Args:
             file_path: Ruta al archivo YAML
-            
+
         Returns:
             Lista de preguntas del archivo
         """
         print(f"📖 Leyendo {file_path.name}...")
-        
+
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 yaml_data = yaml.safe_load(f)
-            
+
             questions = []
-            
+
             # Verificar si es el nuevo formato (con categories) o el formato anterior
             if 'categories' in yaml_data:
                 # Nuevo formato: las preguntas están organizadas por categorías
                 print(f"   📁 Procesando formato con categorías...")
-                
+
                 for category_id, category_data in yaml_data['categories'].items():
                     category_name = category_data.get('name', f'Categoría {category_id}')
                     print(f"   📂 Procesando categoría {category_id}: {category_name}")
@@ -162,7 +162,7 @@ class QuestionLoader:
                             )
                         )
                         questions.append(question)
-                
+
                 print(f"   ✅ Total preguntas procesadas del archivo: {len(questions)}")
 
             elif 'preguntas' in yaml_data:
@@ -201,21 +201,21 @@ class QuestionLoader:
         # Filtrar por categorías
         if categorias:
             filtered_questions = [
-                q for q in filtered_questions 
+                q for q in filtered_questions
                 if q.metadata.categoria in categorias
             ]
 
         # Filtrar por años
         if años:
             filtered_questions = [
-                q for q in filtered_questions 
+                q for q in filtered_questions
                 if q.metadata.año in años
             ]
 
         # Filtrar por comunidades
         if comunidades:
             filtered_questions = [
-                q for q in filtered_questions 
+                q for q in filtered_questions
                 if q.metadata.comunidad_autonoma in comunidades
             ]
 
@@ -247,27 +247,27 @@ class QuestionLoader:
     def get_available_years(self) -> List[int]:
         """
         Devuelve todos los años disponibles.
-        
+
         Returns:
             Lista de años únicos
         """
         years = set(q.metadata.año for q in self.all_questions)
         return sorted(list(years))
-    
+
     def get_available_communities(self) -> List[str]:
         """
         Devuelve todas las comunidades autónomas disponibles.
-        
+
         Returns:
             Lista de comunidades únicas
         """
         communities = set(q.metadata.comunidad_autonoma for q in self.all_questions)
         return sorted(list(communities))
-    
+
     def get_stats(self) -> Dict:
         """
         Devuelve estadísticas sobre las preguntas cargadas.
-        
+
         Returns:
             Diccionario con estadísticas
         """
@@ -277,7 +277,7 @@ class QuestionLoader:
             "años_disponibles": self.get_available_years(),
             "comunidades_disponibles": self.get_available_communities(),
             "preguntas_por_categoria": {
-                cat: len(questions) 
+                cat: len(questions)
                 for cat, questions in self.questions_cache.items()
             }
         }

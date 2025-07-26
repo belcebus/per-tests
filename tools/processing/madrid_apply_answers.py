@@ -31,10 +31,10 @@ def load_extracted_answers(answers_file: str = None) -> Dict[str, Union[str, Lis
     if answers_file is None:
         # Intentar buscar el archivo con el nuevo patrón de nomenclatura primero
         extracted_dir = settings.get_extracted_path()
-        
+
         # Buscar archivos que sigan el patrón per-test0X-*.json (donde X puede ser 1-5)
         pattern_files = list(extracted_dir.glob("per-test0[1-5]-*.json"))
-            
+
         if pattern_files:
             # Usar el primer archivo encontrado con el nuevo patrón
             answers_file = pattern_files[0]
@@ -45,10 +45,10 @@ def load_extracted_answers(answers_file: str = None) -> Dict[str, Union[str, Lis
             print(f"📄 Usando archivo de compatibilidad: {answers_file.name}")
     else:
         answers_file = Path(answers_file)
-            
+
     if not answers_file.exists():
         raise FileNotFoundError(f"Archivo de respuestas no encontrado: {answers_file}")
-            
+
     with open(answers_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
@@ -82,7 +82,7 @@ def apply_answers_to_yaml(yaml_file: Path, extracted_answers: Dict[str, Union[st
 
     for category_id, category_data in categories_data.items():
         questions = category_data.get('questions', [])
-        
+
         for question in questions:
             question_id = question.get('id')
             questions_found += 1
@@ -155,7 +155,7 @@ def validate_answers(extracted_answers: Dict[str, Union[str, List[str]]]):
     for answer in extracted_answers.values():
         yaml_format = convert_array_to_comma_format(answer)
         answer_counts[yaml_format] = answer_counts.get(yaml_format, 0) + 1
-    
+
     print("   📊 Distribución de respuestas (formato YAML):")
     for answer, count in sorted(answer_counts.items()):
         if "," in answer:
@@ -181,46 +181,46 @@ EJEMPLOS DE USO:
   python madrid_apply_answers.py --input-file respuestas.json --target-file examen.yaml --verbose
         """
     )
-    
+
     parser.add_argument(
         '--input-file',
         type=str,
         help='Archivo JSON con las respuestas extraídas (default: auto-detectar)'
     )
-    
+
     parser.add_argument(
         '--target-file',
         type=str,
         help='Archivo YAML del examen a actualizar (obligatorio si no hay auto-detección)'
     )
-    
+
     parser.add_argument(
         '--output-dir',
         type=str,
         help='Directorio de salida (default: mismo directorio que target-file)'
     )
-    
+
     parser.add_argument(
         '--verbose',
         action='store_true',
         help='Mostrar información detallada del procesamiento'
     )
-    
+
     args = parser.parse_args()
-    
+
     if args.verbose:
         print("🚀 Aplicando respuestas OCR al archivo YAML correspondiente...")
-    
+
     try:
         # Cargar respuestas extraídas
         extracted_answers = load_extracted_answers(args.input_file)
         if args.verbose:
             print(f"📖 Respuestas cargadas: {len(extracted_answers)}")
-        
+
         # Validar respuestas
         if args.verbose:
             validate_answers(extracted_answers)
-        
+
         # Determinar archivo YAML objetivo
         if args.target_file:
             yaml_file = settings.get_exams_path() / args.target_file
@@ -232,7 +232,7 @@ EJEMPLOS DE USO:
                 # Ejemplo: per-test05-madrid-2025-abril.json -> per-test05-madrid-2025-abril.yaml
                 yaml_name = input_path.stem + ".yaml"
                 yaml_file = settings.get_exams_path() / yaml_name
-                
+
                 if not yaml_file.exists():
                     print(f"❌ No se pudo auto-detectar archivo YAML correspondiente.")
                     print(f"   Archivo esperado: {yaml_file}")
@@ -245,23 +245,23 @@ EJEMPLOS DE USO:
                 print(f"❌ Debes especificar --target-file o --input-file para auto-detección.")
                 print(f"   Uso: python madrid_apply_answers.py --input-file respuestas.json --target-file examen.yaml")
                 return
-        
+
         if not yaml_file.exists():
             print(f"❌ Archivo YAML no encontrado: {yaml_file}")
             return
-        
+
         updates = apply_answers_to_yaml(yaml_file, extracted_answers)
-        
+
         print(f"\n🎉 Proceso completado exitosamente!")
         if args.verbose:
             print(f"   📈 Total actualizaciones: {updates}")
-        
+
         if updates > 0:
             print("\n💡 Recomendaciones:")
             print("   - Reinicia el servidor de la aplicación para cargar los cambios")
             print("   - Verifica algunas respuestas manualmente para confirmar la precisión")
             print("   - El archivo original se guardó como .backup")
-        
+
     except Exception as e:
         print(f"❌ Error: {e}")
         import traceback

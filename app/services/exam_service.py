@@ -153,15 +153,15 @@ class ExamService:
             texto_respuesta_usuario = None
             if user_answer and user_answer in question.opciones:
                 texto_respuesta_usuario = question.opciones[user_answer]
-            
+
             # Obtener lista de respuestas correctas
             respuestas_correctas_lista = self._get_correct_answers_list(question.respuesta_correcta)
             es_anulada = question.respuesta_correcta.lower() == "anulada"
-            
+
             # Texto de la primera respuesta correcta (para compatibilidad)
             primera_correcta = respuestas_correctas_lista[0] if respuestas_correctas_lista else question.respuesta_correcta
             texto_respuesta_correcta = question.opciones.get(primera_correcta, "Opción no encontrada")
-            
+
             # Textos de todas las respuestas correctas
             textos_respuestas_correctas = {}
             for respuesta in respuestas_correctas_lista:
@@ -184,12 +184,12 @@ class ExamService:
                 metadata=question.metadata
             )
             question_results.append(question_result)
-            
+
             # Actualizar estadísticas por categoría
             category = question.metadata.categoria
             if category not in category_stats:
                 category_stats[category] = {"correctas": 0, "total": 0}
-            
+
             category_stats[category]["total"] += 1
             if is_correct:
                 category_stats[category]["correctas"] += 1
@@ -238,7 +238,7 @@ class ExamService:
             desglose_por_categoria=category_results,
             preguntas_detalle=question_results
         )
-    
+
     def _cleanup_expired_exams(self) -> None:
         """
         Limpia exámenes expirados de la memoria.
@@ -256,7 +256,7 @@ class ExamService:
 
         if expired_exams:
             print(f"🧹 Limpiados {len(expired_exams)} exámenes expirados")
-    
+
     def get_active_exams_count(self) -> int:
         """
         Devuelve el número de exámenes activos en memoria.
@@ -266,7 +266,7 @@ class ExamService:
         """
         self._cleanup_expired_exams()
         return len(self.active_exams)
-    
+
     def get_service_stats(self) -> Dict:
         """
         Devuelve estadísticas del servicio.
@@ -278,7 +278,7 @@ class ExamService:
             "examenes_activos": self.get_active_exams_count(),
             "ttl_examenes": f"{self.exam_ttl.total_seconds() / 3600} horas"
         }
-    
+
     def generate_simulacro_exam(self, request: ExamGenerationRequest) -> GeneratedExam:
         """
         Genera un simulacro de examen con distribución fija por categoría.
@@ -320,16 +320,16 @@ class ExamService:
         for cat_id in sorted(distribution.keys()):
             num_questions = distribution[cat_id]
             cat_questions = questions_by_cat.get(cat_id, [])
-            
+
             if len(cat_questions) < num_questions:
                 raise ValueError(f"No hay suficientes preguntas en la categoría {cat_id} para el simulacro")
-            
+
             # Seleccionar preguntas aleatorias de esta categoría
             selected_category_questions = random.sample(cat_questions, num_questions)
-            
+
             # Mezclar el orden dentro de la categoría
             random.shuffle(selected_category_questions)
-            
+
             # Añadir las preguntas de esta categoría al final del examen
             selected_questions.extend(selected_category_questions)
 
@@ -360,7 +360,7 @@ class ExamService:
             questions=client_questions,
             metadata=request
         )
-    
+
     def _is_answer_correct(self, user_answer: Optional[str], correct_answer: str) -> bool:
         """
         Verifica si la respuesta del usuario es correcta.
@@ -369,7 +369,7 @@ class ExamService:
         Args:
             user_answer: Respuesta del usuario (ej: 'a', 'b', etc.)
             correct_answer: Respuesta(s) correcta(s) (ej: 'a', 'a,b', 'anulada')
-            
+
         Returns:
             True si la respuesta es correcta, False en caso contrario
         """
@@ -398,7 +398,7 @@ class ExamService:
 
         Args:
             correct_answer: Respuesta(s) correcta(s) (ej: 'a', 'a,b', 'anulada')
-            
+
         Returns:
             Lista de respuestas correctas válidas
         """
@@ -407,11 +407,11 @@ class ExamService:
         # Caso especial: pregunta anulada
         if correct_answer == "anulada":
             return ["a", "b", "c", "d"]  # Todas las opciones son válidas
-        
+
         # Si hay múltiples respuestas separadas por comas
         if "," in correct_answer:
             return [answer.strip() for answer in correct_answer.split(",")]
-        
+
         # Caso simple: una sola respuesta
         return [correct_answer]
 
