@@ -105,18 +105,6 @@ def sample_exam_data() -> Dict[str, Any]:
 
 
 @pytest.fixture
-def sample_question_data() -> Dict[str, Any]:
-    """Datos de ejemplo para preguntas individuales."""
-    return {
-        "numero": 1,
-        "pregunta": "¿Cuál es la parte delantera de una embarcación?",
-        "opciones": ["Popa", "Proa", "Babor", "Estribor"],
-        "respuesta": "b",
-        "categoria": 1
-    }
-
-
-@pytest.fixture
 def mock_settings():
     """Mock de configuración para tests."""
     with patch('config.settings.settings') as mock:
