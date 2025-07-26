@@ -484,7 +484,8 @@ function showQuestion(index) {
         optionDiv.addEventListener('click', () => selectOption(optionDiv));
         optionsContainer.appendChild(optionDiv);
     });
-    
+    // Limpiar cualquier selección previa (por si el DOM mantiene clases)
+    document.querySelectorAll('.option.selected').forEach(opt => opt.classList.remove('selected'));
     // Restaurar respuesta previa si existe (solo dentro del mismo examen)
     const questionId = question.id;
     if (userAnswers[questionId]) {

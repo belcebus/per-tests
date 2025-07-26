@@ -1215,10 +1215,8 @@ class ParametricExamExtractor:
         if not valid_candidates:
             # Si ninguno es válido, tomar el que tenga más texto
             return max(question_candidates, key=lambda q: len(q.get('question', '')))
-        
         if len(valid_candidates) == 1:
             return valid_candidates[0]
-        
         # Múltiples candidatos válidos, aplicar criterios de calidad
         def quality_score(question):
             score = 0
@@ -1346,7 +1344,6 @@ El archivo de salida seguirá el formato: per-{test}-{comunidad}-{año}-{convoca
         print(f"❌ Error: No se encuentra el archivo PDF: {args.input_file}")
         print(f"💡 Verifica que la ruta sea correcta y que el archivo exista")
         return 1
-    
     # Crear el extractor y procesar
     extractor = ParametricExamExtractor()
     

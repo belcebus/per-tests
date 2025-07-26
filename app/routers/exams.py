@@ -28,7 +28,6 @@ def _validate_communities(comunidades: list) -> None:
 
     Args:
         comunidades: Lista de comunidades a validar
-        
     Raises:
         ValueError: Si alguna comunidad no existe
     """
@@ -68,10 +67,8 @@ async def generate_exam(request: ExamGenerationRequest) -> GeneratedExam:
 
     Args:
         request: Criterios para generar el examen
-        
     Returns:
         Examen generado con ID único y preguntas
-        
     Raises:
         HTTPException: Si no hay suficientes preguntas o hay error
     """
@@ -79,7 +76,7 @@ async def generate_exam(request: ExamGenerationRequest) -> GeneratedExam:
         # Validar comunidades antes de generar el examen
         if request.comunidades:
             _validate_communities(request.comunidades)
-        
+
         if hasattr(request, 'tipo_examen') and request.tipo_examen == 'simulacro':
             exam = exam_service.generate_simulacro_exam(request)
         else:
@@ -90,7 +87,8 @@ async def generate_exam(request: ExamGenerationRequest) -> GeneratedExam:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         # Para cualquier otro error, devolver error 500
-        raise HTTPException(status_code=500, detail=f"Error generando examen: {str(e)}")
+        raise HTTPException(status_code=500,
+                            detail=f"Error generando examen: {str(e)}")
 
 
 @router.post("/correct", response_model=ExamResult)
@@ -120,10 +118,10 @@ async def correct_exam(submission: ExamSubmission) -> ExamResult:
 
     Args:
         submission: ID del examen y respuestas del usuario
-        
+
     Returns:
         Resultado detallado con puntuación, desglose y explicaciones
-        
+
     Raises:
         HTTPException: Si el examen no existe o hay error
     """
@@ -185,9 +183,9 @@ async def get_exam_info() -> Dict[str, Any]:
 async def get_categories() -> Dict[str, list]:
     """
     Obtiene todas las categorías disponibles.
-    
+
     **Útil para:** Crear listas desplegables en el frontend.
-    
+
     Returns:
         Lista de categorías disponibles (cada una con id y nombre)
     """

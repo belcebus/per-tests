@@ -61,14 +61,13 @@ def format_distribution_comparison(official_dist, exam_dist, exam_name):
     lines.append("=" * 80)
     lines.append("Cat | Nombre Categoría           | Oficial | Extraído | Dif | Estado")
     lines.append("----|----------------------------|---------|----------|-----|--------")
-    
     total_official = 0
     total_extracted = 0
     all_match = True
     # Nombres de categorías
     category_names = {
         1: "Nomenclatura náutica",
-        2: "Elementos de amarre y fondeo", 
+        2: "Elementos de amarre y fondeo",
         3: "Seguridad",
         4: "Legislación",
         5: "Balizamiento",
@@ -79,7 +78,6 @@ def format_distribution_comparison(official_dist, exam_dist, exam_name):
         10: "Teoría de la navegación",
         11: "Carta de navegación"
     }
-    
     for cat_id in sorted(official_dist.keys()):
         official_count = official_dist[cat_id]
         extracted_count = exam_dist.get(cat_id, 0)
@@ -108,7 +106,7 @@ def main():
     print("-" * 40)
     category_names = {
         1: "Nomenclatura náutica",
-        2: "Elementos de amarre y fondeo", 
+        2: "Elementos de amarre y fondeo",
         3: "Seguridad",
         4: "Legislación",
         5: "Balizamiento",
@@ -119,7 +117,6 @@ def main():
         10: "Teoría de la navegación",
         11: "Carta de navegación"
     }
-    
     for cat_id, count in sorted(official_dist.items()):
         cat_name = category_names.get(cat_id, f"Categoría {cat_id}")
         print(f"{cat_id:2d}: {count:2d} preguntas - {cat_name}")
@@ -155,7 +152,7 @@ def main():
             consistent_exams.append(exam_name)
         else:
             inconsistent_exams.append((exam_name, comparison_lines, total_questions, expected_questions))
-    
+
     # Resumen final
     print(f"\n📊 RESUMEN FINAL:")
     print("=" * 80)
@@ -163,14 +160,14 @@ def main():
     print(f"❌ Exámenes inconsistentes: {len(inconsistent_exams)}")
     print(f"💥 Exámenes con errores: {len(error_exams)}")
     print(f"📁 Total de exámenes: {len(exam_files)}")
-    
+
     # Mostrar exámenes consistentes
     if consistent_exams:
         print(f"\n✅ EXÁMENES CONSISTENTES ({len(consistent_exams)}):")
         print("-" * 40)
         for exam in sorted(consistent_exams):
             print(f"  ✓ {exam}")
-    
+
     # Mostrar detalles de exámenes inconsistentes
     if inconsistent_exams:
         print(f"\n❌ EXÁMENES INCONSISTENTES ({len(inconsistent_exams)}):")
@@ -180,20 +177,20 @@ def main():
                 print(line)
             if total_q != expected_q:
                 print(f"⚠️  Total de preguntas: {total_q} (esperado: {expected_q})")
-    
+
     # Mostrar exámenes con errores
     if error_exams:
         print(f"\n💥 EXÁMENES CON ERRORES ({len(error_exams)}):")
         print("-" * 40)
         for exam in sorted(error_exams):
             print(f"  💥 {exam}")
-    
+
     # Estadísticas de consistencia
     consistency_rate = (len(consistent_exams) / len(exam_files)) * 100 if exam_files else 0
     print(f"\n📈 TASA DE CONSISTENCIA: {consistency_rate:.1f}%")
-    
+
     if len(inconsistent_exams) > 0:
-        print(f"\n💡 RECOMENDACIONES:")
+        print("\n💡 RECOMENDACIONES:")
         print("  - Revisar la extracción de preguntas en los exámenes inconsistentes")
         print("  - Verificar que las categorías estén correctamente identificadas")
         print("  - Considerar re-extraer los exámenes problemáticos con los scripts actualizados")

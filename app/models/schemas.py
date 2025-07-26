@@ -23,7 +23,8 @@ class QuestionMetadata(BaseModel):
     Información adicional sobre cada pregunta.
 
     Esta clase define qué información extra tendrá cada pregunta:
-    - title: Título del examen (ej: "EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO")
+    - title: Título del examen (ej: "EXAMEN DE PATRÓN DE EMBARCACIONES\n"
+      "DE RECREO")
     - subtitle: Subtítulo del examen (ej: "Código de Test 01")
     - total_questions: Número total de preguntas en el examen
     - community: Comunidad autónoma donde se realizó el examen (ej: "Madrid")
@@ -35,8 +36,10 @@ class QuestionMetadata(BaseModel):
     - categoria: A qué tema pertenece (mantenido por compatibilidad)
     - convocatoria: En qué convocatoria apareció (mantenido por compatibilidad)
     - año: En qué año apareció (mantenido por compatibilidad)
-    - comunidad_autonoma: De qué comunidad autónoma era el examen (mantenido por compatibilidad)
-    - numero_pregunta: Qué número tenía en el examen original (mantenido por compatibilidad)
+    - comunidad_autonoma: De qué comunidad autónoma era el examen\n"
+      "(mantenido por compatibilidad)
+    - numero_pregunta: Qué número tenía en el examen original\n"
+      "(mantenido por compatibilidad)
     """
     # Nuevos campos principales
     title: str
@@ -49,7 +52,7 @@ class QuestionMetadata(BaseModel):
 
     # Campos de compatibilidad (opcionales)
     categoria: Optional[str] = None
-    categoria_nombre: Optional[str] = None  # <-- Añadir explícitamente el campo
+    categoria_nombre: Optional[str] = None
     convocatoria: Optional[str] = None
     año: Optional[int] = None
     comunidad_autonoma: Optional[str] = None
@@ -132,7 +135,12 @@ class ExamGenerationRequest(BaseModel):
     - comunidades: Lista de comunidades específicas (None = todas)
     - tipo_examen: Tipo de examen (por defecto "per")
     """
-    num_preguntas: int = Field(default=45, ge=1, le=100, description="Número de preguntas del examen (entre 1 y 100)")
+    num_preguntas: int = Field(
+        default=45,
+        ge=1,
+        le=100,
+        description="Número de preguntas del examen (entre 1 y 100)"
+    )
     categorias: Optional[List[str]] = None
     años: Optional[List[int]] = None
     comunidades: Optional[List[str]] = None
@@ -199,15 +207,20 @@ class QuestionResult(BaseModel):
     - es_anulada: Si la pregunta fue anulada
     - enunciado: El texto de la pregunta (para referencia)
     - opciones: Todas las opciones disponibles
-    - metadata: Metadatos de la pregunta (comunidad, año, convocatoria, modelo, etc.)
+    - metadata: Metadatos de la pregunta (comunidad, año, convocatoria,\n
+      modelo, etc.)
     """
     question_id: str
     respuesta_usuario: Optional[str]
     respuesta_correcta: str
-    respuestas_correctas_lista: List[str]  # Nueva: lista de todas las respuestas válidas
+    respuestas_correctas_lista: List[
+        str
+    ]  # Nueva: lista de todas las respuestas válidas
     texto_respuesta_usuario: Optional[str]
     texto_respuesta_correcta: str
-    textos_respuestas_correctas: Dict[str, str]  # Nueva: textos de todas las respuestas válidas
+    textos_respuestas_correctas: Dict[
+        str, str
+    ]  # Nueva: textos de todas las respuestas válidas
     es_correcta: bool
     es_anulada: bool  # Nueva: indica si la pregunta fue anulada
     enunciado: str

@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Optional
 
 from app.models.schemas import (
-    Question, QuestionForClient, ExamGenerationRequest, 
+    Question, QuestionForClient, ExamGenerationRequest,
     GeneratedExam, CachedExam, ExamSubmission, ExamResult,
     CategoryResult, QuestionResult
 )
@@ -25,14 +25,14 @@ from config.settings import settings
 class ExamService:
     """
     Servicio principal para manejo de exámenes.
-    
+
     Es como un "profesor" que:
     - Crea exámenes personalizados
     - Los guarda temporalmente
     - Los corrige cuando le traen las respuestas
     - Limpia exámenes antiguos
     """
-    
+
     def __init__(self):
         """Inicializa el servicio de exámenes."""
         # Diccionario para guardar exámenes en memoria
@@ -41,7 +41,7 @@ class ExamService:
 
         # Tiempo de vida de un examen (configurable)
         self.exam_ttl = timedelta(hours=settings.exam_ttl_hours)
-    
+
     def generate_exam(self, request: ExamGenerationRequest) -> GeneratedExam:
         """
         Genera un nuevo examen según los criterios especificados.
@@ -119,7 +119,7 @@ class ExamService:
             questions=client_questions,
             metadata=request
         )
-    
+
     def correct_exam(self, submission: ExamSubmission) -> ExamResult:
         """
         Corrige un examen enviado por el cliente.

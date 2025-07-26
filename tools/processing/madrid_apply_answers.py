@@ -34,7 +34,7 @@ def load_extracted_answers(answers_file: str = None) -> Dict[str, Union[str, Lis
         
         # Buscar archivos que sigan el patrón per-test0X-*.json (donde X puede ser 1-5)
         pattern_files = list(extracted_dir.glob("per-test0[1-5]-*.json"))
-        
+            
         if pattern_files:
             # Usar el primer archivo encontrado con el nuevo patrón
             answers_file = pattern_files[0]
@@ -45,58 +45,54 @@ def load_extracted_answers(answers_file: str = None) -> Dict[str, Union[str, Lis
             print(f"📄 Usando archivo de compatibilidad: {answers_file.name}")
     else:
         answers_file = Path(answers_file)
-    
+            
     if not answers_file.exists():
         raise FileNotFoundError(f"Archivo de respuestas no encontrado: {answers_file}")
-    
+            
     with open(answers_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
-    
+
     return data['answers']
 
 def apply_answers_to_yaml(yaml_file: Path, extracted_answers: Dict[str, Union[str, List[str]]]) -> int:
     """Aplica las respuestas extraídas al archivo YAML"""
     print(f"📝 Procesando {yaml_file.name}...")
-    
+
     # Crear backup del archivo original en el directorio de backups
     backup_dir = settings.get_backups_path()
     backup_dir.mkdir(parents=True, exist_ok=True)  # Asegura que el directorio exista
     backup_file = backup_dir / f"{yaml_file.stem}.yaml.backup"
-    
+
     if not backup_file.exists():
         # Copiar el archivo original al directorio de backups
         import shutil
         shutil.copy2(yaml_file, backup_file)
         print(f"💾 Backup creado: {backup_file.name}")
-    
+
     # Cargar el archivo YAML original
     with open(yaml_file, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
-    
+
     updates_count = 0
     questions_found = 0
-    
+
     # Procesar cada categoría y pregunta
     # Intentar ambas estructuras: 'categories' y 'pycategories'
     categories_data = data.get('categories', data.get('pycategories', {}))
-    
+
     for category_id, category_data in categories_data.items():
         questions = category_data.get('questions', [])
         
         for question in questions:
             question_id = question.get('id')
             questions_found += 1
-            
             if question_id and str(question_id) in extracted_answers:
                 old_answer = question.get('correct_answer', 'N/A')
                 new_answer = extracted_answers[str(question_id)]
-                
                 # Convertir array a formato de comas para YAML
                 yaml_answer = convert_array_to_comma_format(new_answer)
-                
                 # Aplicar la nueva respuesta en formato YAML
                 question['correct_answer'] = yaml_answer
-                
                 # Mostrar el cambio
                 if old_answer != yaml_answer:
                     if isinstance(new_answer, list):
@@ -109,27 +105,27 @@ def apply_answers_to_yaml(yaml_file: Path, extracted_answers: Dict[str, Union[st
                         print(f"   ✅ Pregunta {question_id}: {yaml_answer} (array {new_answer}, sin cambios)")
                     else:
                         print(f"   ✅ Pregunta {question_id}: {yaml_answer} (sin cambios)")
-    
+
     # Guardar el archivo actualizado
     with open(yaml_file, 'w', encoding='utf-8') as f:
         yaml.dump(data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
-    
+
     print(f"\\n📊 RESUMEN:")
     print(f"   📄 Preguntas encontradas en YAML: {questions_found}")
     print(f"   🔄 Respuestas actualizadas: {updates_count}")
     print(f"   📁 Archivo actualizado: {yaml_file}")
-    
+
     return updates_count
 
 def validate_answers(extracted_answers: Dict[str, Union[str, List[str]]]):
     """Valida las respuestas extraídas"""
     print("🔍 Validando respuestas extraídas...")
-    
+
     valid_answers = {'a', 'b', 'c', 'd', 'ANULADA'}
     total_answers = len(extracted_answers)
     valid_count = 0
     multiple_answers_count = 0
-    
+
     for q_id, answer in extracted_answers.items():
         # Verificar si es un array (múltiples respuestas)
         if isinstance(answer, list):
@@ -149,11 +145,11 @@ def validate_answers(extracted_answers: Dict[str, Union[str, List[str]]]):
                 valid_count += 1
             else:
                 print(f"   ⚠️  Pregunta {q_id}: respuesta inválida '{answer}'")
-    
+
     print(f"   ✅ Respuestas válidas: {valid_count}/{total_answers}")
     if multiple_answers_count > 0:
         print(f"   🔢 Preguntas con múltiples respuestas: {multiple_answers_count}")
-    
+
     # Mostrar resumen de respuestas (formato que se aplicará al YAML)
     answer_counts = {}
     for answer in extracted_answers.values():
