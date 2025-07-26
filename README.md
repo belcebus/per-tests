@@ -149,13 +149,38 @@ El proyecto incluye un Makefile completo que simplifica todas las tareas de desa
 
 ### **📋 Comandos Disponibles**
 
-#### **Instalación:**
-```bash
-make install         # Dependencias básicas
-make install-dev     # + Dependencias de desarrollo
-make install-tools   # + Herramientas de procesamiento  
-make install-full    # Instalación completa
-```
+#### **Comandos útiles y calidad de código:**
+   - `make install-dev` — instala dependencias de desarrollo
+   - `make test-fast` — ejecuta todos los tests sin cobertura (rápido)
+   - `make test-unit` — ejecuta solo tests unitarios
+   - `make test-integration` — ejecuta solo tests de integración
+   - `make test-api` — ejecuta solo tests de API
+   - `make test-cov` — ejecuta tests con cobertura en terminal
+   - `make test-cov-html` — genera reporte HTML de cobertura
+   - `make test-cov-xml` — genera reporte XML de cobertura
+   - `make test-cov-full` — genera reportes HTML+XML de cobertura
+   - `make test-cov-strict` — ejecuta tests con cobertura mínima (95%)
+   - `make test-ci` — ejecuta tests para CI/CD (con timeout)
+   - `make quality` — ejecuta linters y analizadores (flake8, pylint, black, isort, radon, mypy)
+   - `make security` — ejecuta análisis de seguridad del código (semgrep)
+   - `make run` — inicia la aplicación (configuración por defecto)
+   - `make run-prod` — inicia en modo producción (4 workers)
+   - `make run-azure` — inicia optimizado para Azure (1 worker)
+   - `make run-debug` — inicia con debug habilitado
+   - `make run-local` — inicia solo en localhost
+   - `make run-custom` — inicia con variables de entorno personalizadas
+   - `make clean` — limpia archivos temporales y de cobertura
+   - `make clean-venv` — elimina el entorno virtual
+
+   **Ejemplos:**
+   - `make install-dev`                  # Instalación para desarrollo
+   - `make test-fast`                    # Durante desarrollo
+   - `make test-cov`                     # Para verificar cobertura
+   - `make quality`                      # Análisis de calidad de código
+   - `make test-cov-html`                # Para generar reporte visual
+   - `make run`                          # Aplicación con configuración por defecto
+   - `PER_PORT=9000 make run`            # Cambiar puerto
+   - `PER_HOST=localhost make run-local` # Localhost en puerto personalizado
 
 
 #### **Testing Rápido (Desarrollo):**

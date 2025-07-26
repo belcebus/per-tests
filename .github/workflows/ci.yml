@@ -17,9 +17,14 @@ jobs:
         with:
           python-version: '3.10'
 
+
       - name: Instalar dependencias de desarrollo
         run: |
           make install-dev
+
+      - name: Análisis de calidad de código (linters)
+        run: |
+          make quality
 
       - name: Ejecutar tests
         run: |

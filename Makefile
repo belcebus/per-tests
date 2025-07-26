@@ -1,3 +1,16 @@
+# Análisis de calidad de código (linters y analizadores)
+quality: install-lint
+	@echo "$(GREEN)🔎 Análisis de calidad de código (flake8, pylint, black, isort, radon, mypy)...$(NC)"
+	venv/bin/flake8 app config tools
+	venv/bin/pylint app config tools
+	venv/bin/black --check app config tools
+	venv/bin/isort --check app config tools
+	venv/bin/radon cc -s app config tools
+	venv/bin/mypy app config tools
+# Instala solo las dependencias de linters y analizadores
+install-lint: venv
+	@echo "$(GREEN)📦 Instalando paquete con linters y analizadores...$(NC)"
+	$(PYTHON_CMD) -m pip install -e ".[lint]"
 # Makefile para comandos de testing del proyecto PER Tests
 # Facilita la ejecución de diferentes tipos de tests con opciones específicas
 # 
@@ -28,35 +41,43 @@ help:
 	@echo "  make install-full    - Instalar todas las dependencias"
 	@echo ""
 	@echo "$(YELLOW)Tests rápidos (sin cobertura):$(NC)"
-	@echo "  make test-fast      - Ejecutar todos los tests sin cobertura (rápido)"
-	@echo "  make test-unit      - Ejecutar solo tests unitarios"
-	@echo "  make test-api       - Ejecutar solo tests de API"
+	@echo "  make test-fast        - Ejecutar todos los tests sin cobertura (rápido)"
+	@echo "  make test-unit        - Ejecutar solo tests unitarios"
+	@echo "  make test-integration - Ejecutar solo tests de integración"
+	@echo "  make test-api         - Ejecutar solo tests de API"
 	@echo ""
-	@echo "$(YELLOW)Tests con cobertura (más lentos):$(NC)"
-	@echo "  make test-cov       - Ejecutar tests con cobertura en terminal"
-	@echo "  make test-cov-html  - Ejecutar tests y generar reporte HTML"
-	@echo "  make test-cov-xml   - Ejecutar tests y generar reporte XML"
+	@echo "$(YELLOW)Tests con cobertura:$(NC)"
+	@echo "  make test-cov         - Ejecutar tests con cobertura en terminal"
+	@echo "  make test-cov-html    - Ejecutar tests y generar reporte HTML"
+	@echo "  make test-cov-xml     - Ejecutar tests y generar reporte XML"
+	@echo "  make test-cov-full    - Ejecutar tests y generar reportes HTML+XML"
+	@echo "  make test-cov-strict  - Ejecutar tests con cobertura mínima (95%)"
+	@echo "  make test-ci          - Ejecutar tests para CI/CD (con timeout)"
+	@echo ""
+	@echo "$(YELLOW)Calidad de código:$(NC)"
+	@echo "  make quality          - Ejecutar linters y analizadores (flake8, pylint, black, isort, radon, mypy)"
 	@echo ""
 	@echo "$(YELLOW)Análisis de seguridad:$(NC)"
-	@echo "  make security       - Ejecutar análisis de seguridad del código (herramienta configurable)"
+	@echo "  make security         - Ejecutar análisis de seguridad del código (semgrep)"
 	@echo ""
 	@echo "$(YELLOW)Ejecutar aplicación:$(NC)"
-	@echo "  make run            - Iniciar aplicación (configuración desde config/settings.py)"
-	@echo "  make run-prod       - Iniciar aplicación en modo producción (4 workers)"
-	@echo "  make run-azure      - Iniciar aplicación optimizada para Azure (1 worker)"
-	@echo "  make run-debug      - Iniciar aplicación con debug habilitado"
-	@echo "  make run-local      - Iniciar aplicación solo en localhost"
-	@echo "  make run-custom     - Iniciar con variables de entorno personalizadas"
+	@echo "  make run              - Iniciar aplicación (configuración por defecto)"
+	@echo "  make run-prod         - Iniciar aplicación en modo producción (4 workers)"
+	@echo "  make run-azure        - Iniciar aplicación optimizada para Azure (1 worker)"
+	@echo "  make run-debug        - Iniciar aplicación con debug habilitado"
+	@echo "  make run-local        - Iniciar aplicación solo en localhost"
+	@echo "  make run-custom       - Iniciar con variables de entorno personalizadas"
 	@echo ""
 	@echo "$(YELLOW)Limpieza:$(NC)"
-	@echo "  make clean          - Limpiar archivos de cobertura y cache"
+	@echo "  make clean            - Limpiar archivos de cobertura y cache"
+	@echo "  make clean-venv       - Eliminar el entorno virtual"
 	@echo ""
 	@echo "$(YELLOW)Ejemplos:$(NC)"
 	@echo "  make install-dev                  # Instalación para desarrollo"
 	@echo "  make test-fast                    # Durante desarrollo"
 	@echo "  make test-cov                     # Para verificar cobertura"
+	@echo "  make quality                      # Análisis de calidad de código"
 	@echo "  make test-cov-html                # Para generar reporte visual"
-	@echo ""
 	@echo "  make run                          # Aplicación con configuración por defecto"
 	@echo "  PER_PORT=9000 make run            # Cambiar puerto"
 	@echo "  PER_HOST=localhost make run-local # Localhost en puerto personalizado"
