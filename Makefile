@@ -61,20 +61,29 @@ help:
 	@echo "  PER_PORT=9000 make run            # Cambiar puerto"
 	@echo "  PER_HOST=localhost make run-local # Localhost en puerto personalizado"
 
+
+# Crea el entorno virtual si no existe
+venv:
+	@if [ ! -d "venv" ]; then \
+		echo "$(YELLOW)🔧 Creando entorno virtual en venv...$(NC)"; \
+		python3 -m venv venv; \
+		venv/bin/pip install --upgrade pip; \
+	fi
+
 # Comandos de instalación
-install:
+install: venv
 	@echo "$(GREEN)📦 Instalando paquete en modo editable...$(NC)"
 	$(PYTHON_CMD) -m pip install -e .
 
-install-dev:
+install-dev: venv
 	@echo "$(GREEN)📦 Instalando paquete con dependencias de desarrollo...$(NC)"
 	$(PYTHON_CMD) -m pip install -e ".[dev]"
 
-install-tools:
+install-tools: venv
 	@echo "$(GREEN)📦 Instalando paquete con herramientas de procesamiento...$(NC)"
 	$(PYTHON_CMD) -m pip install -e ".[tools]"
 
-install-full:
+install-full: venv
 	@echo "$(GREEN)📦 Instalando paquete con todas las dependencias...$(NC)"
 	$(PYTHON_CMD) -m pip install -e ".[full]"
 
