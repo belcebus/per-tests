@@ -113,25 +113,27 @@ function displaySystemInfo(info) {
     const container = document.getElementById('system-info');
     const preguntas = info.preguntas;
     
-    container.innerHTML = `
-        <div class="info-grid">
-            <div class="info-item">
-                <strong>📚 Total de preguntas:</strong> ${preguntas.total_preguntas}
-            </div>
-            <div class="info-item">
-                <strong>📂 Categorías:</strong> ${preguntas.categorias}
-            </div>
-            <div class="info-item">
-                <strong>📅 Años disponibles:</strong> ${preguntas.años_disponibles.join(', ')}
-            </div>
-            <div class="info-item">
-                <strong>🌍 Comunidades:</strong> ${preguntas.comunidades_disponibles.length}
-            </div>
-            <div class="info-item">
-                <strong>🎯 Exámenes activos:</strong> ${info.servicio.examenes_activos}
-            </div>
-        </div>
-    `;
+    // Limpiar contenido previo
+    while (container.firstChild) container.removeChild(container.firstChild);
+    const grid = document.createElement('div');
+    grid.className = 'info-grid';
+    const items = [
+        { label: '📚 Total de preguntas:', value: preguntas.total_preguntas },
+        { label: '📂 Categorías:', value: preguntas.categorias },
+        { label: '📅 Años disponibles:', value: preguntas.años_disponibles.join(', ') },
+        { label: '🌍 Comunidades:', value: preguntas.comunidades_disponibles.length },
+        { label: '🎯 Exámenes activos:', value: info.servicio.examenes_activos }
+    ];
+    items.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'info-item';
+        const strong = document.createElement('strong');
+        strong.textContent = item.label;
+        div.appendChild(strong);
+        div.appendChild(document.createTextNode(' ' + item.value));
+        grid.appendChild(div);
+    });
+    container.appendChild(grid);
 }
 
 /**
@@ -143,31 +145,57 @@ function populateFormOptions(data) {
     data.categorias.forEach(catObj => {
         categoryIdNameMap[catObj.id] = catObj.nombre;
     });
-    // Categorías
+    // Categorías (manipulación segura del DOM)
     const categoriasContainer = document.getElementById('categorias-container');
-    categoriasContainer.innerHTML = data.categorias.map(catObj => `
-        <div class="checkbox-item">
-            <input type="checkbox" id="cat-${catObj.id}" value="${catObj.id}">
-            <label for="cat-${catObj.id}">${catObj.nombre}</label>
-        </div>
-    `).join('');
+    while (categoriasContainer.firstChild) categoriasContainer.removeChild(categoriasContainer.firstChild);
+    data.categorias.forEach(catObj => {
+        const div = document.createElement('div');
+        div.className = 'checkbox-item';
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.id = `cat-${catObj.id}`;
+        input.value = catObj.id;
+        const label = document.createElement('label');
+        label.htmlFor = `cat-${catObj.id}`;
+        label.textContent = catObj.nombre;
+        div.appendChild(input);
+        div.appendChild(label);
+        categoriasContainer.appendChild(div);
+    });
     // Años
     const añosContainer = document.getElementById('años-container');
-    añosContainer.innerHTML = data.años.map(año => `
-        <div class="checkbox-item">
-            <input type="checkbox" id="año-${año}" value="${año}">
-            <label for="año-${año}">${año}</label>
-        </div>
-    `).join('');
+    while (añosContainer.firstChild) añosContainer.removeChild(añosContainer.firstChild);
+    data.años.forEach(año => {
+        const div = document.createElement('div');
+        div.className = 'checkbox-item';
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.id = `año-${año}`;
+        input.value = año;
+        const label = document.createElement('label');
+        label.htmlFor = `año-${año}`;
+        label.textContent = año;
+        div.appendChild(input);
+        div.appendChild(label);
+        añosContainer.appendChild(div);
+    });
     // Comunidades
     const comunidadesContainer = document.getElementById('comunidades-container');
-    comunidadesContainer.innerHTML = data.comunidades.map(com => `
-        <div class="checkbox-item">
-            <input type="checkbox" id="com-${com}" value="${com}">
-            <label for="com-${com}">${com}</label>
-        </div>
-    `).join('');
-    
+    while (comunidadesContainer.firstChild) comunidadesContainer.removeChild(comunidadesContainer.firstChild);
+    data.comunidades.forEach(com => {
+        const div = document.createElement('div');
+        div.className = 'checkbox-item';
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.id = `com-${com}`;
+        input.value = com;
+        const label = document.createElement('label');
+        label.htmlFor = `com-${com}`;
+        label.textContent = com;
+        div.appendChild(input);
+        div.appendChild(label);
+        comunidadesContainer.appendChild(div);
+    });
     // Actualizar indicadores de scroll después de llenar los contenedores
     setTimeout(() => {
         updateScrollIndicators();
@@ -331,15 +359,58 @@ function showQuestion(index) {
         popover.className = 'question-metadata-popover';
         popover.id = 'meta-popover-exam';
         popover.tabIndex = -1;
-        popover.innerHTML = `
-            <button class="close-metadata-popover" aria-label="Cerrar">&times;</button>
-            <strong>Apareció en:</strong><br>
-            <span><b>Comunidad:</b> ${question.metadata.community || ''}</span><br>
-            <span><b>Año:</b> ${question.metadata.year || ''}</span><br>
-            <span><b>Convocatoria:</b> ${question.metadata.call || ''}</span><br>
-            <span><b>Modelo:</b> ${question.metadata.test_code || ''}</span><br>
-            <span><b>Pregunta original:</b> ${question.metadata.numero_pregunta || 'N/A'}</span>
-        `;
+        // Limpiar contenido previo
+        while (popover.firstChild) popover.removeChild(popover.firstChild);
+        // Botón cerrar
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'close-metadata-popover';
+        closeBtn.setAttribute('aria-label', 'Cerrar');
+        closeBtn.textContent = '×';
+        popover.appendChild(closeBtn);
+        // Título
+        const strong = document.createElement('strong');
+        strong.textContent = 'Apareció en:';
+        popover.appendChild(strong);
+        popover.appendChild(document.createElement('br'));
+        // Comunidad
+        const spanCom = document.createElement('span');
+        const bCom = document.createElement('b');
+        bCom.textContent = 'Comunidad:';
+        spanCom.appendChild(bCom);
+        spanCom.appendChild(document.createTextNode(' ' + (question.metadata.community || '')));
+        popover.appendChild(spanCom);
+        popover.appendChild(document.createElement('br'));
+        // Año
+        const spanA = document.createElement('span');
+        const bA = document.createElement('b');
+        bA.textContent = 'Año:';
+        spanA.appendChild(bA);
+        spanA.appendChild(document.createTextNode(' ' + (question.metadata.year || '')));
+        popover.appendChild(spanA);
+        popover.appendChild(document.createElement('br'));
+        // Convocatoria
+        const spanC = document.createElement('span');
+        const bC = document.createElement('b');
+        bC.textContent = 'Convocatoria:';
+        spanC.appendChild(bC);
+        spanC.appendChild(document.createTextNode(' ' + (question.metadata.call || '')));
+        popover.appendChild(spanC);
+        popover.appendChild(document.createElement('br'));
+        // Modelo
+        const spanM = document.createElement('span');
+        const bM = document.createElement('b');
+        bM.textContent = 'Modelo:';
+        spanM.appendChild(bM);
+        spanM.appendChild(document.createTextNode(' ' + (question.metadata.test_code || '')));
+        popover.appendChild(spanM);
+        popover.appendChild(document.createElement('br'));
+        // Pregunta original
+        const spanP = document.createElement('span');
+        const bP = document.createElement('b');
+        bP.textContent = 'Pregunta original:';
+        spanP.appendChild(bP);
+        spanP.appendChild(document.createTextNode(' ' + (question.metadata.numero_pregunta || 'N/A')));
+        popover.appendChild(spanP);
         popover.style.display = 'none';
         popover.style.position = 'absolute';
         popover.style.left = '50%';
@@ -389,18 +460,29 @@ function showQuestion(index) {
     }
     document.getElementById('question-text').textContent = question.enunciado;
     
-    // Mostrar opciones
+    // Mostrar opciones de forma segura (sin innerHTML)
     const optionsContainer = document.getElementById('question-options');
-    optionsContainer.innerHTML = Object.entries(question.opciones).map(([letter, text]) => `
-        <div class="option" data-value="${letter}">
-            <div class="option-letter">${letter.toUpperCase()}</div>
-            <div class="option-text">${text}</div>
-        </div>
-    `).join('');
-    
-    // Agregar eventos a opciones
-    document.querySelectorAll('.option').forEach(option => {
-        option.addEventListener('click', () => selectOption(option));
+    // Limpiar opciones previas
+    while (optionsContainer.firstChild) {
+        optionsContainer.removeChild(optionsContainer.firstChild);
+    }
+    Object.entries(question.opciones).forEach(([letter, text]) => {
+        const optionDiv = document.createElement('div');
+        optionDiv.className = 'option';
+        optionDiv.setAttribute('data-value', letter);
+
+        const letterDiv = document.createElement('div');
+        letterDiv.className = 'option-letter';
+        letterDiv.textContent = letter.toUpperCase();
+
+        const textDiv = document.createElement('div');
+        textDiv.className = 'option-text';
+        textDiv.textContent = text;
+
+        optionDiv.appendChild(letterDiv);
+        optionDiv.appendChild(textDiv);
+        optionDiv.addEventListener('click', () => selectOption(optionDiv));
+        optionsContainer.appendChild(optionDiv);
     });
     
     // Restaurar respuesta previa si existe (solo dentro del mismo examen)
@@ -536,102 +618,192 @@ function showResults(result) {
     
     // Resultados por categoría
     const categoryContainer = document.getElementById('category-results');
-    categoryContainer.innerHTML = Object.entries(result.desglose_por_categoria).map(([category, data]) => {
-        // Usar el mapeo global para mostrar el nombre legible
+    // Limpiar contenido previo
+    while (categoryContainer.firstChild) categoryContainer.removeChild(categoryContainer.firstChild);
+    Object.entries(result.desglose_por_categoria).forEach(([category, data]) => {
         let categoryName = categoryIdNameMap[category] || category.replace(/_/g, ' ');
-        return `
-            <div class="category-result">
-                <div class="category-name">${categoryName}</div>
-                <div class="category-score">${data.correctas}/${data.total} (${data.porcentaje}%)</div>
-            </div>
-        `;
-    }).join('');
+        const divResult = document.createElement('div');
+        divResult.className = 'category-result';
+        const divName = document.createElement('div');
+        divName.className = 'category-name';
+        divName.textContent = categoryName;
+        const divScore = document.createElement('div');
+        divScore.className = 'category-score';
+        divScore.textContent = `${data.correctas}/${data.total} (${data.porcentaje}%)`;
+        divResult.appendChild(divName);
+        divResult.appendChild(divScore);
+        categoryContainer.appendChild(divResult);
+    });
     
     // Detalle de preguntas
     const questionsContainer = document.getElementById('question-details');
-    questionsContainer.innerHTML = result.preguntas_detalle.map((detail, index) => {
+    // Limpiar contenido previo
+    while (questionsContainer.firstChild) questionsContainer.removeChild(questionsContainer.firstChild);
+    result.preguntas_detalle.forEach((detail, index) => {
         const meta = detail.metadata;
         const popoverId = `meta-popover-${index}`;
-        // Mostrar todas las opciones para referencia
-        const opcionesHtml = Object.entries(detail.opciones).map(([letra, texto]) => {
+        // Opciones de referencia
+        const optionsList = document.createElement('div');
+        optionsList.className = 'options-list';
+        Object.entries(detail.opciones).forEach(([letra, texto]) => {
             let claseOpcion = 'option-reference';
             const esCorrecta = detail.respuestas_correctas_lista.includes(letra);
             const esRespuestaUsuario = letra === detail.respuesta_usuario;
-            
-            if (esCorrecta) {
-                claseOpcion += ' correct-option';
-            }
-            if (esRespuestaUsuario && !detail.es_correcta) {
-                claseOpcion += ' user-wrong-option';
-            }
-            
-            // Indicadores especiales
+            if (esCorrecta) claseOpcion += ' correct-option';
+            if (esRespuestaUsuario && !detail.es_correcta) claseOpcion += ' user-wrong-option';
+            // Indicadores
             let indicadores = '';
             if (esCorrecta) {
                 if (detail.es_anulada) {
-                    indicadores = '<span class="correct-indicator">✓ (anulada)</span>';
-                } else if (detail.respuestas_correctas_lista.length > 1) {
-                    indicadores = '<span class="correct-indicator">✓</span>';
+                    indicadores = '✓ (anulada)';
                 } else {
-                    indicadores = '<span class="correct-indicator">✓</span>';
+                    indicadores = '✓';
                 }
             }
             if (esRespuestaUsuario && !detail.es_correcta) {
-                indicadores += '<span class="wrong-indicator">✗</span>';
+                indicadores += '✗';
             }
-            
-            return `
-                <div class="${claseOpcion}">
-                    <span class="option-letter-ref">${letra.toUpperCase()}</span>
-                    <span class="option-text-ref">${texto}</span>
-                    ${indicadores}
-                </div>
-            `;
-        }).join('');
-        return `
-            <div class="question-detail ${detail.es_correcta ? 'correct' : 'incorrect'}">
-                <div class="question-detail-header">
-                    <span class="question-number-detail">
-                        Pregunta ${index + 1}
-                        <span class="metadata-popover-container" style="position: relative; display: inline-block;">
-                            <button class="question-metadata-link" tabindex="0" aria-label="Ver metadatos de la pregunta" data-popover="${popoverId}" style="margin-left: 0.4em; vertical-align: middle;">
-                                ℹ️
-                            </button>
-                            <div class="question-metadata-popover" id="${popoverId}" tabindex="-1">
-                                <button class="close-metadata-popover" aria-label="Cerrar">&times;</button>
-                                <strong>Apareció en:</strong><br>
-                                <span><b>Comunidad:</b> ${meta.community}</span><br>
-                                <span><b>Año:</b> ${meta.year}</span><br>
-                                <span><b>Convocatoria:</b> ${meta.call}</span><br>
-                                <span><b>Modelo:</b> ${meta.test_code}</span><br>
-                                <span><b>Pregunta original:</b> ${meta.numero_pregunta || 'N/A'}</span>
-                            </div>
-                        </span>
-                    </span>
-                    <span class="question-status ${detail.es_correcta ? 'correct' : 'incorrect'}">
-                        ${detail.es_correcta ? '✅ Correcta' : '❌ Incorrecta'}
-                    </span>
-                </div>
-                <div class="question-detail-content">
-                    <div class="question-text-detail">
-                        <strong>Pregunta:</strong> ${detail.enunciado}
-                    </div>
-                    <div class="all-options">
-                        <div class="options-label">Opciones:</div>
-                        <div class="options-list">
-                            ${opcionesHtml}
-                        </div>
-                        ${detail.es_anulada ? 
-                            '<div class="answer-info anulada-info">🔺 Pregunta anulada: todas las opciones son válidas</div>' :
-                            detail.respuestas_correctas_lista.length > 1 ? 
-                                `<div class="answer-info multiple-info">ℹ️ Múltiples respuestas válidas: ${detail.respuestas_correctas_lista.map(r => r.toUpperCase()).join(', ')}</div>` :
-                                ''
-                        }
-                    </div>
-                </div>
-            </div>
-        `;
-    }).join('');
+            const divOpt = document.createElement('div');
+            divOpt.className = claseOpcion;
+            const spanLetra = document.createElement('span');
+            spanLetra.className = 'option-letter-ref';
+            spanLetra.textContent = letra.toUpperCase();
+            const spanTexto = document.createElement('span');
+            spanTexto.className = 'option-text-ref';
+            spanTexto.textContent = texto;
+            divOpt.appendChild(spanLetra);
+            divOpt.appendChild(spanTexto);
+            if (indicadores) {
+                const spanInd = document.createElement('span');
+                spanInd.className = esCorrecta ? 'correct-indicator' : 'wrong-indicator';
+                spanInd.textContent = indicadores;
+                divOpt.appendChild(spanInd);
+            }
+            optionsList.appendChild(divOpt);
+        });
+        // Contenedor principal de la pregunta
+        const divDetail = document.createElement('div');
+        divDetail.className = `question-detail ${detail.es_correcta ? 'correct' : 'incorrect'}`;
+        // Header
+        const divHeader = document.createElement('div');
+        divHeader.className = 'question-detail-header';
+        // Número de pregunta y popover
+        const spanNum = document.createElement('span');
+        spanNum.className = 'question-number-detail';
+        spanNum.textContent = `Pregunta ${index + 1}`;
+        const spanMeta = document.createElement('span');
+        spanMeta.className = 'metadata-popover-container';
+        spanMeta.style.position = 'relative';
+        spanMeta.style.display = 'inline-block';
+        const btnMeta = document.createElement('button');
+        btnMeta.className = 'question-metadata-link';
+        btnMeta.tabIndex = 0;
+        btnMeta.setAttribute('aria-label', 'Ver metadatos de la pregunta');
+        btnMeta.dataset.popover = popoverId;
+        btnMeta.style.marginLeft = '0.4em';
+        btnMeta.style.verticalAlign = 'middle';
+        btnMeta.textContent = 'ℹ️';
+        // Popover
+        const divPopover = document.createElement('div');
+        divPopover.className = 'question-metadata-popover';
+        divPopover.id = popoverId;
+        divPopover.tabIndex = -1;
+        // Botón cerrar
+        const btnClose = document.createElement('button');
+        btnClose.className = 'close-metadata-popover';
+        btnClose.setAttribute('aria-label', 'Cerrar');
+        btnClose.textContent = '×';
+        divPopover.appendChild(btnClose);
+        // Título
+        const strong = document.createElement('strong');
+        strong.textContent = 'Apareció en:';
+        divPopover.appendChild(strong);
+        divPopover.appendChild(document.createElement('br'));
+        // Comunidad
+        const spanCom = document.createElement('span');
+        const bCom = document.createElement('b');
+        bCom.textContent = 'Comunidad:';
+        spanCom.appendChild(bCom);
+        spanCom.appendChild(document.createTextNode(' ' + (meta.community || '')));
+        divPopover.appendChild(spanCom);
+        divPopover.appendChild(document.createElement('br'));
+        // Año
+        const spanA = document.createElement('span');
+        const bA = document.createElement('b');
+        bA.textContent = 'Año:';
+        spanA.appendChild(bA);
+        spanA.appendChild(document.createTextNode(' ' + (meta.year || '')));
+        divPopover.appendChild(spanA);
+        divPopover.appendChild(document.createElement('br'));
+        // Convocatoria
+        const spanC = document.createElement('span');
+        const bC = document.createElement('b');
+        bC.textContent = 'Convocatoria:';
+        spanC.appendChild(bC);
+        spanC.appendChild(document.createTextNode(' ' + (meta.call || '')));
+        divPopover.appendChild(spanC);
+        divPopover.appendChild(document.createElement('br'));
+        // Modelo
+        const spanM = document.createElement('span');
+        const bM = document.createElement('b');
+        bM.textContent = 'Modelo:';
+        spanM.appendChild(bM);
+        spanM.appendChild(document.createTextNode(' ' + (meta.test_code || '')));
+        divPopover.appendChild(spanM);
+        divPopover.appendChild(document.createElement('br'));
+        // Pregunta original
+        const spanP = document.createElement('span');
+        const bP = document.createElement('b');
+        bP.textContent = 'Pregunta original:';
+        spanP.appendChild(bP);
+        spanP.appendChild(document.createTextNode(' ' + (meta.numero_pregunta || 'N/A')));
+        divPopover.appendChild(spanP);
+        // Ensamblar popover
+        spanMeta.appendChild(btnMeta);
+        spanMeta.appendChild(divPopover);
+        divHeader.appendChild(spanNum);
+        divHeader.appendChild(spanMeta);
+        // Estado
+        const spanStatus = document.createElement('span');
+        spanStatus.className = `question-status ${detail.es_correcta ? 'correct' : 'incorrect'}`;
+        spanStatus.textContent = detail.es_correcta ? '✅ Correcta' : '❌ Incorrecta';
+        divHeader.appendChild(spanStatus);
+        divDetail.appendChild(divHeader);
+        // Contenido
+        const divContent = document.createElement('div');
+        divContent.className = 'question-detail-content';
+        // Texto pregunta
+        const divText = document.createElement('div');
+        divText.className = 'question-text-detail';
+        const strongQ = document.createElement('strong');
+        strongQ.textContent = 'Pregunta:';
+        divText.appendChild(strongQ);
+        divText.appendChild(document.createTextNode(' ' + detail.enunciado));
+        divContent.appendChild(divText);
+        // Opciones
+        const divAllOpt = document.createElement('div');
+        divAllOpt.className = 'all-options';
+        const divLabel = document.createElement('div');
+        divLabel.className = 'options-label';
+        divLabel.textContent = 'Opciones:';
+        divAllOpt.appendChild(divLabel);
+        divAllOpt.appendChild(optionsList);
+        // Info anulada o múltiple
+        if (detail.es_anulada) {
+            const divInfo = document.createElement('div');
+            divInfo.className = 'answer-info anulada-info';
+            divInfo.textContent = '🔺 Pregunta anulada: todas las opciones son válidas';
+            divAllOpt.appendChild(divInfo);
+        } else if (detail.respuestas_correctas_lista.length > 1) {
+            const divInfo = document.createElement('div');
+            divInfo.className = 'answer-info multiple-info';
+            divInfo.textContent = `ℹ️ Múltiples respuestas válidas: ${detail.respuestas_correctas_lista.map(r => r.toUpperCase()).join(', ')}`;
+            divAllOpt.appendChild(divInfo);
+        }
+        divContent.appendChild(divAllOpt);
+        divDetail.appendChild(divContent);
+        questionsContainer.appendChild(divDetail);
+    });
 
     // Lógica para mostrar/cerrar popovers de metadatos
     document.querySelectorAll('.question-metadata-link').forEach(btn => {

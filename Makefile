@@ -148,8 +148,8 @@ test-ci:
 
 # Comandos para ejecutar la aplicación
 security:
-	@echo "$(GREEN)🔎 Ejecutando análisis de seguridad del código (usando Semgrep, reglas p/ci)...$(NC)"
-	. venv/bin/activate && semgrep --config p/ci app/ app/routers/ static/ tools/ || exit 1
+	@echo "$(GREEN)🔎 Ejecutando análisis de seguridad del código (usando 'semgrep ci')...$(NC)"
+	. venv/bin/activate && semgrep ci || exit 1
 run:
 	@echo "$(GREEN)🚀 Iniciando aplicación (configuración por defecto desde settings.py)...$(NC)"
 	$(PYTHON_CMD) -c "from app.main import main; main()"
