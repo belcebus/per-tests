@@ -10,8 +10,8 @@ Estos modelos representan la estructura de nuestros datos principales.
 """
 
 from typing import Dict, List, Optional
-from pydantic import BaseModel, Field
 from datetime import datetime
+from pydantic import BaseModel, Field
 
 
 # ================================
@@ -54,7 +54,7 @@ class QuestionMetadata(BaseModel):
     categoria: Optional[str] = None
     categoria_nombre: Optional[str] = None
     convocatoria: Optional[str] = None
-    año: Optional[int] = None
+    anio: Optional[int] = None
     comunidad_autonoma: Optional[str] = None
     numero_pregunta: Optional[int] = None
 
@@ -131,7 +131,7 @@ class ExamGenerationRequest(BaseModel):
     El usuario puede especificar:
     - num_preguntas: Cuántas preguntas quiere (por defecto 45)
     - categorias: Lista de categorías específicas (None = todas)
-    - años: Lista de años específicos (None = todos)
+    - anios: Lista de años específicos (None = todos)
     - comunidades: Lista de comunidades específicas (None = todas)
     - tipo_examen: Tipo de examen (por defecto "per")
     """
@@ -142,7 +142,7 @@ class ExamGenerationRequest(BaseModel):
         description="Número de preguntas del examen (entre 1 y 100)"
     )
     categorias: Optional[List[str]] = None
-    años: Optional[List[int]] = None
+    anios: Optional[List[int]] = None
     comunidades: Optional[List[str]] = None
     tipo_examen: str = "per"
 

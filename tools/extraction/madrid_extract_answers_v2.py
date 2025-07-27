@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# pylint: disable=no-member
 """
 Extrae respuestas de exámenes tipo test desde PDF escaneado usando OCR.
 Salida: un JSON por modelo en extracted-answers/ con la estructura de ejemplo.

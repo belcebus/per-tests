@@ -60,6 +60,7 @@ tools = [
     "Pillow>=10.0.0",
     "pdfplumber>=0.9.0",
     "numpy>=1.24.0",
+    "opencv-python>=4.9.0.80",
 ]
 
 # Dependencias completas (aplicación + desarrollo + herramientas)

@@ -32,7 +32,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 @asynccontextmanager
-async def lifespan(app: FastAPI):
+async def lifespan(_app: FastAPI):
     """
     Manejador de eventos de ciclo de vida de la aplicación.
 
@@ -77,7 +77,7 @@ def create_app() -> FastAPI:
     configuración.
     Útil para tests que requieren aislamiento.
     """
-    app = FastAPI(
+    fastapi_app = FastAPI(
         title=settings.api_title,
         description=settings.api_description,
         version=settings.api_version,
@@ -85,18 +85,18 @@ def create_app() -> FastAPI:
         redoc_url="/redoc",
         lifespan=lifespan,
     )
-    app.include_router(exams.router)
-    app.mount(
+    fastapi_app.include_router(exams.router)
+    fastapi_app.mount(
         "/static",
         StaticFiles(directory=str(settings.get_static_path())),
         name="static",
     )
 
-    @app.get("/")
+    @fastapi_app.get("/")
     async def root():
         return RedirectResponse(url="/static/index.html")
 
-    @app.get("/health")
+    @fastapi_app.get("/health")
     async def health_check():
         return {
             "status": "healthy",
@@ -104,7 +104,7 @@ def create_app() -> FastAPI:
             "preguntas_cargadas": len(question_loader.all_questions),
         }
 
-    return app
+    return fastapi_app
 
 
 # Instancia global para producción/servidor
@@ -135,13 +135,9 @@ def main():
 
 
 if __name__ == "__main__":
-    """
-    Esto se ejecuta solo si corremos el archivo directamente.
-
-    Para desarrollo local:
-    python app/main.py
-
-    Para producción se usa:
-    uvicorn app.main:app --host 0.0.0.0 --port 8000
-    """
+    # Esto se ejecuta solo si corremos el archivo directamente.
+    # Para desarrollo local:
+    # python app/main.py
+    # Para producción se usa:
+    # uvicorn app.main:app --host 0.0.0.0 --port 8000
     main()

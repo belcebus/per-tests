@@ -42,14 +42,14 @@ class TestQuestionMetadata:
             # Campos opcionales de compatibilidad
             categoria="navegacion",
             convocatoria="abril",
-            año=2023,
+            anio=2023,
             comunidad_autonoma="madrid",
             numero_pregunta=1
         )
         
         assert metadata.categoria == "navegacion"
         assert metadata.convocatoria == "abril"
-        assert metadata.año == 2023
+        assert metadata.anio == 2023
         assert metadata.comunidad_autonoma == "madrid"
         assert metadata.numero_pregunta == 1
     
@@ -122,23 +122,23 @@ class TestExamGenerationRequest:
         
         assert request.num_preguntas == 45  # Valor por defecto
         assert request.categorias is None
-        assert request.años is None
+        assert request.anios is None
         assert request.comunidades is None
         assert request.tipo_examen == "per"  # Valor por defecto
-    
+
     def test_custom_values(self):
         """Test con valores personalizados."""
         request = ExamGenerationRequest(
             num_preguntas=30,
             categorias=["navegacion", "seguridad"],
-            años=[2023, 2024],
+            anios=[2023, 2024],
             comunidades=["madrid", "barcelona"],
             tipo_examen="per"
         )
         
         assert request.num_preguntas == 30
         assert request.categorias == ["navegacion", "seguridad"]
-        assert request.años == [2023, 2024]
+        assert request.anios == [2023, 2024]
         assert request.comunidades == ["madrid", "barcelona"]
         assert request.tipo_examen == "per"
     

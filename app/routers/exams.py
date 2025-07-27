@@ -7,8 +7,9 @@ Este módulo define las rutas de la API que el cliente puede llamar:
 - GET /api/exams/info: Obtener información sobre preguntas disponibles
 """
 
-from fastapi import APIRouter, HTTPException
+
 from typing import Dict, Any
+from fastapi import APIRouter, HTTPException
 
 from app.models.schemas import (
     ExamGenerationRequest, GeneratedExam,
@@ -85,10 +86,6 @@ async def generate_exam(request: ExamGenerationRequest) -> GeneratedExam:
     except ValueError as e:
         # Si no hay suficientes preguntas, devolver error 400
         raise HTTPException(status_code=400, detail=str(e))
-    except Exception as e:
-        # Para cualquier otro error, devolver error 500
-        raise HTTPException(status_code=500,
-                            detail=f"Error generando examen: {str(e)}")
 
 
 @router.post("/correct", response_model=ExamResult)
@@ -193,7 +190,7 @@ async def get_categories() -> Dict[str, list]:
         # Usar el método del question_loader que ya devuelve el formato correcto
         return {
             "categorias": question_loader.get_available_categories(),
-            "años": question_loader.get_available_years(),
+            "anios": question_loader.get_available_years(),
             "comunidades": question_loader.get_available_communities()
         }
     except Exception as e:

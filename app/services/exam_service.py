@@ -57,7 +57,7 @@ class ExamService:
         # 1. Obtener preguntas que cumplen los criterios
         available_questions = question_loader.get_questions_by_criteria(
             categorias=request.categorias,
-            años=request.años,
+            anios=request.anios,
             comunidades=request.comunidades,
             tipo_examen=request.tipo_examen
         )
@@ -295,7 +295,7 @@ class ExamService:
         # Filtrar preguntas por años y comunidades (si se especifican)
         available_questions = question_loader.get_questions_by_criteria(
             categorias=None,  # No filtrar por categorías en simulacro
-            años=request.años,
+            anios=request.anios,
             comunidades=request.comunidades,
             tipo_examen=request.tipo_examen
         )
@@ -308,7 +308,7 @@ class ExamService:
             if hasattr(q.metadata, 'categoria') and q.metadata.categoria:
                 try:
                     cat_id = int(q.metadata.categoria)
-                except Exception:
+                except (ValueError, TypeError):
                     continue
             if cat_id is not None:
                 questions_by_cat.setdefault(cat_id, []).append(q)
@@ -317,15 +317,19 @@ class ExamService:
         selected_questions = []
 
         # Procesar las categorías en orden numérico para mantener estructura del examen real
-        for cat_id in sorted(distribution.keys()):
+        for cat_id in sorted(distribution.keys()):  # pylint: disable=no-member
             num_questions = distribution[cat_id]
             cat_questions = questions_by_cat.get(cat_id, [])
 
             if len(cat_questions) < num_questions:
-                raise ValueError(f"No hay suficientes preguntas en la categoría {cat_id} para el simulacro")
+                raise ValueError(
+                    f"No hay suficientes preguntas en la categoría {cat_id} "
+                    f"para el simulacro"
+                )
 
             # Seleccionar preguntas aleatorias de esta categoría
-            selected_category_questions = random.sample(cat_questions, num_questions)
+            selected_category_questions = random.sample(
+                cat_questions, num_questions)
 
             # Mezclar el orden dentro de la categoría
             random.shuffle(selected_category_questions)
@@ -354,7 +358,8 @@ class ExamService:
         ]
 
         self._cleanup_expired_exams()
-        print(f"✅ Simulacro generado con ID: {exam_id} (preguntas agrupadas por categorías)")
+        print(f"✅ Simulacro generado con ID: {exam_id} "
+              f"(preguntas agrupadas por categorías)")
         return GeneratedExam(
             exam_id=exam_id,
             questions=client_questions,

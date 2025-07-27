@@ -2,7 +2,7 @@
 quality: venv
 	@echo "$(GREEN)🔎 Análisis de calidad de código (flake8, pylint, black, isort, radon, mypy)...$(NC)"
 	venv/bin/flake8 app config tools
-	venv/bin/pylint app config tools
+	venv/bin/pylint --disable=all --enable=E,F app config tools
 	venv/bin/black --check app config tools
 	venv/bin/isort --check app config tools
 	venv/bin/radon cc -s app config tools

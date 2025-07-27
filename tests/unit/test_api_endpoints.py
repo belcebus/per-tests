@@ -57,7 +57,7 @@ class TestExamEndpoints:
         exam_request = ExamGenerationRequest(
             num_preguntas=10,
             categorias=["nomenclatura_nautica"],
-            años=[2022],
+            anios=[2022],
             comunidades=["Madrid"]
         )
         
@@ -83,7 +83,7 @@ class TestExamEndpoints:
                         call="Ordinaria",
                         test_code="Test01",
                         categoria="nomenclatura_nautica",
-                        año=2022,
+                        anio=2022,
                         comunidad_autonoma="Madrid"
                     )
                 )
@@ -213,7 +213,7 @@ class TestExamEndpoints:
         mock_question_loader.get_stats.return_value = {
             "total_preguntas": 1000,
             "categorias": 5,
-            "años_disponibles": [2022, 2023, 2024],
+            "anios_disponibles": [2022, 2023, 2024],
             "comunidades_disponibles": ["Madrid", "Valencia"],
             "preguntas_por_categoria": {"1": 100, "6": 200}
         }
@@ -245,10 +245,10 @@ class TestExamEndpoints:
         assert response.status_code == 200
         data = response.json()
         assert "categorias" in data
-        assert "años" in data
+        assert "anios" in data
         assert "comunidades" in data
         assert len(data["categorias"]) == 2
-        assert len(data["años"]) == 3
+        assert len(data["anios"]) == 3
         assert len(data["comunidades"]) == 2
 
     def test_invalid_endpoint(self, client: TestClient):
@@ -281,7 +281,7 @@ class TestExamEndpointsAsync:
                 metadata=ExamGenerationRequest(
                     num_preguntas=1,
                     categorias=["nomenclatura_nautica"],
-                    años=[2022],
+                    anios=[2022],
                     comunidades=["Madrid"]
                 )
             )

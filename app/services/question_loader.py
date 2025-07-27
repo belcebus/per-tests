@@ -158,6 +158,7 @@ class QuestionLoader:
                                 categoria_nombre=category_name,  # <-- Nuevo campo para nombre legible
                                 convocatoria=exam_info.get('call', 'Ordinaria'),
                                 año=exam_info.get('year', 2025),
+                                anio=exam_info.get('year', 2025),
                                 comunidad_autonoma=exam_info.get('community', 'Madrid'),
                                 numero_pregunta=question_data.get('id', 0)
                             )
@@ -181,7 +182,7 @@ class QuestionLoader:
     def get_questions_by_criteria(
         self,
         categorias: List[str] = None,
-        años: List[int] = None,
+        anios: List[int] = None,
         comunidades: List[str] = None,
         tipo_examen: str = "per"
     ) -> List[Question]:
@@ -190,7 +191,7 @@ class QuestionLoader:
 
         Args:
             categorias: Lista de categorías deseadas (None = todas)
-            años: Lista de años deseados (None = todos)
+            anios: Lista de años deseados (None = todos)
             comunidades: Lista de comunidades deseadas (None = todas)
             tipo_examen: Tipo de examen
 
@@ -207,10 +208,10 @@ class QuestionLoader:
             ]
 
         # Filtrar por años
-        if años:
+        if anios:
             filtered_questions = [
                 q for q in filtered_questions
-                if q.metadata.año in años
+                if q.metadata.anio in anios
             ]
 
         # Filtrar por comunidades
@@ -252,7 +253,7 @@ class QuestionLoader:
         Returns:
             Lista de años únicos
         """
-        years = set(q.metadata.año for q in self.all_questions)
+        years = set(q.metadata.anio for q in self.all_questions)
         return sorted(list(years))
 
     def get_available_communities(self) -> List[str]:
