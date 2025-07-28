@@ -17,7 +17,7 @@ sys.path.insert(0, str(project_root))
 def load_exam_yaml(filepath):
     """Carga un archivo YAML de examen y retorna su contenido."""
     try:
-        with open(filepath, 'r', encoding='utf-8') as f:
+        with open(filepath, "r", encoding="utf-8") as f:
             return yaml.safe_load(f)
     except Exception as e:
         print(f"❌ Error al cargar {filepath}: {e}")
@@ -26,19 +26,19 @@ def load_exam_yaml(filepath):
 
 def analyze_exam_distribution(exam_data):
     """Analiza la distribución de preguntas por categoría en un examen."""
-    if not exam_data or 'categories' not in exam_data:
+    if not exam_data or "categories" not in exam_data:
         return {}
     distribution = {}
-    for cat_id, cat_data in exam_data['categories'].items():
-        distribution[int(cat_id)] = len(cat_data.get('questions', []))
+    for cat_id, cat_data in exam_data["categories"].items():
+        distribution[int(cat_id)] = len(cat_data.get("questions", []))
     return distribution
 
 
 def get_exam_info(exam_data):
     """Extrae información básica del examen."""
-    if not exam_data or 'exam_info' not in exam_data:
+    if not exam_data or "exam_info" not in exam_data:
         return {}
-    return exam_data['exam_info']
+    return exam_data["exam_info"]
 
 
 def find_all_exam_files():
@@ -57,7 +57,9 @@ def format_distribution_comparison(official_dist, exam_dist, exam_name):
     lines.append(f"\n📊 {exam_name}")
     lines.append("=" * 80)
     lines.append("Cat | Nombre Categoría           | Oficial | Extraído | Dif | Estado")
-    lines.append("----|----------------------------|---------|----------|-----|--------")
+    lines.append(
+        "----|----------------------------|---------|----------|-----|--------"
+    )
     total_official = 0
     total_extracted = 0
     all_match = True
@@ -73,23 +75,29 @@ def format_distribution_comparison(official_dist, exam_dist, exam_name):
         8: "Emergencias en la mar",
         9: "Meteorología",
         10: "Teoría de la navegación",
-        11: "Carta de navegación"
+        11: "Carta de navegación",
     }
     for cat_id in sorted(official_dist.keys()):
         official_count = official_dist[cat_id]
         extracted_count = exam_dist.get(cat_id, 0)
         diff = extracted_count - official_count
-        status = '✅ OK' if diff == 0 else f'❌ {diff:+d}'
+        status = "✅ OK" if diff == 0 else f"❌ {diff:+d}"
         cat_name = category_names.get(cat_id, f"Categoría {cat_id}")
         if diff != 0:
             all_match = False
         total_official += official_count
         total_extracted += extracted_count
-        lines.append(f"{cat_id:3d} | {cat_name:<26} | {official_count:7d} | {extracted_count:8d} | {diff:+3d} | {status}")
-    lines.append("----|----------------------------|---------|----------|-----|--------")
+        lines.append(
+            f"{cat_id:3d} | {cat_name:<26} | {official_count:7d} | {extracted_count:8d} | {diff:+3d} | {status}"
+        )
+    lines.append(
+        "----|----------------------------|---------|----------|-----|--------"
+    )
     total_diff = total_extracted - total_official
-    total_status = '✅ PERFECTO' if all_match else f'❌ DIFERENCIAS ({total_diff:+d})'
-    lines.append(f"TOT | {'TOTAL':<26} | {total_official:7d} | {total_extracted:8d} | {total_diff:+3d} | {total_status}")
+    total_status = "✅ PERFECTO" if all_match else f"❌ DIFERENCIAS ({total_diff:+d})"
+    lines.append(
+        f"TOT | {'TOTAL':<26} | {total_official:7d} | {total_extracted:8d} | {total_diff:+3d} | {total_status}"
+    )
     return lines, all_match
 
 
@@ -112,7 +120,7 @@ def main():
         8: "Emergencias en la mar",
         9: "Meteorología",
         10: "Teoría de la navegación",
-        11: "Carta de navegación"
+        11: "Carta de navegación",
     }
     for cat_id, count in sorted(official_dist.items()):
         cat_name = category_names.get(cat_id, f"Categoría {cat_id}")
@@ -137,7 +145,7 @@ def main():
         exam_info = get_exam_info(exam_data)
         # Verificar si el examen tiene el número correcto total de preguntas
         total_questions = sum(exam_dist.values())
-        expected_questions = exam_info.get('expected_questions', 45)
+        expected_questions = exam_info.get("expected_questions", 45)
         if total_questions == 0:
             error_exams.append(exam_name)
             continue
@@ -148,7 +156,9 @@ def main():
         if is_consistent and total_questions == expected_questions:
             consistent_exams.append(exam_name)
         else:
-            inconsistent_exams.append((exam_name, comparison_lines, total_questions, expected_questions))
+            inconsistent_exams.append(
+                (exam_name, comparison_lines, total_questions, expected_questions)
+            )
 
     # Resumen final
     print("\n📊 RESUMEN FINAL:")
@@ -183,14 +193,18 @@ def main():
             print(f"  💥 {exam}")
 
     # Estadísticas de consistencia
-    consistency_rate = (len(consistent_exams) / len(exam_files)) * 100 if exam_files else 0
+    consistency_rate = (
+        (len(consistent_exams) / len(exam_files)) * 100 if exam_files else 0
+    )
     print(f"\n📈 TASA DE CONSISTENCIA: {consistency_rate:.1f}%")
 
     if len(inconsistent_exams) > 0:
         print("\n💡 RECOMENDACIONES:")
         print("  - Revisar la extracción de preguntas en los exámenes inconsistentes")
         print("  - Verificar que las categorías estén correctamente identificadas")
-        print("  - Considerar re-extraer los exámenes problemáticos con los scripts actualizados")
+        print(
+            "  - Considerar re-extraer los exámenes problemáticos con los scripts actualizados"
+        )
 
 
 if __name__ == "__main__":

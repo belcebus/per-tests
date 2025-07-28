@@ -9,14 +9,15 @@ Aquí se configura:
 4. La carga inicial de preguntas
 """
 
-
-import sys
 import os
+import sys
 from contextlib import asynccontextmanager
-from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
-from fastapi.responses import RedirectResponse
+
 import uvicorn
+from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
+from fastapi.staticfiles import StaticFiles
+
 from app.routers import exams
 from app.services.question_loader import question_loader
 from config.settings import settings
@@ -65,6 +66,7 @@ async def lifespan(_app: FastAPI):
 
     # SHUTDOWN - Se ejecuta cuando la aplicación se cierra
     print("👋 Cerrando aplicación...")
+
 
 # ================================
 # CONFIGURACIÓN DE LA APLICACIÓN

@@ -18,6 +18,7 @@ from pydantic import BaseModel, Field
 # MODELOS PARA LAS PREGUNTAS
 # ================================
 
+
 class QuestionMetadata(BaseModel):
     """
     Información adicional sobre cada pregunta.
@@ -41,6 +42,7 @@ class QuestionMetadata(BaseModel):
     - numero_pregunta: Qué número tenía en el examen original\n"
       "(mantenido por compatibilidad)
     """
+
     # Nuevos campos principales
     title: str
     subtitle: str
@@ -70,10 +72,11 @@ class Question(BaseModel):
     - respuesta_correcta: La letra de la opción correcta ("a", "b", etc.)
     - metadata: Información adicional sobre la pregunta
     """
+
     id: str
     enunciado: str
     opciones: Dict[str, str]  # {"a": "opción 1", "b": "opción 2"}
-    respuesta_correcta: str   # "a", "b", "c", "d"
+    respuesta_correcta: str  # "a", "b", "c", "d"
     metadata: QuestionMetadata
 
 
@@ -84,6 +87,7 @@ class QuestionForClient(BaseModel):
     Es igual que Question pero SIN la respuesta correcta.
     Esto garantiza que el cliente no puede ver la respuesta correcta.
     """
+
     id: str
     enunciado: str
     opciones: Dict[str, str]
@@ -94,6 +98,7 @@ class QuestionForClient(BaseModel):
 # MODELOS PARA ARCHIVOS YAML
 # ================================
 
+
 class FileMetadata(BaseModel):
     """
     Metadatos que van al principio de cada archivo YAML.
@@ -103,6 +108,7 @@ class FileMetadata(BaseModel):
     - category: Categoría de las preguntas en este archivo
     - version: Versión del archivo
     """
+
     exam_type: str
     category: str
     version: str
@@ -116,6 +122,7 @@ class QuestionFile(BaseModel):
     - metadata: Información sobre el archivo
     - preguntas: Lista de todas las preguntas
     """
+
     metadata: FileMetadata
     preguntas: List[Question]
 
@@ -123,6 +130,7 @@ class QuestionFile(BaseModel):
 # ================================
 # MODELOS PARA GENERACIÓN DE EXÁMENES
 # ================================
+
 
 class ExamGenerationRequest(BaseModel):
     """
@@ -135,11 +143,12 @@ class ExamGenerationRequest(BaseModel):
     - comunidades: Lista de comunidades específicas (None = todas)
     - tipo_examen: Tipo de examen (por defecto "per")
     """
+
     num_preguntas: int = Field(
         default=45,
         ge=1,
         le=100,
-        description="Número de preguntas del examen (entre 1 y 100)"
+        description="Número de preguntas del examen (entre 1 y 100)",
     )
     categorias: Optional[List[str]] = None
     anios: Optional[List[int]] = None
@@ -156,6 +165,7 @@ class GeneratedExam(BaseModel):
     - questions: Lista de preguntas (sin respuestas correctas)
     - metadata: Información sobre cómo se generó el examen
     """
+
     exam_id: str
     questions: List[QuestionForClient]
     metadata: ExamGenerationRequest
@@ -165,6 +175,7 @@ class GeneratedExam(BaseModel):
 # MODELOS PARA CORRECCIÓN
 # ================================
 
+
 class ExamSubmission(BaseModel):
     """
     Respuestas del examen enviadas por el cliente.
@@ -173,6 +184,7 @@ class ExamSubmission(BaseModel):
     - exam_id: ID del examen que se está corrigiendo
     - respuestas: Diccionario con las respuestas {"pregunta_id": "letra"}
     """
+
     exam_id: str
     respuestas: Dict[str, str]  # {"per_nom_001_2023_madrid_p27": "b"}
 
@@ -186,6 +198,7 @@ class CategoryResult(BaseModel):
     - total: Número total de preguntas de esa categoría
     - porcentaje: Porcentaje de acierto
     """
+
     correctas: int
     total: int
     porcentaje: float
@@ -210,6 +223,7 @@ class QuestionResult(BaseModel):
     - metadata: Metadatos de la pregunta (comunidad, año, convocatoria,\n
       modelo, etc.)
     """
+
     question_id: str
     respuesta_usuario: Optional[str]
     respuesta_correcta: str
@@ -239,6 +253,7 @@ class ExamResult(BaseModel):
     - desglose_por_categoria: Resultados por cada categoría
     - preguntas_detalle: Detalle de cada pregunta
     """
+
     puntuacion_total: str
     porcentaje: float
     aprobado: bool
@@ -250,6 +265,7 @@ class ExamResult(BaseModel):
 # MODELOS PARA CACHÉ EN MEMORIA
 # ================================
 
+
 class CachedExam(BaseModel):
     """
     Examen almacenado en memoria del servidor.
@@ -259,6 +275,7 @@ class CachedExam(BaseModel):
     - metadata: Información sobre el examen
     - timestamp: Cuándo se creó (para limpieza automática)
     """
+
     questions: List[Question]
     metadata: ExamGenerationRequest
     timestamp: datetime

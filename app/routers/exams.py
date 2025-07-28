@@ -7,13 +7,15 @@ Este módulo define las rutas de la API que el cliente puede llamar:
 - GET /api/exams/info: Obtener información sobre preguntas disponibles
 """
 
+from typing import Any, Dict
 
-from typing import Dict, Any
 from fastapi import APIRouter, HTTPException
 
 from app.models.schemas import (
-    ExamGenerationRequest, GeneratedExam,
-    ExamSubmission, ExamResult
+    ExamGenerationRequest,
+    GeneratedExam,
+    ExamSubmission,
+    ExamResult,
 )
 from app.services.exam_service import exam_service
 from app.services.question_loader import question_loader
@@ -78,7 +80,7 @@ async def generate_exam(request: ExamGenerationRequest) -> GeneratedExam:
         if request.comunidades:
             _validate_communities(request.comunidades)
 
-        if hasattr(request, 'tipo_examen') and request.tipo_examen == 'simulacro':
+        if hasattr(request, "tipo_examen") and request.tipo_examen == "simulacro":
             exam = exam_service.generate_simulacro_exam(request)
         else:
             exam = exam_service.generate_exam(request)
@@ -130,7 +132,9 @@ async def correct_exam(submission: ExamSubmission) -> ExamResult:
         raise HTTPException(status_code=404, detail=str(e))
     except Exception as e:
         # Para cualquier otro error, devolver error 500
-        raise HTTPException(status_code=500, detail=f"Error corrigiendo examen: {str(e)}")
+        raise HTTPException(
+            status_code=500, detail=f"Error corrigiendo examen: {str(e)}"
+        )
 
 
 @router.get("/info")
@@ -170,10 +174,12 @@ async def get_exam_info() -> Dict[str, Any]:
     try:
         return {
             "preguntas": question_loader.get_stats(),
-            "servicio": exam_service.get_service_stats()
+            "servicio": exam_service.get_service_stats(),
         }
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error obteniendo información: {str(e)}")
+        raise HTTPException(
+            status_code=500, detail=f"Error obteniendo información: {str(e)}"
+        )
 
 
 @router.get("/categories")
@@ -191,7 +197,9 @@ async def get_categories() -> Dict[str, list]:
         return {
             "categorias": question_loader.get_available_categories(),
             "anios": question_loader.get_available_years(),
-            "comunidades": question_loader.get_available_communities()
+            "comunidades": question_loader.get_available_communities(),
         }
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error obteniendo categorías: {str(e)}")
+        raise HTTPException(
+            status_code=500, detail=f"Error obteniendo categorías: {str(e)}"
+        )

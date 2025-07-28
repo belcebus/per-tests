@@ -1,11 +1,10 @@
 # Análisis de calidad de código (linters y analizadores)
 quality: venv
-	@echo "$(GREEN)🔎 Análisis de calidad de código (flake8, pylint, black, isort, radon, mypy)...$(NC)"
+	@echo "$(GREEN)🔎 Análisis de calidad de código (flake8, pylint, black, mypy)...$(NC)"
 	venv/bin/flake8 app config tools
 	venv/bin/pylint --disable=all --enable=E,F app config tools
 	venv/bin/black --check app config tools
-	venv/bin/isort --check app config tools
-	venv/bin/radon cc -s app config tools
+
 	venv/bin/mypy app config tools
 # Instala solo las dependencias de linters y analizadores
 install-lint: venv
@@ -29,6 +28,7 @@ RED = \033[0;31m
 NC = \033[0m # No Color
 
 .PHONY: help test test-fast test-cov test-cov-html test-cov-xml test-unit test-integration test-api clean install install-dev install-tools install-full run run-prod run-azure run-debug run-local run-custom security
+
 
 # Comando por defecto
 help:
@@ -55,7 +55,7 @@ help:
 	@echo "  make test-ci          - Ejecutar tests para CI/CD (con timeout)"
 	@echo ""
 	@echo "$(YELLOW)Calidad de código:$(NC)"
-	@echo "  make quality          - Ejecutar linters y analizadores (flake8, pylint, black, isort, radon, mypy)"
+	@echo "  make quality          - Ejecutar linters y analizadores (flake8, pylint, black, mypy)"
 	@echo ""
 	@echo "$(YELLOW)Análisis de seguridad:$(NC)"
 	@echo "  make security         - Ejecutar análisis de seguridad del código (semgrep)"

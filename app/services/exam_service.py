@@ -14,9 +14,15 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Optional
 
 from app.models.schemas import (
-    Question, QuestionForClient, ExamGenerationRequest,
-    GeneratedExam, CachedExam, ExamSubmission, ExamResult,
-    CategoryResult, QuestionResult
+    Question,
+    QuestionForClient,
+    ExamGenerationRequest,
+    GeneratedExam,
+    CachedExam,
+    ExamSubmission,
+    ExamResult,
+    CategoryResult,
+    QuestionResult,
 )
 from app.services.question_loader import question_loader
 from config.settings import settings
@@ -56,10 +62,10 @@ class ExamService:
 
         # 1. Obtener preguntas que cumplen los criterios
         available_questions = question_loader.get_questions_by_criteria(
-            categorias=request.categorias,
-            anios=request.anios,
-            comunidades=request.comunidades,
-            tipo_examen=request.tipo_examen
+            categorias=request.categorias or [],
+            anios=request.anios or [],
+            comunidades=request.comunidades or [],
+            tipo_examen=request.tipo_examen,
         )
 
         if len(available_questions) < request.num_preguntas:
@@ -85,7 +91,7 @@ class ExamService:
                 enunciado=question.enunciado,
                 opciones=question.opciones,
                 respuesta_correcta=question.respuesta_correcta,
-                metadata=question.metadata
+                metadata=question.metadata,
             )
             questions_with_unique_ids.append(unique_question)
 
@@ -93,17 +99,14 @@ class ExamService:
         cached_exam = CachedExam(
             questions=questions_with_unique_ids,
             metadata=request,
-            timestamp=datetime.now()
+            timestamp=datetime.now(),
         )
         self.active_exams[exam_id] = cached_exam
 
         # 6. Crear versión para cliente (sin respuestas correctas)
         client_questions = [
             QuestionForClient(
-                id=q.id,
-                enunciado=q.enunciado,
-                opciones=q.opciones,
-                metadata=q.metadata
+                id=q.id, enunciado=q.enunciado, opciones=q.opciones, metadata=q.metadata
             )
             for q in questions_with_unique_ids
         ]
@@ -112,12 +115,12 @@ class ExamService:
         self._cleanup_expired_exams()
 
         print(f"✅ Examen generado con ID: {exam_id}")
-        print(f"🔑 IDs únicos asignados: {[q.id for q in questions_with_unique_ids[:3]]}...")
+        print(
+            f"🔑 IDs únicos asignados: {[q.id for q in questions_with_unique_ids[:3]]}..."
+        )
 
         return GeneratedExam(
-            exam_id=exam_id,
-            questions=client_questions,
-            metadata=request
+            exam_id=exam_id, questions=client_questions, metadata=request
         )
 
     def correct_exam(self, submission: ExamSubmission) -> ExamResult:
@@ -147,7 +150,9 @@ class ExamService:
             user_answer = submission.respuestas.get(question.id)
 
             # Verificar si es correcta (soporta múltiples respuestas correctas)
-            is_correct = self._is_answer_correct(user_answer, question.respuesta_correcta)
+            is_correct = self._is_answer_correct(
+                user_answer, question.respuesta_correcta
+            )
 
             # Obtener textos de las opciones
             texto_respuesta_usuario = None
@@ -155,18 +160,28 @@ class ExamService:
                 texto_respuesta_usuario = question.opciones[user_answer]
 
             # Obtener lista de respuestas correctas
-            respuestas_correctas_lista = self._get_correct_answers_list(question.respuesta_correcta)
+            respuestas_correctas_lista = self._get_correct_answers_list(
+                question.respuesta_correcta
+            )
             es_anulada = question.respuesta_correcta.lower() == "anulada"
 
             # Texto de la primera respuesta correcta (para compatibilidad)
-            primera_correcta = respuestas_correctas_lista[0] if respuestas_correctas_lista else question.respuesta_correcta
-            texto_respuesta_correcta = question.opciones.get(primera_correcta, "Opción no encontrada")
+            primera_correcta = (
+                respuestas_correctas_lista[0]
+                if respuestas_correctas_lista
+                else question.respuesta_correcta
+            )
+            texto_respuesta_correcta = question.opciones.get(
+                primera_correcta, "Opción no encontrada"
+            )
 
             # Textos de todas las respuestas correctas
             textos_respuestas_correctas = {}
             for respuesta in respuestas_correctas_lista:
                 if respuesta in question.opciones:
-                    textos_respuestas_correctas[respuesta] = question.opciones[respuesta]
+                    textos_respuestas_correctas[respuesta] = question.opciones[
+                        respuesta
+                    ]
 
             # Crear resultado de la pregunta
             question_result = QuestionResult(
@@ -181,7 +196,7 @@ class ExamService:
                 es_anulada=es_anulada,
                 enunciado=question.enunciado,
                 opciones=question.opciones,
-                metadata=question.metadata
+                metadata=question.metadata,
             )
             question_results.append(question_result)
 
@@ -208,7 +223,7 @@ class ExamService:
                 porcentaje=0.0,
                 aprobado=False,
                 desglose_por_categoria={},
-                preguntas_detalle=[]
+                preguntas_detalle=[],
             )
 
         percentage = (total_correct / total_questions) * 100
@@ -220,7 +235,7 @@ class ExamService:
             category_results[category] = CategoryResult(
                 correctas=stats["correctas"],
                 total=stats["total"],
-                porcentaje=round(cat_percentage, 2)
+                porcentaje=round(cat_percentage, 2),
             )
 
         # 5. Determinar si aprobó (65% mínimo)
@@ -229,14 +244,20 @@ class ExamService:
         # 6. Limpiar el examen de memoria (ya se corrigió)
         del self.active_exams[submission.exam_id]
 
-        print(f"✅ Examen corregido: {total_correct}/{total_questions} ({percentage:.1f}%)")
+        print(
+            f"✅ Examen corregido: {total_correct}/{total_questions} ({percentage:.1f}%)"
+        )
 
+        # Asegurar que las claves sean str, nunca None
+        clean_category_results = {
+            str(k): v for k, v in category_results.items() if k is not None
+        }
         return ExamResult(
             puntuacion_total=f"{total_correct}/{total_questions}",
             porcentaje=round(percentage, 2),
             aprobado=passed,
-            desglose_por_categoria=category_results,
-            preguntas_detalle=question_results
+            desglose_por_categoria=clean_category_results,
+            preguntas_detalle=question_results,
         )
 
     def _cleanup_expired_exams(self) -> None:
@@ -247,7 +268,8 @@ class ExamService:
         """
         now = datetime.now()
         expired_exams = [
-            exam_id for exam_id, exam in self.active_exams.items()
+            exam_id
+            for exam_id, exam in self.active_exams.items()
             if now - exam.timestamp > self.exam_ttl
         ]
 
@@ -276,7 +298,7 @@ class ExamService:
         """
         return {
             "examenes_activos": self.get_active_exams_count(),
-            "ttl_examenes": f"{self.exam_ttl.total_seconds() / 3600} horas"
+            "ttl_examenes": f"{self.exam_ttl.total_seconds() / 3600} horas",
         }
 
     def generate_simulacro_exam(self, request: ExamGenerationRequest) -> GeneratedExam:
@@ -294,18 +316,18 @@ class ExamService:
 
         # Filtrar preguntas por años y comunidades (si se especifican)
         available_questions = question_loader.get_questions_by_criteria(
-            categorias=None,  # No filtrar por categorías en simulacro
-            anios=request.anios,
-            comunidades=request.comunidades,
-            tipo_examen=request.tipo_examen
+            categorias=[],  # No filtrar por categorías en simulacro
+            anios=request.anios or [],
+            comunidades=request.comunidades or [],
+            tipo_examen=request.tipo_examen,
         )
 
         # Agrupar preguntas por id de categoría (numérico)
-        questions_by_cat = {}
+        questions_by_cat: dict[int, list] = {}
         for q in available_questions:
             # El id de categoría es numérico en el banco, pero puede estar como str
             cat_id = None
-            if hasattr(q.metadata, 'categoria') and q.metadata.categoria:
+            if hasattr(q.metadata, "categoria") and q.metadata.categoria:
                 try:
                     cat_id = int(q.metadata.categoria)
                 except (ValueError, TypeError):
@@ -328,8 +350,7 @@ class ExamService:
                 )
 
             # Seleccionar preguntas aleatorias de esta categoría
-            selected_category_questions = random.sample(
-                cat_questions, num_questions)
+            selected_category_questions = random.sample(cat_questions, num_questions)
 
             # Mezclar el orden dentro de la categoría
             random.shuffle(selected_category_questions)
@@ -342,31 +363,29 @@ class ExamService:
 
         exam_id = f"simulacro_{uuid.uuid4().hex[:8]}"
         cached_exam = CachedExam(
-            questions=selected_questions,
-            metadata=request,
-            timestamp=datetime.now()
+            questions=selected_questions, metadata=request, timestamp=datetime.now()
         )
         self.active_exams[exam_id] = cached_exam
 
         client_questions = [
             QuestionForClient(
-                id=q.id,
-                enunciado=q.enunciado,
-                opciones=q.opciones,
-                metadata=q.metadata
-            ) for q in selected_questions
+                id=q.id, enunciado=q.enunciado, opciones=q.opciones, metadata=q.metadata
+            )
+            for q in selected_questions
         ]
 
         self._cleanup_expired_exams()
-        print(f"✅ Simulacro generado con ID: {exam_id} "
-              f"(preguntas agrupadas por categorías)")
+        print(
+            f"✅ Simulacro generado con ID: {exam_id} "
+            f"(preguntas agrupadas por categorías)"
+        )
         return GeneratedExam(
-            exam_id=exam_id,
-            questions=client_questions,
-            metadata=request
+            exam_id=exam_id, questions=client_questions, metadata=request
         )
 
-    def _is_answer_correct(self, user_answer: Optional[str], correct_answer: str) -> bool:
+    def _is_answer_correct(
+        self, user_answer: Optional[str], correct_answer: str
+    ) -> bool:
         """
         Verifica si la respuesta del usuario es correcta.
         Soporta múltiples respuestas correctas y preguntas anuladas.
