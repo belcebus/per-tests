@@ -165,16 +165,16 @@ function populateFormOptions(data) {
     // Años
     const añosContainer = document.getElementById('años-container');
     while (añosContainer.firstChild) añosContainer.removeChild(añosContainer.firstChild);
-    data.años.forEach(año => {
+    (data.anios || []).forEach(anio => {
         const div = document.createElement('div');
         div.className = 'checkbox-item';
         const input = document.createElement('input');
         input.type = 'checkbox';
-        input.id = `año-${año}`;
-        input.value = año;
+        input.id = `anio-${anio}`;
+        input.value = anio;
         const label = document.createElement('label');
-        label.htmlFor = `año-${año}`;
-        label.textContent = año;
+        label.htmlFor = `anio-${anio}`;
+        label.textContent = anio;
         div.appendChild(input);
         div.appendChild(label);
         añosContainer.appendChild(div);
@@ -280,7 +280,7 @@ function getExamConfig() {
         .map(cb => cb.value);
     
     // Años seleccionados
-    const años = Array.from(document.querySelectorAll('#años-container input:checked'))
+    const anios = Array.from(document.querySelectorAll('#años-container input:checked'))
         .map(cb => parseInt(cb.value));
     
     // Comunidades seleccionadas
@@ -290,7 +290,7 @@ function getExamConfig() {
     return {
         num_preguntas: numPreguntas,
         categorias: categorias.length > 0 ? categorias : null,
-        años: años.length > 0 ? años : null,
+        anios: anios.length > 0 ? anios : null,
         comunidades: comunidades.length > 0 ? comunidades : null
     };
 }
@@ -484,7 +484,8 @@ function showQuestion(index) {
         optionDiv.addEventListener('click', () => selectOption(optionDiv));
         optionsContainer.appendChild(optionDiv);
     });
-    
+    // Limpiar cualquier selección previa (por si el DOM mantiene clases)
+    document.querySelectorAll('.option.selected').forEach(opt => opt.classList.remove('selected'));
     // Restaurar respuesta previa si existe (solo dentro del mismo examen)
     const questionId = question.id;
     if (userAnswers[questionId]) {

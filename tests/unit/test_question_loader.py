@@ -393,7 +393,7 @@ class TestQuestionLoaderAdvanced:
                 metadata=QuestionMetadata(
                     title="Test", subtitle="01", total_questions=1,
                     community="Madrid", year=2023, call="abril", test_code="Test01",
-                    año=2023
+                    anio=2023
                 )
             ),
             Question(
@@ -401,7 +401,7 @@ class TestQuestionLoaderAdvanced:
                 metadata=QuestionMetadata(
                     title="Test", subtitle="01", total_questions=1,
                     community="Madrid", year=2024, call="abril", test_code="Test01",
-                    año=2024
+                    anio=2024
                 )
             ),
             Question(
@@ -409,7 +409,7 @@ class TestQuestionLoaderAdvanced:
                 metadata=QuestionMetadata(
                     title="Test", subtitle="01", total_questions=1,
                     community="Madrid", year=2024, call="abril", test_code="Test01",
-                    año=2024  # Año duplicado
+                    anio=2024  # Año duplicado
                 )
             )
         ]
@@ -459,7 +459,7 @@ class TestQuestionLoaderAdvanced:
                 metadata=QuestionMetadata(
                     title="Test", subtitle="01", total_questions=1,
                     community="Madrid", year=2023, call="abril", test_code="Test01",
-                    categoria="1", año=2023, comunidad_autonoma="Madrid"
+                    categoria="1", anio=2023, comunidad_autonoma="Madrid"
                 )
             ),
             Question(
@@ -467,7 +467,7 @@ class TestQuestionLoaderAdvanced:
                 metadata=QuestionMetadata(
                     title="Test", subtitle="01", total_questions=1,
                     community="Valencia", year=2024, call="junio", test_code="Test02",
-                    categoria="2", año=2024, comunidad_autonoma="Valencia"
+                    categoria="2", anio=2024, comunidad_autonoma="Valencia"
                 )
             )
         ]
@@ -548,7 +548,7 @@ class TestQuestionLoaderFilters:
             metadata=QuestionMetadata(
                 title="Test", subtitle="01", total_questions=1,
                 community="Madrid", year=2023, call="abril", test_code="Test01",
-                año=2023
+                anio=2023
             )
         )
         q2 = Question(
@@ -556,17 +556,17 @@ class TestQuestionLoaderFilters:
             metadata=QuestionMetadata(
                 title="Test", subtitle="01", total_questions=1,
                 community="Madrid", year=2024, call="abril", test_code="Test01",
-                año=2024
+                anio=2024
             )
         )
         
         loader.all_questions = [q1, q2]
         
         with patch('builtins.print'):
-            questions = loader.get_questions_by_criteria(años=[2023])
+            questions = loader.get_questions_by_criteria(anios=[2023])
             
             assert len(questions) == 1
-            assert questions[0].metadata.año == 2023
+            assert questions[0].metadata.anio == 2023
 
 
 class TestQuestionLoaderFileHandling:
