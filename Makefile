@@ -222,6 +222,7 @@ build-deploy:
 	@cp -r app/ deploy-build/
 	@cp -r config/ deploy-build/
 	@cp -r static/ deploy-build/
+	@cp -r data/ deploy-build/
 	@cp pyproject.toml deploy-build/
 	@cp README.md deploy-build/
 	@cp LICENSE deploy-build/
