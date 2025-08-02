@@ -48,6 +48,9 @@ class ExamService:
         # Tiempo de vida de un examen (configurable)
         self.exam_ttl = timedelta(hours=settings.exam_ttl_hours)
 
+        # Servicio de carga de preguntas
+        self.question_loader = question_loader
+
     def generate_exam(self, request: ExamGenerationRequest) -> GeneratedExam:
         """
         Genera un nuevo examen según los criterios especificados.
@@ -61,7 +64,7 @@ class ExamService:
         print(f"🎯 Generando examen: {request.num_preguntas} preguntas")
 
         # 1. Obtener preguntas que cumplen los criterios
-        available_questions = question_loader.get_questions_by_criteria(
+        available_questions = self.question_loader.get_questions_by_criteria(
             categorias=request.categorias or [],
             anios=request.anios or [],
             comunidades=request.comunidades or [],
@@ -315,7 +318,7 @@ class ExamService:
         distribution = settings.simulacro_distribution
 
         # Filtrar preguntas por años y comunidades (si se especifican)
-        available_questions = question_loader.get_questions_by_criteria(
+        available_questions = self.question_loader.get_questions_by_criteria(
             categorias=[],  # No filtrar por categorías en simulacro
             anios=request.anios or [],
             comunidades=request.comunidades or [],
@@ -381,6 +384,84 @@ class ExamService:
         )
         return GeneratedExam(
             exam_id=exam_id, questions=client_questions, metadata=request
+        )
+
+    def generate_specific_exam(self, exam_identifier: str) -> GeneratedExam:
+        """
+        Genera un examen específico basado en el identificador del examen.
+
+        Args:
+            exam_identifier: Identificador único del examen (ej: 'madrid_2024_abril_test01')
+
+        Returns:
+            Examen específico generado listo para enviar al cliente
+
+        Raises:
+            ValueError: Si no se encuentra el examen especificado
+        """
+        print(f"🎯 Generando examen específico: {exam_identifier}")
+
+        # 1. Obtener todas las preguntas del examen específico
+        specific_questions = self.question_loader.get_questions_for_specific_exam(
+            exam_identifier
+        )
+
+        if not specific_questions:
+            raise ValueError(
+                f"No se encontraron preguntas para el examen: {exam_identifier}"
+            )
+
+        # 2. Crear ID único para esta instancia del examen
+        exam_id = f"specific_{uuid.uuid4().hex[:8]}"
+
+        # 3. Asignar IDs únicos temporales a las preguntas para evitar colisiones
+        questions_with_unique_ids = []
+        for i, question in enumerate(specific_questions):
+            # Crear una copia de la pregunta con ID único temporal
+            unique_question = Question(
+                id=f"{exam_id}_q{i+1}",  # ID único: specific_abc123_q1, specific_abc123_q2, etc.
+                enunciado=question.enunciado,
+                opciones=question.opciones,
+                respuesta_correcta=question.respuesta_correcta,
+                metadata=question.metadata,
+            )
+            questions_with_unique_ids.append(unique_question)
+
+        # 4. Crear metadata de request para compatibilidad
+        request_metadata = ExamGenerationRequest(
+            num_preguntas=len(questions_with_unique_ids),
+            categorias=None,  # No aplica para exámenes específicos
+            anios=[specific_questions[0].metadata.year],
+            comunidades=[specific_questions[0].metadata.community],
+            tipo_examen="especifico",
+        )
+
+        # 5. Guardar examen completo en memoria (con respuestas correctas)
+        cached_exam = CachedExam(
+            questions=questions_with_unique_ids,
+            metadata=request_metadata,
+            timestamp=datetime.now(),
+        )
+        self.active_exams[exam_id] = cached_exam
+
+        # 6. Crear versión para cliente (sin respuestas correctas)
+        client_questions = [
+            QuestionForClient(
+                id=q.id, enunciado=q.enunciado, opciones=q.opciones, metadata=q.metadata
+            )
+            for q in questions_with_unique_ids
+        ]
+
+        # 7. Limpiar exámenes expirados
+        self._cleanup_expired_exams()
+
+        print(f"✅ Examen específico generado con ID: {exam_id}")
+        print(
+            f"📝 Examen original: {exam_identifier} con {len(questions_with_unique_ids)} preguntas"
+        )
+
+        return GeneratedExam(
+            exam_id=exam_id, questions=client_questions, metadata=request_metadata
         )
 
     def _is_answer_correct(

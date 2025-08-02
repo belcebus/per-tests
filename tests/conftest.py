@@ -195,3 +195,110 @@ def sample_json_answers(temp_dir: Path) -> Path:
     answers_file = temp_dir / "test_answers.json"
     answers_file.write_text(source_file.read_text(encoding='utf-8'))
     return answers_file
+
+
+@pytest.fixture
+def question_loader_with_questions():
+    """QuestionLoader con preguntas de ejemplo para tests."""
+    from app.services.question_loader import QuestionLoader
+    from app.models.schemas import Question, QuestionMetadata
+    
+    loader = QuestionLoader()
+    
+    # Crear preguntas de ejemplo
+    sample_questions = [
+        Question(
+            id="test_q1",
+            enunciado="¿Cuál es la respuesta correcta?",
+            opciones={"a": "Correcta", "b": "Incorrecta", "c": "También incorrecta"},
+            respuesta_correcta="a",
+            metadata=QuestionMetadata(
+                title="Test Examen",
+                subtitle="Test 01",
+                total_questions=3,
+                community="Madrid",
+                year=2024,
+                call="abril",
+                test_code="Test01",
+                numero_pregunta=1,
+                categoria="1"
+            )
+        ),
+        Question(
+            id="test_q2",
+            enunciado="¿Cuál es la segunda pregunta?",
+            opciones={"a": "Opción A", "b": "Opción B", "c": "Opción C"},
+            respuesta_correcta="b",
+            metadata=QuestionMetadata(
+                title="Test Examen",
+                subtitle="Test 01",
+                total_questions=3,
+                community="Madrid",
+                year=2024,
+                call="abril",
+                test_code="Test01",
+                numero_pregunta=2,
+                categoria="2"
+            )
+        ),
+        Question(
+            id="test_q3",
+            enunciado="¿Cuál es la tercera pregunta?",
+            opciones={"a": "Primera", "b": "Segunda", "c": "Tercera"},
+            respuesta_correcta="c",
+            metadata=QuestionMetadata(
+                title="Test Examen",
+                subtitle="Test 02",
+                total_questions=3,
+                community="Valencia",
+                year=2023,
+                call="junio",
+                test_code="Test02",
+                numero_pregunta=1,
+                categoria="1"
+            )
+        )
+    ]
+    
+    # Asignar las preguntas al loader
+    loader.all_questions = sample_questions
+    
+    return loader
+
+
+@pytest.fixture
+def exam_service_with_questions():
+    """ExamService con QuestionLoader que tiene preguntas de ejemplo."""
+    from app.services.exam_service import ExamService
+    from unittest.mock import Mock
+    
+    service = ExamService()
+    
+    # Crear mock del question_loader
+    mock_loader = Mock()
+    
+    # Configurar respuestas del mock
+    mock_loader.get_questions_by_criteria.return_value = [
+        Mock(
+            id=f"q{i}",
+            enunciado=f"Pregunta {i}",
+            opciones={"a": "A", "b": "B", "c": "C"},
+            respuesta_correcta="a",
+            metadata=Mock(categoria=1, anio=2024)
+        ) for i in range(1, 6)
+    ]
+    
+    # Configurar método get_questions_for_specific_exam por defecto
+    mock_loader.get_questions_for_specific_exam.return_value = []
+    
+    # Configurar otros métodos que podrían ser necesarios
+    mock_loader.get_exam_metadata.return_value = {
+        "comunidades": ["Madrid"],
+        "anios": [2024],
+        "convocatorias_por_comunidad_anio": {"Madrid": {"2024": ["abril", "junio"]}}
+    }
+    
+    # Asignar el mock al servicio
+    service.question_loader = mock_loader
+    
+    return service

@@ -156,6 +156,44 @@ class ExamGenerationRequest(BaseModel):
     tipo_examen: str = "per"
 
 
+class SpecificExamRequest(BaseModel):
+    """
+    Petición para generar un examen específico.
+
+    El usuario especifica:
+    - exam_identifier: Identificador único del examen específico
+    """
+
+    exam_identifier: str = Field(
+        description="Identificador único del examen (ej: 'madrid_2024_abril_test01')"
+    )
+
+
+class ExamMetadata(BaseModel):
+    """
+    Metadatos de un examen específico disponible.
+
+    Contiene información básica sobre un examen concreto:
+    - id: Identificador único
+    - title: Título del examen
+    - subtitle: Subtítulo (código de test)
+    - community: Comunidad autónoma
+    - year: Año
+    - call: Convocatoria
+    - test_code: Código del test
+    - total_questions: Número total de preguntas
+    """
+
+    id: str
+    title: str
+    subtitle: str
+    community: str
+    year: int
+    call: str
+    test_code: str
+    total_questions: int
+
+
 class GeneratedExam(BaseModel):
     """
     Examen generado que se envía al cliente.

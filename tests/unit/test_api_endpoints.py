@@ -20,7 +20,8 @@ from app.models.schemas import (
     ExamSubmission, 
     GeneratedExam, 
     QuestionForClient,
-    QuestionMetadata
+    QuestionMetadata,
+    SpecificExamRequest
 )
 
 
@@ -384,3 +385,229 @@ class TestErrorHandling:
         
         # FastAPI devuelve 400 para content-type faltante
         assert response.status_code in [200, 400, 422, 415]
+
+
+class TestNewEndpoints:
+    """Tests para los nuevos endpoints añadidos."""
+    
+    def test_get_metadata_success(self, client: TestClient):
+        """Test exitoso del endpoint /metadata."""
+        with patch('app.routers.exams.question_loader.get_exam_metadata') as mock_get_metadata:
+            mock_get_metadata.return_value = {
+                "comunidades": ["Madrid"],
+                "anios": [2024, 2023],
+                "convocatorias_por_comunidad_anio": {
+                    "Madrid": {
+                        2024: {
+                            "abril": ["test01", "test02"]
+                        }
+                    }
+                }
+            }
+            
+            response = client.get("/api/exams/metadata")
+            
+            assert response.status_code == 200
+            data = response.json()
+            assert "comunidades" in data
+            assert "anios" in data
+            assert "convocatorias_por_comunidad_anio" in data
+            assert data["comunidades"] == ["Madrid"]
+
+    def test_get_metadata_error(self, client: TestClient):
+        """Test de error en endpoint /metadata."""
+        with patch('app.routers.exams.question_loader.get_exam_metadata') as mock_get_metadata:
+            mock_get_metadata.side_effect = Exception("Error de prueba")
+            
+            response = client.get("/api/exams/metadata")
+            
+            assert response.status_code == 500
+            assert "Error obteniendo metadatos de exámenes" in response.json()["detail"]
+
+    def test_get_available_exams_success(self, client: TestClient):
+        """Test exitoso del endpoint /available-exams."""
+        with patch('app.routers.exams.question_loader.get_available_tests_by_criteria') as mock_get_tests:
+            mock_get_tests.return_value = [
+                {
+                    "id": "madrid_2024_abril_test01",
+                    "title": "EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
+                    "subtitle": "Código de Test 01",
+                    "community": "Madrid",
+                    "year": 2024,
+                    "call": "abril",
+                    "test_code": "test01",
+                    "total_questions": 45
+                }
+            ]
+            
+            response = client.get("/api/exams/available-exams?comunidad=Madrid&anio=2024&convocatoria=abril")
+            
+            assert response.status_code == 200
+            data = response.json()
+            assert "exams" in data
+            assert len(data["exams"]) == 1
+            assert data["exams"][0]["id"] == "madrid_2024_abril_test01"
+
+    def test_get_available_exams_error(self, client: TestClient):
+        """Test de error en endpoint /available-exams."""
+        with patch('app.routers.exams.question_loader.get_available_tests_by_criteria') as mock_get_tests:
+            mock_get_tests.side_effect = Exception("Error de prueba")
+            
+            response = client.get("/api/exams/available-exams?comunidad=Madrid&anio=2024&convocatoria=abril")
+            
+            assert response.status_code == 500
+            assert "Error obteniendo exámenes disponibles" in response.json()["detail"]
+
+    def test_generate_specific_exam_success(self, client: TestClient):
+        """Test exitoso del endpoint /generate-specific."""
+        mock_exam = GeneratedExam(
+            exam_id="test-specific-123",
+            questions=[
+                QuestionForClient(
+                    id="q1",
+                    enunciado="Pregunta específica de test",
+                    opciones={"A": "Opción A", "B": "Opción B", "C": "Opción C", "D": "Opción D"},
+                    metadata=QuestionMetadata(
+                        categoria_id=1,
+                        categoria_nombre="Nomenclatura náutica",
+                        community="Madrid",
+                        year=2024,
+                        call="abril",
+                        test_code="test01",
+                        numero_pregunta=1,
+                        title="EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
+                        subtitle="Código de Test 01",
+                        total_questions=45
+                    )
+                )
+            ],
+            metadata=ExamGenerationRequest(
+                num_preguntas=1,
+                comunidades=["Madrid"]
+            )
+        )
+        
+        with patch('app.routers.exams.exam_service.generate_specific_exam') as mock_generate:
+            mock_generate.return_value = mock_exam
+            
+            response = client.post(
+                "/api/exams/generate-specific",
+                json={"exam_identifier": "madrid_2024_abril_test01"}
+            )
+            
+            assert response.status_code == 200
+            data = response.json()
+            assert data["exam_id"] == "test-specific-123"
+            assert len(data["questions"]) == 1
+
+    def test_generate_specific_exam_not_found(self, client: TestClient):
+        """Test de examen específico no encontrado."""
+        with patch('app.routers.exams.exam_service.generate_specific_exam') as mock_generate:
+            mock_generate.side_effect = ValueError("No se encontraron preguntas para el examen")
+            
+            response = client.post(
+                "/api/exams/generate-specific",
+                json={"exam_identifier": "madrid_2024_inexistente_test99"}
+            )
+            
+            assert response.status_code == 404
+            assert "No se encontraron preguntas para el examen" in response.json()["detail"]
+
+    def test_generate_specific_exam_server_error(self, client: TestClient):
+        """Test de error interno en endpoint /generate-specific."""
+        with patch('app.routers.exams.exam_service.generate_specific_exam') as mock_generate:
+            mock_generate.side_effect = Exception("Error interno de prueba")
+            
+            response = client.post(
+                "/api/exams/generate-specific",
+                json={"exam_identifier": "madrid_2024_abril_test01"}
+            )
+            
+            assert response.status_code == 500
+            assert "Error generando examen específico" in response.json()["detail"]
+
+
+class TestCommunityValidation:
+    """Tests para la validación de comunidades."""
+    
+    def test_validate_communities_invalid_community(self, client: TestClient):
+        """Test de comunidad inválida en generación de examen."""
+        with patch('app.routers.exams.question_loader.get_available_communities') as mock_communities:
+            mock_communities.return_value = ["Madrid", "Barcelona"]
+            
+            response = client.post(
+                "/api/exams/generate",
+                json={
+                    "num_preguntas": 10,
+                    "comunidades": ["ComunidadInexistente"]
+                }
+            )
+            
+            assert response.status_code == 400
+            assert "ComunidadInexistente" in response.json()["detail"]
+            assert "no está disponible" in response.json()["detail"]
+
+
+class TestRouterErrorHandling:
+    """Tests para manejo de errores específicos en los routers"""
+
+    def test_generate_exam_validation_error_empty_communities(self, client: TestClient):
+        """Test para error de validación con comunidades vacías"""
+        # Mock para simular comportamiento específico
+        with patch('app.routers.exams.exam_service.generate_exam') as mock_generate:
+            mock_generate.side_effect = ValueError("Lista de comunidades vacía")
+            
+            request_data = {
+                "num_preguntas": 10,
+                "comunidades": [],  # Lista vacía debe causar error
+                "anios": [2023]
+            }
+            
+            response = client.post("/api/exams/generate", json=request_data)
+            assert response.status_code == 400
+            assert "Lista de comunidades vacía" in response.json()["detail"]
+
+    def test_correct_exam_server_error(self, client: TestClient):
+        """Test para error 500 en corrección de examen"""
+        with patch('app.routers.exams.exam_service.correct_exam') as mock_correct:
+            mock_correct.side_effect = Exception("Error interno del servidor")
+            
+            submission_data = {
+                "exam_id": "test_exam_123",
+                "respuestas": {"q1": "a"}
+            }
+            
+            response = client.post("/api/exams/correct", json=submission_data)
+            assert response.status_code == 500
+            assert "Error corrigiendo examen" in response.json()["detail"]
+
+    def test_get_exam_info_server_error(self, client: TestClient):
+        """Test para error 500 en get_exam_info"""
+        with patch('app.routers.exams.question_loader.get_stats') as mock_stats:
+            mock_stats.side_effect = Exception("Error obteniendo estadísticas")
+            
+            response = client.get("/api/exams/info")
+            assert response.status_code == 500
+            assert "Error obteniendo información" in response.json()["detail"]
+
+    def test_get_categories_server_error(self, client: TestClient):
+        """Test para error 500 en get_categories"""
+        with patch('app.routers.exams.question_loader.get_available_categories') as mock_categories:
+            mock_categories.side_effect = Exception("Error obteniendo categorías")
+            
+            response = client.get("/api/exams/categories")
+            assert response.status_code == 500
+            assert "Error obteniendo categorías" in response.json()["detail"]
+
+    def test_generate_specific_exam_value_error(self, client: TestClient):
+        """Test para ValueError en generate_specific_exam"""
+        with patch('app.routers.exams.exam_service.generate_specific_exam') as mock_generate:
+            mock_generate.side_effect = ValueError("Examen no encontrado")
+            
+            request_data = {
+                "exam_identifier": "inexistente_2024_enero_test99"
+            }
+            
+            response = client.post("/api/exams/generate-specific", json=request_data)
+            assert response.status_code == 404
+            assert "Examen no encontrado" in response.json()["detail"]

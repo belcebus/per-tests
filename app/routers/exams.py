@@ -7,12 +7,14 @@ Este módulo define las rutas de la API que el cliente puede llamar:
 - GET /api/exams/info: Obtener información sobre preguntas disponibles
 """
 
-from typing import Any, Dict
+from typing import Any, Dict, List
 
 from fastapi import APIRouter, HTTPException
 
 from app.models.schemas import (
     ExamGenerationRequest,
+    SpecificExamRequest,
+    ExamMetadata,
     GeneratedExam,
     ExamSubmission,
     ExamResult,
@@ -202,4 +204,130 @@ async def get_categories() -> Dict[str, list]:
     except Exception as e:
         raise HTTPException(
             status_code=500, detail=f"Error obteniendo categorías: {str(e)}"
+        )
+
+
+@router.get("/metadata")
+async def get_exam_metadata() -> Dict[str, Any]:
+    """
+    Obtiene metadatos de todos los exámenes disponibles.
+
+    **Útil para:** Llenar formularios dinámicos para selección de exámenes específicos.
+
+    **Ejemplo de respuesta:**
+    ```json
+    {
+        "comunidades": ["Madrid", "Valencia"],
+        "años": [2022, 2023, 2024, 2025],
+        "convocatorias_por_comunidad_año": {
+            "Madrid": {
+                "2024": ["abril", "junio", "noviembre"],
+                "2025": ["abril"]
+            }
+        }
+    }
+    ```
+
+    Returns:
+        Metadatos estructurados de exámenes disponibles
+    """
+    try:
+        return question_loader.get_exam_metadata()
+    except Exception as e:
+        raise HTTPException(
+            status_code=500, detail=f"Error obteniendo metadatos de exámenes: {str(e)}"
+        )
+
+
+@router.get("/available-exams")
+async def get_available_exams(
+    comunidad: str, anio: int, convocatoria: str
+) -> Dict[str, List[ExamMetadata]]:
+    """
+    Obtiene los exámenes disponibles para criterios específicos.
+
+    **Útil para:** Mostrar lista de modelos de examen después de que el usuario selecciona comunidad, año y convocatoria.
+
+    **Ejemplo de uso:**
+    ```
+    GET /api/exams/available-exams?comunidad=Madrid&anio=2024&convocatoria=abril
+    ```
+
+    **Ejemplo de respuesta:**
+    ```json
+    {
+        "exams": [
+            {
+                "id": "madrid_2024_abril_test01",
+                "title": "EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO",
+                "subtitle": "Código de Test 01",
+                "community": "Madrid",
+                "year": 2024,
+                "call": "abril",
+                "test_code": "test01",
+                "total_questions": 45
+            }
+        ]
+    }
+    ```
+
+    Args:
+        comunidad: Nombre de la comunidad autónoma
+        anio: Año del examen
+        convocatoria: Convocatoria del examen
+
+    Returns:
+        Lista de exámenes disponibles
+    """
+    try:
+        exams_data = question_loader.get_available_tests_by_criteria(
+            comunidad, anio, convocatoria
+        )
+        exams = [ExamMetadata(**exam) for exam in exams_data]
+        return {"exams": exams}
+    except Exception as e:
+        raise HTTPException(
+            status_code=500, detail=f"Error obteniendo exámenes disponibles: {str(e)}"
+        )
+
+
+@router.post("/generate-specific", response_model=GeneratedExam)
+async def generate_specific_exam(request: SpecificExamRequest) -> GeneratedExam:
+    """
+    Genera un examen específico basado en el identificador proporcionado.
+
+    **Cómo funciona:**
+    1. El cliente envía el identificador del examen específico
+    2. El servidor busca todas las preguntas de ese examen concreto
+    3. Crea una instancia del examen completo
+    4. Guarda el examen en memoria
+    5. Envía al cliente las preguntas (sin respuestas correctas)
+
+    **Ejemplo de uso:**
+    ```
+    POST /api/exams/generate-specific
+    {
+        "exam_identifier": "madrid_2024_abril_test01"
+    }
+    ```
+
+    Args:
+        request: Identificador del examen específico
+
+    Returns:
+        Examen específico generado con ID único y preguntas
+
+    Raises:
+        HTTPException: Si no se encuentra el examen o hay error
+    """
+    try:
+        exam = exam_service.generate_specific_exam(request.exam_identifier)
+        return exam
+    except ValueError as e:
+        # Si no se encuentra el examen, devolver error 404
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        # Error interno del servidor
+        raise HTTPException(
+            status_code=500, detail=f"Error generando examen específico: {str(e)}"
         )
