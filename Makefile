@@ -228,10 +228,13 @@ build-deploy:
 	@echo "$(YELLOW)📦 Generando requirements.txt para Azure...$(NC)"
 	@echo "# Generado automáticamente para despliegue en Azure" > deploy-build/requirements.txt
 	@echo "# Dependencias básicas de la aplicación" >> deploy-build/requirements.txt
-	@$(PYTHON_CMD) -c "import tomllib; import sys; \
-		with open('pyproject.toml', 'rb') as f: data = tomllib.load(f); \
-		deps = data['project']['dependencies']; \
-		[print(dep) for dep in deps]" >> deploy-build/requirements.txt
+	@echo "import tomllib" > /tmp/gen_reqs.py
+	@echo "with open('pyproject.toml', 'rb') as f:" >> /tmp/gen_reqs.py
+	@echo "    data = tomllib.load(f)" >> /tmp/gen_reqs.py
+	@echo "for dep in data['project']['dependencies']:" >> /tmp/gen_reqs.py
+	@echo "    print(dep)" >> /tmp/gen_reqs.py
+	@$(PYTHON_CMD) /tmp/gen_reqs.py >> deploy-build/requirements.txt
+	@rm -f /tmp/gen_reqs.py
 	@echo "$(YELLOW)🧹 Limpiando archivos innecesarios...$(NC)"
 	@find deploy-build/ -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
 	@find deploy-build/ -name "*.pyc" -delete 2>/dev/null || true
