@@ -1,0 +1,624 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 1
+      options:
+        a: La parte superior de la amurada.
+        b: El canto superior del costado del buque.
+        c: La pieza en la que terminan las últimas planchas de proa, en la roda.
+        d: El elemento central, longitudinal y resistente sobre el que se asienta
+          todo el armazón del buque.
+      question: 'Se define como regala:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 2
+      options:
+        a: La distancia desde la cubierta estanca completa más elevada hasta la línea
+          de flotación y está asociado a la seguridad del buque.
+        b: La anchura medida horizontalmente entre las caras internas del casco, es
+          decir, lo que se denomina fuera de miembros.
+        c: La distancia desde la cubierta estanca completa más elevada hasta la cara
+          alta de la quilla y está asociado a la seguridad del buque.
+        d: La altura en el costado del buque que hay desde un plano paralelo a la
+          flotación que pasa por la quilla y el plano tangente al fondo.
+      question: 'El francobordo es:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 3
+      options:
+        a: Pasamanos.
+        b: Candelero.
+        c: Guardamancebo.
+        d: Gafa.
+      question: 'El puntal metálico para formar barandillas en bordas se denomina:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 4
+      options:
+        a: Levar.
+        b: Filar.
+        c: Virar.
+        d: Fondear.
+      question: ¿Cómo se denomina la operación de arriar la cadena en una maniobra
+        de fondeo?
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: a
+      id: 5
+      options:
+        a: Al arco formado por un cabo, ya sea al trabajar o cuando se hace un nudo.
+        b: La especie de lazo con el que termina el cabo en algunos casos. Se realiza
+          enlazando las diferentes costuras de las que está compuesto el cabo, sirviendo
+          generalmente para hacerlo firme encapillándolo en un noray, cornamusa, etc.
+        c: Uno de los dos extremos del cabo, generalmente el más corto. Con él se
+          toman vueltas o nudos.
+        d: La pieza de madera o metal, en forma de "T" o doble "T", que va unida fuertemente
+          a la cubierta para hacer firme cabos en ella.
+      question: 'Se define como seno:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: d
+      id: 6
+      options:
+        a: Un tenedero es un cabo fino que se amarra por un extremo a la cruz del
+          ancla y por otro a un boyarín para balizar el ancla.
+        b: El círculo de borneo tiene un radio igual a la longitud de cadena filada.
+        c: En el momento del fondeo la embarcación debe llevar una ligera arrancada
+          en la dirección del viento.
+        d: La longitud de la línea de fondeo no podrá ser inferior a cinco veces la
+          eslora.
+      question: ¿Cuál de las siguientes afirmaciones relativas al fondeo es CORRECTA?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 7
+      options:
+        a: Tomar las olas por la amura siendo la velocidad mínima para gobernar a
+          la ola.
+        b: Cuando en un temporal un barco se dispone a navegar con la mar y viento
+          en popa .
+        c: Hacerse a la mar cuando las condiciones meteorológicas no son las más idóneas.
+        d: Tomar las olas por la aleta siendo la velocidad mínima para gobernar la
+          ola.
+      question: ¿Qué se entiende por correr un temporal?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 8
+      options:
+        a: 28ºC
+        b: 34ºC
+        c: 35ºC
+        d: 31ºC
+      question: 'La incapacidad del cuerpo para producir el calor que se ha perdido
+        se obtiene a la temperatura corporal de:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 9
+      options:
+        a: El sincronismo longitudinal.
+        b: El adrizamiento de la embarcación.
+        c: El sincronismo transversal.
+        d: El fenómeno del pantocazo.
+      question: 'Cuando navegando atravesados al mar, el periodo de balance coincide
+        con el periodo de la ola se produce:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 10
+      options:
+        a: Se tendrá en cuenta el tipo de buque, en lo referente a las características
+          de las superestructuras y el efecto vela correspondiente.
+        b: El buque que remolca se colocará a barlovento o sotavento del buque remolcado,
+          en función del abatimiento de ambas embarcaciones.
+        c: Con abatimentos similares en ambos buques la aproximación puede hacerse
+          a la mínima distancia por barlovento.
+        d: La aproximación debe realizarse siempre por barlovento.
+      question: 'Para dar remolque a una embarcación con mal tiempo en la mar (señalar
+        la respuesta INCORRECTA):'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: b
+      id: 11
+      options:
+        a: Cuando tengan base en un puerto español, justificarán anualmente ante la
+          Autoridad Portuaria de su puerto base la entrega de toda clase de desechos
+          a una instalación portuaria receptora autorizada.
+        b: Cuando se trate de buques o embarcaciones procedentes de puertos extranjeros
+          o caladeros internacionales, a la llegada de la embarcación al primer puerto
+          español.
+        c: Cuando tengan base en un puerto español, justificarán semestralmente ante
+          la Capitanía Marítima de su puerto base la entrega de toda clase de desechos
+          a una instalación portuaria receptora autorizada.
+        d: Los buques o embarcaciones procedentes de puertos extranjeros o caladeros
+          internacionales, no están obligados a justificar la entrega de desechos.
+      question: 'Las embarcaciones deportivas o de recreo autorizadas para un máximo
+        de doce pasajeros realizarán la notificación reducida que figura en el Anexo
+        V, del Real Decreto 1381/2002, de 20 de diciembre:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 12
+      options:
+        a: Queda prohibido, en cualquier circunstancia, el fondeo de embarcaciones
+          sobre Posidonia oceánica, por su extraordinaria importancia biológica y
+          ecológica.
+        b: Es posible el fondeo sobre posidonia utilizando sistemas de bajo impacto-boyas
+          unitarias o campos de boya, autorizados, salvo que se trate de praderas
+          calificadas de alto valor.
+        c: En el caso de que haya praderas de posidonia cercanas, queda prohibido
+          que la cadena u otros elementos del fondeo pueda afectarlas.
+        d: Las previsiones legales referentes al fondeo sobre posidonia no se aplicarán
+          en casos de fuerza mayor o peligro para la seguridad de la vida humana en
+          la mar o de la navegación.
+      question: 'De conformidad con la legislación vigente, en lo referente a la conservación
+        de la Posidonia oceánica en las Illes Balears, señale cuál de las siguientes
+        respuestas es incorrecta:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 13
+      options:
+        a: Indica la banda del barco por el que debemos dejar la marca al pasar por
+          ella.
+        b: Indica que se ha de evitar pasar por el cuadrante correspondiente a ese
+          nombre.
+        c: Indica el sentido de navegación en un canal definiendo los lados de babor
+          y estribor.
+        d: Indica que se ha de pasar por el cuadrante correspondiente a ese nombre.
+      question: 'El nombre de una marca cardinal:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 14
+      options:
+        a: Dos esferas rojas superpuestas.
+        b: Dos esferas rojas horizontales.
+        c: Una esfera negra con banda roja central.
+        d: Dos esferas negras superpuestas.
+      question: 'La marca de tope de las marcas de peligro aislado tiene:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 15
+      options:
+        a: De color rojo y forma cilíndrica, de castillete o espeque.
+        b: De color verde.
+        c: De color verde y de forma cilíndrica, de castillete o espeque.
+        d: De color verde, con forma cónica, de castillete o espeque.
+      question: 'Las marcas laterales de babor de la región A son:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 16
+      options:
+        a: De castillete, con una marca de tope de aspa amarilla.
+        b: Esférica, con una marca de tope de aspa amarilla.
+        c: De castillete, con una marca de tope esférica roja.
+        d: De castillete, con una marca de tope esférica negra.
+      question: 'Una marca de aguas navegables podrá tener forma:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 17
+      options:
+        a: Esférica, también de castillete o espeque con una marca de tope esférica.
+        b: Cilíndrica o cónica.
+        c: De castillete o espeque.
+        d: De libre elección, pero que no se preste a confusión con las marcas para
+          ayuda a la navegación.
+      question: 'La forma de las boyas que indican zonas de ejercicios militares es:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 18
+      options:
+        a: Una luz blanca colocada sobre el eje longitudinal del buque, que muestra
+          su luz sin interrupción en todo un arco del horizonte de 225 grados, fijada
+          de forma que sea visible desde la proa hasta 22,5 grados a popa del través
+          de cada costado del buque.
+        b: Una luz blanca colocada sobre el eje longitudinal del buque, que muestra
+          su luz sin interrupción en todo un arco del horizonte de 135 grados, fijada
+          de forma que sea visible desde la proa hasta 22,5 grados a popa del través
+          de cada costado del buque.
+        c: Una luz blanca colocada lo más cerca posible de la popa que muestra su
+          luz sin interrupción en todo un arco del horizonte de 135 grados, fijada
+          de forma que sea visible en un arco de 67,5 grados, contados a partir de
+          la popa hacia cada una de las bandas del buque.
+        d: Una luz blanca colocada lo más cerca posible de la popa que muestra su
+          luz sin interrupción en todo un arco del horizonte de 225 grados, fijada
+          de forma que sea visible en un arco de 67,5 grados, contados a partir de
+          la popa hacia cada una de las bandas del buque.
+      question: 'De acuerdo con la Regla 21 del RIPA, la «luz de tope» es:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 19
+      options:
+        a: Un disparo de cañón, u otra señal detonante, repetidos a intervalos de
+          un minuto aproximadamente.
+        b: Cohetes o granadas que despidan estrellas rojas, lanzados uno a uno y a
+          cortos intervalos.
+        c: La señal de peligro «MC» del Código internacional de señales.
+        d: Llamaradas a bordo (como las que se producen al arder un barril de brea,
+          petróleo, etc.).
+      question: Según en el Anexo IV del RIPA, ¿cuál de las siguientes señales NO
+        indica peligro y necesidad de ayuda?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 20
+      options:
+        a: En caso de abrigarse alguna duda, se considerará que el riesgo de abordaje
+          existe.
+        b: Se considerará que existe riesgo de abordaje, si la demora de un buque
+          que se aproxima no varía en forma apreciable.
+        c: En algunos casos, puede existir riesgo aun cuando sea evidente una variación
+          apreciable de la demora, en particular al aproximarse a un buque de gran
+          tamaño o a un remolque o a cualquier buque a muy corta distancia.
+        d: En caso de abrigarse alguna duda, se harán las suposiciones oportunas basadas
+          en la información del radar.
+      question: De acuerdo con la Regla 7 del RIPA, ¿cúal de las siguientes afirmaciones
+        es INCORRECTA?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 21
+      options:
+        a: Se tendrá en cuenta el estado de visibilidad.
+        b: Se tendrá en cuenta la densidad de tráfico.
+        c: Se tendrá en cuenta la titulación del piloto.
+        d: Se tendrá en cuenta el calado en relación con la profundidad disponible
+          de agua.
+      question: 'De acuerdo a la Regla 6 del RIPA, indique cuál de las siguientes
+        afirmaciones es INCORRECTA para determinar la velocidad de seguridad:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 22
+      options:
+        a: 4207,5 kHz.
+        b: El canal 70 de ondas métricas.
+        c: 2187,5 kHz.
+        d: 2182 kHz.
+      question: 'Según el Anexo IV del RIPA, indique cúal de las siguientes frecuencias
+        o canales NO se utiliza para la transmisión de alertas de socorro mediante
+        llamada selectiva digital:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 23
+      options:
+        a: Cae a estribor.
+        b: Está dando atrás.
+        c: Cae a babor.
+        d: Está parado y sin arrancada.
+      question: 'Según el RIPA, cuando un buque de propulsión mecánica en navegación
+        emite dos pitadas cortas significa que:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 24
+      options:
+        a: Los buques que naveguen a lo largo de un paso o canal angosto se mantendrán
+          lo más lejos posible del límite exterior del paso o canal que quede por
+          su costado de estribor, siempre que puedan hacerlo sin que ello entrañe
+          peligro.
+        b: Los buques que naveguen a lo largo de un paso o canal angosto se mantendrán
+          lo más cerca posible del límite interior del paso o canal que quede por
+          su costado de estribor, siempre que puedan hacerlo sin que ello entrañe
+          peligro.
+        c: Los buques que naveguen a lo largo de un paso o canal angosto se mantendrán
+          lo más cerca posible del límite exterior del paso o canal que quede por
+          su costado de babor siempre que puedan hacerlo sin que ello entrañe peligro.
+        d: Los buques que naveguen a lo largo de un paso o canal angosto se mantendrán
+          lo más cerca posible del límite exterior del paso o canal que quede por
+          su costado de estribor, siempre que puedan hacerlo sin que ello entrañe
+          peligro.
+      question: 'De acuerdo a la Regla 9 del RIPA, indique cuál de las siguientes
+        afirmaciones es CORRECTA:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 25
+      options:
+        a: Que produce centelleos a intervalos irregulares, con una frecuencia de
+          20 o más centelleos por minuto.
+        b: Que produce centelleos a intervalos irregulares, con una frecuencia de
+          120 o más centelleos por minuto.
+        c: Que produce centelleos a intervalos regulares, con una frecuencia de 20
+          o más centelleos por minuto.
+        d: Que produce centelleos a intervalos regulares, con una frecuencia de 120
+          o más centelleos por minuto.
+      question: 'De acuerdo con la Regla 21.f del RIPA, la "luz centelleante" es una
+        luz:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 26
+      options:
+        a: Los buques de propulsión mecánica en navegación, pero parados y sin arrancada.
+        b: Los buques sin gobierno o con su capacidad de maniobra restringida, los
+          buques restringidos por su calado, los buques de vela, los buques dedicados
+          a la pesca y todo buque dedicado a remolcar o a empujar a otro buque.
+        c: Un buque remolcado o, si se remolca más de uno, solamente el último del
+          remolque, en caso de ir tripulado.
+        d: Los buques de propulsión mecánica en general, salvo los buques dedicados
+          a la pesca.
+      question: Según la Regla 35.c del RIPA, ¿qué buques emitirán a intervalos que
+        no excedan de dos minutos tres pitadas consecutivas, a saber, una larga seguida
+        por dos cortas, en las proximidades o dentro de una zona de visibilidad reducida?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 27
+      options:
+        a: Tanto si estamos entrando o saliendo de una vía de circulación, nunca debemos
+          hacerlo por sus extremos.
+        b: Cuando utilicemos los límites laterales para entrar o salir de una vía
+          de circulación, lo debemos hacer con el menor ángulo posible en relación
+          con la dirección general del tráfico.
+        c: En lo posible, mantendremos el rumbo dentro de la línea de separación o
+          de la zona de separación del tráfico.
+        d: Cuando utilicemos los extremos para entrar o salir de una vía de circulación,
+          lo debemos hacer con el mayor ángulo posible en relación con la dirección
+          general del tráfico.
+      question: ¿Cuál de las siguientes afirmaciones es VERDADERA en relación con
+        el uso de un dispositivo de separación del tráfico?
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: a
+      id: 28
+      options:
+        a: El cabo de proa de barlovento.
+        b: El través de proa de sotavento.
+        c: El cabo de popa de barlovento.
+        d: El cabo de popa de sotavento.
+      question: Al atracar de punta con la proa al muelle, con carácter general ¿qué
+        cabo se dará primero para aguantar la maniobra?
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: a
+      id: 29
+      options:
+        a: Amollar.
+        b: Adujar.
+        c: Templar.
+        d: Encapillar.
+      question: ¿Cómo se llama la acción de aflojar un cabo que está firme?
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 30
+      options:
+        a: Administrar al paciente bebidas alcohólicas.
+        b: Llevar al paciente a un lugar fresco, seco y bien ventilado.
+        c: Bajar la temperatura del paciente hasta los 35º.
+        d: Tapar al paciente con una manta de algodón.
+      question: 'El tratamiento a aplicar en caso de insolación puede incluir:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 31
+      options:
+        a: No se trasladarán pesos para cambiar el asiento.
+        b: Se esperará al mejor momento de la marea si la hay, y en el peor de los
+          casos se aligerará al máximo la carga con objeto de reflotarlo.
+        c: No se balanceará el barco para que se despegue del fondo ya que el fango
+          hace de ventosa.
+        d: Será necesario el servicio de un remolcador en todo caso.
+      question: 'Para reflotar un barco varado en fondo fangoso:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 32
+      options:
+        a: Gas combustible como el butano o el hidrógeno que puede haber a bordo de
+          una embarcación de recreo.
+        b: Combustibles líquidos como gasolina, gasoil, aceites, pinturas, etc.
+        c: La utilización de aceites y grasas de cocina en aparatos de cocina.
+        d: Materiales sólidos como madera, ropas, lonas, papel o cabos.
+      question: 'Según la clasificación UNE de los incendios, un incendio tipo F es
+        aquel que se produce por:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 33
+      options:
+        a: Observación de la atmósfera que nos rodea.
+        b: Por medio de la radiocostera, a la escucha del canal 16.
+        c: Llamada selectiva digital.
+        d: Tablones de anuncios de los puertos deportivos y clubs náuticos.
+      question: ¿Cuál de los siguientes medios NO es adecuado para obtener la información
+        meteorológica?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 34
+      options:
+        a: Cuando el barco está en movimiento, los catavientos y veletas nos indican
+          el viento aparente.
+        b: Cuando el barco está en movimiento, los catavientos y veletas indican el
+          viento real.
+        c: Cuando el barco está parado, los catavientos y veletas indican el viento
+          real.
+        d: El catavientos nos indica la dirección de las láminas de aire desviadas
+          por nuestra vela.
+      question: ¿Cuál de las siguientes afirmaciones NO es cierta?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 35
+      options:
+        a: Medir la fuerza del viento.
+        b: Medir la persistencia del viento.
+        c: Medir la intensidad del mar.
+        d: Determinar el estado del mar.
+      question: 'La escala de Douglas se utiliza para:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 36
+      options:
+        a: Desde la tierra hacia el mar y perpendicular a la costa durante las horas
+          nocturnas.
+        b: Desde el mar a la tierra y perpendicular a la costa durante las horas nocturnas.
+        c: Desde la tierra hacia el mar y perpendicular a la costa durante las horas
+          diurnas.
+        d: Desde el mar a la tierra y perpendicular a la costa durante las horas diurnas.
+      question: 'El terral es un viento que se desplaza:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 37
+      options:
+        a: Es una línea recta que une dos puntos conocidos, encontrándose la embarcación
+          sobre dicha línea y entre ambos puntos.
+        b: Es una línea recta que une dos puntos de la costa superpuestos en la misma
+          dirección, encontrándose la embarcación sobre dicha línea.
+        c: Es el ángulo formado por la visual a un objeto y el meridiano.
+        d: Es el ángulo formado por la visual a un objeto y la línea proa-popa.
+      question: ¿Cómo definimos una oposición cuando hablamos de líneas de posición?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 38
+      options:
+        a: Latitud.
+        b: Meridiano del lugar.
+        c: Paralelo.
+        d: Trópico de Capricornio.
+      question: ¿Cómo se denomina al círculo máximo que pasa por los polos y por el
+        buque, y que es perpendicular al Ecuador?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 39
+      options:
+        a: Verde.
+        b: Blanco.
+        c: Rojo.
+        d: Amarillo.
+      question: ¿De qué color es la luz de una marca lateral en la región A que marca
+        el canal de entrada a un puerto, si saliendo correctamente del mismo la dejamos
+        por nuestro costado de babor?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 40
+      options:
+        a: 1/50.000 y 1/200.000
+        b: 1/3.000.000 y 1/30.000.000
+        c: 1/200.000 y 1/3.000.000
+        d: Próximas a 1/25.000
+      question: 'La carta de navegación costera tiene escalas comprendidas aproximadamente
+        entre:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 41
+      options:
+        a: 5-.
+        b: 3+.
+        c: 5+.
+        d: 3-.
+      question: Hallar el desvío con una Ct=-1 y una dm =-4.
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: anulada
+      id: 42
+      options:
+        a: l=35º56,2' N L=005º49,4'W
+        b: l=35º56,4' N L=005º49,4'W
+        c: l=35º56,4' N L=005º49,6'W
+        d: l=35º56,2' N L=005º49,6'W
+      question: 'Siendo HRB: 10:05 y estando situados en la oposición de Cabo Trafalgal
+        y Punta Alcazar y a 26,6'' de Punta Alcazar, ponemos rumbo a Punta Malabata.
+        Calcular la situación de estima a HRB: 12:20, si navegamos a una velocidad
+        de 5 nudos.'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: anulada
+      id: 43
+      options:
+        a: 36º01,4'N 005º25,0'W
+        b: 35º58,5'N 005º13,1'W 0) 35º55,6'N 005º18,8'W
+        d: 36º00,0'N 005º20,0'W
+      question: Alas 21:00 HRB del día 22 de junio de 2019, una embarcación de recreo
+        sale del puerto de La Línea de la Concepción. A las 21:45 HRB, se encuentra
+        navegando a 2 millas de Punta Carnero, en la alineación Punta Carnero - Punta
+        Europa, con un Rumbo de aguja de 154,8º y una velocidad de 7 nudos. Calcular
+        la situación estimada de la embarcación a las 23:15 HRB, suponiendo ausencia
+        de viento y corriente y sabiendo que la Corrección Total (CT) para ese rumbo
+        en esa zona es de 5º12'W.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 44
+      options:
+        a: CT = -3,5º
+        b: CT = -4,5º
+        c: CT = +1,1º
+        d: CT = +2,5º
+      question: ¿Cuál sería la Corrección Total (CT) para el año en curso, utilizando
+        los datos de la carta y un desvío = 2,3º NW?.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a,d
+      id: 45
+      options:
+        a: d = 7,4'
+        b: d = 8,1'
+        c: d = 7,8'
+        d: d = 7,6'
+      question: 'Calcular la distancia entre un punto situado en: l = 35º01,7''N y
+        L = 005º17,0''W y Punta Carnero.'
+exam_info:
+  call: junio
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 03
+  test_code: '03'
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2019
