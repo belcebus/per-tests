@@ -1,0 +1,16 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="36" fill="url(#bgGradient)"/>
+  <circle cx="90" cy="80" r="50" fill="#fff" stroke="#667eea" stroke-width="8"/>
+  <g opacity="0.3">
+    <path d="M90 40 L102 70 L78 70 Z" fill="#667eea"/>
+    <circle cx="90" cy="80" r="6" fill="#667eea"/>
+  </g>
+  <text x="90" y="172" text-anchor="middle" font-size="40" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">PER</text>
+</svg>
