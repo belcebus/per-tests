@@ -226,7 +226,12 @@ build-deploy:
 	@cp README.md deploy-build/
 	@cp LICENSE deploy-build/
 	@echo "$(YELLOW)📦 Generando requirements.txt para Azure...$(NC)"
-	@$(PYTHON_CMD) -m pip freeze > deploy-build/requirements.txt
+	@echo "# Generado automáticamente para despliegue en Azure" > deploy-build/requirements.txt
+	@echo "# Dependencias básicas de la aplicación" >> deploy-build/requirements.txt
+	@$(PYTHON_CMD) -c "import tomllib; import sys; \
+		with open('pyproject.toml', 'rb') as f: data = tomllib.load(f); \
+		deps = data['project']['dependencies']; \
+		[print(dep) for dep in deps]" >> deploy-build/requirements.txt
 	@echo "$(YELLOW)🧹 Limpiando archivos innecesarios...$(NC)"
 	@find deploy-build/ -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
 	@find deploy-build/ -name "*.pyc" -delete 2>/dev/null || true
