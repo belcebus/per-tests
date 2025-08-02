@@ -1,0 +1,605 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 1
+      options:
+        a: El francobordo de la embarcación a popa aumenta.
+        b: El asiento aumenta.
+        c: El francobordo a popa no se ve afectado ya que sólo está influenciado por
+          el puntal.
+        d: El asiento disminuye.
+      question: 'Podemos afirmar que si solo aumenta el calado de popa:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 2
+      options:
+        a: Capacete.
+        b: Arganeo.
+        c: Limera.
+        d: Bocina.
+      question: 'El orificio practicado en el casco para que pase el eje de la hélice
+        se llama:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 3
+      options:
+        a: La otra embarcación está a sotavento nuestro.
+        b: El costado de estribor está a barlovento.
+        c: El costado de babor está a sotavento.
+        d: La otra embarcación está a barlovento nuestro.
+      question: 'Si recibimos el viento por el costado de babor de la embarcación,
+        y tenemos otra embarcación a estribor, podemos decir que:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 4
+      options:
+        a: Obra muerta.
+        b: Obra viva.
+        c: Crujía.
+        d: Carena.
+      question: 'La parte del casco de una embarcación que NO queda sumergida se denomina:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: d
+      id: 5
+      options:
+        a: Si la línea de fondeo es de estacha, no necesitará tener ningun ramal de
+          cadena.
+        b: La longitud del fondeo que hay que filar depende exclusivamente de la eslora.
+        c: En una embarcación de menos de 6 metros, la línea de fondeo tendrá al menos
+          un ramal de cadena de dos esloras de longitud.
+        d: La longitud de la línea de fondeo no podrá ser inferior a cinco veces la
+          eslora.
+      question: En el fondeo a la gira con un ancla, ¿cuál de estas afirmaciones es
+        correcta?
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 6
+      options:
+        a: As de guía.
+        b: Ballestrinque.
+        c: Llano.
+        d: Vuelta de rezón.
+      question: 'Si queremos afirmar rápidamente un cabo a la regala o afirmar una
+        defensa a un pasamanos utilizaremos el nudo:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 7
+      options:
+        a: Durante el proceso de descarga de la batería, ésta desprende hidrógeno,
+          gas altamente explosivo en contacto con el oxígeno del aire.
+        b: Durante el periodo de carga, la batería desprende dióxido de carbono, gas
+          que si bien no es explosivo, sí es asfixiante.
+        c: El compartimento de baterías debe estar bien ventilado para evitar concentraciones
+          de dióxido de carbono.
+        d: El compartimento de baterías debe estar bien ventilado para evitar concentraciones
+          de hidrógeno.
+      question: 'Respecto a las baterías que pudieran hallarse a bordo, señale cuál
+        de las siguientes afirmaciones es CORRECTA:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 8
+      options:
+        a: Cualquier tipo de jarcia de labor sería útil para realizar un remolque
+          seguro, ya que la mena no es un factor determinante para realizar el remolque.
+        b: Hay que intentar mantener una distancia tal que el remolcador siempre esté
+          en la cresta de la ola y el remolcado en el seno de la ola.
+        c: Por todos los medios posibles el remolcador y el remolcado deberían ir
+          lo más juntos que permita el remolque.
+        d: Hay que procurar que tanto el remolcador como el remolcado se encuentren
+          simultáneamente en el seno de la ola o en su cresta para evitar estrechonazos.
+      question: Durante un remolque en alta mar, ¿cuál de las siguientes afirmaciones
+        es correcta?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 9
+      options:
+        a: Llamar por teléfono al 900102102, en cualquier zona de navegación en la
+          que nos encontremos.
+        b: Por el canal de socorro de telefonía VHF (canal 15).
+        c: Mediante el canal de socorro de llamada selectiva digital de VHF (canal
+          16).
+        d: Llamar por teléfono al 900202202.
+      question: 'Para contactar con Salvamento Marítimo tenemos las siguientes opciones:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 10
+      options:
+        a: Se reducirá la velocidad, no llegando en ningún caso a parar el motor.
+        b: Se pondrán en marcha los aparatos radioeléctricos de ayuda a la navegación.
+        c: Se harán las señales fónicas reglamentarias.
+        d: Es conveniente separarse de zonas de mucho tráfico o de recalada, de los
+          estuarios de los ríos y bocanas de los puertos.
+      question: 'En caso de navegar con niebla señale la afirmación INCORRECTA:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 11
+      options:
+        a: Tan lejos como sea posible de la tierra más próxima, pero no a menos de
+          10 millas de la tierra más próxima.
+        b: Los desechos de los alimentos deberán estar desmenuzados o triturados de
+          manera que puedan pasar por cribas con mallas de una abertura máxima de
+          25 mm.
+        c: No se aplicará la prescripción de "en ruta", cuando quede claro que mantener
+          los desechos de alimentos a bordo representa un riesgo inminente para la
+          salud de las personas a bordo.
+        d: Los desechos de alimentos no deberán estar contaminados con ningún otro
+          tipo de basuras.
+      question: 'Diga cuál de las siguientes afirmaciones NO es correcta, En las zonas
+        especiales solo se permitirá la descarga en el mar de desechos de alimentos:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 12
+      options:
+        a: Serán responsables solidarios el patrón junto con el propietario y asegurador
+          de la responsabilidad civil.
+        b: Solo el patrón será directamente responsable.
+        c: Tratándose de una embarcación de recreo serán responsables el propietario,
+          o en su defecto, el patrón, y en todo caso, el asegurador de la responsabilidad
+          civil de suscripción obligatoria.
+        d: Serán responsables el propietario, y subsidiariamente, el patrón.
+      question: 'De las infracciones por contaminación del medio marino:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 13
+      options:
+        a: De eje de un canal.
+        b: De recalada.
+        c: Para indicar el mejor lugar de paso bajo un puente.
+        d: De separación de tráfico donde el balizamiento convencional del canal puede
+          prestarse a confusión.
+      question: 'Diga cuál de las siguientes afirmaciones NO es correcta. Las Marcas
+        de Aguas Navegables pueden utilizarse como marcas:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 14
+      options:
+        a: Indicar el lado por el que se ha de pasar para salvar un peligro.
+        b: Señalizar un peligro aislado.
+        c: Indicar el sentido de navegación en un canal definiendo los lados de babor
+          y estribor.
+        d: Indicar que las aguas a su alrededor son navegables.
+      question: 'Las Marcas Cardinales se usan para:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 15
+      options:
+        a: Amarillo sobre negro.
+        b: Amarillo.
+        c: Negro sobre amarillo.
+        d: Negro con una ancha banda horizontal amarilla,
+      question: 'El color de las marcas para indicar las zonas reservadas al recreo
+        es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 16
+      options:
+        a: Peligros aislados de dimensiones limitadas enteramente rodeadas de aguas
+          navegables.
+        b: Que las aguas NO son navegables a su alrededor.
+        c: Dónde están las aguas navegables.
+        d: Los lados de babor y estribor de la derrota que debe seguirse.
+      question: 'Las Marcas de Peligro Aislado se utilizan para indicar:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 17
+      options:
+        a: De color rojo y forma cilíndrica, de castillete o espeque.
+        b: De color rojo.
+        c: De color verde y de forma cilíndrica, de castillete o espeque.
+        d: De color verde, con forma cónica, de castillete o espeque.
+      question: 'Las marcas laterales de estribor de la región A son:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 18
+      options:
+        a: Una pitada corta.
+        b: Una pitada larga.
+        c: Tres pitadas cortas.
+        d: Dos pitadas cortas.
+      question: 'De acuerdo con el RIPA, «estoy dando atrás» se indica mediante:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 19
+      options:
+        a: Navegar en la vía de circulación apropiada, siguiendo la dirección general
+          de la corriente del tráfico indicada por dicha vía.
+        b: En lo posible, mantener su rumbo fuera de la línea de separación o de la
+          zona de separación del tráfico.
+        c: Al entrar o salir de una vía de circulación por uno de sus límites laterales,
+          hacerlo con el mayor ángulo posible en relación con la dirección general
+          de la corriente de tráfico.
+        d: Al entrar o salir de una vía de circulación deberá hacerlo, preferentemente,
+          por sus extremos.
+      question: Según la regla 10 del RIPA, ¿qué NO debe hacer un buque cuando utilice
+        un dispositivo de separación del tráfico?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 20
+      options:
+        a: Todo buque que, debido a la naturaleza de su trabajo, tiene reducida su
+          capacidad para maniobrar en la forma exigida por este Reglamento y, por
+          consiguiente, no puede apartarse de la derrota de otro buque.
+        b: Todo buque que debido a su gran tonelaje, tiene reducida su capacidad para
+          maniobrar en la forma exigida por este Reglamento.
+        c: Todo buque que por cualquier circunstancia excepcional es incapaz de maniobrar
+          en la forma exigida por este Reglamento y, por consiguiente, no puede apartarse
+          de la derrota de otro buque.
+        d: Todo buque que debido a problemas con su sistema de propulsión, tiene reducida
+          su capacidad para maniobrar en la forma exigida por este Reglamento.
+      question: Según la regla 3 del RIPA, ¿qué se entiende por "buque con capacidad
+        de maniobra restringuida"?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 21
+      options:
+        a: Maniobra a estribor.
+        b: Peligro y necesidad de ayuda.
+        c: Sin arrancada.
+        d: Fondeado.
+      question: 'Según el Anexo IV del RIPA, un sonido continuo producido por cualquier
+        aparato de señales de niebla indica:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 22
+      options:
+        a: Cuando cada uno de ellos reciba el viento por bandas contrarias, el que
+          lo reciba por estribor se mantendrá apartado de la derrota del otro.
+        b: Cuando ambos reciban el viento por la misma banda, el buque que esté a
+          sotavento se mantendrá apartado de la derrota del que esté a barlovento.
+        c: Cuando ambos reciban el viento por la misma banda, el buque que esté a
+          barlovento mantendrá rumbo y velocidad.
+        d: Cuando cada uno de ellos reciba el viento por bandas contrarias, el que
+          lo reciba por babor se mantendrá apartado de la derrota del otro.
+      question: Según la regla 12 del RIPA, ¿cómo deben actuar dos buques de vela
+        cuando se aproximen uno al otro con riesgo de abordaje?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 23
+      options:
+        a: La conducta de los buques en condiciones de visibilidad reducida es de
+          aplicación a los buques que están a la vista uno del otro cuando naveguen
+          cerca o dentro de una zona de visibilidad reducida.
+        b: La conducta de los buques en condiciones de visibilidad reducida es de
+          aplicación a los buques que están a la vista uno del otro cuando naveguen
+          dentro de una zona de visibilidad reducida.
+        c: La velocidad de seguridad de un buque permanece inalterable a lo largo
+          del tiempo.
+        d: En situaciones de visibilidad reducida y cuando haya riesgo de abordaje,
+          todo buque que oiga, al parecer de su través, la señal de niebla de otro
+          buque, deberá reducir su velocidad hasta la mínima de gobierno.
+      question: Según la regla 19 del RIPA, ¿cuál de las siguientes afirmaciones es
+        VERDADERA?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 24
+      options:
+        a: Emitirá un sonido intermitente producido por cualquier aparato de señales
+          de niebla.
+        b: Exhibirá una señal de peligro "SOS" del Código Internacional de Señales.
+        c: Emitirá una alerta de socorro mediante llamada selectiva digital con el
+          respondedor de radar.
+        d: Utilizará, por separado o conjuntamente, una señal fumígena y un cohete-bengala
+          con paracaídas.
+      question: 'Según el Anexo IV del RIPA, cuando un buque esté en peligro y necesite
+        ayuda:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 25
+      options:
+        a: Un cilindro.
+        b: Una marca bicónica.
+        c: Una marca cónica con el vértice hacia abajo.
+        d: Una marca cónica con el vértice hacia arriba.
+      question: 'De acuerdo con la Regla 25.e del RIPA, un buque que navegue a vela,
+        cuando sea también propulsado mecánicamente, deberá exhibir a proa, en el
+        lugar más visible:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 26
+      options:
+        a: Queda prohibido fondear en un canal angosto.
+        b: Siempre que las circunstancias lo permitan, los buques evitarán fondear
+          en un canal angosto.
+        c: El RIPA no establece nada en relación al fondeo en canales angostos.
+        d: Siempre que las circunstancias lo permitan, los buques fondearán en canales
+          angostos.
+      question: ¿Qué establece la regla 9 del RIPA en relación al fondeo en canales
+        angostos?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 27
+      options:
+        a: Emitirá una alerta de socorro mediante una llamada selectiva digital en
+          el canal 16 de ondas métricas.
+        b: Emitirá una señal consistente en la palabra "MAYDAY” por el VHF.
+        c: Emitirá una alerta de socorro buque-costera a través de la estación terrena
+          de buque de Inmarsat.
+        d: Utilizará una marca colorante del agua.
+      question: Según el Anexo IV del RIPA, en relación a un buque que necesita ayuda,
+        ¿cuál de las siguientes afirmaciones es FALSA?
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: a
+      id: 28
+      options:
+        a: Atracamos al costado de otra embarcación.
+        b: Atracamos con el costado al muelle.
+        c: Adelantamos por estribor a otra embarcación.
+        d: Atracamos popa con popa.
+      question: 'Nos abarloamos a otra embarcación si:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: a
+      id: 29
+      options:
+        a: Para desembarcar y embarcar, siempre lo haremos pasando por la popa del
+          otro barco.
+        b: Debemos contar con la autorización y colaboración de su tripulación,
+        c: Los primeros cabos que se dan son los que van a la otra embarcación y después
+          los largos de proa y popa.
+        d: Hay que colocar suficientes defensas en los costados y si son veleros,
+          procurar que los palos de ambos no queden a la misma altura.
+      question: Al abarloarse a otra embarcación, ¿qué afirmación NO es correcta?
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 30
+      options:
+        a: Poner en marcha de inmediato todas las bombas de achique.
+        b: Intentar taponar la vía de agua desde el interior de la embarcación con
+          espiches, cojines, ropas, etc.
+        c: Escorar el barco dejando la vía de agua por encima de la flotación y a
+          sotavento.
+        d: Para reforzar el trabajo de las bombas de achique, soltaremos la toma de
+          agua de mar de refrigeración del motor, obturaremos el paso y haremos que
+          succione el agua embarcada.
+      question: Si tenemos una vía de agua y descubrimos una inundación en las sentinas,
+        ¿qué medidas NO debemos tomar?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 31
+      options:
+        a: Nunca.
+        b: Sólo cuando se produzca un incendio.
+        c: Sin precipitarnos, cuando tengamos la completa seguridad de que se va a
+          hundir.
+        d: Sólo cuando tengamos la certeza de que otro barco nos está viendo.
+      question: ¿Cuándo abandonaremos el barco?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 32
+      options:
+        a: Beber alcohol.
+        b: Embarcar en ayunas.
+        c: Tomar algún medicamento preventivo, una hora antes de embarcar.
+        d: Situarse cerca del motor.
+      question: 'Existen diversas formas de combartir el mareo o de evitarlo, tales
+        como:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 33
+      options:
+        a: Antes de hacerse a la mar, resulta de vital importancia informarse de las
+          previsiones meteorológicas para la zona donde se pretende navegar.
+        b: La información meteorológica emitida por el Instituto Nacional de Meteorología
+          para las zonas marítimas tiene una amplia difusión por diferentes medios.
+        c: De todos los diferentes medios de difusión de información meteorológica,
+          sólo debemos entender como fiable la información que nos llegue a través
+          de transmisiones radio en VHF.
+        d: La Agencia Estatal de Meteorología posee una página web en la que muestra
+          una amplia información meteorológica general para España, por comunidades
+          autónomas y marítima, con boletines de información real de las zonas costeras.
+      question: ¿Cuál de las siguientes afirmaciones es FALSA?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 34
+      options:
+        a: El viento que existe en un momento dado, si la embarcación estuviese parada.
+        b: La suma vectorial del viento aparente y el viento generado por el avance
+          de la embarcación.
+        c: El viento generado por el avance de la embarcación.
+        d: La suma algebraica del viento aparente y el viento generado por el avance
+          de la embarcación.
+      question: 'El viento real es:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 35
+      options:
+        a: Es la relación entre el peso del aire y el peso del mercurio.
+        b: Es consecuencia de la atracción gravitatoria.
+        c: Su valor es mínimo a nivel del mar.
+        d: El valor normal a nivel del mar es 780 mmHg.
+      question: ¿Cuál de las siguientes afirmaciones relativas a la presión atmosférica
+        es VERDADERA?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 36
+      options:
+        a: Horario.
+        b: Antihorario.
+        c: No circula, es un anticiclón.
+        d: Centrípeto.
+      question: 'En los anticiclones del hemisferio Norte, el viento circula en sentido:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 37
+      options:
+        a: 'Son los círculos menores paralelos al Ecuador. De especial referencia
+          tenemos: Trópico de Cáncer, Trópico de Capricornio, Círculo Polar Ártico
+          y Círculo Polar Antártico.'
+        b: Son los círculos iguales al Ecuador. De especial referencia el Paralelo
+          de Greenwich.
+        c: Son los círculos menores paralelos al Meridiano de Greenwich.
+        d: Son los círculos máximos que pasan por los polos y, por tanto, son perpendiculares
+          al Ecuador.
+      question: ¿Qué son los Paralelos?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 38
+      options:
+        a: El rumbo magnético es el que nos marca siempre la aguja del compás.
+        b: En las cartas de navegación se representan los rumbos principales mediante
+          la rosa náutica.
+        c: El rumbo marcado por la aguja náutica no es el rumbo verdadero, ya que
+          le afectan la declinación magnética y el desvío de aguja.
+        d: El rumbo verdadero es el rumbo que marca la línea de crujía del barco con
+          respecto al norte geográfico.
+      question: ¿Cuál de las siguientes afirmaciones acerca del rumbo NO es cierta?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 39
+      options:
+        a: Permite obtener el rumbo verdadero si le restamos el rumbo de aguja.
+        b: Es la bisectriz del ángulo formado por el norte verdadero y el norte de
+          aguja.
+        c: Resulta de restar a la declinación magnética el desvío de aguja.
+        d: Resulta de sumar la declinación magnética y el desvío de aguja.
+      question: 'La Corrección total:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 40
+      options:
+        a: Si sabemos nuestro rumbo verdadero y tenemos marcaciones de dos puntos
+          de referencia distintos y próximos en el tiempo.
+        b: Si sabemos nuestro rumbo verdadero y tenemos marcaciones simultanéas de
+          dos puntos de referencia distintos.
+        c: Si sabemos el rumbo de aguja y tenemos marcaciones de dos puntos de referencia
+          distintos y próximos en el tiempo.
+        d: Si sabemos el rumbo de aguja y tenemos una marcación a un punto de referencia.
+      question: 'Podemos situarnos sobre la carta:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 41
+      options:
+        a: Se mide con un sextante.
+        b: En la aleta de babor, tiene un valor entre 90? y 180".
+        c: Es el ángulo horizontal medido desde nuestro rumbo hasta la visual de un
+          objeto.
+        d: Es el ángulo horizontal medido desde el Norte hasta la visual de un objeto.
+      question: 'La demora:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 42
+      options:
+        a: l=35º 53,3'N L=005º 53,5'W.
+        b: l=35º 53'N   L=005º 54'W. 0) l=35º 53,3'N L=005º 52,9'W.
+        d: l=35º 54,2'N L=005º 54'W.
+      question: Siendo HRB 0906 y estando situados en la oposición del faro de Cabo
+        Roche y el faro de Cabo Trafalgar y a 2,8 millas del faro de Cabo Trafalgar,
+        ponemos rumbo a la Punta de los Judíos. Calcular la situación de estima a
+        las HRB 1212 si llevamos una velocidad de 7 nudos.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 43
+      options:
+        a: 13 millas.
+        b: 13,3 millas.
+        c: 1,3 millas.
+        d: 12,8 millas.
+      question: ¿Cuál es la distancia entre el faro Punta Europa y el faro Punta Almina?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 44
+      options:
+        a: l=36º00,1'N L=005º 50,2'W.
+        b: l=36º00,1'N L=005º 49,6'W. 0) l=35º59,8'N L=005º 49,6'W.
+        d: l=36º01'N   L=005º 50,2'W.
+      question: 'Hallar la situación verdadera a partir de los siguientes datos: CT:2(+).
+        Demora de aguja a punta Paloma: 054". Demora de aguja a Isla de Tarifa: 088”.'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 45
+      options:
+        a: 6,96 metros.
+        b: 6,62 metros.
+        c: 6,88 metros.
+        d: 6,54 metros.
+      question: Hallar la sonda en el momento de la segunda bajamar el día 07 de abril
+        de 2019 en Camariñas con una presión atmosférica de 996 mb y una sonda en
+        la carta de 6,12 metros.
+exam_info:
+  call: abril
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: '01'
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2019

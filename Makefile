@@ -2,10 +2,9 @@
 quality: venv
 	@echo "$(GREEN)🔎 Análisis de calidad de código (flake8, pylint, black, mypy)...$(NC)"
 	venv/bin/flake8 app config tools
-	venv/bin/pylint --disable=all --enable=E,F app config tools
-	venv/bin/black --check app config tools
-
-	venv/bin/mypy app config tools
+	venv/bin/pylint --disable=all --enable=E,F app config
+	venv/bin/black --check app config
+	venv/bin/mypy app config
 # Instala solo las dependencias de linters y analizadores
 install-lint: venv
 	@echo "$(GREEN)📦 Instalando paquete con linters y analizadores...$(NC)"

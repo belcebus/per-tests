@@ -1,0 +1,620 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 1
+      options:
+        a: Cafía.
+        b: Mecha.
+        c: Limera.
+        d: Pala.
+      question: 'El eje del timón que atraviesa el casco se conoce como:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 2
+      options:
+        a: Si aumenta únicamente el calado de proa, el asiento del buque pasaría a
+          ser aproante.
+        b: Deberíamos aumentar obligatoriamente el calado de popa ya que el asiento
+          nulo en una embarcación denota falta de francobordo y por lo tanto una situación
+          de peligro.
+        c: Si aumenta únicamente el calado de proa, el asiento del buque pasaría a
+          ser apopante.
+        d: Deberíamos aumentar obligatoriamente en la misma medida tanto el calado
+          de proa como el de popa, hasta que el asiento del buque pase a ser apopante.
+          Esto mejorará las condiciones de seguridad de la embarcación.
+      question: Si nuestra embarcación se encuentra inicialmente en una situación
+        de asiento nulo, ¿cuál de las siguientes afirmaciones sería correcta?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 3
+      options:
+        a: Enderezar, poner derecho algún objeto o la embarcación.
+        b: Inclinación de la embarcación en el sentido babor-estribor.
+        c: Permitir que una amarra se vaya al aflojarla.
+        d: Acción de girar una embarcación en torno al ancla.
+      question: 'Adrizar es:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 4
+      options:
+        a: La velocidad máxima en nudos por unidad de tiempo a la que puede desplazarse
+          la embarcación.
+        b: La máxima dimensión sumergida del casco medida verticalmente sin contar
+          los apéndices.
+        c: El peso máximo del volumen de agua de mar desplazada por el casco,
+        d: El volumen máximo de agua que la embarcación desplaza durante su movimiento.
+      question: 'El desplazamiento máximo de una embarcación es:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 5
+      options:
+        a: La longitud de cadena filada.
+        b: La longitud de cadena y eslora de la embarcación,
+        c: La eslora de la embarcación.
+        d: Dos veces la longitud del fondeo.
+      question: 'El radio del círculo de borneo es igual a:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 6
+      options:
+        a: Ballestrinque.
+        b: Vuelta de rezón.
+        c: Llano.
+        d: As de guía.
+      question: 'Para unir dos cabos de la misma mena utilizaremos el nudo:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 7
+      options:
+        a: Método Boutakov.
+        b: Curva de Williamson.
+        c: Exploración en espiral cuadrada.
+        d: Maniobra de Anderson.
+      question: ¿Cuál de las siguientes maniobras de búsqueda se emplea cuando el
+        náufrago no está a la vista?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 8
+      options:
+        a: Gancho disparador.
+        b: Boza de amarre y activación.
+        c: Gaza de liberación.
+        d: Zafa hidrostática.
+      question: ¿Cómo se denomina al elemento de accionamiento automático de liberación
+        de la balsa salvavidas en caso de hundimiento?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 9
+      options:
+        a: Se tendrá preparada la maniobra de fondeo.
+        b: Siempre que sea posible, se localizará un veril de seguridad que no podamos
+          superar.
+        c: Aumentar la velocidad evitando así posibles encallamientos, aprovechando
+          el empuje de la embarcación.
+        d: Se procederá a la activación del profundímetro o la sonda.
+      question: ¿Cuál de las siguientes acciones NO se debe adoptar navegando en aguas
+        someras?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 10
+      options:
+        a: El canal 70 de VHF, solo para casos de urgencia.
+        b: Por radiotelefonía (voz) en el canal 70 de VHF.
+        c: Mediante el canal de socorro de llamada selectiva digital de VBF (canal
+          16).
+        d: Por radiotelefonía en el canal 16 de VHF.
+      question: 'En caso de emergencia, podemos contactar con Salvamento Marítimo
+        a través de:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: d
+      id: 11
+      options:
+        b: El pabellón nacional deberá izarse, igualmente, cuando así lo requiera
+          la costumbre internacional o las disposiciones aplicables en espacios marítimos
+          sometidos a jurisdicción extranjera.
+        c: Los buques están obligados a izar el pabellón nacional a la vista de un
+          buque de guerra o fortaleza, a las entradas y salidas de los puertos, y
+          en estos, de sol a sol, en los días festivos.
+        d: Se reserva el asta de proa y el pico del palo mayor para la Bandera de
+          España.
+      question: 'Señale cuál de las siguientes afirmaciones NO es correcta: 4) No
+        tener izado, o exhibir incorrectamente el pabellón nacional podrá ser sancionado
+        como infracción administrativa de carácter grave contra la ordenación del
+        tráfico marítimo.'
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 12
+      options:
+        a: Estará obligado siempre a acudir a toda máquina en su auxilio, informando
+          de ello, si es posible, a dicha personas o al servicio de búsqueda y salvamento,
+        b: Solo está obligado a informar al servicio de búsqueda y salvamento pertinente,
+          y lo anotará en el diario de navegación.
+        c: Está obligado, a acudir a toda máquina en su auxilio, cuando estando en
+          condiciones de prestar ayuda, reciba una señíal, de la fuente que sea, que
+          le indique que hay personas en peligro en el mar, salvo, que no pueda prestar
+          el auxilio, o si dadas las circunstancias especiales del caso el capitán
+          estima que es irrazonable o innecesario hacerlo.
+        d: La obligación de prestar ayuda depende de la nacionalidad y la condición
+          jurídica de dichas personas y de las circunstancias en que hayan sido encontradas.
+      question: 'De conformidad con la Regla 33,1, Capítulo V, del Convenio Internacional
+        SOLAS, el capitán de un buque que, estando en el mar, reciba una señal que
+        le indique que hay personas en peligro en el mar:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 13
+      options:
+        a: De forma cónica, de castillete o espeque.
+        b: Roja con una banda ancha horizontal verde.
+        c: Amarilla con una banda ancha horizontal roja.
+        d: Cilíndrica, de castillete o espeque y verde con una banda ancha horizontal
+          roja.
+      question: 'En el punto de bifurcación de un canal, siguiendo el sentido convencional
+        de balizamiento, se puede indicar el canal principal mediante una marca lateral
+        de babor o estribor modificada. En la región A, si el canal principal está
+        a estribor, la marca es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 14
+      options:
+        a: Una esfera roja.
+        b: Un aspa amarilla, en forma de X.
+        c: Dos conos negros superpuestos opuestos por sus bases.
+        d: Dos esferas negras superpuestas.
+      question: 'La marca de tope de una "Marca de Peligro Aislado" está formada por:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 15
+      options:
+        a: Son diferentes dependiendo de la región.
+        b: Son iguales en forma en ambas regiones, aunque su uso es diferente.
+        c: Tienen el mismo uso, pero son de forma diferente dependiendo de si la región
+          es A o B.
+        d: Son las mismas en ambas regiones.
+      question: 'Las marcas cardinales:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 16
+      options:
+        a: Esférica, también de castillete o espeque con una marca de tope esférica.
+        b: A elegir pero sin que pueda prestarse a confusión con las marcas laterales;
+          son preferibles las formas de castillete o espeque.
+        c: De libre elección, pero que no se preste a confusión con las marcas para
+          ayuda a la navegación.
+        d: De castiJlete o espeque.
+      question: 'La forma de las boyas que indican zonas reservadas al recreo es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 17
+      options:
+        a: Amarillo sobre negro.
+        b: Amarillo.
+        c: Negro sobre amarillo.
+        d: Negro con una ancha banda horizontal amarilla.
+      question: 'El color de las marcas para indicar zonas de ejercicios militares
+        es:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 18
+      options:
+        a: Cuando un buque de vela alcanza a otro de propulsión mecánica, el primero
+          debe gobernar,
+        b: Cuando un buque de vela alcanza a otro de propulsión mecánica, el segundo
+          debe gobernar.
+        c: Un buque de vela, en navegación, se mantendrá apartado de la derrota de
+          un buque de propulsión mecánica.
+        d: Un buque dedicado a la pesca, en navegación, se mantendrá apartado de la
+          derrota de un buque de vela.
+      question: ¿Cuál de las siguientes afirmaciones es CORRECTA?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 19
+      options:
+        a: Todo buque construido y armado con redes, líneas, aparejos de arrastre
+          u otros artes de pesca que restrinjan su maniobrabilidad.
+        b: Todo buque que esté pescando con redes, líneas, aparejos de arrastre, curricán
+          u otros artes de pesca que no restrinjan su maniobrabilidad. e) Todo buque
+          que esté pescando con redes, líneas, aparejos de arrastre u otros artes
+          de pesca que restrinjan su maniobrabilidad.
+        d: Todo buque construido y armado con redes, líneas, aparejos de arrastre,
+          curricán u otros artes de pesca que restrinjan su maniobrabilidad.
+      question: 'Según la Regla 3 del RIPA, entendemos por "buque dedicado a la pesca":'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 20
+      options:
+        a: En línea vertical con una segunda luz de remolque.
+        b: En línea vertical y por encima de la luz de tope.
+        c: En línea vertical y por debajo de la luz de alcance,
+        d: En linea vertical y por encima de la luz de aleance.
+      question: 'De acuerdo con la Regla 24,a del RIPA, un buque de propulsión mecánica
+        cuando remolque a otro exhibirá, entre otras, una luz de remolque:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 21
+      options:
+        a: Deberá navegar en la vía de circulación apropiada, siguiendo la dirección
+          general de la corriente del tráfico indicada para dicha vía,
+        b: En lo posible, mantendrá su rumbo fuera de la línea de separación o de
+          la zona de separación del tráfico.
+        c: Normalmente, al entrar en una vía de circulación o salir de ella, lo hará
+          por sus extremos.
+        d: Al igual que los buques de menos de 20 metros de eslora y los buques dedicados
+          a la pesca, deberá utilizar las zonas de navegación costera adyacentes,
+          no las vías de circulación.
+      question: 'Según la Regla 10 del RIPA, un buque de vela que navegue en un dispositivo
+        de separación de tráfico (señalar la respuesta INCORRECTA):'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 22
+      options:
+        a: Un alerta de socorro mediante llamada selectiva digital que se transmita
+          en el canal 30 de ondas métricas.
+        b: Movimientos de saludo realizados con un brazo.
+        c: Una señal fumigena que produzca una densa humareda de color blanco.
+        d: Señales transmitidas por radiobalizas de localización de siniestros.
+      question: Según en el Anexo IV del RIPA, ¿cúal de las siguientes señales indica
+        peligro y necesidad de ayuda?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 23
+      options:
+        a: Únicamente en condiciones de buena visibilidad.
+        b: Únicamente en condiciones de visibilidad reducida.
+        c: En cualquier condición de visibilidad.
+        d: A todos los buques, excepto a aquellos que realizan navegación en solitario,
+      question: 'Según la Regla 5 del RIPA, todos los buques mantendrán en todo momento
+        una eficaz vigilancia visual y auditiva, utilizando asimismo todos los medios
+        disponibles que sean apropiados a las circunstancias y condiciones del momento,
+        para evaluar plenamente la situación y el riesgo de abordaje. Esta regla es
+        de aplicación:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 24
+      options:
+        a: Los buques de eslora superior a 50 metros.
+        b: Los buques de eslora superior a 100 metros.
+        c: Los buques de eslora inferior a 15 metros.
+        d: Los buques de eslora inferior a 12 metros.
+      question: De acuerdo con la Regla 33.b del RIPA, ¿qué buques no están obligados
+        a llevar pito, campana o gong, u otro equipo que tenga las mismas características
+        acústicas cuando así se admita, a condición de ir dotados de otros medios
+        para hacer señales acústicas eficaces?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 25
+      options:
+        a: Una pitada larga a intervalos que no excedan de 2 minutos,
+        b: Dos pitadas largas cada 2 minutos.
+        c: Una pitada larga y una corta a intervalos que no excedan de 2 minutos.
+        d: Dos pitadas cortas cada 2 minutos
+      question: 'Según la Regla 35 del RIPA, un buque de propulsión mecánica que navegue
+        con arrancada en una zona de visibilidad reducida emitirá:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 26
+      options:
+        a: Si es necesario, con objeto de disponer de más tiempo para estudiar la
+          situación, el buque reducirá su velocidad o suprimirá toda su arrancada
+          parando o invirtiendo sus medios de propulsión.
+        b: Para intentar evitar un abordaje, se deben realizar una sucesión de pequeños
+          cambios de rumbo y/o velocidad.
+        c: Se considerará que siempre existe riesgo de abordaje, si la demora de un
+          buque que se aproxima varía de forma apreciable.
+        d: El radar es el único medio fiable a través del que se puede determinar
+          si existe riesgo de abordaje.
+      question: Según la Regla 8.e del RIPA, en lo que se refiere a la maniobra para
+        evitar el abordaje, ¿cuál de las siguientes afirmaciones es VERDADERA?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 27
+      options:
+        a: La duración de cada destello sea de cuatro segundos aproximadamente, el
+          intervalo entre destellos sea de dos segundos aproximadamente, y el intervalo
+          entre señíales sucesivas no sea inferior a scis segundos.
+        b: La duración de cada destello sea de tres segundos aproximadamente, el intervalo
+          entre destellos sea de tres segundos aproximadamente, y el intervalo entre
+          señales sucesivas no sea inferior a siete segundos.
+        c: La duración de cada destello sea de cuatro segundos aproximadamente, el
+          intervalo entre destellos sea de un segundo aproximadamente, y el intervalo
+          entre señales sucesivas no sea inferior a cuatro segundos,
+        d: La duración de cada destello sea de un segundo aproximadamente, el intervalo
+          entre destellos sea de un segundo aproximadamente, y el intervalo entre
+          señales sucesivas no sea inferior a diez segundos.
+      question: 'De acuerdo con la Regla 34.b del RIPA, los tres destellos que pueden
+        complementar a las tres pitadas cortas que indican «estoy dando atrás», deben
+        cumplir que:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: a
+      id: 28
+      options:
+        a: Lascar.
+        b: Adujar.
+        c: Templar,
+        d: Encapillar.
+      question: ¿Cómo se llama la acción de aflojar o arriar un poco un cabo que está
+        firme?
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 29
+      options:
+        a: Posicionamiento, avance y traslado.
+        b: Maniobra, variable y uniforme.
+        c: Posicionamiento, traslado y uniforme.
+        d: Posicionamiento y amplitud diametral.
+      question: 'Las fases de la curva de evolución marcha avante por orden cronológico
+        son:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 30
+      options:
+        a: No es indispensable para poder mantener la flotabilidad de la embarcación.
+        b: Es una de las propiedades más importantes que debe cumplir el casco de
+          una embarcación haciéndole permeable a los líquidos.
+        c: La bocina y limera del timón no son puntos de riesgo para la pérdida de
+          estanqueidad.
+        d: Para conservar una perfecta estanqueidad deberemos llevar a cabo un mantenimiento
+          continuo tanto del casco como de todos los accesorios que nos permiten hacer
+          estancas las diferentes aberturas que tenemos en el casco y la cubierta
+          principal, tales como grifos de fondo, portillos, escotillas, etc.
+      question: 'La estanqueidad del casco de una embarcación:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 31
+      options:
+        a: Trincar todos los objetos flotantes que haya en cubierta.
+        b: Pedir auxilio por radio, señales pirotécnicas o señales previstas en el
+          RIPA.
+        c: Orientarse respecto al rumbo y distancia a la tierra más próxima.
+        d: Proveerse de agua y alimentos.
+      question: ¿Cuál de las siguientes actividades NO debemos realizar en la preparación
+        del abandono de la embarcación?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 32
+      options:
+        a: La cabeza y el cuello representan el 9%.
+        b: La cabeza y el cuello representan el 18%,
+        c: La cabeza y el cuello representan el 1%.
+        d: La cabeza y el cuello representan el 27%.  Metcorología
+      question: 'Para determinar la extensión de las quemaduras se utiliza la "regla
+        de los nueves", que consiste en dividir el cuerpo en regiones que representan
+        el 9% del total, así:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 33
+      options:
+        a: Es la distancia medida en millas donde el viento sopla en la misma dirección
+          y con la misma intensidad.
+        b: Es la zona o extensión en la cual el aire está lleno de espuma y agua pulverizada
+          debido a la intensidad del viento.
+        c: Es el tiempo medido en minutos donde el viento sopla en la misma dirección
+          y con la misma intensidad.
+        d: Es la fuerza del viento.
+      question: ¿Qué es la persistencia?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 34
+      options:
+        a: Su definición procede del principio cero de la termodinámica que establece
+          que dos cuerpos en equilibrio térmico con un tercero están en equilibrio
+          térmico entre sí.
+        b: Es una magnitud física que caracteriza el movimiento aleatorio medio de
+          las moléculas de una sustancia e informa del calor o energía térmica de
+          la misma.
+        c: En la escala centígrada el punto de evaporación del agua es la temperatura
+          más alta que se puede medir.
+        d: Para indicar la temperatura de un cuerpo se usan escalas arbitrarias de
+          referencia, entre las que se encuentra la escala Celsius.
+      question: ¿Cuál de las siguientes afirmaciones relativas a la temperatura es
+        FALSA?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 35
+      options:
+        a: Página web de AEMET en Internet,
+        b: Trasmisiones radio en VHF,
+        c: Sistema NAVTEX.
+        d: Teléfono gratuito para la información meteorológica de la Dirección General
+          de la Marina Mercante, 900 100 120,
+      question: La información meteorológica emitida por el Instituto Nacional de
+        Meteorología para las zonas marítimas tiene un amplía difusión por diferentes
+        medios, ¿Cuál de los siguientes NO es uno de esos medios?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 36
+      options:
+        a: Ciclones.
+        b: Altas presiones.
+        c: Bajas presiones.
+        d: Depresiones.
+      question: ¿Cuál de las siguientes denominaciones NO se correspondería con las
+        borrascas?
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 37
+      options:
+        a: Es la magnitud que relaciona el rumbo de aguja con el rumbo verdadero.
+        b: Es la suma de los valores absolutos de la declinación y el desvío.
+        c: Es la suma algebraica de la declinación y el desvío,
+        d: Es un ángulo.
+      question: 'Indique cuál de las siguientes afirmaciones sobre la Corrección Total
+        NO es cierta:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 38
+      options:
+        a: Se representa por la letra "Delta" del alfabeto griego.
+        b: Las perturbaciones magnéticas son despreciables abordo, ya que el norte
+          magnético es invariable.
+        c: La abundancia de acero en el barco no influye en el campo magnético y por
+          tanto no afecta al desvío de aguja.
+        d: Se define como el ángulo de separación entre el norte de aguja y el norte
+          verdadero.
+      question: 'En relación al desvío de la aguja, indique la opción VERDADERA:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 39
+      options:
+        a: Es el ángulo formado por la línea proa-popa con el meridiano del lugar
+          y se mide de 0” a 360" en el sentido de las agujas del reloj.
+        b: Es el que utilizaremos siempre en las cartas de navegación.
+        c: El rumbo S 40 W equivale a 140”,
+        d: Se mide de 0* a 90? y se cuentan a partir del N o S hacia el E y W.
+      question: 'Indique cuál de las siguientes afirmaciones sobre el rumbo cuadrantal
+        es VERDADERA:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 40
+      options:
+        a: El desvío de la embarcación respecto al rumbo inicial debido a la acción
+          del viento sobre la obra muerta.
+        b: El desvío de la embarcación respecto al rumbo inicial debido a la acción
+          del viento sobre la obra viva.
+        c: El desvío de la embarcación respecto al rumbo inicial debido a la acción
+          de la corriente sobre la obra muerta.
+        d: El desvío de la embarcación respecto al rumbo inicial debido a la acción
+          de la corriente sobre la obra viva,
+      question: 'La deriva es:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 41
+      options:
+        a: Es el ángulo que forma el Norte con la línea de la visual dirigida a un
+          punto.
+        b: Es el ángulo obtenido con el compás de alidada.
+        c: Permite por si sola situar al barco en una carta.
+        d: Es la línea de posición más segura, puesto que no está afectada por errores
+          visuales.
+      question: 'La demora a un punto:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 42
+      options:
+        a: l= 35º55,0'N; L= 005º52,1'W
+        b: l= 35º54,5'N; L= 005º50,0'W
+        c: l= 35º54,0'N; L= 005º51,4'W
+        d: l= 35º55,1'N; L= 005º52,7'W
+      question: Siendo Hrb=22:05 y estando situados en la oposición del faro de Cabo
+        Espartel y del faro de Cabo Roche y a 22,6 millas de este último faro, ponemos
+        rumbo al faro de Punta Alcázar. Calcular la situación de estima a Hrb=23:35,
+        si navegamos a una velocidad de 4 nudos.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 43
+      options:
+        a: 6,57 metros.
+        b: 1,15 metros,
+        c: 5,15 metros.
+        d: 5,12 metros,
+      question: ¿Cuál es la sonda a las 15:55 Hrb del día 5 de octubre de 2019 en
+        un punto de la carta de la Ría de Arousa que tiene 4 metros de sonda?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 44
+      options:
+        a: 043,2º
+        b: 044,5º
+        c: 045,1º
+        d: 041,9º
+      question: Calcular para el día de hoy, suponiendo ausencia de viento y corriente,
+        el rumbo de aguja para ir desde un punto situado a 5 millas al Oeste verdadero
+        del faro de Cabo Espartel, hasta otro punto situado a 5 millas al sur verdadero
+        de Punta Camarinal, El desvío en la zona para ese rumbo es de 19 al Este.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 45
+      options:
+        a: l=36º02'N;   L=005º36,5'W
+        b: l=35º58'N;   L=006º36,5'W
+        c: l=36º00,2'N; L=006º36,5'W
+        d: l=36º00,2'N; L=005º36,5'W
+      question: ¿Cuáles son las coordenadas del faro de Isla Tarifa?
+exam_info:
+  call: diciembre
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 05
+  test_code: '05'
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2019
