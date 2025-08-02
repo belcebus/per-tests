@@ -86,6 +86,7 @@ def parse_exam_pages_dual(texts_full: list, texts_left: list, pdf_name: str) -> 
         # Mejorar reconocimiento de tipo y modelo de examen
         exam_type, exam_key = None, None
         lines = [line.strip().upper() for line in page_text.splitlines()]
+
         # Normalizar tildes y espacios para comparar
         def normalize(s):
             s = s.upper()

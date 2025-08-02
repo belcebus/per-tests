@@ -74,5 +74,6 @@ Ejemplos de uso:
 
     pdf_to_images(args.input_file, args.output_dir, args.pages)
 
+
 if __name__ == "__main__":
     main()

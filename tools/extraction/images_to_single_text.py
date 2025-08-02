@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 Extrae texto de todas las imágenes PNG de un directorio y lo vuelca en un único fichero de texto.
 
@@ -17,8 +17,11 @@ import argparse
 from PIL import Image
 import pytesseract
 
+
 def extract_text_to_single_file(input_dir, output_file):
+
     import re
+
     def page_number(filename):
         match = re.search(r'(\d+)', filename)
         return int(match.group(1)) if match else float('inf')
@@ -42,6 +45,7 @@ def extract_text_to_single_file(input_dir, output_file):
                 print(f"❌ Error: {e}")
     print(f"\n💾 Texto de todas las imágenes guardado en {output_file}")
 
+
 def main():
     parser = argparse.ArgumentParser(
         description="Extrae texto de imágenes PNG en un directorio y lo guarda en un único archivo .txt.",
@@ -63,6 +67,7 @@ Ejemplo de uso:
     )
     args = parser.parse_args()
     extract_text_to_single_file(args.input_dir, args.output)
+
 
 if __name__ == "__main__":
     main()

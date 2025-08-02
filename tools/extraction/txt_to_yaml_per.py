@@ -10,7 +10,6 @@ Requiere PyYAML: pip install pyyaml
 import os
 import re
 import argparse
-import yaml
 from pathlib import Path
 
 # Literales de categorías (orden y nombre exacto)
@@ -28,14 +27,16 @@ CATEGORIES = [
     "Carta de navegación",
 ]
 
-CATEGORY_MAP = {c.lower().replace('.', '').replace(',', ''): i+1 for i, c in enumerate(CATEGORIES)}
+CATEGORY_MAP = {c.lower().replace('.', '').replace(',', ''): i + 1 for i, c in enumerate(CATEGORIES)}
 
 # Utilidad para limpiar y normalizar literales de categoría
+
 
 def normalize_category(line):
     return line.strip().lower().replace('.', '').replace(',', '')
 
 # Utilidad para extraer la parte "madrid-2029-diciembre" del nombre del txt
+
 
 def extract_exam_id(txt_path):
     stem = Path(txt_path).stem
@@ -45,11 +46,13 @@ def extract_exam_id(txt_path):
 
 # Utilidad para extraer el número de test
 
+
 def extract_test_code(line):
     m = re.search(r'c[oó]digo de test\s*(\d+)', line, re.IGNORECASE)
     return m.group(1) if m else None
 
 # Parseo principal
+
 
 def parse_txt_to_yaml(input_file, output_dir):
 
@@ -69,7 +72,7 @@ def parse_txt_to_yaml(input_file, output_dir):
             exam_start = j + 1
             # Buscar siguiente examen o EOF
             exam_end = len(lines)
-            for k in range(j+1, len(lines)):
+            for k in range(j + 1, len(lines)):
                 if lines[k].strip().upper().startswith("EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO"):
                     exam_end = k
                     break
@@ -89,18 +92,18 @@ def parse_txt_to_yaml(input_file, output_dir):
         question_id = 1  # Global para todo el examen
         option_re = re.compile(r'^[abcd]\)', re.IGNORECASE)
         # Número oficial de preguntas por categoría PER (orden CATEGORIES)
-        QUESTIONS_PER_CATEGORY = [4,2,4,2,5,10,2,3,4,5,4]
+        QUESTIONS_PER_CATEGORY = [4, 2, 4, 2, 5, 10, 2, 3, 4, 5, 4]
         cat_question_count = 0
         for line in exam_lines:
             # Detectar inicio de pregunta
             is_question_start = re.match(r'^(\d{1,2}) ', line)
             # Ignorar líneas de categoría intercaladas (no afectan a la segmentación)
-            l = line.strip().lower().replace('.', '').replace(',', '')
-            is_cat_line = l in [c.lower().replace('.', '').replace(',', '') for c in CATEGORIES]
+            cat_line_norm = line.strip().lower().replace('.', '').replace(',', '')
+            is_cat_line = cat_line_norm in [c.lower().replace('.', '').replace(',', '') for c in CATEGORIES]
             if is_cat_line:
                 continue
             if is_question_start:
-                if question_buffer and any(l.strip() for l in question_buffer):
+                if question_buffer and any(q_line.strip() for q_line in question_buffer):
                     q = parse_question_block(question_buffer, current_cat_id, current_cat, question_id, option_re)
                     if q['question'] or q['options']:
                         current_questions.append(q)
@@ -118,11 +121,11 @@ def parse_txt_to_yaml(input_file, output_dir):
                                 current_cat_id = CATEGORY_MAP.get(current_cat.lower().replace('.', '').replace(',', ''))
                                 current_questions = []
                                 cat_question_count = 0
-                    question_buffer = []
+                question_buffer = []
             if question_buffer or line.strip():
                 question_buffer.append(line)
         # Última pregunta
-        if question_buffer and any(l.strip() for l in question_buffer):
+        if question_buffer and any(q_line.strip() for q_line in question_buffer):
             q = parse_question_block(question_buffer, current_cat_id, current_cat, question_id, option_re)
             if q['question'] or q['options']:
                 current_questions.append(q)
@@ -135,9 +138,10 @@ def parse_txt_to_yaml(input_file, output_dir):
         # Construir exam_info
         # Extraer info del nombre y cabecera
         import yaml
-        from collections import OrderedDict
+
         class OrderedDumper(yaml.SafeDumper):
             pass
+
         def _dict_representer(dumper, data):
             return dumper.represent_dict(data.items())
         OrderedDumper.add_representer(OrderedDict, _dict_representer)
@@ -145,6 +149,7 @@ def parse_txt_to_yaml(input_file, output_dir):
         # --- Añadir representador para forzar comillas dobles SOLO en las opciones ---
         class DoubleQuotedStr(str):
             pass
+
         def double_quoted_str_representer(dumper, data):
             return dumper.represent_scalar("tag:yaml.org,2002:str", data, style='"')
         OrderedDumper.add_representer(DoubleQuotedStr, double_quoted_str_representer)
@@ -204,6 +209,8 @@ def parse_txt_to_yaml(input_file, output_dir):
         with open(out_path, 'w', encoding='utf-8') as fout:
             yaml.dump(yaml_data_quoted, fout, allow_unicode=True, sort_keys=False, Dumper=OrderedDumper)
         print(f"✅ Generado: {out_path}")
+
+
 def parse_question_block(lines, cat_id, cat_name, qid, option_re):
     # lines: bloque de líneas de una pregunta
     # Devuelve dict con estructura YAML
@@ -239,6 +246,7 @@ def parse_question_block(lines, cat_id, cat_name, qid, option_re):
     campos_ordenados = sorted(campos, key=lambda x: orden.index(x[0]))
     return OrderedDict(campos_ordenados)
 
+
 def main():
     parser = argparse.ArgumentParser(description="Convierte un TXT de exámenes PER en YAMLs oficiales.")
     parser.add_argument('--input-file', required=True, help='Fichero TXT de entrada')
@@ -246,6 +254,7 @@ def main():
     args = parser.parse_args()
     os.makedirs(args.output_dir, exist_ok=True)
     parse_txt_to_yaml(args.input_file, args.output_dir)
+
 
 if __name__ == "__main__":
     main()
