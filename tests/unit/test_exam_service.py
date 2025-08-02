@@ -725,6 +725,140 @@ class TestIntegration:
         assert len(service.active_exams) == 0
 
 
+class TestSpecificExamGeneration:
+    """Tests para la generación de exámenes específicos"""
+
+    def test_generate_specific_exam_success(self, exam_service_with_questions):
+        """Test para generar un examen específico exitosamente"""
+        service = exam_service_with_questions
+        
+        # Preparar preguntas mockeadas
+        specific_questions = [
+            Question(
+                id="original_q1",
+                enunciado="Pregunta específica 1",
+                opciones={"a": "Opción A", "b": "Opción B"},
+                respuesta_correcta="a",
+                metadata=QuestionMetadata(
+                    title="Madrid Test 01",
+                    subtitle="Abril 2024",
+                    total_questions=1,
+                    community="Madrid",
+                    year=2024,
+                    call="abril",
+                    test_code="test01",
+                    numero_pregunta=1
+                )
+            )
+        ]
+        
+        # Configurar el mock correctamente usando return_value
+        service.question_loader.get_questions_for_specific_exam.return_value = specific_questions
+        
+        # Generar examen específico
+        exam = service.generate_specific_exam("madrid_2024_abril_test01")
+        
+        # Verificaciones
+        assert exam.exam_id.startswith("specific_")
+        assert len(exam.questions) == 1
+        
+        # Verificar que el mock fue llamado
+        service.question_loader.get_questions_for_specific_exam.assert_called_once_with("madrid_2024_abril_test01")
+
+    def test_generate_specific_exam_not_found(self, exam_service_with_questions):
+        """Test para examen específico no encontrado"""
+        service = exam_service_with_questions
+        
+        # Configurar el mock para que lance la excepción
+        service.question_loader.get_questions_for_specific_exam.side_effect = ValueError(
+            "No se encontraron preguntas para el examen: madrid_2099_diciembre_test01"
+        )
+        
+        with pytest.raises(ValueError, match="No se encontraron preguntas para el examen"):
+            service.generate_specific_exam("madrid_2099_diciembre_test01")
+
+    def test_generate_specific_exam_empty_questions(self, exam_service_with_questions):
+        """Test para examen específico con lista vacía de preguntas"""
+        service = exam_service_with_questions
+
+        # Simular lista vacía de preguntas
+        service.question_loader.get_questions_for_specific_exam.return_value = []
+
+        # Usar formato válido pero que devuelva lista vacía
+        with pytest.raises(ValueError, match="No se encontraron preguntas para el examen"):
+            service.generate_specific_exam("madrid_2099_julio_test00")
+
+    def test_specific_exam_correction(self, exam_service_with_questions):
+        """Test para corregir un examen específico"""
+        service = exam_service_with_questions
+
+        # Preparar preguntas específicas mockeadas
+        specific_questions = [
+            Question(
+                id="original_q1",
+                enunciado="¿Cuál es la respuesta correcta?",
+                opciones={"a": "Correcta", "b": "Incorrecta"},
+                respuesta_correcta="a",
+                metadata=QuestionMetadata(
+                    title="Test Específico",
+                    subtitle="Test 01",
+                    total_questions=2,
+                    community="Madrid",
+                    year=2024,
+                    call="abril",
+                    test_code="test01",
+                    numero_pregunta=1
+                )
+            ),
+            Question(
+                id="original_q2",
+                enunciado="¿Cuál es otra respuesta correcta?",
+                opciones={"a": "Correcta", "b": "Incorrecta"},
+                respuesta_correcta="a",
+                metadata=QuestionMetadata(
+                    title="Test Específico",
+                    subtitle="Test 01",
+                    total_questions=2,
+                    community="Madrid",
+                    year=2024,
+                    call="abril",
+                    test_code="test01",
+                    numero_pregunta=2
+                )
+            )
+        ]
+
+        # Configurar el mock directamente y asegurar que funciona
+        service.question_loader.get_questions_for_specific_exam = Mock(return_value=specific_questions)
+
+        # Generar examen específico
+        exam = service.generate_specific_exam("madrid_2024_abril_test01")
+
+        # Enviar respuesta correcta
+        submission = ExamSubmission(
+            exam_id=exam.exam_id,
+            respuestas={exam.questions[0].id: "a"}  # Respuesta correcta
+        )
+
+        # Corregir
+        result = service.correct_exam(submission)
+
+        # Verificaciones básicas
+        assert result.puntuacion_total is not None
+        assert result.porcentaje >= 0.0
+        
+        # Verificar que el mock fue llamado
+        service.question_loader.get_questions_for_specific_exam.assert_called_once_with("madrid_2024_abril_test01")
+        assert exam.metadata.tipo_examen == "especifico"
+        assert exam.metadata.num_preguntas == 2
+        assert exam.metadata.anios == [2024]
+        assert exam.metadata.comunidades == ["Madrid"]
+        
+        # Verificar que las preguntas tienen IDs únicos
+        for i, question in enumerate(exam.questions):
+            expected_id = f"{exam.exam_id}_q{i+1}"
+            assert question.id == expected_id
+
+
 if __name__ == "__main__":
-    pytest.main([__file__, "-v"])
     pytest.main([__file__, "-v"])

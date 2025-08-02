@@ -18,7 +18,7 @@ let currentQuestionIndex = 0;    // Índice de pregunta actual
 let userAnswers = {};           // Respuestas del usuario
 let examStartTime = null;       // Tiempo de inicio del examen
 let timerInterval = null;       // Intervalo del cronómetro
-let examType = 'normal';        // 'normal' o 'simulacro'
+let examType = 'normal';        // 'normal', 'simulacro' o 'especifico'
 
 // Mapeo global de categorías id → nombre
 let categoryIdNameMap = {};
@@ -111,6 +111,11 @@ async function loadSystemInfo() {
  */
 function displaySystemInfo(info) {
     const container = document.getElementById('system-info');
+    if (!container) {
+        console.error('❌ No se encontró el contenedor system-info');
+        return;
+    }
+    
     const preguntas = info.preguntas;
     
     // Limpiar contenido previo
@@ -120,8 +125,8 @@ function displaySystemInfo(info) {
     const items = [
         { label: '📚 Total de preguntas:', value: preguntas.total_preguntas },
         { label: '📂 Categorías:', value: preguntas.categorias },
-        { label: '📅 Años disponibles:', value: preguntas.años_disponibles.join(', ') },
-        { label: '🌍 Comunidades:', value: preguntas.comunidades_disponibles.length },
+        { label: '📅 Años disponibles:', value: (preguntas.años_disponibles || preguntas.anios_disponibles || []).join(', ') },
+        { label: '🌍 Comunidades:', value: (preguntas.comunidades_disponibles || []).length },
         { label: '🎯 Exámenes activos:', value: info.servicio.examenes_activos }
     ];
     items.forEach(item => {
@@ -140,66 +145,108 @@ function displaySystemInfo(info) {
  * Rellena las opciones de los formularios
  */
 function populateFormOptions(data) {
-    // Construir el mapeo global de categorías
-    categoryIdNameMap = {};
-    data.categorias.forEach(catObj => {
-        categoryIdNameMap[catObj.id] = catObj.nombre;
-    });
-    // Categorías (manipulación segura del DOM)
-    const categoriasContainer = document.getElementById('categorias-container');
-    while (categoriasContainer.firstChild) categoriasContainer.removeChild(categoriasContainer.firstChild);
-    data.categorias.forEach(catObj => {
-        const div = document.createElement('div');
-        div.className = 'checkbox-item';
-        const input = document.createElement('input');
-        input.type = 'checkbox';
-        input.id = `cat-${catObj.id}`;
-        input.value = catObj.id;
-        const label = document.createElement('label');
-        label.htmlFor = `cat-${catObj.id}`;
-        label.textContent = catObj.nombre;
-        div.appendChild(input);
-        div.appendChild(label);
-        categoriasContainer.appendChild(div);
-    });
-    // Años
-    const añosContainer = document.getElementById('años-container');
-    while (añosContainer.firstChild) añosContainer.removeChild(añosContainer.firstChild);
-    (data.anios || []).forEach(anio => {
-        const div = document.createElement('div');
-        div.className = 'checkbox-item';
-        const input = document.createElement('input');
-        input.type = 'checkbox';
-        input.id = `anio-${anio}`;
-        input.value = anio;
-        const label = document.createElement('label');
-        label.htmlFor = `anio-${anio}`;
-        label.textContent = anio;
-        div.appendChild(input);
-        div.appendChild(label);
-        añosContainer.appendChild(div);
-    });
-    // Comunidades
-    const comunidadesContainer = document.getElementById('comunidades-container');
-    while (comunidadesContainer.firstChild) comunidadesContainer.removeChild(comunidadesContainer.firstChild);
-    data.comunidades.forEach(com => {
-        const div = document.createElement('div');
-        div.className = 'checkbox-item';
-        const input = document.createElement('input');
-        input.type = 'checkbox';
-        input.id = `com-${com}`;
-        input.value = com;
-        const label = document.createElement('label');
-        label.htmlFor = `com-${com}`;
-        label.textContent = com;
-        div.appendChild(input);
-        div.appendChild(label);
-        comunidadesContainer.appendChild(div);
-    });
-    // Actualizar indicadores de scroll después de llenar los contenedores
-    setTimeout(() => {
-        updateScrollIndicators();
-    }, 100);
+    console.log('Ejecutando populateFormOptions con data:', data);
+    
+    // Helper function para obtener elementos de forma segura
+    function getElementSafely(id) {
+        const element = document.getElementById(id);
+        if (!element) {
+            console.error(`Elemento ${id} no encontrado en DOM`);
+            return null;
+        }
+        return element;
+    }
+    
+    // Helper function para limpiar contenedor
+    function clearContainer(container) {
+        if (!container) return false;
+        try {
+            while (container.firstChild) {
+                container.removeChild(container.firstChild);
+            }
+            return true;
+        } catch (error) {
+            console.error('Error limpiando contenedor:', error);
+            return false;
+        }
+    }
+    
+    try {
+        // Construir mapeo global de categorías
+        categoryIdNameMap = {};
+        if (data.categorias) {
+            data.categorias.forEach(catObj => {
+                categoryIdNameMap[catObj.id] = catObj.nombre;
+            });
+        }
+        
+        // Categorías
+        const categoriasContainer = getElementSafely('categorias-container');
+        if (categoriasContainer && clearContainer(categoriasContainer) && data.categorias) {
+            data.categorias.forEach(catObj => {
+                const div = document.createElement('div');
+                div.className = 'checkbox-item';
+                const input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = `cat-${catObj.id}`;
+                input.value = catObj.id;
+                const label = document.createElement('label');
+                label.htmlFor = `cat-${catObj.id}`;
+                label.textContent = catObj.nombre;
+                div.appendChild(input);
+                div.appendChild(label);
+                categoriasContainer.appendChild(div);
+            });
+        }
+        
+        // Años
+        const aniosContainer = getElementSafely('anios-container');
+        if (aniosContainer && clearContainer(aniosContainer) && data.anios) {
+            data.anios.forEach(anio => {
+                const div = document.createElement('div');
+                div.className = 'checkbox-item';
+                const input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = `anio-${anio}`;
+                input.value = anio;
+                const label = document.createElement('label');
+                label.htmlFor = `anio-${anio}`;
+                label.textContent = anio;
+                div.appendChild(input);
+                div.appendChild(label);
+                aniosContainer.appendChild(div);
+            });
+        }
+        
+        // Comunidades
+        const comunidadesContainer = getElementSafely('comunidades-container');
+        if (comunidadesContainer && clearContainer(comunidadesContainer) && data.comunidades) {
+            data.comunidades.forEach(com => {
+                const div = document.createElement('div');
+                div.className = 'checkbox-item';
+                const input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = `com-${com}`;
+                input.value = com;
+                const label = document.createElement('label');
+                label.htmlFor = `com-${com}`;
+                label.textContent = com;
+                div.appendChild(input);
+                div.appendChild(label);
+                comunidadesContainer.appendChild(div);
+            });
+        }
+        
+        console.log('populateFormOptions completado exitosamente');
+        
+        // Actualizar indicadores de scroll después de llenar los contenedores
+        setTimeout(() => {
+            updateScrollIndicators();
+        }, 100);
+        
+    } catch (error) {
+        console.error('Error en populateFormOptions:', error);
+    }
 }
 
 /**
@@ -234,19 +281,41 @@ function updateScrollIndicators() {
 async function generateExam() {
     showLoading(true);
     try {
-        const config = getExamConfig();
-        // Añadir tipo_examen si es simulacro
-        if (examType === 'simulacro') {
-            config.tipo_examen = 'simulacro';
+        let exam;
+        
+        if (examType === 'especifico') {
+            // Generar examen específico
+            const examIdentifier = document.getElementById('specific-modelo').value;
+            if (!examIdentifier) {
+                alert('Por favor, selecciona un modelo de examen específico');
+                return;
+            }
+            
+            exam = await apiRequest('/exams/generate-specific', {
+                method: 'POST',
+                body: JSON.stringify({ exam_identifier: examIdentifier })
+            });
+            
+        } else {
+            // Generar examen normal o simulacro
+            const config = getExamConfig();
+            
+            // Añadir tipo_examen si es simulacro
+            if (examType === 'simulacro') {
+                config.tipo_examen = 'simulacro';
+            }
+            
+            exam = await apiRequest('/exams/generate', {
+                method: 'POST',
+                body: JSON.stringify(config)
+            });
         }
-        const exam = await apiRequest('/exams/generate', {
-            method: 'POST',
-            body: JSON.stringify(config)
-        });
+        
         currentExam = exam;
         currentQuestionIndex = 0;
         userAnswers = {};
         startExam();
+        
     } catch (error) {
         console.error('Error generando examen:', error);
     } finally {
@@ -280,7 +349,7 @@ function getExamConfig() {
         .map(cb => cb.value);
     
     // Años seleccionados
-    const anios = Array.from(document.querySelectorAll('#años-container input:checked'))
+    const anios = Array.from(document.querySelectorAll('#anios-container input:checked'))
         .map(cb => parseInt(cb.value));
     
     // Comunidades seleccionadas
@@ -860,8 +929,26 @@ function newExam() {
 // ================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Cargar información inicial
-    loadSystemInfo();
+    console.log('DOM completamente cargado, iniciando aplicación...');
+    console.log('Elementos principales encontrados:', {
+        'anios-container': !!document.getElementById('anios-container'),
+        'categorias-container': !!document.getElementById('categorias-container'),
+        'comunidades-container': !!document.getElementById('comunidades-container'),
+        'tipo-examen': !!document.getElementById('tipo-examen')
+    });
+    
+    // Esperar un poco más para asegurar que todo esté listo
+    setTimeout(() => {
+        console.log('Elementos después del timeout:', {
+            'anios-container': !!document.getElementById('anios-container'),
+            'categorias-container': !!document.getElementById('categorias-container'),
+            'comunidades-container': !!document.getElementById('comunidades-container'),
+            'tipo-examen': !!document.getElementById('tipo-examen')
+        });
+        
+        // Cargar información inicial
+        loadSystemInfo();
+    }, 100);
     
     // Botones principales
     document.getElementById('btn-generar').addEventListener('click', generateExam);
@@ -891,6 +978,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Configurar selector de tipo de examen
     setupExamTypeSelector();
     
+    // Configurar listeners para examen específico
+    setupSpecificExamListeners();
+    
     // Actualizar indicadores de scroll al redimensionar ventana
     window.addEventListener('resize', () => {
         setTimeout(updateScrollIndicators, 100);
@@ -904,21 +994,249 @@ document.addEventListener('DOMContentLoaded', () => {
 function setupExamTypeSelector() {
     const typeSelect = document.getElementById('tipo-examen');
     if (!typeSelect) return;
+    
     typeSelect.addEventListener('change', function() {
         examType = this.value;
-        const disable = examType === 'simulacro';
-        // Deshabilitar selección de categorías y años (pero NO comunidades)
-        document.querySelectorAll('#categorias-container input, #años-container input').forEach(cb => {
-            cb.disabled = disable;
-        });
-        // Deshabilitar selector de número de preguntas
-        document.getElementById('num-preguntas').disabled = disable;
-        // Mostrar/ocultar aviso de simulacro
-        const simulacroInfo = document.getElementById('simulacro-info');
-        if (simulacroInfo) simulacroInfo.style.display = disable ? 'block' : 'none';
-        // Ocultar grupo de preguntas personalizadas en simulacro
+        console.log('Tipo de examen cambiado a:', examType);
+        
+        // Ocultar todos los avisos informativos
+        document.getElementById('simulacro-info').style.display = 'none';
+        document.getElementById('especifico-info').style.display = 'none';
         document.getElementById('custom-questions-group').style.display = 'none';
+        
+        if (examType === 'simulacro') {
+            // Lógica para simulacro
+            const disable = true;
+            document.querySelectorAll('#categorias-container input, #anios-container input').forEach(cb => {
+                cb.disabled = disable;
+            });
+            document.getElementById('num-preguntas').disabled = disable;
+            document.getElementById('simulacro-info').style.display = 'block';
+            
+            // Ocultar campos de examen específico
+            document.getElementById('specific-exam-fields').style.display = 'none';
+            
+            // Mostrar campos normales
+            showNormalExamFields();
+            
+        } else if (examType === 'especifico') {
+            // Lógica para examen específico
+            document.getElementById('especifico-info').style.display = 'block';
+            
+            // Ocultar campos normales
+            hideNormalExamFields();
+            
+            // Mostrar campos específicos
+            document.getElementById('specific-exam-fields').style.display = 'block';
+            
+            // Cargar metadatos para campos específicos
+            loadExamMetadata();
+            
+        } else {
+            // Lógica para práctica normal
+            const disable = false;
+            document.querySelectorAll('#categorias-container input, #anios-container input').forEach(cb => {
+                cb.disabled = disable;
+            });
+            document.getElementById('num-preguntas').disabled = disable;
+            
+            // Ocultar campos de examen específico
+            document.getElementById('specific-exam-fields').style.display = 'none';
+            
+            // Mostrar campos normales
+            showNormalExamFields();
+        }
     });
+}
+
+/**
+ * Muestra los campos normales de configuración de examen
+ */
+function showNormalExamFields() {
+    const normalFields = [
+        'num-preguntas', 
+        'categorias-container', 
+        'anios-container', 
+        'comunidades-container'
+    ];
+    
+    normalFields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (field) {
+            const formGroup = field.closest('.form-group');
+            if (formGroup) formGroup.style.display = 'block';
+        }
+    });
+}
+
+/**
+ * Oculta los campos normales de configuración de examen
+ */
+function hideNormalExamFields() {
+    const normalFields = [
+        'num-preguntas', 
+        'categorias-container', 
+        'anios-container', 
+        'comunidades-container'
+    ];
+    
+    normalFields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (field) {
+            const formGroup = field.closest('.form-group');
+            if (formGroup) formGroup.style.display = 'none';
+        }
+    });
+}
+
+/**
+ * Variables globales para examen específico
+ */
+let examMetadata = null;
+
+/**
+ * Carga metadatos de exámenes para formularios dinámicos
+ */
+async function loadExamMetadata() {
+    try {
+        examMetadata = await apiRequest('/exams/metadata');
+        populateSpecificComunidades(examMetadata.comunidades);
+    } catch (error) {
+        console.error('Error cargando metadatos de exámenes:', error);
+    }
+}
+
+/**
+ * Llena el selector de comunidades para examen específico
+ */
+function populateSpecificComunidades(comunidades) {
+    const select = document.getElementById('specific-comunidad');
+    select.innerHTML = '<option value="">Selecciona una comunidad</option>';
+    
+    comunidades.forEach(comunidad => {
+        const option = document.createElement('option');
+        option.value = comunidad;
+        option.textContent = comunidad;
+        select.appendChild(option);
+    });
+}
+
+/**
+ * Configura los event listeners para los campos de examen específico
+ */
+function setupSpecificExamListeners() {
+    // Listener para comunidad
+    document.getElementById('specific-comunidad').addEventListener('change', function() {
+        const comunidad = this.value;
+        if (comunidad && examMetadata) {
+            populateSpecificAños(comunidad);
+            // Resetear campos dependientes
+            resetSpecificField('specific-convocatoria', 'Selecciona año primero');
+            resetSpecificField('specific-modelo', 'Selecciona convocatoria primero');
+        }
+    });
+    
+    // Listener para año
+    document.getElementById('specific-anio').addEventListener('change', function() {
+        const comunidad = document.getElementById('specific-comunidad').value;
+        const año = parseInt(this.value);
+        if (comunidad && año && examMetadata) {
+            populateSpecificConvocatorias(comunidad, año);
+            // Resetear campo dependiente
+            resetSpecificField('specific-modelo', 'Selecciona convocatoria primero');
+        }
+    });
+    
+    // Listener para convocatoria
+    document.getElementById('specific-convocatoria').addEventListener('change', function() {
+        const comunidad = document.getElementById('specific-comunidad').value;
+        const año = parseInt(document.getElementById('specific-anio').value);
+        const convocatoria = this.value;
+        if (comunidad && año && convocatoria && examMetadata) {
+            loadSpecificModelos(comunidad, año, convocatoria);
+        }
+    });
+}
+
+/**
+ * Llena el selector de años para una comunidad específica
+ */
+function populateSpecificAños(comunidad) {
+    const select = document.getElementById('specific-anio');
+    select.innerHTML = '<option value="">Selecciona un año</option>';
+    select.disabled = false;
+    
+    if (examMetadata.convocatorias_por_comunidad_anio[comunidad]) {
+        const años = Object.keys(examMetadata.convocatorias_por_comunidad_anio[comunidad])
+                          .map(año => parseInt(año))
+                          .sort((a, b) => b - a); // Orden descendente
+        
+        años.forEach(año => {
+            const option = document.createElement('option');
+            option.value = año;
+            option.textContent = año;
+            select.appendChild(option);
+        });
+    }
+}
+
+/**
+ * Llena el selector de convocatorias para una comunidad y año específicos
+ */
+function populateSpecificConvocatorias(comunidad, año) {
+    const select = document.getElementById('specific-convocatoria');
+    select.innerHTML = '<option value="">Selecciona una convocatoria</option>';
+    select.disabled = false;
+    
+    const convocatoriasData = examMetadata.convocatorias_por_comunidad_anio[comunidad][año];
+    if (convocatoriasData) {
+        // Las convocatorias son las claves del objeto
+        const convocatorias = Object.keys(convocatoriasData);
+        convocatorias.forEach(convocatoria => {
+            const option = document.createElement('option');
+            option.value = convocatoria;
+            option.textContent = convocatoria.charAt(0).toUpperCase() + convocatoria.slice(1);
+            select.appendChild(option);
+        });
+    }
+}
+
+/**
+ * Carga los modelos de examen disponibles
+ */
+async function loadSpecificModelos(comunidad, año, convocatoria) {
+    try {
+        const response = await apiRequest(`/exams/available-exams?comunidad=${encodeURIComponent(comunidad)}&anio=${año}&convocatoria=${encodeURIComponent(convocatoria)}`);
+        populateSpecificModelos(response.exams);
+    } catch (error) {
+        console.error('Error cargando modelos de examen:', error);
+        resetSpecificField('specific-modelo', 'Error cargando modelos');
+    }
+}
+
+/**
+ * Llena el selector de modelos de examen
+ */
+function populateSpecificModelos(exams) {
+    const select = document.getElementById('specific-modelo');
+    select.innerHTML = '<option value="">Selecciona un modelo</option>';
+    select.disabled = false;
+    
+    exams.forEach(exam => {
+        const option = document.createElement('option');
+        option.value = exam.id;
+        option.textContent = `${exam.subtitle} (${exam.total_questions} preguntas)`;
+        select.appendChild(option);
+    });
+}
+
+/**
+ * Resetea un campo específico con un mensaje
+ */
+function resetSpecificField(fieldId, message) {
+    const select = document.getElementById(fieldId);
+    select.innerHTML = `<option value="">${message}</option>`;
+    select.disabled = true;
 }
 
 // OPCIONAL: MOSTRAR TIEMPO MÁXIMO EN SIMULACRO

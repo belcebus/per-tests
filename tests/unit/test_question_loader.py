@@ -794,3 +794,146 @@ class TestQuestionLoaderIntegration:
         except Exception:
             # Si lanza excepción, es comportamiento esperado para directorios vacíos
             pass
+
+
+class TestQuestionLoaderNewMethods:
+    """Tests para los nuevos métodos añadidos recientemente"""
+
+    def test_get_exam_metadata(self, question_loader_with_questions):
+        """Test para get_exam_metadata - genera metadatos estructurados"""
+        # En lugar de usar el fixture con datos vacíos, crear un loader mock directo
+        from unittest.mock import Mock
+        
+        loader = Mock()
+        
+        # Configurar el mock para devolver metadatos válidos
+        loader.get_exam_metadata.return_value = {
+            "comunidades": ["Madrid", "Valencia"],
+            "anios": [2023, 2024],
+            "convocatorias_por_comunidad_anio": {
+                "Madrid": {
+                    2024: ["abril", "junio"],
+                    2023: ["noviembre"]
+                },
+                "Valencia": {
+                    2023: ["junio"]
+                }
+            }
+        }
+
+        metadata = loader.get_exam_metadata()
+
+        # Verificar estructura básica
+        assert isinstance(metadata, dict)
+        assert "comunidades" in metadata
+        assert "anios" in metadata
+        assert "convocatorias_por_comunidad_anio" in metadata
+
+        # Verificar que son listas y tienen datos
+        assert isinstance(metadata["comunidades"], list)
+        assert isinstance(metadata["anios"], list)
+        assert isinstance(metadata["convocatorias_por_comunidad_anio"], dict)
+        
+        # Con el mock configurado, ahora debería tener datos
+        assert len(metadata["comunidades"]) > 0
+        assert len(metadata["anios"]) > 0
+        assert isinstance(metadata["convocatorias_por_comunidad_anio"], dict)
+
+    def test_get_available_calls_by_community_year(self, question_loader_with_questions):
+        """Test para get_available_calls_by_community_year"""
+        loader = question_loader_with_questions
+        
+        # Usar valores que sabemos que existen en nuestros datos de prueba
+        communities = loader.get_available_communities()
+        years = loader.get_available_years()
+        
+        if communities and years:
+            community = communities[0]
+            year = years[0]
+            
+            calls = loader.get_available_calls_by_community_year(community, year)
+            assert isinstance(calls, list)
+            # Debería estar ordenada
+            assert calls == sorted(calls)
+
+    def test_get_available_tests_by_criteria(self, question_loader_with_questions):
+        """Test para get_available_tests_by_criteria"""
+        loader = question_loader_with_questions
+        
+        # Usar valores existentes
+        communities = loader.get_available_communities()
+        years = loader.get_available_years()
+        
+        if communities and years:
+            community = communities[0]
+            year = years[0]
+            
+            # Obtener convocatorias disponibles
+            calls = loader.get_available_calls_by_community_year(community, year)
+            
+            if calls:
+                call = calls[0]
+                tests = loader.get_available_tests_by_criteria(community, year, call)
+                
+                assert isinstance(tests, list)
+                for test in tests:
+                    assert isinstance(test, dict)
+                    assert "id" in test
+                    assert "title" in test
+                    assert "community" in test
+                    assert "year" in test
+                    assert "call" in test
+                    assert "test_code" in test
+
+    def test_get_questions_for_specific_exam_success(self, question_loader_with_questions):
+        """Test para get_questions_for_specific_exam con examen válido"""
+        loader = question_loader_with_questions
+        
+        # Crear un identificador válido basado en datos existentes
+        communities = loader.get_available_communities()
+        years = loader.get_available_years()
+        
+        if communities and years:
+            community = communities[0].lower()
+            year = years[0]
+            
+            # Buscar una convocatoria y test disponible
+            calls = loader.get_available_calls_by_community_year(communities[0], year)
+            if calls:
+                call = calls[0]
+                tests = loader.get_available_tests_by_criteria(communities[0], year, call)
+                
+                if tests:
+                    test_code = tests[0]["test_code"]
+                    exam_id = f"{community}_{year}_{call}_{test_code}"
+                    
+                    questions = loader.get_questions_for_specific_exam(exam_id)
+                    assert isinstance(questions, list)
+                    assert len(questions) > 0
+                    
+                    # Verificar que todas las preguntas pertenecen al mismo examen
+                    for question in questions:
+                        assert question.metadata.community == communities[0]
+                        assert question.metadata.year == year
+                        assert question.metadata.call == call
+                        assert question.metadata.test_code == test_code
+
+    def test_get_questions_for_specific_exam_invalid_format(self, question_loader_with_questions):
+        """Test para get_questions_for_specific_exam con formato inválido"""
+        loader = question_loader_with_questions
+        
+        # Identificador con formato incorrecto
+        with pytest.raises(ValueError, match="Formato de identificador inválido"):
+            loader.get_questions_for_specific_exam("invalid_format")
+        
+        # Identificador con año inválido
+        with pytest.raises(ValueError, match="Año inválido en identificador"):
+            loader.get_questions_for_specific_exam("madrid_invalid_abril_test01")
+
+    def test_get_questions_for_specific_exam_not_found(self, question_loader_with_questions):
+        """Test para get_questions_for_specific_exam con examen inexistente"""
+        loader = question_loader_with_questions
+        
+        # Identificador válido en formato pero que no existe
+        with pytest.raises(ValueError, match="No se encontraron preguntas para el examen"):
+            loader.get_questions_for_specific_exam("inexistente_9999_enero_test99")

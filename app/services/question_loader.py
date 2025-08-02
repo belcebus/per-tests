@@ -319,6 +319,165 @@ class QuestionLoader:
             },
         }
 
+    def get_exam_metadata(self) -> Dict:
+        """
+        Obtiene metadatos de todos los exámenes disponibles organizados por criterios.
+
+        Returns:
+            Diccionario con estructura jerárquica de metadatos de exámenes
+        """
+        exam_metadata: Dict[str, Dict[int, Dict[str, set]]] = {}
+
+        # Agrupar por comunidad, año y convocatoria
+        for question in self.all_questions:
+            community = question.metadata.community
+            year = question.metadata.year
+            call = question.metadata.call
+            test_code = question.metadata.test_code
+
+            # Crear la estructura jerárquica
+            if community not in exam_metadata:
+                exam_metadata[community] = {}
+            if year not in exam_metadata[community]:
+                exam_metadata[community][year] = {}
+            if call not in exam_metadata[community][year]:
+                exam_metadata[community][year][call] = set()
+
+            exam_metadata[community][year][call].add(test_code)
+
+        # Convertir sets a listas ordenadas para JSON serialization
+        result_metadata: Dict[str, Dict[int, Dict[str, List[str]]]] = {}
+        for community in exam_metadata:
+            result_metadata[community] = {}
+            for year in exam_metadata[community]:
+                result_metadata[community][year] = {}
+                for call in exam_metadata[community][year]:
+                    result_metadata[community][year][call] = sorted(
+                        list(exam_metadata[community][year][call])
+                    )
+
+        return {
+            "comunidades": self.get_available_communities(),
+            "anios": self.get_available_years(),
+            "convocatorias_por_comunidad_anio": result_metadata,
+        }
+
+    def get_available_calls_by_community_year(
+        self, community: str, year: int
+    ) -> List[str]:
+        """
+        Obtiene las convocatorias disponibles para una comunidad y año específicos.
+
+        Args:
+            community: Nombre de la comunidad autónoma
+            year: Año del examen
+
+        Returns:
+            Lista de convocatorias disponibles
+        """
+        calls = set()
+        for question in self.all_questions:
+            if (
+                question.metadata.community == community
+                and question.metadata.year == year
+            ):
+                calls.add(question.metadata.call)
+
+        return sorted(list(calls))
+
+    def get_available_tests_by_criteria(
+        self, community: str, year: int, call: str
+    ) -> List[Dict]:
+        """
+        Obtiene los modelos de test disponibles para criterios específicos.
+
+        Args:
+            community: Nombre de la comunidad autónoma
+            year: Año del examen
+            call: Convocatoria del examen
+
+        Returns:
+            Lista de diccionarios con información de cada test disponible
+        """
+        tests = {}
+
+        for question in self.all_questions:
+            if (
+                question.metadata.community == community
+                and question.metadata.year == year
+                and question.metadata.call == call
+            ):
+
+                test_id = (
+                    f"{community.lower()}_{year}_{call}_{question.metadata.test_code}"
+                )
+
+                if test_id not in tests:
+                    tests[test_id] = {
+                        "id": test_id,
+                        "title": question.metadata.title,
+                        "subtitle": question.metadata.subtitle,
+                        "community": question.metadata.community,
+                        "year": question.metadata.year,
+                        "call": question.metadata.call,
+                        "test_code": question.metadata.test_code,
+                        "total_questions": question.metadata.total_questions,
+                    }
+
+        return list(tests.values())
+
+    def get_questions_for_specific_exam(self, exam_identifier: str) -> List[Question]:
+        """
+        Obtiene todas las preguntas de un examen específico.
+
+        Args:
+            exam_identifier: Identificador del examen (ej: 'madrid_2024_abril_test01')
+
+        Returns:
+            Lista de preguntas del examen específico
+
+        Raises:
+            ValueError: Si no se encuentra el examen especificado
+        """
+        # Parsear el identificador del examen
+        parts = exam_identifier.split("_")
+        if len(parts) != 4:
+            raise ValueError(f"Formato de identificador inválido: {exam_identifier}")
+
+        community, year_str, call, test_code = parts
+
+        try:
+            year = int(year_str)
+        except ValueError:
+            raise ValueError(f"Año inválido en identificador: {year_str}")
+
+        # Capitalizar la primera letra de la comunidad para hacer match
+        community = community.capitalize()
+
+        # Filtrar preguntas que coincidan
+        matching_questions = []
+        for question in self.all_questions:
+            if (
+                question.metadata.community == community
+                and question.metadata.year == year
+                and question.metadata.call == call
+                and question.metadata.test_code == test_code
+            ):
+                matching_questions.append(question)
+
+        if not matching_questions:
+            raise ValueError(
+                f"No se encontraron preguntas para el examen: {exam_identifier}"
+            )
+
+        # Ordenar por número de pregunta si está disponible
+        matching_questions.sort(key=lambda q: q.metadata.numero_pregunta or 0)
+
+        print(
+            f"🎯 Examen específico encontrado: {exam_identifier} con {len(matching_questions)} preguntas"
+        )
+        return matching_questions
+
 
 # Instancia global del cargador de preguntas
 # Esta variable se usará en toda la aplicación

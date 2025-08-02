@@ -294,6 +294,107 @@ Configuración por defecto en `config/settings.py`:
 - **Documentación**: http://localhost:8000/docs
 - **Cliente Web**: http://localhost:8000/static/index.html
 
+## Funcionalidades
+
+La aplicación PER Tests ofrece tres tipos de exámenes para la preparación del Patrón de Embarcaciones de Recreo, cada uno diseñado para diferentes necesidades de estudio y práctica.
+
+### 🎯 **Tipos de Exámenes Disponibles**
+
+#### 1. **Examen de Práctica** 📚
+Exámenes personalizables para práctica general con filtros avanzados.
+
+**Características:**
+- **Filtros disponibles**: Categorías, años, comunidades autónomas
+- **Número de preguntas**: Configurable (1-100 preguntas)
+- **Generación**: Aleatoria basada en filtros seleccionados
+- **Uso recomendado**: Estudio por temas específicos o práctica general
+
+**Ejemplo de uso:**
+- Practicar solo preguntas de "Seguridad" de los años 2023-2024
+- Examen mixto de todas las categorías de Madrid
+- Práctica intensiva con 50 preguntas aleatorias
+
+#### 2. **Examen Simulacro** ⏱️
+Simulación completa del examen oficial con condiciones reales.
+
+**Características:**
+- **Formato oficial**: 45 preguntas obligatorias
+- **Tiempo limitado**: 60 minutos (como el examen oficial)
+- **Distribución proporcional**: Preguntas balanceadas por categorías
+- **Corrección automática**: Nota sobre 10 y análisis detallado
+- **Uso recomendado**: Preparación final y evaluación de conocimientos
+
+**Detalles del simulacro:**
+- Replica las condiciones del examen oficial PER
+- Cronómetro visible con alertas de tiempo
+- Imposible modificar respuestas una vez finalizado
+- Estadísticas detalladas por categoría
+
+#### 3. **Examen Específico** 🎯 *(NUEVO)*
+Selección y realización de exámenes oficiales concretos de convocatorias específicas.
+
+**Características:**
+- **Selección precisa**: Elige un examen oficial específico
+- **Navegación en cascada**: Comunidad → Año → Convocatoria → Modelo
+- **Exámenes oficiales**: Preguntas exactas de convocatorias reales
+- **Trazabilidad completa**: Información del examen original
+
+**Flujo de selección:**
+1. **Comunidad Autónoma**: Selecciona la región (ej: Madrid)
+2. **Año**: Elige el año de la convocatoria (2019-2025)
+3. **Convocatoria**: Selecciona el período (abril, junio, octubre, noviembre, diciembre)
+4. **Modelo de Examen**: Elige el modelo específico (Test01, Test02, Test03, Test04, etc.)
+
+**Ejemplo de exámenes disponibles:**
+- Madrid 2024 → Abril → Test01 (45 preguntas)
+- Madrid 2023 → Noviembre → Test03 (45 preguntas)
+- Madrid 2022 → Junio → Test02 (45 preguntas)
+
+### 🛠️ **Funcionalidades Técnicas**
+
+#### **API REST Endpoints**
+- `GET /api/exams/info` - Información general del sistema
+- `GET /api/exams/categories` - Categorías y datos para formularios
+- `GET /api/exams/metadata` - Metadatos para exámenes específicos
+- `GET /api/exams/available-exams` - Modelos disponibles por criterios
+- `POST /api/exams/generate` - Generar examen de práctica/simulacro
+- `POST /api/exams/generate-specific` - Generar examen específico
+- `POST /api/exams/correct` - Corregir y evaluar examen
+
+#### **Cliente Web Interactivo**
+- **Interfaz moderna**: HTML5, CSS3, JavaScript ES6+
+- **Responsive design**: Adaptable a móviles y tablets
+- **Navegación intuitiva**: Pasos claros para cada tipo de examen
+- **Resultados detallados**: Análisis por categorías y estadísticas
+
+#### **Sistema de Corrección Avanzado**
+- **Evaluación automática**: Corrección instantánea al finalizar
+- **Análisis por categorías**: Rendimiento detallado por tema
+- **Estadísticas completas**: Porcentaje global y por áreas
+- **Recomendaciones**: Identificación de áreas de mejora
+
+### 📊 **Base de Datos de Preguntas**
+
+**Cobertura actual:**
+- **Total de preguntas**: 3,285 preguntas oficiales
+- **Categorías**: 11 categorías del temario PER
+- **Años disponibles**: 2019-2025 (7 años de convocatorias)
+- **Comunidades**: Madrid (expansión a otras CCAA planificada)
+- **Convocatorias**: Abril, Junio, Octubre, Noviembre, Diciembre
+
+**Categorías incluidas:**
+1. **Nomenclatura náutica** - Terminología básica de embarcaciones
+2. **Elementos de amarre y fondeo** - Cabos, anclas y equipamiento
+3. **Seguridad** - Equipos de seguridad y procedimientos
+4. **Legislación** - Normativa marítima y administrativa
+5. **Balizamiento** - Señalización marítima y costera
+6. **Reglamento (RIPA)** - Reglamento Internacional para Prevenir Abordajes
+7. **Maniobra y navegación** - Técnicas de navegación y maniobra
+8. **Emergencias en la mar** - Procedimientos de emergencia
+9. **Meteorología** - Tiempo, clima y fenómenos meteorológicos
+10. **Teoría de la navegación** - Conceptos navegación y posicionamiento
+11. **Carta de navegación** - Interpretación y uso de cartas náuticas
+
 ## Testing
 
 ### 🏆 **Logros de Calidad Conseguidos**

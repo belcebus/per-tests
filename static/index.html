@@ -36,12 +36,16 @@
                     <select id="tipo-examen">
                         <option value="normal">Práctica</option>
                         <option value="simulacro">Simulacro oficial</option>
+                        <option value="especifico">Examen específico</option>
                     </select>
                 </div>
                 <div id="simulacro-info" style="display:none; color:#0a58ca; margin-bottom:8px;">
                     <b>Simulacro:</b> Se generará un examen con la distribución oficial de preguntas por categoría y tiempo máximo. No puedes elegir categorías, años ni número de preguntas, pero sí puedes seleccionar la comunidad.
                 </div>
                 <div id="simulacro-max-time" style="display:none; color:#b85c00; font-weight:bold; margin-bottom:8px;"></div>
+                <div id="especifico-info" style="display:none; color:#0a58ca; margin-bottom:8px;">
+                    <b>Examen específico:</b> Selecciona un examen concreto de una convocatoria oficial específica. Debes elegir comunidad, año, convocatoria y modelo de examen.
+                </div>
 
                 <div class="form-group">
                     <label for="num-preguntas">Número de preguntas:</label>
@@ -73,7 +77,7 @@
 
                 <div class="form-group">
                     <label>Años (deja vacío para todos):</label>
-                    <div id="años-container" class="checkbox-group">
+                    <div id="anios-container" class="checkbox-group">
                         <!-- Se llenarán dinámicamente -->
                     </div>
                 </div>
@@ -82,6 +86,37 @@
                     <label>Comunidades autónomas (deja vacío para todas):</label>
                     <div id="comunidades-container" class="checkbox-group">
                         <!-- Se llenarán dinámicamente -->
+                    </div>
+                </div>
+
+                <!-- Campos específicos para examen específico -->
+                <div id="specific-exam-fields" style="display:none;">
+                    <div class="form-group">
+                        <label for="specific-comunidad"><strong>Comunidad autónoma:</strong></label>
+                        <select id="specific-comunidad">
+                            <option value="">Selecciona una comunidad</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specific-anio"><strong>Año:</strong></label>
+                        <select id="specific-anio" disabled>
+                            <option value="">Selecciona comunidad primero</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specific-convocatoria"><strong>Convocatoria:</strong></label>
+                        <select id="specific-convocatoria" disabled>
+                            <option value="">Selecciona año primero</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specific-modelo"><strong>Modelo de examen:</strong></label>
+                        <select id="specific-modelo" disabled>
+                            <option value="">Selecciona convocatoria primero</option>
+                        </select>
                     </div>
                 </div>
 
