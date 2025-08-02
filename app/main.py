@@ -94,6 +94,12 @@ def create_app() -> FastAPI:
         name="static",
     )
 
+    fastapi_app.mount(
+        "/static/icons",
+        StaticFiles(directory=str(settings.get_static_path() / "icons")),
+        name="icons",
+    )
+
     @fastapi_app.get("/")
     async def root():
         return RedirectResponse(url="/static/index.html")
