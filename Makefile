@@ -225,6 +225,8 @@ build-deploy:
 	@cp pyproject.toml deploy-build/
 	@cp README.md deploy-build/
 	@cp LICENSE deploy-build/
+	@echo "$(YELLOW)📦 Generando requirements.txt para Azure...$(NC)"
+	@$(PYTHON_CMD) -m pip freeze > deploy-build/requirements.txt
 	@echo "$(YELLOW)🧹 Limpiando archivos innecesarios...$(NC)"
 	@find deploy-build/ -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
 	@find deploy-build/ -name "*.pyc" -delete 2>/dev/null || true
