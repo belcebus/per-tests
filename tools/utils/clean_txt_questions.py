@@ -2,10 +2,14 @@
 # Elimina líneas en blanco e inserta una línea en blanco antes de cada línea que empieza por número y espacio
 
 import re
+import argparse
 
-input_path = "extracted-answers/madrid-2019-octubre.txt"
-output_path = "extracted-answers/madrid-2019-octubre-limpio.txt"
-
+parser = argparse.ArgumentParser(description="Limpia y formatea un archivo TXT de preguntas.")
+parser.add_argument("input_path", help="Ruta al archivo de entrada")
+parser.add_argument("output_path", help="Ruta al archivo de salida")
+args = parser.parse_args()
+input_path = args.input_path
+output_path = args.output_path
 with open(input_path, "r", encoding="utf-8") as fin, open(output_path, "w", encoding="utf-8") as fout:
     prev_was_number = False
     for line in fin:
