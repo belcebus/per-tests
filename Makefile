@@ -212,7 +212,7 @@ run-custom:
 build-deploy:
 	@echo "$(GREEN)📦 Preparando aplicación para despliegue...$(NC)"
 	@echo "$(YELLOW)🔧 Instalando dependencias...$(NC)"
-	@$(MAKE) install
+	@$(MAKE) install-dev
 	@echo "$(YELLOW)🧪 Ejecutando tests...$(NC)"
 	@$(MAKE) test-fast
 	@echo "$(YELLOW)📁 Preparando archivos de despliegue...$(NC)"
