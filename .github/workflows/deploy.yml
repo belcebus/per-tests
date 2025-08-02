@@ -34,3 +34,4 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5026F57FEDDD470C9D0936BE5FFB3186 }}
           package: './deploy-build'
+          startup-command: 'python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 1'
