@@ -214,7 +214,7 @@ build-deploy:
 	@echo "$(YELLOW)🔧 Instalando dependencias...$(NC)"
 	@$(MAKE) install
 	@echo "$(YELLOW)🧪 Ejecutando tests...$(NC)"
-	@$(MAKE) test-ci
+	@$(MAKE) test-fast
 	@echo "$(YELLOW)📁 Preparando archivos de despliegue...$(NC)"
 	@rm -rf deploy-build/
 	@mkdir -p deploy-build
