@@ -812,11 +812,11 @@ class TestQuestionLoaderNewMethods:
             "anios": [2023, 2024],
             "convocatorias_por_comunidad_anio": {
                 "Madrid": {
-                    "2024": ["abril", "junio"],
-                    "2023": ["noviembre"]
+                    2024: ["abril", "junio"],
+                    2023: ["noviembre"]
                 },
                 "Valencia": {
-                    "2023": ["junio"]
+                    2023: ["junio"]
                 }
             }
         }

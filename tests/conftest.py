@@ -295,7 +295,7 @@ def exam_service_with_questions():
     mock_loader.get_exam_metadata.return_value = {
         "comunidades": ["Madrid"],
         "anios": [2024],
-        "convocatorias_por_comunidad_anio": {"Madrid": {"2024": ["abril", "junio"]}}
+        "convocatorias_por_comunidad_anio": {"Madrid": {2024: ["abril", "junio"]}}
     }
     
     # Asignar el mock al servicio

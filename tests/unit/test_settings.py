@@ -25,7 +25,7 @@ class TestSettingsConfiguration:
         assert test_settings.port == 8002
         assert test_settings.debug is False
         assert test_settings.log_level == "info"
-        assert test_settings.exam_ttl_hours == 2.0
+        assert test_settings.exam_ttl_hours == 2
 
     def test_environment_variable_override(self):
         """Test para sobrescribir configuración con variables de entorno"""
