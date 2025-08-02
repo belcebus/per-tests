@@ -222,7 +222,8 @@ build-deploy:
 	@cp -r app/ deploy-build/
 	@cp -r config/ deploy-build/
 	@cp -r static/ deploy-build/
-	@cp -r data/ deploy-build/
+	@mkdir -p deploy-build/data
+	@if [ -d "data/exams" ]; then cp -r data/exams/ deploy-build/data/; fi
 	@cp pyproject.toml deploy-build/
 	@cp README.md deploy-build/
 	@cp LICENSE deploy-build/
