@@ -76,7 +76,7 @@ def extract_text_from_pdf(pdf_path: str):
         with open(txt_path, "w", encoding="utf-8") as f:
             f.write(text_full)
     # Solo devolvemos el texto completo, no el recortado
-    return texts_full, texts_full
+    return texts_full
 
 
 # --- Nuevo parseo dual: usa OCR completo para cabecera/modelo y OCR recortado para respuestas ---
