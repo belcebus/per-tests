@@ -40,7 +40,7 @@ def normalize_category(line):
 
 def extract_exam_id(txt_path):
     stem = Path(txt_path).stem
-    # Busca madrid-2029-diciembre
+    # Busca madrid-2019-diciembre (o cualquier año con el patrón madrid-YYYY-mes)
     m = re.search(r'(madrid-\d{4}-[a-z]+)', stem)
     return m.group(1) if m else stem
 
