@@ -41,17 +41,17 @@ EXAM_TYPES = {
 
 # --- Utilidades de imagen ---
 def enhance_image_for_ocr(image: Image.Image) -> Image.Image:
-    # Configuración 2: Contraste 1.5, Nitidez 1.5, binarización simple (la mejor)
+    # Mejorar contraste, nitidez y binarización agresiva
     if image.mode != "L":
         image = image.convert("L")
-    image = ImageEnhance.Contrast(image).enhance(1.5)
-    image = ImageEnhance.Sharpness(image).enhance(1.5)
+    image = ImageEnhance.Contrast(image).enhance(2.0)
+    image = ImageEnhance.Sharpness(image).enhance(2.0)
     try:
         import numpy as np
         import cv2
-
         img_array = np.array(image)
-        _, img_bin = cv2.threshold(img_array, 180, 255, cv2.THRESH_BINARY)
+        # Binarización más agresiva
+        _, img_bin = cv2.threshold(img_array, 160, 255, cv2.THRESH_BINARY)
         image = Image.fromarray(img_bin)
     except Exception:
         pass
@@ -62,72 +62,68 @@ def enhance_image_for_ocr(image: Image.Image) -> Image.Image:
 def extract_text_from_pdf(pdf_path: str):
     images = convert_from_path(pdf_path, dpi=800)
     texts_full = []
-    texts_left = []
     output_dir = Path("extracted-answers")
     output_dir.mkdir(exist_ok=True)
     for i, img in enumerate(images):
         img_proc = enhance_image_for_ocr(img)
         img_proc_path = output_dir / f"pagina_{i+1}_procesada.png"
         img_proc.save(img_proc_path)
-        text_full = pytesseract.image_to_string(img_proc, lang="spa")
+        # Configuración de Tesseract: modo de segmentación y whitelist
+        config = "--psm 6 -c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÁÉÍÓÚÜÑáéíóúüñ .-"
+        text_full = pytesseract.image_to_string(img_proc, lang="spa", config=config)
         texts_full.append(text_full)
         txt_path = output_dir / f"ocr_pagina_{i+1}.txt"
         with open(txt_path, "w", encoding="utf-8") as f:
             f.write(text_full)
-        # --- Segunda pasada: solo zona izquierda para respuestas (Tesseract) ---
-        w, h = img_proc.size
-        left_crop = img_proc.crop((0, 0, int(w * 0.22), h))  # noqa: E226
-        left_crop_path = output_dir / f"pagina_{i+1}_izquierda.png"
-        left_crop.save(left_crop_path)
-        config = "--psm 6 -c tessedit_char_whitelist=0123456789ABCDabcd"
-        text_left = pytesseract.image_to_string(left_crop, lang="spa", config=config)
-        texts_left.append(text_left)
-        txt_left_path = output_dir / f"ocr_pagina_{i+1}_izquierda.txt"
-        with open(txt_left_path, "w", encoding="utf-8") as f:
-            f.write(text_left)
-    return texts_full, texts_left
+    # Solo devolvemos el texto completo, no el recortado
+    return texts_full, texts_full
 
 
 # --- Nuevo parseo dual: usa OCR completo para cabecera/modelo y OCR recortado para respuestas ---
 def parse_exam_pages_dual(texts_full: list, texts_left: list, pdf_name: str) -> list:
     exams = []
     for page_num, (page_text, page_left) in enumerate(zip(texts_full, texts_left), 1):
-        # Buscar tipo de examen con distinción PER vs PER-PNB
+        # Mejorar reconocimiento de tipo y modelo de examen
         exam_type, exam_key = None, None
         lines = [line.strip().upper() for line in page_text.splitlines()]
-        for idx, line in enumerate(lines):
-            # PER y PER-PNB
-            if re.search(r"PATR[ÓO]N\s+DE\s+EMBARCACIONES?\s+DE\s+RECREO", line):
-                next_line = lines[idx + 1] if idx + 1 < len(lines) else ""
-                if re.search(r"PNB\s*LIBERADO", next_line):
-                    exam_type = "(CON PNB LIBERADO)"
-                else:
-                    exam_type = "PATRÓN DE EMBARCACIONES DE RECREO"
-                exam_key = EXAM_TYPES[exam_type]["key"]
-                break
-            elif re.search(r"PATR[ÓO]N\s+DE\s+YATE", line):
-                exam_type = "PATRÓN DE YATE"
-                exam_key = EXAM_TYPES[exam_type]["key"]
-                break
-            elif re.search(r"CAPIT[ÁA]N\s+DE\s+YATE", line):
-                exam_type = "CAPITÁN DE YATE"
-                exam_key = EXAM_TYPES[exam_type]["key"]
-                break
-            elif line in EXAM_TYPES:
-                exam_type = line
-                exam_key = EXAM_TYPES[line]["key"]
-                break
-        if not exam_type:
+        # Normalizar tildes y espacios para comparar
+        def normalize(s):
+            s = s.upper()
+            s = re.sub(r"[ÁÀÄ]", "A", s)
+            s = re.sub(r"[ÉÈË]", "E", s)
+            s = re.sub(r"[ÍÌÏ]", "I", s)
+            s = re.sub(r"[ÓÒÖ]", "O", s)
+            s = re.sub(r"[ÚÙÜ]", "U", s)
+            s = re.sub(r"\s+", "", s)
+            return s
+        # Buscar tipo de examen en la primera línea
+        first_line = normalize(lines[0]) if lines else ""
+        if "PATRONDEEMBARCACIONESDERECREO" in first_line:
+            exam_type = "PATRÓN DE EMBARCACIONES DE RECREO"
+        elif "PATRONDENAVEGACIONBASICA" in first_line:
+            exam_type = "PATRÓN DE NAVEGACIÓN BÁSICA"
+        elif "PATRONDEYATE" in first_line:
+            exam_type = "PATRÓN DE YATE"
+        elif "CAPITANDEYATE" in first_line:
+            exam_type = "CAPITÁN DE YATE"
+        if exam_type and exam_type in EXAM_TYPES:
+            exam_key = EXAM_TYPES[exam_type]["key"]
+        else:
             print(f"[WARN] No se detectó tipo de examen en página {page_num}")
             continue
-        # Buscar modelo
-        model_match = re.search(
-            r"C[ÓO]DIGO DE TEST\s*(\d{2})", page_text, re.IGNORECASE
-        )
-        test_model = f"TEST{model_match.group(1)}" if model_match else "UNKNOWN"
+        # Buscar modelo en la segunda línea
+        test_model = "UNKNOWN"
+        if len(lines) > 1:
+            model_match = re.search(r"TEST\s*(\d+)", normalize(lines[1]))
+            if not model_match:
+                model_match = re.search(r"CODIGODETEST(\d+)", normalize(lines[1]))
+            if model_match:
+                test_model = f"TEST{model_match.group(1)}"
 
         # --- Mejorado: Parseo robusto de respuestas ---
         valid_answers = {"a", "b", "c", "d", "anulada"}
+        # Mapeo de letras acentuadas a opciones válidas
+        accent_map = {"Á": "A", "É": "E", "Í": "I", "Ó": "O", "Ú": "U"}
         # mypy-safe: asegurar que exam_type_range es iterable
         exam_type_range: list[int] | range
         if exam_type in EXAM_TYPES:
@@ -146,9 +142,13 @@ def parse_exam_pages_dual(texts_full: list, texts_left: list, pdf_name: str) -> 
         expected_num = int(valid_range[0]) if valid_range else 1
         final_answers = {}
         used_numbers = set()
-        for answer_line in page_left.splitlines():
+        # Saltar las dos primeras líneas (tipo y código de examen)
+        answer_lines = page_left.splitlines()[2:]
+        for answer_line in answer_lines:
             # Limpiar línea y buscar patrón flexible
             answer_line = answer_line.strip()
+            # Normalizar letras acentuadas en la respuesta
+            answer_line = re.sub(r"([ÁÉÍÓÚ])", lambda m: accent_map.get(m.group(1), m.group(1)), answer_line)
             # Buscar ANULADA explícito
             if re.search(r"anul[ao]da", answer_line, re.IGNORECASE):
                 final_answers[str(expected_num)] = "anulada"

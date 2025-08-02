@@ -69,18 +69,7 @@ per-tests/
 │               ├── 2024/    # PDFs del año 2024
 │               └── 2025/    # PDFs del año 2025
 ├── static/                  # Frontend (HTML, CSS, JS)
-├── tools/                   # Scripts de extracción y procesamiento
-│   ├── extraction/          # Scripts de extracción de datos
-│   │   ├── madrid_extract_questions.py   # Extractor de preguntas de PDFs
-│   │   ├── madrid_extract_answers_v2.py  # Extractor OCR de respuestas
-│   │   └── README.md        # Documentación de extracción
-│   ├── processing/          # Scripts de procesamiento de datos
-│   │   ├── madrid_apply_answers.py       # Aplicador de respuestas
-│   │   └── README.md        # Documentación de procesamiento
-│   ├── utils/               # Herramientas de utilidad y verificación
-│   │   ├── check_exam_consistency.py     # Verificador de consistencia
-│   │   └── README.md        # Documentación de utilidades
-│   └── README.md            # Documentación general de herramientas
+
 ├── extracted-answers/       # Respuestas extraídas por OCR (temporal)
 ├── Makefile                 # Comandos automatizados para testing y desarrollo
 ├── pyproject.toml           # Configuración moderna: proyecto, dependencias, pytest, coverage
@@ -788,107 +777,7 @@ Si necesitas aplicar estos cambios a un Codespace existente:
 
 O simplemente crea un nuevo Codespace que tendrá automáticamente todas las dependencias instaladas.
 
-## Herramientas de Extracción
 
-El proyecto incluye herramientas especializadas para procesar documentos oficiales de diferentes comunidades:
-
-### `madrid_extract_questions.py` - Extractor Parametrizable
-**Completamente parametrizable** para extraer preguntas de diferentes comunidades, años y convocatorias.
-
-#### Características:
-- ✨ **Extracción parametrizable**: Soporte para diferentes comunidades autónomas
-- 🔍 **Búsqueda inteligente de PDFs**: Encuentra automáticamente archivos basándose en parámetros
-- 📂 **Múltiples opciones de salida**: Personaliza directorios y nombres de archivo
-- 🔧 **Manejo robusto de errores**: Sugerencias y validaciones útiles
-
-#### Parámetros principales:
-- `--community`: Comunidad autónoma (Madrid, Valencia, Barcelona, etc.)
-- `--year`: Año del examen (2024, 2025, etc.)
-- `--call`: Convocatoria (abril, junio, noviembre, etc.)
-- `--test`: Código del test (test01, test02, test03)
-- `--pdf-file`: Archivo PDF específico
-- `--output-file`: Archivo de salida personalizado
-
-### `madrid_extract_answers_v2.py` - Extractor OCR
-Extrae respuestas oficiales de PDFs usando reconocimiento óptico de caracteres. Es la versión robusta y actualizada del script para todos los exámenes oficiales.
-
-#### Características:
-- 🤖 **OCR avanzado**: Reconocimiento óptico con preprocesamiento
-- 🎯 **Filtros específicos**: Extrae solo el tipo de examen deseado
-- ✅ **Detección automática**: Identifica respuestas anuladas
-- 📋 **Múltiples formatos**: Soporte para diferentes layouts
-
-#### Parámetros principales:
-- `--input-file`: Ruta al PDF de respuestas (obligatorio)
-- `--output-dir`: Directorio de salida (opcional)
-- `--verbose`: Información detallada del procesamiento (opcional)
-
-### Flujo Completo de Procesamiento
-
-#### Para Madrid 2025 abril (por defecto):
-```bash
-# 1. Extraer preguntas del PDF oficial
-# Resultado: data/exams/questions/madrid/2025/per-test01-madrid-2025-abril.yaml
-python tools/extraction/madrid_extract_questions.py --input-file data/raw/questions/madrid/2025/madrid-2025-abril.pdf --test-code 01
-
-# 2. Extraer respuestas usando OCR del PDF oficial
-python tools/extraction/madrid_extract_answers_v2.py --input-file data/raw/answers/madrid/2025/madrid-2025-abril.pdf
-
-# 3. Combinar preguntas y respuestas
-python tools/processing/madrid_apply_answers.py --input-file per-test01-madrid-2025-abril.json --target-file per-test01-madrid-2025-abril.yaml
-```
-
-#### Para otros años/comunidades/convocatorias:
-```bash
-# Ejemplo: Madrid 2024 noviembre test01
-# 1. Extraer preguntas
-# Resultado: data/exams/per-test01-madrid-2024-noviembre.yaml
-python tools/extraction/madrid_extract_questions.py --input-file data/raw/questions/madrid-2024-noviembre.pdf --test-code 01
-
-# 2. Extraer respuestas (especificando PDF correcto)
-python tools/extraction/madrid_extract_answers_v2.py --input-file "data/raw/answers/madrid/2024/madrid-2024-noviembre.pdf"
-
-# 3. Combinar datos
-python tools/processing/madrid_apply_answers.py --input-file per-test01-madrid-2024-noviembre.json --target-file per-test01-madrid-2024-noviembre.yaml
-```
-
-#### Para Valencia 2024 junio (ejemplo):
-```bash
-# 1. Extraer preguntas
-# Resultado: data/exams/per-test02-valencia-2024-junio.yaml
-python tools/extraction/madrid_extract_questions.py --input-file data/raw/questions/valencia-2024-junio.pdf --test-code 02
-
-# 2. Extraer respuestas
-python tools/extraction/madrid_extract_answers_v2.py --input-file "data/raw/answers/valencia/2024/valencia-2024-junio.pdf"
-
-# 3. Combinar datos
-python tools/processing/madrid_apply_answers.py --input-file per-test02-valencia-2024-junio.json --target-file per-test02-valencia-2024-junio.yaml
-```
-
-### Extracción Avanzada de Respuestas
-
-```bash
-# Extraer respuestas de un PDF específico
-python tools/extraction/madrid_extract_answers_v2.py --input-file "data/raw/answers/madrid/2025/madrid-2025-abril.pdf"
-
-# Extraer respuestas con directorio personalizado
-python tools/extraction/madrid_extract_answers_v2.py --input-file "data/raw/answers/madrid/2024/madrid-2024-junio.pdf" --output-dir "mis_respuestas"
-
-# Extraer respuestas con información detallada
-python tools/extraction/madrid_extract_answers_v2.py --input-file "data/raw/answers/madrid/2023/madrid-2023-noviembre.pdf" --verbose
-```
-
-### Aplicar Respuestas Extraídas
-
-```bash
-# Aplicar respuestas OCR al archivo YAML (con auto-detección)
-python tools/processing/madrid_apply_answers.py --verbose
-
-# Aplicar respuestas especificando archivos
-python tools/processing/madrid_apply_answers.py --input-file respuestas.json --target-file examen.yaml --verbose
-```
-
-**Nota**: El script detecta automáticamente el tipo de examen desde el contenido del PDF usando OCR.
 
 ## Despliegue en Azure Web Apps
 La aplicación está configurada para desplegarse directamente en Azure Web Apps utilizando el moderno `pyproject.toml` y la estructura estándar de FastAPI. Azure puede generar automáticamente un `requirements.txt` durante el proceso de construcción.

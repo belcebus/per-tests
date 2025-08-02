@@ -2,22 +2,64 @@
 
 Este directorio contiene los scripts esenciales para procesar los PDFs oficiales de exámenes y convertirlos a archivos YAML que utiliza la aplicación.
 
-## 📁 Estructura Organizada
 
-### 🔍 `extraction/` - Extracción de Datos
-Scripts especializados en extraer información de PDFs:
-- **`madrid_extract_questions.py`** - Extrae preguntas y estructura de exámenes de Madrid
-- **`madrid_extract_answers_v2.py`** - Extrae respuestas oficiales de Madrid usando OCR
+## 📁 Estructura Actualizada de `tools/`
 
-### ⚙️ `processing/` - Procesamiento de Datos  
-Scripts para procesar y transformar datos extraídos:
-- **`madrid_apply_answers.py`** - Aplica respuestas extraídas a archivos YAML
+```
+tools/
+├── extraction/
+│   ├── __init__.py
+│   ├── images_to_single_text.py
+│   ├── pdf_to_images.py
+│   ├── txt_to_yaml_per.py
+│   └── madrid/
+│       ├── madrid_extract_answers_v2.py
+│       └── madrid_extract_questions.py
+├── processing/
+│   ├── __init__.py
+│   └── madrid_apply_answers.py
+├── utils/
+│   ├── check_exam_consistency.py
+│   └── clean_txt_questions.py
+└── README.md
+```
 
-### 🔧 `utils/` - Herramientas de Utilidad
-Scripts de análisis y verificación para desarrollo y control de calidad:
-- **`check_exam_consistency.py`** - Verifica la consistencia de distribución de preguntas por categorías
 
----
+### Descripción de los subdirectorios y scripts principales
+
+- **extraction/**  
+  Scripts para extraer datos de PDFs, convertir imágenes y generar archivos estructurados.
+  - `images_to_single_text.py`: Convierte varias imágenes en un solo texto.
+    - **Ejemplo de uso:**
+      ```bash
+      python tools/extraction/images_to_single_text.py --input-dir carpeta_imagenes --output-file resultado.txt
+      ```
+  - `pdf_to_images.py`: Extrae imágenes de PDFs.
+    - **Ejemplo de uso:**
+      ```bash
+      python tools/extraction/pdf_to_images.py --input-file examen.pdf --output-dir imagenes_extraidas
+      ```
+  - `txt_to_yaml_per.py`: Convierte textos en archivos YAML para PER.
+    - **Ejemplo de uso:**
+      ```bash
+      python tools/extraction/txt_to_yaml_per.py --input-file preguntas.txt --output-file preguntas.yaml
+      ```
+  - **madrid/**: Scripts específicos para exámenes de Madrid.
+    - `madrid_extract_questions.py`: Extrae preguntas y estructura de exámenes.
+    - `madrid_extract_answers_v2.py`: Extrae respuestas oficiales usando OCR.
+
+- **processing/**  
+  Scripts para procesar y aplicar respuestas a los exámenes.
+  - `madrid_apply_answers.py`: Aplica respuestas extraídas a archivos YAML.
+
+- **utils/**  
+  Herramientas de utilidad y control de calidad.
+  - `check_exam_consistency.py`: Verifica la consistencia de los exámenes.
+  - `clean_txt_questions.py`: Limpia y normaliza archivos de preguntas en texto.
+    - **Ejemplo de uso:**
+      ```bash
+      python tools/utils/clean_txt_questions.py --input-file preguntas.txt --output-file preguntas_limpias.txt
+      ```
 
 # 📄 Documentación Detallada de Scripts
 
