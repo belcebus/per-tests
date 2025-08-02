@@ -20,7 +20,8 @@ per-tests/
 ├── .github/
 │   └── workflows/
 │       ├── ci.yml           # Workflow de CI (tests)
-│       └── security.yml     # Workflow de análisis de seguridad (Semgrep)
+│       ├── security.yml     # Workflow de análisis de seguridad (Semgrep)
+│       └── deploy.yml       # Workflow de despliegue a Azure
 ├── app/                     # Código de la aplicación
 │   ├── main.py              # Punto de entrada de FastAPI
 │   ├── models/              # Modelos Pydantic
@@ -160,6 +161,7 @@ El proyecto incluye un Makefile completo que simplifica todas las tareas de desa
    - `make run-custom` — inicia con variables de entorno personalizadas
    - `make clean` — limpia archivos temporales y de cobertura
    - `make clean-venv` — elimina el entorno virtual
+   - `make build-deploy` — instalar deps, ejecutar tests y preparar despliegue
 
    **Ejemplos:**
    - `make install-dev`                  # Instalación para desarrollo
@@ -724,10 +726,11 @@ Estado actual de la suite de tests:
 
 ### Integración Continua
 
-El proyecto incluye dos workflows de GitHub Actions:
+El proyecto incluye tres workflows de GitHub Actions:
 
 - **CI**: Ejecuta automáticamente los tests en cada pull request a la rama `main`, usando solo dependencias de desarrollo ([dev]). Puedes ver el workflow en `.github/workflows/ci.yml`.
 - **Security**: Ejecuta el análisis de seguridad (Semgrep) en un workflow independiente, usando solo dependencias de seguridad ([security]).
+- **Deploy**: Despliega automáticamente la aplicación a Azure Web App cuando se crea una release o se ejecuta manualmente. Incluye validación con tests antes del despliegue.
 
 Esto permite que la instalación de dependencias en CI sea más rápida y modular, y que el análisis de seguridad se ejecute solo cuando sea necesario.
 
@@ -881,7 +884,27 @@ O simplemente crea un nuevo Codespace que tendrá automáticamente todas las dep
 
 
 ## Despliegue en Azure Web Apps
-La aplicación está configurada para desplegarse directamente en Azure Web Apps utilizando el moderno `pyproject.toml` y la estructura estándar de FastAPI. Azure puede generar automáticamente un `requirements.txt` durante el proceso de construcción.
+
+### Proceso Automatizado
+La aplicación se despliega automáticamente a Azure Web App usando GitHub Actions. El workflow de despliegue:
+
+1. **Se activa cuando:**
+   - Se publica una nueva release en GitHub
+   - Se ejecuta manualmente desde la pestaña "Actions"
+
+2. **Proceso de despliegue:**
+   - Instala dependencias usando `make install`
+   - Ejecuta tests completos con `make test-ci`
+   - Prepara archivos optimizados con `make build-deploy`
+   - Despliega solo los archivos necesarios a Azure
+
+3. **Comando de inicio en Azure:**
+   ```bash
+   python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 1
+   ```
+
+### Configuración Manual
+Si prefieres configurar el despliegue manualmente, la aplicación está optimizada para Azure Web Apps usando el moderno `pyproject.toml` y la estructura estándar de FastAPI.
 
 ## Configuración
 

@@ -26,7 +26,7 @@ YELLOW = \033[1;33m
 RED = \033[0;31m
 NC = \033[0m # No Color
 
-.PHONY: help test test-fast test-cov test-cov-html test-cov-xml test-unit test-integration test-api clean install install-dev install-tools install-full run run-prod run-azure run-debug run-local run-custom security
+.PHONY: help test test-fast test-cov test-cov-html test-cov-xml test-unit test-integration test-api clean install install-dev install-tools install-full run run-prod run-azure run-debug run-local run-custom security build-deploy
 
 
 # Comando por defecto
@@ -70,6 +70,9 @@ help:
 	@echo "$(YELLOW)Limpieza:$(NC)"
 	@echo "  make clean            - Limpiar archivos de cobertura y cache"
 	@echo "  make clean-venv       - Eliminar el entorno virtual"
+	@echo ""
+	@echo "$(YELLOW)Despliegue:$(NC)"
+	@echo "  make build-deploy     - Instalar deps, ejecutar tests y preparar despliegue"
 	@echo ""
 	@echo "$(YELLOW)Ejemplos:$(NC)"
 	@echo "  make install-dev                  # Instalación para desarrollo"
@@ -166,6 +169,7 @@ clean:
 	rm -rf .coverage
 	rm -rf .pytest_cache/
 	rm -rf __pycache__/
+	rm -rf deploy-build/
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 	find . -type f -name "*.pyc" -delete
 	@echo "$(GREEN)✅ Limpieza completada$(NC)"
@@ -203,3 +207,27 @@ run-custom:
 	@echo "$(GREEN)⚙️  Iniciando aplicación con configuración personalizada...$(NC)"
 	@echo "$(YELLOW)Uso: PER_PORT=9000 PER_HOST=localhost make run-custom$(NC)"
 	$(PYTHON_CMD) -c "from app.main import main; main()"
+
+# Preparar archivos para despliegue (solo archivos de producción)
+build-deploy:
+	@echo "$(GREEN)📦 Preparando aplicación para despliegue...$(NC)"
+	@echo "$(YELLOW)🔧 Instalando dependencias...$(NC)"
+	@$(MAKE) install
+	@echo "$(YELLOW)🧪 Ejecutando tests...$(NC)"
+	@$(MAKE) test-ci
+	@echo "$(YELLOW)📁 Preparando archivos de despliegue...$(NC)"
+	@rm -rf deploy-build/
+	@mkdir -p deploy-build
+	@echo "$(YELLOW)📁 Copiando archivos de aplicación...$(NC)"
+	@cp -r app/ deploy-build/
+	@cp -r config/ deploy-build/
+	@cp -r static/ deploy-build/
+	@cp pyproject.toml deploy-build/
+	@cp README.md deploy-build/
+	@cp LICENSE deploy-build/
+	@echo "$(YELLOW)🧹 Limpiando archivos innecesarios...$(NC)"
+	@find deploy-build/ -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
+	@find deploy-build/ -name "*.pyc" -delete 2>/dev/null || true
+	@find deploy-build/ -name "*.pyo" -delete 2>/dev/null || true
+	@find deploy-build/ -name ".DS_Store" -delete 2>/dev/null || true
+	@echo "$(GREEN)✅ Aplicación lista para despliegue en: deploy-build/$(NC)"
