@@ -3,7 +3,7 @@
 Convierte un fichero TXT de exámenes PER en uno o varios ficheros YAML con la estructura oficial.
 
 Uso:
-  txt_to_yaml_per.py --input-file extracted-answers/madrid-2029-diciembre.txt --output-dir data/exams/questions/madrid/2029/
+  txt_to_yaml_per.py --input-file extracted-answers/madrid-2019-diciembre.txt --output-dir data/exams/questions/madrid/2019/
 
 Requiere PyYAML: pip install pyyaml
 """
