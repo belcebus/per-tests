@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      id-token: write   # Allows obtaining OIDC token for Azure login
 
     steps:
       - uses: actions/checkout@v4
