@@ -26,11 +26,18 @@ jobs:
       - name: Build and prepare deployment
         run: make build-deploy
 
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
           app-name: 'per-webapp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5026F57FEDDD470C9D0936BE5FFB3186 }}
           package: './deploy-build'
+          startup-command: 'python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 1'
