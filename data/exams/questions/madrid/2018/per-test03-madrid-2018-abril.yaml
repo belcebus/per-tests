@@ -1,0 +1,569 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 1
+      options:
+        a: La parte que permite el acceso de la tripulación al interior del barco,
+          situada por encima de la línea de flotación.
+        b: El fondo interior de una embarcación donde se acumulan las aguas que pueden
+          entrar en la embarcación.
+        c: El canto superior del costado de una embarcación, tanto a babor como a
+          estribor.
+        d: La regala de una embarcación.
+      question: 'La sentina es:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 2
+      options:
+        a: La limera es el eje del timón.
+        b: La cañía es el eje del timón.
+        c: La mecha es el eje del timón.
+        d: La rueda es el eje del timón.
+      question: ¿Cuál de las siguientes afirmaciones es correcta?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 3
+      options:
+        a: El calado de popa es mayor que el de proa.
+        b: El francobordo en popa es mucho mayor que en la proa.
+        c: La semisuma del calado de proa y el de popa es mayor que el puntal en popa.
+        d: El calado de popa es menor que el de proa.
+      question: 'En general, si el asiento de un buque es positivo, podemos afirmar
+        que:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: e
+      id: 4
+      options:
+        a: Tendrá menor calado en su extremo de proa que cuando esté adrizada.
+        b: Tendrá asiento negativo y mayor puntal en babor.
+        c: Tendrá mayor francobordo en el costado de estribor que en el de babor.
+        d: Tendrá iguales sus dos calados, el de proa igual al de popa.
+      question: 'De forma general, cuando una embarcación esté escorada a babor:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 5
+      options:
+        a: Se recomienda que el lugar de fondeo elegido tenga un fondo con pendiente
+          pronunciada.
+        b: El radio del círculo de borneo depende de la longitud de cadena filada.
+        c: En el fondeo a la gira, en el momento de levar el ancla, se recomienda
+          llevar una ligera arrancada atrás con objeto de limpiar el ancla de algas
+          y/o fango.
+        d: Si se comprueba que nuestra embarcación garrea, es recomendable reducir
+          la longitud de la línea de fondeo.
+      question: ¿Cuál de las siguientes afirmaciones es correcta?
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: d
+      id: 6
+      options:
+        a: Es la parte más larga del cabo.
+        b: Es el lazo que se hace en el extremo del cabo y que sirve para encapillar
+          el cabo a la bita.
+        c: Es la curvatura del cabo entre los extremos que lo sujetan.
+        d: Es el extremo libre del cabo.
+      question: ¿Qué es el chicote?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 7
+      options:
+        a: Se da una situación de sincronismo longitudinal y con ella una disminución
+          del riesgo de zozobrar.
+        b: Aumenta el riesgo de que la embarcación zozobre.
+        c: Se da una situación de sincronismo transversal y con ella una disminución
+          del riesgo de zozobrar.
+        d: Se da una situación de sincronismo longitudinal y, si nos encontramos en
+          aguas someras, un aumento del riesgo de zozobrar.
+      question: 'Cuando el periodo natural de balance de la embarcación coincide con
+        el periodo de la ola:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 8
+      options:
+        a: Es el periodo de oscilación natural de una embarcación en sentido longitudinal.
+        b: No se ve afectado por el estado de la mar.
+        c: Tiene un valor mucho menor que el periodo de balance.
+        d: Depende de cada embarcación.
+      question: Señale la respuesta incorrecta. El periodo de cabezada...
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 9
+      options:
+        a: Menos de 1 hora.
+        b: Menos de 2 horas.
+        c: Menos de 3 horas,
+        d: Menos de 30 minutos.
+      question: Por lo general, ¿qué margen de tiempo aproximado tendremos para rescatar
+        con éxito a una persona que caiga al mar, siendo la temperatura del agua 8ºC?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 10
+      options:
+        a: Que el motor ha trabajado a elevadas revoluciones, incrementándose la temperatura
+          del aceite, disminuyendo su densidad.
+        b: Que hay una fuga del agua de refrigeración.
+        c: Que estamos usando un aceite expansivo de gran calidad.
+        d: Que el motor ha trabajado a elevadas revoluciones, incrementándose la temperatura
+          del aceite, aumentando su densidad.
+      question: ¿Qué puede indicarnos un aumento del nivel de aceite del cárter, así
+        como un aspecto del mismo jabonoso, como mayonesa?
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: b
+      id: 11
+      options:
+        a: A una distancia inferior a tres millas marinas de la tierra más próxima.
+        b: En zonas portuarias, aguas protegidas y otras zonas como rías, bahías y
+          similares.
+        c: Sólo en zonas protegidas.
+        d: A menos de 6 millas de la tierra más próxima.
+      question: ¿En qué aguas, de aquellas en las que España ejerce soberanía, derechos
+        soberanos y jurisdicción, está prohibida toda descarga de aguas sucias desde
+        embarcaciones de recreo?
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 12
+      options:
+        a: Trimestralmente.
+        b: Semestralmente.
+        c: Anualmente.
+        d: Cada vez que entren en puerto.
+      question: 'Las embarcaciones deportivas o de recreo autorizadas para un máximo
+        de doce pasajeros, con base en un puerto español, realizarán la notificación
+        reducida de desechos del Anexo V del Real Decreto 1381/2002, de 20 de diciembre,
+        con la siguiente periodicidad:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 13
+      options:
+        a: Rojo.
+        b: Verde.
+        c: Amarillo.
+        d: Blanco.
+      question: ¿De qué color es la luz de una marca especial?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 14
+      options:
+        a: Verde y rojo.
+        b: Rojo y negro.
+        c: Rojo y blanco.
+        d: Amarillo y azul.
+      question: ¿Cuál es el color de las franjas de las marcas de aguas navegables?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 15
+      options:
+        a: Una marca de centro de canal.
+        b: Una marca especial.
+        c: Una marca de peligro aislado.
+        d: Una marca cardinal Este.
+      question: 'Navegando de noche observamos una baliza que da grupos de dos destellos
+        blancos, GpD (2), supondremos que se trata de:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 16
+      options:
+        a: Verde y rojo.
+        b: Rojo.
+        c: Rojo y blanco.
+        d: Amarillo.
+      question: ¿Cuál es el color de las marcas especiales?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 17
+      options:
+        a: Dos conos negros superpuestos opuestos por sus bases y una banda amarilla
+          entre dos bandas negras.
+        b: Dos conos negros superpuestos opuestos por sus bases y una banda negra
+          entre dos bandas amarillas.
+        c: Dos conos amarillos superpuestos opuestos por sus bases.
+        d: Dos conos negros superpuestos opuestos por sus vértices.
+      question: 'La marca cardinal Oeste se caracteriza por tener:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 18
+      options:
+        a: Los buques de eslora igual o superior a 8 metros.
+        b: Los buques de eslora igual o superior a 12 metros.
+        c: Los buques de eslora igual o superior a 18 metros.
+        d: Los buques de eslora igual o superior a 20 metros.
+      question: 'De acuerdo con la Regla 33 del RIPA, irán dotados de una campana
+        además de un pito:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 19
+      options:
+        a: Una pitada corta.
+        b: Dos pitadas cortas.
+        c: Una pitada larga.
+        d: Dos pitadas largas.
+      question: 'De acuerdo con la Regla 34.e del RIPA, los buques que se aproximen
+        a un recodo o zona de un paso o canal en donde, por estar obstruida la visión,
+        no puedan ver a otros buques, harán sonar:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 20
+      options:
+        a: Nunca se utilizarán o exhibirán varias señales de peligro a la vez, ya
+          que podrían confundir a los servicios de salvamento sobre si necesitamos
+          ayuda o no.
+        b: En caso de abandono, antes de proceder al mismo, indicaremos que estamos
+          en peligro exhibiendo 2 bolas naranjas en un lugar bien visible.
+        c: En caso de necesitar ayuda, podremos usar simultáneamente la radiobaliza
+          de localización de siniestros junto con el respondedor de radar.
+        d: En caso de necesitar ayuda, usaremos la radiotelefonía para emitir una
+          señal consistente en la palabra "SOS".
+      question: ¿Cúal de las siguienes afirmaciones es correcta?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 21
+      options:
+        a: 112,5 grados.
+        b: 135 grados.
+        c: 225 grados.
+        d: 115 grados.
+      question: Según la Regla 21.c del RIPA, ¿qué arco del horizonte cubre la luz
+        de alcance?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 22
+      options:
+        a: Un sonido de una duración aproximada de cuatro a seis segundos.
+        b: Un sonido de una duración aproximada de un segundo.
+        c: Un sonido de una duración aproximada de dos a cuatro segundos.
+        d: Un sonido de una duración aproximada de seis a ocho segundos.
+      question: 'Conforme a la Regla 32 del RIPA, la expresión "pitada larga" significa:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 23
+      options:
+        a: Todo buque que no puede apartarse de la derrota de otro buque solamente
+          cuando se encuentre dentro de un dispositivo de sepación de tráfico.
+        b: Todo buque que por cualquier circunstancia excepcional es incapaz de maniobrar
+          en la forma exigida por este Reglamento y, por consiguiente, no puede apartarse
+          de la derrota de otro buque.
+        c: Todo buque que por una circunstancia excepcional tiene disminuida su capacidad
+          de maniobra.
+        d: Todo buque que ha perdido su gobierno.
+      question: Según se define en el RIPA, ¿qué se entiende por un buque sin gobierno?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 24
+      options:
+        a: Un buque de eslora igual o superior a 100 metros, navegando dentro de una
+          zona de visibilidad reducida.
+        b: Un buque de eslora igual o superior a 100 metros, fondeado dentro de una
+          zona de visibilidad reducida.
+        c: Un buque remolcado, dentro de una zona de visibilidad reducida, emitiendo
+          su señal inmediatamente después de la señal efectuada por el buque remolcador.
+        d: Un buque de eslora igual o superior a 100 metros que necesita llamar la
+          atención de otro.
+      question: 'Según la Regla 35.g del RIPA, si se da un repique de campana de unos
+        5 segundos de duración a intervalos que no excedan de un minuto, e inmediatamente
+        después se hace sonar el gong durante unos cinco segundos, se trata de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 25
+      options:
+        a: Cuando cada uno de ellos reciba el viento por bandas contrarias, el que
+          lo reciba por babor se mantendrá apartado de la derrota del otro.
+        b: Cuando ambos reciban el viento por la misma banda, el buque que esté a
+          barlovento se mantendrá apartado de la derrota del que esté a sotavento.
+        c: Si un buque que recibe el viento por babor avista a otro buque por barlovento
+          y no puede determinar con certeza si el otro buque recibe el viento por
+          babor o estribor, se mantendrá apartado de la derrota del otro.
+        d: Cuando cada uno de ellos reciba el viento por bandas contrarias, el que
+          lo reciba por estribor se mantendrá apartado de la derrota del otro.
+      question: 'Según establece el RIPA, sefíale cuál de las siguientes afirmaciones
+        NO es correcta cuando dos buques de vela se aproximen uno al otro, con riesgo
+        de abordaje:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 26
+      options:
+        a: El aparejo largado se extiende más de 100 metros.
+        b: El aparejo largado se extiende más de 150 metros.
+        c: El aparejo largado se extiende más de 50 metros.
+        d: El aparejo largado se extiende más de 25 metros.
+      question: 'Según la Regla 26.c del RIPA, un cono con el vértice hacia arriba,
+        en la dirección del aparejo, indica que:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 27
+      options:
+        a: Hasta el momento en que el radar nos indique que estamos fuera de peligro
+          de colisión.
+        b: El RIPA no establece ninguna prescripción al respecto.
+        c: Hasta el momento en que el otro buque esté en franquía.
+        d: Hasta el momento en que el otro buque esté pasado y en franquía.
+      question: ¿Hasta cuando se deberá ir comprobando la eficacia de la maniobra
+        según las disposiciones del RIPA?
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: d
+      id: 28
+      options:
+        a: Es el ángulo comprendido entre el rumbo verdadero y el rumbo efectivo.
+        b: Es la desviación que sufre el barco por efecto de la corriente.
+        c: Las corrientes en mar abierto no suelen presentar un peligro o riesgo inmediato
+          para maniobrar,
+        d: Como regla general, en pasos estrechos y aguas restringidas, se gobierna
+          mejor en dirección a favor de la corriente que en contra de ella.
+      question: ¿Cuál de las siguientes afirmaciones es incorrecta respecto al concepto
+        de deriva?
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: d
+      id: 29
+      options:
+        a: Los esprines irán al muelle y los traveses y largos al otro barco.
+        b: Los traveses irán al muelle y los largos y esprines al otro barco.
+        c: Nunca daremos esprines y traveses al otro barco.
+        d: Siempre que se pueda, se darán largos a tierra.
+      question: 'De forma general, cuando nos abarloemos a una embarcación atracada
+        de costado al muelle:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 30
+      options:
+        a: Al viento.
+        b: Al oleaje.
+        c: A fallos humanos.
+        d: Al estado de conservación del barco.
+      question: 'La mayoría de los abordajes son achacables:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 31
+      options:
+        a: La banda de sotavento.
+        b: La banda de barlovento.
+        c: La popa.
+        d: El costado de babor.
+      question: 'El lanzamiento de señales pirotécnicas debemos realizarlo por:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 32
+      options:
+        a: La limera del timón.
+        b: La hélice.
+        c: La pala timón.
+        d: El orinque.
+      question: 'Indique en dónde podríamos tener riesgo de sufrir una vía de agua:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 33
+      options:
+        a: Es la extensión rectilínea donde el viento sopla en la misma dirección.
+        b: Es el número de horas que el viento ha soplado en la misma dirección.
+        c: Es la presión que el viento ejerce sobre la mar.
+        d: Es la fuerza del viento.
+      question: ¿Qué es el fetch?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 34
+      options:
+        a: Generalmente se desplazan rápidamente.
+        b: Generalmente se desplazan muy lentamente.
+        c: Consisten en un conjunto de isobaras en las que la presión disminuye conforme
+          nos acercamos a su centro.
+        d: En los mapas se indican con una "B".
+      question: 'Los anticiclones:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 35
+      options:
+        a: 670 mm.
+        b: 1 atm.
+        c: 1.031,2 milibares.
+        d: 1,0132 milibares.
+      question: 'El valor normal de la presión atmosférica a nivel del mar es de:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 36
+      options:
+        a: Cuando el viento varía sucesivamente su dirección.
+        b: Cuando el viento para bruscamente.
+        c: Aumento de intensidad del viento.
+        d: Disminución de la intensidad del viento.
+      question: 'Caer el viento es:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 37
+      options:
+        a: El abatimiento es el desplazamiento lateral a barlovento de la embarcación.
+        b: El abatimiento tomará signo positivo cuando el viento incida sobre la banda
+          de estribor.
+        c: El abatimiento tomará signo negativo cuando el viento incida sobre la banda
+          de babor.
+        d: El abatimiento es nulo si el viento incide por la proa.
+      question: 'Señale cuál de las siguientes afirmaciones es correcta:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 38
+      options:
+        a: La suma algebráica de la declinación magnética y el desvío.
+        b: La suma en valor absoluto de la declinación magnética y el desvío.
+        c: La suma de la declinación magnetica y el desvío cuando éste ultimo queda
+          a la derecha del norte verdadero.
+        d: El valor del ángulo que forma la dirección de la proa con el meridiano
+          verdadero del lugar con el signo opuesto al mismo.
+      question: ¿Cuál es el valor de la corrección total?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 39
+      options:
+        a: Las de destellos.
+        b: Las isofase.
+        c: Las fijas.
+        d: Las de ocultaciones.
+      question: En las ayudas a la navegación, ¿qué luces tienen una duración de luz
+        y oscuridad exactamente igual?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 40
+      options:
+        a: Desvío.
+        b: Declinación mágnetica.
+        c: Correción total.
+        d: Rumbo.
+      question: 'Se define al ángulo que forma el norte de aguja con el norte mágnetico
+        como:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 41
+      options:
+        a: 60º.
+        b: 300º. e) 120º.
+        d: 240º.
+      question: 'La conversión del rumbo N60E a rumbo circular es:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 42
+      options:
+        a: l=35º 51,4'N L=005º 51,5'W.
+        b: l=35º 52'N   L=005º 50,5'W.
+        c: l=35º 51,4'N L=005º 50,5'W.
+        d: l=35º 52'N   L=005º 52,5'W.
+      question: Hallar nuestra situación verdadera si nos encontramos a $ millas del
+        faro de Cabo Espartel y a 5 millas de la marca cardinal norte próxima a Punta
+        Malabata.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 43
+      options:
+        a: 7,71 metros.
+        b: 7,61 metros.
+        c: 7,39 metros.
+        d: 7,81 metros.
+      question: Hallar la sonda en el momento de la primera bajamar el día 16 de abril
+        de 2018 en Algeciras con una presión atmosférica de 1003 mb y una sonda en
+        la carta de 7,6 metros.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 44
+      options:
+        a: l=35º 55,7'N L=005º 13,4'W.
+        b: l=35º 57'N   L=005º 13,4'W. 0) l=35º 55,7'N L=005º 12'W.
+        d: l=35º 57'N   L=005º 12,2'W.
+      question: A las HRB 1606 estamos situados a 5 millas del faro de Cabo Negro,
+        en el momento en que la sonda marca 200 metros. Si la velocidad=12,2 nudos,
+        el rumbo de aguja= 009º, el desvío de la aguja 1,5ºE y la declinación magnética
+        es la indicada en la carta para el año en curso, calcular nuestra situación
+        de estima a las HRB 1654.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 45
+      options:
+        a: 080º.
+        b: 255º. €) 258º.
+        d: 260º.
+      question: Hallándose nuestra embarcación a 4,7 millas al sur verdadero del faro
+        de Punta Europa, damos rumbo para pasar a 1 milla del faro de Isla de Tarifa.
+        Hallar el rumbo de aguja, siendo el desvío de la aguja de 1º W y la declinación
+        magnética la indicada en la carta para el año en curso.
+exam_info:
+  call: abril
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 03
+  test_code: '03'
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2018
