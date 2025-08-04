@@ -52,9 +52,12 @@ categories:
       correct_answer: c
       id: 5
       options:
-        d: 40a 56 metros.
+        a: 8 a 10 metros.
+        b: 10 a 18 metros.
+        c: 24 a 40 metros.
+        d: 40 a 56 metros.
       question: Al fondear en condiciones normales, sobre unos 8 metros de sonda largaremos
-        una longitud de caboc) 24 a 40 metros.
+        una longitud de cabo o de cadena de:.
     - category: 2
       category_name: Elementos de amarre y fondeo
       correct_answer: d
