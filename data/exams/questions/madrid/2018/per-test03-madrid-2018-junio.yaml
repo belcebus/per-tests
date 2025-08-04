@@ -171,8 +171,8 @@ categories:
       options:
         a: Cónica, de castillete o espeque, de color verde con una banda ancha horizontal
           roja.
-        b: Cónica de color rojo. e) Cilíndrica, de castillete o espeque, de color
-          rojo con una banda horizontal verde.
+        b: Cónica de color rojo.
+        c: Cilíndrica, de castillete o espeque, de color rojo con una banda horizontal verde.
         d: Cónica de color verde.
       question: 'El punto de bifurcación de un canal, con el canal principal a estribor,
         se indicará con una marca:'
