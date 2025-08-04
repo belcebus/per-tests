@@ -1,0 +1,567 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 1
+      options:
+        a: Hélice de paso a la derecha, que en marcha avante y vista desde popa gira
+          en sentido de las agujas del reloj.
+        b: Hélice de paso a la izquierda, que en marcha avante y vista desde popa
+          gira en sentido de las agujas del reloj.
+        c: Hélice de paso a la derecha, que en marcha avante y vista desde popa gira
+          en sentido contrario a las agujas del reloj.
+        d: Hélice de paso a la izquierda, que en marcha avante y vista desde popa
+          gira en sentido contrario a las agujas del reloj.
+      question: 'La hélice dextrógira se define como:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 2
+      options:
+        a: El bao.
+        b: La cuaderna.
+        c: El espejo.
+        d: La quilla.
+      question: 'La roda y el codaste están unidos por:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 3
+      options:
+        a: Está situado a babor, independientemente de la dirección del viento.
+        b: Está más cerca de la zona por la que viene el viento.
+        c: Está más alejado de la zona por la que viene el viento.
+        d: Está situado a estribor, independientemente de la dirección del viento.
+      question: 'Entre dos barcos, se dice que un barco está a barlovento si:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 4
+      options:
+        a: Lumbreras.
+        b: Portillos.
+        c: Imbornales.
+        d: Manguerotes.
+      question: 'Las aperturas practicadas en el casco para que pueda salir el agua
+        embarcada en la cubierta, se denominan:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 5
+      options:
+        a: Sirve para encapillar un cabo a un noray.
+        b: Sirve para unir dos chicotes de la misma mena.
+        c: Sirve para afirmar el cabo de fondeo al ancla.
+        d: Sirve para afirmar un cabo a una bita.
+      question: ¿Para qué se emplea el nudo llano?
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 6
+      options:
+        a: Es la parte más larga del cabo.
+        b: Es el extremo libre del cabo.
+        c: Es el lazo que se hace en el extremo del cabo y que sirve para encapillar
+          el cabo a la bita.
+        d: Es la curvatura del cabo entre los extremos que lo sujetan.
+      question: ¿Qué es el chicote?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 7
+      options:
+        a: Se ha de mantener el barco con poca velocidad avante debido al mal tiempo.
+        b: 'Existen dos formas de capear un temporal: capa corrida y capa abierta.'
+        c: Las olas se toman por la amura y la velocidad será mínima para gobernar
+          a la ola.
+        d: Se produce un gran abatimiento.
+      question: 'Señale la respuesta INCORRECTA respecto a la navegación capeando
+        un temporal:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 8
+      options:
+        a: Bengala de mano.
+        b: Señal fumigena flotante.
+        c: Cohete con luz y paracaídas.
+        d: Bengala de humo.
+      question: De las siguientes señales pirotécnicas, ¿cuál es la que tiene mayor
+        duración tras activarla?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 9
+      options:
+        a: Sincronismo transversal.
+        b: Sincronismo de arfada.
+        c: Sincronismo longitudinal.
+        d: Sincronismo de cabezada.
+      question: 'Si cada vez que el buque levanta la proa coincide con la cresta de
+        la ola y al bajar la proa coincide con el seno de aquella, siendo cada vez
+        las cabezadas más violentas y pronunciadas, se dice que el barco ha entrado
+        en:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 10
+      options:
+        a: Inconsciencia.
+        b: Pupilas contraídas.
+        c: Latidos débiles del corazón.
+        d: Falta de respiración.
+      question: ¿Cuál de los siguientes NO es un síntoma o señal de parada cardíaca?
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 11
+      options:
+        a: Un radio de 20 metros.
+        b: Un radio de 30 metros.
+        c: Un radio de 50 metros.
+        d: Un radio de 25 metros.
+      question: 'El resguardo mínimo que otras embarcaciones deben dar a las operaciones
+        de buceo, señaladas con una boya que porte la bandera Alfa, es:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: b
+      id: 12
+      options:
+        a: A menos que se disponga expresamente otra cosa, a todos los buques.
+        b: Solo a las embarcaciones de recreo, entendiendo por tal, toda embarcación
+          de cualquier tipo, con independencia de su medio de propulsión, cuyo casco
+          tenga una eslora comprendida entre 2,5 metros y 24 metros, utilizada para
+          fines deportivos o de recreo.
+        c: Únicamente a los buques contruidos después del 1 de julio de 1986, entendiéndose
+          a esos efectos, por buque construido a todo buque cuya quilla haya sido
+          colocada o cuya construcción se halle en fase equivalente.
+        d: Solo a las embarcaciones y buques de recreo, con independencia de su modo
+          de propulsión, cuya eslora de casco (Lh) sea inferior a 24 metros, con un
+          arqueo bruto inferior a 3000 GT y capacidad para transportar hasta 12 pasajeros
+          sin contar con la tripulación.
+      question: 'De conformidad con la Regla 2 del Anexo V del Convenio MARPOL, las
+        disposiciones del Convenio se aplican:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 13
+      options:
+        a: Las aguas son navegables.
+        b: Está prohibida la navegación.
+        c: Está restringida la navegación.
+        d: Está permitida la navegación sólo a buques estatales.
+      question: 'Una marca de peligro aislado es una marca colocada o fondeada sobre
+        un peligro a cuyo alrededor:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 14
+      options:
+        a: Proporcionar información direccional en un canal de navegación.
+        b: Indicar la entrada de un canal.
+        c: Indicar los lados de babor y estribor de un canal.
+        d: Llamar la atención sobre la configuración especial de un canal.
+      question: 'Una marca cardinal se puede utilizar para:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 15
+      options:
+        a: La sucesión numérica o alfabética seguirá el sentido convencional del balizamiento,
+          es decir, numeradas desde la mar.
+        b: En vías navegables confinadas deberán ser números impares para las rojas.
+        c: En vías navegables confinadas deberán ser números pares para las verdes.
+        d: La sucesión alfabética estará numerada siguiendo el sentido que determine
+          las Autoridades competentes, previa autorización de la Asociación Internacional
+          de Señalización Marítima (TALA).
+      question: 'Además de por su forma, color y su tope, las marcas laterales podrán
+        ser señalizadas mediante letras y números, de acuerdo con lo siguiente:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 16
+      options:
+        a: De castillete o espeque.
+        b: De libre elección, pero que no se preste a confusión con las marcas para
+          ayuda a la navegación.
+        c: Cilíndrica o cónica, sin embargo, cuando no puedan identificarse por la
+          forma deberán estar provistas de la marca de tope adecuada.
+        d: Esférica, también de castillete o espeque con una marca de tope esférica.
+      question: 'La forma de las boyas que indican zonas de ejercicios militares es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 17
+      options:
+        a: Dos esferas negras.
+        b: Una esfera negra.
+        c: Dos esferas rojas.
+        d: Una esfera roja.
+      question: 'Las marcas de aguas navegables, en el caso de tener marca de tope,
+        esta consiste en:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 18
+      options:
+        a: Caigo a babor.
+        b: Navego con capacidad de maniobra restringida.
+        c: Estoy dando atrás.
+        d: Caigo a estribor.
+      question: 'Para completar las pitadas reglamentarias, un buque de propulsión
+        mecánica en navegación que emite dos destellos significa:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 19
+      options:
+        a: Seguirá estando plenamente obligado a cumplir con lo dispuesto en la parte
+          B (reglas de rumbo y gobierno) del RIPA.
+        b: No estará obligado a cumplir con lo dispuesto en la parte B (reglas de
+          rumbo y gobierno) del RIPA.
+        c: Seguirá estando obligado a cumplir con lo dispuesto en la parte B (reglas
+          de rumbo y gobierno) del RIPA solamente cuando navegue en un canal angosto.
+        d: Seguirá estando obligado a cumplir con lo dispuesto en la parte B (reglas
+          de rumbo y gobierno) del RIPA solamente cuando navegue en un dispositivo
+          de separación de tráfico.
+      question: 'Cuando dos buques se aproximen el uno al otro con riesgo de que se
+        produzca un abordaje; el buque cuyo tránsito no deba ser estorbado:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 20
+      options:
+        a: Desde la puesta del sol hasta su salida únicamente.
+        b: Desde la salida hasta la puesta de sol si hay visibilidad reducida y desde
+          la puesta del sol hasta su salida.
+        c: Únicamente cuando hay visibilidad reducida.
+        d: Sólo cuando el buque esté en peligro y requiera ayuda.
+      question: 'Las luces preceptuadas por las Reglas del RIPA deberán exhibirse:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 21
+      options:
+        a: Buques que pesquen con curricán,
+        b: Buques que pesquen con redes.
+        c: Buques que pesquen con aparejos de arrastre.
+        d: Buques que pesquen con líneas de palangre.
+      question: De acuerdo con la Regla 3.d del RIPA, ¿cuál de los siguientes buques
+        NUNCA se incluye en la expresión "buque dedicado a la pesca"?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 22
+      options:
+        a: Están exentos del cumplimiento de este reglamento.
+        b: Se incluyen en la expresión "buque con capacidad de maniobra restringida".
+        c: Se incluyen en la expresión "buque sin gobierno".
+        d: Se regulan según el tipo de aeronave al que presten servicio.
+      question: 'Conforme a la Regla 3.g del RIPA, los buques dedicados al lanzamiento
+        o recuperación de aeronaves:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 23
+      options:
+        a: Granadas que despidan estrellas rojas.
+        b: Cohetes que despidan estrellas rojas.
+        c: Disparo de cañón, repetido a intervalos de un minuto aproximadamente.
+        d: Un sonido intermitente producido por cualquier aparato de señales de niebla.
+      question: Según el Anexo IV del RIPA, ¿cuál de las siguientes señales NO indica
+        peligro?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 24
+      options:
+        a: Una pitada larga, una corta, una larga y una corta, en este orden.
+        b: Cinco pitadas cortas y rápidas.
+        c: Dos pitadas largas seguidas de una corta.
+        d: Dos pitadas largas seguidas de dos cortas.
+      question: 'En un canal angosto el buque que va a ser alcanzado por otro indicará
+        su conformidad con:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 25
+      options:
+        a: 112,5 grados.
+        b: 135 grados.
+        c: 225 grados.
+        d: 115 grados.
+      question: ¿Qué arco del horizonte cubre la luz de costado?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 26
+      options:
+        a: 24m.
+        b: 20m.
+        c: 50m.
+        d: 30m.
+      question: 'Las luces que exhiben los buques de vela en navegación podrán ir
+        en un farol combinado en el tope del palo o cerca de él, si tienen una eslora
+        inferior a:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 27
+      options:
+        a: Un buque sin gobierno.
+        b: Un buque con capacidad de maniobra restringida.
+        c: Un buque de propulsión mecánica.
+        d: Un buque dedicado a la pesca.
+      question: 'NO es necesario que un buque de vela en navegación se mantenga apartado
+        de la derrota de:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: c
+      id: 28
+      options:
+        a: Proa al viento.
+        b: Con el viento o corriente por popa y la boya por la proa.
+        c: Con el viento o corriente por una amura y la boya por la amura opuesta.
+        d: No está permitido amarrarse a una boya.
+      question: 'Para amarrarnos a una boya, siempre que sea posible, nos aproximaremos:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: d
+      id: 29
+      options:
+        a: El efecto de la corriente y el viento en la embarcación, respectivamente.
+        b: Lo mismo que el abatimiento y la escora.
+        c: Dos terminos utilizados para indicar una ciaboga a babor y a estribor,
+          sucesivamente.
+        d: Dos efectos meteorológicos que provocan la escora de la embarcación.
+      question: 'La deriva y el abatimiento son:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 30
+      options:
+        a: Extintor de CO2.
+        b: Extintor de espuma.
+        c: Extintor de agua.
+        d: Extintor de polvo semi-seco.
+      question: ¿Qué tipo de extintor es el más adecuado para sofocar un incendio
+        en un cuadro eléctrico?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 31
+      options:
+        a: Nadar para no perder la temperatura corporal.
+        b: Ponerse en posición fetal.
+        c: Sujetarse a todo lo que pueda flotar.
+        d: No intentar nadar.
+      question: De las siguientes recomendaciones en caso de abandonar la embarcación
+        o buque en alta mar sin embarcación salvavidas, ¿cuál NO sería aconsejable?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 32
+      options:
+        a: Una hemorragia, que a su vez puede ser interna o externa.
+        b: Una contusión.
+        c: Una laceración.
+        d: Un traumatismo.
+      question: 'La salida de sangre por venas o arterias es:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 33
+      options:
+        a: HF.
+        b: El canal 16 de VHF.
+        c: El canal 10 del Inmarsat meteorológico.
+        d: El canal de trabajo que se haya establecido previamente, antes de partir,
+          con el centro costero de salvamento.
+      question: 'Los centros de la Sociedad Estatal de Salvamento y Seguridad Marítima
+        emiten los boletines meteorológicos para las zonas costeras previo anuncio
+        en:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 34
+      options:
+        a: El aire gira en el sentido de las agujas del reloj en el Hemisferio Sur.
+        b: El aire gira en el sentido contrario a las agujas del reloj en el Hemisferio
+          Norte.
+        c: El aire gira en el sentido de las agujas del reloj en el Hemisferio Norte.
+        d: La dirección del viento forma un ángulo de entre 10? y 30? con respecto
+          a las isobaras, acercándose al centro.
+      question: 'En un anticiclón:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 35
+      options:
+        a: Es el nombre del viento cuando tiene justo la intensidad necesaria para
+          generar la formación de olas.
+        b: Es el número de horas que el viento ha soplado en la misma dirección y
+          con la misma intensidad.
+        c: Es la presión que el viento ejerce sobre la mar.
+        d: Es la extensión rectilínea donde el viento sopla en la misma dirección
+          y con la misma intensidad.
+      question: ¿Qué es el fetch?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 36
+      options:
+        a: Cuando el viento varía sucesivamente su dirección.
+        b: Cuando el viento para bruscamente.
+        c: Cuando aumenta la intensidad del viento.
+        d: Cuando disminuye la intensidad del viento.
+      question: 'Rolar es:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 37
+      options:
+        a: Es producido por la presencia de masas de hierro y circuitos eléctricos
+          en el propio barco, los cuales crean un campo magnético que se añade al
+          efecto del campo magnético terrestre.
+        b: Es propio de cada barco y varía con el rumbo.
+        c: Es el ángulo entre el norte marcado por la aguja náutica del buque y el
+          norte magnético del lugar en que se encuentra.
+        d: Es "negativo"si la aguja se desvía hacia el Este.
+      question: En relación al desvío de aguja, ¿cuál de las siguientes opciones es
+        FALSA?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 38
+      options:
+        a: Sólo existe un tipo de rumbo, el rumbo efectivo.
+        b: El rumbo verdadero, rumbo de superficie y rumbo efectivo.
+        c: El rumbo verdadero, el rumbo de aguja y el rumbo magnético.
+        d: El rumbo verdadero, el rumbo de aguja y el rumbo de superficie.
+      question: 'En función del meridano que consideremos para medir el rumbo, que
+        tres clases de rumbo existen:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 39
+      options:
+        a: Sobre la escala vertical o de latitudes.
+        b: Sobre la escala de medida al efecto, normalmente situada en la parte superior
+          izquierda de la carta.
+        c: Sobre la escala horizontal o de longitudes.
+        d: Se miden directamente sobre la carta, sin necesidad de utilizar ninguna
+          escala.
+      question: ¿Sobre qué escala se miden las distancias en las cartas náuticas?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 40
+      options:
+        a: Periodo, fase y color.
+        b: Periodo, altura y color.
+        c: Amplitud, altura y color.
+        d: Fase, altura e intensidad lumínica.
+      question: ¿Qué tres características, las cuales se combinan entre ellas, tienen
+        las luces de ayuda a la navegación?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 41
+      options:
+        a: 5ºW.
+        b: 1ºE. 2) 5ºE.
+        d: 1ºW.
+      question: 'Hallar el desvío con una Ct = -2º y una dm = 3º W:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 42
+      options:
+        a: l=35º48,2'N L=005º 55,4'W.
+        b: l=35º49,0'N L=005º 55,5'W.
+        c: l=35º48,2'N L=005º 53,6'W.
+        d: l=35º53,2'N L=005º 55,3'W.
+      question: En el sur de la costa de Barbate, una embarcación se sitúa en la marca
+        cardinal SUR que se encuentre más al sur. Se emprende navegación a las 12
+        horas 15 minutos con una velocidad de 15 nudos y rumbo de aguja para alcanzar
+        el faro de Cabo Espartel. Calcular la situación de estima transcurridas 1
+        hora y 20 minutos, siendo la corrección total 4* (+).
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 43
+      options:
+        a: Rºa=168º HRB=1430.
+        b: Rºa-178º HRB=1435.
+        c: Rºa=178º HRB=1430.
+        d: Rºa=168º HRB=1435.
+      question: A las 1220 HRB, estando a 6,4 millas del faro de Cabo Trafalgar y
+        a 4,3 millas de la marca cardinal E situada en las proximidades del puerto
+        de Barbate, ponemos rumbo al faro de Cabo Espartel. Hallar el rumbo de aguja
+        y la HRB de llegada si la corrección total=5" (+) y la velocidad= 8 nudos.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 44
+      options:
+        a: l=35º 53,4'N L=005º 34,4'W.
+        b: l=35º 53,2'N L=005º 35,2'W. 0) l=35º 53,9'N L=005º 34,4'W.
+        d: l=35º 53,4'N L=005º 35,2'W.
+      question: Hallar nuestra situación verdadera si estando situados en la oposición
+        del faro de Isla de Tarifa y el faro de Punta Alcazar y navegando al rumbo
+        verdadero 165,5", observamos el faro de Punta Cires por nuestro través.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 45
+      options:
+        a: d=9,0 millas.
+        b: d=7,3 millas.
+        c: d=10,0 millas.
+        d: d=8,1 millas.
+      question: ¿Qué distancia (d) se tiene entre la posición A (l=36º20,0'N L=006º19,0'W)
+        y la posición B (l=36º20,0'N L=006º10,0'W)?
+exam_info:
+  call: octubre
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 03
+  test_code: '03'
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2018

@@ -1,0 +1,581 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 1
+      options:
+        a: Modifica el sentido de giro de la hélice.
+        b: Disminuye la resistencia a la marcha al plegarse sus palas cuando se navega
+          a vela.
+        c: No se utiliza en veleros.
+        d: Aumenta la resistencia a la marcha al plegarse sus palas cuando se navega
+          a vela.
+      question: De las siguientes afirmaciones sobre la hélice de palas abatibles,
+        ¿cuál es cierta?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 2
+      options:
+        a: Limera.
+        b: Núcleo.
+        c: Mecha.
+        d: Rueda.
+      question: ¿Qué nombre recibe el eje giratorio del timón?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 3
+      options:
+        a: Virar.
+        b: Levar.
+        c: Filar.
+        d: Cobrar.
+      question: ¿Cuál de los siguientes términos se puede considerar lo contrario
+        a recoger progresivamente un ancla?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 4
+      options:
+        a: Anchura mayor de un buque.
+        b: Altura mayor de un buque.
+        c: Longitud mayor de un buque.
+        d: Máxima capacidad de un buque.
+      question: 'La manga define la:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: d
+      id: 5
+      options:
+        a: Es un elemento fijo con la extremidad superior curvada, situado en el buque,
+          donde se hacen firmes los cabos de amarre.
+        b: Es un elemento fijo con la extremidad superior curvada, situado en el buque
+          o en el cantil del muelle, donde se hacen firmes los cabos de amarre.
+        c: Es un elemento fijo con la extremidad superior curvada, situado en el cantil
+          del muelle, donde se hacen firmes los cabos de amarre.
+        d: Es una pieza con forma de T que sirve para afirmar los cabos de amarre
+          en el muelle.
+      question: ¿Qué es un noray?
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 6
+      options:
+        a: Sirve para afirmar un cabo a una argolla.
+        b: Sirve para unir dos chicotes de la misma mena.
+        c: Sirve para encapillar un cabo a un noray.
+        d: Sirve para afirmar un cabo a una bita.
+      question: ¿Para qué se emplea el ballestrinque?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 7
+      options:
+        a: Maniobra de Williamson.
+        b: Método de evolución simple.
+        c: Maniobra de Boutakow.
+        d: Método de búsqueda por sectores.
+      question: ¿Cuál de las siguientes maniobras o métodos de búsqueda se emplea
+        cuando no se ve al náufrago?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 8
+      options:
+        a: Por VHF canal 70 LSD.
+        b: Por teléfono llamando al 112.
+        c: Por el teléfono de emergencias marítimas 900 200 200.
+        d: Por el Canal 16.
+      question: 'Señale cual de las siguientes formas NO es correcta para contactar
+        con Salvamento marítimo:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 9
+      options:
+        a: Su uso es obligatorio para los cascos metálicos.
+        b: Es conveniente llevarlo siempre izado para facilitar la detección de nuestro
+          barco por otros que naveguen por la zona.
+        c: Es un cuerpo poliédrico que se iza en una cruceta.
+        d: Se emplea para mejorar el eco de una emisión electromagnética que emite
+          la antena del radar.
+      question: 'Respecto al reflector de radar indique qué afirmación es INCORRECTA:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 10
+      options:
+        a: 28"C.
+        b: 32%C.
+        c: 34%C.
+        d: 35*C.
+      question: 'La incapacidad del cuerpo para producir el calor que se ha perdido
+        se obtiene a la temperatura corporal de:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 11
+      options:
+        a: Espacio marino del Tinto y del Odiel.
+        b: Cabo de Creus.
+        c: Isla Medes.
+        d: Acantilados de Maro-Cerro Gordo.
+      question: ¿Cuál de los siguientes espacios no está comprendido en la lista ZEPIM
+        (Zonas Especialmente Protegidas de Importancia para el Mediterráneo)?
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 12
+      options:
+        a: Anualmente ante la Capitanía Marítima de su puerto base.
+        b: Trimestralmente ante la Autoridad Portuaria competente.
+        c: Cada seis meses ante la instalación portuaria receptora autorizada para
+          su gestión.
+        d: Cada vez que entren en puerto,
+      question: 'Las embarcaciones deportivas o de recreo autorizadas para un máximo
+        de doce pasajeros, con base en un puerto español, realizarán la notificación
+        reducida de desechos, del Anexo V, del Real Decreto 1381/2002, de 20 de diciembre,
+        con la siguiente periodicidad:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 13
+      options:
+        a: De color amarillo con forma de boya y con marca de tope negro.
+        b: De color amarillo y con forma cilíndrica, de castillete o espeque, con
+          luz, si la tiene, verde.
+        c: De color amarillo, con marca de tope, si tiene, un aspa amarilla en forma
+          de X.
+        d: De color amarillo, con forma de boya, y con marca de tope, si la tiene,
+          en forma de esfera roja.
+      question: 'La marca para indicar los límites de un área de fondeo se describe
+        como sigue:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 14
+      options:
+        a: Franjas verticales rojas y blancas.
+        b: Franjas horizontales rojas y blancas.
+        c: Franjas verticales rojas y negras.
+        d: Franjas horizontales rojas y negras.
+      question: 'Las marcas de aguas navegables están constituidas por:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 15
+      options:
+        a: 'Canal principal a babor: Rojo con una banda ancha horizontal amarilla
+          y con forma cilíndrica, de castillete o espeque.'
+        b: 'Canal principal a estribor: Verde con una banda ancha horizontal roja
+          y con forma cilíndrica, de castillete o espeque.'
+        c: 'Canal principal a estribor: Rojo con una banda ancha horizontal verde
+          y con forma cilíndrica, de castillete o espeque.'
+        d: 'Canal principal a babor: Verde con una banda ancha horizontal amarilla
+          y con forma cónica de castillete o espeque.'
+      question: 'En el punto de bifurcación de un canal, siguiendo el sentido convencional
+        del balizamiento, se puede indicar el canal principal mediante una marca lateral
+        modificada de la siguiente manera:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 16
+      options:
+        a: Una marca cardinal recibe el nombre del cuadrante en el que está colocada.
+        b: El color de la luz de una marca cardinal, si tiene, siempre es blanco.
+        c: El nombre de una marca cardinal indica que se ha de pasar por el cuadrante
+          correspondiente a ese nombre.
+        d: Las marcas cardinales y su uso son distintas para la Región A y la Región
+          B.
+      question: ¿Cuál de las siguientes afirmaciones sobre las marcas cardinales es
+        FALSA?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 17
+      options:
+        a: Rojo y negro.
+        b: Rojo y blanco.
+        c: Amarillo y negro.
+        d: Amarillo.
+      question: 'Los colores de las marcas de peligro son:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 18
+      options:
+        a: 15a 20 segundos.
+        b: 10a 12 segundos.
+        c: 4 a 6 segundos.
+        d: No existen las pitadas largas, solo hay de un tipo.
+      question: 'Una pitada larga es un sonido de una duración aproximada de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 19
+      options:
+        a: Con cinco pitadas cortas y rápidas.
+        b: Con una pitada larga, una corta, una larga y una corta, en este orden,
+          2) Con dos pitadas largas seguidas de dos cortas.
+        d: Con dos pitadas largas seguidas de una corta.
+      question: Si en un canal angosto un buque va a ser alcanzado por otro, ¿cómo
+        indicará que abriga dudas sobre la maniobra?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 20
+      options:
+        a: Emitir alguna señal acústica eficaz a intervalos que no excedan de 2 minutos.
+        b: Emitir dos pitadas largas, para señalar su posición, a intervalos que no
+          superen los 2 minutos. 0) Emitir tres pitadas consecutivas, una larga, una
+          corta y una larga, para señalar su posición, a intervalos de 1 minuto.
+        d: Dar un repique de campana de unos 3 segundos, a intervalos que no excedan
+          los 2 minutos.
+      question: 'Un buque de 18 metros de eslora que esté fondeado, en las proximidades
+        o dentro de una zona de visibilidad reducida, tendrá la obligación de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 21
+      options:
+        a: Navego con capacidad de maniobra restringida.
+        b: Caigo a babor,
+        c: Estoy dando atrás.
+        d: Caigo a estribor.
+      question: 'Cuando un buque de propulsión mecánica en navegación emite tres pitadas
+        cortas, significa:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 22
+      options:
+        a: Un buque solo tendrá obligación de navegar a la velocidad de seguridad
+          cuando la densidad del tráfico y el estado de visibilidad así lo aconsejen.
+        b: La velocidad de seguridad de una embarcación de menos de 20 metros siempre
+          es 4 nudos.
+        c: La velocidad de seguridad es una característica constructiva de la embarcación
+          que permanece inalterable a lo largo del tiempo.
+        d: La velocidad de seguridad de una embarcación depende de varios factores,
+          por lo que varía en cada momento.
+      question: ¿Cuál de las siguientes afirmaciones es correcta?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 23
+      options:
+        a: En cualquier caso, deberán maniobrar los dos buques.
+        b: Le corresponde maniobrar al buque mercante.
+        c: Le corresponde maniobrar al buque de vela.
+        d: Le corresponde al velero caer a estribor y al mercante a babor.
+      question: 'Navegando en un buque de vela se observa un buque mercante por el
+        costado de estribor con rumbo de colisión:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 24
+      options:
+        a: Exhibirán las luces y marcas prescritas para los buques de su misma eslora.
+        b: Exhibirán las luces y marcas prescritas para los buques de pesca.
+        c: Acompañarán las luces prescritas para los buques de pesca de una luz roja
+          todo horizonte.
+        d: Sólo deberán exhibir dos luces blancas todo horizonte en línea vertical.
+      question: 'Cuando los buques de pesca NO estén dedicados a la pesca:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 25
+      options:
+        a: Una marca cónica con el vértice hacia arriba.
+        b: Una marca consistente en dos conos unidos por sus vértices en línea vertical,
+          uno sobre el otro.
+        c: Una marca cónica con el vértice hacia abajo.
+        d: Una marca bicónica.
+      question: 'Un buque que navegue a vela, cuando sea también propulsado mecánicamente,
+        deberá exhibir a proa:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 26
+      options:
+        a: Una luz roja que produce centelleos con una frecuencia superior a 20 e
+          inferior a 60 centelleos por minuto.
+        b: Una luz que cambia de color en cada centelleo.
+        c: Una luz amarilla que produce centelleos con una frecuencia superior a 20
+          e inferior a 60 centelleos por minuto.
+        d: Una luz que produce centelleos con una frecuencia no inferior a 120 centelleos
+          por minuto.
+      question: 'La luz centelleante es:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 27
+      options:
+        a: Canal 60.
+        b: Canal 50.
+        c: Canal 70.
+        d: Canal 90.
+      question: Según el Anexo IV del RIPA, ¿en qué canal de ondas métricas se debe
+        transmitir una alerta de socorro mediante llamada selectiva digital?
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: c
+      id: 28
+      options:
+        a: Codaste, través, esprín y codera.
+        b: Codera, largo, esprín y través.
+        c: Codaste, esprín, largo y codera.
+        d: Codaste, través, esprín y boza.
+      question: 'Los cabos de amarre de un barco se definen como:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: c
+      id: 29
+      options:
+        a: Queremos indicar que no hay riesgo de que la embarcación sea empujada hacia
+          la costa.
+        b: Vamos a adelantar a otra embarcación por la banda de sotavento.
+        c: Estamos saliendo del puerto por sotavento.
+        d: Hemos largado los cabos de la banda de sotavento.
+      question: 'Utilizamos la expresión "libre a sotavento" cuando:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 30
+      options:
+        a: Localizar la vía de agua y hacer una llamada selectiva digital de urgencia,
+        b: Localizar la vía de agua y ponerse el chaleco.
+        c: Localizar la vía de agua, taponarla y achicar.
+        d: Ordenar el abandono del buque.
+      question: ¿Qué medidas principales deben realizarse sin demora ante una vía
+        de agua?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 31
+      options:
+        a: Clase D.
+        b: Clase C.
+        c: Clase A.
+        d: Clase F.
+      question: ¿Con qué tipo de fuegos podemos usar el agua como agente extintor?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 32
+      options:
+        a: Se le proporcionará reposo absoluto, manteniéndolo en observación y realizaremos
+          las consultas radiomédicas necesarias.
+        b: Le inmovilizamos la zona afectada con una venda de compresión fuerte.
+        c: Le daremos agua fría para que se la beba y paracetamol para el dolor, luego
+          llamaremos al centro radiomédico.
+        d: Le acompañaremos a un camarote y esperamos a que se reponga del golpe.
+      question: ¿Qué debemos hacer si un tripulante sufre una fuerte contusión en
+        el abdomen?
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 33
+      options:
+        a: No se utiliza para medir temperaturas negativas, siendo el punto de fusión
+          del hielo el 0 absoluto según la teoría molecular.
+        b: Se utiliza para medir temperaturas positivas y negativas, y toma como temperatura
+          de referencia el punto de fusión del hielo y el de ebullición del agua.
+        c: Se utiliza para medir sólo la temperatura entre el punto de fusión del
+          hielo y el de ebullición del agua.
+        d: Toma como temperatura de referencia los puntos de fusión y ebullición de
+          una mezcla de amoniaco y agua en proporción 10/90.
+      question: ¿Cuál de las siguientes afirmaciones es la correcta cuando nos referimos
+        a la escala centígrada?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 34
+      options:
+        a: Cuando el viento, originado por diferencia de temperaturas y por lo tanto
+          de presiones, va del mar a la tierra durante el día.
+        b: Cuando el viento, originado por diferencia de temperaturas y por lo tanto
+          de presiones, va de la tierra al mar durante la noche.
+        c: Cuando debido a la falta de diferencia entre la temperatura de la tierra
+          y la del mar, el viento va paralelo a la línea de costa durante cualquier
+          momento del día.
+        d: Cuando el viento, originado por diferencia de temperaturas y por lo tanto
+          de presiones, va del mar a la tierra durante la noche.
+      question: 'El virazón es:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 35
+      options:
+        a: La presión atmosférica es el peso o fuerza ejercido por la atmósfera por
+          unidad de superficie,
+        b: El valor de la presión atmosférica normal a nivel del mar es de 1013,2
+          mb.
+        c: Un barómetro aneroide basa su funcionamiento en el experimento de Torricelli
+          que se basa en el movimiento del mercurio dentro de un tubo de vidrio.
+        d: A bordo de las embarcaciones, el instrumento usado habitualmente para medir
+          la presión atmosférica es el barómetro aneroide.
+      question: ¿Cuál de las siguientes opciones es FALSA?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 36
+      options:
+        a: El viento que se percibe en un momento dado cuando la embarcación está
+          parada.
+        b: La suma vectorial del viento relativo y el viento generado por el avance
+          de la embarcación.
+        c: El viento generado por el avance de la embarcación.
+        d: El viento que marca la escala Douglas.
+      question: ¿Qué es el viento real?
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 37
+      options:
+        a: No existe tal relación.
+        b: La corrección total.
+        c: El rumbo.
+        d: La variación anual.
+      question: ¿Qué se entiende por la suma algebraica de la declinación magnética
+        (+- dm) más el desvío (+- D)?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 38
+      options:
+        a: 3º30' W.
+        b: 4º00' W.
+        c: 3º30' E.
+        d: 4º00' E.
+      question: Hallar la declinación magnética del año 2015 con una dm (2010) = 3º45'W
+        y un decremento anuo 3' w.
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 39
+      options:
+        a: El Trópico de Cáncer está al sur del Ecuador.
+        b: Son círculos menores paralelos al Ecuador.
+        c: El Trópico de Cáncer está al norte del Ecuador.
+        d: Sobre éstos y a partir del meridiano de Greenwich se mide la longitud.
+      question: ¿Cuál de las siguientes afirmaciones NO es cierta en relación con
+        los paralelos?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 40
+      options:
+        a: 'Con las siglas: ZF.'
+        b: Con un ancla de un solo brazo.
+        c: Con un ancla completa.
+        d: Con un barco, una cadena y un ancla.
+      question: ¿Cómo aparece representada, en general, una zona de fondeo en una
+        carta náutica?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 41
+      options:
+        a: Altura de marea.
+        b: Amplitud de marea.
+        c: Media de marea.
+        d: Cero Hidrográfico.
+      question: ¿Qué se define como la diferencia expresada en metros entre la altura
+        de la marea en la bajamar más próxima y la altura de marea en la pleamar más
+        próxima?
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 42
+      options:
+        a: l=36º01,8'N L=005º 14,5'W.
+        b: l=36º00,6'N L=005º 14,2'W.
+        c: l=35º58,9'N L=005º 23,0'W.
+        d: l=36º00,0'N L=005º 23,3'W.
+      question: Calcular la situación verdadera de una embarcación que se encuentra
+        situada en la zona de precaución del sistema de organización del tráfico del
+        Estrecho de Gibraltar, a 8 millas del faro de Punta Almina y a 7 millas del
+        faro de Punta Europa.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 43
+      options:
+        a: Ra= 091º.
+        b: Ra= 092º.
+        c: Ra= 095º.
+        d: Ra= 093,5º.
+      question: Situada una embarcación en la punta del espigón exterior del puerto
+        de Tarifa, se da rumbo para pasar a 7,5 millas al 35/verdadero del faro de
+        Punta Almina. Calcular el rumbo de aguja (Ra) si el desvío de aguja para ese
+        rumbo es de 2,5º (-) y la declinación magnética la obtenida en la carta náutica
+        de enseñanza del Estrecho de Gibraltar para el año en curso.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 44
+      options:
+        a: 8,41 metros.
+        b: 8,47 metros.
+        c: 8,45 metros.
+        d: 8,57 metros.
+      question: Hallar la sonda en el momento de la primera bajamar el día 08 de agosto
+        de 2018 en Algeciras con una presión atmosférica de 1019 mb y una sonda en
+        la carta de 8,23 metros.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 45
+      options:
+        a: 8 (+).
+        b: 6 (-).
+        c: 6 (+).
+        d: 8 (-).
+      question: Hallándose una embarcación en la oposición del faro de Punta de Gracia
+        y el faro de Cabo Espartel, hallar la corrección total si la demora de aguja
+        al faro de Cabo Espartel es 205º.
+exam_info:
+  call: octubre
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 04
+  test_code: '04'
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2018
