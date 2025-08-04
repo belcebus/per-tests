@@ -461,7 +461,8 @@ categories:
       id: 37
       options:
         a: 310º
-        b: 230º e) 180º
+        b: 230º
+        c: 180º
         d: 130º
       question: 'La conversión del rumbo S50W a rumbo circular es:'
     - category: 10
