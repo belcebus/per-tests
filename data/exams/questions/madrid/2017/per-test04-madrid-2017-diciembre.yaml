@@ -4,164 +4,164 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 1
       options:
-        a: "De forma general una embarcación adrizada tendrá una escora nula."
-        b: "De forma general una embarcación estará adrizada si el calado de proa\
-          \ es igual al calado a popa."
-        c: "El costado de barlovento de una embarcación es aquel por donde viene el\
-          \ viento."
-        d: "De forma general, una embarcación escorada a babor tendrá menor francobordo\
-          \ en ese costado."
+        a: De forma general una embarcación adrizada tendrá una escora nula.
+        b: De forma general una embarcación estará adrizada si el calado de proa es
+          igual al calado a popa.
+        c: El costado de barlovento de una embarcación es aquel por donde viene el
+          viento.
+        d: De forma general, una embarcación escorada a babor tendrá menor francobordo
+          en ese costado.
       question: ¿Cuál de las siguientes afirmaciones NO es correcta?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 2
       options:
-        a: "La regala, a la altura de cubierta, o en la bañera, con objeto de que\
-          \ el agua pueda salir al exterior,"
-        b: "La cubierta, con objeto de proporcionar luz y ventilación."
-        c: "La escotilla principal, con objeto de que el agua de la lluvia y de los\
-          \ rociones pueda salir al exterior,"
-        d: "La obra viva a la altura de la regala, con objeto de que el agua pueda\
-          \ salir al exterior"
+        a: La regala, a la altura de cubierta, o en la bañera, con objeto de que el
+          agua pueda salir al exterior,
+        b: La cubierta, con objeto de proporcionar luz y ventilación.
+        c: La escotilla principal, con objeto de que el agua de la lluvia y de los
+          rociones pueda salir al exterior,
+        d: La obra viva a la altura de la regala, con objeto de que el agua pueda
+          salir al exterior
       question: 'Los imbornales son aberturas u orificios practicados en:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
-        a: "Es la semisuma del francobordo y del calado de la embarcación."
-        b: "Es la distancia vertical desde la cara superior de la cubierta principal\
-          \ hasta la línca de flotación."
-        c: "Es la distancia vertical contada desde la quilla hasta la cubierta corrida\
-          \ más alta."
-        d: "Es la suma del calado en el medio más el asiento."
+        a: Es la semisuma del francobordo y del calado de la embarcación.
+        b: Es la distancia vertical desde la cara superior de la cubierta principal
+          hasta la línca de flotación.
+        c: Es la distancia vertical contada desde la quilla hasta la cubierta corrida
+          más alta.
+        d: Es la suma del calado en el medio más el asiento.
       question: ¿Qué es el puntal?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 4
       options:
-        a: "Agujero por donde la mecha, o el eje del timón, atraviesa el casco."
-        b: "Agujero por donde el eje de la hélice atraviesa el casco."
-        c: "Agujero por donde el ancla atraviesa el casco."
-        d: "Agujero por donde un grifo de fondo atraviesa el casco."
+        a: Agujero por donde la mecha, o el eje del timón, atraviesa el casco.
+        b: Agujero por donde el eje de la hélice atraviesa el casco.
+        c: Agujero por donde el ancla atraviesa el casco.
+        d: Agujero por donde un grifo de fondo atraviesa el casco.
       question: ¿Qué es la limera?
   2:
     name: Elementos de amarre y fondeo
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 5
       options:
-        a: "En el momento del fondeo se recomienda llevar una ligera arrancada atrás\
-          \ con objeto de que, al caer el ancla, la cadena se extienda correctamente\
-          \ por el fondo."
-        b: "De forma general, la longitud de cadena para un fondeo con buen tiempo\
-          \ no será inferior a tres veces la sonda del lugar de fondeo."
-        c: "Si se comprueba que la embarcación garrea, se recomienda virar el ancla\
-          \ y volver a fondear."
-        d: "La aproximación al lugar de fondeo se hará a la velocidad máxima de gobierno,\
-          \ dando la proa al viento."
+        a: En el momento del fondeo se recomienda llevar una ligera arrancada atrás
+          con objeto de que, al caer el ancla, la cadena se extienda correctamente
+          por el fondo.
+        b: De forma general, la longitud de cadena para un fondeo con buen tiempo
+          no será inferior a tres veces la sonda del lugar de fondeo.
+        c: Si se comprueba que la embarcación garrea, se recomienda virar el ancla
+          y volver a fondear.
+        d: La aproximación al lugar de fondeo se hará a la velocidad máxima de gobierno,
+          dando la proa al viento.
       question: ¿Cuál de las siguientes afirmaciones NO es correcta?
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 6
       options:
-        a: "En la maniobra de fondeo hay que elegir el fondeadero y su tenedero en\
-          \ función, entre otros aspectos, de la sonda y naturaleza del fondo."
-        b: "Se dice que un barco que está fondeado garrca, cuando el ancla no ha agarrado\
-          \ bien al fondo, se desliza y el barco se desplaza."
-        c: "Se denomina fondeo a la gira, a la maniobra de fondeo realizada con tres\
-          \ anclas: proa, popa babor y popa estribor."
-        d: "Al cabo que se amarra por un chicote a una boya y por el otro al ancla,\
-          \ con objeto de marcar la ubicación de esta y facilitar su labor de recuperación,\
-          \ se le denomina orinque."
+        a: En la maniobra de fondeo hay que elegir el fondeadero y su tenedero en
+          función, entre otros aspectos, de la sonda y naturaleza del fondo.
+        b: Se dice que un barco que está fondeado garrca, cuando el ancla no ha agarrado
+          bien al fondo, se desliza y el barco se desplaza.
+        c: 'Se denomina fondeo a la gira, a la maniobra de fondeo realizada con tres
+          anclas: proa, popa babor y popa estribor.'
+        d: Al cabo que se amarra por un chicote a una boya y por el otro al ancla,
+          con objeto de marcar la ubicación de esta y facilitar su labor de recuperación,
+          se le denomina orinque.
       question: ¿Cuál de las siguientes afirmaciones NO es correcta?
   3:
     name: Seguridad
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 7
       options:
-        a: "Tratar de presentar la amura a la mar logrando así un movimiento de deriva\
-          \ lenta y controlada."
-        b: "Sacar la embarcación a tierra y dejarla en seco para el mantenimiento\
-          \ de la obra viva."
-        c: "Cerrar o recoger una vela, tirando de los cabos dispuestos a este objeto,"
-        d: "Quedar inutilizado un puerto o fondeadero por arrastre de tierra o arena."
+        a: Tratar de presentar la amura a la mar logrando así un movimiento de deriva
+          lenta y controlada.
+        b: Sacar la embarcación a tierra y dejarla en seco para el mantenimiento de
+          la obra viva.
+        c: Cerrar o recoger una vela, tirando de los cabos dispuestos a este objeto,
+        d: Quedar inutilizado un puerto o fondeadero por arrastre de tierra o arena.
       question: 'Definición de capear:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 8
       options:
-        a: "Radiogoniómetro."
-        b: "Corredera."
-        c: "Reflector radar."
-        d: "Espejo de señales."
+        a: Radiogoniómetro.
+        b: Corredera.
+        c: Reflector radar.
+        d: Espejo de señales.
       question: 'El elemento metálico que tiene como objeto el hacer más visible a
         la embarcación ante el radar de otras naves se denomina:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 9
       options:
-        a: "Estar en cubierta, fuera de su embalaje y listas para su uso en caso de\
-          \ emergencia,"
-        b: "Mantenerse dentro de su embalaje, salvo en las comprobaciones periódicas\
-          \ de funcionamiento."
-        c: "Guardarse en lugar húmedo para evitar su encendido accidental y llevar\
-          \ siempre impresas sus instrucciones de uso,"
-        d: "Guardarse en un recipiente completamente estanco, fácilmente accesible\
-          \ y llevar siempre impresas sus instrucciones de uso."
+        a: Estar en cubierta, fuera de su embalaje y listas para su uso en caso de
+          emergencia,
+        b: Mantenerse dentro de su embalaje, salvo en las comprobaciones periódicas
+          de funcionamiento.
+        c: Guardarse en lugar húmedo para evitar su encendido accidental y llevar
+          siempre impresas sus instrucciones de uso,
+        d: Guardarse en un recipiente completamente estanco, fácilmente accesible
+          y llevar siempre impresas sus instrucciones de uso.
       question: 'Respecto a su estiba y conservación, las bengalas de mano deben:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 10
       options:
-        a: "Nada, podríamos dañar al náufrago."
-        b: "Únicamente un aro salvavidas."
-        c: "Todos los objetos flotantes que encuentre, tales como defensas, chalecos,\
-          \ etc,"
-        d: "Nada, el Convenio MARPOL lo prohibe,"
+        a: Nada, podríamos dañar al náufrago.
+        b: Únicamente un aro salvavidas.
+        c: Todos los objetos flotantes que encuentre, tales como defensas, chalecos,
+          etc,
+        d: Nada, el Convenio MARPOL lo prohibe,
       question: Hombre al agua, ¿qué ayudas lanzaremos al agua?
   4:
     name: Legislación
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 11
       options:
-        a: "No se puede fondear."
-        b: "Se puede fondear, pero no se puede navegar,"
-        c: "Se puede navegar a una velocidad no superior a tres nudos,"
-        d: "No hay limitaciones, siempre que se adopten las precauciones necesarias\
-          \ para evitar riesgo a la seguridad de la vida humana en la mar,"
+        a: No se puede fondear.
+        b: Se puede fondear, pero no se puede navegar,
+        c: Se puede navegar a una velocidad no superior a tres nudos,
+        d: No hay limitaciones, siempre que se adopten las precauciones necesarias
+          para evitar riesgo a la seguridad de la vida humana en la mar,
       question: 'En los tramos de costa que no estén balizados como zona de baño,
         franja que ocupa 200 metros en las playas y 50 metros en el resto de la costa:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 12
       options:
-        a: "Navegarán a una velocidad de seguridad, que según la Regla 6 del RIPA\
-          \ se estima en 3 nudos,"
-        b: "Está prohibido navegar por el interior de los puertos."
-        c: "Evitarán interferir el tráfico normal de los mismos, no debiendo en ningún\
-          \ caso dar ocasión a que los buques que se encuentren navegando se vean\
-          \ obligados a maniobrarles."
-        d: "Solo están obligadas a navegar a velocidades que no formen olas que puedan\
-          \ producir situaciones peligrosas para embarcaciones de pequeño porte."
+        a: Navegarán a una velocidad de seguridad, que según la Regla 6 del RIPA se
+          estima en 3 nudos,
+        b: Está prohibido navegar por el interior de los puertos.
+        c: Evitarán interferir el tráfico normal de los mismos, no debiendo en ningún
+          caso dar ocasión a que los buques que se encuentren navegando se vean obligados
+          a maniobrarles.
+        d: Solo están obligadas a navegar a velocidades que no formen olas que puedan
+          producir situaciones peligrosas para embarcaciones de pequeño porte.
       question: 'Las embarcaciones deportivas en el interior de los puertos y sus
         canales de acceso:'
   5:
@@ -169,180 +169,178 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 13
       options:
-        a: "Negras, con una o más bandas anchas horizontales rojas. Su marca de tope\
-          \ está formada por dos esferas negras."
-        b: "Rojas, con una o más bandas anchas horizontales blancas. Su marca de tope\
-          \ está formada por dos esferas rojas."
-        c: "Negras, con una o más bandas anchas horizontales blancas. Su marca de\
-          \ tope está formada por dos esferas negras."
-        d: "Negras, con una o más bandas anchas horizontales rojas. Su marca de tope\
-          \ está formada por dos esferas rojas."
+        a: Negras, con una o más bandas anchas horizontales rojas. Su marca de tope
+          está formada por dos esferas negras.
+        b: Rojas, con una o más bandas anchas horizontales blancas. Su marca de tope
+          está formada por dos esferas rojas.
+        c: Negras, con una o más bandas anchas horizontales blancas. Su marca de tope
+          está formada por dos esferas negras.
+        d: Negras, con una o más bandas anchas horizontales rojas. Su marca de tope
+          está formada por dos esferas rojas.
       question: 'Podemos distinguir las marcas de peligro aislado de las demás porque
         son:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 14
       options:
-        a: "Un aspa amarilla,"
-        b: "Un aspa blanca y roja."
-        c: "Un aspa negra."
-        d: "Un aspa amarilla y negra."
+        a: Un aspa amarilla,
+        b: Un aspa blanca y roja.
+        c: Un aspa negra.
+        d: Un aspa amarilla y negra.
       question: 'La marca de tope de una marca especial será:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 15
       options:
-        a: "Tienen forma cónica, de castillete o espeque y son de color rojo."
-        b: "Tienen forma cilíndrica, de castillete o espeque y son de color verde."
-        c: "Tienen forma cilíndrica, de castillete o espeque y son de color rojo."
-        d: "Tienen forma cónica, de castillete o espeque y son de color verde."
+        a: Tienen forma cónica, de castillete o espeque y son de color rojo.
+        b: Tienen forma cilíndrica, de castillete o espeque y son de color verde.
+        c: Tienen forma cilíndrica, de castillete o espeque y son de color rojo.
+        d: Tienen forma cónica, de castillete o espeque y son de color verde.
       question: 'Las marcas laterales de babor de la región A:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 16
       options:
-        a: "Dos conos negros superpuestos opuestos por sus bases y una banda amarilla\
-          \ entre dos bandas negras."
-        b: "Dos conos negros superpuestos con los vértices hacia abajo y una banda\
-          \ negra debajo de banda amarilla."
-        c: "Dos conos negros superpuestos opuestos por sus vértices y una banda negra\
-          \ entre dos bandas amarillas,"
-        d: "Dos conos negros superpuestos con los vértices hacia arriba y una banda\
-          \ negra encima de banda amarilla."
+        a: Dos conos negros superpuestos opuestos por sus bases y una banda amarilla
+          entre dos bandas negras.
+        b: Dos conos negros superpuestos con los vértices hacia abajo y una banda
+          negra debajo de banda amarilla.
+        c: Dos conos negros superpuestos opuestos por sus vértices y una banda negra
+          entre dos bandas amarillas,
+        d: Dos conos negros superpuestos con los vértices hacia arriba y una banda
+          negra encima de banda amarilla.
       question: 'La marca cardinal Este se caracteriza por tener:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 17
       options:
-        a: "Una esfera."
-        b: "Un aspa."
-        c: "Dos esferas."
-        d: "Una cruz."
+        a: Una esfera.
+        b: Un aspa.
+        c: Dos esferas.
+        d: Una cruz.
       question: 'La marca de tope de una marca de aguas navegables será:'
   6:
     name: Reglamento (RIPA)
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 18
       options:
-        a: "Le permita ejecutar la maniobra adecuada y eficaz para evitar la varada\
-          \ y pararse a la distancia de la costa que sea apropiada a las circunstancias\
-          \ y condiciones del momento,"
-        b: "Le permita considerar las circunstancias de la situación, evaluar las\
-          \ posibilidades y actuar con prontitud para evitar el choque con los bañistas\
-          \ de una playa."
-        c: "Le permita al patrón parar a una distancia equivalente a cinco veces la\
-          \ eslora de la embarcación."
-        d: "Le permita ejecutar la maniobra adecuada y eficaz para evitar el abordaje\
-          \ y pararse a la distancia que sea apropiada a las circunstancias y condiciones\
-          \ del momento,"
+        a: Le permita ejecutar la maniobra adecuada y eficaz para evitar la varada
+          y pararse a la distancia de la costa que sea apropiada a las circunstancias
+          y condiciones del momento,
+        b: Le permita considerar las circunstancias de la situación, evaluar las posibilidades
+          y actuar con prontitud para evitar el choque con los bañistas de una playa.
+        c: Le permita al patrón parar a una distancia equivalente a cinco veces la
+          eslora de la embarcación.
+        d: Le permita ejecutar la maniobra adecuada y eficaz para evitar el abordaje
+          y pararse a la distancia que sea apropiada a las circunstancias y condiciones
+          del momento,
       question: 'Según la Regla 6 del RIPA, todo buque navegará en todo momento a
         una velocidad de seguridad tal que:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 19
       options:
-        a: "Dos luces verdes todo horizonte en línea vertical, en el lugar más visible,\
-          \ y dos bolas o marcas similares en línea vertical, en el lugar más visible."
-        b: "Tres luces rojas todo horizonte en línea vertical, en el lugar más visible,\
-          \ y tres bolas o marcas similares en línea vertical, en el lugar más visible."
-        c: "Dos luces blancas todo horizonte en línea vertical, en el lugar más visible,\
-          \ y una marca bicónica, en el lugar más visible."
-        d: "Dos luces rojas todo horizonte en línea vertical, en el lugar más visible,\
-          \ y dos bolas o marcas similares en línea vertical, en el lugar más visible."
+        a: Dos luces verdes todo horizonte en línea vertical, en el lugar más visible,
+          y dos bolas o marcas similares en línea vertical, en el lugar más visible.
+        b: Tres luces rojas todo horizonte en línea vertical, en el lugar más visible,
+          y tres bolas o marcas similares en línea vertical, en el lugar más visible.
+        c: Dos luces blancas todo horizonte en línea vertical, en el lugar más visible,
+          y una marca bicónica, en el lugar más visible.
+        d: Dos luces rojas todo horizonte en línea vertical, en el lugar más visible,
+          y dos bolas o marcas similares en línea vertical, en el lugar más visible.
       question: 'La Regla 27 determina que un buque sin gobierno ni arrancada exhibirá:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 20
       options:
-        a: "Una señal emitida con la radiobaliza consistente en la palabra «MAYDA\
-          \ Y»,"
-        b: "Llamaradas a bordo."
-        c: "Una señal consistente en una bandera rectangular que tenga encima o debajo\
-          \ de ella una bola u objeto análogo."
-        d: "Las banderas \"N\" y \"A\" del Código Internacional de Señales."
+        a: Una señal emitida con la radiobaliza consistente en la palabra «MAYDA Y»,
+        b: Llamaradas a bordo.
+        c: Una señal consistente en una bandera rectangular que tenga encima o debajo
+          de ella una bola u objeto análogo.
+        d: Las banderas "N" y "A" del Código Internacional de Señales.
       question: ¿Cúal de estas señales debería utilizar una embarcación propulsada
         a vela en caso de peligro?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 21
       options:
-        a: "i) dos luces todo horizonte en línea vertical, verde la superior y blanca\
-          \ la inferior, o una marca consistente en dos conos unidos por sus vértices\
-          \ en línea vertical, uno sobre el otro; ii) cuando el aparejo largado se\
-          \ extienda más de 50 metros medidos horizontalmente a partir del buque,\
-          \ una luz blanca todo horizonte o un cono con el vértice hacia arriba, en\
-          \ la dirección del aparejo; y 1ii) las luces de costado y una luz de alcance."
-        b: "¡) dos luces todo horizonte en línea vertical, roja la superior y blanca\
-          \ la inferior, o una marca bicónica; ii) cuando el aparejo largado se extienda\
-          \ más de 100 metros medidos horizontalmente a partir del buque, una luz\
-          \ blanca todo horizonte o un cono con el vértice hacia arriba, en la dirección\
-          \ del aparejo; y iii) las luces de costado y una luz de alcance."
-        c: "i) dos luces todo horizonte en linea vertical, verde la superior y blanca\
-          \ la inferior, o una marca consistente en dos conos unidos por sus vértices\
-          \ en línea vertical, uno sobre el otro; ii) cuando el aparejo largado se\
-          \ extienda más de 150 metros medidos horizontalmente a partir del buque,\
-          \ una luz blanca todo horizonte o una bola o marca similar, en la dirección\
-          \ del aparejo; y iii) las luces de costado y una luz de alcance."
-        d: "i) dos luces todo horizonte en línea vertical, roja la superior y blanca\
-          \ la inferior, o una marca consistente en dos conos unidos por sus vértices\
-          \ en línea vertical, uno sobre el otro; ii) cuando el aparejo largado se\
-          \ extienda más de 150 metros medidos horizontalmente a partir del buque.\
-          \ una luz blanca todo horizonte o un cono con el vértice hacia arriba, en\
-          \ la dirección del aparejo: y iii) las luces de costado y una luz de alcance,"
+        a: i) dos luces todo horizonte en línea vertical, verde la superior y blanca
+          la inferior, o una marca consistente en dos conos unidos por sus vértices
+          en línea vertical, uno sobre el otro; ii) cuando el aparejo largado se extienda
+          más de 50 metros medidos horizontalmente a partir del buque, una luz blanca
+          todo horizonte o un cono con el vértice hacia arriba, en la dirección del
+          aparejo; y 1ii) las luces de costado y una luz de alcance.
+        b: ¡) dos luces todo horizonte en línea vertical, roja la superior y blanca
+          la inferior, o una marca bicónica; ii) cuando el aparejo largado se extienda
+          más de 100 metros medidos horizontalmente a partir del buque, una luz blanca
+          todo horizonte o un cono con el vértice hacia arriba, en la dirección del
+          aparejo; y iii) las luces de costado y una luz de alcance.
+        c: i) dos luces todo horizonte en linea vertical, verde la superior y blanca
+          la inferior, o una marca consistente en dos conos unidos por sus vértices
+          en línea vertical, uno sobre el otro; ii) cuando el aparejo largado se extienda
+          más de 150 metros medidos horizontalmente a partir del buque, una luz blanca
+          todo horizonte o una bola o marca similar, en la dirección del aparejo;
+          y iii) las luces de costado y una luz de alcance.
+        d: 'i) dos luces todo horizonte en línea vertical, roja la superior y blanca
+          la inferior, o una marca consistente en dos conos unidos por sus vértices
+          en línea vertical, uno sobre el otro; ii) cuando el aparejo largado se extienda
+          más de 150 metros medidos horizontalmente a partir del buque. una luz blanca
+          todo horizonte o un cono con el vértice hacia arriba, en la dirección del
+          aparejo: y iii) las luces de costado y una luz de alcance,'
       question: 'La Regla 26 determina que un buque dedicado a la pesca, que no sea
         de arrastre y vaya con arrancada, exhibirá:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 22
       options:
-        a: "Luces de situación y señales luminosas o marcas adicionales a las prescritas\
-          \ en el RIPA,"
-        b: "Luces de situación y señales luminosas o marcas que sustituyan completamente\
-          \ a las prescritas en el RIPA."
-        c: "Reglas de rumbo y gobierno distintos a aquellos dispuestos en el RIPA\
-          \ en cualquier condición de visibilidad."
-        d: "Señales de pito adicionales a aquellas dispuestas cn el RIPA."
+        a: Luces de situación y señales luminosas o marcas adicionales a las prescritas
+          en el RIPA,
+        b: Luces de situación y señales luminosas o marcas que sustituyan completamente
+          a las prescritas en el RIPA.
+        c: Reglas de rumbo y gobierno distintos a aquellos dispuestos en el RIPA en
+          cualquier condición de visibilidad.
+        d: Señales de pito adicionales a aquellas dispuestas cn el RIPA.
       question: 'Respecto de los buques dedicados a la pesca en flotilla, el RIPA
         establece que no se impedirá que el Gobierno de cualquier Estado pueda aplicar
         reglas especiales en cuanto a utilizar:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 23
       options:
-        a: "Se aplican solo de día y para cualquier condición de visibilidad."
-        b: "Se aplican solo de noche y para cualquier condición de visibilidad."
-        c: "Se aplican en cualquier condición de visibilidad."
-        d: "Se aplican solo en condiciones de mala visibilidad."
+        a: Se aplican solo de día y para cualquier condición de visibilidad.
+        b: Se aplican solo de noche y para cualquier condición de visibilidad.
+        c: Se aplican en cualquier condición de visibilidad.
+        d: Se aplican solo en condiciones de mala visibilidad.
       question: ¿Cuándo se aplican las reglas del RIPA relativas a la conducta de
         las embarcaciones en cualquier condición de visibilidad?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 24
       options:
-        a: "A intervalos que no excedan de un minuto dos pitadas consecutivas, a saber,\
-          \ una larga seguida por una corta."
-        b: "A intervalos que no excedan de dos minutos dos pitadas consecutivas, a\
-          \ saber, una larga seguida por una corta."
-        c: "A intervalos que no excedan de dos minutos tres pitadas consecutivas,\
-          \ a saber, una larga seguida por dos cortas."
-        d: "A intervalos que no excedan de dos minutos tres pitadas consecutivas,\
-          \ a saber, dos largas seguidas por una corta."
+        a: A intervalos que no excedan de un minuto dos pitadas consecutivas, a saber,
+          una larga seguida por una corta.
+        b: A intervalos que no excedan de dos minutos dos pitadas consecutivas, a
+          saber, una larga seguida por una corta.
+        c: A intervalos que no excedan de dos minutos tres pitadas consecutivas, a
+          saber, una larga seguida por dos cortas.
+        d: A intervalos que no excedan de dos minutos tres pitadas consecutivas, a
+          saber, dos largas seguidas por una corta.
       question: 'La Regla 35 determina que un buque sin gobierno o con su capacidad
         de maniobra restringida, un buque restringido por su calado, un buque de vela,
         un buque dedicado a la pesca y todo buque dedicado a remolcar o a empujar
@@ -350,217 +348,217 @@ categories:
         ya sea de día o de noche, emitirá las siguientes señales:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 25
       options:
-        a: "Se mantendrá apartado de la derrota del otro."
-        b: "Mantendrá su rumbo y velocidad."
-        c: "Se trata de un caso de \"vuelta encontrada\", en el que cada uno de ellos\
-          \ caerá a estribor de Forma que pase por la banda de babor del otro,"
-        d: "No está previsto este caso, por lo que ambos buques ejercerán la máxima\
-          \ precaución."
+        a: Se mantendrá apartado de la derrota del otro.
+        b: Mantendrá su rumbo y velocidad.
+        c: Se trata de un caso de "vuelta encontrada", en el que cada uno de ellos
+          caerá a estribor de Forma que pase por la banda de babor del otro,
+        d: No está previsto este caso, por lo que ambos buques ejercerán la máxima
+          precaución.
       question: 'Cuando dos buques de vela que se encuentren a la vista se aproximen
         uno al otro con riesgo de abordaje, y cada uno de ellos reciba el viento por
         bandas contrarias, el que lo reciba por estribor:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
-        a: "No se le aplica el RIPA porque este Reglamento sólo es aplicable en el\
-          \ mar."
-        b: "No se le aplica el RIPA porque este Reglamento sólo es aplicable a los\
-          \ buques de navegación marítima."
-        c: "Se le aplicará el RIPA si se trata de un buque de navegación mecánica\
-          \ y el lago por donde navega tiene comunicación con el mar,"
-        d: "Se le aplicará el RIPA si el lago por donde navega tiene comunicación\
-          \ con alta mar y es navegable por los buques de navegación marítima."
+        a: No se le aplica el RIPA porque este Reglamento sólo es aplicable en el
+          mar.
+        b: No se le aplica el RIPA porque este Reglamento sólo es aplicable a los
+          buques de navegación marítima.
+        c: Se le aplicará el RIPA si se trata de un buque de navegación mecánica y
+          el lago por donde navega tiene comunicación con el mar,
+        d: Se le aplicará el RIPA si el lago por donde navega tiene comunicación con
+          alta mar y es navegable por los buques de navegación marítima.
       question: 'Un buque de navegación fluvial (no marítima) se encuentra navegando
         por un lago, En general, y de acuerdo con la Regla 1 del RIPA, de dicho buque
         podemos afirmar que:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 27
       options:
-        a: "Con las banderas \"N\" y \"A\" del Código Internacional de Señales,"
-        b: "Con una señal fumígena que produzca una densa humareda de cualquier color,"
-        c: "Una alerta de socorro mediante llamada selectiva digital que se transmita\
-          \ en el canal 70 de ondas métricas."
-        d: "Movimientos rápidos, subiendo y bajando los brazos extendidos lateralmente,"
+        a: Con las banderas "N" y "A" del Código Internacional de Señales,
+        b: Con una señal fumígena que produzca una densa humareda de cualquier color,
+        c: Una alerta de socorro mediante llamada selectiva digital que se transmita
+          en el canal 70 de ondas métricas.
+        d: Movimientos rápidos, subiendo y bajando los brazos extendidos lateralmente,
       question: ¿Cómo indicaremos que estamos en peligro y necesitamos ayuda?
   7:
     name: Maniobra y navegación
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: d
       id: 28
       options:
-        a: "La maniobra de ciaboga con una hélice o con dos hélices gemelas de giro\
-          \ al exterior"
-        b: "La curva de evolución, pasando por las tres fases de la misma en marcha\
-          \ avante,"
-        c: "Maniobras de aproximación, tales como la de Anderson y Boutakow."
-        d: "Amarras que, según la dirección en la que trabajan, pueden ser largos,\
-          \ traveses, esprines o coderas."
+        a: La maniobra de ciaboga con una hélice o con dos hélices gemelas de giro
+          al exterior
+        b: La curva de evolución, pasando por las tres fases de la misma en marcha
+          avante,
+        c: Maniobras de aproximación, tales como la de Anderson y Boutakow.
+        d: Amarras que, según la dirección en la que trabajan, pueden ser largos,
+          traveses, esprines o coderas.
       question: 'Las embarcaciones se amarran a un muelle por medio de:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: d
       id: 29
       options:
-        a: "Acuñar."
-        b: "Filar."
-        c: "Tesar."
-        d: "Adujar."
+        a: Acuñar.
+        b: Filar.
+        c: Tesar.
+        d: Adujar.
       question: 'Recoger por medio de vueltas un cabo o cable, se conoce como:'
   8:
     name: Emergencias en la mar
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 30
       options:
-        a: "El lugar que nos permita alejarnos lo antes posible y nos evite golpearnos,"
-        b: "Barlovento."
-        c: "Sotavento,"
-        d: "El costado de estribor."
+        a: El lugar que nos permita alejarnos lo antes posible y nos evite golpearnos,
+        b: Barlovento.
+        c: Sotavento,
+        d: El costado de estribor.
       question: 'En caso de emergencia, por regla general, abandonaremos la embarcación
         por:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 31
       options:
-        a: "Intentaremos separarnos lo antes posible para evitar daños mayores, comprobando\
-          \ a posteriori con mas calma los posibles daños en la obra viva y vías de\
-          \ agua."
-        b: "No intentaremos separarnos hasta haber comprobado que no hay vías de agua\
-          \ ni daños en la obra viva,"
-        c: "Evitaremos prestar auxilio a la otra embarcación aunque lo necesite ya\
-          \ que la prioridad es separar las embarcaciones."
-        d: "Daremos inmediatamente atrás para separarnos de la otra embarcación,"
+        a: Intentaremos separarnos lo antes posible para evitar daños mayores, comprobando
+          a posteriori con mas calma los posibles daños en la obra viva y vías de
+          agua.
+        b: No intentaremos separarnos hasta haber comprobado que no hay vías de agua
+          ni daños en la obra viva,
+        c: Evitaremos prestar auxilio a la otra embarcación aunque lo necesite ya
+          que la prioridad es separar las embarcaciones.
+        d: Daremos inmediatamente atrás para separarnos de la otra embarcación,
       question: 'Si tras un abordaje los barcos quedan unidos:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 32
       options:
-        a: "Espontaneidad."
-        b: "Combustible,"
-        c: "Comburente."
-        d: "Energía de activación."
+        a: Espontaneidad.
+        b: Combustible,
+        c: Comburente.
+        d: Energía de activación.
       question: 'El tetraedro del fuego NO tiene como factor:'
   9:
     name: Meteorología
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 33
       options:
-        a: "Un anticiclón consiste en un conjunto de isobaras cerradas en la que la\
-          \ presión atmosférica aumenta conforme nos acercamos a su centro."
-        b: "En un anticiclón en el Hemisferio Norte, el aire se mueve en sentido de\
-          \ las agujas del reloj"
-        c: "Una borrasca consiste en un conjunto de isobaras cerradas en las que la\
-          \ presión aumenta conforme nos acercamos a su centro."
-        d: "En una borrasca en el Hemisferio Norte, el aire se mueve en sentido contrario\
-          \ a las agujas del reloj."
+        a: Un anticiclón consiste en un conjunto de isobaras cerradas en la que la
+          presión atmosférica aumenta conforme nos acercamos a su centro.
+        b: En un anticiclón en el Hemisferio Norte, el aire se mueve en sentido de
+          las agujas del reloj
+        c: Una borrasca consiste en un conjunto de isobaras cerradas en las que la
+          presión aumenta conforme nos acercamos a su centro.
+        d: En una borrasca en el Hemisferio Norte, el aire se mueve en sentido contrario
+          a las agujas del reloj.
       question: ¿Cuál de las siguientes afirmaciones NO es correcta?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 34
       options:
-        a: "De Noroeste a Sureste,"
-        b: "De Sureste a Noroeste."
-        c: "De Oeste a Este."
-        d: "De Este a Oeste."
+        a: De Noroeste a Sureste,
+        b: De Sureste a Noroeste.
+        c: De Oeste a Este.
+        d: De Este a Oeste.
       question: En el Hemisferio Norte, ¿cuál es la trayectoria de las borrascas?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 35
       options:
-        a: "Cambia de dirección."
-        b: "Para completamente."
-        c: "Aumenta de intensidad."
-        d: "La embarcación maniobra."
+        a: Cambia de dirección.
+        b: Para completamente.
+        c: Aumenta de intensidad.
+        d: La embarcación maniobra.
       question: 'El viento rola cuando:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 36
       options:
-        a: "Cuando el viento, originado por diferencia de temperaturas y por lo tanto\
-          \ de presiones, va de la tierra al mar durante la noche,"
-        b: "Cuando el viento, originado por diferencia de temperaturas y por lo tanto\
-          \ de presiones, va del mar a la tierra durante el día."
-        c: "Cuando el viento, originado por diferencia de temperaturas y por lo tanto\
-          \ de presiones, va paralelo a la línea de costa durante cualquier momento\
-          \ del día."
-        d: "Cuando el viento, originado por diferencia de temperaturas y por lo tanto\
-          \ de presiones, cambia de dirección continuamente."
+        a: Cuando el viento, originado por diferencia de temperaturas y por lo tanto
+          de presiones, va de la tierra al mar durante la noche,
+        b: Cuando el viento, originado por diferencia de temperaturas y por lo tanto
+          de presiones, va del mar a la tierra durante el día.
+        c: Cuando el viento, originado por diferencia de temperaturas y por lo tanto
+          de presiones, va paralelo a la línea de costa durante cualquier momento
+          del día.
+        d: Cuando el viento, originado por diferencia de temperaturas y por lo tanto
+          de presiones, cambia de dirección continuamente.
       question: 'Virazón es:'
   10:
     name: Teoría de la navegación
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
-        a: "Es un término en desuso que se atribuye a las cartas de navegación costera\
-          \ antiguas."
-        b: "Es la representación a otra escala de un puerto o fondeadero que se encuentra\
-          \ dentro del marco de una carta de navegación costera."
-        c: "Son cartas escaladas entre 1/50.000 y 1/200.000."
-        d: "Son cartas de puertos deportivos, sin tráfico comercial."
+        a: Es un término en desuso que se atribuye a las cartas de navegación costera
+          antiguas.
+        b: Es la representación a otra escala de un puerto o fondeadero que se encuentra
+          dentro del marco de una carta de navegación costera.
+        c: Son cartas escaladas entre 1/50.000 y 1/200.000.
+        d: Son cartas de puertos deportivos, sin tráfico comercial.
       question: En relación a las cartas de navegación costera, ¿qué es un cartucho?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 38
       options:
-        a: "Que el viento va hacia el NE,"
-        b: "Que el viento viene desde el NE,"
-        c: "Que el viento incide 45 abierto por nuestra amura de estribor,"
-        d: "Es un viento que nos entra desde el 225º."
+        a: Que el viento va hacia el NE,
+        b: Que el viento viene desde el NE,
+        c: Que el viento incide 45 abierto por nuestra amura de estribor,
+        d: Es un viento que nos entra desde el 225º.
       question: 'Cuando decimos que el viento es NE, quiere decir:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 39
       options:
-        a: "No es posible, es invariable,"
-        b: "Sí, es posible y para ello utilizaremos los datos que nos ofrece la carta\
-          \ náutica que utilicemos y calcularemos la declinación para el año en curso,"
-        c: "Sí, es posible y para ello compraremos una actualización de la"
-        d: "Sí, es posible y para ello consultaremos los datos del Instituto Ilidrográfico\
-          \ Español, con la referencia de la carta en cuestión."
+        a: No es posible, es invariable,
+        b: Sí, es posible y para ello utilizaremos los datos que nos ofrece la carta
+          náutica que utilicemos y calcularemos la declinación para el año en curso,
+        c: Sí, es posible y para ello compraremos una actualización de la
+        d: Sí, es posible y para ello consultaremos los datos del Instituto Ilidrográfico
+          Español, con la referencia de la carta en cuestión.
       question: ¿Es posible actualizar la declinación magnética?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 40
       options:
-        a: "Estilo."
-        b: "Capitel."
-        c: "Estilete."
-        d: "Matraz."
+        a: Estilo.
+        b: Capitel.
+        c: Estilete.
+        d: Matraz.
       question: ¿Cuál de las siguientes elementos es una parte de la aguja náutica?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 41
       options:
-        a: "Arcilla,"
-        b: "Rocoso."
-        c: "Arena."
-        d: "Cascajo,"
+        a: Arcilla,
+        b: Rocoso.
+        c: Arena.
+        d: Cascajo,
       question: ¿Qué significa la abreviatura (Co) que muestra la carta náutica respecto
         al tipo de fondo?
   11:
@@ -568,50 +566,50 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 42
       options:
-        a: "l=36º 04,8'N L=005º 51,9'W."
-        b: "l=36º 04,8'N L=005º 44,7'W."
-        c: "l=35º 03,2'N L=005º 44,7'W."
-        d: "l=36º 03,2'N L=005º 51,8'W."
+        a: l=36º 04,8'N L=005º 51,9'W.
+        b: l=36º 04,8'N L=005º 44,7'W.
+        c: l=35º 03,2'N L=005º 44,7'W.
+        d: l=36º 03,2'N L=005º 51,8'W.
       question: Calcular la situación verdadera de una embarcación que se encuentra
         dentro de la zona prohibida de pesca a 3,5 millas del faro de Punta de Gracia
         y en la demora verdadera 084º del faro de Punta Paloma,
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 43
       options:
-        a: "Ct= 0º."
-        b: "Ct= 1º (+)."
-        c: "Ct= 1º (-)."
-        d: "Ct= 2º (+)."
+        a: Ct= 0º.
+        b: Ct= 1º (+).
+        c: Ct= 1º (-).
+        d: Ct= 2º (+).
       question: Una embarcación que se sitúa en la enfilación del faro de Cabo Roche
         y el faro de Cabo Trafalgar obtiene una demora de aguja de este último faro
         igual a 323º. Calcular la corrección total (Ct) de la aguja náutica,
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 44
       options:
-        a: "l=36º01,3'N L= 005º 57,7'W."
-        b: "l=36º00,1'N L= 005º 55,8'W."
-        c: "l=35º58,8'N L= 005º 53,8'W."
-        d: "l=36º01,3'N L= 005º 55,8'W."
+        a: l=36º01,3'N L= 005º 57,7'W.
+        b: l=36º00,1'N L= 005º 55,8'W.
+        c: l=35º58,8'N L= 005º 53,8'W.
+        d: l=36º01,3'N L= 005º 55,8'W.
       question: Situada una embarcación al 350º verdadero y a 5 millas del faro de
         Punta Malabata, se emprende a las 16 horas 18 minutos navegación con rumbo
         verdadero 307º con una velocidad de 12 nudos. Calcular la situación de estima
         a las 17 horas 8 minutos.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 45
       options:
-        a: "Ra= 158º."
-        b: "Ra= 156º."
-        c: "Ra= 187º."
-        d: "Ra= 162º."
+        a: Ra= 158º.
+        b: Ra= 156º.
+        c: Ra= 187º.
+        d: Ra= 162º.
       question: Para una embarcación que se sitúa en la marca especial al Este de
         la línea de la Concepción, calcular el rumbo de aguja (Ra) para pasar a 4,2
         millas del faro del Punta Almina, teniendo como desvío de aguja para ese rumbo

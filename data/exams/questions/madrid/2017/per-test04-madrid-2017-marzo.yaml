@@ -1,0 +1,603 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 1
+      options:
+        a: El molinete es una maquinilla eléctrica o hidráulica que invierte el giro
+          del timón.
+        b: El ancla de arado se caracteriza por dos amplias uñas planas y disponer
+          de un cepo a la altura de la cruz.
+        c: El rezón es un ancla sin cepo con cuatro brazos terminados en uñas.
+        d: La maniobra de virar consiste en arriar, soltar cadena.
+      question: ¿Cuál de las siguientes afirmaciones es correcta?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 2
+      options:
+        a: La distancia vertical, medida en el costado de la embarcación, desde la
+          cara superior de la cubierta principal hasta la línea de la flotación correspondiente
+          al desplazamiento máximo
+        b: La distancia vertical, medida en el costado de la embarcación, desde la
+          cara superior de la regala hasta la intersección del casco con la quilla.
+        c: La distancia vertical, medida en el costado de la embarcación, desde la
+          cara inferior de la cubierta principal hasta la intersección del casco con
+          la quilla.
+        d: La distancia vertical, medida en el costado de la embarcación, desde la
+          cara inferior de la regala hasta la línea de la flotación correspondiente
+          al desplazamiento máximo.
+      question: 'El francobordo de una embarcación es:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 3
+      options:
+        a: Escorar la embarcación.
+        b: Vaciar los tanques de retención de aguas sucias generadas durante la navegación.
+        c: Expulsar los liquidos acumulados en el interior del barco, al objeto de
+          dejar secas las sentinas.
+        d: Refrigerar el motor.
+      question: ¿Cuál es la finalidad de las bombas de achique?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 4
+      options:
+        a: Una embarcación está adrizada cuando el calado a proa es mayor que el calado
+          a popa.
+        b: Cuando un barco tiene asiento se dice que está escorado,
+        c: Un barco tiene asiento cuando el calado a proa y a popa es el mismo.
+        d: Un barco está adrizado cuando no tiene escora a ninguna banda.
+      question: ¿Cuál de las siguientes afirmaciones es correcta?
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 5
+      options:
+        a: El barco, y como radio la cadena.
+        b: El ancla, y como radio la eslora del barco.
+        c: El ancla, y como radio la suma de la longitud de la cadena y la eslora
+          del barco.
+        d: El barco, y como radio el ancla.
+      question: 'El círculo de borneo comprende como centro:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 6
+      options:
+        a: Bita, gaza y firme.
+        b: Chicote, seno y firme.
+        c: Seno, bita y chicote,
+        d: Gaza, bita y chicote.
+      question: 'Indique las partes de un cabo:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 7
+      options:
+        a: Tras una gran escora producida por un golpe de mar, la embarcación recupera
+          su situación adrizada inicial lentamente (embarcación blanda).
+        b: Tras una gran escora producida por un golpe de mar, la embarcación recupera
+          su situación adrizada inicial rápidamente (embarcación dura).
+        c: Tras una gran escora producida por un golpe de mar, la embarcación recupera
+          su situación adrizada inicial rápidamente (embarcación blanda).
+        d: Tras una gran escora producida por un golpe de mar, la embarcación recupera
+          su situación adrizada inicial lentamente (embarcación dura).
+      question: 'Si el par adrizante transversal de la embarcación es muy grande:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 8
+      options:
+        a: Deben encenderse en un espacio abierto, libre de obstáculos y situándonos
+          a proa.
+        b: Deben encenderse en un espacio abierto, libre de obstáculos y situándolas
+          a nuestro barlovento.
+        c: Deben encenderse en un espacio abierto, libre de obstáculos y situándolas
+          a nuestro sotavento,
+        d: Únicamente deben encenderse si hemos caído al agua.
+      question: 'Con respecto al uso de las bengalas de mano debe tenerse en cuenta
+        que:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 9
+      options:
+        a: Cada dos años.
+        b: Anualmente.
+        c: Cada tres años.
+        d: Cada seis meses.
+      question: 'La revisión de las balsas salvavidas se realizará según la Orden
+        FOM/1 144/2003, como mínimo:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 10
+      options:
+        a: Evitar que la hélice le alcance. Para ello meteremos el timón a la misma
+          banda por la que cayó. si vamos avante.
+        b: Evitar que la hélice le alcance. Para ello meteremos el timón a la misma
+          banda por la que cayó, si vamos atrás, o a la banda contraria, si vamos
+          avante.
+        c: Aumentar la velocidad de la embarcación con el timón a la vía para alejarnos
+          lo más rápidamente y no golpearle.
+        d: Evitar que la hélice le alcance. Para ello dejaremos el timón a la vía
+          y daremos atrás.
+      question: 'Entre las medidas a tomar ante la caída de un hombre al agua está:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 11
+      options:
+        a: Los sujetos responsables solidariamente entre ellos,
+        b: Sólo el patrón que hubiera ocasionado la contaminación.
+        c: El propietario de la embarcación y subsidiariamente el patrón, si fuera
+          distinto de aquél.
+        d: La Administración Marítima es la única obligada a ejecutar las operaciones
+          que pudieran resultar necesarias para la preservación del medio ambiente,
+      question: 'De acuerdo con el artículo 310.2 d) del Texto Refundido de la Ley
+        de Puertos del Estado y de la Marina Mercante, en las infracciones por contaminación
+        del medio marino, quedarán obligados a reparar el daño causado:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: d
+      id: 12
+      options:
+        a: Trimestralmente.
+        b: Semestralmente.
+        c: Cada vez que entren en puerto.
+        d: Anualmente.
+      question: 'Las embarcaciones deportivas o de recreo autorizadas para un máximo
+        de doce pasajeros, con base en un puerto español, realizarán la notificación
+        reducida de desechos, del Anexo V del Real Decreto 1381/2002, de 20 de diciembre,
+        con la siguiente periodicidad:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 13
+      options:
+        a: Verdes con una banda ancha horizontal roja.
+        b: Amarillas.
+        c: Rojas con franjas verticales rojas y blancas,
+        d: Negras con una o varias bandas horizontales rojas.
+      question: 'Las marcas que indican zonas de ejercicios militares son:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 14
+      options:
+        a: Únicamente cuando el peligro emerja.
+        b: Siempre a una distancia del peligro proporcional al riesgo del mismo.
+        c: Sobre o próxima al peligro.
+        d: Siempre al norte del peligro.
+      question: 'La ubicación de las marcas de peligro aislado es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 15
+      options:
+        a: Preferiblemente de castillete con una marca de tope esférica.
+        b: Preferiblemente esférica con una marca de tope esférica.
+        c: Esférica, también de castillete o espeque con una marca de tope esférica.
+        d: La forma no es significativa.
+      question: ¿Qué forma pueden tener las marcas de aguas navegables?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 16
+      options:
+        a: Siempre una esfera roja y blanca.
+        b: Si tiene, una esfera roja.
+        c: Dos esferas rojas.
+        d: Si tiene, dos esferas rojas.
+      question: ¿Cómo es la marca de tope de las marcas de aguas navegables?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 17
+      options:
+        a: Es una marca colocada o fondeada sobre un peligro a cuyo alrededor las
+          aguas son navegables.
+        b: Es una marca colocada o fondeada sobre un peligro a cuyo alrededor las
+          aguas son poco profundas para la navegación.
+        c: Indican por dónde están las aguas navegables.
+        d: Indican una zona o configuración especial, mencionada en los documentos
+          náuticos apropiados.
+      question: ¿Cuál de las siguientes opciones define a la marca de peligro aislado?
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 18
+      options:
+        a: Una luz blanca todo horizonte y luces de costado.
+        b: Una linterna eléctrica o un farol encendido que muestre una luz blanca,
+          que deberán tener a mano para su uso inmediato, debiendo dicha luz ser exhibida
+          con tiempo suficiente para evitar el abordaje.
+        c: Una luz blanca todo horizonte y, si es posible, exhibirán también luces
+          de costado
+        d: Luces de costado y, si es posible, una luz blanca todo horizonte.
+      question: 'De acuerdo con la regla 23 del RIPA, los buques de propulsión mecánica
+        de eslora inferior a 7 metros y cuya velocidad máxima no sea superior a 7
+        nudos, podrán exhibir, en lugar de las luces correspondientes a los buques
+        de propulsión mecánica en navegación:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 19
+      options:
+        a: Se observa la presencia de otro buque a proa del través de estribor.
+        b: Se observa la presencia de otro buque a proa del través de babor,
+        c: La demora de un buque que se aproxima no varía en forma apreciable.
+        d: El otro buque pasa a menos de tres esloras de distancia.
+      question: 'A tenor de la regla 7 del RIPA, se considerará que existe riesgo
+        de abordaje si:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 20
+      options:
+        a: No harán nada ya que los buques mercantes tienen radares y los detectarán
+          con antelación.
+        b: Emitirán una pitada larga y estarán atentos por si desde el otro lado se
+          emiten también señales
+        c: Emitirán señales con el pito, sin un formato específico.
+        d: Llamarán por el canal 16 de VHF preguntando si hay tráfico de salida.
+      question: 'Conforme a la regla 34 del RIPA, los buques que se aproximen a un
+        recodo o zona de un paso O canal en donde, por estar obstruida la visión,
+        no puedan ver a otros buques:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 21
+      options:
+        a: Cuando opere en la condición sin desplazamiento, exhibirá además una luz
+          amarilla de centeileos todo horizonte.
+        b: Cuando opere en la condición sin desplazamiento, exhibirá además una luz
+          roja centelleante todo horizonte de gran intensidad.
+        c: Únicamente cuando despegue, aterrice o vuele cerca de la superficic, exhibirá
+          además una luz anaranjada de centelleos todo horizonte.
+        d: Cuando opere en la condición con desplazamiento, exhibirá además las luces
+          correspondientes a los buques que tengan su capacidad de maniobra restringida.
+      question: 'Conforme a la regla 23 del RIPA, un aerodeslizador exhibirá las luces
+        correspondientes a los buques de propulsión mecánica en navegación y:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 22
+      options:
+        a: Dos luces todo horizonte en línea vertical, roja la superior y blanca la
+          inferior.
+        b: Dos luces todo horizonte en línea vertical, blanca la superior y roja la
+          inferior.
+        c: Dos luces rojas todo horizonte en línea vertical.
+        d: Tres luces rojas todo horizonte en línea vertical.
+      question: Conforme a la regla 27 del RIPA, ¿cuál de los siguientes conjuntos
+        de luces debe exhibir en el lugar más visible un buque sin gobierno?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 23
+      options:
+        a: En cualquier caso porque tiene preferencia de paso.
+        b: Salvo que se encuentre tan próximo al otro que no pueda evitarse el abordaje
+          por la sola maniobra del buque que cede el paso, en cuyo caso ejecutará
+          la maniobra que mejor pueda ayudar a evitar el abordaje.
+        c: Dependerá de las obligaciones existentes entre las distintas categorías
+          de buques.
+        d: Si existe riesgo evidente de abordaje sólo podrá cambiar de rumbo a babor
+          o estribor, según el criterio del piloto.
+      question: 'A tenor de la regla 17 del RIPA, cuando uno de los dos buques deba
+        mantenerse apartado de la derrota del otro, este último mantendrá su rumbo
+        y velocidad:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 24
+      options:
+        a: Cuando cada uno de ellos reciba el viento por bandas contrarias, el que
+          lo reciba por estribor se mantendrá apartado de la derrota del otro,
+        b: Cuando ambos reciban el viento por la misma banda, el buque que esté a
+          barlovento se mantendrá apartado de la derrota del que esté a sotavento.
+        c: Si un buque que recibe el viento por estribor avista a otro buque por barlovento,
+          se mantendrá apartado de la derrota del otro.
+        d: Tendrá preferencia el buque con mayor superficie vélica.
+      question: 'Conforme a la regla 12 del RIPA, cuando dos buques de vela se aproximen
+        uno al otro, con riesgo de abordaje, uno de ellos se mantendrá apartado de
+        la derrota del otro en la forma siguiente:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 25
+      options:
+        a: Sólo se permite el uso del silbato al emitir una señal acústica de peligro.
+        b: Un sonido intermitente emitido por cualquier aparato de señales de niebla.
+        c: Un sonido continuo emitido por cualquier aparato de señales de niebla.
+        d: Una señal detonante repetida a intervalos de un segundo.
+      question: 'Cuando un buque esté en peligro y requiera ayuda, podrá emitir la
+        señal de peligro siguiente:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 26
+      options:
+        a: Para realizar el adelantamiento de otro buque.
+        b: En caso de emergencia para evitar un peligro inmediato.
+        c: Para dedicarse a la pesca en una zona de separación.
+        d: Para entrar en una vía de circulación o salir de ella.
+      question: De acuerdo con la regla 10 del RIPA, ¿qué situación NO justifica que
+        los buques entren en una zona de separación ni cruzen una línea de separación?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 27
+      options:
+        a: Una pitada larga a intervalos que no excedan de dos minutos.
+        b: Dos pitadas largas consecutivas separadas por un intervalo de unos dos
+          segundos entre ambas, a intervalos que no excedan de dos minutos.
+        c: A intervalos que no excedan de dos minutos, tres pitadas consecutivas,
+          a saber, una larga seguida por dos cortas.
+        d: No tendrá obligación de emitir las señales mencionadas en la citada regla,
+          pero, si no las hace, emitirá otra señal acústica eficaz a intervalos que
+          no excedan de dos minutos
+      question: En condiciones de visibilidad reducida y siendo el buque de menos
+        de 12 m de eslora, según la reglav35 del RIPA, ¿qué señales acústicas deberá
+        emitir?
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 28
+      options:
+        a: Abatimiento y escora.
+        b: Deriva y abatimiento.
+        c: Deriva y cabeceo.
+        d: Asiento y deriva,
+      question: 'El efecto de la corriente y el viento en la maniobra se denomina,
+        sucesivamente:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 29
+      options:
+        a: El esprín de proa.
+        b: El esprín de popa.
+        c: El largo de popa.
+        d: El largo de proa.
+      question: 'Estando la embarcación atracada al muelle por el costado de babor
+        y con una corriente que le entra por proa. Desatracaremos de proa dejando
+        firme:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 30
+      options:
+        a: Combustible, comburente, energía de activación y oxigeno.
+        b: Combustible, comburente, energía de activación y calor.
+        c: Combustible, comburente, reacción en cadena y oxígeno.
+        d: Combustible, comburente, energía de activación y reacción en cadena.
+      question: 'Según la teoria del tetraedro del fuego, los cuatro elementos necesarios
+        para que tenga continuidad la combustión son:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 31
+      options:
+        a: La bocina.
+        b: La pala del timón.
+        c: Los grifos de fondo.
+        d: La limera del timón.
+      question: 'Puede descartarse como uno de los puntos de mayor riesgo donde puede
+        tener lugar una vía de agua:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 32
+      options:
+        a: La palma de la mano representa el | por ciento de la superficie corporal.
+        b: La palma de la mano representa cl 2 por ciento de la superficie corporal.
+        c: La palma de la mano representa el 3 por ciento de la superficie corporal.
+        d: La palma de la mano representa el 4 por ciento de la superficie corporal.
+      question: 'Para medir la extensión de una quemadura, se puede considerar que:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 33
+      options:
+        a: Durante el día.
+        b: Durante la primavera en las primeras horas del día.
+        c: Durante la noche.
+        d: Durante el verano en las primeras horas del día.
+      question: 'El terral se produce:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 34
+      options:
+        a: En el sentido contrario a las agujas del reloj, y de la periferia hacia
+          el centro.
+        b: En el sentido contrario a las agujas del reloj, y del centro hacia la periferia.
+        c: En el sentido de las agujas del reloj, y del centro hacia la periferia.
+        d: En el sentido de las agujas del reloj, y de la periferia hacia el centro.
+      question: ¿Cómo circulan los vientos en un anticición en el hemisferio norte?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 35
+      options:
+        a: La escala Douglas. No es necesaria a bordo ya que la información que proporciona
+          no es importante para la navegación a menos de 12 millas naúticas de la
+          costa.
+        b: La escala Douglas. Es necesaria a bordo ya que los anemómetros habituales
+          expresan la velocidad del viento en nudos y los partes meteorológicos suelen
+          expresar la velocidad del viento en fuerza numérica de acuerdo con esta
+          escala.
+        c: La escala Beaufort. No es necesaria a bordo ya que la información que proporciona
+          no es importante para la navegación a menos de 12 millas náuticas de la
+          costa.
+        d: La escala Beaufort. Es necesaria a bordo ya que los anemómetros habituales
+          expresan la velocidad del viento en nudos y los partes meteorológicos suelen
+          expresar la velocidad del viento en fuerza numérica de acuerdo con esta
+          escala.
+      question: ¿Cuál es la escala que mide la fuerza del viento y por qué es necesaria
+        a bordo?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 36
+      options:
+        a: Disminuir la fuerza del viento total o parcialmente.
+        b: Cesar el viento.
+        c: Incremento de la fuerza del viento.
+        d: Variación sucesiva de la dirección del viento.
+      question: 'Refrescar el viento es:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 37
+      options:
+        a: El valor de la declinación magnética se encuentra dentro del cuadrante
+          NW.
+        b: El valor de la declinación magnética se encuentra dentro del cuadrante
+          NE.
+        c: El valor de la declinación magnética se encuentra dentro del cuadrante
+          NS,
+        d: El valor de la declinación magnética es norte.
+      question: 'Si el valor de la declinación magnética es negativo algebraicamente,
+        es que:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 38
+      options:
+        a: Da=Ra + M.
+        b: M= Dv - Ra.
+        c: Rv=M - Dv.
+        d: Dv = Rv.
+      question: 'Señale cuál de las siguientes expresiones es correcta:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 39
+      options:
+        a: Número del registro de la propiedad.
+        b: Caracteristicas de la luz.
+        c: Latitud y longitud en la que se encuentra.
+        d: Altura del soporte.
+      question: ¿Qué tipo de dato NO está reflejado en los libros de faros?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 40
+      options:
+        a: La oposición es una línea de posición creada por la alineación de dos puntos
+          reconocibles en una carta.
+        b: Las enfilaciones no son fiables cuando la distancia a la costa es pequeña.
+        c: Las líneas isobáticas son isolíneas que se trazan siguiendo puntos de la
+          misma profundidad.
+        d: Sólo con la ayuda del radar podremos trazar líneas de posición fiables.
+      question: 'Señale cuál de las siguientes expresiones es correcta:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 41
+      options:
+        a: 280º.
+        b: 100º.
+        c: 260º.
+        d: 290º.
+      question: 'La conversión del rumbo S80E a rumbo circular es:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 42
+      options:
+        a: O51º.
+        b: 050,5º.
+        c: 052º.
+        d: 049º.
+      question: Situados en l=35º 43'N y L=006º 12,1'W, calcular el rumbo de aguja
+        para pasar a 4 millas de Cabo Esparte! si la corrección total es de 3,5º (+).
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 43
+      options:
+        a: Hrb (llegada) = 18 horas 36 minutos / Ra= 174,5º.
+        b: Hrb (llegada) = 18 horas 45 minutos / Ra= 165,5º.
+        c: Hrb (llegada) = 18 horas 36 minutos / Ra= 165,5º.
+        d: Hrb (llegada) = 18 horas 45 minutos / Ra= 174,5º.
+      question: Desde la luz del espigón del puerto de Gibraltar se emprende a las
+        17 horas 18 minutos navegación con destino a la luz verde del puerto de Ceuta
+        con una velocidad de 10 nudos. Calcular la hora de llegada (Hrb) a Ceuta y
+        el rumbo de aguja (Ra) con un desvío de aguja para ese rumbo de +5,5º y declinación
+        magnética la obtenida en la carta náutica de enseñanza del Estrecho de Gibraltar
+        para el año en curso.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 44
+      options:
+        a: l=36º00,9'N L=005º 30,6'W.
+        b: l=36º00,9'N L=005º 23,5'W.
+        c: l=36º00,9'N L=006º 30,6'W.
+        d: l=35º59,4'N L=005º 23,5'W.
+      question: 'Navegando por la zona de navegación costera del dispositivo de separación
+        de tráfico del Estrecho de Gibraltar, se toman desde una embarcación dos distancias
+        radar a los faros de Punta Cires (6,5 millas) y Punta Carnero (5,6 millas).
+        Calcular la situación verdadera:'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 45
+      options:
+        a: 3º NE.
+        b: 3º (-).
+        c: 3º (+).
+        d: 2º (-).
+      question: Hallándose una embarcación en la oposición del faro de Punta Carnero
+        y el faro de Punta Cires, hallar la corrección total si la demora de aguja
+        al faro de Punta Cires es 198.
+exam_info:
+  call: marzo
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 04
+  test_code: '04'
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2017

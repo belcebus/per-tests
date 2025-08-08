@@ -1,0 +1,594 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 1
+      options:
+        a: La pala, la mecha, los guardines y el timón.
+        b: La pala, la cofa, los obenques y la mecha.
+        c: La mecha, la rueda, la bocina y el bao.
+        d: La pala, la mecha, los guardines y el arganeo.
+      question: 'Son partes del aparato de gobierno:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 2
+      options:
+        a: A proa a la derecha.
+        b: A proa a la izquierda.
+        c: Á popa a la derecha.
+        d: A popa a la izquierda.
+      question: 'Si me encuentro a bordo de una embarcación, en la línca de crujía
+        a popa y mirando hacia proa, su amura de estribor estará:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 3
+      options:
+        a: Baos.
+        b: Mamparos.
+        c: Cubiertas.
+        d: Cuadernas.
+      question: 'Las separaciones verticales que compartimentan tranversal o longitudinalmente
+        el interior de la embarcación se denominan:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 4
+      options:
+        a: Dando avante, gira en el sentido contrario al avance de las agujas del
+          reloj.
+        b: En un sistema de hélices gemelas de giro al exterior, está instalada cn
+          la banda de babor.
+        c: En un sistema de hélices gemelas de giro al exterior, tenga un mayor diámetro.
+        d: En un sistema de hélices gemelas de giro al exterior, está instalada en
+          la banda de estribor
+      question: 'Una hélice dextrógira es aquella que:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 5
+      options:
+        a: El material del casco de la embarcación.
+        b: La salinidad del agua.
+        c: La naturaleza del fondo.
+        d: El número de barcos de pesca en las proximidades.
+      question: 'A la hora de elegir un buen tenedero, debemos tener en cuenta:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 6
+      options:
+        a: Muserola.
+        b: Muerto.
+        c: Noray.
+        d: Cornamusa.
+      question: 'La pieza de metal fijada fuertemente en el puerto, utilizada para
+        hacer firmes las amarras, se denomina:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 7
+      options:
+        a: Tras una gran escora producida por un golpe de mar, la embarcación recupera
+          su situación adrizada inicial lentamente (embarcación blanda).
+        b: Tras una gran escora producida por un golpe de mar, la embarcación recupera
+          su situación adrizada inicial rápidamente (embarcación dura).
+        c: Tras una gran escora producida por un golpe de mar, la embarcación recupera
+          su situación adrizada inicial lentamente (embarcación dura).
+        d: Tras una gran escora producida por un golpe de mar, la embarcación recupera
+          su situación adrizada inicial rápidamente (embarcación blanda).
+      question: 'Si el par adrizante transversal de la embarcación es muy pequeño:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 8
+      options:
+        a: Evitar que la hélice le alcance. Para ello meteremos el timón a la misma
+          banda por la que cayó, si vamos avante.
+        b: Evitar que la hélice le alcance. Para ello meteremos el timón a la misma
+          banda por la que cayó, si vamos atrás, o a la banda contraria, si vamos
+          avante.
+        c: Aumentar la velocidad de la embarcación con el timón a la vía para alejarnos
+          lo más rápidamente y no golpearle.
+        d: Evitar que la hélice le alcance. Para ello dejaremos el timón a la vía
+          y daremos atrás.
+      question: 'Entre las medidas a tomar ante la caída de un hombre al agua está:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 9
+      options:
+        a: En extintores de agua y extintores de espuma.
+        b: En extintores de agua, extintores de espuma y extintores de polvo.
+        c: En extintores de espuma y extintores de polvo.
+        d: Atendiendo a la eficacia para la extinción, identificados por un número
+          y una letra.
+      question: 'Los extintores portátiles se clasifican:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 10
+      options:
+        a: Se produce cuando el periodo de encuentro de la ola coincide con el periodo
+          natural de balance del buque. En esta situación es aconsejable mantener
+          el rumbo y la velocidad para que la embarcación se estabilice.
+        b: Se produce cuando el periodo de encuentro de la ola coincide con el periodo
+          natural de cabccco del buque. En esta situación es aconsejable mantener
+          el rumbo y la velocidad para que la embarcación se estabilice.
+        c: Se produce cuando el periodo de encuentro de la ola coincide con el periodo
+          natural de balance del buque. En esta situación es aconsejable cambiar el
+          rumbo y/o la velocidad de la embarcación.
+        d: Se produce cuando el periodo de encuentro de la ola coincide con el periodo
+          natural de cabeceo del buque. En esta situación es aconsejable cambiar el
+          rumbo y/o la velocidad de la embarcación.
+      question: 'El sincronismo longitudinal:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 11
+      options:
+        a: Estará prohibida la realización de cualquier tipo de maniobra distinta
+          de la entrada y salida, excepto en situación de peligro.
+        b: Están permitidas otras maniobras distintas de la entrada y salida, siempre
+          que se adopten las precauciones necesarias para evitar riesgos a la seguridad
+          de la vida humana en la mar,
+        c: No se aplican las reglas contenidas en el Reglamento Internacional para
+          Prevenir los Abordajes (RIPA), especialmente su regla 9.
+        d: Siempre que las circunstancias lo permitan, las embarcaciones de recreo
+          podrán fondear en un canal de acceso.
+      question: 'En los canales de acceso:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: b
+      id: 12
+      options:
+        a: 20 metros.
+        b: 25 metros.
+        c: 30 metros.
+        d: 50 metros.
+      question: 'Cuando la posición esté localizada por una boya que porte la bandera
+        del Código de Señales "ALFA", el resguardo mínimo que otras embarcaciones
+        deben dar a las operaciones de buceo cs:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 13
+      options:
+        a: Amarillo.
+        b: Rojo.
+        c: Blanco.
+        d: Verde.
+      question: 'Cuando las marcas especiales tienen luz, ésta será de color:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 14
+      options:
+        a: Una marca de agua navegable junto con una marca especial.
+        b: Una marca especial.
+        c: Una marca de agua navegable.
+        d: Una marca de agua navegable modificada.
+      question: 'Un punto de relacada puede indicarse con:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 15
+      options:
+        a: La emisión radio de su marca de tope.
+        b: La disposición de sus bandas horizontales amarillas y negras.
+        c: La distancia de la marca a la costa
+        d: La disposición de sus bandas verticales amarillas y negras.
+      question: 'El navegante puede distinguir las marcas cardinales gracias a:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 16
+      options:
+        a: 'Norte: centelleante continuo, muy rápido o rápido.'
+        b: 'Este: centelleante continuo, muy rápido o rápido.'
+        c: 'Sur: nueve centelleos muy rápidos o rápidos seguidos de un periodo de
+          oscuridad.'
+        d: 'Oeste: seis centelleos rápidos seguidos de un periodo de oscuridad.'
+      question: 'Los ritmos empleados en las luces de las marcas cardinales son los
+        siguientes:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 17
+      options:
+        a: Sí.
+        b: Nunca.
+        c: Depende del tamaño de la marca.
+        d: Depende de la distancia a la costa de la marca.
+      question: ¿Pueden complementarse las marcas laterales con medios electrónicos?
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 18
+      options:
+        a: Desde una hora antes de la puesta del so! hasta una hora antes de su salida,
+        b: Desde la puesta del sol hasta su salida.
+        c: Sólo desde una hora después de la puesta del sol hasta una hora antes de
+          su salida.
+        d: Sólo desde el crepúsculo civil vespertino hasta el crepúsculo civil matutino.
+      question: 'Conforme a la regla 20 del RIPA, las reglas relativas a luces deberán
+        cumplirse:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 19
+      options:
+        a: Mantendrá el rumbo y la velocidad.
+        b: Podrá tratar de facilitar la maniobra con una sucesión de pequeños cambios
+          de rumbo y/o velocidad.
+        c: Seguirá estando plenamente obligado a cumplir con lo dispuesto en las reglas
+          de rumbo y gobierno.
+        d: Evitará maniobrar cayendo a estribor.
+      question: 'Según la regla 8 del RIPA, cuando dos buques se aproximen el uno
+        al otro con riesgo de que se produzca un abordaje, el buque cuyo tránsito
+        no deba ser estorbado:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 20
+      options:
+        a: Bandera "B" del Código Internacional.
+        b: Bandera "S" del Código Internacional,
+        c: Bandera "R" del Código Internacional,
+        d: Bandera "A" del Código Internacional.
+      question: 'Cuando, debido a las dimensiones del buque dedicado a operaciones
+        de bueco, resulte imposible exhibir todas las luces y marcas prescritas a
+        los buques dedicados a operaciones de dragado o submarinas, que tengan su
+        capacidad de maniobra restringida, dicho buque exhibirá, de día, una reproducción
+        en material rígido y de altura no inferior a | metro de la:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 21
+      options:
+        a: No, pues en tal caso se incumpliría la regla 20.b del RIPA, que prohíbe
+          exhibir ninguna otra luz más que las previstas en dicho Reglamento, con
+          la excepción de aquéllas que no puedan ser confundidas con las mencionadas
+          en el mismo o que no perjudiquen su visibilidad o carácter distintivo, ni
+          impidan el ejercicio de una vigilancia eficaz.
+        b: Sólo si son necesarias para evitar riesgos a las personas que se hallen
+          en cubierta y sólo durante el tiempo estrictamente necesario para ello.
+        c: Sólo pueden exhibirlas los buques de 100 metros de eslora o más.
+        d: Si.
+      question: Conforme a la regla 30 del RIPA, ¿pueden los buques fondeados exhibir
+        sus luces de trabajo o equivalentes para iluminar sus cubiertas?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 22
+      options:
+        a: Sólo se permite el uso del silbato al emitir una señal acústica de peligro.
+        b: Un sonido intermitente emitido por cualquier aparato de señales de niebla.
+        c: Un sonido continuo producido por cualquier aparato de señales de niebla.
+        d: Una señal detonante repetida a intervalos de un segundo.
+      question: 'Cuando un buque esté en peligro y requiera ayuda, podrá emitir la
+        señal de peligro siguiente:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 23
+      options:
+        a: La que le permita ejecutar la maniobra adecuada y eficaz para evitar el
+          abordaje y pararse a la distancia que sca apropiada a las circunstancias
+          y condiciones del momento.
+        b: La que le permita ejecutar la maniobra adecuada y eficaz para evitar el
+          abordaje y pasar a una distancia mínima de un cable.
+        c: La que se haya determinado en el proyecto de construcción y durante las
+          pruebas de mar.
+        d: La mínima a la que responda el gobierno del buque.
+      question: 'Según la regla 6 del RIPA, por «velocidad de seguridad» se entiende:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 24
+      options:
+        a: Dos luces verdes todo horizonte en línea vertical,
+        b: Dos luces todo horizonte en línea vertical, roja la superior y blanca la
+          inferior,
+        c: Dos luces todo horizonte en línea vertical, blanca la superior y roja la
+          inferior.
+        d: Dos luces todo horizonte en línea vertical, verde la superior y blanca
+          la inferior,
+      question: De los siguientes conjuntos de luces, ¿cuáles identifican a un buque
+        dedicado a la pesca de arrastre?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 25
+      options:
+        a: Entrar o salir de la vía de circulación por uno u otro de sus extremos.
+        b: Navegar en la vía de circulación apropiada, siguiendo la dirección general
+          de la corriente del tráfico indicada para dicha vía.
+        c: Mantener su rumbo fuera de la línea de separación o de la zona de separación
+          del tráfico.
+        d: Realizar un cambio de sentido de la navegación cruzando una zona de separación.
+      question: 'Conforme a la regla 10 del RIPA, con carácter general, los buques
+        que utilicen un dispositivo de separación del tráfico deberán cvitar:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 26
+      options:
+        a: Hacer señales luminosas o acústicas que no puedan confundirse con ninguna
+          de las señales autorizadas en cualquiera otra de las Reglas del RIPA, o
+          dirigir el haz de su proyector en la dirección del peligro.
+        b: Dirigir un haz de luz potente al otro buque, no importa si molestamos a
+          otros buques.
+        c: Disparar una luz estroboscópica o similar para llamar su atención.
+        d: Hacer señales luminosas o acústicas que sean iguales o parecidas a las
+          luces de cruce.
+      question: 'Si queremos llamar la atención de otro buque, podremos:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 27
+      options:
+        a: Para no pasar a menos de media milla de la proa del otro buque.
+        b: Para evitar cortarle la proa.
+        c: De forma moderada para no crear alarma en el otro buque.
+        d: Con anticipación suficiente y de forma decidida para quedar bien franco
+          del otro buque.
+      question: 'Conforme a la regla 16 del RIPA, todo buque que esté obligado a mantenerse
+        apartado de la derrota de otro buque maniobrará:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: d
+      id: 28
+      options:
+        a: Codaste, esprin, largo y codera.
+        b: Codaste, través, esprín y codera,
+        c: Codaste, través, esprin y boza.
+        d: Codera, largo, esprin y través.
+      question: 'Las amarras de un barco se definen como:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: c
+      id: 29
+      options:
+        a: Encapillar.
+        b: Virar.
+        c: Templar.
+        d: Amollar.
+      question: 'A la acción de dar igual tensión a todos los cabos para que trabajen
+        por igual se la conoce como:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 30
+      options:
+        a: Dar atrás y avante hasta librar la embarcación.
+        b: Esperar la pleamar.
+        c: Llenar los tanques para aumentar el calado.
+        d: Trasladar los pesos hacia el lugar de menos fondo para aumentar los calados.
+      question: 'En general, para salir de la embarrancada en fondo rocoso, se recomienda:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 31
+      options:
+        a: Significa que la parte incendiada queda a barlovento, así las llamas irán
+          hacia fuera y no se propagarán.
+        b: Significa reducir el oxigeno en el espacio incendiado.
+        c: Significa avivar el fuego.
+        d: Significa que la parte incendiada queda a sotavento, así las llamas irán
+          hacia fuera y no se propagarán.
+      question: ¿Qué significa socairear el fuego?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 32
+      options:
+        a: Eliminar el combustible.
+        b: Reducir la temperatura del combustible.
+        c: Socairear el fuego.
+        d: Eliminar el comburente.
+      question: 'En el procedimiento de extinción de un incendio, la sofocación consiste
+        en:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 33
+      options:
+        a: Cambiar de dirección.
+        b: Disminuir de intensidad.
+        c: Aumentar de intensidad.
+        d: Cesar.
+      question: 'La expresión "refrescar", relativa al viento, significa:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 34
+      options:
+        a: La Escala contígrada determina que el punto de fusión del agua destilada
+          es -1º y el punto de ebullición 99º.
+        b: La Escala centígrada determina que el punto de fusión del mercurio es -1º
+          y el punto de ebullición 99º.
+        c: La Escala centigrada determina que el punto de fusión del agua destilada
+          es 0º y el punto de ebullición 100º.
+        d: La Escala centígrada determina que el punto de fusión del mercurio es 0º
+          y el punto de ebullición 100º.
+      question: ¿Cuál de las siguientes opciones es verdadera?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 35
+      options:
+        a: El viento que existe en un momento dado, sin tener en cuenta el viento
+          generado por el avance de la embarcación.
+        b: La suma vectorial del viento real y el viento generado por el avance de
+          la embarcación.
+        c: El viento si la mar estuviese en calma.
+        d: El viento que marca la escala Beaufort.
+      question: ¿Qué es el viento aparente?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 36
+      options:
+        a: Llenar las despensas de comida, agua y suficiente combustible.
+        b: Verificar bien las baterías y los números de teléfono de contacto para
+          llamar a Salvamento por si fuese necesario.
+        c: Si se tiene experiencia y vamos acompañados, capear el temporal.
+        d: Simplemente no hacerse a la mar.
+      question: 'Ante un aviso de temporal, si aún no hemos salido de puerto, es aconsejable:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 37
+      options:
+        a: Llegaremos a las 05h 30 min independientemente de la hora oficial.
+        b: Llegaremos a las 05h 30 min de la hora oficial del estado del puerto.
+        c: Llegaremos a las 05h 30 min siempre y cuando la hora oficial no suponga
+          un adelanto de 12 horas.
+        d: Son las 05h 30 min a bordo independientemente de la hora continental.
+      question: 'Cuando decimos que a Hrb = 05h 30min llegaremos a puerto, quiere
+        decir que:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 38
+      options:
+        a: Todos los meridianos quedan representados por lineas rectas paralelas entre
+          sí y con la misma separación entre ellas.
+        b: Todos los paralelos quedan representados por líneas rectas paralelas entre
+          sí y con la misma separación entre ellas.
+        c: Todos los meridianos quedan representados por líneas rectas paralelas entre
+          sí y la separación entre ellos va aumentando en la misma razón que la longitud.
+        d: Todos los paralelos quedan representados por líneas rectas paralelas entre
+          sí y la separación entre ellos va aumentando en la misma razón que la longitud.
+      question: 'En las cartas de proyección mercatoriana:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 39
+      options:
+        a: Cuando el rumbo de la corriente coincida con el rumbo verdadero.
+        b: Cuando el rumbo efectivo y rumbo de corriente difieran en 90º.
+        c: Cuando el rumbo verdadero y rumbo de corriente difieran en 90º.
+        d: Nunca se produce esta circunstancia,
+      question: ¿Cuándo coincide el rumbo efectivo con el rumbo verdadero?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 40
+      options:
+        a: Fija.
+        b: Isofase.
+        c: De ocultaciones.
+        d: De destellos.
+      question: ¿Cómo se denomina a la luz en que la duración total de la luz en un
+        periodo es más larga que la duración total de la oscuridad y en la que los
+        intervalos de oscuridad tienen habitualmente la misma duración?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 41
+      options:
+        a: La oposición es una línea de posición en la cual observamos dos puntos
+          reconocibles en la carta y separados por un ángulo de 180”,
+        b: Cuanto más alejados estén los objetos alineados más fiable será la enfilación.
+        c: Las líneas isobáticas son isolíneas que se trazan siguiendo puntos de la
+          misma presión en mm de he.
+        d: Podemos usar el radar como ayuda a la navegación para trazar lineas de
+          posición más fiables.
+      question: 'Señale cuál de las siguientes afirmaciones NO es correcta:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 42
+      options:
+        a: l=35º53,2'N L=005º 48,8'E.
+        b: l=35º50,7'N L=005º 48,8'W.
+        c: l=35º53,2'N L=005º 45,1'W.
+        d: l=36º53,2'N L=005º 45,2'W.
+      question: Siendo las 14 horas 36 minutos, una embarcación situada a 4,5 millas
+        al Sur verdadero del faro de Cabo Roche navega con velocidad de 12 nudos y
+        rumbo de aguja de 141º. Se pide la situación de estima a las 16 horas 54 minutos,
+        siendo la corrección total = -4º.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 43
+      options:
+        a: l=35º57,5'N L=005º 56,0'W.
+        b: l=35º58,2'N L=005º 58,0'W.
+        c: l=35º58,0'N L=005º 57,0'W.
+        d: l=36º01,2'N L=006º 02,4'W.
+      question: 'Una embarcación toma dos demoras simultáneas: demora de aguja del
+        faro del Cabo de Trafalgar == 348,5º y demora de aguja del faro de Punta Paloma
+        = 067º. Si la corrección total son -2,5º, ¿cuál es nuestra situación verdadera?'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 44
+      options:
+        a: Ra= 100º.
+        b: Ra= 98º.
+        c: Ra= 106º.
+        d: Ra= 104º.
+      question: Desde la punta del espigón exterior del puerto de Tarifa, una embarcación
+        da rumbo para pasar a 2,4 millas al 335 verdadero del faro de Punta Almina.
+        Determinar el rumbo de aguja (Ra) si el desvío de aguja para ese rumbo es
+        de +3º y la declinación magnética de 3º NE.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 45
+      options:
+        a: 8,12 metros.
+        b: 8,37 metros.
+        c: 8,57 metros.
+        d: 8,67 metros.
+      question: Hallar la sonda en el momento de la primera pleamar el día 16 de marzo
+        de 2017 en Algeciras con una presión atmosférica de 1023 mb y una sonda en
+        la carta de 7,8 metros.
+exam_info:
+  call: junio
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 03
+  test_code: '03'
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2017
