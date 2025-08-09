@@ -105,7 +105,7 @@ categories:
         a: Los erifos de fondo de la embarcación están cerrados.
         b: La embarcación tiene asiento positivo.
         c: La embarcación tiene un par de estabilidad pequeño (buque blando).
-        d: La embarcación tiene un par de estabilidad erande (buque duro).
+        d: La embarcación tiene un par de estabilidad grande (buque duro).
       question: 'Si, tras una gran escora producida por un golpe de mar, la embarcación
         recupera Su situación adrizada inicial de manera brusca y rápida:'
     - category: 3
