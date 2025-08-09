@@ -42,7 +42,8 @@ categories:
       id: 4
       options:
         a: El timón.
-        b: El molinete. e) El motor principal.
+        b: El molinete.
+        c: El motor principal.
         d: La bomba de achique.
       question: 'El barbotén, el embrague y el freno son componentes de:'
   2:
