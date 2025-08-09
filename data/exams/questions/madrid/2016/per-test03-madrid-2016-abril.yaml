@@ -1,0 +1,592 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 1
+      options:
+        a: Pieza longitudinal situada en la parte inferior de la cubierta.
+        b: La parte curva inferior del casco que va de proa a popa.
+        c: Es la parte del casco que cierra la popa del barco.
+        d: Pieza longitudinal situada en la parte superior de la borda.
+      question: ¿Qué es la regala?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 2
+      options:
+        a: Un tambor firmemente unido al otro extremo del eje del molinete.
+        b: La pieza que permite embragar y desembragar el eje del molinete.
+        c: Una máquina eléctrica o hidráulica que se emplea para virar y arriar la
+          cadena del ancla.
+        d: Una corona con muescas donde se acoplan los eslabones de la cadena.
+      question: ¿Qué es el barbotén?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 3
+      options:
+        a: Pieza que encastra en una hendidura que tiene el barbotén.
+        b: Parte plana de la uña de un ancla.
+        c: Argolla que une el ancla a la cadena.
+        d: Un ancla pequeña, también llamada anclote.
+      question: ¿Qué es el arganeo?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 4
+      options:
+        a: Dextrógira.
+        b: Levógira.
+        c: De paso múltiple.
+        d: De arrastre.
+      question: 'Enlos barcos con hélices gemelas, la hélice de babor, por lo general
+        es:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 5
+      options:
+        a: Para unir por sus chicotes dos cabos de distinta mena.
+        b: Para unir por sus chicotes dos cabos de la misma mena.
+        c: Para afirmar una amarra a una argolla.
+        d: Para formar una gaza que no sea corrediza y así poder encapillar un cabo.
+      question: ¿Para qué se emplea el nudo llano?
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: d
+      id: 6
+      options:
+        a: Cuando se fondea con dos anclas de forma que entre ellas, las líneas de
+          fondeo formen un ángulo de 90º.
+        b: Cuando se fondea con dos anclas de forma que entre ellas, las líneas de
+          fondeo formen un ángulo de 120º.
+        c: Cuando se fondea con un ancla por proa y otra por popa para evitar que
+          la embarcación gire.
+        d: Cuando se fondea con un ancla por la proa, permitiendo que ésta se agarre
+          en el fondo.
+      question: ¿Cuándo se dice que una embarcación fondea a la gira?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 7
+      options:
+        a: Bengala de mano.
+        b: Señal fumígena flotante.
+        c: Cohete con luz y paracaídas.
+        d: Bengala de humo.
+      question: De las siguientes señales pirotécnicas, ¿cuál es la que tiene mayor
+        duración tras activarla?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 8
+      options:
+        a: Se deberá parar el motor e invertir el sentido de la marcha.
+        b: El timonel meterá el timón a la banda de babor.
+        c: El timonel meterá el timón a la banda de estribor.
+        d: Se deberá emitir una alerta de socorro.
+      question: 'Al instante del grito de "hombre al agua por la banda de estribor":'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 9
+      options:
+        a: La regala.
+        b: En cualquier cornamusa de amarre.
+        c: Un punto resistente de la zona de proa de la embarcación.
+        d: En cualquier elemento estructural y resistente.
+      question: 'En condiciones normales, la fijación del cabo de remolque en la embarcación
+        remolcada debería realizarse en:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 10
+      options:
+        a: Añadiendo un ramal de cadena que se mantenga bajo el agua.
+        b: Dando un remolque muy corto.
+        c: Colocando un ancla en un extremo del cabo de remolque.
+        d: Usando un cable para dar el remolque.
+      question: ¿Cómo se pueden evitar los tirones que se producen durante el remolque?
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: d
+      id: 11
+      options:
+        a: Cuando se trate de embarcaciones con base en un puerto español, anualmente
+          ante la Autoridad Portuaria.
+        b: Cuando se trate de embarcaciones con base en un puerto español, cada seis
+          meses ante la Instalación Portuaria Receptora autorizada para su gestión.
+        c: Cuando se trate de embarcaciones con base en un puerto extranjero, cada
+          vez que entren a un puerto español ante la Autoridad Portuaria.
+        d: Cuando se trate de embarcaciones que no tengan base en un puerto español,
+          procedentes de un puerto extranjero, a la llegada de la embarcación al primer
+          puerto español.
+      question: 'Las embarcaciones deportivas o de recreo autorizadas para un máximo
+        de doce pasajeros realizará la notificación reducida de desechos del Anexo
+        V del Real Decreto 1381/2002, de 20 de Diciembre:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 12
+      options:
+        a: Le serán de aplicación, en todo caso, lo previsto para la descarga de aguas
+          sucias.
+        b: Cuando se fijen prescripciones de descarga diferentes, les será de aplicación
+          lo previsto para la descarga de residuos o aguas residuales.
+        c: Cuando se fijen prescripciones de descarga diferentes, se les aplicarán
+          las prescripciones de descarga más rigurosas,
+        d: En ningún caso se permite que las aguas sucias se mezclen con residuos
+          o aguas residuales.
+      question: 'Cuando las aguas sucias estén mezcladas con residuos o aguas residuales:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 13
+      options:
+        a: Un peligro.
+        b: El rumbo a seguir para llegar a aguas navegables.
+        c: Que la zona que rodea a la marca es navegable.
+        d: La altura media de las olas.
+      question: ¿Qué indica una marca de aguas navegables?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 14
+      options:
+        a: Blanco continuo rápido.
+        b: Blanco continuo muy rápido.
+        c: Seis centelleos muy rápidos o rápidos de luz blanca.
+        d: Tres centelleos muy rápidos o rápidos de luz blanca.
+      question: Si tiene luz, ¿cómo es el ritmo centelleante de la marca cardinal
+        Este?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 15
+      options:
+        a: Hay menos de cuarenta centelleos por minuto.
+        b: La cadencia es de cincuenta o sesenta centelleos por minuto.
+        c: La cadencia es de cien o ciento veinte centelleos por minuto.
+        d: La cadencia es de cuarenta centelleos por minuto.
+      question: 'En el ritmo centelleante muy rápido de la luz blanca de una marca
+        cardinal:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 16
+      options:
+        a: Únicamente zonas o configuraciones especiales que no se visualizan al consultar
+          cartas o publicaciones náuticas.
+        b: Siempre zonas de ejercicios militares.
+        c: Siempre zonas reservadas al recreo.
+        d: Zonas o configuraciones especiales cuya naturaleza se visualiza al consultar
+          la carta u otra publicación náutica.
+      question: ¿Qué indica una marca especial?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 17
+      options:
+        a: Blanca con un ritmo de grupos de dos destellos.
+        b: Amarilla con un ritmo de grupos de dos destellos.
+        c: Blanca con un ritmo de grupos de tres destellos,
+        d: Blanca con un ritmo de grupos de seis destellos.
+      question: Si tiene luz, ¿cómo es la señal luminosa de una marca de peligro aislado?
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 18
+      options:
+        a: En caso de abrigarse alguna duda acerca de si existe riesgo de abordaje,
+          se considerará que el riesgo existe.
+        b: Si la demora de un buque que se aproxima no varía de forma apreciable,
+          se considerará que existe riesgo de abordaje.
+        c: Siendo evidente una variación apreciable de la demora al aproximarse a
+          cualquier buque a muy corta distancia, puede existir riesgo de abordaje.
+        d: En toda circunstancia y condición, cada buque hará necesariamente uso de
+          todos y cada unos los medios de que disponga para determinar si existe riesgo
+          de abordaje.
+      question: Según la regla 7.a del RIPA, ¿cuál de las siguientes afirmaciones
+        es FALSA?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 19
+      options:
+        a: Cuando un peligro de navegación, riesgo de abordaje o circunstancias especiales,
+          incluidas las limitaciones de los buques interesados, que han de tomarse
+          en consideración al interpretar y cumplir el Reglamento, hagan necesario
+          apartarse del mismo para evitar un peligro inmediato.
+        b: Cuando un peligro de navegación, riesgo de abordaje o circunstancias especiales,
+          incluidas las limitaciones de los buques interesados, que han de tomarse
+          en consideración al interpretar y cumplir el Reglamento, hagan necesario
+          apartarse del mismo para evitar un peligro potencial.
+        c: En ningún caso.
+        d: Sólo para cumplir una regla especial establecida por la autoridad competente.
+      question: 'De acuerdo con la regla 2.b del RIPA, un buque puede apartarse de
+        dicho Reglamento:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 20
+      options:
+        a: Los buques de eslora inferior a 20 metros, o los buques de vela, no estorbarán
+          el tránsito de ningún otro buque que navegue dentro de dicho paso o canal.
+        b: Los buques de eslora inferior a 24 metros, o los buques de vela, no estorbarán
+          el tránsito de un buque que sólo pueda navegar con seguridad dentro de dicho
+          paso o canal.
+        c: Los buques de eslora inferior a 20 metros, o los buques de vela, no estorbarán
+          el tránsito de los buques dedicados a la pesca dentro de dicho paso o canal.
+        d: Los buques dedicados a la pesca no estorbarán el tránsito de ningún otro
+          buque que navegue dentro de dicho paso o canal.
+      question: 'Conforme a la regla 9.c del RIPA, en un paso o canal angosto:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 21
+      options:
+        a: Dos horas antes del ocaso.
+        b: Una hora antes del ocaso.
+        c: En todo momento, aunque sea de día.
+        d: Desde la puesta del sol hasta su salida.
+      question: 'Según la regla 20 del RIPA, las luces de navegación se exhibirán:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 22
+      options:
+        a: Es incapaz de maniobrar en la forma exigida por el RIPA, debido a cualquier
+          circunstancia excepcional.
+        b: Tiene reducida su capacidad para maniobrar en la forma exigida por el RIPA,
+          debido a la escasa profundidad y anchura disponible del agua navegable.
+        c: Tiene reducida su capacidad para maniobrar en la forma exigida por el RIPA,
+          debido a la naturaleza de su trabajo.
+        d: Puede, no obstante, apartarse de la derrota de otro buque.
+      question: 'Según la definición de la regla 3.g del RIPA, un buque con capacidad
+        de maniobra restringida:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 23
+      options:
+        a: Vuelta encontrada.
+        b: Alcance.
+        c: Cruce.
+        d: Buque sin gobierno.
+      question: 'Navegando de noche observamos por la proa una luz de tope y las dos
+        de costado de otro buque. Estaremos ante una situación de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 24
+      options:
+        a: Sino llevan pito, campana o gong, deberán ir dotados de otros medios para
+          hacer señales acústicas eficaces.
+        b: Deben llevar siempre un gong.
+        c: Deben llevar siempre una campana.
+        d: Deben llevar siempre un pito.
+      question: 'Según la regla 33.b del RIPA, los buques de eslora inferior a 12
+        m:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 25
+      options:
+        a: Una velocidad máxima de 6 nudos o la velocidad mínima de gobierno si ésta
+          es mayor.
+        b: Una velocidad máxima de 3 nudos o la velocidad mínima de gobierno si ésta
+          es mayor.
+        c: Una velocidad tal que permita al buque ejecutar la maniobra adecuada y
+          eficaz para evitar el abordaje y pararse a la distancia que sea apropiada
+          a las circunstancias y condiciones del momento.
+        d: Una velocidad que depende únicamente de las características de cada buque
+          y que le permite ejecutar la maniobra adecuada y eficaz para evitar el abordaje
+          y pararse a una distancia de seguridad apropiada a las circunstancias y
+          condiciones del momento.
+      question: 'Según la regla 6 del RIPA, velocidad de seguridad es:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 26
+      options:
+        a: El buque de vela se mantendrá apartado de la derrota del buque de propulsión
+          mecánica, tal como dispone la regla 13, sobre el buque que "alcanza”.
+        b: El buque de propulsión mecánica se mantendrá apartado del buque de vela,
+          de acuerdo con el orden de prioridades establecido en la regla 18.a.iv,
+          sobre obligaciones entre categorías de buques.
+        c: El buque de propulsión mecánica se mantendrá apartado de la derrota del
+          buque de vela, de acuerdo con el orden de prioridades establecido en la
+          regla 18.a.iv, sobre obligaciones entre categorías de buques, y, como precaución
+          exigible por la práctica normal del marino a la que se refiere la regla
+          2, reducirá su velocidad a la mínima de gobierno o, si las circunstancias
+          lo permiten, suprimirá su arrancada hasta que el buque de vela lo haya adelantado
+          completamente y se encuentre en franquía.
+        d: El buque de propulsión mecánica se mantendrá apartado de la derrota del
+          buque de vela, de acuerdo con el orden de prioridades establecido en la
+          regla 18.a.iv, sobre obligaciones entre categorías de buques, y maniobrará
+          de forma tal que el buque de vela quede siempre por barlovento, a los efectos
+          de la regla 13 y como precaución exigida por la práctica normal del marino,
+          a la que se refiere la regla 2.
+      question: 'De acuerdo con el RIPA, si un buque de vela está alcanzando a un
+        buque de propulsión mecánica:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 27
+      options:
+        a: Deben utilizarse siempre por separado.
+        b: Deben utilizarse siempre todas a la vez.
+        c: Pueden utilizarse o exhibirse juntas o por separado.
+        d: No deben utilizarse nunca.
+      question: 'Las señales que indican peligro y necesidad de ayuda en el Anexo
+        1V del RIPA:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: a
+      id: 28
+      options:
+        a: Con máquina avante y el timón a estribor.
+        b: Con máquina avante y el timón a babor.
+        c: Con máquina atrás y el timón a estribor.
+        d: No se puede ciabogar con una sola hélice.
+      question: En las embarcaciones con una única hélice de giro a la derecha (dextrógira),
+        ¿de qué forma podríamos iniciar una ciaboga?
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 29
+      options:
+        a: Lo aflojamos.
+        b: Lo dejamos bien tenso.
+        c: Lo cobramos con molinete.
+        d: Lo arriamos poco a poco.
+      question: 'Decimos que tesamos un cabo cuando:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 30
+      options:
+        a: Con independencia de si se trata de un lugar donde hay mareas, se hará
+          inmediatamente para minimizar los daños.
+        b: Se llevará a cabo en el momento de la pleamar si ha ocurrido en un lugar
+          donde hay mareas.
+        c: Siempre se hará asistiéndonos de un remolque para evitar daños a la obra
+          viva.
+        d: Se llevará a cabo en el momento de la bajamar si ha ocurrido en un lugar
+          donde hay mareas.
+      question: 'La maniobra para reflotar una embarcación varada:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 31
+      options:
+        a: Puerto más próximo de escala.
+        b: Puerto de registro.
+        c: Número de pasajeros.
+        d: Nombre de la embarcación.
+      question: ¿Cuál de la siguiente información NO es necesaria intercambiar entre
+        dos embarcaciones implicadas en un abordaje?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 32
+      options:
+        a: Se comunicará a la compañía aseguradora los hechos acontecidos.
+        b: Se procurarán aislar los compartimentos que existan en la embarcación y
+          se combatirá cualquier inundación.
+        c: Se separará la embarcación que aborda.
+        d: Se lanzarán guindolas al agua.
+      question: 'Inmediatamente después de ser abordada una embarcación por otra:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 33
+      options:
+        a: Nudos.
+        b: Grados de longitud.
+        c: Millas náuticas.
+        d: Metros cuadrados.
+      question: 'El fetch se puede expresar en:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 34
+      options:
+        a: Tendencia a suaves vientos.
+        b: Tendencia a fuertes vientos.
+        c: Tendencia a cesar el viento.
+        d: Tendencia a mejoría del tiempo.
+      question: 'La bajada brusca del nivel del barómetro expresa:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 35
+      options:
+        a: Clasifica la intensidad del viento en 12 grados.
+        b: Mide la velocidad del viento en nudos por hora.
+        c: Clasifica la intensidad del viento en 13 grados.
+        d: No resulta de utilidad a bordo.
+      question: 'La escala Beaufort:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 36
+      options:
+        a: La temperatura.
+        b: La presión.
+        c: El desplazamiento.
+        d: La velocidad del viento.
+      question: 'La escala Celsius sirve para medir:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 37
+      options:
+        a: La corrección total es la corrección de la declinación magnética, que se
+          obtiene aplicando a ésta el resultado correspondiente al incremento anuo.
+        b: Si la declinación magnética es igual a 2º W y el desvío es igual a 2º W,
+          entonces la corrección total es igual a 0º.
+        c: Si el desvío es igual a 0º, entonces la corrección total es igual a la
+          declinación magnética.
+        d: Si la declinación magnética es igual a 2º E y el desvío es igual a 2º a
+          la izquierda del Norte magnético, entonces la corrección total es igual
+          a 4º.
+      question: ¿Cuál de las siguientes afirmaciones es VERDADERA?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 38
+      options:
+        a: A la medida del ángulo que forma la visual a un punto de la costa con el
+          meridiano.
+        b: Al ángulo que forma la visual a un punto de la costa con la línea proa-popa
+          de la embarcación.
+        c: Al ángulo que forma la visual con el través de la embarcación.
+        d: Al ángulo que coincide con la visual a un punto de la costa y el rumbo
+          efectivo de la embarcación.
+      question: 'Se denomina marcación:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 39
+      options:
+        a: Es igual para todas las embarcaciones que se encuentran en una misma zona.
+        b: Varía de un lugar a otro.
+        c: No varía con el tiempo.
+        d: Es un ángulo.
+      question: ¿Cuál de las siguientes afirmaciones sobre la declinación magnética
+        es FALSA?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 40
+      options:
+        a: Al efecto de la corriente sobre la obra viva de la embarcación.
+        b: Al efecto del viento sobre las velas, costados y superestructuras de la
+          embarcación.
+        c: Al efecto del movimiento de grandes masas de agua como consecuencias de
+          las mareas.
+        d: Al efecto del gradiente de temperatura del fondo con respecto a la superficie.
+      question: 'El abatimiento de una embarcación se debe:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 41
+      options:
+        a: Tiempo.
+        b: Velocidad,
+        c: Longitud.
+        d: Área.
+      question: 'Nudo es una unidad de:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 42
+      options:
+        a: l=36º 07,2' N ; L=006º 00,8' W.
+        b: l=36º 10,0' N ; L=005º 59,2' W.
+        c: l=36º 08,8' N ; L=006º 01,6' W.
+        d: l=36º 07,9' N ; L=005º 59,9' W.
+      question: Calcular la situación verdadera tras tomar simultáneamente demora
+        de aguja del faro de Cabo Trafalgar N19W y demora de aguja de la luz roja
+        del dique de poniente del puerto de Barbate N61E, siendo la correción total
+        aplicar 10,5º (-).
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 43
+      options:
+        a: l= 36º 08,3' N ; L= 006º 10,5' W.
+        b: l= 36º 10,0' N ; L= 006º 11,5' W.
+        c: l= 36º 09,6' N ; L= 006º 12,4' W.
+        d: l= 36º 08,0' N ; L= 006º 11,4' W.
+      question: Nos encontramos en l=35º 50,0' N; L=006º 00,0' W navegando al rumbo
+        verdadero 335º. Calcular situación estimada tras recorrer 22 millas.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 44
+      options:
+        a: 343º.
+        b: 341º.
+        c: 345º.
+        d: 347º.
+      question: Navegando en una zona con una declinación magnética (dm) de 2º W y
+        un desvío de la aguja de 4º E, se toma una demora de aguja (Da) de 343º a
+        un punto conocido de la costa. Calcular la demora verdadera (Dv) del punto.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 45
+      options:
+        a: 10º (+).
+        b: 10º (-).
+        c: 11,5º (-).
+        d: 11,5º (+).
+      question: Encontrándonos en la enfilación formada por los faros de Punta Malabata
+        y Cabo Espartel, tomamos demora de aguja del faro de Cabo Espartel = 068º.
+        Calcular el valor de la corrección total.
+exam_info:
+  call: abril
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 03
+  test_code: '03'
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2016
