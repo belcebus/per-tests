@@ -1,0 +1,576 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 1
+      options:
+        a: Plano de crujía.
+        b: Plano de flotación.
+        c: Plano de carena.
+        d: Plano de la cuaderna maestra.
+      question: ¿Cuál es el plano que separa la obra viva de la obra muerta?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 2
+      options:
+        a: Estoy mirando a sotavento,
+        b: Estoy mirando al Norte,
+        c: Estoy mirando a barlovento.
+        d: Estoy mirando al Sur.
+      question: 'Si, estando de pie. el viento me da de cara:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 3
+      options:
+        a: Es la diferencia entre el calado de popa y el calado de proa.
+        b: Es la diferencia entre el calado medio y el calado en el medio.
+        c: Es la suma del calado de proa más el calado de popa.
+        d: Es la suma del arrufo más el quebranto.
+      question: ¿Qué es el asiento?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 4
+      options:
+        a: Piezas en forma de capuchón que protegen los orificos donde va el eje.
+        b: Los cables por los que se transmite a la pala del timón el giro de la rueda.
+        c: Orificios por los que la parte superior de la mecha del timón atraviesa
+          el casco.
+        d: Cada uno de los extremos libres de un cabo o cable.
+      question: ¿Qué son los guardines?
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 5
+      options:
+        a: Es el extremo del cabo que queda libre.
+        b: Es un lazo.
+        c: Es el nudo que se emplea para unir un cabo a una argolla.
+        d: Es una vuelta que se realiza para suspender una verga o un gancho.
+      question: ¿Qué es una gaza?
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 6
+      options:
+        a: Cuando el ancla no se queda quieta ni firme en el fondo, provocando un
+          desplazamiento del barco a barlovento.
+        b: Cuando el barco gira tomando como centro el ancla y como radio la cadena.
+        c: Cuando el ancla no se queda quieta ni firme en el fondo, provocando un
+          desplazamiento del barco a sotavento.
+        d: Cuando debido a cambios en la dirección del viento o la corriente queda
+          la proa orientada al factor dominante.
+      question: ¿Cuándo se dice que el barco garrea?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 7
+      options:
+        a: Meteremos el timón hacia la banda que ha caído.
+        b: Meteremos el timón hacia la banda contraria a la que ha caído.
+        c: Meteremos el timón hacia cualquier banda.
+        d: Meteremos muy poco timón hacia cualquier banda.
+      question: 'En general, cuando una persona caiga al agua:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 8
+      options:
+        a: Estarán cerrados cuando las manetas estén paralelas a la dirección de la
+          tubería.
+        b: Estarán cerrados cuando las manetas estén perpendiculares a la dirección
+          de la tubería.
+        c: Si son de manetas, se evitará su instalación por su alto factor de fallo.
+        d: Siempre se instalarán los de manetas.
+      question: 'Los grifos de fondo:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 9
+      options:
+        a: Amura a la mar a toda máquina, para hacer gobernable la embarcación hasta
+          no sentir los efectos del temporal.
+        b: Amura a la mar a toda máquina, para hacer gobernable la embarcación hasta
+          llegar a un lugar de refugio.
+        c: Amura a la mar con poca pero suficiente máquina avante, para hacer gobernable
+          la embarcación,
+        d: Amura a la mar con nada de máquina, intentando reservar combustible.
+      question: ¿Cómo capeará el temporal una embarcación de propulsión mecánica?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 10
+      options:
+        a: Unicamente cambiando de velocidad.
+        b: Situando todos los tripulantes a una banda.
+        c: Variando de rumbo.
+        d: El cabeceo es una característica de la estabilidad estática longitudinal
+          de la embarcación, delimitada por su diseño y que no varía con el gobierno
+          de ésta.
+      question: 'Podríamos evitar o reducir el cabeceo de una embarcación:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 11
+      options:
+        a: El lanzamiento o varada de embarcaciones deberá hacerse a través de canales
+          debidamente señalizados.
+        b: Si no existe un canal debidamente señalizado, se exige que el lanzamiento
+          o varada se haga sin superar los tres nudos de velocidad.
+        c: Si no existe un canal debidamente señalizado, sólo se exige que se adopten
+          las precauciones necesarias para evitar riesgos a la seguridad de la vida
+          humana en la mar.
+        d: Las limitaciones dentro de zona de baño balizada no se aplican a la práctica
+          de actividades subacuáticas.
+      question: 'En las zonas de baño debidamente balizadas:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: b
+      id: 12
+      options:
+        a: Hasta tres millas marinas de la tierra más próxima si las aguas sucias
+          han sido previamente desmenuzadas y desinfectadas.
+        b: Hasta tres millas se permite con tratamiento, y que además el efluente
+          no produzca sólidos flotantes visibles ni ocasione decoloración en las aguas
+          circundantes.
+        c: Cuando la embarcación efectúe la descarga de aguas sucias hasta una distancia
+          de doce millas, siempre que se descarguen a un régimen moderado, hallándose
+          la embarcación en ruta navegando a velocidad no menor de 4 nudos.
+        d: Cuando la embarcación efectúe la descarga de aguas sucias desmenuzada y
+          desinfestada, hasta tres millas, siempre que se descarguen a un régimen
+          moderado, hallándose la embarcación en ruta navegando a velocidad no menor
+          de 4 nudos.
+      question: 'La descarga de aguas sucias por embarcaciones de recreo en aguas
+        en las que España ejerza soberanía, derechos soberanos o jurisdicción, en
+        aguas distintas de zonas portuarias, aguas protegidas, rías, bahías o similares,
+        está autorizada:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 13
+      options:
+        a: Tiene color blanco y su ritmo es isofase, de ocultaciones, un destello
+          largo cada diez segundos o el correspondiente a la letra Morse "B".
+        b: Tiene color blanco y su ritmo es isofase, de ocultaciones, un destello
+          largo cada diez segundos o el correspondiente a la letra Morse "C”.
+        c: Tiene color blanco y su ritmo es isofase, de ocultaciones, un destello
+          largo cada diez segundos o el correspondiente a la letra Morse "D".
+        d: Tiene color blanco y su ritmo es isofase, de ocultaciones, un destello
+          largo cada diez segundos o el correspondiente a la letra Morse "A",
+      question: Cuando una marca de aguas navegables tiene luz. ¿Cómo es su señal
+        luminosa?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 14
+      options:
+        a: No hay bifurcaciones en un canal.
+        b: Nunca se indica, las rutas que parten de la bifurcación son igualmente
+          apropiadas para la navegación.
+        c: Puede utilizarse una marca lateral modificada para indicar el canal principal.
+        d: Se indica mediante una marca lateral sin modificar.
+      question: En un punto de bifurcación de un canal, la ruta que el servicio de
+        señales marítimas competente considera más apropiada para navegar. ¿Cómo se
+        indica?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 15
+      options:
+        a: Sí.
+        b: No, nunca.
+        c: Depende de la longitud del canal.
+        d: Sólo si hay luz diurna.
+      question: ¿Podemos utilizar una marca de aguas navegables como marca de eje
+        de un canal?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 16
+      options:
+        a: Siempre de espeque.
+        b: De libre elección, pero que no se preste a confusión con otras marcas de
+          ayudas a la navegación.
+        c: Siempre esférica.
+        d: Siempre de castitlete.
+      question: ¿Qué forma tienen las marcas especiales?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 17
+      options:
+        a: Solamente en las cartas de navegación.
+        b: Mediante una marca lateral modificada.
+        c: Solamente mediante señales de radio.
+        d: Mediante una marca cardinal.
+      question: ¿Cómo podemos indicar la situación de las aguas más profundas?
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 18
+      options:
+        a: En tal caso, ningún buque podrá cruzar dicho paso o canal.
+        b: Unicamente los buques de vela.
+        c: Únicamente los buques de eslora inferior a 20 metros y los buques de vela.
+        d: Únicamente los buques dedicados a la pesca.
+      question: De acuerdo con la regla 9 del RIPA, ¿qué buques no deberán cruzar
+        un paso o canal angosto si al hacerlo estorban el tránsito de otro buque que
+        sólo pueda navegar con seguridad dentro de dicho paso o canal?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 19
+      options:
+        a: Una bandera cuadrada que tenga debajo de ella una bola.
+        b: Una bandera cuadrada que tenga debajo de ella tres bolas.
+        c: Una bandera cuadrada.
+        d: Un rombo negro.
+      question: Según el anexo IV del RIPA, ¿cuál de las siguientes señales es indicativa
+        de peligro y necesidad de ayuda?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 20
+      options:
+        a: Un buque de vela.
+        b: Un buque de propulsión mecánica,
+        c: En todo caso, un buque de propulsión mecánica con su capacidad de maniobra
+          restringida.
+        d: Un buque de vela si lleva desplegado el foque y, en cualquier otro caso,
+          un buque de propulsión mecánica.
+      question: 'Según la regla 3 del RIPA, un buque navegando a vela que, simultáneamente,
+        utilice su maquinaria propulsora se considera:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 21
+      options:
+        a: El buque cuyo tránsito no deba ser estorbado por otro buque seguirá estando
+          plenamente obligado a cumplir con las reglas de rumbo y gobierno, cuando
+          ambos buques se aproximen con riesgo de que se produzca un abordaje.
+        b: El buque cuyo tránsito no deba ser estorbado por otro buque se comportará
+          en todo caso como el buque que "sigue a rumbo” según la regla 17 del RIPA.
+        c: El buque obligado a no estorbar el tránsito de otro buque que sólo pueda
+          navegar con seguridad dentro de dicho paso o canal podrá cruzar dicho paso
+          o canal, pero en tal caso se comportará, respecto del otro, como el buque
+          que "cede el paso" según la regla 16 del RIPA.
+        d: El buque cuyo tránsito no deba ser estorbado por otro buque será considerado
+          como un buque con su capacidad de maniobra restringida.
+      question: 'Conforme a la regla 8 del RIPA, en un paso o canal angosto:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 22
+      options:
+        a: Reducirá en todo caso su velocidad hasta la mínima de gobierno y, de ser
+          necesario, suprimirá su arrancada.
+        b: Suprimirá en todo caso su arrancada.
+        c: Maniobrará con la suficiente antelación, teniendo en cuenta que, si la
+          maniobra consiste en un cambio de rumbo, en la medida de lo posible se evitará
+          un cambio de rumbo a babor.
+        d: Maniobrará con la suficiente antelación, teniendo en cuenta que, si la
+          maniobra consiste en un cambio de rumbo, se evitará en lo posible un cambio
+          de rumbo a estribor.
+      question: 'De acuerdo con la regla 19 del RIPA, si en condiciones de visibilidad
+        reducida, un buque detecta únicamente por medio del radar la presencia de
+        otro buque, situado por el través de estribor y determina que se está creando
+        una situación de aproximación excesiva:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 23
+      options:
+        a: Una luz blanca todo horizonte y una luz de remolque.
+        b: Sólo luces de costado y de alcance.
+        c: Una luz amarilla de centelleos todo horizonte, entre otras.
+        d: Una tuz roja centelleante todo horizonte.
+      question: 'Conforme a la regla 23 del RIPA, operando en la condición sin desplazamiento,
+        los aerodeslizadores exhibirán:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 24
+      options:
+        a: Un destello.
+        b: Tres destellos.
+        c: Dos destellos.
+        d: Un destello a intervalos regulares.
+      question: 'Según la regla 34 del RIPA, un buque de propulsión mecánica en navegación
+        que esté a la vista de otro, podrá complementar las pitadas reglamentarias,
+        para caer a babor, mediante la siguiente señal luminosa:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 25
+      options:
+        a: Es un buque con capacidad de maniobra restringida.
+        b: No es un buque en navegación.
+        c: Es un buque en navegación.
+        d: Carece de toda relevancia.
+      question: 'Según la regla 3 del RIPA, un buque fondeado:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 26
+      options:
+        a: Un sonido de una duración aproximada de 2 a 3 segundos.
+        b: Un sonido de una duración aproximada de 7 segundos.
+        c: Un sonido de larga duración.
+        d: Un sonido de una duración aproximada de 4 a 6 segundos.
+      question: 'Según la regla 32 del RIPA, una "pitada larga" significa:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 27
+      options:
+        a: No significa nada.
+        b: Una señal indicativa de peligro y necesidad de ayuda.
+        c: Hay medico a bordo.
+        d: Caigo a estribor.
+      question: ¿Qué significa la señal "NC" del Código Internacional de Señales?
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 28
+      options:
+        a: Largo.
+        b: Esprin.
+        c: Codera.
+        d: Través.
+      question: 'El cabo que se da de proa hacia popa o viceversa se llama:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: a
+      id: 29
+      options:
+        a: De maniobra, variable y uniforme.
+        b: Inicial, intermedia y final.
+        c: Inicial, de maniobra y final.
+        d: De maniobra, intermedia y uniforme.
+      question: 'En toda curva de evolución hay tres fases, que son:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 30
+      options:
+        a: Un agujero más pequeño que un imbornal.
+        b: Una turafalla de madera.
+        c: Un tapón de madera para tapar vias de agua.
+        d: Un disco de fieltro o goma atravesado por un eje roscado con un brazo trasversal.
+      question: ¿Qué es un "espiche”?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 31
+      options:
+        a: Distribuir los pesos a bordo, compensando en la medida de lo posible la
+          escora.
+        b: Verificar el correcto gobierno de la pala del timón.
+        c: Determinar el estado de la quilla.
+        d: Asegurarse que no se han producido vías de agua.
+      question: 'Tras varar una embarcación en las rocas, una de las primeras comprobaciones
+        a llevar a cabo será:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 32
+      options:
+        a: La limera del timón.
+        b: Los grifos del WC.
+        c: Los grifos de fondo.
+        d: La cabina.
+      question: ¿Cúal de los siguientes puntos NO se considera de mayor riesgo para
+        producirse una vía de agua?
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 33
+      options:
+        a: La resultante vectorial del viento real y el viento generado por el avance
+          de la embarcación.
+        b: El viento que habría si el mar estuviera en calma.
+        c: El viento existente al estar parada la embarcación.
+        d: La suma algebraica del viento real y el relativo.
+      question: 'Viento aparente es:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 34
+      options:
+        a: Regiones en las que hay un conjunto de isobaras cerradas y en las que la
+          presión atmosférica crece hacia el centro.
+        b: Regiones en las que hay un conjunto de isobaras cerradas en las que la
+          presión atmosférica decrece hacia el centro.
+        c: Regiones en las que hay un conjunto de isobaras abiertas o cerradas en
+          las que la presión atmosférica crece siempre en la misma dirección.
+        d: Un conjunto de isobaras abiertas o cerradas en las que la presión atomosférica
+          decrece siempre en la misma dirección.
+      question: 'Los anticiclones son:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 35
+      options:
+        a: Milímetros de columna de agua y grados.
+        b: Milímetros de mercurio y Pascales.
+        c: Hectopascales y dinas.
+        d: Pascales y nudos.
+      question: 'La presión atmosférica se puede expresar, al menos, en las siguientes
+        unidades:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 36
+      options:
+        a: El terral se debe al viento que sopla del desierto de forma constante y
+          permanente, alcanzando tal fuerza que hace que el aire se mueva del mar
+          a la tierra.
+        b: El terral y el virazón están provocados por el calentamiento desigual del
+          mar y de la tierra.
+        c: El terral es un régimen de brisas. que va de la tierra al mar.
+        d: El virazón es un régimen de brisas, que va de la mar a tierra.
+      question: ¿Cuál de las siguientes afirmaciones NO es correcta?
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 37
+      options:
+        a: Perpendicular al eje de la Tierra.
+        b: Que contiene al eje de la Tierra.
+        c: Paralelo al eje de la Tierra.
+        d: Que divide a la Tierra en ocho hemisferios.
+      question: 'El Ecuador es un círculo máximo:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 38
+      options:
+        a: Rv= Ra + dm + Desvío.
+        b: Rv= Ra + Rim + Desvío.
+        c: Rv= Rm + Desvío.
+        d: Rv= Ra + CT.
+      question: ¿Cuál de las siguientes fórmulas es FALSA?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 39
+      options:
+        a: Siempre rectas.
+        b: Rectas si son distancias.
+        c: Circulares si son adiabáticas.
+        d: Circulares si son distancias.
+      question: 'Las líneas de posición se representan:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 40
+      options:
+        a: Las marcas o puntos destacados de tierra.
+        b: Las boyas.
+        c: Los faros.
+        d: Las farolas.
+      question: 'Son ayudas a la navegación diurna que carecen de luz:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 41
+      options:
+        a: Varía con el rumbo de la embarcación.
+        b: Es igual para todas las agujas náuticas de una embarcación.
+        c: No depende de su emplazamiento en la embarcación.
+        d: Depende de la situación geográfica cuando la embarcación navega.
+      question: ¿Cuál de las siguientes afirmaciones sobre el desvío de la aguja es
+        cierta?
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 42
+      options:
+        a: 4º (+).
+        b: 6º (-).
+        c: 6º (+).
+        d: 4º (-).
+      question: Calcular el valor de la corrección total (Ct) a partir de una declinación
+        magnética de 10º NW y un desvío de 4º (+).
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 43
+      options:
+        a: d= 10,5 millas y Rv= 015º.
+        b: d= 11,0 millas y Rv= 017º.
+        c: d= 11,0 millas y Rv= 195º.
+        d: d= 10,5 millas y Rv= 197º.
+      question: ¿Cuál es la distancia (d) y el rumbo verdadero (Rv) desde el faro
+        de Punta de Cires al faro de Punta Carnero?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 44
+      options:
+        a: l=35º 58,8'N  L=005º 29,8'W.
+        b: l=35º 57,4'N  L=005º 31,2'W.
+        c: l=35º 58,2'N  L=005º 30,3'W.
+        d: l=35º 57,2'N  L=005º 30,0'W.
+      question: A las 09:00 se toman simultáneamente demoras de aguja del faro de
+        Punta Carnero = 038º y del faro de Isla de Tarifa = 298º, siendo la corrección
+        total 7º (-). Se pide la situación verdadera a las 09:00 por intersección
+        de las anteriores líneas de posición.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 45
+      options:
+        a: l=36º 10,0'N L=006º 05,0'W.
+        b: l=36º 10,0'N L=005º 05,0'W.
+        c: l=36º 16,0'N L=006º 05,0'W.
+        d: l=36º 16,0'N L=005º 05,0'W.
+      question: Una embarcación se encuentra en l=36º 04,0'N y L=006º 05,0'W, navegando
+        al norte verdadero a 12 nudos. Calcular la situación tras 30 minutos navegando
+        a ese rumbo y velocidad.
+exam_info:
+  call: junio
+  categories: 11
+  community: Madrid
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 04
+  test_code: '04'
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2016
