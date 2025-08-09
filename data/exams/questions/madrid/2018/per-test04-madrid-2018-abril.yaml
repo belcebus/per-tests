@@ -517,7 +517,8 @@ categories:
       id: 42
       options:
         a: l35º 54,5'N L=005º 46,8'W.
-        b: l35º 53,9'N L=005º 45,4'W. 0) l35º 53,9'N L=005º 46,8'W.
+        b: l35º 53,9'N L=005º 45,4'W.
+        c: l35º 53,9'N L=005º 46,8'W.
         d: l35º 54,5'N L=005º 44,4'W.
       question: A las HRB 1100 tomamos la demora de aguja del faro de Cabo Trafalgar=353º
         y la demora de aguja del faro de Punta de Gracia=060". Hallar nuestra situación
@@ -530,7 +531,8 @@ categories:
       id: 43
       options:
         a: l=36º 07,8'N L=005º 59,5'W.
-        b: l=35º 50,6'N L=005º 46,1'W. 0) l=35º 51,5'N L=005º 46,2'W.
+        b: l=35º 50,6'N L=005º 46,1'W.
+        c: l=35º 51,5'N L=005º 46,2'W.
         d: l=36º 06,8'N L=005º 58,8'W.
       question: Hallar nuestra situación verdadera si nos encontramos en la oposición
         de los faros de Cabo Trafalgar y Punta Malabata en el momento en el que la
@@ -541,7 +543,8 @@ categories:
       id: 44
       options:
         a: 3º   (-).
-        b: 3,5º (-). 0) 3,5º (+).
+        b: 3,5º (-).
+        c: 3,5º (+).
         d: 3º   (+).
       question: Hallándose una embarcación en la oposición de la marca cardinal norte
         cercana a Punta Malabata y el faro de Punta Paloma, hallar la corrección total

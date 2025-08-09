@@ -132,6 +132,9 @@ categories:
       correct_answer: d
       id: 11
       options:
+        a: No tener izado, o exhibir incorrectamente el pabellón nacional podrá ser sancionado
+          como infracción administrativa de carácter grave contra la ordenación del
+          tráfico marítimo.
         b: El pabellón nacional deberá izarse, igualmente, cuando así lo requiera
           la costumbre internacional o las disposiciones aplicables en espacios marítimos
           sometidos a jurisdicción extranjera.
@@ -140,10 +143,7 @@ categories:
           en estos, de sol a sol, en los días festivos.
         d: Se reserva el asta de proa y el pico del palo mayor para la Bandera de
           España.
-      question: 'Señale cuál de las siguientes afirmaciones NO es correcta: 4) No
-        tener izado, o exhibir incorrectamente el pabellón nacional podrá ser sancionado
-        como infracción administrativa de carácter grave contra la ordenación del
-        tráfico marítimo.'
+      question: 'Señale cuál de las siguientes afirmaciones NO es correcta:'
     - category: 4
       category_name: Legislación
       correct_answer: c
@@ -249,8 +249,8 @@ categories:
         a: Todo buque construido y armado con redes, líneas, aparejos de arrastre
           u otros artes de pesca que restrinjan su maniobrabilidad.
         b: Todo buque que esté pescando con redes, líneas, aparejos de arrastre, curricán
-          u otros artes de pesca que no restrinjan su maniobrabilidad. e) Todo buque
-          que esté pescando con redes, líneas, aparejos de arrastre u otros artes
+          u otros artes de pesca que no restrinjan su maniobrabilidad.
+        c: Todo buque que esté pescando con redes, líneas, aparejos de arrastre u otros artes
           de pesca que restrinjan su maniobrabilidad.
         d: Todo buque construido y armado con redes, líneas, aparejos de arrastre,
           curricán u otros artes de pesca que restrinjan su maniobrabilidad.

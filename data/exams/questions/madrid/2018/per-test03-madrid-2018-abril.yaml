@@ -38,7 +38,7 @@ categories:
         que:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: e
+      correct_answer: c
       id: 4
       options:
         a: Tendrá menor calado en su extremo de proa que cuando esté adrizada.
@@ -501,7 +501,8 @@ categories:
       id: 41
       options:
         a: 60º.
-        b: 300º. e) 120º.
+        b: 300º.
+        c: 120º.
         d: 240º.
       question: 'La conversión del rumbo N60E a rumbo circular es:'
   11:
@@ -537,7 +538,8 @@ categories:
       id: 44
       options:
         a: l=35º 55,7'N L=005º 13,4'W.
-        b: l=35º 57'N   L=005º 13,4'W. 0) l=35º 55,7'N L=005º 12'W.
+        b: l=35º 57'N   L=005º 13,4'W.
+        c: l=35º 55,7'N L=005º 12'W.
         d: l=35º 57'N   L=005º 12,2'W.
       question: A las HRB 1606 estamos situados a 5 millas del faro de Cabo Negro,
         en el momento en que la sonda marca 200 metros. Si la velocidad=12,2 nudos,
@@ -550,7 +552,8 @@ categories:
       id: 45
       options:
         a: 080º.
-        b: 255º. €) 258º.
+        b: 255º.
+        c: 258º.
         d: 260º.
       question: Hallándose nuestra embarcación a 4,7 millas al sur verdadero del faro
         de Punta Europa, damos rumbo para pasar a 1 milla del faro de Isla de Tarifa.

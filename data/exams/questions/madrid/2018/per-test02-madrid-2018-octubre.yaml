@@ -82,7 +82,8 @@ categories:
       id: 7
       options:
         a: 28ºC.
-        b: 32ºC. 0) 34ºC.
+        b: 32ºC.
+        c: 34ºC.
         d: 35ºC.
       question: 'La incapacidad del cuerpo para producir el calor que se ha perdido
         se obtiene a la temperatura corporal de:'

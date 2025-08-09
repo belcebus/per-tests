@@ -43,6 +43,7 @@ categories:
         a: Dorso.
         b: Pala.
         c: Núcleo.
+        d: Parte de arrastre
       question: 'La parte de la hélice que empuja a la masa de agua produciéndose
         una reacción que empuja a la embarcación se denomina:'
   2:
@@ -57,6 +58,7 @@ categories:
           a un boyarín para balizar el ancla.
         b: Palo o percha larga, con un gancho metálico en un extremo, para coger la
           guía o las amarras.
+        c: Un peso cilíndrico unido a un cabo que se deja caer hasta el fondo para conocer el tipo de fondo.
         d: Es la superficie de fondo marino donde se afirma el ancla.
       question: ¿Qué es el tenedero?
     - category: 2
@@ -65,6 +67,7 @@ categories:
       id: 6
       options:
         a: Extremo del cabo.
+        b: Pieza del muelle para hacer firme un cabo que generalmente es de madera.
         c: Lazo que se forma en el extremo de un cabo doblándolo y uniéndolo con costura
           o ligada.
         d: Nudo empleado para unir dos cabos.
@@ -80,10 +83,10 @@ categories:
         a: Es recomendable empujar por la popa en lugar de tirar por proa, ya que
           de esta forma se acortan las distancias de maniobra.
         b: Hay que intentar mantener una distancia entre el remolcador y el remolcado
-          equivalente a 7 esloras de la embarcación remolcada. e) Por todos los medios
-          posibles el remolcador y el remolcado deberían ir lo más juntos que permita
-          el remolque por proa, teniendo en cuenta que a menor velocidad mayor longitud
-          de remolque.
+          equivalente a 7 esloras de la embarcación remolcada.
+        c: Por todos los medios posibles el remolcador y el remolcado deberían ir
+          lo más juntos que permita el remolque por proa, teniendo en cuenta que a menor
+          velocidad mayor longitud de remolque.
         d: Ambas embarcaciones estarán abarloadas, unidas por los oportunos cabos.
       question: ¿Cuál de las siguientes formas de realizar un remolque es recomendable
         en un río angosto o dentro de un puerto?
@@ -380,8 +383,8 @@ categories:
       options:
         a: La velocidad mínima a la cual la embarcación es capaz de maniobrar adecuadamente.
         b: La velocidad máxima a la cual la embarcación es capaz de maniobrar adecuadamente.
-        c: La velocidad a la cual la embarcación es capaz de evitar un abordaje. La
-          velocidad a la cual el oficial de guardia en el puente puede realizar una
+        c: La velocidad a la cual la embarcación es capaz de evitar un abordaje.
+        d: La velocidad a la cual el oficial de guardia en el puente puede realizar una
           vigilancia adecuada.
       question: 'Se define la velocidad de gobierno como:'
   8:

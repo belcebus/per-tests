@@ -115,10 +115,11 @@ categories:
       correct_answer: d
       id: 10
       options:
+        a: Se emplea para mejorar el eco de una emisión electromagnética que emite la antena del radar.
         c: Es conveniente llevarlo siempre izado para facilitar la detección de nuestro
           barco por otros que naveguen por la zona.
         b: Es un cuerpo poliédrico que se iza en una cruceta.
-        d: Su uso es obligatorio para los cascos metálicos,
+        d: Su uso es obligatorio para los cascos metálicos.
       question: 'Respecto al reflector de radar indique qué afirmación es incorrecta:'
   4:
     name: Legislación
@@ -233,8 +234,8 @@ categories:
           y la anchura disponibles del agua navegable, tiene una capacidad muy restringida
           de apartarse de la derrota que está siguiendo.
         b: Un buque de propulsión mecánica que tiene una capacidad muy restringida
-          de apartarse de la derrota que está siguiendo. e) Un buque de propulsión
-          mecánica que, por razón de su calado en relación con la profundidad y la
+          de apartarse de la derrota que está siguiendo
+        c: Un buque de propulsión mecánica que, por razón de su calado en relación con la profundidad y la
           anchura disponibles del agua navegable, tiene una capacidad muy restringida
           de apartarse de la derrota que está siguiendo.
         d: Un buque de propulsión mecánica con capacidad de maniobra restringida.

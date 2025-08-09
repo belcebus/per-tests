@@ -358,7 +358,8 @@ categories:
       options:
         a: De su mismo arqueo.
         b: De su misma velocidad.
-        c: De su misma eslora. 3) Fondeados.
+        c: De su misma eslora.
+        d: Fondeados.
       question: 'Cuando un buque pesquero no esté pescando, no exhibirá las luces
         y marcas prescritas para buques de pesca, sino únicamente las prescritas para
         los buques:'
@@ -382,7 +383,8 @@ categories:
       id: 29
       options:
         a: Atracar al costado de otra embarcación.
-        b: Atracar con el costado al muelle. ec) Adelantarla por estribor.
+        b: Atracar con el costado al muelle.
+        c: Adelantarla por estribor.
         d: Atracar popa con popa.
       question: 'Abarloarse a una embarcación es:'
   8:

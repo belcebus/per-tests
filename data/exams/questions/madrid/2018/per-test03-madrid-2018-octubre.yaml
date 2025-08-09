@@ -499,7 +499,8 @@ categories:
       id: 41
       options:
         a: 5ºW.
-        b: 1ºE. 2) 5ºE.
+        b: 1ºE.
+        c: 5ºE.
         d: 1ºW.
       question: 'Hallar el desvío con una Ct = -2º y una dm = 3º W:'
   11:
@@ -538,7 +539,8 @@ categories:
       id: 44
       options:
         a: l=35º 53,4'N L=005º 34,4'W.
-        b: l=35º 53,2'N L=005º 35,2'W. 0) l=35º 53,9'N L=005º 34,4'W.
+        b: l=35º 53,2'N L=005º 35,2'W.
+        c: l=35º 53,9'N L=005º 34,4'W.
         d: l=35º 53,4'N L=005º 35,2'W.
       question: Hallar nuestra situación verdadera si estando situados en la oposición
         del faro de Isla de Tarifa y el faro de Punta Alcazar y navegando al rumbo

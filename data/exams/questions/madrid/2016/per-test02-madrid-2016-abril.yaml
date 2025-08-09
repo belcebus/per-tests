@@ -184,7 +184,8 @@ categories:
       id: 15
       options:
         a: No.
-        b: Sólo si hay luz diurna. e) Sólo en ausencia de luz diurna.
+        b: Sólo si hay luz diurna.
+        c: Sólo en ausencia de luz diurna.
         d: Sí.
       question: ¿Podemos utilizar una marca de aguas navegables para indicar un punto
         de recalada?
@@ -429,8 +430,8 @@ categories:
       id: 33
       options:
         a: La longitud de la zona generadora de un viento.
-        b: La persistencia, tiempo que un viento está soplando. c) La velocidad del
-          viento.
+        b: La persistencia, tiempo que un viento está soplando.
+        c: La velocidad del viento.
         d: Distancia que recorre el viento hasta llegar a la costa.
       question: 'Se entiende por fetch:'
     - category: 9
@@ -453,7 +454,7 @@ categories:
       id: 35
       options:
         a: El peso de una columna de aire de igual altura a la de agua equivalente.
-          b) El peso de una columna de mercurio de 760 mm de altura a 15ºC.
+        b: El peso de una columna de mercurio de 760 mm de altura a 15ºC.
         c: La fuerza por unidad de superficie que ejerce el aire en un punto determinado.
         d: El peso de un volumen de aire igual a una columna de 760 mm de altura y
           un metro cuadrado de base.

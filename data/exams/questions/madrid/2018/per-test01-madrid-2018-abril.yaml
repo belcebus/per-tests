@@ -490,7 +490,8 @@ categories:
       id: 40
       options:
         a: 60º.
-        b: 300º. 0) 120º.
+        b: 300º.
+        c: 120º.
         d: 240º.
       question: 'La conversión del rumbo N60E a rumbo circular es:'
     - category: 10
@@ -527,7 +528,8 @@ categories:
       id: 43
       options:
         a: l=35º 51,4'N L=005º 51,5'W.
-        b: l=35º 52'N   L=005º 50,5'W, 0) l=35º 51,4'N L=005º 50,5'W.
+        b: l=35º 52'N   L=005º 50,5'W.
+        c: l=35º 51,4'N L=005º 50,5'W.
         d: l=35º 52'N   L=005º 52,5'W.
       question: Hallar nuestra situación verdadera si nos encontramos a 5 millas del
         faro de Cabo Espartel y a 5 millas de la marca cardinal norte próxima a Punta

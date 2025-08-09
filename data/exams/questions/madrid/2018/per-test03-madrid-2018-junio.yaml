@@ -134,8 +134,9 @@ categories:
       correct_answer: c
       id: 11
       options:
+        a: 250 metros en las playas y 45 metros en el resto de la costa.
         b: 200 metros en las playas y 45 metros en el resto de la costa.
-        c: 200 metros en las playas y 50 metros en el resto de la costa,
+        c: 200 metros en las playas y 50 metros en el resto de la costa.
         d: 250 metros en las playas y 50 metros en el resto de la costa.
       question: ¿Cuál de las siguientes afirmaciones es correcta? En los tramos de
         costa que no estén balizados como zona de baño se entiende que esta ocupa
@@ -290,7 +291,8 @@ categories:
         a: Todo buque navegando a vela siempre que su maquinaria propulsora, caso
           de llevarla, no se esté utilizando.
         b: Todo buque que cuente al menos con una vela cuadra, marconi, cangreja o
-          latina. e) Todo buque navegando a vela independientemente de si se está
+          latina.
+        c: Todo buque navegando a vela independientemente de si se está
           utilizando o no su maquinaria propulsora.
         d: Todo buque navegando a vela que cuente con un motor fueraborda.
       question: Según las definciones que aparecen en el RIPA, ¿qué entendemos por
@@ -523,7 +525,8 @@ categories:
       id: 42
       options:
         a: Dv= 153º.
-        b: Dv= 333º. e) Dv= 320º.
+        b: Dv= 333º. 
+        c: Dv= 320º.
         d: Dv= 140º.
       question: Una embarcación que se sitúa en la posición l=36º 08,7'N L= 006º 00,5'W,
         ¿con qué demora verdadera (Dv) observa el faro de Cabo Trafalgar?
@@ -533,7 +536,8 @@ categories:
       id: 43
       options:
         a: Ct= 7,5º (+).
-        b: Ct= 6,0º (+). e) Ct= 0,5º (+).
+        b: Ct= 6,0º (+).
+        c: Ct= 0,5º (+).
         d: Ct= 1,0º (-).
       question: En una carta náutica figura el valor de la declinación magnética en
         el año 2011 (3º 13' NE) y la variación anual (7 NE). Calcular la corrección
@@ -544,6 +548,7 @@ categories:
       correct_answer: b
       id: 44
       options:
+        a: l=35º 49,2'N L=005º 45,7'W.
         b: l=35º 49,6'N L=005º 46,5'W.
         c: l=35º 49,1'N L=005º 49,4'W.
         d: l=35º 48,6'N L=005º 49,9'W.

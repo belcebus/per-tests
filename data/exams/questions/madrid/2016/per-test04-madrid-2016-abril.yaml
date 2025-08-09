@@ -563,7 +563,8 @@ categories:
       id: 44
       options:
         a: l=36º 04,6' N ; L=006º 13,8' W.
-        b: l=36º 03,9' N ; L=006º 10,9' W. 0) l=36º 03,0' N ; L=006º 11,8' W.
+        b: l=36º 03,9' N ; L=006º 10,9' W.
+        c: l=36º 03,0' N ; L=006º 11,8' W.
         d: l=36º 06,6' N ; L=006º 13,1' W.
       question: Encontrándonos a 10 millas del faro de Cabo Trafalgar tomamos demora
         de aguja de éste 055º. Calcular la situación verdadera siendo la corrección
@@ -574,7 +575,8 @@ categories:
       id: 45
       options:
         a: 043º.
-        b: 037º. 0) 042,5º.
+        b: 037º.
+        c: 042,5º.
         d: 032,5º.
       question: Encontrándonos en latitud l= 36º 00,0' N y longitud L= 006º 10,0'
         W, ponemos rumbo al faro de Cabo Trafalgar. Calcular rumbo de aguja si la

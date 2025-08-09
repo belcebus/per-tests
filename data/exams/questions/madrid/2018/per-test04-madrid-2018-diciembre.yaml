@@ -432,8 +432,7 @@ categories:
         a: Desde la tierra hacia el mar y perpendicular a la costa durante las horas
           nocturnas.
         b: Desde el mar a la tierra y perpendicular a la costa durante las horas nocturnas.
-          €) Desde la tierra hacia el mar y perpendicular a la costa durante las horas
-          diurnas.
+        c: Desde la tierra hacia el mar y perpendicular a la costa durante las horas diurnas.
         d: Desde el mar a la tierra y perpendicular a la costa durante las horas diurnas.
       question: 'El terral es un viento que se desplaza:'
     - category: 9

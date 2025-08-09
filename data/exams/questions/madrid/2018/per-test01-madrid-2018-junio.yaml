@@ -191,7 +191,8 @@ categories:
       options:
         a: Son, por lo general, iguales que las marcas laterales de la región B.
         b: Son iguales que las de la región B, solo difieren de la zona en la que
-          se utilizan. e) Son diferentes a las marcas laterales de la región B.
+          se utilizan.
+        c: Son diferentes a las marcas laterales de la región B.
         d: Son iguales que las marcas de la región B pero diferentes a las marcas
           de la región C.
       question: 'Las marcas laterales de la región A:'
@@ -454,8 +455,8 @@ categories:
       id: 36
       options:
         a: Disminuye al aumentar la altura sobre el mar.
-        b: Aumenta al ganar profundidad sumergido en el mar. e) Disminuye al ganar
-          profundidad sumergido en el mar.
+        b: Aumenta al ganar profundidad sumergido en el mar.
+        c: Disminuye al ganar profundidad sumergido en el mar.
         d: Aumenta al aumentar la altura sobre el mar.
       question: 'La presión atmosférica:'
   10:

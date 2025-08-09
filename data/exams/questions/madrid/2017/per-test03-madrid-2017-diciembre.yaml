@@ -442,7 +442,8 @@ categories:
       options:
         a: Una tendencia al empeoramiento.
         b: Una tendencia al empeoramiento, con fuertes vientos, precipitaciones y
-          riesgo de temporal. 2) Una tendencia a la mejoría sin viento.
+          riesgo de temporal.
+        c: Una tendencia a la mejoría sin viento.
         d: Una tendencia a la mejoría pero con vientos fuertes.
       question: ¿Qué nos indica una subida brusca y rápida en la presión indicada
         por el barómetro aneroide?
