@@ -114,7 +114,6 @@ categories:
       id: 10
       options:
         a: Cambiar el rumbo y/o velocidad de la embarcación.
-        b: Subir el centro de gravedad de la embarcación. e) Bajar el centro de gravedad
         b: Subir el centro de gravedad de la embarcación.
         c: Bajar el centro de gravedad de la embarcación.
         d: Fondear.
@@ -129,8 +128,7 @@ categories:
       id: 11
       options:
         a: Color rojo, a la que se añade una franja blanca en diagonal.
-        b: Color azul, a la que se añade una franja blanca en diagonal. e) Colores
-        b: Color azul, a la que se añade una franja blanca en diagonal.
+        b: Color azul, a la que se añade una franja blanca en diagonal. 
         c: Colores blancos y azul, del tipo corneta.
         d: Colores blanco y rojo, del tipo corneta.
       question: 'De conformidad con el Código Internacional de Señales, la presencia
@@ -431,12 +429,13 @@ categories:
       correct_answer: c
       id: 33
       options:
-        a: En sentido antihorario y en un ángulo de unos 10-30? respecto a las isobaras
+        a: En sentido antihorario y en un ángulo de unos 10-30º respecto a las isobaras
           hacia fuera de la borrasca.
-        b: En sentido horario y en un ángulo de unos 10-30? respecto a las isobaras
-          hacia el centro de la borrasca. e) En sentido antihorario y en un ángulo
-          de unos 10-30° respecto a las isobaras hacia el centro de la borrasca.
-        d: En sentido horario y en un ángulo de unos 10-50? respecto a las isobaras
+        b: En sentido horario y en un ángulo de unos 10-30º respecto a las isobaras
+          hacia el centro de la borrasca.
+        c: En sentido antihorario y en un ángulo de unos 10-30º respecto a las isobaras
+          hacia el centro de la borrasca.
+        d: En sentido horario y en un ángulo de unos 10-50º respecto a las isobaras
           hacia el exterior de la borrasca.
       question: 'En una borrasca en el hemisferio norte el aire gira:'
     - category: 9
