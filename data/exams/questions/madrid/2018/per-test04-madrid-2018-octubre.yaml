@@ -235,7 +235,7 @@ categories:
       options:
         a: Con cinco pitadas cortas y rápidas.
         b: Con una pitada larga, una corta, una larga y una corta, en este orden,
-          2) Con dos pitadas largas seguidas de dos cortas.
+        c: Con dos pitadas largas seguidas de dos cortas.
         d: Con dos pitadas largas seguidas de una corta.
       question: Si en un canal angosto un buque va a ser alcanzado por otro, ¿cómo
         indicará que abriga dudas sobre la maniobra?
@@ -246,7 +246,8 @@ categories:
       options:
         a: Emitir alguna señal acústica eficaz a intervalos que no excedan de 2 minutos.
         b: Emitir dos pitadas largas, para señalar su posición, a intervalos que no
-          superen los 2 minutos. 0) Emitir tres pitadas consecutivas, una larga, una
+          superen los 2 minutos.
+        c: Emitir tres pitadas consecutivas, una larga, una
           corta y una larga, para señalar su posición, a intervalos de 1 minuto.
         d: Dar un repique de campana de unos 3 segundos, a intervalos que no excedan
           los 2 minutos.

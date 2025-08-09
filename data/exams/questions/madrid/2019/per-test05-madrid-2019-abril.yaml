@@ -150,8 +150,8 @@ categories:
       id: 12
       options:
         a: No se puede fondear.
-        b: Se puede fondear, pero no se puede navegar, Cc) Se puede navegar a una
-          velocidad no superior a tres nudos.
+        b: Se puede fondear, pero no se puede navegar,
+        c: Se puede navegar a una velocidad no superior a tres nudos.
         d: No hay limitaciones, siempre que se adopten las precauciones necesarias
           para evitar riesgo a la seguridad de la vida humana en la mar.
       question: 'En los tramos de costa que no estén balizados como zona de bafío,
@@ -192,7 +192,8 @@ categories:
       id: 15
       options:
         a: Si tiene, una esfera roja.
-        b: Dos esferas negras superpuestas, Cc) Si tiene, una esfera negra.
+        b: Dos esferas negras superpuestas.
+        c: Si tiene, una esfera negra.
         d: Dos esferas rojas superpuestas.
       question: 'La marca de tope de las Marcas de Aguas Navegables será:'
     - category: 5
@@ -375,7 +376,8 @@ categories:
       id: 28
       options:
         a: Codera.
-        b: Largo. Cc) Través,
+        b: Largo.
+        c: Través.
         d: Spring.
       question: Si se amarra una embarcación de costado al muelle, ¿cual de los siguientes
         cabos se da por el costado opuesto al muelle, y es muy útil para ayudar a
@@ -401,8 +403,8 @@ categories:
       options:
         a: El cierre de las puertas estancas.
         b: Evaluar los daños, se reconoce interiormente el casco, localizando las
-          posibles vías de agua que se hayan producido. Cc) Calcular las horas de
-          las mareas y determinar la exacta situación del buque varado.
+          posibles vías de agua que se hayan producido.
+        c: Calcular las horas de las mareas y determinar la exacta situación del buque varado.
         d: Aplicar fuerza a la embarcación en sentido perpendicular a la costa hacia
           la mar.
       question: 'La PRIMERA medida a tomar para salir de la embarrancada es:'

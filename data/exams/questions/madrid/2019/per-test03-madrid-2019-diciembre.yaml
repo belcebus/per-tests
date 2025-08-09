@@ -70,8 +70,9 @@ categories:
       id: 6
       options:
         a: Ballestrinque.
-        b: Vuelta de rezón. e) Llano,
-        d: As de guía,
+        b: Vuelta de rezón.
+        c: Llano.
+        d: As de guía.
       question: Para unir dos cabos de la misma mena utilizaremos el nudo:.
   3:
     name: Seguridad
@@ -304,10 +305,10 @@ categories:
         a: Todo buque construido y armado con redes, líneas, aparejos de arrastre
           u otros artes de pesca que restrinjan su maniobrabilidad,
         b: Todo buque que esté pescando con redes, líneas, aparejos de arrastre, curricán
-          u otros artes de pesca que no restrinjan su maniobrabilidad. ec) Todo buque
-          que esté pescando con redes, líneas, aparejos de arrastre u otros artes
-          de pesca que restrinjan su manjobrabilidad.
-        d: Todo buque construido y armado con redes, lineas, aparejos de arrastre,
+          u otros artes de pesca que no restrinjan su maniobrabilidad.
+        c: Todo buque que esté pescando con redes, líneas, aparejos de arrastre u otros artes
+          de pesca que restrinjan su maniobrabilidad.
+        d: Todo buque construido y armado con redes, líneas, aparejos de arrastre,
           curricán u otros artes de pesca que restrinjan su maniobrabilidad.
       question: 'Según la Regla 3 del RIPA, entendemos por "buque dedicado a la pesca":'
     - category: 6
@@ -536,10 +537,10 @@ categories:
       id: 40
       options:
         a: Es el ángulo formado por la línea proa-popa con el meridiano del lugar
-          y se mide de 0% a 360” en el sentido de las agujas del reloj,
-        b: Es el que utilizaremos siempre en las cartas de navegación. e) El rumbo
-          $ 40” W equivale a 140".
-        d: Se mide de 0” a 90” y se cuentan a partir del N o S hacia el E y W.
+          y se mide de 0º a 360º en el sentido de las agujas del reloj,
+        b: Es el que utilizaremos siempre en las cartas de navegación.
+        c: El rumbo S 40º W equivale a 140º.
+        d: Se mide de 0º a 90º y se cuentan a partir del N o S hacia el E y W.
       question: 'Indique cuál de las siguientes afirmaciones sobre el rumbo cuadrantal
         es VERDADERA:'
     - category: 10
@@ -577,17 +578,19 @@ categories:
       correct_answer: d
       id: 43
       options:
-        b: l= 35º58'N;   L=006º36,5'W
-        c: l= 36º00,2'N; L=006º36,5'W
-        d: l= 36º00,2'N; L=005º36,5'W
-      question: ¿Cuáles son las coordenadas del faro de Isla Tarifa? 3) l= 36º02'N;   L=005º36,5'W
+        a: l=36º02'N L=005º36,5'W
+        b: l=35º58'N L=006º36,5'W
+        c: l=36º00,2'N L=006º36,5'W
+        d: l=36º00,2'N L=005º36,5'W
+      question: ¿Cuáles son las coordenadas del faro de Isla Tarifa? 3) l=36º02'N; L=005º36,5'W
     - category: 11
       category_name: Carta de navegación
       correct_answer: c
       id: 44
       options:
-        a: 6,57 metros,
-        b: 1,15 metros, 0) 5,15 metros,
+        a: 6,57 metros.
+        b: 1,15 metros.
+        c: 5,15 metros.
         d: 5,12 metros.
       question: ¿Cuál es la sonda a las 15:55 Hrb del día $ de octubre de 2019 en
         un punto de la carta de la Ría de Arousa que tiene 4 metros de sonda?
@@ -596,11 +599,12 @@ categories:
       correct_answer: a
       id: 45
       options:
-        a: 043,2º
-        b: 044,5º 6) 045,1º
-        d: 041,9º
+        a: 043,2º.
+        b: 044,5º.
+        c: 045,1º.
+        d: 041,9º.
       question: Calcular para el día de hoy, suponiendo ausencia de viento y corriente,
-        el rambo de aguja para ir desde un punto situado a 5 millas al Oeste verdadero
+        el rumbo de aguja para ir desde un punto situado a 5 millas al Oeste verdadero
         del faro de Cabo Espartel, hasta otro punto situado a 5 millas al sur verdadero
         de Punta Camarinal. El desvío en la zona para ese rumbo es de 19 al Este.
 exam_info:

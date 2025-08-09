@@ -11,8 +11,8 @@ categories:
           timón.
         b: La caña del timón es el elemento vertical que, a falta de guardines, une
           la rueda del timón con su mecha. Un timón con caña tendrá siempre rueda,
-          pero un timón con rueda no tendrá siempre caña.  €) La caña del timón es
-          la parte que va desde el arganeo a la cruz.
+          pero un timón con rueda no tendrá siempre caña.
+        c: La caña del timón es la parte que va desde el arganeo a la cruz.
         d: La rueda del timón transmite el movimiento de los guardines a la mecha
           del timón.
       question: ¿Cuál de las siguientes afirmaciones es correcta?
@@ -22,7 +22,8 @@ categories:
       id: 2
       options:
         a: La embarcación tiene asiento.
-        b: La embarcación tiene escora. e) La embarcación no tiene asiento positivo.
+        b: La embarcación tiene escora.
+        c: La embarcación no tiene asiento positivo.
         d: El francobordo es mayor que el puntal.
       question: 'Siel calado de proa de la embarcación es menor que el calado de popa:'
     - category: 1
@@ -34,7 +35,8 @@ categories:
           mar de ciertos servicios,  y que además permiten realizar descargas.
         b: Por debajo de la línea de flotación, que deben permanecer siempre abiertas
           para que en caso de necesidad de uso de las bombas de achique, el agua pueda
-          expulsarse al mar.  €) Por encima de la línea de flotación, que deben permanecer
+          expulsarse al mar.
+        c: Por encima de la línea de flotación, que deben permanecer
           siempre abiertas para que en caso de necesidad de uso de las bombas de achique,
           el agua pueda expulsarse al mar.
         d: Por debajo de la línea de flotación, que se pueden utilizar como toma de
@@ -126,8 +128,8 @@ categories:
       id: 10
       options:
         a: Propiedad de una embarcación de no permitir el ingreso de líquidos.
-        b: Inercia de la embarcación. €) Facultad de una embarcación de recobrar su
-          posición de equilibrio.
+        b: Inercia de la embarcación.
+        c: Facultad de una embarcación de recobrar su posición de equilibrio.
         d: Capacidad de la embarcación de topar con el fondo, quedando inmovilizado,
           en algunos casos transitoriamente.
       question: 'Definición de estabilidad:'
@@ -143,8 +145,8 @@ categories:
           de cualquier tipo, con independencia de su medio de propulsión, cuyo casco
           tenga una eslora comprendida entre 2,5 metros y 24 metros, utilizada para
           fines deportivos o de recreo.
-        b: A menos que se disponga expresamente otra cosa, se aplicarán a todos los
-          buques.  €) Únicamente a los buques contruidos despues del 1 de julio de
+        b: A menos que se disponga expresamente otra cosa, se aplicarán a todos los buques.
+        c: Únicamente a los buques contruidos despues del 1 de julio de
           1986, entendiéndose a esos efectos, por buque construido a todo buque cuya
           quilla haya sido colocada o cuya construcción se halle en fase equivalente.
         d: Sólo a las embarcaciones y buques de recreo, con independencia de su modo
@@ -163,8 +165,8 @@ categories:
           el tamaño que se determina en el citado Real Decreto.
         b: Podrá izar la bandera reconocida en el Estatuto de la Comunidad Autónoma
           de las Islas Baleares, pero siempre al mismo tiempo que el pabellón nacional
-          y con el tamaño que se determina en el  citado Real Decreto.  €) Podrá izar
-          cualquier bandera o enseña reconocida en un Estatuto de Autonomía, pero
+          y con el tamaño que se determina en el  citado Real Decreto.
+        c: Podrá izar cualquier bandera o enseña reconocida en un Estatuto de Autonomía, pero
           siempre al mismo tiempo que el pabellón nacional y con el tamaño que determina
           el citado Real Decreto.
         d: Sólo podrá izar la bandera de España.
@@ -182,8 +184,8 @@ categories:
       id: 13
       options:
         a: 3 centelleos muy rápidos o rápidos seguidos de un periodo de oscuridad.
-        b: 9 centelleos muy rápidos o rápidos seguidos de un periodo de oscuridad.  €)
-          6 centelleos muy rápidos o rápidos seguidos inmediatamente de un destello
+        b: 9 centelleos muy rápidos o rápidos seguidos de un periodo de oscuridad.
+        c: 6 centelleos muy rápidos o rápidos seguidos inmediatamente de un destello
           largo al que sigue un periodo de oscuridad.
         d: Centelleante continuo, muy rápido o rápido,
       question: 'Los ritmos luminosos empleados en la marca cardinal Sur son:'
@@ -225,8 +227,8 @@ categories:
       id: 17
       options:
         a: Al compás del buque, e indican al navegante dónde están las aguas navegables.
-        b: A las aguas someras, e indican que las aguas son navegables a su alrededor.  €)
-          A zonas o configuraciones a las que se hace referencia en las publicaciones
+        b: A las aguas someras, e indican que las aguas son navegables a su alrededor.
+        c: A zonas o configuraciones a las que se hace referencia en las publicaciones
           náuticas, y su objetivo principal no es señalar canales u obstrucciones.
         d: A un sentido convencional del balizamiento, e indican los lados de babor
           y estribor de la derrota que debe seguirse.
@@ -249,18 +251,19 @@ categories:
           la inferior. o una marca bicónica; ii) una luz de tope a popa y más elevada
           que la luz verde todo horizonte; los buques de eslora inferior a 100 metros
           no tendrán obligación de exhibir esta luz, pero podrán hacerlo: y iii) las
-          luces de costado y una luz, de alcance.  €) i) dos luces rojas todo horizonte
+          luces de costado y una luz, de alcance.'
+        c: 'i) dos luces rojas todo horizonte
           en línea vertical, o una marca consistente en dos conos unidos por sus vértices
-          en línea vertical, uno sobre el otro; ij) una luz de tope a popa y más clevada
+          en línea vertical, uno sobre el otro; ii) una luz de tope a popa y más elevada
           que la luz verde todo horizonte; los buques de eslora inferior a 50 metros
           no tendrán obligación de exhibir esta luz, pero podrán hacerlo; y iii) las
           luces de costado y una luz, de alcance.'
-        d: i) dos luces verdes todo horizonte en línea vertical, o una marca consistente
+        d: 'i) dos luces verdes todo horizonte en línea vertical, o una marca consistente
           en dos conos unidos por sus vértices en línea vertical, uno sobre el otro;
-          1i) una luz de tope a popa y más elevada que la luz verde todo horizonte;
+          ii) una luz de tope a popa y más elevada que la luz verde todo horizonte;
           los buques de eslora inferior a 50 metros no tendrán obligación de exhibir
-          esta luz, pero podrán hacerlo; y ¡¡i) las luces de costado y una luz, de
-          alcance.
+          esta luz, pero podrán hacerlo; y iii) las luces de costado y una luz, de
+          alcance.'
       question: 'La Regla 26 del RIPA determina que un buque dedicado a la pesca de
         arrastre cuando vaya con arrancada exhibirá:'
     - category: 6
@@ -296,7 +299,8 @@ categories:
           mar.
         b: Las Reglas del RIPA no se aplican en ningún caso en un río, a no ser que
           tengan calado suficiente para permitir el tránsito de buques mercantes de
-          arqueo bruto mayor de 500.  €) Las Reglas del RIPA se aplican en aquellos
+          arqueo bruto mayor de 500.
+        c: Las Reglas del RIPA se aplican en aquellos
           ríos que sean navegables por los buques de navegación marítima.
         d: Las únicas Reglas que se aplican en un río son las que dispone la Confederación
           Hidrográfica correspondiente.
@@ -321,12 +325,12 @@ categories:
         a: No, la Regla 5 del RIPA prohibe expresamente el uso de auriculares cuando
           se está ejerciendo la  navegación.
         b: No, conforme a la Regla 5 del RIPA debemos mantener en todo momento una
-          eficaz vigilancia tanto visual como auditiva.  e) Sí, si tenemos conectado
-          un radar u otra ayuda a la navegación visual que nos compense por la pérdida
-          de vigilancia auditiva.
+          eficaz vigilancia tanto visual como auditiva.
+        c: Sí, si tenemos conectado un radar u otra ayuda a la navegación visual que
+          nos compense por la pérdida de vigilancia auditiva.
         d: Depende de si estamos navegando en mar abierta o en aguas congestionadas.
       question: Nos encontramos en navegación, hace mucho frío en el exterior con
-        lo que cerramos pucrtas y nos quedamos dentro del puente o cabina de mando
+        lo que cerramos puertas y nos quedamos dentro del puente o cabina de mando
         escuchando música por unos auriculares. ¿Estamos actuando correctamente?
     - category: 6
       category_name: Reglamento (RIPA)
@@ -351,7 +355,8 @@ categories:
       options:
         a: Que existe riesgo de abordaje.
         b: Que las variaciones de demora son irrelevantes, las que importan son las
-          variaciones de marcación,  €) Que debemos mantener nuestro rumbo y velocidad.
+          variaciones de marcación.
+        c: Que debemos mantener nuestro rumbo y velocidad.
         d: Que iremos cambiando el rumbo hacia babor repetidas veces pero con pocos
           grados cada vez.
       question: Encontrándonos en navegación, observamos por nuestro costado de estribor,
@@ -366,10 +371,9 @@ categories:
         a: De forma perpendicular a la dirección general de la corriente del tráfico.
           en la medida de lo posible,
         b: Con el menor ángulo posible en relación con la dirección general de la
-          corriente del tráfico.  €) No está permitido en ningún caso cruzar una vía
-          de circulación.
-        d: No está previsto, aunque avisaremos usando señales acústicas de nuestras
-          intenciones.
+          corriente del tráfico.
+        c: No está permitido en ningún caso cruzar una vía de circulación.
+        d: No está previsto, aunque avisaremos usando señales acústicas de nuestras intenciones.
       question: 'Si nos vemos obligados a cruzar una vía de circulación dentro de
         un dispositivo de separación de tráfico, lo haremos:'
     - category: 6
@@ -433,7 +437,7 @@ categories:
       options:
         a: Pondremos un rumbo opuesto a la dirección del viento igualando su velocidad.
         b: Pondremos un rumbo opuesto a la dirección del viento superando su velocidad.
-          e) Pondremos un rumbo en la dirección del viento superando su velocidad.
+        c: Pondremos un rumbo en la dirección del viento superando su velocidad.
         d: Pondremos un rumbo en la dirección del viento igualando su velocidad.
       question: 'Para socairear el fuego:'
     - category: 8
@@ -442,8 +446,8 @@ categories:
       id: 32
       options:
         a: El registro de las constantes vitales.
-        b: El cuadro con un sistema de coordenadas letra-número. e) Su carácter eminentemente
-          práctico, el sencillo lenguaje utilizado, y las aclaratorias ilustraciones.
+        b: El cuadro con un sistema de coordenadas letra-número.
+        c: Su carácter eminentemente práctico, el sencillo lenguaje utilizado, y las aclaratorias ilustraciones.
         d: La gran cantidad de fotos que contiene.
       question: 'La gran utilidad de la Guía Sanitaria a Bordo (guía médica) es:'
   9:
@@ -457,7 +461,8 @@ categories:
         a: La temperatura de 100? corresponde a la mezcla agua-vapor (punto de fusión
           del agua).
         b: La temperatura de 100” corresponde a la mezcla agua-vapor (punto de ebullición
-          del agua). €) La temperatura de 0? corresponde a la mezcla hielo-agua (punto
+          del agua).
+        c: La temperatura de 0? corresponde a la mezcla hielo-agua (punto
           de fusión del agua).
         d: La temperatura de -10” corresponde a la mezcla hielo-agua (punto de fusión
           del hielo).
@@ -481,7 +486,7 @@ categories:
       options:
         a: Líneas que unen los puntos de igual temperatura en un momento determinado.
         b: Líneas que unen los puntos de presiones máximas en un momento determinado.
-          €) Líneas que unen los puntos de igual presión en un momento determinado.
+        c: Líneas que unen los puntos de igual presión en un momento determinado.
         d: Líneas que unen los puntos de temperaturas máximas en un momento determinado.
       question: 'Las líneas isobaras son:'
     - category: 9
@@ -492,8 +497,8 @@ categories:
         a: Por VHF, a través de los canales y a las horas establecidas, que podemos
           consultar en la web de salvamento marítimo.
         b: Por VHF a través del canal 70, a las horas establecidas que podemos consultar
-          en la web de salvamento marítimo.  €) Por VHF, a través del canal 16, diariamente
-          a las 12.15 horas (horario UTC)
+          en la web de salvamento marítimo.
+        c: Por VHF, a través del canal 16, diariamente a las 12.15 horas (horario UTC)
         d: Por VHF, a través del canal 16, diariamente a las 8.30 horas (horario UTC)
       question: 'Durante la navegación podemos obtener información meteorológica:'
   10:
@@ -506,9 +511,9 @@ categories:
       options:
         a: Si el viento incide justo por la popa el abatimiento frenará nuestra embarcación.
         b: A efectos de cálculos náuticos el abatimiento tomará signo positivo cuando
-          el viento incida sobre la banda de babor.  €) A efectos de cálculos náuticos
-          el abatimiento tomará signo negativo cuando el viento incida sobre la banda
-          de estribor.
+          el viento incida sobre la banda de babor.
+        c: A efectos de cálculos náuticos el abatimiento tomará signo negativo
+          cuando el viento incida sobre la banda de estribor.
         d: Si el viento incide justo por la proa el abatimiento es nulo.
       question: 'Señala cuál de las afirmaciones es INCORRECTA:'
     - category: 10
@@ -518,8 +523,9 @@ categories:
       options:
         a: Es la línca que pasa perpendicular al Ecuador.
         b: Es el círculo máximo que pasa por los polos y por la situación donde se
-          encuentre el observador. €) Es una línea paralela al ecuador que pasa por
-          el observador,
+          encuentre el observador.
+        c: Es una línea paralela al ecuador que pasa por
+          el observador.
         d: Es el meridiano origen de las longitudes.
       question: ¿Cómo se define el meridiano del lugar?
     - category: 10
@@ -527,12 +533,11 @@ categories:
       correct_answer: b
       id: 39
       options:
-        a: Que si nuestro rumbo de aguja fuera 45", la demora verdadera del faro sería
-          80”
-        b: Que si nuestro rumbo de aguja fuera 35%, la demora de aguja sería 70*.
+        a: Que si nuestro rumbo de aguja fuera 45º, la demora verdadera del faro sería 80º.
+        b: Que si nuestro rumbo de aguja fuera 35º, la demora de aguja sería 70º.
         c: Que vamos navegando rumbo NE.
         d: Que vamos navegando rumbo SE.
-      question: 'Si decimos que un faro se encuentra 35” grados abierto por la amura
+      question: 'Si decimos que un faro se encuentra 35º grados abierto por la amura
         de estribor, lo que queremos decir es:'
     - category: 10
       category_name: Teoría de la navegación
@@ -551,8 +556,8 @@ categories:
       options:
         a: Es el coeficiente a aplicar debido a la interacción del magnetismo terrestre
           con las partes metálicas del buque.
-        b: Es el ángulo que forma el norte de aguja con el norte magnético. €) Es
-          el ángulo que forma la linea proa - popa con el norte magnético.
+        b: Es el ángulo que forma el norte de aguja con el norte magnético.
+        c: Es el ángulo que forma la linea proa - popa con el norte magnético.
         d: Es el ángulo que forma el norte verdadero con el norte magnético.
       question: ¿Cómo se define la declinación magnética?
   11:
@@ -563,9 +568,10 @@ categories:
       correct_answer: a
       id: 42
       options:
-        a: 1=36% 05,2"N L=00514,6"W.
-        b: l=36" 04'N L=005%14,2"W. e) 1=36" 05,8'N L=005%15,1"W,
-        d: I=36 04,6'N L=005"15,2"W,
+        a: l=36º 05,2'N L=005º 14,6"W.
+        b: l=36º 04'N   L=005º 14,2"W.
+        c: l=36º 05,8'N L=005º 15,1"W.
+        d: l=36º 04,6'N L=005º 15,2"W.
       question: A las HRB 1606 tomamos la demora de aguja del faro de Punta Almina=-23
         1? y la demora de aguja del faro de Punta Europa=341". Hallar nuestra situación
         de estima a las HRB 1736 si la velocidad=6,5 nudos, el rumbo de aguja=005”
@@ -587,9 +593,10 @@ categories:
       correct_answer: d
       id: 44
       options:
-        a: 1235 54,1'N L=005" 45,4 'W.
-        b: 1=35* 53,6'N L=005 46,2"W. e) 1=35% 52,6'N L=005* 46"W.
-        d: 135" 53,3"N L=005" 45,8"W.
+        a: l=23º 54,1'N L=005º 45,4'W.
+        b: l=35º 53,6'N L=005º 46,2'W.
+        c: l=35º 52,6'N L=005º 46,0'W.
+        d: l=35º 53,3'N L=005º 45,8'W.
       question: Hallar. nuestra situación verdadera si nos encontramos en la oposición
         de los faros de Punta de Gracia y Punta Malabata en el momento en el que la
         sonda marca 200 metros en las proximidades de la costa africana.
@@ -598,9 +605,10 @@ categories:
       correct_answer: c
       id: 45
       options:
-        a: 328".
-        b: 327. 0) 324%,
-        d: '322.'
+        a: 328º.
+        b: 327º.
+        c: 324º.
+        d: 322º.
       question: Navegando en las inmediaciones de la costa española y estando situados
         en la intersección de la línea isobática de 100 metros con la demora de aguja
         del faro de Cabo Trafalgar cuyo valor es de 005, hallar el rumbo de aguja

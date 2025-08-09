@@ -279,8 +279,8 @@ categories:
         a: Sí, siendo las más restrictivas para los buques dedicados al transporte
           de mercancías peligrosas.
         b: Sí, siendo las más restrictivas para los buques que transportan carga de
-          proyecto. e) Sí, siendo las más restrictivas para los buques que transportan
-          gas licuado.
+          proyecto.
+        c: Sí, siendo las más restrictivas para los buques que transportan gas licuado.
         d: No.
       question: ¿Se determina en el RIPA la velocidad de seguridad dependiendo del
         tipo de buque del que se trate?
@@ -488,9 +488,10 @@ categories:
       correct_answer: b
       id: 39
       options:
-        a: 310º
-        b: 230º e) 180º
-        d: 130º
+        a: 310º.
+        b: 230º.
+        c: 180º.
+        d: 130º.
       question: 'La conversión del rumbo S50W a rumbo circular es:'
     - category: 10
       category_name: Teoría de la navegación

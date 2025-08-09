@@ -568,7 +568,8 @@ categories:
       id: 44
       options:
         a: l=36º01,1'N L=005º52,9'W.
-        b: l=36º01,4'N L=005º51,4'W. e) l=36º02,2'N L=005º52,9'W.
+        b: l=36º01,4'N L=005º51,4'W.
+        c: l=36º02,2'N L=005º52,9'W.
         d: l=36º01,2'N L=005º52,2'W.
       question: 'Calcular la situación estimada a las 08 horas y 20 minutos de una
         embarcación que navega con una velocidad de 12 nudos desde la luz roja del
@@ -580,7 +581,8 @@ categories:
       id: 45
       options:
         a: l=36º06,9'N L=005º52,9'W.
-        b: l=36º02,2'N L=005º46,2'W. e)l=36º02,2'N L=005º52,9'W.
+        b: l=36º02,2'N L=005º46,2'W.
+        c: l=36º02,2'N L=005º52,9'W.
         d: l=36º06,9'N L=005º46,2'W.
       question: 'Obtener la situación por intersección de líneas de posición simultáneas
         de una embarcación que navega con rumbo de aguja = 300º, situada a 3,8 millas

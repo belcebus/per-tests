@@ -90,7 +90,7 @@ class ExamService:
         for i, question in enumerate(selected_questions):
             # Crear una copia de la pregunta con ID único temporal
             unique_question = Question(
-                id=f"{exam_id}_q{i+1}",  # ID único: exam_abc123_q1, exam_abc123_q2, etc.
+                id=f"{exam_id}_q{i + 1}",  # ID único: exam_abc123_q1, exam_abc123_q2, etc.
                 enunciado=question.enunciado,
                 opciones=question.opciones,
                 respuesta_correcta=question.respuesta_correcta,
@@ -419,7 +419,7 @@ class ExamService:
         for i, question in enumerate(specific_questions):
             # Crear una copia de la pregunta con ID único temporal
             unique_question = Question(
-                id=f"{exam_id}_q{i+1}",  # ID único: specific_abc123_q1, specific_abc123_q2, etc.
+                id=f"{exam_id}_q{i + 1}",  # ID único: specific_abc123_q1, specific_abc123_q2, etc.
                 enunciado=question.enunciado,
                 opciones=question.opciones,
                 respuesta_correcta=question.respuesta_correcta,

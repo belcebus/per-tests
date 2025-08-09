@@ -579,9 +579,10 @@ categories:
       correct_answer: d
       id: 44
       options:
-        a: CT = +4,5º
-        b: CT = -2,1º e) CT = -4,5º
-        d: CT = +2,1º
+        a: CT = +4,5º.
+        b: CT = -2,1º.
+        c: CT = -4,5º.
+        d: CT = +2,1º.
       question: Calcular la corrección total (CT) para el año en curso, utilizando
         los datos de la carta y un desvío = 3,3ºE
     - category: 11

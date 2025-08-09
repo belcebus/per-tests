@@ -548,7 +548,8 @@ categories:
       id: 43
       options:
         a: 343º.
-        b: 341º. 0) 345º.
+        b: 341º.
+        c: 345º.
         d: 347º.
       question: Navegando en una zona con una declinación magnética (dm) de 2º W y
         un desvío de la aguja de 4º E, se toma una demora de aguja (Da) de 343º a

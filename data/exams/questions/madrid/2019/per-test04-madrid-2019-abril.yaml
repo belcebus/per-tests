@@ -587,7 +587,8 @@ categories:
       id: 45
       options:
         a: l=35º 53,3'N L=005º 53,5'W.
-        b: l=35º 53'N   L=005º 54'W., 0) l=35º 53,3'N L=005º 52,9W,
+        b: l=35º 53'N   L=005º 54'W.
+        c: l=35º 53,3'N L=005º 52,9'W.
         d: l=35º 54,2'N L=005º 54'W.
       question: Siendo HRB 0906 y estando situados en la oposición del faro de Cabo
         Roche y el faro de Cabo Trafalgar y a 2,8 millas del faro de Cabo Trafalgar,

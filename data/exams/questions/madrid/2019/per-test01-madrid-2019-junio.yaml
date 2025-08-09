@@ -567,7 +567,8 @@ categories:
       id: 42
       options:
         a: 36º01,4'N 005º25,0'W
-        b: 35º58,5'N 005º13,1'W 0) 35º55,6'N 005º18,8'W
+        b: 35º58,5'N 005º13,1'W
+        c: 35º55,6'N 005º18,8'W
         d: 36º00,0'N 005º20,0'W
       question: Alas 21:00 HRB del día 22 de junio de 2019, una embarcación de recreo
         sale del puerto de La Línea de la Concepción. A las 21:45 HRB, se encuentra

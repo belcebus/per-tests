@@ -193,7 +193,8 @@ categories:
       id: 15
       options:
         a: Opuestos por sus vértices.
-        b: Opuestos por sus bases. e) Con los vértices hacía arriba.
+        b: Opuestos por sus bases.
+        c: Con los vértices hacía arriba.
         d: Con los vértices hacía abajo.
       question: 'La marca de tope es la característica diurna más importante de toda
         marca cardinal; que cuando se trate de una marca cardinal oeste consistirá
@@ -286,8 +287,8 @@ categories:
       id: 21
       options:
         a: Con una frecuencia de 90 o más centelleos por minuto.
-        b: Con una frecuencia de 100 o más centelleos por minuto. e) Con una frecuencia
-          de 110 o más centelleos por minuto.
+        b: Con una frecuencia de 100 o más centelleos por minuto.
+        c: Con una frecuencia de 110 o más centelleos por minuto.
         d: Con una frecuencia de 120 o más centelleos por minuto.
       question: 'De acuerdo con la Regla 21.f del RIPA, la «luz centelleante» es una
         luz que produce centelleos a intervalos regulares:'
@@ -364,9 +365,10 @@ categories:
       options:
         a: Sólo en condiciones de visibilidad reducida.
         b: Sólo en condiciones de visibilidad reducida y, en los pasos y canales angostos,
-          en cualquier condición de visibilidad. e) Sólo en condiciones de visibilidad
-          reducida y, en los pasos y canales angostos así como en los dispositivos
-          de separación de tráfico, en cualquier condición de visibilidad.
+          en cualquier condición de visibilidad.
+        c: Sólo en condiciones de visibilidad reducida y, en los pasos y canales angostos
+          así como en los dispositivos de separación de tráfico, en cualquier condición de
+          visibilidad.
         d: En cualquier condición de visibilidad.
       question: 'Conforme al RIPA, la obligación de mantener una eficaz vigilancia
         AUDITIVA rige necesariamente:'
