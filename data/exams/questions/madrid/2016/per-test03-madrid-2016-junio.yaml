@@ -534,6 +534,7 @@ categories:
       correct_answer: b
       id: 43
       options:
+        a: 4º (+).
         b: 6º (-).
         c: 6º (+).
         d: 4º (-).
@@ -544,9 +545,9 @@ categories:
       correct_answer: a
       id: 44
       options:
-        a: d= 10,5 millas y Rv=015º.
+        a: d= 10,5 millas y Rv= 015º.
         b: d= 11,0 millas y Rv= 017º.
-        c: d= 110 millas y Rv = 195.
+        c: d= 11,0 millas y Rv= 195º.
         d: d= 10,5 millas y Rv= 197º.
       question: ¿Cuál es la distancia (d) y el rumbo verdadero (Rv) desde el faro
         de Punta de Cires al faro de Punta Carnero?

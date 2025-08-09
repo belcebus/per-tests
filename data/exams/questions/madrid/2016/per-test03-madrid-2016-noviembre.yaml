@@ -195,8 +195,8 @@ categories:
       correct_answer: a
       id: 16
       options:
-        a: La sucesión numérica seguirá el sentido conv desde la mar. encional del
-          balizamiento,-es decir, numeradas
+        a: La sucesión numérica seguirá el sentido convencional del balizamiento,-es decir, numeradas
+          desde la mar. 
         b: En vías navegables confinadas deberán ser números impares para las rojas.
         c: En vías navegables confinadas deberán ser números pares para las verdes.
         d: La sucesión alfabética estará numerada siguiendo el sentido que determine
@@ -542,7 +542,8 @@ categories:
       id: 42
       options:
         a: l=36º 01,1'N L=005º 52,9'W.
-        b: l=36º 01,4'N L=005º 51,4'W. e)l=36º 02.2'N L=005º 52,9'W.
+        b: l=36º 01,4'N L=005º 51,4'W.
+        c: l=36º 02.2'N L=005º 52,9'W.
         d: l=36º 01,2'N L=005º 52,2'W.
       question: 'Calcular la situación estimada a las 08 horas y 20 minutos de una
         embarcación que navega con una velocidad de 12 nudos desde la luz roja del

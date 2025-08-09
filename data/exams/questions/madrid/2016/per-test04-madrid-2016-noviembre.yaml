@@ -367,8 +367,8 @@ categories:
       id: 27
       options:
         a: Con una frecuencia de 90 o más centelleos por minuto.
-        b: Con una frecuencia de 100 o más centelleos por minuto. e) Con una frecuencia
-          de 110 o más centelleos por minuto.
+        b: Con una frecuencia de 100 o más centelleos por minuto.
+        c: Con una frecuencia de 110 o más centelleos por minuto.
         d: Con una frecuencia de 120 o más centelleos por minuto.
       question: 'De acuerdo con la Regla 21.f del RIPA, la «luz centelleante» es una
         luz que produce centelleos a intervalos regulares:'
