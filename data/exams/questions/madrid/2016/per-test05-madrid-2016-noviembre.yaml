@@ -130,7 +130,8 @@ categories:
       options:
         a: Color rojo, a la que se añade una franja blanca en diagonal.
         b: Color azul, a la que se añade una franja blanca en diagonal. e) Colores
-          blancos y azul, del tipo corneta.
+        b: Color azul, a la que se añade una franja blanca en diagonal.
+        c: Colores blancos y azul, del tipo corneta.
         d: Colores blanco y rojo, del tipo corneta.
       question: 'De conformidad con el Código Internacional de Señales, la presencia
         de buceadores en operaciones se señala con la Bandera ALFA de:'
