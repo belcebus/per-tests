@@ -115,7 +115,8 @@ categories:
       options:
         a: Cambiar el rumbo y/o velocidad de la embarcación.
         b: Subir el centro de gravedad de la embarcación. e) Bajar el centro de gravedad
-          de la embarcación.
+        b: Subir el centro de gravedad de la embarcación.
+        c: Bajar el centro de gravedad de la embarcación.
         d: Fondear.
       question: 'Si se da una situación de sincronismo longitudinal, es aconsejable
         en primer lugar:'
