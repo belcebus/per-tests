@@ -1,0 +1,549 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 1
+      options:
+        a: Partes curvas de los costados, en las proximidades de la proa.
+        b: Partes curvas de los costados, en las proximidades de la popa.
+        c: Partes centrales de los costados.
+        d: Cada una de las mitades en las que queda dividido el buque por la línea
+          de crujía.
+      question: 'Las amuras son:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 2
+      options:
+        a: Crujía.
+        b: Través.
+        c: Flotación.
+        d: Carena.
+      question: ¿Cómo se denomina la línea que separa la obra viva de la obra muerta?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 3
+      options:
+        a: Puntal.
+        b: Calado.
+        c: Reserva de flotabilidad.
+        d: Obra muerta.
+      question: 'La distancia vertical, medida desde el canto bajo de la quilla hasta
+        la línea de flotación, se llama:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 4
+      options:
+        a: Molinete.
+        b: Grifo de fondo.
+        c: Regala.
+        d: Bao.
+      question: 'La máquina que se utiliza para levar el ancla se denomina:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 5
+      options:
+        a: Comienza a garrear.
+        b: Comienza a bornear.
+        c: Está con un orinque.
+        d: Despega del fondo.
+      question: Decimos que el ancla zarpa cuando...
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 6
+      options:
+        a: Mantendremos los motores en marcha.
+        b: Se izará la bandera de buzo sumergido.
+        c: Si el tenedero es bueno, podremos dejar el barco solo.
+        d: Se revisará la situación con la periodicidad que requieran las circunstancias
+          atmosféricas.
+      question: Mientras estamos fondeados…
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 7
+      options:
+        a: Meter timón a la banda contraria a la de caída del náufrago.
+        b: Meter timón a la misma banda de caída del náufrago.
+        c: Tocar la bocina insistentemente.
+        d: Llamar a Salvamento Marítimo.
+      question: En caso de que veamos caer a uno de los tripulantes por la borda,
+        lo primero que haremos será.
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 8
+      options:
+        a: Reducir velocidad y controlar frecuentemente la sonda.
+        b: Aumentar velocidad y accionar el piloto automático.
+        c: Poner rumbo mar adentro y controlar la corredera.
+        d: Izar el reflector radar y moderar la velocidad.
+      question: ¿Cuáles serían las dos principales acciones a ejecutar si se navega
+        por aguas someras?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 9
+      options:
+        a: Bozas.
+        b: Cornamusas.
+        c: Defensas.
+        d: Muertos.
+      question: Los elementos colocados en los costados de una embarcación antes de
+        atracar, para evitar rozamientos o golpes se llaman…
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 10
+      options:
+        a: Válvulas de acceso.
+        b: Grifos de fondo.
+        c: Lumbreras.
+        d: Bombas de aspiración.
+      question: Las válvulas fijas en el casco, en su obra viva, que permiten la entrada
+        de agua para la refrigeración del motor reciben el nombre de...
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 11
+      options:
+        a: A más de 4 millas.
+        b: A más de 12 millas.
+        c: A más de 24 millas.
+        d: Está totalmente prohibido.
+      question: Según el Anexo V del Convenio MARPOL, ¿a qué distancia de la costa
+        se pueden arrojar desechos o basura orgánica en bolsas de plástico perfectamente
+        cerradas?
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 12
+      options:
+        a: Nos mantendremos a la escucha.
+        b: Acudiremos a toda máquina en auxilio de las personas en peligro.
+        c: Obviaremos la llamada, para estos menesteres está Salvamento Marítimo.
+        d: Volveremos lo más rápidamente posible a puerto para avisar a Salvamento
+          Marítimo.
+      question: Nos encontramos navegando y recibimos un aviso de socorro de otra
+        embarcación, en la que hay personas en peligro. ¿Cómo debemos proceder según
+        lo indicado en el párrafo 1, Regla 33, Capítulo V del Convenio SOLAS?
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 13
+      options:
+        a: Marcas laterales
+        b: Marcas cardinales
+        c: Marcas de peligro aislado
+        d: Marcas especiales
+      question: Para indicar los lados de babor y estribor de la derrota que debe
+        seguirse en un canal, se utilizan las…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 14
+      options:
+        a: Las marcas cardinales.
+        b: Las marcas laterales.
+        c: Las marcas de aguas navegables.
+        d: Las marcas de peligro aislado.
+      question: Para indicar que las aguas más profundas de la zona en que se encuentra
+        colocada son las del cuadrante que da nombre a la marca, se utilizan…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 15
+      options:
+        a: Dos conos negros superpuestos, opuestos por la base.
+        b: Dos conos negros superpuestos, unidos por el vértice.
+        c: Dos conos negros superpuestos, con el vértice hacia arriba.
+        d: Dos conos negros superpuestos, con el vértice hacia abajo.
+      question: 'La marca cardinal Este, tiene como marca de tope:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 16
+      options:
+        a: Es una marca colocada o fondeada sobre un peligro e indica que está prohibida
+          la navegación a 200 metros de ella.
+        b: Es una marca colocada o fondeada sobre un peligro a cuyo alrededor las
+          aguas no son navegables.
+        c: Es una marca colocada o fondeada sobre un peligro a cuyo alrededor las
+          aguas son navegables.
+        d: Es una marca colocada o fondeada sobre un peligro que se encuentra al Norte
+          de la misma.
+      question: Una marca de peligro aislado…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 17
+      options:
+        a: Una X amarilla.
+        b: Un cono rojo.
+        c: Una esfera verde.
+        d: Una esfera roja.
+      question: 'La marca de tope de una marca especial es:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 18
+      options:
+        a: Todo avión que flote sobre el agua.
+        b: Todo helicóptero o similar que flote.
+        c: Toda aeronave proyectada para maniobrar sobre las aguas.
+        d: Únicamente los aviones de Salvamento Marítimo.
+      question: 'Regla 3. Según el Reglamento Internacional para Prevenir Abordajes
+        en la Mar (RIPA), la palabra "hidroavión" designa a:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 19
+      options:
+        a: Un buque con capacidad de maniobra restringida.
+        b: Un buque de vela.
+        c: Un buque de pesca.
+        d: Un buque sin gobierno.
+      question: Regla 3. Un buque de pesca de arrastre faenando, es considerado por
+        el Reglamento Internacional para Prevenir Abordajes en la Mar (RIPA) como…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 20
+      options:
+        a: Velocidad máxima del buque.
+        b: Velocidad mínima de crucero.
+        c: Velocidad que nos permite realizar la maniobra adecuada y eficaz para evitar
+          el abordaje.
+        d: Velocidad adecuada para fondear el buque.
+      question: Regla 6. ¿Qué entiende el Reglamento Internacional para Prevenir Abordajes
+        en la Mar (RIPA) por "velocidad de seguridad"?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 21
+      options:
+        a: Los buques petroleros.
+        b: Los buques militares.
+        c: Los buques de eslora inferior a 20 metros o los buques de vela.
+        d: Los buques de eslora superior a 20 metros o los buques de vela.
+      question: Según se indica en la Regla 9 apartado b, del Reglamento Internacional
+        para Prevenir Abordajes en la Mar (RIPA), los buques que no estorbarán el
+        tránsito de un buque que solo pueda navegar con la seguridad dentro de un
+        paso o canal angosto son…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 22
+      options:
+        a: Mantenerse apartado de la derrota del otro.
+        b: Seguir a rumbo.
+        c: Virar en redondo.
+        d: Aproar al viento.
+      question: Regla 12. Un velero que recibe el viento por babor, avista a otro
+        velero a barlovento y no tiene la seguridad de si el último recibe el viento
+        por babor o estribor. ¿Qué deberá hacer?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 23
+      options:
+        a: Todo buque que alcanza, al ir más rápido, tiene prioridad sobre el buque
+          alcanzado.
+        b: Todo buque alcanzado, al ir más lento, se mantendrá apartado de la derrota
+          del buque que alcanza.
+        c: Todo buque que alcanza nunca se convertirá en buque que cruza.
+        d: Todo buque que alcanza mantendrá su rumbo y velocidad, debiendo ser el
+          buque alcanzado el que debe variar su rumbo y/o velocidad.
+      question: 'Según la Regla 13 del Reglamento Internacional para Prevenir Abordajes
+        en la Mar (RIPA):'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 24
+      options:
+        a: 225°
+        b: 112,5°
+        c: 215°
+        d: 230°
+      question: Regla 21. La luz de tope tiene un arco de luz de...
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 25
+      options:
+        a: Las luces de costado, la de alcance, el tope de proa y dos luces todo horizonte,
+          roja la superior y verde la inferior.
+        b: Las luces de costado, la de alcance y el tope de proa.
+        c: Las luces de costado, la de alcance y dos luces todo horizonte, roja la
+          superior y verde la inferior.
+        d: Las luces de costado y una luz todo horizonte.
+      question: Regla 25. Un velero navegando de noche podrá exhibir…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 26
+      options:
+        a: Un buque sin gobierno.
+        b: Un buque con capacidad de maniobra restringida.
+        c: Un buque de pesca que no sea de arrastre.
+        d: Una embarcación de práctico.
+      question: Regla 27. Dos luces rojas en la misma vertical son características
+        de…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 27
+      options:
+        a: Estoy dando atrás.
+        b: Caigo a babor.
+        c: Caigo a estribor.
+        d: Pretendo alcanzarle por su banda de estribor.
+      question: Regla 34. Cuando un buque de propulsión mecánica en navegación da
+        "dos pitadas cortas". ¿Qué está indicando?
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 28
+      options:
+        a: Acción de apretar un cabo.
+        b: Librar un cabo.
+        c: Acción que consiste en dejar el cabo recogido y estibado con vueltas y
+          claro.
+        d: Acción de sujetar un cabo.
+      question: ¿Qué es adujar un cabo?
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 29
+      options:
+        a: Largo, través y esprín.
+        b: Largo, codera y ballestrinque.
+        c: Largo, calabrote y esprín.
+        d: Largo, esprín y ballestrinque.
+      question: ¿Cómo se denominan los cabos que se utilizan para atracar el barco
+        al muelle?
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 30
+      options:
+        a: Jamás abandonar la embarcación si no se está seguro del hundimiento.
+        b: Solicitar el auxilio a través de VHF.
+        c: Lanzar señales pirotécnicas.
+        d: Todas son ciertas.
+      question: Medidas a tomar antes de abandonar la embarcación.
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 31
+      options:
+        a: Sangre roja brillante que sale sin presión.
+        b: Sangre roja oscura que sale de forma continua.
+        c: Sangre roja oscura que sale sin presión.
+        d: Sangre roja, brillante, que sale a borbotones.
+      question: ¿Qué características tiene una hemorragia arterial?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 32
+      options:
+        a: Espeque.
+        b: Espiche.
+        c: Tapacete.
+        d: Capacete.
+      question: 'La cuña cónica, de madera, que puede usarse como medida de fortuna
+        para taponar una vía de agua circular se denomina:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 33
+      options:
+        a: Maestral.
+        b: Terral.
+        c: Virazón.
+        d: Mareal.
+      question: 'La brisa costera que, sin gradiente de presión, va del mar a la tierra,
+        se llama:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 34
+      options:
+        a: En el sentido contrario a las agujas de reloj y con una componente hacia
+          adentro.
+        b: En el mismo sentido a las agujas del reloj y con una componente hacia fuera.
+        c: Lateralmente hacia el interior del conjunto.
+        d: De Sur a Norte.
+      question: ¿Cómo circula el viento alrededor de un anticiclón en el hemisferio
+        Norte?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 35
+      options:
+        a: Las isobaras son líneas que unen puntos de igual presión atmosférica.
+        b: Las isobaras son líneas que unen puntos de diferente velocidad del viento.
+        c: Las isobaras son líneas que unen puntos de igual temperatura.
+        d: Las isobaras son líneas que unen puntos de igual humedad.
+      question: ¿Cuál de las siguientes afirmaciones es la correcta?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 36
+      options:
+        a: La humedad.
+        b: La visibilidad.
+        c: La presión.
+        d: La temperatura.
+      question: 'El milibar se utiliza en meteorología para medir:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 37
+      options:
+        a: La línea proa-popa y el meridiano magnético.
+        b: La línea proa-popa y el meridiano geográfico.
+        c: La línea proa-popa con referencia a la norte-sur.
+        d: La línea proa-popa y la visual al objeto.
+      question: 'Se llama marcación al ángulo formado entre:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 38
+      options:
+        a: Una milla náutica.
+        b: Una yarda marina.
+        c: Una braza de profundidad.
+        d: Un cable de distancia.
+      question: 'Un minuto de latitud corresponde con:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 39
+      options:
+        a: Una línea que une puntos de igual latitud.
+        b: Una línea que une puntos de igual longitud.
+        c: Una línea que une puntos de igual demora.
+        d: Una línea que une puntos de igual profundidad.
+      question: En la carta náutica, un veril es…
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 40
+      options:
+        a: Corrección total.
+        b: Desvío.
+        c: Declinación magnética.
+        d: Demora.
+      question: 'El ángulo que existe entre el Norte verdadero (Nv) y el Norte magnético
+        (Nm) se denomina:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 41
+      options:
+        a: Real Observatorio Marítimo Español.
+        b: La entidad pública Puertos del Estado.
+        c: El Instituto Hidrográfico de la Marina.
+        d: El Instituto Geográfico Nacional.
+      question: 'Los derroteros, los libros de faros y las cartas de navegación, en
+        España, los publica:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 42
+      options:
+        a: Ra = 227°
+        b: Ra = 214°
+        c: Ra = 143°
+        d: Ra = 323°
+      question: Obtengo rumbo en la carta 218°, declinación magnética corregida al
+        año actual 10°E y desvío (-6°). Indique el rumbo de aguja.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 43
+      options:
+        a: 35°58.2’N / 006°04.6’W
+        b: 35°56.8’N / 006°02.8’W
+        c: 35°54.2’N / 006°00.2’W
+        d: 35°52.1’N / 005°58.1’W
+      question: 'Situados sobre la línea de la enfilación de los faros de Punta Paloma
+        y la isla de Tarifa, tomamos distancia a Punta Cires: 5 millas. Desde esa
+        posición damos rumbo verdadero 260° y velocidad 15 mudos. ¿Cuál será nuestra
+        posición después de una hora y media de navegación?'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 44
+      options:
+        a: 13,6 millas
+        b: 15,8 millas
+        c: 10,2 millas
+        d: 8,3 millas
+      question: Al ser las 05:00 Hrb, el GPS de a bordo nos indica nuestra posición
+        verdadera (35°50´N / 006°10´W). Navegamos a rumbo de aguja 085°, con velocidad
+        de la embarcación de 10 nudos y corrección total de 5° NW. ¿Qué distancia
+        habrá que navegar para cortar la línea de la oposición de los faros Punta
+        Gracia y Espartel a ese rumbo y velocidad?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 45
+      options:
+        a: 245°
+        b: 250°
+        c: 255°
+        d: 260°
+      question: Situados a 3 millas al Sur verdadero del faro de Punta Europa, damos
+        rumbo para pasar a 1 milla al Sur verdadero del faro de isla de Tarifa. La
+        declinación magnética es 2°W y el desvío de aguja es (-3°) Calcule el rumbo
+        de aguja.
+exam_info:
+  call: noviembre
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2023

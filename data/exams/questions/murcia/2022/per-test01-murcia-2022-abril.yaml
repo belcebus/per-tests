@@ -1,0 +1,528 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 1
+      options:
+        a: Bordas.
+        b: Mamparas.
+        c: Baos.
+        d: Trancaniles.
+      question: 'Los refuerzos transversales que van de babor a estribor, se llaman:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 2
+      options:
+        a: Bocina.
+        b: Limera.
+        c: Pala.
+        d: Capacete.
+      question: 'La hélice gira alrededor de un eje que sale por un orificio llamado:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 3
+      options:
+        a: La altura entre la quilla y el plano de flotación.
+        b: La altura entre la quilla y la cubierta.
+        c: La anchura del casco.
+        d: La medida entre los extremos de proa y popa.
+      question: 'En una embarcación llamamos manga máxima a:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 4
+      options:
+        a: La diferencia entre los calados de proa y popa.
+        b: La suma de la manga y el puntal.
+        c: Un tipo de eslora.
+        d: Es el calado medido en medio del casco. PER - Tipo 1
+      question: 'El asiento es:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 5
+      options:
+        a: Hacer una gaza.
+        b: Reforzar otro cabo desgastado por el roce.
+        c: Para amarre de un cabo a una argolla.
+        d: Unir dos cabos.
+      question: 'El nudo "llano" se emplea para:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 6
+      options:
+        a: As de guía.
+        b: Ballestrinque.
+        c: Malla.
+        d: Doble margarita.
+      question: 'Al nudo empleado para hacer una gaza sin costuras, se le llama:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 7
+      options:
+        a: A estribor.
+        b: A babor.
+        c: A sotavento.
+        d: A barlovento.
+      question: En caso de remolque de emergencia, en la maniobra de aproximación,
+        el remolcado se situará respecto al buque remolcador…
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 8
+      options:
+        a: Desconectar los aparatos electrónicos.
+        b: Comprobar variaciones de la aguja.
+        c: Crear, a través del barco, un camino al mar para la descarga eléctrica
+          del rayo.
+        d: Todas las respuestas son ciertas.
+      question: En caso de tormenta eléctrica
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 9
+      options:
+        a: Poner la proa a la mar.
+        b: Poner la amura a la mar y reducir velocidad.
+        c: Poner popa a la mar.
+        d: Poner aleta a la mar y reducir la velocidad.
+      question: 'Capear un temporal es:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 10
+      options:
+        a: Cerrar todos los grifos de fondo.
+        b: Cerrar los grifos de fondo de la banda de sotavento.
+        c: Cerrar todos los grifos de fondo menos el de refrigeración del motor.
+        d: Cerrar el grifo de fondo de la banda de barlovento.
+      question: 'Cuando se navega con mal tiempo es aconsejable:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 11
+      options:
+        a: Se podrá navegar sin limitación.
+        b: Se podrá navegar a menos de 5 nudos.
+        c: Se podrá acceder hasta la playa pero siempre perpendicular a esta y a menos
+          de 3 nudos.
+        d: Solo está prohibido navegar durante la noche. PER - Tipo 1
+      question: 'En las playas no balizadas:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 12
+      options:
+        a: Con una bandera roja.
+        b: Con unas aletas colgadas del palo.
+        c: Con un cesto en la proa del barco.
+        d: Con una bandera blanca y azul terminada en picos.
+      question: 'Una embarcación que tiene buzos sumergidos en sus proximidades lo
+        indicará:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 13
+      options:
+        a: Castillete.
+        b: Espeque.
+        c: Cilíndrica.
+        d: Todas las respuestas anteriores son correctas.
+      question: Las marcas laterales de babor. ¿Qué forma pueden tener?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 14
+      options:
+        a: Boyas de castillete o espeques.
+        b: Boyas cilíndricas.
+        c: Boyas cónicas.
+        d: Boyas cilíndricas o espeques.
+      question: En el sistema cardinal las marcas son…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 15
+      options:
+        a: Una esfera negra.
+        b: Dos esferas negras superpuestas.
+        c: Un cilindro negro.
+        d: Dos cilindros negros superpuestos.
+      question: 'Las marcas de peligro aislado son negras, con una o más bandas anchas
+        horizontales rojas. Su marca de tope está formada por:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 16
+      options:
+        a: Una marca lateral que indica canal principal a babor.
+        b: Una marca cardinal Norte.
+        c: Una marca de aguas navegables.
+        d: Una marca especial.
+      question: 'Una marca esférica con franjas verticales rojas y blancas es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 17
+      options:
+        a: Marcas especiales.
+        b: Marcas laterales.
+        c: Aguas navegables.
+        d: Marcas de peligro aislado.
+      question: El color amarillo en las boyas significa …
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 18
+      options:
+        a: Todo avión que flote sobre las aguas.
+        b: Todo helicóptero o similar que flote.
+        c: Toda aeronave proyectada para maniobrar sobre las aguas.
+        d: Únicamente los aviones de Salvamento Marítimo. PER - Tipo 1
+      question: 'Según el Reglamento Internacional para prevenir los Abordajes en
+        la Mar, la palabra "hidroavión" designa a:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 19
+      options:
+        a: Vaya navegando a vela siempre que su maquinaria propulsora, caso de llevarla,
+          no se esté utilizando.
+        b: Lleva, como mínimo, una vela izada.
+        c: Está proyectado para navegar con un mínimo de una vela.
+        d: Es de recreo y propulsado mediante velas.
+      question: 'Un buque a vela puede considerarse como tal cuando:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 20
+      options:
+        a: Los buques petroleros.
+        b: Los buques militares.
+        c: Los buques de eslora inferior a 20 metros o los buques de vela.
+        d: Los buques de eslora superior a 20 metros o los buques de vela.
+      question: 'Canales angostos: En su apartado “b” dicha regla indica que los buques
+        que no estorbarán el tránsito de un buque que solo pueda navegar con seguridad
+        dentro de un paso o canal angosto son'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 21
+      options:
+        a: Cruce.
+        b: Alcance.
+        c: Vuelta encontrada.
+        d: Paso por el través de estribor.
+      question: 'Si navegando de noche observamos por la proa la luz de tope y las
+        de costado de otro buque, estaremos ante una situación de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 22
+      options:
+        a: Una luz blanca todo horizonte a popa.
+        b: Dos luces rojas todo horizonte a popa.
+        c: Una luz amarilla todo horizonte en un punto extremo.
+        d: Una luz blanca todo horizonte en su extremo de proa o cerca de este y otra
+          en el extremo de popa o cerca de éste.
+      question: 'Un objeto remolcado, inferior a 100 metros de eslora y 25 de manga,
+        poco visible y parcialmente sumergido, exhibirá de noche:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 23
+      options:
+        a: Dos luces todo horizonte roja sobre blanca.
+        b: Dos luces de tope.
+        c: Dos luces todo horizonte verde sobre blanca.
+        d: Dos luces todo horizonte blanca sobre roja.
+      question: 'Un buque dedicado a la pesca de arrastre mostrará como luces características:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 24
+      options:
+        a: Un cono con el vértice hacia abajo.
+        b: Una marca bicónica unida por sus vértices.
+        c: Tres bolas en línea vertical.
+        d: Tres marcas, la superior e inferior bolas, la central bicónica.
+      question: 'Un buque con capacidad de maniobra restringida de día, exhibirá:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 25
+      options:
+        a: Una luz verde o una marca bicónica.
+        b: En la parte de proa, una luz blanca todo horizonte o una bola negra.
+        c: Tres luces rojas o dos bolas.
+        d: Luces de costado o una marca bicónica. PER - Tipo 1
+      question: 'Los buques fondeados exhibirán en el lugar más visible:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 26
+      options:
+        a: Caigo a babor.
+        b: Caigo a estribor.
+        c: Estoy dando avante.
+        d: Estoy dando atrás.
+      question: '¿Qué significa dos pitadas cortas seguidas? (cuando varios buques
+        estén a la vista unos de otros):'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 27
+      options:
+        a: Estoy dando atrás.
+        b: Que no se entiende o se tienen dudas de la maniobra del buque al que van
+          dirigidas.
+        c: Tengo avería.
+        d: Caigo a babor.
+      question: 'Cinco o más pitadas o señales luminosas cortas y rápidas significan:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 28
+      options:
+        a: Acción de apretar un cabo.
+        b: Librar un cabo.
+        c: Acción que consiste en dejar el cabo recogido y estibado con vueltas y
+          claro.
+        d: Acción de sujetar un cabo.
+      question: ¿Qué es adujar un cabo?
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 29
+      options:
+        a: La hélice de babor la metemos a estribor y la de babor a estribor.
+        b: La hélice de babor la metemos a estribor y la de estribor a babor.
+        c: Daremos atrás con el motor de babor y avante con el de estribor.
+        d: Daremos atrás con el motor de estribor y avante con el de babor.
+      question: 'Si queremos ciabogar en una embarcación con dos hélices por estribor:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 30
+      options:
+        a: Butano y propano.
+        b: Madera y papel.
+        c: Gasolina.
+        d: Aluminio.
+      question: 'Si un extintor sirve según las instrucciones para apagar un incendio
+        de la clase “B”, lo utilizaremos en un fuego de:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 31
+      options:
+        a: Cuando tiene más del 30% de la superficie de la piel afectada.
+        b: Cuando tiene menos del 30% de la superficie de la piel afectada.
+        c: Cuando tiene menos del 10% de la superficie de la piel afectada.
+        d: Todas las respuestas anteriores son incorrectas.
+      question: 'Se consideran quemaduras graves:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 32
+      options:
+        a: Jamás abandonarla si no se está seguro del hundimiento.
+        b: Solicitar el auxilio a través de VHF.
+        c: Lanzamiento de señales pirotécnicas.
+        d: Todas las respuestas son ciertas. PER - Tipo 1
+      question: 'Medidas a tomar antes de abandonar la embarcación:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 33
+      options:
+        a: Presión.
+        b: Temperatura.
+        c: Humedad.
+        d: Gradiente.
+      question: 'El milibar, es una unidad de:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 34
+      options:
+        a: En el sentido contrario a las agujas de reloj y con una componente hacia
+          adentro.
+        b: En el mismo sentido a las agujas del reloj y con una componente hacia fuera.
+        c: Lateralmente hacia el interior del conjunto.
+        d: De Sur a Norte.
+      question: ¿Cómo circula el viento alrededor de un anticiclón en el hemisferio
+        Norte?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 35
+      options:
+        a: Cae.
+        b: Rachea.
+        c: Rola.
+        d: Vira.
+      question: 'Cuando el viento cambia de dirección se dice que:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 36
+      options:
+        a: Brisa costera.
+        b: Brisa marina.
+        c: Mistral.
+        d: Terral o brisa de tierra.
+      question: 'El viento que se produce debido a que la tierra se enfría más rápidamente
+        durante la noche que el agua del mar adyacente se conoce como:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 37
+      options:
+        a: Según al tipo de barco que naveguen por esa zona.
+        b: A todo tipo de barco que navegue por esa zona.
+        c: Solo afecta a los buques o embarcaciones de casco de acero.
+        d: A las embarcaciones menores de 24 metros de eslora, no les afecta.
+      question: 'Navegando por una zona concreta, la variación local o declinación
+        magnética afecta:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 38
+      options:
+        a: 130º
+        b: 330º
+        c: 230º
+        d: 030º
+      question: 'El rumbo cuadrantal S50W, le corresponde el rumbo circular:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 39
+      options:
+        a: Los derroteros publicados por el Instituto Social de la Marina.
+        b: Los libros de faros y derroteros publicados por el Instituto de Navegación.
+        c: Los derroteros publicados por el Instituto Hidrográfico de la Marina.
+        d: Los derroteros y libros de costa que publica el Instituto Cartográfico
+          de Navegación. PER - Tipo 1
+      question: 'Los libros que describen las características de la costa, sus accidentes,
+        sus puertos, etc. son:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 40
+      options:
+        a: Marea.
+        b: Desvío.
+        c: Abatimiento.
+        d: Deriva.
+      question: 'Cuando una embarcación se ve afectada por una corriente y su rumbo
+        presenta un desplazamiento como consecuencia de ello, a este fenómeno se le
+        conoce como:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 41
+      options:
+        a: '0'
+        b: '1'
+        c: 1,2
+        d: 0,8
+      question: 'Se ha navegado al rumbo verdadero 090º durante una hora y la carta
+        de navegación nos indica una distancia navegada de 10 millas. La corredera
+        marca también 10 millas navegadas, ¿Cuál será el coeficiente de corredera?:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 42
+      options:
+        a: 013º
+        b: 009º
+        c: 004º
+        d: 000º
+      question: 'Situados a 10 millas del faro de Trafalgar y a 8 millas del faro
+        de Punta de Gracia, cuál será el rumbo de aguja al Puerto de Barbate (luz
+        roja espigón) con corrección total= 5º NE:'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 43
+      options:
+        a: 2h y 35m.
+        b: 2h y 25m.
+        c: 2h y 40m.
+        d: 2h y 50m.
+      question: Vemos el faro de Espartel a 4´por nuestro Sur verdadero y damos rumbo
+        hacia un punto – P – situado a 4´al Norte verdadero del faro Punta Alcázar
+        con velocidad de 7 nudos, ¿Qué tiempo tardaremos en llegar a - P- ?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 44
+      options:
+        a: 070º
+        b: 076º
+        c: 081º
+        d: 065º
+      question: 'Situados al Sur verdadero del faro de Punta Paloma y a 5´del faro
+        de Malabata, se da rumbo a un punto situado a 3´al Norte del faro de Punta
+        Cires (corrección total -3º), calcular el rumbo de aguja:'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 45
+      options:
+        a: Rv= 156º, dist= 35,0 millas.
+        b: Rv= 161º, dist= 31,9 millas.
+        c: Rv= 168º, dist= 33,6 millas.
+        d: Rv= 173º, dist= 29,2 millas. PER - Tipo 1
+      question: 'Queremos saber el rumbo verdadero y la distancia que hay entre el
+        extremo del espigón del puerto de Cabo Roche y el faro de Espartel:'
+exam_info:
+  call: abril
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2022

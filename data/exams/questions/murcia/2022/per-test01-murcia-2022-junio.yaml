@@ -1,0 +1,538 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 1
+      options:
+        a: Obra muerta.
+        b: Obra viva.
+        c: Obra sumergida.
+        d: Obra mojada.
+      question: 'La parte sumergida del buque, es decir, la comprendida desde la quilla
+        hasta la línea de flotación, se llama:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 2
+      options:
+        a: La quilla.
+        b: La hélice.
+        c: El timón.
+        d: El ancla.
+      question: 'La mecha que sale por la limera es parte de:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 3
+      options:
+        a: La eslora.
+        b: La quilla.
+        c: La borda.
+        d: La regala.
+      question: 'Cuadernas, roda y codaste son elementos relacionados con:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 4
+      options:
+        a: Una hélice.
+        b: Un timón.
+        c: Una bomba de achique.
+        d: Un molinete.
+      question: 'Barbotén, embrague y freno son elementos de la maniobra de:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 5
+      options:
+        a: Bornear.
+        b: Rolar.
+        c: Garrear.
+        d: Orincar.
+      question: ¿Cómo se denomina la acción de girar alrededor del ancla por la acción
+        del viento o la corriente?
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 6
+      options:
+        a: Cornamusas.
+        b: Guardamancebos.
+        c: Guardacabos.
+        d: Candeleros.
+      question: 'Las piezas metálicas en forma de doble T, colocadas en cubierta,
+        y que sirven para afirmar los cabos de amarre se denominan:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 7
+      options:
+        a: Ponerse proa (amura) a la mar moderando la velocidad.
+        b: Ponerse popa (aleta) a la mar aumentando la velocidad.
+        c: Ponerse de través a la mar dando avante.
+        d: Ponerse popa a la mar dando atrás.
+      question: 'El término "correr un temporal" significa:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 8
+      options:
+        a: Mantener al accidentado en lugar fresco y ventilado.
+        b: Aplicar bolas de hielo.
+        c: Dar friegas de alcohol.
+        d: Abrigar al accidentado.
+      question: 'En caso de hipotermia, es conveniente:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 9
+      options:
+        a: Seguridad de equilibrio.
+        b: Seguridad de adrizamiento.
+        c: Estabilidad.
+        d: Inestabilidad.
+      question: 'La propiedad que tiene un barco de recobrar la posición de equilibrio
+        cuando la pierde por causas externas es conocida como:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 10
+      options:
+        a: Naveguemos con mucha atención.
+        b: Que estamos en una zona de maniobras militares.
+        c: Que necesitamos auxilio.
+        d: Ha caído un hombre al agua.
+      question: 'El lanzamiento, por parte de una embarcación, de cohetes con paracaídas
+        que produzcan luz roja intensa, se hace para indicar:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 11
+      options:
+        a: No fondear en zonas que haya posidonia.
+        b: Usar boyas de fondeo, si podemos.
+        c: Al fondear, no arrastraremos el ancla para fijarla.
+        d: Todas son correctas.
+      question: ¿Qué podemos hacer para proteger la Posidonia?
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 12
+      options:
+        a: Cuando demos una fiesta en la embarcación.
+        b: El día del cumpleaños del Rey, o bien en su onomástica.
+        c: Al entrar en puerto.
+        d: Cuando tengamos el Práctico a bordo para las operaciones de atraque.
+      question: ¿Cuándo es obligatorio el uso de la Bandera Nacional?
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 13
+      options:
+        a: Babor.
+        b: Indistintamente.
+        c: Estribor entrando.
+        d: Estribor.
+      question: 'Si saliendo de puerto, vemos una boya cilíndrica de color rojo, la
+        dejaremos por:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 14
+      options:
+        a: De color negro sobre amarillo y de castillete o espeque.
+        b: De color amarillo sobre negro y de castillete o espeque.
+        c: De color negro con una banda ancha horizontal amarilla y de castillete.
+        d: De color amarillo con una banda ancha horizontal negra y de castillete.
+      question: 'Una marca cardinal Norte es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 15
+      options:
+        a: Aguas navegables.
+        b: Peligro especial.
+        c: Peligro aislado.
+        d: Peligro sumergido.
+      question: 'Un espeque de color negro con una franja central roja, nos indica
+        la existencia de:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 16
+      options:
+        a: Una marca cardinal del Este.
+        b: Una marca de peligro aislado.
+        c: Una marca de centro de canal.
+        d: Una marca especial.
+      question: 'Si navegando de noche, avistamos una baliza que da grupos de dos
+        destellos blancos, podemos suponer que se trata de:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 17
+      options:
+        a: Aguas navegables.
+        b: Peligro aislado.
+        c: Zona de ejercicios militares.
+        d: Ninguna es cierta.
+      question: 'Una marca de color a franjas verticales rojas y blancas, con una
+        esfera roja como marca de tope indica:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 18
+      options:
+        a: Las luces de navegación encendidas, de esta forma se asegurarán una mayor
+          visibilidad.
+        b: Una eficaz vigilancia visual y auditiva, utilizando asimismo todos los
+          medios disponibles para evaluar plenamente la situación y el riesgo de abordaje.
+        c: Su sistema propulsor en marcha para así afrontar cualquier emergencia sobrevenida.
+        d: Una vigilancia visual y auditiva adecuada.
+      question: 'Según el Reglamento Internacional para prevenir los Abordajes en
+        la Mar, todos los buques, en navegación,  mantendrán en todo momento, tanto
+        durante el día como de noche:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 19
+      options:
+        a: Que tiene reducida su maniobra conforme con el Reglamento.
+        b: Cuando navega por aguas muy profundas.
+        c: Que no se autoriza a navegar por esa zona.
+        d: Que navega por aguas poco profundas.
+      question: ¿Qué se entiende por capacidad de maniobra restringida?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 20
+      options:
+        a: buque con capacidad de maniobra restringida.
+        b: buque sin gobierno.
+        c: buque restringido por su calado.
+        d: Ninguna de las tres respuestas es correcta.
+      question: La definición de la regla 3 del RIPA, "…todo buque que por cualquier
+        circunstancia excepcional es incapaz de maniobrar en la forma exigida por
+        este reglamento y, por consiguiente, no puede apartarse de la derrota de otro
+        buque…" corresponde a un…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 21
+      options:
+        a: El estado de visibilidad.
+        b: La densidad del tráfico.
+        c: La altura de las nubes.
+        d: Las características, eficacia y limitaciones del equipo de radar.
+      question: 'Para determinar la velocidad de seguridad se tendrán en cuenta unos
+        factores.  De los siguientes factores, indique cuál de ellos NO está incluido
+        en dicha regla:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 22
+      options:
+        a: Se mantendrán lo más cerca posible del límite exterior del paso o canal
+          que quede por su costado de estribor, siempre que puedan hacerlo sin que
+          ello entrañe peligro.
+        b: Fondearán inmediatamente, a la espera de instrucciones.
+        c: Se mantendrán lo más cerca posible del centro del canal.
+        d: Tendrá prioridad de paso el que venga del sur, debiendo caer hacia estribor
+          aquel buque que venga del norte.
+      question: Los buques que naveguen a lo largo de un paso o canal angosto…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 23
+      options:
+        a: Roja sobre verde.
+        b: Verde sobre blanca.
+        c: Blanca sobre roja.
+        d: Roja sobre blanca.
+      question: 'Un pesquero de arrastre, además de otras luces, mostrará dos luces
+        en vertical:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 24
+      options:
+        a: Un dragaminas trabajando.
+        b: Una embarcación de práctico en movimiento.
+        c: Un buque de propulsión mecánica restringido por su calado.
+        d: Un cablero en movimiento mayor de 50 metros.
+      question: Si observamos, de noche, un buque con, tres luces rojas todo horizonte
+        en línea vertical además de las luces de navegación habituales, se trata de
+        …
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 25
+      options:
+        a: Un segundo.
+        b: Tres segundos.
+        c: Dos segundos.
+        d: Medio segundo.
+      question: 'Una "pitada corta" es un sonido de una duración aproximada de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 26
+      options:
+        a: Utilizando un teléfono móvil.
+        b: Utilizando el VHF.
+        c: Mediante señales luminosas que se repetirán, según las circunstancias,
+          durante toda la duración de la maniobra.
+        d: Las señales fónicas no pueden acompañarse con ningún tipo de señal, pues
+          puede dar lugar a confusiones.
+      question: Navegando de noche, ¿cómo podemos completar las pitadas de maniobra
+        y advertencia?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 27
+      options:
+        a: Un disparo de cañón.
+        b: Cohetes de color rojo.
+        c: Una llamada por teléfono móvil al 112.
+        d: Una alerta de socorro mediante llamada selectiva digital.
+      question: 'Cuando un buque esté en peligro y requiera ayuda, utilizará o exhibirá
+        las señales descritas en el RIPA. Marque la respuesta que NO se encuentra
+        en dicho reglamento:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 28
+      options:
+        a: Hacerlo firme.
+        b: Cobrarlo.
+        c: Aflojarlo.
+        d: Apretarlo.
+      question: 'Amollar un cabo es:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 29
+      options:
+        a: Colocarse al costado de otra embarcación y amarrarse a la misma.
+        b: Poner proa a la mar y el viento.
+        c: Atracar la proa a un muerto.
+        d: Atracar la popa a un muerto.
+      question: ¿Por abarloarse entendemos...?
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 30
+      options:
+        a: Sin apretar demasiado.
+        b: Sobre la herida.
+        c: Entre la herida y el corazón.
+        d: Al lado contrario del corazón.
+      question: 'En una hemorragia arterial, el torniquete se coloca:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 31
+      options:
+        a: El nitrógeno.
+        b: El CO2.
+        c: El oxígeno.
+        d: El argón.
+      question: 'En un incendio, el comburente más común es:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 32
+      options:
+        a: Llenar el depósito con el motor en marcha.
+        b: Las baterías estarán en un lugar sin airear y sin sistema de ventilación.
+        c: En caso de derrame de combustible es necesario enjuagar abundantemente
+          con agua.
+        d: Fumar mientras hacemos combustible.
+      question: 'De las siguientes afirmaciones indique la que ES CORRECTA en cuanto
+        a prevención de incendios:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 33
+      options:
+        a: La humedad.
+        b: La temperatura.
+        c: La visibilidad.
+        d: La presión.
+      question: 'El milibar se utiliza en meteorología para medir:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 34
+      options:
+        a: Isobatas.
+        b: Isogonas.
+        c: Isobaras.
+        d: Isotermas.
+      question: 'En los mapas del tiempo, las líneas trazadas que unen los puntos
+        de igual presión atmosférica, se denominan:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 35
+      options:
+        a: La altura de las olas.
+        b: La intensidad del viento.
+        c: La tensión del vapor.
+        d: La temperatura.
+      question: 'La escala de Beaufort, se utiliza para conocer:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 36
+      options:
+        a: La distancia en que el viento sopla en la misma dirección.
+        b: La intensidad del viento.
+        c: El tiempo que el viento sopla en la misma dirección.
+        d: El fetch.
+      question: 'La persistencia es:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 37
+      options:
+        a: La Guía Costera correspondiente de la zona o área.
+        b: El manual de navegación Costera de esa zona.
+        c: El Derrotero correspondiente.
+        d: El Boletín Anual de Navegación Litoral de la zona.
+      question: 'Si abrigamos dudas sobre detalles o características de la zona costera
+        por donde estamos navegando, consultaremos:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 38
+      options:
+        a: El nivel de referencia de las sondas en las cartas de navegación españolas.
+        b: El nivel de referencia de la variación local de la zona que abarca la carta.
+        c: El nivel de referencia de referencia de los cambios de marea en la zona.
+        d: El nivel de referencia de densidad del agua de mar por efecto de la salinidad.
+      question: 'Se conoce como "cero hidrográfico" a:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 39
+      options:
+        a: 210º
+        b: 240º
+        c: 120º
+        d: 150º
+      question: '¿Cuál será el valor circular del rumbo cuadrantal S60ºW?:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 40
+      options:
+        a: El escandallo.
+        b: El tacómetro.
+        c: La corredera con totalizador.
+        d: El velocímetro con acumulador.
+      question: 'El equipo que nos proporciona la velocidad que llevamos y la distancia
+        navegada acumulada es:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 41
+      options:
+        a: Deriva.
+        b: Abatimiento.
+        c: Empuje.
+        d: Guiñada.
+      question: 'Navegando, los vientos reinantes del través nos pueden causar una
+        alteración del rumbo verdadero que llevamos, esta alteración se le llama:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 42
+      options:
+        a: 1h 48m
+        b: 1h 56m
+        c: 1h 40m
+        d: 1h 32m
+      question: 'Zarpamos del Puerto de Ceuta (luz roja espigón de levante) con velocidad
+        de corredera= 9 nudos. Calcular el tiempo que se tardará en llegar al Puerto
+        de Algeciras (luz extremo espigón):'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 43
+      options:
+        a: 082º
+        b: 088º
+        c: 076º
+        d: 070º
+      question: 'Situados a 5 millas al norte verdadero del Faro de Espartel, damos
+        rumbo para pasar por un punto -P- situado a 4 millas al norte verdadero del
+        Faro de P. Alcázar (corrección total= 6ºW). Calcular el rumbo de aguja:'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 44
+      options:
+        a: 8,3 nudos
+        b: 9,7 nudos
+        c: 11,3 nudos
+        d: 14,2 nudos
+      question: 'Calcular la velocidad a poner para hacer el recorrido desde el Puerto
+        de Barbate (luz extremo espigón) hacia el Puerto de Tánger (luz extremo del
+        espigón) en 2h30m:'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 45
+      options:
+        a: 12,3 millas
+        b: 10,1 millas
+        c: 14,6 millas
+        d: 16,8 millas
+      question: 'Si zarpamos del Puerto de Barbate (luz extremo espigón) al rumbo
+        de aguja 244º (corrección total 4ºW), ¿Qué distancia habremos recorrido cuando
+        tengamos el Faro de Cabo Roche por nuestro Norte verdadero?:'
+exam_info:
+  call: junio
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2022

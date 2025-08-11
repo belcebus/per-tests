@@ -1,0 +1,552 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 1
+      options:
+        a: Línea de flotación.
+        b: Línea de plan.
+        c: Línea de crujía.
+        d: Las respuestas b) y c) son correctas.
+      question: La línea longitudinal imaginaria que divide a un buque en dos partes
+        iguales, se llama…
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 2
+      options:
+        a: Bordas.
+        b: Mamparas.
+        c: Baos.
+        d: Trancaniles.
+      question: 'Los refuerzos que unen de lado a lado los extremos de las cuadernas,
+        dando soporte a la cubierta, se llaman:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 3
+      options:
+        a: Levar
+        b: Adrizar
+        c: Escorar
+        d: Largar
+      question: 'La acción de llevar al buque a su posición de equilibrio se denomina:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 4
+      options:
+        a: Cada una de las cuadernas que soportan las cubiertas.
+        b: Máxima dimensión vertical, medida desde la parte superior de la quilla
+          hasta la cubierta principal.
+        c: Eslora máxima entre perpendiculares en buques de pasaje.
+        d: Todas las respuestas anteriores son correctas.
+      question: '"Puntal" es…'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 5
+      options:
+        a: Bita.
+        b: Cornamusa.
+        c: Noray.
+        d: Gatera
+      question: 'La pieza en forma de T que, fijada a cualquier parte del barco, sirve
+        para afirmar los cabos, se llama:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 6
+      options:
+        a: Piedra.
+        b: Cascajo.
+        c: Arcilla.
+        d: Arena
+      question: 'De los siguientes tenederos, indique cuál de ellos, según la experiencia
+        marítima se considera mejor:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 7
+      options:
+        a: Permanencia
+        b: Estabilidad.
+        c: Quietud.
+        d: Inmovilidad.
+      question: Propiedad que tienen los buques de recuperar su posición de equilibrio,
+        cuando la pierden por causas externas…
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 8
+      options:
+        a: Por la banda de estribor
+        b: Por la banda de babor
+        c: Por su barlovento
+        d: Por su sotavento
+      question: 'Para recoger a un náufrago nos acercaremos:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 9
+      options:
+        a: Cuando realicemos la maniobra de Boutakow
+        b: Mientras esperamos que nos remolquen
+        c: En caso de tormenta eléctrica
+        d: En caso de niebla
+      question: 'Apagaremos los aparatos eléctricos, como medida preventiva:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 10
+      options:
+        a: Aumentar la velocidad y vigilar la sonda
+        b: Reducir la velocidad y apagar los equipos eléctricos
+        c: Aumentar la velocidad y trincar todo a son de mar
+        d: Reducir la velocidad y vigilar la sonda
+      question: 'Navegando en aguas someras deberemos:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 11
+      options:
+        a: Verdadero.
+        b: Falso.
+        c: Depende de la nacionalidad y situación jurídica de las personas siniestradas.
+        d: Las respuestas a) y c) son correctas.
+      question: Convenio SOLAS. "El capitán de todo buque que estando en condiciones
+        de prestar ayuda reciba una información de la fuente que sea, al efecto de
+        que hay personas siniestradas en la mar, estará obligado a acudir a toda máquina
+        en su auxilio, informando a éstas de ello o al servicio de búsqueda y salvamento"
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 12
+      options:
+        a: Solo está permitido triturados y a más de 12 millas de la costa.
+        b: Se permite a más de 12 millas de la costa en el Atlántico.
+        c: Está prohibido en aguas protegidas.
+        d: Está prohibido.
+      question: 'Arrojar plásticos al mar, de cualquier clase:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 13
+      options:
+        a: Aguas más profundas al Oeste de la marca.
+        b: Aguas más profundas al Norte de la marca.
+        c: Aguas más profundas al Sur de la marca.
+        d: Aguas más profundas al Este de la marca.
+      question: Dos conos superpuestos, opuestos por sus bases, como marca de tope
+        de una boya pintada con banda amarilla entre dos bandas negras, indica…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 14
+      options:
+        a: Un aspa amarilla en forma de X.
+        b: Un cono rojo.
+        c: Una esfera verde.
+        d: Una esfera roja.
+      question: 'La marca de tope de una marca especial es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 15
+      options:
+        a: Canal principal a babor
+        b: Canal principal a estribor
+        c: No indica nada, puesto que esta marca no existe
+        d: Ninguna de las anteriores
+      question: 'En la región A, en el punto de bifurcación de un canal, una marca
+        lateral, de color roja con una banda ancha horizontal verde indica:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 16
+      options:
+        a: Es una marca colocada o fondeada sobre un peligro e indica que está prohibida
+          la navegación a 200m de ella.
+        b: Es una marca colocada o fondeada sobre un peligro a cuyo alrededor las
+          aguas no son navegables.
+        c: Es una marca colocada o fondeada sobre un peligro a cuyo alrededor las
+          aguas son navegables
+        d: Es una marca colocada o fondeada sobre un peligro que se encuentra al norte
+          de la misma.
+      question: Una marca de peligro aislado…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 17
+      options:
+        a: Una marca lateral que indica canal principal a babor
+        b: Una marca cardinal Norte
+        c: Una marca de aguas navegables
+        d: Una marca especial
+      question: 'Una marca esférica con franjas verticales rojas y blancas es:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 18
+      options:
+        a: Buque dedicado a la pesca.
+        b: Buque con capacidad de maniobra restringida.
+        c: Buque sin gobierno.
+        d: Buque que alcanza.
+      question: Regla 3. Cuando el Reglamento de abordajes se refiere a todo buque
+        que por cualquier circunstancia excepcional es incapaz de maniobrar en la
+        forma exigida por dicho Reglamento y, por consiguiente, no puede apartarse
+        de la derrota de otro buque, utiliza la expresión
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 19
+      options:
+        a: Visibilidad
+        b: Densidad del tráfico
+        c: De noche, la existencia de resplandor, por ejemplo, el producido por luces
+          de tierra o por el reflejo de las luces propias
+        d: La altura de los estratocúmulos
+      question: Regla 6. Para determinar la velocidad de seguridad se tendrán en cuenta
+        diversos factores. Indique cuál de los que se indican a continuación NO es
+        correcto.
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 20
+      options:
+        a: Cada uno de ellos caerá a babor de forma que pase por la banda de estribor
+          del otro.
+        b: Cada uno de ellos caerá a estribor de forma que pase por la banda de babor
+          del otro.
+        c: Aquel que se encuentre a barlovento caerá a estribor.
+        d: Aquel que se encuentre a barlovento caerá a babor.
+      question: Según la Regla 14 del RIPA, <Cuando dos buques de propulsión mecánica
+        naveguen de vuelta encontrada a rumbos opuestos, con riesgo de abordaje…”
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 21
+      options:
+        a: Se mantendrán lo más cerca posible del límite exterior del paso o canal
+          que quede por su costado de estribor, siempre que puedan hacerlo sin que
+          ello entrañe peligro.
+        b: Fondearán inmediatamente, a la espera de instrucciones.
+        c: Se mantendrán lo más cerca posible del centro del canal.
+        d: Tendrá prioridad de paso el que venga del sur, debiendo caer hacia estribor
+          aquel buque que venga del norte.
+      question: Regla 9. Los buques que naveguen a lo largo de un paso o canal angosto…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 22
+      options:
+        a: Los buques de propulsión mecánica
+        b: Ninguno, tiene prioridad sobre cualquier tipo de buque
+        c: Los pesqueros en navegación no dedicados a pescar
+        d: Un buque sin gobierno
+      question: 'Regla 18. Los buques de vela, en navegación, se mantendrán apartados
+        de la derrota de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 23
+      options:
+        a: luz verde en la banda de babor y una luz roja en la banda de estribor
+        b: luz verde en la banda de estribor y una luz roja en la banda de babor
+        c: luz amarilla en la banda de estribor y una luz roja en la banda de babor
+        d: luz verde en la banda de estribor y una luz amarilla en la banda de babor
+      question: Regla 21. Las "luces de costado" son una
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 24
+      options:
+        a: Mayor de 22,5 grados a popa del través de este ultimo.
+        b: Menor de 22,5 grados a popa del través de este ultimo.
+        c: Por estribor.
+        d: Por babor.
+      question: Regla 13. Se considerará como buque que alcanza a todo buque que se
+        aproxime a otro viniendo desde una marcación
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 25
+      options:
+        a: En la parte de proa, una luz roja todo horizonte o una bola
+        b: En la parte de proa, una luz verde todo horizonte o una bola
+        c: En la parte de proa, una luz amarilla todo horizonte o una bola
+        d: En la parte de proa, una luz blanca todo horizonte o una bola
+      question: 'Regla 30. Los buques fondeados exhibirán en el lugar más visible:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 26
+      options:
+        a: Navegar siguiendo la dirección general de la corriente de tráfico indicada.
+        b: Mantener el rumbo dentro de la zona de separación de tráfico.
+        c: Al entrar o salir de una vía de circulación, hacerlo por los laterales
+          con el mayor ángulo posible.
+        d: Se quedarán parados en la vía de circulación hasta que reciban instrucciones.
+      question: Según la Regla 10 del RIPA, los buques que utilicen un dispositivo
+        de separación de tráfico, deberán…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 27
+      options:
+        a: 'Dos pitadas cortas para indicar: "caigo a estribor"'
+        b: 'Dos pitadas cortas para indicar: "caigo a babor"'
+        c: 'Tres pitadas cortas para indicar: "caigo a babor"'
+        d: 'Tres pitadas cortas para indicar: "voy máquina avante"'
+      question: Regla 34. Cuando varios buques estén a la vista unos de otros, todo
+        buque de propulsión mecánica en navegación, al maniobrar de acuerdo con lo
+        autorizado o exigido por estas reglas, deberá indicar su maniobra mediante
+        las siguientes señales, emitidas con el pito
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 28
+      options:
+        a: Con el través de proa
+        b: Con el spring de proa
+        c: Con el largo de popa
+        d: Con el largo de proa
+      question: Atracando de costado al muelle, con una corriente de proa, ¿con qué
+        amarra evitará mejor que el barco se le desplace hacia popa?
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 29
+      options:
+        a: Arrancada
+        b: Velocidad de gobierno
+        c: Ciaboga
+        d: Velocidad de
+      question: 'A la velocidad mínima a la que debe navegar un buque para que pueda
+        ser gobernado se denomina:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 30
+      options:
+        a: Llenar el depósito con el motor en marcha
+        b: Las baterías estarán en un lugar sin airear y sin sistema de ventilación
+        c: En caso de derrame de combustible es necesario enjuagar abundantemente
+          con agua
+        d: Fumar mientras hacemos combustible
+      question: 'De las siguientes afirmaciones indique la que ES CORRECTA en cuanto
+        a prevención de incendios:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 31
+      options:
+        a: Evaluar los daños.
+        b: Dar atrás.
+        c: Cambiar la distribución de pesos.
+        d: Esperar la pleamar
+      question: Ante una varada involuntaria, lo primero es…
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 32
+      options:
+        a: Continuado de 08:00 a 18:00
+        b: De lunes a domingos de 07:00 a 22:00
+        c: Continuado las 24 horas
+        d: Continuado de 07:00 a 22:00
+      question: 'El Servicio Radio-Médico español funciona:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 33
+      options:
+        a: Fetch, persistencia e intensidad.
+        b: Resistencia, velocidad y fetch.
+        c: Persistencia, resistencia e intensidad.
+        d: Intensidad, velocidad y resistencia.
+      question: ¿De qué tres variables depende la altura de las olas?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 34
+      options:
+        a: Caer el viento.
+        b: Refrescar el viento.
+        c: Rolar el viento.
+        d: Rachear el viento.
+      question: Cambiar la intensidad o fuerza del viento, durante intervalos por
+        lo general cortos, es…
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 35
+      options:
+        a: En el sentido de las agujas del reloj
+        b: Del Este
+        c: En el sentido contrario a las agujas del reloj
+        d: Del Norte
+      question: 'En el hemisferio norte, viendo un mapa meteorológico que muestra
+        una baja, el viento sopla alrededor de la baja:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 36
+      options:
+        a: Isobatas.
+        b: Isogonas.
+        c: Isobaras.
+        d: Isotermas.
+      question: 'En los mapas del tiempo, las líneas trazadas que unen los puntos
+        de igual presión atmosférica, se denominan:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 37
+      options:
+        a: Corrección Total
+        b: Desvío
+        c: Declinación magnética
+        d: Rumbo de aguja
+      question: 'El ángulo que existe entre el Norte verdadero (Nv) y el Norte magnético
+        (Nm) se denomina:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 38
+      options:
+        a: Aumenta su Latitud pero no varía su Longitud
+        b: Aumenta su Latitud y su Longitud
+        c: No varía su Latitud y disminuye su Longitud
+        d: No varía ni su Latitud ni su Longitud
+      question: 'Si navega durante unas horas por el mismo meridiano con rumbo Norte:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 39
+      options:
+        a: Meridiano del lugar.
+        b: Meridiano de situación.
+        c: Paralelo de situación.
+        d: Paralelo del lugar.
+      question: ¿Cómo se llama al círculo máximo que pasa por los polos y por las
+        coordenadas de nuestra situación?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 40
+      options:
+        a: Líneas de separación de las zonas de navegación costera.
+        b: Libros que indican los desvíos de la aguja náutica.
+        c: Libros que indican las características de la costa.
+        d: Libros que indican las características de los barcos.
+      question: 'Los derroteros son:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 41
+      options:
+        a: Marea
+        b: Desvío
+        c: Abatimiento
+        d: Deriva
+      question: ¿Cómo se denomina al desplazamiento que sufre una embarcación por
+        efecto de la corriente?
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 42
+      options:
+        a: 005º 18,6' E
+        b: 005º 18,6' W
+        c: 005º 20,6' E
+        d: 005º 20,6' W
+      question: Situados sobre la línea de oposición de los faros de Punta Europa
+        y de Punta Almina, nos encontramos en ese instante sobre el paralelo de los
+        361 N. Indique que Longitud tendremos en ese punto de situación.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 43
+      options:
+        a: 128º
+        b: 120º
+        c: 124º
+        d: 116º
+      question: Con una variación local de = 1,5º NW y un desvío de aguja de = -2,5º,  nos
+        encontramos situados en un punto -P- de coordenadas = 36º 00' N – 006º 10'
+        W y desde esta posición, damos rumbo hacia el extremo del espigón del puerto
+        de Tánger (Faro del espigón). Calcular el rumbo de aguja a poner.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 44
+      options:
+        a: 5 nudos
+        b: 7 nudos
+        c: 9 nudos
+        d: 11 nudos
+      question: Nuestro GPS nos marca la posición = 35º 58' N – 005º 50' W y desde
+        ese punto, damos rumbo a la luz roja del extremo del espigón del puerto de
+        Bárbate. ¿Qué velocidad tendremos que dar para hacer el recorrido en una hora
+        y media?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 45
+      options:
+        a: 306º
+        b: 301º
+        c: 309º
+        d: 315º
+      question: A HRB= 09:30. Nos encontramos situados sobre la línea de enfilación
+        de los faros Isla de Tarifa y Punta Paloma y por el Sur verdadero, vemos el
+        faro de Punta Alcázar. Comprobando que con esta situación nos encontramos
+        dentro del dispositivo de separación de tráfico del Estrecho, damos inmediatamente
+        rumbo al faro de Isla de Tarifa para salir de él (corrección total para este
+        rumbo = 4º NE). Calcular el rumbo de aguja hacia el faro de Isla Tarifa.
+exam_info:
+  call: marzo
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2017

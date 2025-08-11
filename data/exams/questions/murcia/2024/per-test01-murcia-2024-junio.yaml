@@ -1,0 +1,555 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 1
+      options:
+        a: Francobordo.
+        b: Puntal.
+        c: Calado medio.
+        d: Asiento.
+      question: 'La diferencia de calados entre proa y popa se denomina:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 2
+      options:
+        a: Arriar.
+        b: Levar.
+        c: Largar.
+        d: Filar.
+      question: 'La operación de subir el ancla a bordo se denomina:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 3
+      options:
+        a: La parte del casco que queda sumergida.
+        b: La parte del casco situada a proa.
+        c: La parte del casco que queda fuera del agua.
+        d: La parte del casco situada a popa.
+      question: 'La obra muerta es:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 4
+      options:
+        a: La parte por donde sale el sol.
+        b: La parte por donde viene el viento.
+        c: La parte por donde viene la corriente.
+        d: La parte por donde viene la marea.
+      question: 'Se denomina barlovento a:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 5
+      options:
+        a: Llano.
+        b: As de guía.
+        c: Ballestrinque.
+        d: Vuelta de rezón.
+      question: Para amarrar un cabo al arganeo de un ancla se utilizará preferentemente
+        el nudo…
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 6
+      options:
+        a: Un cabo de amarre que va a un muerto.
+        b: Un cabo que sirve de driza.
+        c: Un cabo que sirve para unir una boya con el ancla, y señalar donde está
+          el ancla.
+        d: Un cabo que se usa en el molinete.
+      question: ¿Qué es el orinque?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 7
+      options:
+        a: Desconectar los aparatos electrónicos.
+        b: Comprobar variaciones de la aguja.
+        c: Crear, a través de la embarcación, un camino al mar para la descarga eléctrica
+          del rayo.
+        d: Todas las respuestas son ciertas.
+      question: En caso de tormenta eléctrica…
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 8
+      options:
+        a: Balances.
+        b: Cabezadas.
+        c: Oleadas.
+        d: Recaídas.
+      question: 'Las oscilaciones transversales producidas en el barco a causa de
+        las olas se conocen con el nombre de:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 9
+      options:
+        a: Aguantar el temporal poniendo la proa a la mar.
+        b: Aguantar el temporal poniendo la amura a la mar y reducir velocidad.
+        c: Aguantar el temporal poniendo proa a la mar.
+        d: Aguantar el temporal poniendo la aleta a la mar y reducir la velocidad.
+      question: Capear un temporal es…
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 10
+      options:
+        a: Señalizar la posición del náufrago.
+        b: Dar máquina atrás en la proximidad del náufrago.
+        c: Meter timón a la banda de caída del náufrago.
+        d: Acercarnos al náufrago por su barlovento.
+      question: Lo que NUNCA haremos durante la maniobra de recogida de un náufrago
+        será…
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 11
+      options:
+        a: Desde la salida a la puesta del Sol.
+        b: De ocho de la mañana a ocho de la tarde.
+        c: Del ocaso al orto.
+        d: Tienen que llevarla siempre izada.
+      question: 'Las embarcaciones están obligados a izar el Pabellón nacional:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 12
+      options:
+        a: Nos acercaremos rápidamente pues es señal de pedir socorro.
+        b: Nos alejaremos de ella pues tiene buzo sumergido.
+        c: Sabremos que navega sin problemas.
+        d: Significa que está varada sobre una roca.
+      question: Si navegando avistados una embarcación con la bandera Alfa izada…
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 13
+      options:
+        a: Amarillo y verde.
+        b: Rojo y verde.
+        c: Amarillo y rojo.
+        d: Naranja y amarillo.
+      question: 'Las marcas laterales de la región A utilizan los siguientes colores
+        para indicar los lados de un canal:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 14
+      options:
+        a: Nos indican las aguas que son navegables.
+        b: Están pintadas con franjas amarillas y negras.
+        c: La marca de tope está formada por dos conos.
+        d: Están pintadas de franjas rojas y blancas.
+      question: 'De las siguientes afirmaciones, indique la que NO corresponde con
+        una marca cardinal:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 15
+      options:
+        a: Dos conos superpuestos con los vértices hacia abajo.
+        b: Dos conos superpuestos con los vértices hacia arriba.
+        c: Un aspa amarilla.
+        d: Dos esferas negras superpuestas.
+      question: 'Las marcas de tope que indican un peligro aislado son:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 16
+      options:
+        a: Amarillo y negro.
+        b: Negro y rojo.
+        c: Blanco y rojo.
+        d: Azul y naranja.
+      question: 'Las marcas que indican aguas navegables tienen colores:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 17
+      options:
+        a: La situación de instalaciones de acuicultura.
+        b: La situación de reservas marinas.
+        c: Zonas de ejercicios militares.
+        d: Todas las respuestas son correctas.
+      question: 'Las marcas especiales se utilizan para indicar:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 18
+      options:
+        a: Toda condición en que la visibilidad está disminuida por niebla, bruma,
+          nieve, fuertes aguaceros, tormentas de arena o cualesquiera otras causas
+          análogas.
+        b: Un buque de propulsión mecánica que, por razón de su calado en relación
+          con la profundidad disponible de agua, tiene muy restringida su capacidad
+          de apartarse de la derrota que está siguiendo.
+        c: Todo buque que por cualquier circunstancia excepcional es incapaz de maniobrar
+          en la forma exigida por el Reglamento y, por consiguiente, no puede apartarse
+          de la derrota de otro buque.
+        d: Que el buque no está ni fondeado, ni amarrado a tierra, ni varado.
+      question: Según la Regla 3 del Reglamento Internacional para Prevenir Abordajes
+        en la Mar (RIPA), la expresión “visibilidad reducida” significa…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 19
+      options:
+        a: Estado de la visibilidad.
+        b: Estado del viento y la mar.
+        c: La maniobrabilidad de la embarcación.
+        d: Todas las respuestas son correctas.
+      question: 'Según la Regla 6 del Reglamento Internacional para Prevenir Abordajes
+        en la Mar (RIPA), para determinar la “velocidad de seguridad” tendremos en
+        cuenta, entre otros, los siguientes factores:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 20
+      options:
+        a: El mayor margen posible.
+        b: Cinco millas náuticas de distancia.
+        c: El dispositivo de separación de tráfico por estribor.
+        d: El dispositivo de separación de tráfico por babor.
+      question: Según la Regla 10 del Reglamento Internacional para Prevenir Abordajes
+        en la Mar (RIPA), los buques que no utilicen un dispositivo de separación
+        de tráfico deberán apartarse de él dejando…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 21
+      options:
+        a: Ninguna.
+        b: Cónica con vértice hacia arriba.
+        c: Cónica con vértice hacia abajo.
+        d: Cilíndrica.
+      question: Según la Regla 25 del Reglamento Internacional para Prevenir Abordajes
+        en la Mar (RIPA), ¿cuál es la marca de día de un buque navegando a vela que
+        se está propulsando mecánicamente?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 22
+      options:
+        a: El buque que tenga al otro a dos millas náuticas de distancia.
+        b: El buque que tenga el otro a cuatro millas náuticas de distancia.
+        c: El buque que tenga al otro por su costado de babor.
+        d: El buque que tenga al otro por su contado de estribor.
+      question: 'Según la Regla 15 del Reglamento Internacional para Prevenir Abordajes
+        en la Mar (RIPA), cuando dos buques de propulsión mecánica se crucen con riesgo
+        de abordaje se mantendrá apartado de la derrota del otro:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 23
+      options:
+        a: Maniobraremos nosotros ya que observamos al otro por estribor.
+        b: No maniobraremos hasta que esté más claro el riesgo de abordaje.
+        c: Maniobrará el mercante ya que nosotros navegamos a vela.
+        d: Nos apartaremos de la derrota del mercante porque es mayor que nuestra
+          embarcación.
+      question: Según la Regla 18 del Reglamento Internacional para Prevenir Abordajes
+        en la Mar (RIPA), si navegando a vela observamos por nuestro estribor un mercante
+        que se aproxima con riesgo de abordaje…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 24
+      options:
+        a: Cuando cada uno de ellos reciba el viento por bandas contrarias, el que
+          lo reciba por estribor se mantendrá apartado de la derrota del otro.
+        b: Cuando ambos reciban el viento por la misma banda, el buque que esté a
+          sotavento se mantendrá apartado de la derrota del que esté a sotavento.
+        c: Cuando cada uno de ellos reciba el viento por bandas contrarias, el que
+          lo reciba por babor se mantendrá apartado de la derrota del otro.
+        d: Cuando ambos reciban el viento por la misma banda, el buque que se encuentre
+          a babor se mantendrá apartado de la derrota del otro.
+      question: 'Según la Regla 12 del Reglamento Internacional para Prevenir Abordajes
+        en la Mar (RIPA), cuando dos buques de vela se aproximan uno al otro con riesgo
+        de abordaje, uno de ellos se mantendrá apartado de la derrota del otro en
+        la forma siguiente:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 25
+      options:
+        a: Luces de tope
+        b: Luz de alcance
+        c: Luces de costado
+        d: Luces de costado y alcance
+      question: Según la Regla 25 del Reglamento Internacional para Prevenir Abordajes
+        en la Mar (RIPA), ¿qué luces debe mostrar un buque de vela de eslora superior
+        a 7 metros en navegación?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 26
+      options:
+        a: Dos luces todo horizonte, roja sobre blanca.
+        b: Dos luces de tope.
+        c: Dos luces todo horizonte, verde sobre blanca.
+        d: Dos luces todo horizonte, blanca sobre roja.
+      question: Según la Regla 26 del Reglamento Internacional para Prevenir Abordajes
+        en la Mar (RIPA), un buque dedicado a la pesca de arrastre mostrará de noche…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 27
+      options:
+        a: Una luz blanca todo horizonte a proa.
+        b: Dos luces blancas todo horizonte, una a proa y otra a popa.
+        c: Dos luces blancas todo horizonte, una a proa y otra a popa y la luz de
+          alcance.
+        d: Dos luces blancas todo horizonte, una a proa y otra a popa y las luces
+          de costado.
+      question: Según la Regla 30 del Reglamento Internacional para Prevenir Abordajes
+        en la Mar (RIPA), un buque fondeado de eslora mayor de 50 metros mostrará
+        de noche…
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 28
+      options:
+        a: A la corriente.
+        b: Al viento.
+        c: A las olas.
+        d: Todas son correctas.
+      question: ¿A qué es debido el abatimiento?
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 29
+      options:
+        a: La embarcación se desplazará hacia proa y se abrirá la proa.
+        b: La embarcación se desplazará hacia proa y se abrirá la popa.
+        c: La embarcación se desplazará hacia popa y se abrirá la proa.
+        d: La embarcación se desplazará hacia popa y se abrirá la popa.
+      question: Si viramos el esprín de popa…
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 30
+      options:
+        a: Lanzar todos los cohetes y bengalas.
+        b: Ponerse el equipo de buceo.
+        c: Lanzar al agua los aros salvavidas.
+        d: Ponerse el chaleco salvavidas.
+      question: 'La primera medida a tomar en caso de abandono de buque es:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 31
+      options:
+        a: Gas inerte.
+        b: Polvo seco.
+        c: Dióxido de carbono.
+        d: Agua.
+      question: ¿Qué agente extintor debe excluirse, por peligroso, en la extinción
+        de un incendio en la instalación eléctrica de una embarcación?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 32
+      options:
+        a: Combustible, oxígeno, comburente y reacción en cadena.
+        b: Combustible, calor, metano y reacción en cadena.
+        c: Combustible, comburente, energía de activación y reacción en cadena.
+        d: Nitrógeno, oxígeno, calor y reacción en cadena.
+      question: ¿Qué elementos forman el llamado tetraedro del fuego?
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 33
+      options:
+        a: Volumen de aire que envuelve a la tierra.
+        b: Peso ejercido sobre todo cuerpo encima de la superficie de la tierra por
+          la masa de aire que la envuelve.
+        c: Presión de aire ejercida por el aire que rodea la tierra, sobre el mar.
+        d: Presión producida por la intersección entre la masa de aire y la superficie
+          de la tierra.
+      question: ¿Qué se entiende por presión atmosférica?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 34
+      options:
+        a: Brisas costeras.
+        b: Cambio en la tendencia barométrica.
+        c: Poner la popa a la borrasca.
+        d: Es un cambio en la dirección del viento.
+      question: ¿Qué se entiende por la expresión “rolar”?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 35
+      options:
+        a: El número de horas que ha soplado el viento en la misma dirección sobre
+          la mar.
+        b: Una zona o extensión en la que el viento sopla en la misma dirección y
+          con la misma intensidad.
+        c: Una zona o extensión en la que el viento sopla en la misma dirección y
+          con intensidad variable.
+        d: La zona de recurva anterior al frente cálido.
+      question: La “persistencia” se define como…
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 36
+      options:
+        a: Presión.
+        b: Temperatura.
+        c: Humedad.
+        d: Gradiente.
+      question: El milibar es una unidad de…
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 37
+      options:
+        a: La misma altura.
+        b: La misma sonda.
+        c: La misma demora.
+        d: La misma declinación.
+      question: Un veril es un elemento de la carta náutica que une puntos que tienen…
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 38
+      options:
+        a: La demora de aguja a un faro.
+        b: La demora verdadera a un faro.
+        c: El rumbo de aguja que nos indica el compás.
+        d: Una marcación a un faro.
+      question: ¿Cuál de estos ángulos se pueden trazar en la carta de navegación
+        para obtener nuestra posición?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 39
+      options:
+        a: El rumbo al que naveguemos.
+        b: La velocidad del buque en ese instante.
+        c: La zona o área marítima por donde estemos navegando.
+        d: La distancia a la costa en ese momento.
+      question: El valor de la declinación magnética o variación local, influye según…
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 40
+      options:
+        a: El ángulo que forma el Norte verdadero con la visual a un objeto.
+        b: El ángulo que forma la línea proa-popa con la visual a un objeto.
+        c: El ángulo que forma la línea proa-popa con el Norte verdadero.
+        d: Es ángulo que forma el Norte verdadero y el Norte de aguja.
+      question: 'La demora verdadera es:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 41
+      options:
+        a: 145°
+        b: 245°
+        c: 315°
+        d: 185°
+      question: ¿Qué rumbo circular corresponde al rumbo cuadrantal N45W?
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 42
+      options:
+        a: 310°
+        b: 315°
+        c: 323°
+        d: 330°
+      question: Nos encontramos sobre la línea de la enfilación de los faros Trafalgar
+        y Cabo Roche, siendo Trafalgar el faro que vemos más cercano. Indique la demora
+        verdadera por la que estamos viendo dicha enfilación.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 43
+      options:
+        a: 306°
+        b: 301°
+        c: 309°
+        d: 315°
+      question: A HRB=09:30 nos encontramos situados sobre la línea de enfilación
+        de los faros de isla Tarifa y Punta Paloma, y por el Sur verdadero vemos el
+        faro de Punta Alcázar. Comprobando que con esta situación nos encontramos
+        dentro del dispositivo de separación de tráfico del Estrecho, damos inmediatamente
+        rumbo verdadero al faro de Isla de Tarifa para salir de él (Corrección total
+        para este rumbo=4°NE). Calcular el rumbo de aguja hacia el faro de Isla de
+        Tarifa.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 44
+      options:
+        a: 35° 57,5’N - 005° 36,6’W
+        b: 35° 53,6’N - 005° 29,7’W
+        c: 35° 56,8’N - 005° 31,8’W
+        d: 35° 52,6’N - 005° 34,7’W
+      question: 'A HRB=10:00 nos encontramos situados sobre la línea de oposición
+        de los faros de Isla de Tarifa y Punta Cires. Simultáneamente tomamos distancia
+        al faro de Punta Alcázar: 6 millas. ¿Qué posición tendremos en ese instante?'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 45
+      options:
+        a: 49 minutos
+        b: 59 minutos
+        c: 69 minutos
+        d: 79 minutos
+      question: Situados sobre la línea de la enfilación de los faros Punta Cires
+        – Punta Alcázar, tenemos en ese instante al faro de Punta Carnero por el Norte
+        verdadero. Desde esta posición damos rumbo verdadero al puerto de Ceuta (luz
+        verde de la bocana del puerto) con velocidad de 8 nudos. ¿Qué tiempo tardaremos
+        en llegar a Ceuta?
+exam_info:
+  call: junio
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2024

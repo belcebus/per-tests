@@ -1,0 +1,556 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 1
+      options:
+        a: La distancia entre la vertical de proa y la de popa.
+        b: Es la diferencia entre el calado de popa y el calado de proa.
+        c: Es la distancia vertical entre la línea de flotación y la quilla del buque.
+        d: Ninguna de las respuestas anteriores es correcta.
+      question: ¿Qué es el asiento?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 2
+      options:
+        a: La parte del casco que se encuentra por encima del plano de flotación.
+        b: La parte del casco que se encuentra por debajo del plano de flotación.
+        c: La parte del casco que se ve durante la navegación.
+        d: La parte del casco que se encuentra por encima del plano de flotación,
+          pero sin contar lo que hay por encima de la cubierta principal.
+      question: ¿Qué es la obra viva?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 3
+      options:
+        a: Es el volumen máximo del agua desplazada por la embarcación cuando está
+          flotando.
+        b: Es el peso del volumen del agua desplazada por la embarcación cuando está
+          flotando.
+        c: Es el volumen del agua desplazada por la carena cuando está flotando.
+        d: a) y c) son ciertas.
+      question: ¿Qué es el desplazamiento máximo en embarcaciones de recreo?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 4
+      options:
+        a: Es la propiedad que tiene una embarcación de recuperar su posición vertical,
+          y quedarse sin escora.
+        b: Es la propiedad que tiene una embarcación de perder su posición vertical.
+        c: Es la propiedad que tiene un buque de girar para cambiar de rumbo.
+        d: Todas las respuestas anteriores son falsas.
+      question: ¿Qué es adrizar?
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 5
+      options:
+        a: Pasar un cabo por la bita.
+        b: Fondear un ancla.
+        c: Pasar por seno un cabo.
+        d: Arrastrar por el fondo un ancla fondeada
+      question: ¿Qué es el garreo?
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 6
+      options:
+        a: Un cabo de amarre que va a un muerto.
+        b: Un cabo que sirve de driza.
+        c: Un cabo que sirve para unir una boya con el ancla, y señalar donde está
+          el ancla.
+        d: El cabo que se usa en el molinete.
+      question: ¿Qué es el orinque?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 7
+      options:
+        a: Caer a la banda de Estribor o Babor, indiferentemente.
+        b: Acelerar maquinas.
+        c: Meter el timón a la banda donde cayó y lanzarle un aro salvavidas.
+        d: Meter el timón a la banda opuesta por donde cayó y lanzarle un aro salvavidas.
+      question: 'En caso de hombre al agua, en una embarcación a motor, ¿Qué haremos
+        primero?:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 8
+      options:
+        a: En meter timón a la banda de caída y desarrollamos un giro hasta modificar
+          270º nuestro rumbo.
+        b: En meter todo el timón a la banda del náufrago hasta que la proa caiga
+          70º. Entonces cambiar todo el timón a la otra banda y navegar a rumbo opuesto.
+        c: Exploración por sectores.
+        d: Exploración en espiral cuadrada.
+      question: En caso de "Hombre al agua" La maniobra de Anderson que realizaremos
+        si un hombre cae por babor, consistirá...
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 9
+      options:
+        a: Facilitar que una embarcación pueda ser detectada por los radares de otros
+          buques.
+        b: Emitir señales visuales detectables por otros barcos.
+        c: Ayuda a nuestro radar a detectar a otros buques.
+        d: Evitar las interferencias de las comunicaciones por VHF.
+      question: ¿Para qué sirve el reflector radar?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 10
+      options:
+        a: Aquellas en las cuales la profundidad es mayor que la mitad de la longitud
+          de la ola media.
+        b: Aquellas aguas poco profundas en la que nuestra embarcación puede correr
+          riesgo de varada involuntaria.
+        c: Aquellas aguas con una profundidad donde no existe riesgo para nuestra
+          embarcación.
+        d: Las respuestas a) y b) son correctas.
+      question: ¿Qué entiendes por aguas someras?
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 11
+      options:
+        a: Siempre
+        b: Cuando esté en condiciones de prestar ayuda
+        c: Siempre, pero si es de su misma nacionalidad
+        d: Todas las respuestas anteriores son falsas
+      question: Según párrafo 1 de la regla 33 capítulo V de SOLAS, ¿Cuando está obligado
+        el capitán de un barco a prestar auxilio habiendo recibido una información,
+        a efectos de que hay personas siniestradas en la mar?
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 12
+      options:
+        a: Prohibir vertidos que menoscaben la integridad de la zona protegida.
+        b: Reglamentar el fondeo.
+        c: a) y b) son falsas.
+        d: a) y b) son verdaderas.
+      question: Medidas para la protección de las zonas especialmente protegidas de
+        importancia en el Mediterráneo.
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 13
+      options:
+        a: Marca lateral de estribor.
+        b: Marca lateral de babor.
+        c: Canal principal a babor.
+        d: Canal principal a estribor.
+      question: 'Una marca cónica de color verde con una franja roja, indica:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 14
+      options:
+        a: Dos destellos de color rojos.
+        b: Grupo de dos destellos de color blanco.
+        c: Grupo de dos destellos de color verde.
+        d: Un destello color blanco
+      question: 'En una marca de peligro aislado el ritmo y el color de su luz es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 15
+      options:
+        a: Este.
+        b: Oeste.
+        c: Norte.
+        d: Sur.
+      question: 'Una marca de tope consistente en dos conos negros superpuestos con
+        los vértices hacia abajo, se deberá pasar por el cuadrante:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 16
+      options:
+        a: Castillete.
+        b: Espeque.
+        c: Cilíndrica.
+        d: Todas las respuestas anteriores son correctas
+      question: Las marcas laterales de babor. ¿Qué forma pueden tener?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 17
+      options:
+        a: Verde con franjas horizontales rojas.
+        b: Roja con bandas horizontales verdes.
+        c: Negra con bandas horizontales verdes.
+        d: Negra con bandas horizontales rojas.
+      question: 'El color de una marca de peligro aislado es:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 18
+      options:
+        a: Coincidentes, en todo lo posible, con lo dispuesto en este Reglamento.
+        b: Que se aproximen a lo dispuesto en el Reglamento.
+        c: En la medida de lo posible, serán tales que no puedan confundirse con ninguna
+          luz, marca o señal autorizada en otro lugar del Reglamento.
+        d: Los Gobiernos no pueden imponer reglas especiales.
+      question: 'Si los Gobiernos aplican reglas especiales en cuanto a utilizar luces
+        de situación y señales luminosas o marcas adicionales para buques dedicados
+        a la pesca en flotilla, estas deben ser:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 19
+      options:
+        a: El que reciba el viento por la banda de babor.
+        b: El que reciba el viento por la banda de estribor.
+        c: El que este a sotavento.
+        d: Cuando los dos reciban el viento por bandas contrarias, el que este a barlovento.
+      question: 'En caso de riesgo de abordaje de dos veleros, se mantendrá apartado
+        de la derrota del otro:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 20
+      options:
+        a: 112,5º
+        b: 135º
+        c: 225º
+        d: 360º
+      question: 'La luz de tope muestra una luz sin interrupción en un arco de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 21
+      options:
+        a: Tres pitadas largas.
+        b: Una corta seguida de dos largas que no excedan de dos segundos entre ambas.
+        c: A intervalos que no excedan de dos minutos, dos pitadas largas consecutivas
+          separadas por un intervalo de unos dos segundos entre ambas.
+        d: Una pitada larga que no exceda de dos minutos.
+      question: 'Un buque de propulsión mecánica en navegación pero parado y sin arrancada
+        en visibilidad reducida emitirá:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 22
+      options:
+        a: Dos bolas en línea vertical.
+        b: Tres marcas, la superior e inferior bolas, la central bicónica
+        c: Tres bolas en línea vertical.
+        d: Una bola a proa.
+      question: 'Un buque varado exhibirá de día:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 23
+      options:
+        a: Por el costado que exhiba dos luces rojas en línea vertical.
+        b: Por el costado que exhiba una luz blanca y una verde en línea vertical.
+        c: Por el costado que exhibe una luz verde.
+        d: Por el costado que exhiba dos luces verdes en línea vertical.
+      question: 'Divisamos una draga que ocasiona una obstrucción, se pasará:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 24
+      options:
+        a: Dos luces todo horizonte, en línea vertical la superior roja y la inferior
+          blanca, luces de costado, luz de alcance y si su eslora es mayor de 50 metros
+          una luz de tope.
+        b: Dos luces todo horizonte, en línea vertical la superior blanca y la inferior
+          roja, luces de costado, luz de alcance y si su eslora es mayor de 50 metros
+          una luz de tope.
+        c: Dos luces todo horizonte, en línea vertical la superior verde y la inferior
+          blanca, luces de costado, luz de alcance y si su eslora es mayor de 50 metros
+          dos luces de tope.
+        d: Dos luces todo horizonte, en línea vertical la superior verde y la inferior
+          blanca, luces de costado, luz de alcance y si su eslora es mayor de 50 metros
+          una luz de tope.
+      question: 'Un buque de pesca al arrastre exhibirá:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 25
+      options:
+        a: Un buque de pesca al cerco, que tiene su aparejo largado a más de 150 metros.
+        b: Un buque de pesca al arrastre.
+        c: Un buque de vela fondeado.
+        d: Un buque de vela que también es propulsado mecánicamente.
+      question: 'Divisamos un buque que lleva una marca consistente en un cono con
+        el vértice hacia abajo, se trata de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 26
+      options:
+        a: Manteniendo su rumbo y velocidad.
+        b: Maniobrando por tener al otro buque por su costado de estribor.
+        c: Caerá a babor.
+        d: Suprimirá toda su arrancada.
+      question: 'Cómo deberá actuar un buque de vela si divisa por su costado de estribor
+        a un buque de propulsión mecánica con riesgo de abordaje,:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 27
+      options:
+        a: Un cono con el vértice hacia abajo.
+        b: Una marca bicónica unida por sus vértices.
+        c: Tres bolas en línea vertical.
+        d: Tres marcas, la superior e inferior bolas, la central bicónica
+      question: 'Un buque con capacidad de maniobra restringida de día, exhibirá:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 28
+      options:
+        a: Acción de apretar un cabo.
+        b: Librar un cabo.
+        c: Acción que consiste en dejar el cabo recogido y estibado con vueltas y
+          claro.
+        d: Acción de sujetar un cabo.
+      question: ¿Qué es adujar un cabo?
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 29
+      options:
+        a: A la corriente.
+        b: Al viento.
+        c: A las olas.
+        d: Todas son correctas.
+      question: ¿A qué es debido el abatimiento?
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 30
+      options:
+        a: El Servicio del 112.
+        b: Las casas del mar.
+        c: El centro radio-médico español que depende del Instituto Social de la Marina.
+        d: El centro radio-médico español que depende de la Dirección General de la
+          Marina Mercante.
+      question: 'El servicio de atención médica por radio lo presta en España:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 31
+      options:
+        a: Por enfriamiento
+        b: Por consumición
+        c: Por sofocación
+        d: Por conflagración
+      question: El método de extinción de un incendio a bordo suprimiendo el oxígeno
+        se llama…
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 32
+      options:
+        a: Combustible gaseoso (butano, propano).
+        b: Materias sólidas (madera, papel, etc.).
+        c: Combustible líquido (gasolina, etc.).
+        d: Metales
+      question: 'Si un extintor sirve, según las instrucciones, para apagar un incendio
+        de la clase "B", lo utilizaremos en un fuego de:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 33
+      options:
+        a: Virazón
+        b: Viento real
+        c: Borrasca
+        d: Terral
+      question: 'De noche la masa continental pierde el calor recibido durante el
+        día más rápido que la masa oceánica, provocando una baja presión relativa
+        sobre el nivel del mar y una alta presión relativa sobre la tierra. El viento
+        que se origina a causa de este fenómeno se llama:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 34
+      options:
+        a: El aumento brusco y momentáneo de la velocidad del viento.
+        b: Un golpe de viento.
+        c: El número de horas que ha soplado el viento en la misma dirección sobre
+          la mar.
+        d: El cambio en la dirección del viento.
+      question: 'Definimos racha como:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 35
+      options:
+        a: En el sentido contrario a las agujas de reloj y con una componente hacia
+          adentro.
+        b: En el mismo sentido a las agujas del reloj y con una componente hacia fuera.
+        c: Lateralmente hacia el interior del conjunto.
+        d: De Sur a Norte.
+      question: ¿Cómo circula el viento alrededor de un anticiclón en el hemisferio
+        Norte?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 36
+      options:
+        a: El número de horas que ha soplado el viento en la misma dirección sobre
+          la mar.
+        b: Una zona o extensión en la que el viento sopla en la misma dirección y
+          con la misma intensidad.
+        c: Una zona o extensión en la que el viento sopla en la misma dirección y
+          con intensidad variable.
+        d: La zona de recurva anterior al frente cálido.
+      question: 'Definimos Persistencia como:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 37
+      options:
+        a: Meridiano del lugar.
+        b: Meridiano de situación relativa.
+        c: Paralelo de situación.
+        d: Paralelo del lugar.
+      question: ¿Cómo se llama al círculo máximo que pasa por los polos y por las
+        coordenadas de nuestra situación?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 38
+      options:
+        a: La escala de latitudes.
+        b: La escala de longitudes.
+        c: En el meridiano opuesto.
+        d: En el paralelo.
+      question: 'Las distancias en las cartas náuticas, se miden en:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 39
+      options:
+        a: Un naufragio.
+        b: Una piedra peligrosa, siempre cubierta.
+        c: Un fondo de piedra útil para fondear.
+        d: Una piedra que no es peligrosa.
+      question: 'En una carta náutica española, el signo + sobre fondo azul, rodeado
+        de puntos, significa:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 40
+      options:
+        a: Norte-Este.
+        b: Sur-Oeste.
+        c: Sur-Este.
+        d: Norte-Oeste.
+      question: 'El segundo cuadrante, es el comprendido entre:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 41
+      options:
+        a: Corrección total.
+        b: Declinación.
+        c: Desvío.
+        d: Demora.
+      question: 'El ángulo que forman el norte de aguja y el meridiano geográfico,
+        se llama:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 42
+      options:
+        a: 223º
+        b: 233º
+        c: 243º
+        d: 253º
+      question: Situados en la línea de la oposición de los faros Trafalgar - Punta
+        de Gracia, se toma distancia al faro principal de Barbate = 6 millas, dándonos
+        la posición. Desde ese punto, se da rumbo hacia un punto – k - en la carta
+        cuya posición es 35º 55'N – 006º 10'W.  ¿Cuál será el rumbo resultante?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 43
+      options:
+        a: 36º 08.8'N – 005º 18,2’W.
+        b: 36º 06.6’N – 005º 16,8’W.
+        c: 36º 04.2'N – 005º 14,3’W.
+        d: 36º 02,3’N – 005º 12.4’W.
+      question: Nos encontramos el E del faro de Pta Europa y tomamos Da Faro Pta
+        Almina = 187°, la variación local es 2ºNW y desvío de aguja = -5°, ¿Cuál es
+        nuestra posición en ese instante?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 44
+      options:
+        a: 12,8 nudos.
+        b: 10,1 nudos.
+        c: 14,8 nudos.
+        d: 16,2 nudos.
+      question: El GPS nos indica la posición 36º 00,0’N – 005º 50,0'W y queremos
+        dirigirnos a pescar en un punto marcado con la posición 35° 50,0 'N – 006º
+        10,0'W. Queremos hacer el recorrido en 90 minutos sin viento ni corriente.
+        Indique que velocidad tendremos que poner para cumplir dicho objetivo.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 45
+      options:
+        a: 162º
+        b: 152º
+        c: 142º
+        d: 132º
+      question: 'A HRB 11:00 nos encontramos sobre la línea de la oposición de los
+        faros de Punta Almina y Punta Europa y obtenemos distancia al faro de Punta
+        Carnero = 6 millas. Desde esa posición, damos rumbo para pasar a 3'' al Ev
+        de Punta Almina, teniendo en cuenta que no hay viento ni corriente. Calcule
+        que Ra deberemos de poner, sabiendo que la corrección total es de 5º NE:'
+exam_info:
+  call: marzo
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2016

@@ -1,0 +1,543 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 1
+      options:
+        a: Partes curvas de los costados, en las proximidades de la proa.
+        b: Partes curvas de los costados, en las proximidades de la popa.
+        c: Partes centrales de los costados.
+        d: Cada una de las mitades en las que queda dividido el buque por la línea
+          de crujía.
+      question: 'Las amuras son:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 2
+      options:
+        a: Crujía.
+        b: Través.
+        c: Flotación.
+        d: Carena.
+      question: ¿Cómo se denomina la línea que separa la obra viva de la obra muerta?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 3
+      options:
+        a: Los trancaniles.
+        b: Los palmejares.
+        c: Las cuadernas.
+        d: Las quillas del balance.
+      question: 'Los refuerzos transversales en la estructura del casco de un barco
+        son:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: null
+      id: 4
+      options:
+        a: Una lima especial para suavizar la arista de ataque del timón.
+        b: Orificio en el pantoque para poder bloquear el timón con mal tiempo.
+        c: Orificio en el casco por donde entra la mecha del timón.
+        d: Orificio en la cubierta por donde entra la caña del timón.
+      question: 'La limera es:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 5
+      options:
+        a: Bita.
+        b: Cornamusa.
+        c: Noray.
+        d: Gatera.
+      question: 'La pieza en forma de T que, fijada a cualquier parte del barco, sirve
+        para afirmar los cabos, se llama:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: null
+      id: 6
+      options:
+        a: La parte más larga de un cabo.
+        b: El arco que forma el cabo entre los extremos que lo sujetan.
+        c: El extremo de un cabo o cable.
+        d: Un tipo de nudo similar al ballestrinque.
+      question: 'Se denomina chicote a:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 7
+      options:
+        a: El buen estado y funcionamiento de equipos de navegación, comunicaciones;
+          Motores, sistemas eléctricos y niveles; Aparejo y equipo de seguridad.
+        b: La previsión meteorológica.
+        c: Que hemos informado de la hora y fecha prevista de llegada.
+        d: Todas son correctas.
+      question: 'Antes de hacerse a la mar es conveniente comprobar:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 8
+      options:
+        a: Como la oscilación de la embarcación que se produce en sentido transversal
+          (babor- estribor) debido al estado de la mar.
+        b: Como la oscilación natural de la embarcación en el sentido transversal
+          (babor- estribor) por causas de las olas.
+        c: Como la oscilación natural de la embarcación en el sentido longitudinal
+          (proa-popa) por causas de las olas.
+        d: Como la oscilación de la embarcación que se produce en sentido longitudinal
+          (babor- estribor) debido al estado de la mar.
+      question: 'Se puede definir cabezada:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 9
+      options:
+        a: Asegurar la estanqueidad del barco.
+        b: Estibar todos los elementos de a bordo y trincar todo aquello susceptible
+          de moverse por efecto de la mar.
+        c: Dar la amura al viento.
+        d: Todas las respuestas anteriores son correctas.
+      question: ¿Qué debemos hacer si se nos aproxima un fuerte chubasco con viento?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: null
+      id: 10
+      options:
+        a: Que deberemos llevar al menos uno por persona embarcada.
+        b: Que los niños deben llevar chalecos especiales para ellos.
+        c: Que han de estar homologados.
+        d: Todas las respuestas anteriores son correctas.
+      question: En relación con los chalecos salvavidas, se tendrá en cuenta……
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 11
+      options:
+        a: Cierto.
+        b: Falso.
+        c: Cierto sólo si lo solicita el Capitán Marítimo.
+        d: Cierto sólo en caso de emergencia.
+      question: En el interior de los puertos y sus canales de acceso, las embarcaciones
+        deportivas evitarán interferir la maniobra de buques mayores, atendiendo a
+        sus señales y maniobrando con precaución
+    - category: 4
+      category_name: Legislación
+      correct_answer: null
+      id: 12
+      options:
+        a: No existe relación alguna ya que son incompatibles.
+        b: La bandera de la comunidad será de mayor tamaño que la bandera nacional.
+        c: El tamaño de la bandera autonómica no será mayor que un tercio de las dimensiones
+          de la bandera de España.
+        d: Solo se autoriza a izar la bandera de España.
+      question: ¿Existe alguna relación entre el tamaño de las banderas nacional y
+        autonómica a bordo de una embarcación de recreo?.
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 13
+      options:
+        a: Barlovento.
+        b: Sotavento.
+        c: Estribor.
+        d: Babor.
+      question: 'En la región A, entrando a puerto desde la mar las marcas laterales
+        de color verde deben quedar por:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 14
+      options:
+        a: Una marca cardinal norte.
+        b: Una marca cardinal este.
+        c: Una marca cardinal sur.
+        d: Una marca cardinal oeste.
+      question: 'Una luz centelleante blanca en grupos de 3 destellos cada 5 segundos,
+        pertenece a:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 15
+      options:
+        a: Indica un punto de recalada.
+        b: Define los ejes de un canal.
+        c: Indica un peligro aislado.
+        d: No existe.
+      question: Boya de color negro, con varias bandas horizontales rojas y con la
+        marca de tope de 2 esferas negras superpuestas,…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 16
+      options:
+        a: Franjas rojas y negras.
+        b: Franjas verde y amarilla.
+        c: Franjas amarillas y azules.
+        d: Franjas rojas y blancas.
+      question: ¿De qué color son las marcas de aguas navegables?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: null
+      id: 17
+      options:
+        a: Marca especial.
+        b: Marca cardinal norte.
+        c: Canal a estribor.
+        d: Peligro aislado.
+      question: 'Una luz amarilla en una boya, significa:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 18
+      options:
+        a: uno pueda ser observado por radar desde el otro.
+        b: uno pueda ser observado por AIS desde el otro.
+        c: uno pueda ser observado visualmente desde el otro.
+        d: uno pueda ser observado por dos tripulantes como mínimo desde el otro.
+      question: Se entenderá que los buques están a la vista uno del otro únicamente
+        cuando
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 19
+      options:
+        a: el estado de visibilidad.
+        b: el estado del viento, mar y corriente y la proximidad de peligros para
+          la navegación.
+        c: el calado, en relación con la profundidad disponible de agua.
+        d: Todas las respuestas son correctas.
+      question: Según la Regla 6 del RIPA, para determinar la velocidad de seguridad
+        se tendrán en cuenta, entre otras…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 20
+      options:
+        a: Seguirá a rumbo y velocidad sin variar nada.
+        b: Caerá a estribor en cualquier circunstancia.
+        c: Considerará que lo está haciendo y actuará como buque que alcanza.
+        d: Reducirá velocidad hasta quedar parado.
+      question: 'Cuando un buque abrigue dudas de si está o no alcanzando a otro:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 21
+      options:
+        a: Puede modificar su rumbo, si con ello evita el abordaje.
+        b: Nunca debe modificar su rumbo.
+        c: Siempre modifica el rumbo.
+        d: Buscará un rumbo opuesto al que llevaba.
+      question: 'El buque que "Sigue a rumbo":'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 22
+      options:
+        a: Luz de remolque.
+        b: Luz de alcance.
+        c: Luz de tope.
+        d: Luz de costado.
+      question: ¿Qué tipo de luz ilumina en un arco de horizonte de 225º, hacia la
+        proa?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 23
+      options:
+        a: Buque de propulsión mecánica visto por su popa.
+        b: Buque de propulsión mecánica visto por su proa.
+        c: Buque de vela fondeado visto por su proa.
+        d: Buque de pesca de arrastre.
+      question: Navegando de noche, observamos, una luz blanca y, algo más baja, en
+        un lado de ella una luz roja y en el lado contrario otra de color verde. ¿De
+        qué tipo de barco se trata?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 24
+      options:
+        a: Ninguna.
+        b: Cónica con vértice hacia arriba.
+        c: Cónica con vértice hacia abajo.
+        d: Cilíndrica.
+      question: '¿Cuál es la marca de día de un buque navegando a vela que se está
+        propulsando mecánicamente?:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 25
+      options:
+        a: Dos bolas negras en línea vertical.
+        b: Tres marcas negras, la superior e inferior bolas, la central bicónica
+        c: Tres bolas negras en línea vertical.
+        d: Una bola negra a proa.
+      question: 'Un buque varado exhibirá de día:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 26
+      options:
+        a: Pitada corta 1 segundo.
+        b: Pitada larga 4 a 6 segundos.
+        c: Pitada larga 3 a 6 segundos.
+        d: Las respuestas a) y b) son correctas.
+      question: La duración de las pitadas, según el Reglamento (RIPA), será aproximadamente
+        de...
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: null
+      id: 27
+      options:
+        a: Una pitada larga seguida de dos cortas cada dos minutos.
+        b: Dos pitadas largas cada dos minutos.
+        c: Una pitada corta, una larga y una corta cada dos minutos.
+        d: Una pitada larga cada dos minutos.
+      question: 'Con visibilidad reducida, un buque restringido por su calado deberá
+        realizar como señales fónicas características:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 28
+      options:
+        a: de maniobra, variable, uniforme
+        b: de maniobra, de rabeo, de colocación
+        c: neutro, de maniobra, total
+        d: de maniobra, de arrumbamiento, final
+      question: Las tres fases de evolución en marcha avante son los períodos…
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: null
+      id: 29
+      options:
+        a: Velocidad de seguridad.
+        b: Velocidad de gobierno.
+        c: Velocidad de maniobra.
+        d: Todas las respuestas son correctas.
+      question: La velocidad mínima que ha de llevar una embarcación para que la acción
+        del timón sea efectiva se llama...
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 30
+      options:
+        a: Desconectar los aparatos electrónicos.
+        b: Comprobar variaciones de la aguja.
+        c: Crear, a través del barco, un camino al mar para la descarga eléctrica
+          del rayo.
+        d: Todas las respuestas son ciertas.
+      question: En caso de tormenta eléctrica
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 31
+      options:
+        a: Clase A
+        b: Clase B
+        c: Clase C
+        d: Clase D
+      question: 'Un incendio producido por gases inflamables, corresponde a la clase:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: null
+      id: 32
+      options:
+        a: Continuado de 08:00 a 18:00
+        b: De lunes a domingos de 07:00 a 22:00
+        c: Continuado las 24 horas
+        d: Continuado de 07:00 a 22:00
+      question: 'El Servicio Radio-Médico español funciona:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 33
+      options:
+        a: Anemómetro.
+        b: Veleta.
+        c: Grimpolón.
+        d: Corredera.
+      question: 'El instrumento que se utiliza para medir la intensidad del viento
+        se llama:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 34
+      options:
+        a: Vientos racheados de la costa.
+        b: Vientos portantes.
+        c: Brisas nocturnas que soplan desde tierra hacia el mar.
+        d: Brisas diurnas que soplan de mar a tierra.
+      question: ¿Qué son los terrales?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 35
+      options:
+        a: Un anticiclón.
+        b: Una borrasca.
+        c: Un frente frío.
+        d: Un frente cálido.
+      question: 'Una formación isobárica en la que la presión atmosférica aumenta
+        conforme nos acercamos a su centro es:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: null
+      id: 36
+      options:
+        a: Son las brisas costeras.
+        b: Es un cambio de la tendencia barométrica.
+        c: Es poner la popa a la borrasca.
+        d: Es un cambio en la dirección del viento.
+      question: ¿A qué fenómeno se le conoce con el nombre de "rolar"?
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 37
+      options:
+        a: 125°
+        b: 135°
+        c: 145°
+        d: 155°
+      question: 'El rumbo cuadrantal S45°E corresponde al circular:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 38
+      options:
+        a: Corrección total.
+        b: Desvío.
+        c: Declinación magnética.
+        d: Rumbo de aguja.
+      question: 'El ángulo que existe entre el Norte verdadero (Nv) y el Norte magnético
+        (Nm) se denomina:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 39
+      options:
+        a: El nomenclátor de los puertos españoles que edita el Instituto Social de
+          la Marina.
+        b: La guía oficial de puertos españoles que edita el Instituto Español de
+          Navegación.
+        c: El derrotero correspondiente de los que edita el Instituto Hidrográfico
+          de la Marina.
+        d: La guía oficial de puertos españoles que edita el Instituto Catastral de
+          Costas.
+      question: 'Para localizar los datos y características de los puertos en las
+        costas españolas, se utiliza:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 40
+      options:
+        a: Un círculo máximo de la esfera terrestre perpendicular al eje de la tierra.
+        b: El círculo máximo que divide a la tierra en dos hemisferios (oriental y
+          occidental).
+        c: El círculo máximo que va de Polo Norte a Polo Sur cortando a los paralelos.
+        d: Las respuestas b) y c) son correctas.
+      question: 'El Ecuador es:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: null
+      id: 41
+      options:
+        a: La desviación del rumbo verdadero por el efecto del viento sobre la obra
+          muerta.
+        b: La desviación del rumbo verdadero por el efecto de la corriente sobre la
+          obra viva.
+        c: La desviación del rumbo verdadero por las guiñadas dadas en el timón por
+          el timonel.
+        d: La desviación del rumbo verdadero por los continuos cambios de velocidad.
+      question: 'Se conoce como abatimiento:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 42
+      options:
+        a: 339º
+        b: 335º
+        c: 342º
+        d: 345º
+      question: 'HRB: 0900 horas salimos del puerto de Ceuta (luz verde), ponemos
+        rumbo verdadero hacia el puerto de Algeciras (luz roja). ¿Cuál es el rumbo
+        verdadero que hemos puesto?.'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 43
+      options:
+        a: 020º
+        b: 015º
+        c: 022º
+        d: 025º
+      question: Recorridas 5 millas ponemos nuevo rumbo para pasar a 3 millas al Este
+        de Punta Europa. ¿Qué rumbo verdadero habrá que poner si el R de aguja es
+        024º, la declinación magnética es 3.5º (-) y el desvío 1.5º (+)?.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 44
+      options:
+        a: 55 minutos
+        b: 45 minutos
+        c: 48 minutos
+        d: 51 minutos
+      question: 'Situados en posición A: Latitud: 36º00’N / Longitud: 5º20’W, ponemos
+        rumbo a posición B, situada a 5 millas de Punta Cires y 5 millas del Faro
+        de la Isla de Tarifa. ¿Qué tiempo tardaremos en llegar a la posición B, si
+        nuestra velocidad es de 10 nudos?.'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: null
+      id: 45
+      options:
+        a: 'Latitud: 36º02’N / Longitud: 05º50’W'
+        b: 'Latitud: 36º00’N / Longitud: 05º49’W'
+        c: 'Latitud: 36º00’N / Longitud: 05º50’W'
+        d: 'Latitud: 35º59’N / Longitud: 05º51’W'
+      question: 'Seguimos navegando por el dispositivo de separación de tráfico. Una
+        vez fuera de este, tomamos demoras verdadera a Punta Paloma: 055º y Punta
+        Malabata: 159º. ¿En qué posición nos encontramos?.'
+exam_info:
+  call: 17abril
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2021
