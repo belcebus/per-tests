@@ -1,0 +1,545 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 1
+      options:
+        a: Cada una de las cuadernas que soportan las cubiertas.
+        b: Máxima dimensión vertical, medida desde la parte superior de la quilla
+          hasta la cubierta principal.
+        c: Eslora máxima entre perpendiculares en buques de pasaje.
+        d: Todas las respuestas anteriores son correctas.
+      question: “Puntal” es…
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 2
+      options:
+        a: Cuando el calado de proa es mayor que el calado de popa.
+        b: Cuando el calado de popa es mayor que el calado de proa.
+        c: El que se produce cuando el desplazamiento supera al arqueo bruto.
+        d: Las respuestas a) y c) son correctas.
+      question: Asiento negativo es…
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 3
+      options:
+        a: Un mecanismo de acople y desacople del ancla.
+        b: Un embrague.
+        c: Un tambor con muescas donde se acoplan los eslabones de la cadena.
+        d: Un tipo especial de ancla.
+      question: El “barboten” es…
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 4
+      options:
+        a: Su calado.
+        b: Su asiento.
+        c: Su desplazamiento.
+        d: Su franco-bordo.
+      question: 'Cuando un barco pasa de flotar en agua de río a flotar en agua de
+        mar, se dice que ha aumentado:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 5
+      options:
+        a: Encapillar.
+        b: Cazar.
+        c: Orincar.
+        d: Amordazar.
+      question: 'La maniobra de amarrar un cabo con una boya al ancla que se va a
+        fondear, para que no se pierda, se llama:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: d
+      id: 6
+      options:
+        a: Piedra.
+        b: Cascajo.
+        c: Arcilla.
+        d: Arena.
+      question: 'De los siguientes tenederos, indique cuál de ellos, según la experiencia
+        marítima se considera mejor:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 7
+      options:
+        a: Por su sotavento.
+        b: Por su barlovento.
+        c: Por la amura de estribor del barco.
+        d: Nunca nos acercaremos, es mejor echarle un aro, que lo coja y cobrar para
+          subirlo a bordo.
+      question: ¿Por donde nos acercaremos al náufrago al tratar de recogerlo de la
+        mar?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 8
+      options:
+        a: Asegurar la estanqueidad del barco.
+        b: Estibar todos los elementos de a bordo y trincar todo aquello susceptible
+          de moverse por efecto de la mar
+        c: Dar la amura al viento.
+        d: Todas las respuestas anteriores son correctas.
+      question: ¿Qué debemos hacer si recibimos información de que se aproxima un
+        fuerte chubasco con viento a la zona por la que estamos navegando?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 9
+      options:
+        a: Meter timón a la misma banda de caída.
+        b: Meter timón a la banda contraria a la caída.
+        c: Gritar hombre al agua.
+        d: Realizar una llamada de socorro.
+      question: 'Si navegando dos tripulantes, uno de ellos cae al agua, lo primero
+        que se debe hacer es:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 10
+      options:
+        a: A estribor.
+        b: A babor.
+        c: A sotavento.
+        d: A barlovento
+      question: En caso de remolque de emergencia, en la maniobra de aproximación,
+        el remolcador se situará respecto al buque a remolcar…
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: d
+      id: 11
+      options:
+        a: 50 metros de la playa.
+        b: 100 metros de la playa.
+        c: 150 metros de la playa.
+        d: 200 metros de la playa.
+      question: 'La práctica de deportes náuticos con embarcaciones de recreo quedan
+        prohibidos a menos de:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 12
+      options:
+        a: 3 nudos.
+        b: 6 nudos.
+        c: 10 nudos.
+        d: No hay límite de velocidad.
+      question: 'En los canales balizados de acceso a las playas, muelles, pantanales,
+        fondeaderos la velocidad máxima admitida es de:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 13
+      options:
+        a: Dos conos con el vértice hacia arriba.
+        b: Dos conos con el vértice hacia abajo.
+        c: Dos conos superpuestos opuestos por sus vértices.
+        d: Dos conos superpuestos, opuestos por sus bases
+      question: ¿Cuál es la marca de tope de la marca cardinal Oeste?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 14
+      options:
+        a: Dos conos superpuestos con los vértices hacia abajo.
+        b: Dos conos superpuestos con los vértices hacia arriba.
+        c: Un aspa amarilla.
+        d: Dos esferas negras superpuestas.
+      question: 'Las marcas de tope que indican un peligro aislado son:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 15
+      options:
+        a: Cilíndrica y roja.
+        b: Cilíndrica y verde.
+        c: Cónica y roja.
+        d: Cónica y verde.
+      question: 'La marca de tope de una marca lateral de estribor de la Región “A”,
+        es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 16
+      options:
+        a: Un aspa amarilla en forma de X.
+        b: Un cono rojo.
+        c: Una esfera verde.
+        d: Una esfera roja.
+      question: 'La marca de tope de una marca especial es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 17
+      options:
+        a: Un cilindro rojo.
+        b: Un cilindro verde.
+        c: Un cono rojo.
+        d: Un cono verde.
+      question: 'El tope de las marcas laterales de babor de la Región A es:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 18
+      options:
+        a: Buque dedicado a la pesca.
+        b: Buque con capacidad de maniobra restringida.
+        c: Buque sin gobierno.
+        d: Buque que alcanza.
+      question: 'Regla 3- Definiciones generales: Cuando el Reglamento de abordajes
+        se refiere a todo buque que por cualquier circunstancia excepcional es incapaz
+        de maniobrar en la forma exigida por dicho Reglamento y, por consiguiente,
+        no puede apartarse de la derrota de otro buque, utiliza la expresión'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 19
+      options:
+        a: No estar fondeado.
+        b: No estar amarrado a tierra.
+        c: No estar varado.
+        d: No estar ni fondeado ni amarrado a tierra ni varado.
+      question: 'Regla 3- Definiciones generales: La expresión «en navegación» se
+        aplica a un buque que cumpla la condición de'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 20
+      options:
+        a: El estado de visibilidad.
+        b: La densidad del tráfico.
+        c: La altura de las nubes.
+        d: Las características, eficacia y limitaciones del equipo de radar.
+      question: Según Regla 6 para determinar la velocidad de seguridad se tendrán
+        en cuenta unos factores. De los siguientes factores, indique cuál de ellos
+        NO está incluido en dicha regla
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 21
+      options:
+        a: La demora de un buque que se aproxima no varía en forma apreciable.
+        b: La demora de un buque que se aproxima varía en forma apreciable.
+        c: La distancia al otro buque aumenta de forma apreciable.
+        d: El rumbo del otro buque es paralelo al nuestro.
+      question: Según la Regla 7 sobre “Riesgo de abordaje”, en su apartado “d párrafo
+        1” se considerará que existe el riesgo, si
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 22
+      options:
+        a: Los buques petroleros.
+        b: Los buques militares.
+        c: Los buques de eslora inferior a 20 metros o los buques de vela.
+        d: Los buques de eslora superior a 20 metros o los buques de vela.
+      question: 'Regla 9-Canales angostos: En su apartado “b” dicha regla indica que
+        los buques que no estorbarán el tránsito de un buque que solo pueda navegar
+        con seguridad dentro de un paso o canal angosto son'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 23
+      options:
+        a: El mayor margen posible
+        b: 5 millas náuticas de distancia
+        c: El dispositivo de separación de tráfico por estribor
+        d: El dispositivo de separación de tráfico por babor
+      question: 'Regla 10- Dispositivos de separación de tráfico- En su apartado “h”
+        se indica que: Los buques que no utilicen un dispositivo de separación de
+        tráfico deberán apartarse de él dejando'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 24
+      options:
+        a: Mayor de 22,5 grados a popa del través de este ultimo.
+        b: Menor de 22,5 grados a popa del través de este ultimo.
+        c: Por estribor.
+        d: Por babor.
+      question: 'Regla 13-Buque que "alcanza": Se considerará como buque que alcanza
+        a todo buque que se aproxime a otro viniendo desde una marcación'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 25
+      options:
+        a: Su proa, o casi por su proa.
+        b: Por la aleta de estribor.
+        c: Por la aleta de babor.
+        d: Por el través.
+      question: 'Regla 14-Situación "de vuelta encontrada": En su apartado “b” esta
+        regla indica que se considerará que tal situación existe cuando un buque vea
+        a otro por:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 26
+      options:
+        a: Dos luces rojas todo horizonte en línea vertical, en el lugar más visible.
+        b: Dos luces verdes todo horizonte en línea vertical, en el lugar más visible.
+        c: Una luz roja superior y otra verde inferior en línea vertical.
+        d: Una luz verde superior y otra roja inferior en línea vertical.
+      question: 'Regla 27-Buques sin gobierno o con capacidad de maniobra restringida:
+        Los buques sin gobierno exhibirán:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 27
+      options:
+        a: 'Dos pitadas cortas para indicar: "caigo a estribor"'
+        b: 'Dos pitadas cortas para indicar: "caigo a babor"'
+        c: 'Tres pitadas cortas para indicar: "caigo a babor"'
+        d: 'Tres pitadas cortas para indicar: "voy máquina avante"'
+      question: 'Regla 34-Señales de maniobra y advertencia: Cuando varios buques
+        estén a la vista unos de otros, todo buque de propulsión mecánica en navegación,
+        al maniobrar de acuerdo con lo autorizado o exigido por estas reglas, deberá
+        indicar su maniobra mediante las siguientes señales, emitidas con el pito'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 28
+      options:
+        a: Acercamos la popa al muelle rápidamente, hacemos firme los largos de popa
+          y a continuación fondeamos el ancla.
+        b: Fondearemos el ancla, mientras acercamos la popa al muelle a muy poca velocidad,
+          filamos cadena, damos los largos de popa. Hacemos firme la cadena.
+        c: Acercamos la popa al muelle lentamente, hacemos firmes los largos, damos
+          una paladas avante y fondeamos el ancla.
+        d: Fondearemos el ancla, mientras acercamos la proa al muelle lo más rápidamente
+          posible, filamos cadena y damos los largos de popa.
+      question: 'Para atracar popa al muelle, entre dos barcos, sin boyas ni muertos
+        y con viento de tierra lo haremos:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: anulada
+      id: 29
+      options:
+        a: El largo de popa.
+        b: El spring de popa.
+        c: El spring de proa.
+        d: El través de popa.
+      question: 'Si está atracando de costado al muelle y tiene la corriente por la
+        proa, como mejor puede evitar la arrancada del barco hacia popa es con:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 30
+      options:
+        a: Se comprimirá la herida y se aplicará torniquete si no deja de manar sangre.
+        b: Se aplicarán vasodilatadores.
+        c: Se dejará que salga toda la sangre posible para evitar infecciones.
+        d: Se dejará la herida por debajo del corazón para que coagule.
+      question: 'En caso de hemorragia arterial:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 31
+      options:
+        a: Combustible gaseoso (butano, propano).
+        b: Materias sólidas (madera, papel, etc.).
+        c: Combustible líquido (aceite, gasolina, etc.).
+        d: Metales (aluminio, material radiactivo, etc.).
+      question: 'Si un extintor sirve, según las instrucciones, para apagar un incendio
+        de la clase “B”, lo utilizaremos en un fuego de:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 32
+      options:
+        a: Por enfriamiento.
+        b: Por consumición.
+        c: Por sofocación.
+        d: Por conflagración.
+      question: El método de extinción de un incendio a bordo suprimiendo el oxígeno
+        se llama…
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 33
+      options:
+        a: Ventómetro.
+        b: Grímpola.
+        c: Veleta.
+        d: Anemómetro.
+      question: Para conocer la velocidad del viento, utilizaremos un …
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 34
+      options:
+        a: La distancia en que el viento sopla en la misma dirección.
+        b: La intensidad del viento.
+        c: El tiempo que el viento sopla en la misma dirección.
+        d: El fetch.
+      question: 'La persistencia es:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 35
+      options:
+        a: Fetch, persistencia e intensidad.
+        b: Resistencia, velocidad y fetch.
+        c: Persistencia, resistencia e intensidad.
+        d: Intensidad, velocidad y resistencia.
+      question: ¿De qué tres variables depende la altura de las olas?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 36
+      options:
+        a: El volumen de aire que envuelve a la tierra.
+        b: El peso ejercido sobre todo cuerpo encima de la superficie de la tierra
+          por la masa de aire que la envuelve.
+        c: La presión de aire ejercida por el aire que rodea la tierra, sobre el mar.
+        d: La presión producida por la intersección entre la masa de aire y la superficie
+          de la tierra.
+      question: ¿Qué se entiende por presión atmosférica?
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 37
+      options:
+        a: La misma altura.
+        b: La misma sonda.
+        c: La misma demora.
+        d: La misma declinación.
+      question: 'Un veril es un elemento de la carta náutica que une puntos que tienen:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b,c
+      id: 38
+      options:
+        a: Corriente.
+        b: Abatimiento.
+        c: Rumbo.
+        d: Desvío.
+      question: ¿Cómo se llama el ángulo que forma la estela de un barco con la línea
+        proa-popa del mismo?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 39
+      options:
+        a: Meridiano del lugar.
+        b: Meridiano de situación.
+        c: Paralelo de situación.
+        d: Paralelo del lugar.
+      question: ¿Cómo se llama al círculo máximo que pasa por los polos y por las
+        coordenadas de nuestra situación?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 40
+      options:
+        a: La marcación a un punto conocido.
+        b: La distancia a un punto notable.
+        c: La enfilación de dos referencias de tierra.
+        d: La línea isobática.
+      question: ¿Qué línea de posición es mas fiable?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 41
+      options:
+        a: Líneas de separación de las zonas de navegación costera.
+        b: Libros que indican los desvíos de la aguja náutica.
+        c: Libros que indican las características de la costa.
+        d: Libros que indican las características de los barcos.
+      question: 'Los derroteros son:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 42
+      options:
+        a: 2,6 millas.
+        b: 6,9 millas.
+        c: 8,2 millas.
+        d: 9,0 millas. ,
+      question: Nos encontramos navegando con rumbo de aguja 120°, desvío 2º NW, Declinación
+        magnética 3° NW y obtenemos simultáneamente; marcación de Pta Paloma 108º
+        por babor y marcación de Pta Alcazar 5° por estribor. ¿A qué distancia de
+        Pta Malabata se encuentra el barco?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 43
+      options:
+        a: 335º
+        b: 340º
+        c: 345º
+        d: 350º
+      question: Nos encontramos en la oposición de Punta Europa y Punta Almina, con
+        nuestra proa al Faro de Punta Europa. ¿Cuál es nuestro rumbo?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 44
+      options:
+        a: 2h-42 m.
+        b: 0h-40 m.
+        c: 3h-00 m.
+        d: 2h-07 m.
+      question: Sin viento y sin corriente que le afecte, ¿En cuánto tiempo recorrerá
+        un yate, que navega a 8 nudos, la distancia que hay entre l=36º 10´ N L=006º
+        10´ W y l=35º 50´ N L= 006º 00´ W ?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: anulada
+      id: 45
+      options:
+        a: S47W
+        b: S34W
+        c: S37E
+        d: N37W
+      question: Obtengo rumbo de la carta 218, declinación magnética corregida al
+        año actual= 10E, desvío= -6, sin viento. Indique el rumbo de aguja
+exam_info:
+  call: marzo
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2015

@@ -1,0 +1,560 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 1
+      options:
+        a: Calado medio.
+        b: Francobordo.
+        c: Eslora.
+        d: Manga.
+      question: La distancia vertical medida en el costado, desde la línea de cubierta
+        hasta la línea de agua en la condición de desplazamiento máximo se denomina
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 2
+      options:
+        a: Alerones.
+        b: Aletas.
+        c: Traveses.
+        d: Las respuestas a) y b) son correctas.
+      question: ¿Cómo se denominan las partes laterales traseras del casco de forma
+        curva hacia la popa?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 3
+      options:
+        a: Paso de la hélice.
+        b: Diámetro de la hélice.
+        c: Retroceso de la hélice.
+        d: Avance de la hélice.
+      question: ¿Cómo llamamos a la "distancia teórica que avanzaría el barco al dar
+        una vuelta su hélice"?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 4
+      options:
+        a: Un tipo de hélice.
+        b: Un tipo de escoben.
+        c: Una máquina de gobierno.
+        d: Una máquina de levar.
+      question: 'El molinete es:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: a
+      id: 5
+      options:
+        a: Garreando.
+        b: Borneando.
+        c: Escorando.
+        d: Virando.
+      question: 'Cuando aumenta el viento y un barco fondeado es arrastrado por éste
+        y el ancla resbala sobre el fondo marino, no quedando sujeto el barco al fondeadero
+        se dice que el barco está:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 6
+      options:
+        a: Muerto.
+        b: Bichero.
+        c: Orinque.
+        d: Guía-Cabos.
+      question: 'El palo largo de alrededor de 2 metros con un extremo en forma de
+        gancho que sirve para ayudarnos a enganchar cabos, cables etc. , para recoger
+        objetos de la mar o para separarnos del muelle se llama:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 7
+      options:
+        a: Niveles de aceite
+        b: Nivel de combustible
+        c: Parte meteorológico
+        d: Diámetro de la cadena
+      question: De las siguientes comprobaciones que debemos realizar antes de hacernos
+        a la mar, indique cuál de ellas NO es imprescindible
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 8
+      options:
+        a: Estabilidad
+        b: Estanqueidad
+        c: Flotabilidad
+        d: Robustez
+      question: ¿Cómo se llama la propiedad que tiene la embarcación para volver a
+        su posición de adrizada, una vez que se ha escorado por la acción de la mar?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 9
+      options:
+        a: Señalizar la posición del náufrago.
+        b: Dar maquina atrás en la proximidad del náufrago.
+        c: Meter timón a la banda de caída del náufrago.
+        d: Acercarnos al náufrago por su barlovento.
+      question: Lo que NUNCA haremos durante una maniobra de recogida de un náufrago
+        será….
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 10
+      options:
+        a: Está a la deriva.
+        b: Está al garete.
+        c: Está al socaire.
+        d: Las respuestas a) y b) anteriores son correctas.
+      question: Cuando una embarcación, por fallo de la maquinaria propulsora o del
+        sistema de gobierno, se encuentra sin arrancada en la mar a merced de los
+        elementos. Decimos que…
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: b
+      id: 11
+      options:
+        a: Nos acercaremos rápidamente pues es señal de pedir socorro.
+        b: Nos alejaremos de ella pues tiene buzo sumergido.
+        c: Sabremos que navega sin problemas.
+        d: Sabremos que está varada sobre una roca.
+      question: Si navegando avistamos una embarcación con la bandera Alfa izada
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 12
+      options:
+        a: No se pueden verter a la mar.
+        b: Navegando a más de 12 millas del puerto.
+        c: Fuera de puerto.
+        d: Navegando a más de 4 millas de la costa.
+      question: Los aceites sucios de las sentinas de motores se pueden verter al
+        mar...
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 13
+      options:
+        a: Verdes
+        b: Rojas
+        c: Amarillas
+        d: Grupo de 2 destellos más 1
+      question: Cuando llegamos a puerto desde la mar, las luces que debemos dejar
+        por babor son
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 14
+      options:
+        a: 9 centelleos muy rápidos seguidos de un período de oscuridad.
+        b: 6 centelleos muy rápidos seguidos de un período de oscuridad.
+        c: 3 centelleos muy rápidos seguidos de un período de oscuridad.
+        d: Centelleo continuo muy rápido.
+      question: 'El ritmo de la luz de la marca de tope de una marca cardinal Oeste,
+        es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 15
+      options:
+        a: Al norte de la marca.
+        b: Al sur de la marca.
+        c: Al este de la marca.
+        d: Al oeste de la marca.
+      question: 'Respecto a una baliza, que muestra como marca de tope DOS conos negros
+        superpuestos con vértices hacia arriba, ¿dónde se encuentran las aguas navegables?:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 16
+      options:
+        a: Dos esferas negras superpuestas.
+        b: Dos conos negros superpuestos.
+        c: Dos esferas rojas superpuestas.
+        d: Dos conos verdes superpuestos.
+      question: 'Los topes de las marcas de peligro aislado son:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 17
+      options:
+        a: amarillo y pueden llevar una marca de tope en forma de V
+        b: rojo y pueden llevar una marca de tope en forma de V
+        c: negro y pueden llevar una marca de tope en forma de X
+        d: amarillo y pueden llevar una marca de tope en forma de X
+      question: Las marcas especiales son de color
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 18
+      options:
+        a: Buque dedicado a la pesca.
+        b: Buque con capacidad de maniobra restringida.
+        c: Buque sin gobierno.
+        d: Buque que alcanza.
+      question: 'REGLA 3.   Definiciones generales: Cuando el Reglamento de abordajes
+        se refiere a todo buque que por cualquier circunstancia excepcional es incapaz
+        de maniobrar en la forma exigida por dicho Reglamento y, por consiguiente,
+        no puede apartarse de la derrota de otro buque, utiliza la expresión'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 19
+      options:
+        a: El estado de visibilidad.
+        b: La densidad del tráfico.
+        c: La altura de las nubes.
+        d: Las características, eficacia y limitaciones del equipo de radar.
+      question: REGLA 6.  Para determinar la velocidad de seguridad se tendrán en
+        cuenta unos factores. De los siguientes factores, indique cuál de ellos NO
+        está incluido en dicha regla
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 20
+      options:
+        a: La demora de un buque que se aproxima no varía en forma apreciable.
+        b: La demora de un buque que se aproxima varía en forma apreciable.
+        c: La distancia al otro buque aumenta de forma apreciable.
+        d: El rumbo del otro buque es paralelo al nuestro.
+      question: REGLA 7.  "Riesgo de abordaje", en su apartado "d párrafo 1" se considerará
+        que existe el riesgo, si
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 21
+      options:
+        a: Dos luces rojas todo horizonte en línea vertical, en el lugar más visible.
+        b: Dos luces verdes todo horizonte en línea vertical, en el lugar más visible.
+        c: Una luz roja superior y otra verde inferior en línea vertical.
+        d: Una luz verde superior y otra roja inferior en línea vertical.
+      question: 'REGLA 27.  Buques sin gobierno o con capacidad de maniobra restringida:
+        "Los buques sin gobierno exhibirán…"'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 22
+      options:
+        a: cada uno de ellos caerá a babor de forma que pase por la banda de estribor
+          del otro.
+        b: cada uno de ellos caerá a estribor de forma que pase por la banda de babor
+          del otro.
+        c: aquel que se encuentre a barlovento caerá a estribor.
+        d: aquel que se encuentre a barlovento caerá a babor.
+      question: REGLA 14. "Cuando dos buques de propulsión mecánica naveguen de vuelta
+        encontrada a rumbos opuestos, con riesgo de abordaje…"
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 23
+      options:
+        a: cuando cada uno de ellos reciba el viento por bandas contrarias, el que
+          lo reciba por estribor se mantendrá apartado de la derrota del otro.
+        b: cuando ambos reciban el viento por la misma banda, el buque que esté a
+          sotavento se mantendrá apartado de la derrota del que está a barlovento.
+        c: si un buque que recibe el viento por babor avista a otro buque por barlovento
+          y no puede determinar con certeza si el otro buque recibe el viento por
+          babor o estribor, se mantendrá apartado de la derrota del otro.
+        d: Ninguna respuesta es correcta.
+      question: REGLA 12. "Cuando dos buques de vela se aproximen uno al otro, con
+        riesgo de abordaje, uno de ellos se mantendrá apartado de la derrota del otro
+        en la forma siguiente:"…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 24
+      options:
+        a: Tres pitadas largas.
+        b: Una corta seguida de dos largas que no excedan de dos segundos entre ambas.
+        c: A intervalos que no excedan de dos minutos, dos pitadas largas consecutivas
+          separadas por un intervalo de unos dos segundos entre ambas.
+        d: Una pitada larga que no exceda de dos minutos.
+      question: 'REGLA 35. Un buque de propulsión mecánica en navegación pero parado
+        y sin arrancada en visibilidad reducida emitirá:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 25
+      options:
+        a: Por el costado que exhiba dos luces rojas en línea vertical.
+        b: Por el costado que exhiba una luz blanca y una verde en línea vertical.
+        c: Por el costado que exhibe una luz verde.
+        d: Por el costado que exhiba dos luces verdes en línea vertical.
+      question: 'REGLA 27.  Divisamos una draga que ocasiona una obstrucción, se pasará:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 26
+      options:
+        a: En lo posible, mantener su rumbo fuera de la línea de separación o de la
+          zona de separación de tráfico.
+        b: En lo posible mantener su rumbo dentro de la zona de separación de tráfico.
+        c: Normalmente, al entrar en una vía de circulación o salir de ella, hacerlo
+          por sus extremos.
+        d: Navegar en la vía de circulación apropiada, siguiendo la dirección general
+          de la corriente del tráfico indicada para dicha vía.
+      question: REGLA 10. Indique cúal de las respuestas NO es correcta. "Los buques
+        que utilicen un dispositivo de separación de tráfico deberán…"
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 27
+      options:
+        a: Una pitada corta para indicar "caigo a estribor".
+        b: Tres pitadas cortas para indicar "estoy dando atrás".
+        c: a) y b) son ciertas.
+        d: Todas son falsas.
+      question: REGLA 34. Cuando varios buques estén a la vista unos de otros, todo
+        buque de propulsión mecánica en navegación, al maniobrar de acuerdo con lo
+        autorizado o exigido por estas Reglas, deberá indicar su maniobra mediante
+        las siguientes señales emitidas con el pito
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: c
+      id: 28
+      options:
+        a: Largo de proa.
+        b: Largo de popa.
+        c: Spring de proa.
+        d: Spring de popa.
+      question: Sin viento ni corriente, si el barco se desplaza hacia popa y acerca
+        la proa al muelle, estamos virando del…
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: d
+      id: 29
+      options:
+        a: Con el través de proa.
+        b: Con el spring de proa.
+        c: Con el largo de popa.
+        d: Con el largo de proa.
+      question: Atracando de costado al muelle, con una corriente de proa, ¿con qué
+        amarra evitará mejor que el barco se le desplace hacia popa?
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 30
+      options:
+        a: Daremos toda atrás para separarnos cuanto antes.
+        b: Nos pondremos de acuerdo con el mando del otro barco para comprobar las
+          averías y proceder en consecuencia.
+        c: Esperaremos a que el viento y la mar nos separen.
+        d: Pedir socorro.
+      question: Si tenemos un abordaje y la proa de nuestro barco se ha incrustado
+        en el costado del otro barco. ¿Qué debemos hacer?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 31
+      options:
+        a: Llenar el depósito con el motor en marcha.
+        b: Las baterías estarán en un lugar sin airear y sin sistema de ventilación.
+        c: En caso de derrame de combustible es necesario enjuagar abundantemente
+          con agua.
+        d: Fumar mientras hacemos combustible.
+      question: 'De las siguientes afirmaciones indique la que ES CORRECTA en cuanto
+        a prevención de incendios:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 32
+      options:
+        a: Descargarla de la web de la Seguridad Social en http://www.seg-social.es/prdi00/groups/public/documents/binario/175152.pdf
+        b: Solicitarlo al ISM en c/ Génova, 20 y 24. 28004 Madrid
+        c: Solicitarlo al ISM en el tlf. 917006600 Fax 913199034
+        d: Todas son ciertas
+      question: ¿Cómo conseguir la guía médica del ISM?
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 33
+      options:
+        a: Ventómetro.
+        b: Grímpola.
+        c: Veleta.
+        d: Anemómetro.
+      question: Para conocer la velocidad del viento, utilizaremos un …
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 34
+      options:
+        a: Fetch, persistencia e intensidad.
+        b: Resistencia, velocidad y fetch.
+        c: Persistencia, resistencia e intensidad.
+        d: Intensidad, velocidad y resistencia.
+      question: ¿De qué tres variables depende la altura de las olas?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 35
+      options:
+        a: Intensidad.
+        b: Persistencia.
+        c: Fetch.
+        d: Virulencia.
+      question: Número de horas que ha soplado el viento, sobre el mar, en la misma
+        dirección
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 36
+      options:
+        a: Fetch
+        b: Distancia Coriolis
+        c: Geodistancia
+        d: Persistencia
+      question: La longitud rectilínea máxima de una masa de agua superficial que
+        es uniformemente afectada en dirección y fuerza del viento, se denomina…
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 37
+      options:
+        a: Observatorio Marítimo Español.
+        b: Departamento Marítimo Costero del Ministerio de Fomento.
+        c: Instituto Hidrográfico de la Marina.
+        d: Centro Nacional de Cartografía y Ayudas a la Navegación.
+      question: La publicación de los derroteros, libros de faros y las cartas de
+        navegación en España, le corresponde al...
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 38
+      options:
+        a: Detalle cartográfico.
+        b: Cartucho.
+        c: Anexo cartográfico.
+        d: Recuadro cartográfico.
+      question: Cuando en una carta de navegación costera se inserta una ventana o
+        recuadro, representando a mayor escala un lugar de interés para la navegación,
+        se le llama...
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 39
+      options:
+        a: La milla náutica que vale 1852 metros.
+        b: La milla náutica que vale 1842 metros.
+        c: La milla náutica que vale 1862 metros.
+        d: La milla náutica que vale 1872 metros.
+      question: La unidad con la que tomamos las distancias en las cartas de navegación
+        y empleamos para medir recorridos o tramos de navegación, es...
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 40
+      options:
+        a: de Greenwich.
+        b: Principal.
+        c: Inferior de Greenwich.
+        d: Las respuestas a y b son correctas.
+      question: En la esfera terrestre, el meridiano 0º corresponde al meridiano…
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 41
+      options:
+        a: Una línea de enfilación entre dos faros.
+        b: Una línea isobática entre dos faros.
+        c: Una línea de oposición entre dos faros.
+        d: Una línea de marcación entre dos faros.
+      question: 'Cuando navegando a rumbo, cortamos la línea que une a dos faros opuestos
+        uno frente al otro, nos encontramos en ... :'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 42
+      options:
+        a: 328º
+        b: 323º
+        c: 318º
+        d: 314º
+      question: Navegando en aguas cercanas a Barbate, a Hora Reloj Bitácora (HRB)=
+        0930, nos encontramos proa a la línea de la enfilación de los faros de Trafalgar
+        y Roche. ¿Cuál será en ese momento nuestro rumbo verdadero?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 43
+      options:
+        a: 8,1 nudos.
+        b: 10,4 nudos.
+        c: 6,2 nudos.
+        d: 12,6 nudos.
+      question: Si zarpamos del puerto de Tánger (luz del faro del extremo del espigón)
+        con rumbo al puerto de Barbate (luz roja del extremo del espigón) y queremos
+        hacer este recorrido en 3 horas. ¿Qué velocidad de máquinas deberemos de poner?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 44
+      options:
+        a: 090º
+        b: 095º
+        c: 100º
+        d: 105º
+      question: Nos encontramos situados en un punto -A- de coordenadas= 36º 00'N
+        - 005º 50'W y damos rumbo hacia otro punto -B- situado 1 milla al Sur verdadero
+        del faro de Isla Tarifa. ¿Cuál será el rumbo de aguja a poner, teniendo en
+        cuenta que la variación local es de 2º W y el desvío de aguja de -3?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 45
+      options:
+        a: 1 hora y 10 minutos.
+        b: 1 hora y 48 minutos.
+        c: 1 hora y 35 minutos.
+        d: 1 hora y 21 minutos.
+      question: 'Nos encontramos situados en la línea de oposición de los faros de
+        Punta Europa y de Punta Almina y tomamos distancia al faro de Punta Carnero=
+        5 millas (corrección total: 4º W). ¿Cuánto tiempo tardaremos en llegar al
+        puerto de Ceuta (luz verde del espigón de poniente) con velocidad de máquinas
+        de 7 nudos?'
+exam_info:
+  call: marzo
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2019

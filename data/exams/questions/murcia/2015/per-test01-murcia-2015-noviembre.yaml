@@ -1,0 +1,554 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 1
+      options:
+        a: Bordas.
+        b: Mamparas.
+        c: Baos.
+        d: Trancaniles.
+      question: 'Los refuerzos que unen de lado a lado los extremos de las cuadernas,
+        dando soporte a la cubierta, se llaman:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 2
+      options:
+        a: Partes curvas de los costados, en las proximidades de la proa.
+        b: Partes curvas de los costados, en las proximidades de la popa.
+        c: Partes centrales de los costados.
+        d: Cada una de las mitades en las que queda dividido el buque por la línea
+          de crujía.
+      question: 'Las amuras son:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 3
+      options:
+        a: Refuerzo transversal vertical.
+        b: Refuerzo transversal horizontal.
+        c: Refuerzo longitudinal vertical.
+        d: Ninguna de las respuestas es correcta.
+      question: 'El codaste es un:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 4
+      options:
+        a: Dar estanqueidad a la bocina.
+        b: Invertir la acción de la caña del timón.
+        c: Impedir que entre el agua por las aberturas practicadas en el casco, bajo
+          la línea de flotación.
+        d: Las respuestas a) y c) son correctas.
+      question: 'Los guardines sirven para:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 5
+      options:
+        a: Bita.
+        b: Cornamusa.
+        c: Noray.
+        d: Gatera
+      question: 'La pieza en forma de T que, fijada a cualquier parte del barco, sirve
+        para afirmar los cabos, se llama:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: d
+      id: 6
+      options:
+        a: Vigilar que nuestro círculo de borneo no interfiera con otras embarcaciones.
+        b: Tomar marcas para asegurarnos de que no garreamos.
+        c: Programar alarmas de sonda que nos avisen de que nos desviamos sensiblemente
+          de la profundidad en la que nos encontramos fondeados.
+        d: Todas son correctas.
+      question: Medidas de seguridad durante el fondeo…
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 7
+      options:
+        a: El buen estado y funcionamiento de equipos de navegación, comunicaciones;
+          Motores, sistemas eléctricos y niveles; Aparejo y equipo de seguridad.
+        b: La previsión meteorológica.
+        c: Que hemos informado de la hora y fecha prevista de llegada.
+        d: Todas son correctas.
+      question: 'Antes de hacerse a la mar es conveniente comprobar:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 8
+      options:
+        a: Evitar comprometer la estabilidad del barco.
+        b: Tapar imbornales.
+        c: Comprobar que estén cerrados todos los grifos de fondo.
+        d: Todas las respuestas anteriores son correctas.
+      question: En caso de mal tiempo…
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 9
+      options:
+        a: Reducir la velocidad.
+        b: Estar atentos a la sonda.
+        c: Tener el ancla lista para fondear.
+        d: Todas son correctas.
+      question: Precauciones en aguas someras…
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 10
+      options:
+        a: Dar la voz de ¡Hombre al agua!, indicando la banda por la que ha caído.
+        b: No perder de vista al náufrago.
+        c: Lanzar al agua todo objeto que pueda flotar.
+        d: Las tres respuestas anteriores son correctas.
+      question: Formas de actuar en caso de caída de un tripulante al agua…
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 11
+      options:
+        a: Verdadero.
+        b: Falso.
+        c: Depende de la nacionalidad y situación jurídica de las personas siniestradas.
+        d: Las respuestas a) y c) son correctas.
+      question: Convenio SOLAS. "El capitán de todo buque que estando en condiciones
+        de prestar ayuda reciba una información de la fuente que sea, al efecto de
+        que hay personas siniestradas en la mar, estará obligado a acudir a toda máquina
+        en su auxilio, informando a éstas de ello o al servicio de búsqueda y salvamento"
+    - category: 4
+      category_name: Legislación
+      correct_answer: d
+      id: 12
+      options:
+        a: En aguas portuarias.
+        b: Hasta 3 millas de la costa.
+        c: De 3 a 12 millas de la costa.
+        d: Todas las respuestas son falsas.
+      question: Las aguas sucias procedentes de aseos, se descargarán, sin restricciones,…
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 13
+      options:
+        a: Boya cilíndrica de color rojo, con marca de tope cilindro rojo.
+        b: Boya de espeque de color verde, con marca de tope cono verde.
+        c: Boya cónica de color rojo, con marca de tope cono de color rojo.
+        d: Boya castillete de color rojo, con marca de tope cono rojo.
+      question: Marca lateral de Babor…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 14
+      options:
+        a: Aguas navegables al Sur de la marca.
+        b: Aguas navegables al Oeste de la marca.
+        c: Aguas navegables al Este de la marca.
+        d: Ninguna de las respuestas es correcta.
+      question: Boya de castillete de color amarillo con banda ancha horizontal negra,
+        y cuya marca de tope son 2 conos negros superpuestos opuestos por sus vértices,
+        indica…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 15
+      options:
+        a: Indica un punto de recalada.
+        b: Define los ejes de un canal.
+        c: Indica un peligro aislado.
+        d: No existe.
+      question: Boya de color negro, con varias bandas horizontales rojas y con la
+        marca de tope de 2 esferas negras superpuestas,…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 16
+      options:
+        a: De peligro aislado.
+        b: De aguas navegables.
+        c: Especial.
+        d: Lateral.
+      question: Boya esférica, con marca de tope esférica a franjas verticales rojas
+        y blancas, es una marca…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 17
+      options:
+        a: La situación de granjas marinas.
+        b: La situación de reservas marinas.
+        c: Zonas de ejercicios militares.
+        d: Todas las respuestas son correctas.
+      question: 'Las boyas de marcas especiales se utilizan para indicar:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: anulada
+      id: 18
+      options:
+        a: Sin gobierno / dedicado a la pesca / hidroavión / draga / vela.
+        b: Sin gobierno / draga / hidroavión / dedicado a la pesca / vela.
+        c: Sin gobierno / draga / dedicado a la pesca / vela / hidroavión.
+        d: Ninguna de las tres respuestas es correcta.
+      question: La definición de la regla 2 del RIPA, el orden de preferencia de paso
+        entre estas embarcaciones, sería…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 19
+      options:
+        a: Verdadero.
+        b: Falso.
+        c: Sólo si el de pesca es de arrastre.
+        d: Sólo si el de pesca es de cerco.
+      question: Según la Regla 9 del RIPA, dentro de un paso o canal angosto, un buque
+        de propulsión mecánica no estorbará el tránsito de un buque dedicado a la
+        pesca…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 20
+      options:
+        a: se considerará que existe riesgo si la demora o la marcación de un buque
+          que se aproxima varía en forma apreciable.
+        b: se considerará que existe riesgo si la demora o la marcación de un buque
+          que se aproxima no varía en forma apreciable.
+        c: en algunos casos puede existir riesgo aún cuando sea evidente una variación
+          apreciable de la demora.
+        d: Las respuestas b) y c) son correctas.
+      question: Según la Regla 7 del RIPA, para determinar si existe riesgo de abordaje,
+        se tendrá en cuenta, entre otros…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 21
+      options:
+        a: Navegar siguiendo la dirección general de la corriente de tráfico indicada.
+        b: Mantener el rumbo dentro de la zona de separación de tráfico.
+        c: Al entrar o salir de una vía de circulación, hacerlo por los laterales
+          con el mayor ángulo posible.
+        d: Todas las respuestas son correctas.
+      question: Según la Regla 10 del RIPA, los buques que utilicen un dispositivo
+        de separación de tráfico, deberán…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 22
+      options:
+        a: Los buques evitarán fondear dentro de un dispositivo de separación de tráfico.
+        b: Los buques dedicados a la pesca no estorbarán el tránsito de cualquier
+          buque que navegue en una vía de circulación.
+        c: Los buques de eslora inferior a 20 metros o de vela, no estorbarán el tránsito
+          seguro de los buques de propulsión mecánica que naveguen en una vía de circulación.
+        d: Todas las respuestas son correctas.
+      question: Según la Regla 10 del RIPA,
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 23
+      options:
+        a: cuando cada uno de ellos reciba el viento por bandas contrarias, el que
+          lo reciba por estribor se mantendrá apartado de la derrota del otro.
+        b: cuando ambos reciban el viento por la misma banda, el buque que esté a
+          sotavento se mantendrá apartado de la derrota del que está a barlovento.
+        c: si un buque que recibe el viento por babor avista a otro buque por barlovento
+          y no puede determinar con certeza si el otro buque recibe el viento por
+          babor o estribor, se mantendrá apartado de la derrota del otro.
+        d: Ninguna respuesta es correcta.
+      question: Según la Regla 12 del RIPA, <Cuando dos buques de vela se aproximen
+        uno al otro, con riesgo de abordaje, uno de ellos se mantendrá apartado de
+        la derrota del otro en la forma siguiente:”…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 24
+      options:
+        a: Un buque de vela que es alcanzado por un buque dedicado a la pesca, deberá
+          mantenerse apartado de la derrota de éste.
+        b: Cuando dos buques de propulsión mecánica navegan de vuelta encontrada a
+          rumbos opuestos o casi opuestos, con riesgo de abordaje, cada uno de ellos
+          caerá a babor de forma que pase por la banda de estribor del otro.
+        c: Cuando dos buques de propulsión mecánica se crucen con riesgo de abordaje,
+          el buque que tenga al otro por su costado de estribor se mantendrá apartado
+          de la derrota del otro.
+        d: Todas las respuestas son falsas.
+      question: Según las Reglas 13/14/15 del RIPA,
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 25
+      options:
+        a: Su proa, o casi por su proa.
+        b: Por la aleta de estribor.
+        c: Por la aleta de babor.
+        d: Por el través.
+      question: 'Regla 14 del RIPA -Situación "de vuelta encontrada": En su apartado
+        "b" esta regla indica que "se considerará que tal situación existe cuando
+        un buque vea a otro por…"'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 26
+      options:
+        a: Dos luces rojas todo horizonte en línea vertical, en el lugar más visible.
+        b: Dos luces verdes todo horizonte en línea vertical, en el lugar más visible.
+        c: Una luz roja superior y otra verde inferior en línea vertical.
+        d: Una luz verde superior y otra roja inferior en línea vertical.
+      question: 'Regla 27 del RIPA -Buques sin gobierno o con capacidad de maniobra
+        restringida: "Los buques sin gobierno exhibirán…"'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 27
+      options:
+        a: 'Dos pitadas cortas para indicar: "caigo a estribor"'
+        b: 'Dos pitadas cortas para indicar: "caigo a babor"'
+        c: 'Tres pitadas cortas para indicar: "caigo a babor"'
+        d: 'Tres pitadas cortas para indicar: "voy máquina avante"'
+      question: 'Regla 34 del RIPA -Señales de maniobra y advertencia: <Cuando varios
+        buques estén a la vista unos de otros, todo buque de propulsión mecánica en
+        navegación, al maniobrar de acuerdo con lo autorizado o exigido por estas
+        reglas, deberá indicar su maniobra mediante las siguientes señales, emitidas
+        con el pito…”'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 28
+      options:
+        a: Tomar vueltas.
+        b: Adujar.
+        c: Amollar.
+        d: Lascar
+      question: 'Recoger un cabo ordenadamente es:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: c
+      id: 29
+      options:
+        a: Largo de proa.
+        b: Largo de popa.
+        c: Spring de proa
+        d: Spring de popa.
+      question: Sin viento ni corriente, si el barco se desplaza hacia popa y acerca
+        la proa al muelle, estamos virando del…
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 30
+      options:
+        a: Evaluar los daños.
+        b: Dar atrás.
+        c: Cambiar la distribución de pesos.
+        d: Esperar la pleamar.
+      question: Ante una varada involuntaria, lo primero es…
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 31
+      options:
+        a: Incendios de sólidos.
+        b: Incendios de aceites y grasas.
+        c: Incendios de líquidos.
+        d: Incendios de gases.
+      question: 'Los incendios de clase F, corresponden a:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 32
+      options:
+        a: Enfriamiento.
+        b: Sofocación.
+        c: Eliminación.
+        d: Supresión o Inhibición.
+      question: 'El procedimiento de extinción de incendios que elimina el oxígeno,
+        es:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 33
+      options:
+        a: Intensidad.
+        b: Persistencia.
+        c: Fetch.
+        d: Virulencia.
+      question: Número de horas que ha soplado el viento, sobre el mar, en la misma
+        dirección
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 34
+      options:
+        a: Maestral.
+        b: Terral.
+        c: Virazón.
+        d: Mareal.
+      question: 'La brisa costera que, sin gradiente de presión, va del mar a la tierra,
+        se llama:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 35
+      options:
+        a: La altura de las olas.
+        b: El fetch.
+        c: La fuerza del viento.
+        d: La persistencia de las olas.
+      question: La Escala de Douglas mide ...
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 36
+      options:
+        a: Caer el viento.
+        b: Refrescar el viento.
+        c: Rolar el viento.
+        d: Rachear el viento.
+      question: Cambiar la intensidad o fuerza del viento, durante intervalos por
+        lo general cortos, es…
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 37
+      options:
+        a: Cero magnético.
+        b: Cero hidrográfico.
+        c: Cero geográfico.
+        d: Cero topográfico.
+      question: 'Las sondas indicadas en la carta de navegación, son referidas al:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 38
+      options:
+        a: Abatimiento.
+        b: Deriva.
+        c: Rumbo efectivo.
+        d: Rumbo de superficie.
+      question: 'El efecto que produce la corriente sobre el rumbo verdadero del barco,
+        se llama:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 39
+      options:
+        a: 125°.
+        b: 135°.
+        c: 145°.
+        d: 155°.
+      question: 'El rumbo cuadrantal S45°E corresponde al circular:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 40
+      options:
+        a: Una línea que une puntos de igual latitud.
+        b: Una línea que une puntos de igual longitud.
+        c: Una línea que une puntos de igual demora.
+        d: Una línea que une puntos de igual profundidad.
+      question: 'En una carta náutica, un veril es:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 41
+      options:
+        a: Líneas de separación de las zonas de navegación costera.
+        b: Libros que indican los desvíos de la aguja náutica.
+        c: Libros que indican las características de la costa.
+        d: Libros que indican las características de los barcos.
+      question: 'Los derroteros son:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 42
+      options:
+        a: 35º 58,2' N - 006º 04,6' W.
+        b: 35º 56,8' N - 006º 02,8' W.
+        c: 35º 54,2' N - 006º 00,2' W.
+        d: 35º 52,1' N – 005º 58,1' W.
+      question: Situados sobre la línea de la enfilación de los faros de Punta Paloma
+        y de Isla Tarifa, se toma distancia radar de Punta Cires 5 millas y desde
+        esa posición, damos rumbo verdadero 260º con Vb= 15 nudos. ¿Qué posición habremos
+        alcanzado después de una hora y media de navegación?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 43
+      options:
+        a: 36º 05,4' N - 006º 02,0' W.
+        b: 36º 07,5' N - 006º 04,1' W.
+        c: 36º 08,5' N - 006º 06,8' W.
+        d: 36º 00,0' N - 006'00,0' W.
+      question: A Hora del Reloj de Bitácora (HRB)= 08:30 navegamos al Ra = 096º,
+        Ct= 6° NW, y en ese instante tenemos por la proa al faro de Punta de Gracia
+        y por nuestro través de babor, al faro de Trafalgar. ¿En qué posición nos
+        encontramos?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 44
+      options:
+        a: Rv = 327º
+        b: Rv = 317º
+        c: Rv = 337º
+        d: Rv = 347º
+      question: Situados a 3'al Nv del faro de Punta Almina, damos rumbo hacia la
+        luz roja del extremo del espigón del Puerto de Algeciras con Vb= 11 nudos.
+        ¿Cuál será nuestro rumbo?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 45
+      options:
+        a: Ra = 264º
+        b: Ra = 089º
+        c: Ra = 065º
+        d: Ra = 245º
+      question: Un yate quiere navegar desde un punto -A- situado en l= 35º 53,4'
+        N - L= 006°10,0' W, hasta otro punto -B- situado a 10 millas al Norte verdadero
+        del faro de Punta Malabata. La variación local (Dm) es 2° NW Y el desvío de
+        aguja 12° NW. ¿Qué rumbo de aguja deberá poner?
+exam_info:
+  call: noviembre
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2015

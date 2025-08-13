@@ -1,0 +1,578 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 1
+      options:
+        a: Eslora.
+        b: Manga.
+        c: Puntal.
+        d: Calado.
+      question: 'La distancia medida horizontalmente en el sentido longitudinal del
+        buque se denomina:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 2
+      options:
+        a: Cuadernas.
+        b: Quilla.
+        c: Baos.
+        d: Mamparos.
+      question: 'A los refuerzos transversales que van de babor a estribor y que sirven
+        para aguantar la cubierta se les denomina:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 3
+      options:
+        a: Francobordo.
+        b: Asiento.
+        c: Desplazamiento máximo.
+        d: Calado medio.
+      question: 'A la semisuma de los calados de proa y de popa (calado en proa más
+        calado en popa, dividido entre dos) se le denomina:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 4
+      options:
+        a: Zarpar.
+        b: Adrizar.
+        c: Escorar.
+        d: Virar.
+      question: 'A la acción que consiste en poner la embarcación en posición vertical
+        se le denomina:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: a
+      id: 5
+      options:
+        a: Garreo.
+        b: Borneo.
+        c: Levar el ancla.
+        d: Orinque.
+      question: ¿Cómo se denomina a la acción que se produce cuando, por ejemplo por
+        efecto del viento o de la corriente, el ancla no se agarra al fondo y se arrastra
+        sobre él?
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: d
+      id: 6
+      options:
+        a: A toda máquina, fondeando el ancla y dando toda la máquina atrás para parar
+          la embarcación.
+        b: Popa al viento y a muy poca máquina.
+        c: Proa al viento y siempre a la máxima velocidad de la embarcación.
+        d: Proa al viento, con poca velocidad, fondeamos el ancla y damos unas paladas
+          atrás suavemente para que agarre el ancla.
+      question: Al ir a fondear lo haremos…
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 7
+      options:
+        a: Correr.
+        b: Adrizar.
+        c: Capear.
+        d: Barloventar.
+      question: ¿Cómo se denomina a la acción de mantener nuestra embarcación navegando,
+        aguantando el temporal, proa a la mar o amurado a él?.
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 8
+      options:
+        a: Capear el temporal.
+        b: Ir de arribada.
+        c: Arranchar a son de mar.
+        d: Estibar.
+      question: Nos encontramos navegando y recibimos aviso de temporal. ¿Cómo se
+        denomina al conjunto de acciones tendentes a preparar la embarcación para
+        pasar el temporal?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 9
+      options:
+        a: Aumentaremos nuestra velocidad a la máxima que permita nuestra embarcación.
+        b: Nos atravesaremos a la mar.
+        c: Dejaremos todos los pesos sin trincar.
+        d: Navegaremos con máquina moderada evitando dar pantocazos.
+      question: Navegando con mala mar…
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 10
+      options:
+        a: Al atravesarnos a la mar y producirse una escora, se disminuye la estabilidad
+          de la embarcación.
+        b: Trasladar los pesos lo más abajo posible provoca una disminución de la
+          estabilidad de la embarcación.
+        c: La estabilidad longitudinal es la tendencia que tiene una embarcación a
+          tener escoras.
+        d: Las aguas someras son las más seguras por las que podemos navegar.
+      question: De las siguientes afirmaciones indique la que es verdadera.
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 11
+      options:
+        a: Está permitido si antes los trituramos y los arrojamos a más de 12 millas
+          de la costa.
+        b: Está permitido fuera de las zonas de baño y de los canales de acceso a
+          las playas.
+        c: Está prohibido.
+        d: Está prohibido solo en aquellas aguas que estén dentro de reservas naturales.
+      question: Arrojar plásticos al mar…
+    - category: 4
+      category_name: Legislación
+      correct_answer: b
+      id: 12
+      options:
+        a: Están obligadas a enarbolar la Bandera de España junto con la bandera de
+          la Comunidad Autónoma del puerto en el que se encuentre.
+        b: Están obligadas a enarbolar la Bandera de España.
+        c: Solamente enarbolarán la Bandera de España cuando naveguen por aguas internacionales.
+        d: No pueden enarbolar, en ningún caso, las Banderas de las Comunidades Autónomas.
+      question: Las embarcaciones de recreo españolas…
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 13
+      options:
+        a: Verdes
+        b: Rojas
+        c: Amarillas
+        d: Blancas
+      question: Cuando llegamos a un puerto desde la mar, en región A, las luces que
+        debemos dejar por babor son…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 14
+      options:
+        a: Una marca cardinal Norte.
+        b: Una marca cardinal Este.
+        c: Una marca cardinal Sur.
+        d: Una marca cardinal Oeste.
+      question: . Si nos encontramos una marca pintada con bandas horizontales amarillas
+        y negras, y cuya marca de tope son dos conos superpuestos con los vértices
+        hacia abajo, estamos ante…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 15
+      options:
+        a: Indica que en el punto en que se encuentra colocada es donde hay mayor
+          profundidad.
+        b: Se coloca sobre, o próxima, a un peligro rodeado por todas partes de aguas
+          navegables.
+        c: Si tiene una franja verde nos indica que el lado por el que la navegación
+          es segura es el de estribor.
+        d: Presenta dos conos superpuestos opuestos por sus vértices como marca de
+          tope.
+      question: La señal de Peligro Aislado…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 16
+      options:
+        a: Una bola negra
+        b: Dos bolas negras
+        c: Una bola roja
+        d: Un aspa amarilla
+      question: Una marca de aguas navegables tiene como tope…
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 17
+      options:
+        a: Una marca de peligro aislado.
+        b: Una marca cardinal oeste.
+        c: Una marca lateral que indica que existe un peligro en la zona.
+        d: Una marca especial.
+      question: Si navegando nos encontramos una boya de color amarillo y con una
+        marca de tope en forma de X, estaremos ante…
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 18
+      options:
+        a: Solo a los buques que naveguen exclusivamente en alta mar.
+        b: A todos los buques en alta mar y en todas las aguas que tengan comunicación
+          con ella y sean navegables por los buques de navegación marítima.
+        c: Solo a los buques que naveguen exclusivamente por la zona contigua y en
+          todas las aguas que tengan comunicación con ella.
+        d: Solo los buques que naveguen exclusivamente por la zona contigua y las
+          aguas interiores.
+      question: Regla 1. El Reglamento Internacional para Prevenir Abordajes en la
+        Mar (RIPA), será de aplicación…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 19
+      options:
+        a: A todo buque navegando a vela siempre que su maquinaria propulsora, caso
+          de llevarla, no se esté utilizando.
+        b: A todo buque que por cualquier circunstancia excepcional es incapaz de
+          maniobrar en la forma exigida por el RIPA y, por consiguiente, no puede
+          apartarse de la derrota de otro buque.
+        c: A todo buque que, debido a la naturaleza de su trabajo, tiene reducida
+          su capacidad para maniobrar en la forma exigida por el RIPA y, por consiguiente,
+          no puede apartarse de la derrota de otro buque.
+        d: A todo buque de propulsión mecánica que, por razón de su calado en relación
+          con la profundidad disponible de agua, tiene muy restringida su capacidad
+          de apartarse de la derrota que está siguiendo.
+      question: Regla 3. Se entiende por buque sin gobierno…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 20
+      options:
+        a: Las luces de navegación encendidas, de esta forma se asegurarán una mayor
+          visibilidad.
+        b: Una eficaz vigilancia visual y auditiva, utilizando asimismo todos los
+          medios disponibles para evaluar plenamente la situación y el riesgo de abordaje.
+        c: Su sistema propulsor en marcha para así afrontar cualquier emergencia sobrevenida.
+        d: El Radar encendido.
+      question: 'Regla 5. Según el RIPA, todos los buques, en navegación, mantendrán
+        en todo momento, tanto durante el día como de noche:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 21
+      options:
+        a: Deberán evitarse los cambios de rumbo.
+        b: Deberán evitarse los cambios de velocidad.
+        c: Deberán evitarse una sucesión de pequeños cambios de rumbo y/o velocidad.
+        d: Deberán evitarse una sucesión de grandes cambios de rumbo y/o velocidad.
+      question: Regla 8. En la maniobra que se realice para evitar un abordaje…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 22
+      options:
+        a: Podrán cruzar la derrota de un buque que sólo puedan navegar con seguridad
+          dentro de un paso o canal angosto.
+        b: No estorbarán el tránsito de un buque que sólo pueda navegar con seguridad
+          dentro de un paso o canal angosto.
+        c: Podrán navegar como deseen.
+        d: Fondearán inmediatamente a la espera de instrucciones.
+      question: Regla 9. Los buques de eslora inferior a 20 metros que naveguen a
+        lo largo de un paso o canal angosto…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 23
+      options:
+        a: Tendrán preferencia de paso en las vías de circulación.
+        b: No estorbarán el tránsito de cualquier buque que navegue en una vía de
+          circulación.
+        c: No podrán usar la zona de navegación costera.
+        d: No tienen obligación de navegar siguiendo la dirección general de la corriente
+          de tráfico de la vía de circulación en la que se encuentren.
+      question: Regla 10. Los buques de pesca en los dispositivos de separación de
+        tráfico…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 24
+      options:
+        a: Los buques de propulsión mecánica en navegación, mayores de 50 metros de
+          eslora.
+        b: Los buques de vela menores de 50 metros de eslora.
+        c: Los buques fondeados mayores de 50 metros.
+        d: Los buques sin gobierno menores de 50 metros de eslora.
+      question: Regla 23. ¿Qué buques están obligados a llevar dos luces de tope?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 25
+      options:
+        a: Un pesquero de cerco, con un aparejo largado a más de 150 metros.
+        b: Un buque de pesca de arrastre faenando.
+        c: Un velero fondeado.
+        d: Un buque de vela que también es propulsado mecánicamente.
+      question: Regla 25. Si divisamos una embarcación que lleva una marca consistente
+        en un cono con el vértice hacia abajo, se trata de…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 26
+      options:
+        a: Dos luces todo horizonte, en línea vertical la superior roja y la inferior
+          blanca, luces de costado, luz de alcance y si su eslora es mayor de 50 metros
+          una luz de tope.
+        b: Dos luces todo horizonte, en línea vertical la superior blanca y la inferior
+          roja, luces de costado, luz de alcance y si su eslora es mayor de 50 metros
+          una luz de tope.
+        c: Dos luces todo horizonte, en línea vertical la superior verde y la inferior
+          blanca, luces de costado, luz de alcance y si su eslora es mayor de 50 metros
+          dos luces de tope.
+        d: Dos luces todo horizonte, en línea vertical la superior verde y la inferior
+          blanca, luces de costado, luz de alcance y si su eslora es mayor de 50 metros
+          una luz de tope.
+      question: 'Regla 26. Un buque dedicado a la pesca de arrastre exhibirá:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 27
+      options:
+        a: Estoy dando atrás.
+        b: Caigo a babor.
+        c: Caigo a estribor.
+        d: Pretendo alcanzarle por su banda de estribor.
+      question: Regla 32. Cuando varios buques estén a la vista unos de otros, ¿qué
+        significa que uno de los buques emita tres pitadas cortas?.
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: c
+      id: 28
+      options:
+        a: Arrancada.
+        b: Ciaboga.
+        c: Velocidad de gobierno.
+        d: Corriente de expulsión.
+      question: A la velocidad mínima a la cual una embarcación es capaz de maniobrar
+        adecuadamente se le denomina…
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 29
+      options:
+        a: Atraque en punta.
+        b: Abarloarse.
+        c: Encapillar.
+        d: Abatir.
+      question: A la maniobra que consiste en atracar una embarcación al costado de
+        otra se le denomina…
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 30
+      options:
+        a: Realizar rápidamente un análisis de cuáles son los daños producidos.
+        b: Separar las embarcaciones lo antes posible.
+        c: Abroncar al patrón de la otra embarcación.
+        d: Si la vía de agua está localizada en la misma línea de flotación o cerca
+          de ella se procurará escorar la embarcación hacia la banda donde se ha producido
+          el abordaje.
+      question: Si tenemos un abordaje y la proa del otro barco se ha incrustado en
+        el costado del nuestro. ¿Qué debemos de hacer en esta situación?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 31
+      options:
+        a: Abriremos los grifos de fondo.
+        b: Escoraremos la embarcación hacia la banda donde tenemos la vía de agua.
+        c: Taponaremos la vía de agua con espiches y/o colchonetas.
+        d: Desconectaremos la bomba de achique.
+      question: Hemos sufrido una vía de agua. ¿Qué medida podríamos tomar para evitar
+        la inundación de nuestra embarcación?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 32
+      options:
+        a: El mecanismo de extinción de incendios actúa eliminando el calor, reduciendo
+          la temperatura del combustible.
+        b: Se ahoga el fuego al eliminar el oxígeno de la combustión.
+        c: Se retira o elimina el elemento combustible.
+        d: Se impide la trasmisión de calor de unas partículas a otras del combustible,
+          interponiendo separadores entre ellas.
+      question: Cuando se extingue un incendio por sofocación…
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 33
+      options:
+        a: El viento circula en sentido contrario a las agujas del reloj.
+        b: El viento circula en el sentido de las agujas del reloj.
+        c: Generalmente se trasladan de Este a Oeste.
+        d: Área de altas presiones.
+      question: ¿Cuál de las siguientes respuestas corresponde con las características
+        de una borrasca en el hemisferio Norte?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 34
+      options:
+        a: Disminuye su intensidad a medida que aumentamos nuestra velocidad.
+        b: Aumenta su intensidad.
+        c: Cambia repentinamente su intensidad en intervalos generalmente cortos.
+        d: Disminuye si intensidad totalmente.
+      question: Decimos que el viento ha racheado cuando…
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 35
+      options:
+        a: En función de la temperatura del agua del mar.
+        b: En función de la fuerza del viento.
+        c: En función de la presión atmosférica en la superficie del mar.
+        d: En función de la altura de las olas.
+      question: La escala Douglas describe el estado de la mar…
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 36
+      options:
+        a: Terral.
+        b: Intensidad.
+        c: Fetch.
+        d: Persistencia.
+      question: Al número de horas que ha soplado el viento en la misma dirección
+        y con la misma intensidad se le denomina…
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 37
+      options:
+        a: Ecuador.
+        b: Meridiano de lugar.
+        c: Meridiano de Greenwich.
+        d: Latitud.
+      question: Al círculo máximo normal al eje de la Tierra, separado de los Polos
+        90°, y que divide la Tierra en los hemisferios Norte y Sur, se le denomina.
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 38
+      options:
+        a: La longitud es el arco de meridiano del lugar contado desde el Ecuador
+          hasta el paralelo del lugar.
+        b: Los puntos que están en el mismo meridiano están en la misma latitud.
+        c: La latitud se mide de 0° a 180°.
+        d: La longitud es el arco de Ecuador contado desde el meridiano de Greenwich
+          hasta el meridiano de lugar.
+      question: Indique la respuesta correcta.
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 39
+      options:
+        a: En la carta náutica.
+        b: En el libro de faros.
+        c: En el anuario de mareas.
+        d: En el Reglamento Internacional para Prevenir Abordajes en la Mar.
+      question: ¿Dónde podemos encontrar el valor de la declinación magnética del
+        año de edición, así como el incremento o el decremento anual para su corrección
+        en años posteriores?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 40
+      options:
+        a: De la velocidad de la embarcación.
+        b: De la latitud.
+        c: De la longitud.
+        d: Del rumbo.
+      question: El desvío de aguja varía en función…
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 41
+      options:
+        a: Enfilaciones.
+        b: Demoras.
+        c: Veriles.
+        d: Distancias.
+      question: Las líneas que, en las cartas náuticas, unen puntos de igual profundidad
+        se denominan…
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 42
+      options:
+        a: Ra = 264°
+        b: Ra = 089°
+        c: Ra = 065°
+        d: Ra = 245°
+      question: 'Una embarcación quiere navegar desde un punto A situado en Latitud:
+        35°53.4’N y Longitud: 006°10.0’W, hasta otro punto B, situado a 10 millas
+        al Norte verdadero del faro de Punta Malabata. La variación local (dm) es
+        2° NW y el desvío de aguja es 12° NW. ¿Qué rumbo de aguja deberá poner?'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 43
+      options:
+        a: 36°08.8’N / 005°18.2’W
+        b: 36°06.6’N / 005°16.8’W
+        c: 36°04.2’N / 005°14.3’W
+        d: 36°02.3’N / 005°12.4’W
+      question: Encontrándonos al Este del faro de Punta Europa, tomamos Demora de
+        Aguja (Da) al faro de Punta Almina = 187°. Siendo la variación local de 2°
+        NW y el desvío de aguja de (-5°). ¿Cuál es nuestra posición en ese instante?.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 44
+      options:
+        a: 7 millas
+        b: 9 millas
+        c: 11 millas
+        d: 13 millas
+      question: Situados sobre la línea de la enfilación de los faros de la isla de
+        Tarifa y de Punta Paloma, tenemos en ese instante al faro de Punta Alcázar
+        por nuestro Sur verdadero. ¿A qué distancia tendremos al faro de Punta Carnero
+        en ese momento?.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 45
+      options:
+        a: 0.5 millas
+        b: 1.6 millas
+        c: 2.3 millas
+        d: 3.7 millas
+      question: 'Zarpamos del puerto de Barbate (desde la luz roja de la bocana) con
+        rumbo de aguja: 150° y velocidad de 7 nudos. Con variación local: 2° NW y
+        desvío de aguja: +2°. ¿A qué distancia estaremos del faro de Punta Gracia
+        una hora más tarde?.'
+exam_info:
+  call: junio
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2023

@@ -1,0 +1,526 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 1
+      options:
+        a: La aleta.
+        b: La amura.
+        c: La cubierta.
+        d: La obra viva.
+      question: 'La zona más curvada del costado, en las proximidades de la proa es:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 2
+      options:
+        a: Lumbreras.
+        b: Escotillas.
+        c: Imbornales.
+        d: Portillos.
+      question: 'Los orificios que permiten la salida de agua de la cubierta se denominan:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 3
+      options:
+        a: Refuerzo transversal vertical.
+        b: Refuerzo transversal horizontal.
+        c: Refuerzo longitudinal vertical.
+        d: Ninguna de las respuestas es correcta.
+      question: 'El codaste es un:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 4
+      options:
+        a: Dar estanqueidad a la bocina.
+        b: Invertir la acción de la caña del timón.
+        c: Impedir que entre el agua por las aberturas practicadas en el casco, bajo
+          la línea de flotación.
+        d: Las respuestas a) y c) son correctas.
+      question: 'Los guardines sirven para:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 5
+      options:
+        a: Chicote.
+        b: Seno.
+        c: Gaza.
+        d: Boza.
+      question: Ojo, asa o lazo que se forma con un cabo al objeto de engancharlo
+        en algún lugar…
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 6
+      options:
+        a: As de guía.
+        b: Nudo llano.
+        c: Ballestrinque.
+        d: Vuelta de rezón.
+      question: Nudo que se utiliza, habitualmente, para unir cabos de grosor similar
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 7
+      options:
+        a: Evitar comprometer la estabilidad del barco.
+        b: Tapar imbornales.
+        c: Comprobar que estén abiertos todos los grifos de fondo.
+        d: Todas las respuestas anteriores son correctas.
+      question: En caso de mal tiempo…
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 8
+      options:
+        a: Facilitar que una embarcación pueda ser detectada por los radares de otros
+          buques.
+        b: Emitir señales visuales detectables por otros barcos.
+        c: Ayuda a nuestro radar a detectar a otros buques.
+        d: Evitar las interferencias de las comunicaciones por VHF.
+      question: ¿Para qué sirve el reflector radar?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 9
+      options:
+        a: la separación entre el centro de flotación y el centro de gravedad.
+        b: la separación entre el centro de carena y el metacentro.
+        c: la separación entre el centro de gravedad y el metacentro.
+        d: la separación entre el centro de carena y el centro de gravedad.
+      question: La estabilidad estática transversal inicial depende de…
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 10
+      options:
+        a: Por la banda de estribor.
+        b: Por la banda de babor.
+        c: Por su barlovento.
+        d: Por su sotavento.
+      question: 'Para recoger a un náufrago nos acercaremos:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: anulada
+      id: 11
+      options:
+        a: Infracción grave.
+        b: Infracción leve.
+        c: No es una infracción en el caso de las embarcaciones de recreo.
+        d: Infracción muy grave.
+      question: 'La Ley de Puertos del Estado y de la Marina Mercante establece que
+        incumplir las normas reglamentarias o las instrucciones de las Capitanías
+        Marítimas sobre régimen y tráfico de embarcaciones está tipificado como:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: b
+      id: 12
+      options:
+        a: Que está usted navegando en una zona de especial interés para el Mediterráneo.
+        b: Que está usted navegando en una zona especialmente protegida de importancia
+          para el Mediterráneo.
+        c: Que está usted navegando en una zona exterior para información marina.
+        d: Que está usted navegando en una zona económica para incentivarla.
+      question: ¿Qué significa navegar en una Zona Zepim?
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 13
+      options:
+        a: Son rojas.
+        b: Son cónicas, de castillete o de espeque.
+        c: Tienen como marca de tope un cilindro rojo.
+        d: Tienen franjas blancas y rojas.
+      question: 'Las marcas laterales de estribor en la Región “A”:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 14
+      options:
+        a: El cuadrante por el que se ha de pasar para salvar un peligro.
+        b: El lado donde se encuentra el peligro.
+        c: Una zona de fondeo.
+        d: Ninguna de las anteriores porque no existe la marca cardinal.
+      question: 'Una marca cardinal indica:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 15
+      options:
+        a: Verde con franjas horizontales rojas.
+        b: Roja con bandas horizontales verdes.
+        c: Negra con bandas horizontales verdes.
+        d: Negra con bandas horizontales rojas.
+      question: 'El color de una marca de peligro aislado es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 16
+      options:
+        a: Amarillo y negro.
+        b: Negro y rojo.
+        c: Blanco y rojo.
+        d: Azul y naranja.
+      question: 'Las marcas de aguas navegables tienen colores:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 17
+      options:
+        a: Puede tener cualquier forma.
+        b: Es un aspa roja.
+        c: Es un aspa amarilla.
+        d: Es un aspa blanca.
+      question: 'El tope de las marcas especiales:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 18
+      options:
+        a: Un buque que tiene un motor.
+        b: Un buque que tiene motor aunque esté navegando a vela.
+        c: Todo buque movido por una máquina.
+        d: Un buque que se propulsa a remos.
+      question: 'Según el Reglamento Internacional para Prevenir Abordajes en la Mar
+        (RIPA) un buque de propulsión mecánica es:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 19
+      options:
+        a: Los buques de pesca.
+        b: Los buques que naveguen con seguridad dentro del canal.
+        c: Los buques de vela.
+        d: Las embarcaciones más pequeñas.
+      question: En un canal angosto las embarcaciones con una eslora inferior a 20
+        metros, NO estorbarán a…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 20
+      options:
+        a: La “A”.
+        b: La “B”.
+        c: La “A” y la “B”.
+        d: La que tenga más facilidad de maniobra.
+      question: Navegando con buena visibilidad, una embarcación deportiva  propulsada
+        a vela “A” alcanza a otra de propulsión mecánica “B”. ¿Quién debe gobernar?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 21
+      options:
+        a: Los buques de propulsión mecánica.
+        b: Ninguno, tiene prioridad sobre cualquier tipo de buque.
+        c: Los pesqueros en navegación no dedicados a pescar.
+        d: Un buque sin gobierno.
+      question: 'Los buques de vela, en navegación, se mantendrán apartados de la
+        derrota de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 22
+      options:
+        a: Roja a estribor y verde a babor.
+        b: Roja a babor y verde a estribor.
+        c: Blancas todo horizonte.
+        d: Amarilla centelleante.
+      question: 'Las luces de costado serán:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 23
+      options:
+        a: Tope, costados y alcance.
+        b: Todo horizonte (blanca).
+        c: Costados y alcance.
+        d: Todo horizonte (blanca) y costados.
+      question: ¿Cuáles son las luces mínimas exigibles a una embarcación de propulsión
+        mecánica menor de 7 metros de eslora, navegando a menos de 7 nudos?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 24
+      options:
+        a: Las luces de costado, la de alcance, el tope de proa y dos luces todo horizonte,
+          roja la superior y verde la inferior.
+        b: Las luces de costado, la de alcance y el tope de proa.
+        c: Las luces de costado, la de alcance y dos luces todo horizonte, roja la
+          superior y verde la inferior.
+        d: Las luces de costado y una luz todo horizonte.
+      question: 'Un velero navegando de noche podrá exhibir:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 25
+      options:
+        a: Ninguna.
+        b: Cónica con vértice hacia arriba.
+        c: Cónica con vértice hacia abajo.
+        d: Cilíndrica.
+      question: ¿Qué tipo de marca de día deberán exhibir los buques de propulsión
+        mecánica, en navegación?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 26
+      options:
+        a: Cae a estribor.
+        b: Está dando atrás.
+        c: Va a realizar una ciaboga.
+        d: Cae a babor.
+      question: 'Cuando un buque de propulsión mecánica en navegación da "dos pitadas
+        cortas" para indicar su maniobra, significa que:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 27
+      options:
+        a: Tres pitadas largas.
+        b: Una corta seguida de dos largas que no excedan de dos segundos entre ambas.
+        c: A intervalos que no excedan de dos minutos, dos pitadas largas consecutivas
+          separadas por un intervalo de unos dos segundos entre ambas.
+        d: Una pitada larga que no exceda de dos minutos.
+      question: 'Un buque de propulsión mecánica en navegación pero parado y sin arrancada
+        en visibilidad reducida emitirá:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 28
+      options:
+        a: Sinónimo de templar.
+        b: Aflojar despacio un cabo que estaba tenso.
+        c: Largar un cabo del noray.
+        d: Largar un cabo de su bita o cornamusa.
+      question: '"Lascar" es:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 29
+      options:
+        a: Lo que se arrastra del fondo
+        b: La velocidad y/o movimiento de la embarcación.
+        c: El desplazamiento máximo.
+        d: Ninguna de las anteriores es cierta.
+      question: 'La arrancada de una embarcación es:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 30
+      options:
+        a: Clase F
+        b: Clase C
+        c: Clase B
+        d: Clase D
+      question: 'Un incendio producido por líquidos inflamables, corresponde a la
+        clase:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 31
+      options:
+        a: Sangre roja brillante que sale sin presión.
+        b: Sangre roja oscura que sale de forma continua.
+        c: Sangre roja oscura que sale sin presión.
+        d: Sangre roja, brillante, que sale a borbotones.
+      question: '¿Qué características tiene una hemorragia arterial?:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 32
+      options:
+        a: Teoría del triángulo del fuego.
+        b: Teoría del tetraedro del fuego.
+        c: Teoría del polígono del fuego.
+        d: Teoría del rombo del fuego.
+      question: 'La teoría que explica los cuatro elementos necesarios para la aparición
+        del fuego, es la:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 33
+      options:
+        a: 1.012 mbar
+        b: 1.013,2 mbar
+        c: 1.013 mbar
+        d: 1.012,2 mbar
+      question: La presión atmosférica normal es...
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 34
+      options:
+        a: La temperatura del aire.
+        b: La presión atmosférica.
+        c: La humedad absoluta.
+        d: La humedad relativa.
+      question: 'Con un barómetro, medimos:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: anulada
+      id: 35
+      options:
+        a: El termómetro.
+        b: El barómetro.
+        c: El termógrafo.
+        d: El barógrafo.
+      question: ¿Qué aparato es el que mide y registra la temperatura?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 36
+      options:
+        a: Un anticiclón.
+        b: Una borrasca.
+        c: En los dos anteriores.
+        d: Ninguna es correcta.
+      question: '- Los vientos giran en sentido contrario a las agujas del reloj en...'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 37
+      options:
+        a: 130°
+        b: 330º
+        c: 230º
+        d: 030º
+      question: Pasar de cuadrantal a circular el rumbo S50W.
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 38
+      options:
+        a: El rumbo al que naveguemos.
+        b: La velocidad del buque en ese instante.
+        c: La zona o área marítima por donde estemos navegando.
+        d: La distancia a la costa en ese momento.
+      question: 'El valor de la declinación magnética o variación local, Influye según:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 39
+      options:
+        a: Los derroteros.
+        b: Las guías de luces.
+        c: El atlas luminoso.
+        d: El libro de Faros.
+      question: 'Todos los datos que necesite sobre las señales luminosas de las ayudas
+        a la navegación las puede encontrar en:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 40
+      options:
+        a: Meridiano del lugar.
+        b: Meridiano de situación.
+        c: Paralelo de situación.
+        d: Paralelo del lugar.
+      question: ¿Cómo se llama al círculo máximo que pasa por los polos y por las
+        coordenadas de nuestra situación?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 41
+      options:
+        a: Cero magnético.
+        b: Cero hidrográfico.
+        c: Cero geográfico.
+        d: Cero topográfico.
+      question: 'Las sondas indicadas en la carta de navegación, son referidas al:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 42
+      options:
+        a: 'Latitud: 35º 57.8’N / Longitud: 05º47.4’W'
+        b: 'Latitud: 35º55’N / Longitud: 05º45’W'
+        c: 'Latitud: 35º59’N / Longitud: 05º46.2’W'
+        d: 'Latitud: 35º57’N / Longitud: 05º45.5’W'
+      question: Situados sobre la línea que une Punta Cires y el faro de la Isla de
+        Tarifa, y a 5 millas de Punta Cires, navegamos con rumbo verdadero 270º hasta
+        encontrarlos al Norte de Tánger. ¿En qué posición nos encontramos en el punto
+        final al Norte de Tánger?.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: anulada
+      id: 43
+      options:
+        a: 020º
+        b: 010º
+        c: 015º
+        d: 018º
+      question: Navegamos durante 1 hora a 10 nudos, manteniendo el rumbo 270º hasta
+        llegar a un punto B. Llegados a esta posición (Punto B), ponemos rumbo verdadero
+        hacia el puerto de Barbate (extremo muelle). ¿Qué rumbo verdadero debemos
+        poner para llegar al puerto de Barbate?.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 44
+      options:
+        a: 112º
+        b: 100º
+        c: 110º
+        d: 109º
+      question: 'Seguimos navegando hasta alcanzar la posición C: Latitud: 36º05’N
+        / Longitud: 05º57.4’W, y ponemos rumbo de aguja: 110º. Calcular rumbo verdadero
+        si la declinación magnética es 2º(-) y el desvío es 1º(+).'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 45
+      options:
+        a: 1h05m
+        b: 1h21m
+        c: 1h10m
+        d: 1h30m
+      question: Tras varias horas de navegación, nos encontramos en la bocana del
+        puerto de Algeciras (luz roja). ¿Qué tiempo tardaremos en llegar a Ceuta (luz
+        verde), si nuestra velocidad es de 12 nudos?.
+exam_info:
+  call: 18abril
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2021

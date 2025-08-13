@@ -1,0 +1,538 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 1
+      options:
+        a: Cuando el calado de proa es mayor que el calado de popa.
+        b: Cuando el calado de popa es mayor que el calado de proa.
+        c: El que se produce cuando el desplazamiento supera al arqueo bruto.
+        d: Las respuestas a) y c) son correctas.
+      question: Asiento positivo es…
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 2
+      options:
+        a: Cada una de las cuadernas que soportan las cubiertas.
+        b: Eslora máxima entre perpendiculares en buques de pasaje.
+        c: Máxima dimensión vertical, medida desde la parte superior de la quilla
+          hasta la cubierta principal.
+        d: Todas las respuestas anteriores son correctas.
+      question: El “Puntal” es…
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 3
+      options:
+        a: Codaste.
+        b: Bao.
+        c: Roda.
+        d: Regala.
+      question: 'La pieza gruesa y curva, de madera o hierro, que forma parte de la
+        proa de la nave, se llama:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 4
+      options:
+        a: Gira hacia la izquierda en la marcha avante.
+        b: Gira hacia la derecha en la marcha atrás.
+        c: Gira hacia la derecha en la marcha avante.
+        d: No gira por estar averiada.
+      question: 'Una hélice levógira es la que:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: a
+      id: 5
+      options:
+        a: Fondear
+        b: Levar
+        c: Garrear
+        d: Bornear
+      question: ¿Cómo se llama la maniobra de dejar caer el ancla hasta el fondo del
+        mar?.
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: d
+      id: 6
+      options:
+        a: Que el ancla queda firme en el fondo.
+        b: Que el ancla se enreda en la cadena.
+        c: Que el ancla se suelta y se pierde en el fondo.
+        d: Que el ancla es arrastrada por el fondo.
+      question: ¿Qué ocurre cuando se produce el garreo?.
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 7
+      options:
+        a: Asegurar la estanqueidad del barco.
+        b: Estibar todos los elementos de a bordo y trincar todo aquello susceptible
+          de moverse por efecto de la mar.
+        c: Dar la amura al viento.
+        d: Todas las respuestas anteriores son correctas.
+      question: ¿Qué debemos hacer si recibimos información de que se aproxima un
+        fuerte chubasco con viento a la zona por la que estamos navegando?.
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 8
+      options:
+        a: Meter el timón a la misma banda de caída.
+        b: Meter el timón a la banda contraria a la caída.
+        c: Gritar hombre al agua.
+        d: Realizar una llamada de socorro.
+      question: 'Si navegando dos tripulantes, uno de ellos cae al agua, lo primero
+        que se debe hacer es:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 9
+      options:
+        a: Bravas.
+        b: Superficiales.
+        c: Someras.
+        d: Vivas.
+      question: Las aguas poco profundas en las que la embarcación corre el riesgo
+        de una varada involuntaria, se denominan aguas…
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 10
+      options:
+        a: Capear un temporal de proa.
+        b: Recoger a una persona del agua.
+        c: Hacer remolque a otra embarcación.
+        d: Navegar en aguas con baja visibilidad.
+      question: 'La maniobra de Boutakow se utiliza para:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 11
+      options:
+        a: Verdadero.
+        b: Falso.
+        c: Depende de la nacionalidad y situación jurídica de las personas siniestradas.
+        d: Las respuestas a) y c) son correctas.
+      question: 'Convenio SOLAS: “El capitán de todo buque que estando en condiciones
+        de prestar ayuda reciba una información de la fuente que sea, al efecto de
+        que hay personas siniestradas en la mar, estará obligado a acudir a toda máquina
+        en su auxilio, informando a éstas de ello o al servicio de búsqueda y salvamento”.'
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 12
+      options:
+        a: Las zonas situadas en el interior de una banda litoral, paralela a la costa,
+          de 200 metros de ancho.
+        b: Las zonas situadas en el interior de una banda litoral, paralela a la costa,
+          de 150 metros de ancho.
+        c: Las zonas situadas en el interior de una banda litoral, paralela a la costa,
+          de 100 metros de ancho.
+        d: Las zonas situadas en el interior de una banda litoral, paralela a la costa,
+          de 50 metros de ancho
+      question: 'Límites a la navegación en playas balizadas. La navegación está prohibida
+        en:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 13
+      options:
+        a: Un cilindro rojo.
+        b: Un cilindro verde.
+        c: Un cono rojo.
+        d: Un cono verde.
+      question: 'El tope de una marca lateral de estribor en la Región “A” es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 14
+      options:
+        a: Cardinal.
+        b: Aguas navegables.
+        c: Peligro aislado.
+        d: Especial.
+      question: 'Una marca que muestre colores amarillos y negros es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 15
+      options:
+        a: Una esfera roja.
+        b: Dos conos superpuestos con los vértices hacia arriba.
+        c: Dos esferas negras superpuestas.
+        d: Dos conos opuestos por sus vértices.
+      question: '¿Cuál es la marca de tope de un espeque que indica peligro aislado?:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 16
+      options:
+        a: Amarillo
+        b: Rojo
+        c: Verde
+        d: Blanca con franjas verticales rojas
+      question: ¿Cuál es el color de una boya de marca especial?.
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 17
+      options:
+        a: De peligro aislado.
+        b: De aguas navegables.
+        c: Especial.
+        d: Lateral.
+      question: 'Boya esférica, con marca de tope esférica a franjas verticales rojas
+        y blancas, es una marca…:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 18
+      options:
+        a: Está prohibido siempre.
+        b: Se evitará en lo posible.
+        c: Sólo está permitido para buques pesqueros.
+        d: Las respuestas b) y c) son correctas.
+      question: Según la Regla 10 del RIPA, “fondear dentro de un dispositivo de separación
+        de tráfico o en las zonas próximas a sus extremos”…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 19
+      options:
+        a: Siempre maniobrará el de mayor eslora.
+        b: Ambos buques deben caer a babor, dejando al otro por el costado de estribor.
+        c: Siempre maniobrará el de menor eslora.
+        d: Ambos buques deben caer a estribor, dejando al otro por el costado de babor.
+      question: ¿Cómo deben actuar los buques de propulsión mecánica que se hallen
+        en situación de vuelta encontrada?.
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 20
+      options:
+        a: El que tenga al otro por su costado de estribor.
+        b: El que tenga al otro por su costado de babor.
+        c: El que corta la proa.
+        d: El de menor tamaño.
+      question: Cuando dos buques de propulsión mecánica cruzan sus derrotas con riesgo
+        de colisión, deberá ceder el paso…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 21
+      options:
+        a: Luz de remolque.
+        b: Luz de alcance.
+        c: Luz de tope.
+        d: Luz de costado.
+      question: '¿Qué tipo de luz ilumina un arco de horizonte de 225º, hacia la proa?:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 22
+      options:
+        a: Cierto en todos los casos.
+        b: Cierto sólo por causas justificadas cuando esté remolcado a otro buque
+          que necesite ayuda.
+        c: Cierto sólo en el Mediterráneo.
+        d: Falso, está obligado a utilizar todas las luces prescritas.
+      question: 'Un buque no dedicado normalmente a operaciones de remolque, no está
+        obligado a exhibir las luces prescritas por la regla 24 del RIPA:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 23
+      options:
+        a: Verdadero
+        b: Falso
+        c: Sólo si el buque de pesca es de arrastre
+        d: Sólo si el buque de pesca es de cerco
+      question: Según la Regla 9 del RIPA, dentro de un paso o canal angosto, un buque
+        de propulsión mecánica no estorbará el tránsito de un buque dedicado a la
+        pesca…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 24
+      options:
+        a: Con unos prismáticos.
+        b: Cada diez minutos haciendo una exploración.
+        c: Con el radar.
+        d: Se mantendrá en todo momento una eficaz vigilancia visual y auditiva, utilizando
+          asimismo todos los medios disponibles.
+      question: ¿Cómo debe ser la vigilancia en una guardia de mar?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 25
+      options:
+        a: Siempre que la visibilidad esté disminuida por niebla, bruma, lluvia o
+          cualquier otra circunstancia análoga.
+        b: Desde la puesta hasta la salida del Sol.
+        c: Desde el ocaso hasta el orto del Sol.
+        d: Todas las respuestas son correctas.
+      question: 'La expresión “visibilidad reducida” la aplica el Reglamento (RIPA):'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 26
+      options:
+        a: El de vela
+        b: El que recibe el viento por babor
+        c: El que cruza por babor
+        d: El dedicado a la pesca
+      question: ¿Qué buque deberá maniobrar en una situación de cruce entre un buque
+        de vela y uno dedicado a la pesca?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 27
+      options:
+        a: Un buque sin gobierno
+        b: Un buque con capacidad de maniobra restringida
+        c: Un buque dedicado a la pesca, fondeado
+        d: Un buque restringido por su calado
+      question: 'Avistamos un buque que nos muestra, en línea vertical, las siguientes
+        marcas negras: esfera – bicono – esfera. Se trata de…'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 28
+      options:
+        a: Tomar vueltas.
+        b: Adujar.
+        c: Amollar.
+        d: Lascar.
+      question: 'Recoger un cabo ordenadamente es:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: c
+      id: 29
+      options:
+        a: El barco irá hacia atrás.
+        b: La proa se separará del muelle.
+        c: La popa se separará del muelle.
+        d: El barco irá hacia avante.
+      question: ¿Qué ocurrirá si en nuestra embarcación damos máquina avante con el
+        esprín de proa dado a tierra?.
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 30
+      options:
+        a: Esperar la pleamar.
+        b: Achicar los tanques y aligerar el peso para disminuir los calados.
+        c: Escorar la embarcación trasladando pesos hacia el costado con más fondo.
+        d: Todas las respuestas son ciertas.
+      question: Para salir de una embarrancada, es aconsejable…
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 31
+      options:
+        a: Sangre roja brillante que sale sin presión.
+        b: Sangre roja oscura que sale de forma continua.
+        c: Sangre roja oscura que sale a borbotones.
+        d: Sangre roja brillante que sale a borbotones.
+      question: ¿Qué característica tiene una hemorragia venosa?
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 32
+      options:
+        a: Clase A
+        b: Clase B
+        c: Clase C
+        d: Clase F
+      question: 'Según la normativa española, los incendios producidos por sustancias
+        combustibles gaseosos pertenecen a la clase:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 33
+      options:
+        a: El número de horas que ha soplado el viento en la misma dirección y con
+          la misma intensidad.
+        b: La zona en la que el viento sopla en la misma dirección y con la misma
+          dirección.
+        c: La zona en la que el viento sopla en la misma dirección y con intensidad
+          variable.
+        d: La zona de recurva anterior al frente cálido.
+      question: 'Definimos Persistencia como:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 34
+      options:
+        a: Presión inferior a 1012 milibares.
+        b: Circulación del viento en el sentido de las agujas del reloj.
+        c: Fuertes vientos y precipitaciones.
+        d: Gradiente de presión pequeño.
+      question: ¿Cuál de estas características NO corresponde a las borrascas en el
+        hemisferio Norte?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 35
+      options:
+        a: Las líneas que unen puntos de igual temperatura.
+        b: Las líneas que unen puntos en los que la presión ha variado la misma cantidad
+          de milibares.
+        c: Líneas que unen puntos de igual profundidad.
+        d: Líneas que unen puntos de igual presión.
+      question: En un mapa meteorológico las isobaras son…
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 36
+      options:
+        a: 740 mm
+        b: 750 mm
+        c: 760 mm
+        d: 770 mm
+      question: 'El valor de la presión atmosférica a nivel del mar es:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 37
+      options:
+        a: 150º
+        b: 200º
+        c: 260º
+        d: 210º
+      question: Al rumbo cuadrantal S30ºW le corresponde el rumbo circular...
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 38
+      options:
+        a: Aumenta su Latitud pero no varía su Longitud.
+        b: Aumenta su Latitud y su Longitud.
+        c: No varía su Latitud y disminuye su Longitud.
+        d: No varía ni su Latitud ni su Longitud.
+      question: 'Si partiendo de la siguiente posición: Latitud: 35º15’N, Longitud:
+        005º10’W, navega durante unas horas por el mismo paralelo con rumbo Este:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 39
+      options:
+        a: El rumbo al que naveguemos.
+        b: La velocidad del buque en ese momento.
+        c: La zona por donde estemos navegando.
+        d: La distancia a la costa en ese momento.
+      question: El valor de la declinación magnética varía con…
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 40
+      options:
+        a: Una milla náutica.
+        b: 1852 metros.
+        c: Un minuto de arco de meridiano de la Tierra.
+        d: Todas las respuestas son correctas.
+      question: 'Un minuto de latitud se corresponde con:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 41
+      options:
+        a: Líneas de separación de las zonas de navegación costera.
+        b: Libros que indican los desvíos de la aguja náutica.
+        c: Libros que indican las características de la costa.
+        d: Libros que indican las características de los buques.
+      question: Los derroteros son…
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 42
+      options:
+        a: 8 nudos
+        b: 9 nudos
+        c: 10 nudos
+        d: 11 nudos
+      question: Estamos en posición = 35º 58' N – 005º 50' W y vamos a navegar hasta
+        el Puerto de Barbate (entrada por luz roja del extremo del espigón). Indique
+        la  velocidad  a la que debemos navegar en una hora y media.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 43
+      options:
+        a: 36º 05,7'N - 005º 19,3’W
+        b: 36º 01,5'N – 005º 19,3'W
+        c: 36º 05,7'N - 005º 23,3'W
+        d: 36º 00,0’N - 00Sº 18,2'W
+      question: Navegando justo en la línea de la oposición de los faros de Punta
+        Almina y Punta Europa nuestro radar nos indica distancia al faro de Punta
+        Carnero de 6 millas. Indique nuestra posición.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 44
+      options:
+        a: 36º 05,1'N – 005º 13,2'W
+        b: 36º 06,5'N – 005º 10,4'W
+        c: 36º 01,2'N – 005º 10,4'W
+        d: 36º 03,6'N – 005º 10,2'W
+      question: 'A HRB= 1230 tenemos el faro de Punta Europa por la demora verdadera=
+        290º y tomamos distancia radar a dicho faro= 9 millas. Indique nuestra posición:'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 45
+      options:
+        a: 5,6’ millas
+        b: 6,2’ millas
+        c: 7,6’ millas
+        d: 10,6 millas
+      question: Al ser Hora Reloj Bitácora = 1130, tomamos demora verdadera del faro
+        de Trafalgar 000º y en ese instante tomamos demora verdadera del faro de Punta
+        de Gracia= 090º. Indique a  qué distancia se encuentra el  Puerto de Barbate
+        (luz roja del extremo del espigón.
+exam_info:
+  call: 9enero
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2021

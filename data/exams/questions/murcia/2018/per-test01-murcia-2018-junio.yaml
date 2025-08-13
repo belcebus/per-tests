@@ -1,0 +1,540 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 1
+      options:
+        a: Dar estanqueidad a la bocina.
+        b: Invertir la acción de la caña del timón.
+        c: Impedir que entre el agua por las aberturas practicadas en el casco, bajo
+          la línea de flotación.
+        d: Las respuestas a) y c) son correctas.
+      question: 'Los guardines sirven para:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 2
+      options:
+        a: Ancla de arado.
+        b: Danforth.
+        c: Rezón.
+        d: Ninguna de las anteriores.
+      question: Como se denomina el “ancla pequeña, de cuatro uñas y sin cepo, que
+        sirve para embarcaciones menores”
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 3
+      options:
+        a: El calado de proa es menor que el de popa.
+        b: El calado de proa es mayor que el de popa.
+        c: El calado de proa y de popa son iguales.
+        d: El calado de popa es menor que el de proa.
+      question: 'El asiento de un barco es apopante cuando:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 4
+      options:
+        a: Una pieza de la obra muerta.
+        b: Un peso fondeado donde se amarra la boya.
+        c: Un cepo para amarrar el ancla.
+        d: Un peso para adrizar el barco.
+      question: Un muerto es …
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 5
+      options:
+        a: As de guía.
+        b: Ballestrinque.
+        c: Nudo llano.
+        d: Vuelta de rezón.
+      question: 'Si queremos amarrar una defensa al pasamanos utilizaremos un:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 6
+      options:
+        a: Bita.
+        b: Cornamusa.
+        c: Noray.
+        d: Gatera.
+      question: 'La pieza en forma de T que, fijada a cualquier parte del barco, sirve
+        para afirmar los cabos, se llama:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 7
+      options:
+        a: Llamando por teléfono al número 900 202 202.
+        b: Llamando por teléfono al número 112.
+        c: Llamando por el canal 16 de VHF a la estación costera más cercana.
+        d: Todas las respuestas anteriores son correctas.
+      question: 'Si deseamos solicitar ayuda a Salvamento Marítimo, lo podremos hacer:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 8
+      options:
+        a: Reducir la velocidad y controlar frecuentemente la sonda.
+        b: Aumentar la velocidad y accionar el piloto automático.
+        c: Poner rumbo mar adentro y controlar la corredera.
+        d: Izar el reflector radar y moderar la velocidad.
+      question: ¿Cuáles serían las dos principales acciones a ejecutar si se navega
+        por aguas someras?
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 9
+      options:
+        a: La estanquidad.
+        b: La disponibilidad de combustible para la travesía a realizar.
+        c: La cornamusa de proa.
+        d: Las respuestas a) y b) son correctas.
+      question: Durante el chequeo de nuestra embarcación, previo a hacernos a la
+        mar, deberemos prestar especial atención a….
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 10
+      options:
+        a: Un chaleco salvavidas por persona autorizada.
+        b: Una balsa salvavidas con capacidad, como mínimo, para tres personas.
+        c: Un aro salvavidas por persona autorizada.
+        d: Una radiobaliza de localización de siniestros
+      question: Una embarcación autorizada para navegar en la zona de navegación 5
+        estará obligada a llevar entre sus elementos obligatorios de salvamento...
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 11
+      options:
+        a: Nunca.
+        b: Solo en alta mar.
+        c: En lugar menos preferente que la bandera nacional.
+        d: Solo en aguas de la comunidad autónoma que representa.
+      question: La bandera autonómica podrá exhibirla una embarcación….
+    - category: 4
+      category_name: Legislación
+      correct_answer: d
+      id: 12
+      options:
+        a: La descarga se haga de modo instantáneo.
+        b: Hayan estado almacenadas en los tanques de retención, independientemente
+          del régimen de descarga.
+        c: Hayan estado almacenadas en los tanques de retención y la embarcación esté
+          parada.
+        d: La embarcación esté navegando a más de 4 nudos.
+      question: 'A más de doce millas se autoriza la descarga de aguas sucias por
+        embarcaciones de recreo siempre que:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 13
+      options:
+        a: Amarillo y verde.
+        b: Rojo y verde.
+        c: Amarillo y rojo.
+        d: Naranja y amarillo.
+      question: 'Las marcas laterales de la región A utilizan los siguientes colores
+        para indicar los lados de un canal:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 14
+      options:
+        a: Dos conos negros superpuestos, opuestos por la base.
+        b: Dos conos negros superpuestos, unidos por el vértice.
+        c: Dos conos negros superpuestos, con el vértice hacia arriba.
+        d: Dos conos negros superpuestos, con el vértice hacia abajo.
+      question: 'Una marca cardinal este, tiene como marca de tope:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 15
+      options:
+        a: Aguas navegables.
+        b: Peligro especial.
+        c: Peligro aislado.
+        d: Peligro sumergido.
+      question: 'Un espeque de color negro con una franja central roja, nos indica
+        la existencia de:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 16
+      options:
+        a: Dos conos negros superpuestos.
+        b: Dos esferas negras superpuestas.
+        c: Una esfera roja.
+        d: Un aspa.
+      question: '¿Cuál es la marca de tope de un espeque que indica aguas navegables?:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 17
+      options:
+        a: Marca especial.
+        b: Marca cardinal norte.
+        c: Canal a estribor
+        d: Peligro aislado.
+      question: 'Una luz amarilla en una boya, significa:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 18
+      options:
+        a: uno pueda ser observado por radar desde el otro.
+        b: uno pueda ser observado por AIS desde el otro.
+        c: uno pueda ser observado visualmente desde el otro.
+        d: uno pueda ser observado por dos tripulantes como mínimo desde el otro.
+      question: 'REGLA  3 - Definiciones generales: Se entenderá que los buques están
+        a la vista uno del otro únicamente cuando'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 19
+      options:
+        a: Se mantendrán lo más cerca posible del límite exterior del paso o canal
+          que quede por su costado de estribor, siempre que puedan hacerlo sin que
+          ello entrañe peligro.
+        b: Fondearán inmediatamente, a la espera de instrucciones.
+        c: Se mantendrán lo más cerca posible del centro del canal.
+        d: Tendrá prioridad de paso el que venga del sur, debiendo caer hacia estribor
+          aquel buque que venga del norte.
+      question: REGLA 9. Los buques que naveguen a lo largo de un paso o canal angosto…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 20
+      options:
+        a: Está prohibido siempre.
+        b: Se evitará en lo posible.
+        c: Está prohibido para las embarcaciones de más de 20 metros.
+        d: Está permitido siempre y en cualquier circunstancia.
+      question: 'REGLA 10: “Fondear dentro de un dispositivo de separación de tráfico
+        o en las zonas próximas a sus extremos”…'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 21
+      options:
+        a: Mantenerse apartado de la derrota del otro.
+        b: Seguir a rumbo.
+        c: Virar en redondo.
+        d: Aproar al viento.
+      question: REGLA 12. Un velero que recibe el viento por babor, avista a otro
+        velero a barlovento y no tiene la seguridad de si este último recibe el viento
+        por babor o estribor, ¿Qué deberá hacer?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 22
+      options:
+        a: cada uno de ellos caerá a babor de forma que pase por la banda de estribor
+          del otro.
+        b: cada uno de ellos caerá a estribor de forma que pase por la banda de babor
+          del otro.
+        c: aquel que se encuentre a barlovento caerá a estribor.
+        d: aquel que se encuentre a barlovento caerá a babor.
+      question: 'REGLA 14: “Cuando dos buques de propulsión mecánica naveguen de vuelta
+        encontrada a rumbos opuestos, con riesgo de abordaje…”'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 23
+      options:
+        a: luz verde en la banda de babor y una luz roja en la banda de estribor.
+        b: luz verde en la banda de estribor y una luz roja en la banda de babor.
+        c: luz amarilla en la banda de estribor y una luz roja en la banda de babor.
+        d: luz verde en la banda de estribor y una luz amarilla en la banda de babor.
+      question: REGLA 21.  Las "luces de costado" son una
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 24
+      options:
+        a: Buque sin gobierno.
+        b: Buque con capacidad de maniobra restringida.
+        c: Buque restringido por su calado.
+        d: Buque varado.
+      question: 'REGLA 27. Avistamos un buque que nos muestra en línea vertical, las
+        siguientes marcas negras: esfera-bicono-esfera. Se trata de un:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 25
+      options:
+        a: Buque restringido por su calado.
+        b: Buque cablero.
+        c: Buque remolcador con capacidad de maniobra restringida.
+        d: 'Peligro: antenas de radar.'
+      question: REGLA 28. ¿Qué indica un buque que tiene tres luces rojas todo horizonte
+        en línea vertical?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 26
+      options:
+        a: En la parte de proa, una luz roja todo horizonte o una bola negra.
+        b: En la parte de proa, una luz verde todo horizonte o una bola negra.
+        c: En la parte de proa, una luz amarilla todo horizonte o una bola negra.
+        d: En la parte de proa, una luz blanca todo horizonte o una bola negra.
+      question: 'REGLA 30. Los buques fondeados exhibirán en el lugar más visible:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 27
+      options:
+        a: Estoy cayendo a estribor.
+        b: Estoy cayendo a babor
+        c: Estoy dando atrás.
+        d: Pesquero con visibilidad reducida.
+      question: 'REGLA 34. Tres pitadas cortas indican:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: c
+      id: 28
+      options:
+        a: A babor.
+        b: A la vía.
+        c: A estribor.
+        d: De cualquier forma, es indiferente.
+      question: 'En una embarcación con hélice dextrógira dando atrás y con arrancada
+        atrás, si queremos que la proa nos caiga a babor, debemos meter la pala del
+        timón:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: a
+      id: 29
+      options:
+        a: Largo, través y spring.
+        b: Largo, codera y ballestrinque.
+        c: Largo, calabrote y spring.
+        d: Largo, spring y ballestrinque.
+      question: ¿Qué cabos se utilizan para atracar el barco al muelle?
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 30
+      options:
+        a: Combustible gaseoso (butano, propano).
+        b: Materias sólidas (madera, papel, etc.).
+        c: Combustible líquido (aceite, gasolina, etc.).
+        d: Metales (aluminio, material radiactivo, etc.).
+      question: 'Si un extintor sirve, según las instrucciones, para apagar un incendio
+        de la clase “B”, lo utilizaremos en un fuego de:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 31
+      options:
+        a: Sin apretar demasiado.
+        b: Sobre la herida.
+        c: Entre la herida y el corazón.
+        d: Al lado contrario del corazón.
+      question: 'En una hemorragia arterial, el torniquete se coloca:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 32
+      options:
+        a: falta la fase de reacción.
+        b: le falta oxigeno.
+        c: la llama esta dentro de la masa de combustible y no se ve.
+        d: No es posible combustión sin llama.
+      question: Existe combustión sin llama cuando...
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 33
+      options:
+        a: Son las brisas costeras.
+        b: Es un cambio de la tendencia barométrica.
+        c: Es poner la popa a la borrasca.
+        d: Es un cambio en la dirección del viento.
+      question: ¿A qué fenómeno se le conoce con el nombre de "rolar"?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 34
+      options:
+        a: Fuertes.
+        b: Muy fuertes.
+        c: Moderados.
+        d: Huracanados.
+      question: ¿Qué vientos corresponden a movimientos lentos del barómetro?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 35
+      options:
+        a: Disminuye su intensidad.
+        b: Aumenta su intensidad.
+        c: Cambia de dirección.
+        d: Disminuye la temperatura.
+      question: 'Se dice que el viento refresca cuando:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 36
+      options:
+        a: Terral y Virazón.
+        b: Levante y Poniente.
+        c: Terrestre y Marítimo.
+        d: Beaufort y Douglas.
+      question: 'Los vientos de las brisas costeras tienen por nombre:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 37
+      options:
+        a: La corredera.
+        b: Un GPS-GNSS navegador.
+        c: Un tacómetro.
+        d: Las respuestas a) y b) son correctas.
+      question: 'La velocidad que lleva un yate en un momento determinado, se mide
+        con:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 38
+      options:
+        a: Es la latitud del observador.
+        b: Siempre será menor de 90º.
+        c: Puede ser en el Hemisferio Norte o Hemisferio Sur.
+        d: Todas las anteriores respuestas son correctas.
+      question: 'El arco de meridiano contado desde el Ecuador hasta el paralelo del
+        observador:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 39
+      options:
+        a: El nomenclátor de los puertos españoles que edita el Instituto Social de
+          la Marina.
+        b: La guía oficial de puertos españoles que edita el Instituto Español de
+          Navegación.
+        c: El derrotero correspondiente de los que edita el Instituto Hidrográfico
+          de la Marina.
+        d: La guía oficial de puertos españoles que edita el Instituto Catastral de
+          Costas.
+      question: 'Para localizar los datos y características de los puertos en las
+        costas españolas, se utiliza:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 40
+      options:
+        a: 110º
+        b: 120º
+        c: 160º
+        d: 180º
+      question: ¿Qué rumbo circular le corresponde al rumbo cuadrantal S20E?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 41
+      options:
+        a: Perdiendo latitud Norte.
+        b: Ganando latitud Norte.
+        c: Perdiendo latitud Oeste.
+        d: Ganando latitud Este.
+      question: Si usted se encuentra en el hemisferio Norte y navega al rumbo verdadero
+        SUR (180º), está usted
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 42
+      options:
+        a: 36º 01,5'N – 005º 19,3'W
+        b: 36º 03,7'N - 005º 21,2’W
+        c: 36º 05,6'N - 005º 23,3'W
+        d: 36º 00,0’N - 00Sº 18,2'W
+      question: '- Estamos situados sobre la línea de la oposición de los faros de
+        Punta Europa y Punta Almina y tomamos distancia al faro de Punta Carnero =
+        6 millas, ¿Cuál es nuestra posición?'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 43
+      options:
+        a: 0,5 millas
+        b: 1,6 millas
+        c: 2,3 millas
+        d: 3,7 millas
+      question: '- Zarpamos del puerto de Barbate (desde la luz roja de la bocana)
+        con rumbo de aguja = 150º y velocidad del buque = 7 nudos (variación local
+        o declinación magnética= 2º NW y desvío de la aguja= +2º). Calcule a qué distancia
+        estaremos del faro de Punta de Gracia una hora más tarde:'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 44
+      options:
+        a: Ra= 039º
+        b: Ra= 036º
+        c: Ra= 043º
+        d: Ra= 047º
+      question: '- Desde la posición 35º 50''N – 006º 00''W  damos rumbo hacia la
+        posición 36º 00''N - 005º 50º W. Calcule el rumbo de aguja que hay que poner,
+        sabiendo que la corrección total para ese rumbo es de 4º NE:'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 45
+      options:
+        a: 49 minutos
+        b: 59 minutos
+        c: 69 minutos
+        d: 79 minutos
+      question: '- Situados sobre la línea de la enfilación de los faros Punta Cires
+        - Punta Alcázar, tenemos en ese instante al faro de Punta Carnero por el Norte
+        verdadero y desde esa posición, damos rumbo al puerto de Ceuta (luz verde
+        de la bocana del puerto) con velocidad de 8 nudos. ¿Qué tiempo tardaremos
+        en llegar a Ceuta?:'
+exam_info:
+  call: junio
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2018

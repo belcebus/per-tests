@@ -12,9 +12,11 @@ tools/
 │   ├── images_to_single_text.py
 │   ├── pdf_to_images.py
 │   ├── txt_to_yaml_per.py
-│   └── madrid/
-│       ├── madrid_extract_answers_v2.py
-│       └── madrid_extract_questions.py
+│   ├── madrid/
+│   │   ├── madrid_extract_answers_v2.py
+│   │   └── madrid_extract_questions.py
+│   └── murcia/
+│       └── manual_answers_generator.py
 ├── processing/
 │   ├── __init__.py
 │   └── madrid_apply_answers.py
@@ -47,6 +49,9 @@ tools/
   - **madrid/**: Scripts específicos para exámenes de Madrid.
     - `madrid_extract_questions.py`: Extrae preguntas y estructura de exámenes.
     - `madrid_extract_answers_v2.py`: Extrae respuestas oficiales usando OCR.
+  - **murcia/**: Scripts específicos para exámenes de Murcia.
+    - `murcia_extract_questions.py`: Extrae preguntas y estructura de exámenes desde PDFs.
+    - `manual_answers_generator.py`: Generador manual interactivo de respuestas.
 
 - **processing/**  
   Scripts para procesar y aplicar respuestas a los exámenes.
@@ -173,6 +178,476 @@ python madrid_extract_answers_v2.py --input-file "data/raw/answers/madrid/2023/m
 ```
 
 **Nota**: El script detecta automáticamente el tipo de examen y modelo desde el contenido del PDF usando OCR.
+
+---
+
+## 🚢 MURCIA - Herramientas Específicas para Murcia
+
+## 🚢 MURCIA - Herramientas Específicas para Murcia
+
+### `murcia_extract_questions.py`
+**Propósito**: Extractor especializado de preguntas de exámenes PER desde PDFs oficiales de la región de Murcia.
+
+**Características específicas de Murcia**:
+- 📋 **Formato único**: Todos los exámenes de Murcia son tipo Test 01 únicamente
+- 🔢 **Numeración flexible**: Maneja formatos mixtos "1.-", "1.", "2.-", "2." en el mismo documento
+- 📝 **Patrones robustos**: Detecta automáticamente el patrón de numeración predominante
+- ✅ **Distribución fija**: Usa la distribución estándar PER de 45 preguntas en 11 categorías
+- 🔍 **Detección inteligente**: Reconoce automáticamente año y convocatoria del nombre del archivo
+- 🧹 **Limpieza avanzada**: Remueve títulos de sección que se cuelan entre opciones
+- 🎯 **Combinación de patrones**: Si un patrón no extrae todas las preguntas, combina múltiples patrones automáticamente
+
+#### Formato Específico de Murcia
+
+**Estructura de Preguntas**:
+```
+1.- ¿Cuál es la definición de "puntal"?
+a) Pieza horizontal del casco...
+b) Pieza vertical que une la quilla...
+c) Pieza transversal que forma...
+d) Pieza longitudinal del forro...
+```
+
+**Variaciones de Numeración**:
+- `1.- Pregunta...` (formato tradicional)
+- `1. Pregunta...` (formato moderno)
+- Formatos mixtos en el mismo examen
+
+**Títulos de Sección**:
+```
+Unidad teórica 1: NOMENCLATURA NÁUTICA
+Unidad teórica 6: REGLAMENTO (RIPA)
+```
+
+#### Uso desde Línea de Comandos
+
+```bash
+# Extraer preguntas de un examen de Murcia (detecta automáticamente año/convocatoria)
+python tools/extraction/murcia/murcia_extract_questions.py --input-file PDF_PATH [--output-dir DIRECTORIO] [--verbose]
+```
+
+#### Parámetros
+
+**Obligatorios**:
+- `--input-file`: Archivo PDF del examen de Murcia
+
+**Opcionales**:
+- `--output-dir`: Directorio de salida (default: `data/exams/questions`)
+- `--verbose`: Información detallada del procesamiento
+
+#### Detección Automática de Metadatos
+
+El script detecta automáticamente desde el nombre del archivo:
+- **Formato esperado**: `murcia-YYYY-convocatoria.pdf`
+- **Ejemplos válidos**: `murcia-2024-junio.pdf`, `murcia-2023-noviembre.pdf`
+
+#### Ejemplos de Uso
+
+```bash
+# Extraer examen básico
+python tools/extraction/murcia/murcia_extract_questions.py --input-file data/raw/questions/murcia/2024/murcia-2024-junio.pdf
+
+# Extraer con información detallada
+python tools/extraction/murcia/murcia_extract_questions.py --input-file murcia-2023-marzo.pdf --verbose
+
+# Especificar directorio de salida personalizado
+python tools/extraction/murcia/murcia_extract_questions.py --input-file murcia-2022-noviembre.pdf --output-dir mis_examenes
+
+# Ver ayuda completa
+python tools/extraction/murcia/murcia_extract_questions.py --help
+```
+
+#### Distribución Fija PER de Murcia
+
+```
+Pregunta  1-4  : Nomenclatura náutica       (4 preguntas)
+Pregunta  5-6  : Elementos de amarre y fondeo (2 preguntas)
+Pregunta  7-10 : Seguridad                  (4 preguntas)
+Pregunta  11-12: Legislación                (2 preguntas)
+Pregunta  13-17: Balizamiento               (5 preguntas)
+Pregunta  18-27: Reglamento (RIPA)          (10 preguntas) ← Categoría principal
+Pregunta  28-29: Maniobra y navegación      (2 preguntas)
+Pregunta  30-32: Emergencias en la mar      (3 preguntas)
+Pregunta  33-36: Meteorología               (4 preguntas)
+Pregunta  37-41: Teoría de la navegación    (5 preguntas)
+Pregunta  42-45: Carta de navegación        (4 preguntas)
+```
+
+#### Ejemplo de Sesión de Extracción
+
+```bash
+$ python tools/extraction/murcia/murcia_extract_questions.py --input-file murcia-2024-marzo.pdf --verbose
+
+🚢 Extractor de Preguntas PER - Murcia
+📅 Año: 2024
+📋 Convocatoria: marzo
+📄 PDF origen: murcia-2024-marzo.pdf
+📁 Directorio salida: data/exams/questions
+------------------------------------------------------------
+📄 Extrayendo texto de murcia-2024-marzo.pdf
+📊 Texto extraído: 125847 caracteres
+✅ Inicio del examen encontrado: 'EXAMEN TIPO 1' en posición: 1247
+✅ Final del examen: usando final del archivo en posición 124891
+📊 Procesando sección del examen: 123644 caracteres
+🎯 Mejor patrón individual '(\d+)\.-\s+' encontró 45 preguntas
+🔍 Encontradas 45 preguntas numeradas válidas
+✅ Extraídas 45 preguntas válidas
+🚢 Extrayendo examen de Murcia: 2024 marzo
+📄 Archivo: murcia-2024-marzo.pdf
+💾 Datos guardados en data/exams/questions/murcia/2024/per-test01-murcia-2024-marzo.yaml
+
+📊 RESUMEN DE EXTRACCIÓN:
+   ✅ Preguntas extraídas: 45/45
+   📚 Categorías encontradas: 11
+   📝 Preguntas con respuestas: 0
+   💾 Archivo guardado: data/exams/questions/murcia/2024/per-test01-murcia-2024-marzo.yaml
+
+============================================================
+📊 RESUMEN DE PROCESAMIENTO
+============================================================
+✅ Procesamiento completado sin errores ni advertencias
+============================================================
+```
+
+#### Manejo Inteligente de Patrones
+
+**Detección Automática del Mejor Patrón**:
+- Prioriza patrones que extraen exactamente 45 preguntas
+- Calcula puntuación de calidad basada en consecutividad
+- Combina múltiples patrones si uno solo no extrae todas las preguntas
+
+**Ejemplo de Combinación de Patrones**:
+```bash
+🎯 Mejor patrón individual '(\d+)\.-\s+' encontró 42 preguntas
+⚠️ Solo 42 preguntas con un patrón, intentando combinación...
+✅ Combinación de patrones encontró 45 preguntas
+📋 Patrones usados: (\d+)\.-\s+ (42 preguntas), (\d+)\.\s+ (3 preguntas)
+```
+
+#### Limpieza Avanzada de Contenido
+
+**Normalización de Caracteres**:
+- Convierte comillas problemáticas del PDF (`<texto=` → `"texto"`)
+- Normaliza espacios no estándar a espacios regulares
+
+**Filtrado de Elementos No Deseados**:
+- Remueve cabeceras/pies: "Tipo 1", "P.E.R. - Tipo 1", "1 / 10"
+- Elimina títulos de sección: "Unidad teórica N: NOMBRE"
+- Limpia opciones que incluyen títulos de la siguiente sección
+
+#### Validación y Control de Calidad
+
+**Validación por Pregunta**:
+- ✅ Longitud mínima del texto (≥10 caracteres)
+- ✅ Presencia de las 4 opciones (a, b, c, d)
+- ⚠️ Detección de opciones vacías
+- ⚠️ Verificación de estructura de pregunta
+
+**Validación Global**:
+- 🔍 Identificación de preguntas faltantes
+- 📊 Distribución por categorías
+- 📈 Estadísticas de extracción
+
+#### Estructura del Archivo YAML Generado
+
+```yaml
+exam_info:
+  title: "EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO"
+  subtitle: "Código de Test 01"
+  total_questions: 45
+  expected_questions: 45
+  categories: 11
+  questions_with_answers: 0
+  community: "Murcia"
+  year: 2024
+  call: "marzo"
+  test_code: "test01"
+
+categories:
+  1:
+    name: "Nomenclatura náutica"
+    questions:
+      - id: 1
+        question: "\"Puntal\" es…"
+        options:
+          a: "La altura del casco medida en el centro del buque..."
+          b: "La anchura máxima del casco..."
+          c: "La distancia entre perpendiculares..."
+          d: "La longitud de flotación del buque..."
+        category: 1
+        category_name: "Nomenclatura náutica"
+        correct_answer: null
+  # ... continúa para las 11 categorías
+```
+
+#### Nomenclatura de Archivos
+
+**Archivos de Entrada**:
+```
+data/raw/questions/murcia/YYYY/murcia-YYYY-convocatoria.pdf
+```
+
+**Archivos de Salida**:
+```
+data/exams/questions/murcia/YYYY/per-test01-murcia-YYYY-convocatoria.yaml
+```
+
+#### Casos de Uso Típicos
+
+**Procesamiento de Nuevo Examen**:
+```bash
+# Descargar PDF oficial → Colocar en data/raw/questions/murcia/2024/
+python tools/extraction/murcia/murcia_extract_questions.py --input-file data/raw/questions/murcia/2024/murcia-2024-diciembre.pdf --verbose
+```
+
+**Reprocesamiento por Mejoras en el Algoritmo**:
+```bash
+# Cuando se mejora el extractor, reprocesar exámenes existentes
+python tools/extraction/murcia/murcia_extract_questions.py --input-file murcia-2023-junio.pdf
+```
+
+**Extracción Masiva**:
+```bash
+# Procesar múltiples exámenes (ejemplo con bucle bash)
+for pdf in data/raw/questions/murcia/*/*.pdf; do
+    python tools/extraction/murcia/murcia_extract_questions.py --input-file "$pdf"
+done
+```
+
+#### Depuración y Resolución de Problemas
+
+**Problemas Comunes y Soluciones**:
+
+1. **Formato de archivo no reconocido**:
+   ```
+   ❌ Error: Formato de archivo no reconocido: examen-murcia.pdf
+   💡 El formato esperado es: murcia-YYYY-convocatoria.pdf
+   ```
+   **Solución**: Renombrar archivo según el formato esperado
+
+2. **Preguntas faltantes**:
+   ```
+   ⚠️ WARNING: Preguntas faltantes: [23, 44]
+   ```
+   **Solución**: Verificar PDF original, pueden estar en formato no estándar
+
+3. **Opciones vacías**:
+   ```
+   ⚠️ WARNING: Pregunta 15: opciones vacías ['d']
+   ```
+   **Solución**: Revisar pregunta manualmente, puede requerir limpieza adicional
+
+#### Integración con el Flujo de Trabajo
+
+**Flujo Típico de Murcia**:
+```bash
+# 1. Extraer preguntas desde PDF
+python tools/extraction/murcia/murcia_extract_questions.py --input-file murcia-2024-marzo.pdf
+
+# 2. Generar respuestas manualmente (garantiza 100% precisión)
+python tools/extraction/murcia/manual_answers_generator.py
+
+# 3. Verificar consistencia final
+python tools/utils/check_exam_consistency.py
+```
+
+---
+
+### `manual_answers_generator.py`
+**Propósito**: Generador manual interactivo para crear archivos JSON de respuestas correctas de exámenes de Murcia.
+
+**Características**:
+- 🎯 **Entrada manual**: Solicita respuestas por línea de comandos con máxima precisión
+- 🔢 **Respuestas múltiples**: Soporta preguntas con varias respuestas correctas (ej: `abc`, `bd`)
+- ❌ **Preguntas anuladas**: Manejo específico de preguntas anuladas
+- ↩️ **Navegación**: Permite retroceder para corregir respuestas anteriores  
+- 🔍 **Validación robusta**: Verificación automática de entradas inválidas
+- 📊 **Estadísticas**: Resumen y distribución de respuestas antes de confirmar
+- 📁 **Estructura automática**: Genera archivos JSON en la ubicación correcta
+- 📋 **Modo batch**: Vista general del estado de todos los exámenes
+
+#### Uso desde Línea de Comandos
+
+```bash
+# Modo interactivo para crear un examen específico
+python tools/extraction/murcia/manual_answers_generator.py
+
+# Ver estado de todos los exámenes disponibles  
+python tools/extraction/murcia/manual_answers_generator.py --batch
+```
+
+#### Tipos de Respuesta Soportados
+
+**Respuesta Simple**:
+```
+Q 5/45 - Respuesta(s) correcta(s) (a/b/c/d/abc/bd/anulada): b
+```
+
+**Respuestas Múltiples** (tras revisión del examen):
+```
+Q12/45 - Respuesta(s) correcta(s) (a/b/c/d/abc/bd/anulada): bc
+Q27/45 - Respuesta(s) correcta(s) (a/b/c/d/abc/bd/anulada): abd
+```
+
+**Preguntas Anuladas**:
+```
+Q33/45 - Respuesta(s) correcta(s) (a/b/c/d/abc/bd/anulada): anulada
+```
+
+#### Comandos de Navegación
+
+- **`atras`**: Volver a la pregunta anterior para corregir
+- **`salir`**: Cancelar y abandonar el proceso
+- **Validación automática**: Detecta entradas inválidas y solicita corrección
+
+#### Ejemplo de Sesión Interactiva
+
+```bash
+$ python tools/extraction/murcia/manual_answers_generator.py
+
+🚢 GENERADOR MANUAL DE RESPUESTAS - MURCIA
+============================================================
+📅 Año del examen (ej: 2024): 2024
+📋 Convocatoria ['marzo', 'abril', 'junio', 'julio', 'octubre', 'noviembre', 'diciembre']: marzo
+
+✅ Configuración: 2024 - marzo
+============================================================
+📄 Archivo de preguntas encontrado: data/exams/questions/murcia/2024/per-test01-murcia-2024-marzo.yaml
+
+🎯 INTRODUCIENDO RESPUESTAS CORRECTAS
+============================================================
+Para cada pregunta, introduce la(s) letra(s) de la(s) respuesta(s) correcta(s):
+  - Una sola respuesta: a, b, c, d
+  - Múltiples respuestas: abc, bd, ac, etc.
+  - Pregunta anulada: anulada
+También puedes usar 'atras' para volver a la pregunta anterior, 'salir' para cancelar
+============================================================
+
+📝 Q1: "Puntal" es…
+Q 1/45 - Respuesta(s) correcta(s) (a/b/c/d/abc/bd/anulada): b
+
+📝 Q2: Asiento negativo es…
+Q 2/45 - Respuesta(s) correcta(s) (a/b/c/d/abc/bd/anulada): a
+
+# ... continúa para las 45 preguntas ...
+
+📋 RESUMEN DE RESPUESTAS INTRODUCIDAS:
+============================================================
+Q 1:b | Q 2:a | Q 3:c | Q 4:d | Q 5:c
+Q 6:d | Q 7:b | Q 8:d | Q 9:a | Q10:d
+Q11:d | Q12:bc | Q13:c | Q14:d | Q15:d
+# ... resto del resumen ...
+
+📊 Distribución: {'a': 12, 'b': 11, 'c': 9, 'd': 11, 'múltiple:bc': 1, 'anulada': 1}
+📈 Resumen: 42 simples, 2 múltiples, 1 anuladas
+
+✅ ¿Confirmar y generar archivo JSON? (s/n): s
+
+🎉 ÉXITO: Archivo generado correctamente
+📁 Ubicación: data/exams/answers/murcia/2024/per-test01-murcia-2024-marzo.json
+📊 Total respuestas: 45
+📈 Resumen: 42 simples, 2 múltiples, 1 anuladas
+```
+
+#### Estructura del Archivo JSON Generado
+
+```json
+{
+  "exam_type": "PER",
+  "test_model": "TEST01", 
+  "total_answers": 45,
+  "answers": {
+    "1": "b",
+    "2": "a",
+    "3": "c",
+    "12": ["b", "c"],
+    "27": ["a", "b", "d"],
+    "33": "anulada"
+  },
+  "source_pdf": "murcia-2024-marzo.pdf",
+  "generated_at": "2025-08-12T19:07:26.494004",
+  "pdf_info": {
+    "comunidad": "murcia",
+    "año": "2024", 
+    "convocatoria": "marzo"
+  }
+}
+```
+
+#### Modo Batch - Estado de Exámenes
+
+```bash
+$ python tools/extraction/murcia/manual_answers_generator.py --batch
+
+🚢 MODO BATCH - MÚLTIPLES EXÁMENES
+============================================================
+
+📚 EXÁMENES DISPONIBLES (29 total):
+============================================================
+ 1. ✅ 2015-junio
+ 2. ❌ 2015-noviembre  
+ 3. ❌ 2015-marzo
+ 4. ❌ 2016-marzo
+ # ... resto de la lista ...
+
+⏳ PENDIENTES DE PROCESAR: 28
+  - 2015-noviembre
+  - 2015-marzo  
+  - 2016-marzo
+  # ... resto pendientes ...
+
+✅ YA COMPLETADOS: 1
+  - 2015-junio
+```
+
+#### Validación de Entrada
+
+El script valida automáticamente:
+- **Letras válidas**: Solo acepta `a`, `b`, `c`, `d`
+- **Combinaciones**: Permite múltiples letras como `abc`, `bd`, `ac`
+- **Comandos especiales**: `anulada`, `atras`, `salir`
+- **Entradas vacías**: Detecta y rechaza respuestas en blanco
+
+#### Estructura de Archivos
+
+**Archivos de Entrada** (archivos de preguntas YAML):
+```
+data/exams/questions/murcia/{año}/per-test01-murcia-{año}-{convocatoria}.yaml
+```
+
+**Archivos de Salida** (JSON de respuestas):
+```
+data/exams/answers/murcia/{año}/per-test01-murcia-{año}-{convocatoria}.json
+```
+
+#### Ventajas del Enfoque Manual
+
+- **💯 Precisión Total**: Garantiza 100% exactitud en las respuestas
+- **🚀 Eficiencia**: Más rápido que debugging de algoritmos automáticos
+- **🔄 Control Total**: Permite corrección inmediata de errores
+- **📝 Contexto**: Muestra el texto de cada pregunta durante la entrada
+- **🛡️ Seguridad**: Confirmación antes de sobrescribir archivos existentes
+
+#### Casos de Uso
+
+**Procesar Nuevo Examen**:
+```bash
+# Para un examen específico recién añadido
+python tools/extraction/murcia/manual_answers_generator.py
+```
+
+**Control de Progreso**:
+```bash
+# Ver qué exámenes faltan por procesar
+python tools/extraction/murcia/manual_answers_generator.py --batch
+```
+
+**Corrección de Examen Existente**:
+```bash  
+# El script pregunta si sobrescribir archivos existentes
+python tools/extraction/murcia/manual_answers_generator.py
+# Responder 's' cuando pregunte si sobrescribir
+```
 
 ---
 
