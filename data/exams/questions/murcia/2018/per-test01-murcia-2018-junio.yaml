@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 1
       options:
         a: Dar estanqueidad a la bocina.
@@ -15,7 +15,7 @@ categories:
       question: 'Los guardines sirven para:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 2
       options:
         a: Ancla de arado.
@@ -26,7 +26,7 @@ categories:
         sirve para embarcaciones menores”
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 3
       options:
         a: El calado de proa es menor que el de popa.
@@ -36,7 +36,7 @@ categories:
       question: 'El asiento de un barco es apopante cuando:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 4
       options:
         a: Una pieza de la obra muerta.
@@ -49,7 +49,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 5
       options:
         a: As de guía.
@@ -59,7 +59,7 @@ categories:
       question: 'Si queremos amarrar una defensa al pasamanos utilizaremos un:'
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 6
       options:
         a: Bita.
@@ -73,7 +73,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: Llamando por teléfono al número 900 202 202.
@@ -83,7 +83,7 @@ categories:
       question: 'Si deseamos solicitar ayuda a Salvamento Marítimo, lo podremos hacer:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 8
       options:
         a: Reducir la velocidad y controlar frecuentemente la sonda.
@@ -94,7 +94,7 @@ categories:
         por aguas someras?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 9
       options:
         a: La estanquidad.
@@ -105,7 +105,7 @@ categories:
         mar, deberemos prestar especial atención a….
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 10
       options:
         a: Un chaleco salvavidas por persona autorizada.
@@ -119,7 +119,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 11
       options:
         a: Nunca.
@@ -129,7 +129,7 @@ categories:
       question: La bandera autonómica podrá exhibirla una embarcación….
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 12
       options:
         a: La descarga se haga de modo instantáneo.
@@ -145,7 +145,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 13
       options:
         a: Amarillo y verde.
@@ -156,7 +156,7 @@ categories:
         para indicar los lados de un canal:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 14
       options:
         a: Dos conos negros superpuestos, opuestos por la base.
@@ -166,7 +166,7 @@ categories:
       question: 'Una marca cardinal este, tiene como marca de tope:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 15
       options:
         a: Aguas navegables.
@@ -177,7 +177,7 @@ categories:
         la existencia de:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 16
       options:
         a: Dos conos negros superpuestos.
@@ -187,7 +187,7 @@ categories:
       question: '¿Cuál es la marca de tope de un espeque que indica aguas navegables?:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 17
       options:
         a: Marca especial.
@@ -200,7 +200,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 18
       options:
         a: uno pueda ser observado por radar desde el otro.
@@ -211,7 +211,7 @@ categories:
         a la vista uno del otro únicamente cuando'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 19
       options:
         a: Se mantendrán lo más cerca posible del límite exterior del paso o canal
@@ -224,7 +224,7 @@ categories:
       question: REGLA 9. Los buques que naveguen a lo largo de un paso o canal angosto…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 20
       options:
         a: Está prohibido siempre.
@@ -235,7 +235,7 @@ categories:
         o en las zonas próximas a sus extremos”…'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 21
       options:
         a: Mantenerse apartado de la derrota del otro.
@@ -247,7 +247,7 @@ categories:
         por babor o estribor, ¿Qué deberá hacer?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 22
       options:
         a: cada uno de ellos caerá a babor de forma que pase por la banda de estribor
@@ -260,7 +260,7 @@ categories:
         encontrada a rumbos opuestos, con riesgo de abordaje…”'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 23
       options:
         a: luz verde en la banda de babor y una luz roja en la banda de estribor.
@@ -270,7 +270,7 @@ categories:
       question: REGLA 21.  Las "luces de costado" son una
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 24
       options:
         a: Buque sin gobierno.
@@ -281,7 +281,7 @@ categories:
         siguientes marcas negras: esfera-bicono-esfera. Se trata de un:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 25
       options:
         a: Buque restringido por su calado.
@@ -292,7 +292,7 @@ categories:
         en línea vertical?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: En la parte de proa, una luz roja todo horizonte o una bola negra.
@@ -302,7 +302,7 @@ categories:
       question: 'REGLA 30. Los buques fondeados exhibirán en el lugar más visible:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 27
       options:
         a: Estoy cayendo a estribor.
@@ -315,7 +315,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 28
       options:
         a: A babor.
@@ -327,7 +327,7 @@ categories:
         timón:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 29
       options:
         a: Largo, través y spring.
@@ -340,7 +340,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 30
       options:
         a: Combustible gaseoso (butano, propano).
@@ -351,7 +351,7 @@ categories:
         de la clase “B”, lo utilizaremos en un fuego de:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 31
       options:
         a: Sin apretar demasiado.
@@ -361,7 +361,7 @@ categories:
       question: 'En una hemorragia arterial, el torniquete se coloca:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 32
       options:
         a: falta la fase de reacción.
@@ -374,7 +374,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 33
       options:
         a: Son las brisas costeras.
@@ -384,7 +384,7 @@ categories:
       question: ¿A qué fenómeno se le conoce con el nombre de "rolar"?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 34
       options:
         a: Fuertes.
@@ -394,7 +394,7 @@ categories:
       question: ¿Qué vientos corresponden a movimientos lentos del barómetro?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 35
       options:
         a: Disminuye su intensidad.
@@ -404,7 +404,7 @@ categories:
       question: 'Se dice que el viento refresca cuando:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 36
       options:
         a: Terral y Virazón.
@@ -417,7 +417,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 37
       options:
         a: La corredera.
@@ -428,7 +428,7 @@ categories:
         con:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 38
       options:
         a: Es la latitud del observador.
@@ -439,7 +439,7 @@ categories:
         observador:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 39
       options:
         a: El nomenclátor de los puertos españoles que edita el Instituto Social de
@@ -454,7 +454,7 @@ categories:
         costas españolas, se utiliza:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 40
       options:
         a: 110º
@@ -464,7 +464,7 @@ categories:
       question: ¿Qué rumbo circular le corresponde al rumbo cuadrantal S20E?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 41
       options:
         a: Perdiendo latitud Norte.
@@ -478,7 +478,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 42
       options:
         a: 36º 01,5'N – 005º 19,3'W
@@ -490,7 +490,7 @@ categories:
         6 millas, ¿Cuál es nuestra posición?'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 43
       options:
         a: 0,5 millas
@@ -503,7 +503,7 @@ categories:
         estaremos del faro de Punta de Gracia una hora más tarde:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 44
       options:
         a: Ra= 039º
@@ -515,7 +515,7 @@ categories:
         sabiendo que la corrección total para ese rumbo es de 4º NE:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 45
       options:
         a: 49 minutos

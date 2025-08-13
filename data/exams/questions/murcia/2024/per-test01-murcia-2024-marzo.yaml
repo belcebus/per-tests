@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 1
       options:
         a: Aquella que gira con máquina avante, vista a popa de la hélice, en el sentido
@@ -16,7 +16,7 @@ categories:
       question: ¿Qué es una hélice dextrógira?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 2
       options:
         a: Las aberturas en los costados de la embarcación para que entre luz en los
@@ -30,7 +30,7 @@ categories:
       question: Los imbornales son…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: Bocina.
@@ -41,7 +41,7 @@ categories:
         el casco a través de un orificio denominado limera, se le denomina…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 4
       options:
         a: Puntal.
@@ -55,7 +55,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: a
       id: 5
       options:
         a: Borneo.
@@ -66,7 +66,7 @@ categories:
         por efecto del viento y/o la corriente se le denomina…
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: a
       id: 6
       options:
         a: Garreando.
@@ -80,7 +80,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: Revisión del estado general del motor.
@@ -91,7 +91,7 @@ categories:
         a la mar?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 8
       options:
         a: Disminuir la velocidad.
@@ -102,7 +102,7 @@ categories:
         efecto de balance?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 9
       options:
         a: Tirarnos con el chaleco salvavidas.
@@ -113,7 +113,7 @@ categories:
         salvavidas, procederemos a…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 10
       options:
         a: En la fecha en que caduca el certificado de navegabilidad de la embarcación.
@@ -127,7 +127,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 11
       options:
         a: Podrá hacerlo por cualquier punto de la playa.
@@ -137,7 +137,7 @@ categories:
       question: Si necesita acceder a tierra con su embarcación en una playa balizada…
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 12
       options:
         a: Solamente cuando se esté navegando por alta mar.
@@ -150,7 +150,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 13
       options:
         a: Canal principal a babor.
@@ -161,7 +161,7 @@ categories:
         lateral de color rojo, con una banda ancha horizontal verde indica…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 14
       options:
         a: Nuestro costado de babor.
@@ -172,7 +172,7 @@ categories:
         de espeque de color verde, la dejaremos por…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 15
       options:
         a: 9 centelleos muy rápidos seguidos de un periodo de oscuridad.
@@ -183,7 +183,7 @@ categories:
         es…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 16
       options:
         a: Dos bolas negras.
@@ -193,7 +193,7 @@ categories:
       question: Las marcas de peligro aislado tienen como marca de tope…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 17
       options:
         a: Blancas.
@@ -206,7 +206,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 18
       options:
         a: Un buque dragando.
@@ -218,7 +218,7 @@ categories:
         de maniobra restringida?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 19
       options:
         a: No estar fondeado.
@@ -230,7 +230,7 @@ categories:
         con la condición de…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 20
       options:
         a: Con unos prismáticos.
@@ -243,7 +243,7 @@ categories:
         en la Mar (RIPA), ¿cómo debe ser la vigilancia?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 21
       options:
         a: El estado de la visibilidad.
@@ -256,7 +256,7 @@ categories:
         la citada regla?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 22
       options:
         a: Los buques evitarán fondear dentro de un dispositivo de separación de tráfico.
@@ -270,7 +270,7 @@ categories:
         en la Mar (RIPA)…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 23
       options:
         a: Cruce.
@@ -282,7 +282,7 @@ categories:
         y las luces de costado de otro buque, estaremos ante una situación de…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 24
       options:
         a: Puede modificar su rumbo, si con ello evita el abordaje.
@@ -293,7 +293,7 @@ categories:
         en la Mar (RIPA), un buque que "sigue a rumbo".
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 25
       options:
         a: Luz de tope, luces de costado y luz de alcance.
@@ -306,7 +306,7 @@ categories:
         nudos?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Es un buque restringido por su calado.
@@ -318,7 +318,7 @@ categories:
         está indicando que…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 27
       options:
         a: Es un buque dedicado a la pesca con artes menores.
@@ -333,7 +333,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 28
       options:
         a: Se acerca la proa al muelle, se aleja la popa de este y se traslada la
@@ -346,7 +346,7 @@ categories:
       question: Al virar un largo de proa se producen los siguientes efectos.
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: d
       id: 29
       options:
         a: Tirar de un cabo de forma manual.
@@ -359,7 +359,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 30
       options:
         a: Incendios de sólidos.
@@ -369,7 +369,7 @@ categories:
       question: Los incendios de clase F corresponden a...
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 31
       options:
         a: Esperar a la pleamar.
@@ -379,7 +379,7 @@ categories:
       question: Para salir de una embarrancada es aconsejable…
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: El barco se aproe al viento.
@@ -392,7 +392,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 33
       options:
         a: Viento real.
@@ -403,7 +403,7 @@ categories:
         y el viento que genera la velocidad a la que nos desplazamos, se denomina…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 34
       options:
         a: Isobatas.
@@ -414,7 +414,7 @@ categories:
         de igual presión atmosférica se denominan…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 35
       options:
         a: 740 mm
@@ -424,7 +424,7 @@ categories:
       question: El valor de la presión atmosférica a nivel del mar es…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 36
       options:
         a: La temperatura del aire.
@@ -437,7 +437,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 37
       options:
         a: Escandallo.
@@ -448,7 +448,7 @@ categories:
         se denomina…
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 38
       options:
         a: El ángulo que se forma entre el Norte de aguja y el Norte magnético.
@@ -458,7 +458,7 @@ categories:
       question: La declinación magnética se define como…
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 39
       options:
         a: El nomenclátor de los puertos españoles que edita el Instituto Social de
@@ -472,7 +472,7 @@ categories:
         españolas se utiliza…
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 40
       options:
         a: Es la latitud del observador.
@@ -483,7 +483,7 @@ categories:
         observador.
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 41
       options:
         a: La longitud del observador.
@@ -497,7 +497,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 42
       options:
         a: 2,6 millas
@@ -510,7 +510,7 @@ categories:
         Punta Malabata se encuentra la embarcación?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 43
       options:
         a: 223°
@@ -524,7 +524,7 @@ categories:
         para llegar al punto B?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 44
       options:
         a: 128°
@@ -537,7 +537,7 @@ categories:
         (Faro del espigón). ¿Qué rumbo de aguja habría que poner para llegar a Tánger?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 45
       options:
         a: 36°03,6’N 005°10,2’W

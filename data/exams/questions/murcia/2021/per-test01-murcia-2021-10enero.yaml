@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 1
       options:
         a: Cuando el calado de proa es mayor que el calado de popa.
@@ -14,7 +14,7 @@ categories:
       question: Asiento negativo es…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 2
       options:
         a: Mamparo.
@@ -24,7 +24,7 @@ categories:
       question: La pieza que cubre la parte superior de la borda se llama…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: Ancla de arado.
@@ -35,7 +35,7 @@ categories:
         sirve para embarcaciones menores”
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 4
       options:
         a: Gira hacia la izquierda en la marcha avante.
@@ -48,7 +48,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 5
       options:
         a: Seno
@@ -59,7 +59,7 @@ categories:
         separado de ella”
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: a
       id: 6
       options:
         a: Defensa.
@@ -73,7 +73,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: Maniobra de Boutakow.
@@ -85,7 +85,7 @@ categories:
         o menos, se denomina…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 8
       options:
         a: Dando proa al náufrago.
@@ -96,7 +96,7 @@ categories:
         situarse:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 9
       options:
         a: Lanzarlas siempre por babor.
@@ -106,7 +106,7 @@ categories:
       question: ¿Qué debemos tener en cuenta al utilizar bengalas o cohetes de socorro?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 10
       options:
         a: Daremos toda avante.
@@ -119,7 +119,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 11
       options:
         a: Que la prestación de auxilio es obligatoria.
@@ -132,7 +132,7 @@ categories:
         prestar auxilio a las personas en peligro en la Mar, se tendrá en cuenta:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 12
       options:
         a: A una distancia mayor de 3 millas de la tierra más próxima si dichas aguas
@@ -149,7 +149,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 13
       options:
         a: Un cilindro rojo.
@@ -159,7 +159,7 @@ categories:
       question: 'El tope de las marcas laterales de babor es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 14
       options:
         a: Este.
@@ -170,7 +170,7 @@ categories:
         los vértices hacia abajo, se deberá pasar por el cuadrante:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 15
       options:
         a: Rojo con una o más bandas horizontales negras.
@@ -180,7 +180,7 @@ categories:
       question: 'Las marcas de peligro aislado son de color:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 16
       options:
         a: Marcas cardinales
@@ -191,7 +191,7 @@ categories:
         exacta está indicada en carta o publicaciones náuticas, se utilizan las…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 17
       options:
         a: Emite destellos rojos.
@@ -204,7 +204,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 18
       options:
         a: Navegar siguiendo la dirección general de la corriente de tráfico indicada.
@@ -216,7 +216,7 @@ categories:
         de separación de tráfico, deberán…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 19
       options:
         a: Mayor de 22,5 grados a popa del través de este último.
@@ -227,7 +227,7 @@ categories:
         buque que se aproxime a otro viniendo desde una marcación'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 20
       options:
         a: Su proa, o casi por su proa.
@@ -238,7 +238,7 @@ categories:
         que “se considerará que tal situación existe cuando un buque vea a otro por…”:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 21
       options:
         a: Maniobrará el mercante.
@@ -249,7 +249,7 @@ categories:
         que se aproxima con riesgo de abordaje:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 22
       options:
         a: Cualquier buque de la Armada.
@@ -260,7 +260,7 @@ categories:
         de la derrota de
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 23
       options:
         a: una luz verde en la banda de babor y una luz roja en la banda de estribor
@@ -272,7 +272,7 @@ categories:
       question: Las "luces de costado" son
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 24
       options:
         a: Un buque sin gobierno.
@@ -283,7 +283,7 @@ categories:
         una conexión rígida, formando una unidad compuesta, serán considerados:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 25
       options:
         a: Una marca bicónica.
@@ -293,7 +293,7 @@ categories:
       question: 'La marca que debe mostrar de DÍA un barco dedicado a la pesca es:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 26
       options:
         a: Buque sin gobierno y sin arrancada
@@ -305,7 +305,7 @@ categories:
         de…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 27
       options:
         a: Un buque sin gobierno
@@ -320,7 +320,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 28
       options:
         a: Acercamos la popa al muelle rápidamente, hacemos firme los largos de popa
@@ -335,7 +335,7 @@ categories:
         y con viento de tierra lo haremos:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 29
       options:
         a: Dar las dos hélices atrás
@@ -349,7 +349,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 30
       options:
         a: Enfriamiento.
@@ -360,7 +360,7 @@ categories:
         es:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 31
       options:
         a: Evaluar los daños.
@@ -370,7 +370,7 @@ categories:
       question: Ante una varada involuntaria, lo primero es…
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 32
       options:
         a: Incendios de sólidos.
@@ -384,7 +384,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 33
       options:
         a: Virazón
@@ -397,7 +397,7 @@ categories:
         que se origina a causa de este fenómeno se llama:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 34
       options:
         a: Peso de la masa de aire que hay sobre dicho punto.
@@ -408,7 +408,7 @@ categories:
       question: Se denomina presión atmosférica en un punto dado al …
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 35
       options:
         a: Rolará según avance el Anticiclón.
@@ -418,7 +418,7 @@ categories:
       question: ¿Cómo gira el viento en un Anticiclón en el Hemisferio Norte?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 36
       options:
         a: La escala Beaufort.
@@ -432,7 +432,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 37
       options:
         a: 310º
@@ -442,7 +442,7 @@ categories:
       question: 'Al rumbo cuadrantal N80ºW le corresponde el rumbo circular ... :'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 38
       options:
         a: Aumenta su Latitud pero no varía su Longitud.
@@ -452,7 +452,7 @@ categories:
       question: 'Si navega durante unas horas por el mismo meridiano con rumbo Norte:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 39
       options:
         a: Coeficiente de derrota.
@@ -463,7 +463,7 @@ categories:
         navegamos, se corrigen aplicando el...:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 40
       options:
         a: Un portulano incluido en una carta náutica a modo de ventana y que destaca
@@ -474,7 +474,7 @@ categories:
       question: 'En cartografía, se define como "cartucho" a:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 41
       options:
         a: El Instituto Social de la Marina.
@@ -487,7 +487,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 42
       options:
         a: 1h 21m
@@ -499,7 +499,7 @@ categories:
         cuánto tiempo tardaremos en llegar a dicho punto.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 43
       options:
         a: 35º 52,3’N – 005º 27,8’W
@@ -511,7 +511,7 @@ categories:
         posición?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 44
       options:
         a: 9,7’
@@ -523,7 +523,7 @@ categories:
         8 nudos. Calcule a qué distancia estaremos del faro de Trafalgar a HRB= 1130
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 45
       options:
         a: 333º

@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 1
       options:
         a: Línea de flotación.
@@ -15,7 +15,7 @@ categories:
         iguales, se llama…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 2
       options:
         a: Bordas.
@@ -26,7 +26,7 @@ categories:
         dando soporte a la cubierta, se llaman:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 3
       options:
         a: Levar
@@ -36,7 +36,7 @@ categories:
       question: 'La acción de llevar al buque a su posición de equilibrio se denomina:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 4
       options:
         a: Cada una de las cuadernas que soportan las cubiertas.
@@ -50,7 +50,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 5
       options:
         a: Bita.
@@ -61,7 +61,7 @@ categories:
         para afirmar los cabos, se llama:'
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 6
       options:
         a: Piedra.
@@ -75,7 +75,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 7
       options:
         a: Permanencia
@@ -86,7 +86,7 @@ categories:
         cuando la pierden por causas externas…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 8
       options:
         a: Por la banda de estribor
@@ -96,7 +96,7 @@ categories:
       question: 'Para recoger a un náufrago nos acercaremos:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 9
       options:
         a: Cuando realicemos la maniobra de Boutakow
@@ -106,7 +106,7 @@ categories:
       question: 'Apagaremos los aparatos eléctricos, como medida preventiva:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 10
       options:
         a: Aumentar la velocidad y vigilar la sonda
@@ -119,7 +119,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 11
       options:
         a: Verdadero.
@@ -132,7 +132,7 @@ categories:
         en su auxilio, informando a éstas de ello o al servicio de búsqueda y salvamento"
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 12
       options:
         a: Solo está permitido triturados y a más de 12 millas de la costa.
@@ -145,7 +145,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 13
       options:
         a: Aguas más profundas al Oeste de la marca.
@@ -156,7 +156,7 @@ categories:
         de una boya pintada con banda amarilla entre dos bandas negras, indica…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 14
       options:
         a: Un aspa amarilla en forma de X.
@@ -166,7 +166,7 @@ categories:
       question: 'La marca de tope de una marca especial es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 15
       options:
         a: Canal principal a babor
@@ -177,7 +177,7 @@ categories:
         lateral, de color roja con una banda ancha horizontal verde indica:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 16
       options:
         a: Es una marca colocada o fondeada sobre un peligro e indica que está prohibida
@@ -191,7 +191,7 @@ categories:
       question: Una marca de peligro aislado…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 17
       options:
         a: Una marca lateral que indica canal principal a babor
@@ -204,7 +204,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 18
       options:
         a: Buque dedicado a la pesca.
@@ -217,7 +217,7 @@ categories:
         de la derrota de otro buque, utiliza la expresión
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 19
       options:
         a: Visibilidad
@@ -230,7 +230,7 @@ categories:
         correcto.
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 20
       options:
         a: Cada uno de ellos caerá a babor de forma que pase por la banda de estribor
@@ -243,7 +243,7 @@ categories:
         naveguen de vuelta encontrada a rumbos opuestos, con riesgo de abordaje…”
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 21
       options:
         a: Se mantendrán lo más cerca posible del límite exterior del paso o canal
@@ -256,7 +256,7 @@ categories:
       question: Regla 9. Los buques que naveguen a lo largo de un paso o canal angosto…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 22
       options:
         a: Los buques de propulsión mecánica
@@ -267,7 +267,7 @@ categories:
         de la derrota de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 23
       options:
         a: luz verde en la banda de babor y una luz roja en la banda de estribor
@@ -277,7 +277,7 @@ categories:
       question: Regla 21. Las "luces de costado" son una
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 24
       options:
         a: Mayor de 22,5 grados a popa del través de este ultimo.
@@ -288,7 +288,7 @@ categories:
         aproxime a otro viniendo desde una marcación
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 25
       options:
         a: En la parte de proa, una luz roja todo horizonte o una bola
@@ -298,7 +298,7 @@ categories:
       question: 'Regla 30. Los buques fondeados exhibirán en el lugar más visible:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 26
       options:
         a: Navegar siguiendo la dirección general de la corriente de tráfico indicada.
@@ -310,7 +310,7 @@ categories:
         de separación de tráfico, deberán…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 27
       options:
         a: 'Dos pitadas cortas para indicar: "caigo a estribor"'
@@ -326,7 +326,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: d
       id: 28
       options:
         a: Con el través de proa
@@ -337,7 +337,7 @@ categories:
         amarra evitará mejor que el barco se le desplace hacia popa?
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 29
       options:
         a: Arrancada
@@ -351,7 +351,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 30
       options:
         a: Llenar el depósito con el motor en marcha
@@ -363,7 +363,7 @@ categories:
         a prevención de incendios:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 31
       options:
         a: Evaluar los daños.
@@ -373,7 +373,7 @@ categories:
       question: Ante una varada involuntaria, lo primero es…
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: Continuado de 08:00 a 18:00
@@ -386,7 +386,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 33
       options:
         a: Fetch, persistencia e intensidad.
@@ -396,7 +396,7 @@ categories:
       question: ¿De qué tres variables depende la altura de las olas?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 34
       options:
         a: Caer el viento.
@@ -407,7 +407,7 @@ categories:
         lo general cortos, es…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 35
       options:
         a: En el sentido de las agujas del reloj
@@ -418,7 +418,7 @@ categories:
         una baja, el viento sopla alrededor de la baja:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 36
       options:
         a: Isobatas.
@@ -432,7 +432,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 37
       options:
         a: Corrección Total
@@ -443,7 +443,7 @@ categories:
         (Nm) se denomina:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 38
       options:
         a: Aumenta su Latitud pero no varía su Longitud
@@ -453,7 +453,7 @@ categories:
       question: 'Si navega durante unas horas por el mismo meridiano con rumbo Norte:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 39
       options:
         a: Meridiano del lugar.
@@ -464,7 +464,7 @@ categories:
         coordenadas de nuestra situación?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 40
       options:
         a: Líneas de separación de las zonas de navegación costera.
@@ -474,7 +474,7 @@ categories:
       question: 'Los derroteros son:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 41
       options:
         a: Marea
@@ -488,7 +488,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b,d
       id: 42
       options:
         a: 005º 18,6' E
@@ -500,7 +500,7 @@ categories:
         361 N. Indique que Longitud tendremos en ese punto de situación.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 43
       options:
         a: 128º
@@ -513,7 +513,7 @@ categories:
         de Tánger (Faro del espigón). Calcular el rumbo de aguja a poner.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 44
       options:
         a: 5 nudos
@@ -526,7 +526,7 @@ categories:
         y media?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 45
       options:
         a: 306º

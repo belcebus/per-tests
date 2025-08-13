@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 1
       options:
         a: Cuando el calado de proa es mayor que el calado de popa.
@@ -14,7 +14,7 @@ categories:
       question: Asiento negativo es…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 2
       options:
         a: Su calado.
@@ -25,7 +25,7 @@ categories:
         mar, se dice que ha aumentado:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 3
       options:
         a: Mamparo.
@@ -35,7 +35,7 @@ categories:
       question: La pieza que cubre la parte superior de la borda se llama…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 4
       options:
         a: Refuerzo transversal vertical.
@@ -48,7 +48,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 5
       options:
         a: Llano.
@@ -59,7 +59,7 @@ categories:
         un nudo…
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 6
       options:
         a: Vigilar que nuestro círculo de borneo no interfiera con otras embarcaciones.
@@ -73,7 +73,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 7
       options:
         a: Meter timón a la misma banda de caída.
@@ -84,7 +84,7 @@ categories:
         que se debe hacer es:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 8
       options:
         a: Asegurar la estanqueidad del barco.
@@ -95,7 +95,7 @@ categories:
       question: ¿Qué debemos hacer si se nos aproxima un fuerte chubasco con viento?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 9
       options:
         a: El buen estado y funcionamiento de equipos de navegación, comunicaciones;
@@ -106,7 +106,7 @@ categories:
       question: 'Antes de hacerse a la mar es conveniente comprobar:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 10
       options:
         a: Pantocazo
@@ -120,7 +120,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 11
       options:
         a: 50 metros de la playa.
@@ -131,7 +131,7 @@ categories:
         prohibidos a menos de:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 12
       options:
         a: En aguas portuarias.
@@ -144,7 +144,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 13
       options:
         a: Dos conos con el vértice hacia arriba.
@@ -154,7 +154,7 @@ categories:
       question: ¿Cuál es la marca de tope de la marca cardinal Oeste?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 14
       options:
         a: Marca de peligro aislado.
@@ -165,7 +165,7 @@ categories:
         de tope de…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 15
       options:
         a: Boya cilíndrica de color rojo, con marca de tope cilindro rojo.
@@ -175,7 +175,7 @@ categories:
       question: Marca lateral de Babor…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 16
       options:
         a: Castillete.
@@ -185,7 +185,7 @@ categories:
       question: Las marcas laterales de babor. ¿Qué forma pueden tener?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 17
       options:
         a: Verde con franjas horizontales rojas.
@@ -198,7 +198,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 18
       options:
         a: El mayor margen posible
@@ -210,7 +210,7 @@ categories:
         tráfico deberán apartarse de él dejando'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 19
       options:
         a: Dos bolas en línea vertical.
@@ -220,7 +220,7 @@ categories:
       question: 'Un buque varado exhibirá de día:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 20
       options:
         a: se considerará que existe riesgo si la demora o la marcación de un buque
@@ -234,7 +234,7 @@ categories:
         se tendrá en cuenta, entre otros…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 21
       options:
         a: Está prohibido siempre.
@@ -245,7 +245,7 @@ categories:
         de tráfico o en las zonas próximas a sus extremos”…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 22
       options:
         a: Verdadero.
@@ -257,7 +257,7 @@ categories:
         pesca…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 23
       options:
         a: Los buques evitarán fondear dentro de un dispositivo de separación de tráfico.
@@ -269,7 +269,7 @@ categories:
       question: Según la Regla 10 del RIPA,
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 24
       options:
         a: El que reciba el viento por la banda de babor.
@@ -280,7 +280,7 @@ categories:
         de la derrota del otro:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 25
       options:
         a: Un buque de pesca al cerco, que tiene su aparejo largado a más de 150 metros.
@@ -291,7 +291,7 @@ categories:
         el vértice hacia abajo, se trata de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Un buque dragando.
@@ -301,7 +301,7 @@ categories:
       question: ¿Cuál de los siguientes barcos no es de maniobra restringida?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 27
       options:
         a: La demora de un buque que se aproxima no varía en forma apreciable.
@@ -315,7 +315,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: d
       id: 28
       options:
         a: Atracar por la banda de babor o estribor al muelle.
@@ -325,7 +325,7 @@ categories:
       question: Se llama abarloarse a la acción de…
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 29
       options:
         a: Largo de proa.
@@ -339,7 +339,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 30
       options:
         a: Daremos toda atrás para separarnos cuanto antes.
@@ -351,7 +351,7 @@ categories:
         en el costado del otro barco. ¿Qué debemos hacer?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 31
       options:
         a: Enfriamiento.
@@ -362,7 +362,7 @@ categories:
         es:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: El Servicio del 112.
@@ -376,7 +376,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 33
       options:
         a: El volumen de aire que envuelve a la tierra.
@@ -388,7 +388,7 @@ categories:
       question: ¿Qué se entiende por presión atmosférica?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 34
       options:
         a: Maestral.
@@ -399,7 +399,7 @@ categories:
         se llama:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 35
       options:
         a: La altura de las olas.
@@ -409,7 +409,7 @@ categories:
       question: La Escala de Douglas mide ...
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 36
       options:
         a: El aumento brusco y momentáneo de la velocidad del viento.
@@ -423,7 +423,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: La misma altura.
@@ -433,7 +433,7 @@ categories:
       question: 'Un veril es un elemento de la carta náutica que une puntos que tienen:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 38
       options:
         a: A la declinación magnética.
@@ -443,7 +443,7 @@ categories:
       question: ¿A qué es debida la deriva en el rumbo de un barco?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 39
       options:
         a: Norte.
@@ -453,7 +453,7 @@ categories:
       question: 'En una carta del hemisferio sur, las latitudes aumentan hacia:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 40
       options:
         a: Una milla.
@@ -463,7 +463,7 @@ categories:
       question: 'Un minuto de latitud se corresponde con:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 41
       options:
         a: Corrección total.
@@ -477,7 +477,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 42
       options:
         a: 5,5 nudos.
@@ -491,7 +491,7 @@ categories:
         hora
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 43
       options:
         a: 340º
@@ -504,7 +504,7 @@ categories:
         tenemos una corrección total de 6º NW.'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 44
       options:
         a: 35º 57,5'N - 005º 36,6'W,
@@ -516,7 +516,7 @@ categories:
         al faro de Punta Alcázar = 6 millas. ¿Qué posición tendremos en ese instante?'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 45
       options:
         a: 009º

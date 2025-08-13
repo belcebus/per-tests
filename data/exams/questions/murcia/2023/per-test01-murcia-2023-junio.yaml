@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 1
       options:
         a: Eslora.
@@ -15,7 +15,7 @@ categories:
         buque se denomina:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 2
       options:
         a: Cuadernas.
@@ -26,7 +26,7 @@ categories:
         para aguantar la cubierta se les denomina:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 3
       options:
         a: Francobordo.
@@ -37,7 +37,7 @@ categories:
         calado en popa, dividido entre dos) se le denomina:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 4
       options:
         a: Zarpar.
@@ -51,7 +51,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: a
       id: 5
       options:
         a: Garreo.
@@ -63,7 +63,7 @@ categories:
         sobre él?
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 6
       options:
         a: A toda máquina, fondeando el ancla y dando toda la máquina atrás para parar
@@ -78,7 +78,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 7
       options:
         a: Correr.
@@ -89,7 +89,7 @@ categories:
         aguantando el temporal, proa a la mar o amurado a él?.
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 8
       options:
         a: Capear el temporal.
@@ -101,7 +101,7 @@ categories:
         pasar el temporal?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 9
       options:
         a: Aumentaremos nuestra velocidad a la máxima que permita nuestra embarcación.
@@ -111,7 +111,7 @@ categories:
       question: Navegando con mala mar…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 10
       options:
         a: Al atravesarnos a la mar y producirse una escora, se disminuye la estabilidad
@@ -127,7 +127,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 11
       options:
         a: Está permitido si antes los trituramos y los arrojamos a más de 12 millas
@@ -139,7 +139,7 @@ categories:
       question: Arrojar plásticos al mar…
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 12
       options:
         a: Están obligadas a enarbolar la Bandera de España junto con la bandera de
@@ -153,7 +153,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 13
       options:
         a: Verdes
@@ -164,7 +164,7 @@ categories:
         debemos dejar por babor son…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 14
       options:
         a: Una marca cardinal Norte.
@@ -176,7 +176,7 @@ categories:
         hacia abajo, estamos ante…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 15
       options:
         a: Indica que en el punto en que se encuentra colocada es donde hay mayor
@@ -190,7 +190,7 @@ categories:
       question: La señal de Peligro Aislado…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 16
       options:
         a: Una bola negra
@@ -200,7 +200,7 @@ categories:
       question: Una marca de aguas navegables tiene como tope…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 17
       options:
         a: Una marca de peligro aislado.
@@ -214,7 +214,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 18
       options:
         a: Solo a los buques que naveguen exclusivamente en alta mar.
@@ -228,7 +228,7 @@ categories:
         Mar (RIPA), será de aplicación…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 19
       options:
         a: A todo buque navegando a vela siempre que su maquinaria propulsora, caso
@@ -245,7 +245,7 @@ categories:
       question: Regla 3. Se entiende por buque sin gobierno…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 20
       options:
         a: Las luces de navegación encendidas, de esta forma se asegurarán una mayor
@@ -258,7 +258,7 @@ categories:
         en todo momento, tanto durante el día como de noche:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 21
       options:
         a: Deberán evitarse los cambios de rumbo.
@@ -268,7 +268,7 @@ categories:
       question: Regla 8. En la maniobra que se realice para evitar un abordaje…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 22
       options:
         a: Podrán cruzar la derrota de un buque que sólo puedan navegar con seguridad
@@ -281,7 +281,7 @@ categories:
         lo largo de un paso o canal angosto…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 23
       options:
         a: Tendrán preferencia de paso en las vías de circulación.
@@ -294,7 +294,7 @@ categories:
         tráfico…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 24
       options:
         a: Los buques de propulsión mecánica en navegación, mayores de 50 metros de
@@ -305,7 +305,7 @@ categories:
       question: Regla 23. ¿Qué buques están obligados a llevar dos luces de tope?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 25
       options:
         a: Un pesquero de cerco, con un aparejo largado a más de 150 metros.
@@ -316,7 +316,7 @@ categories:
         en un cono con el vértice hacia abajo, se trata de…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Dos luces todo horizonte, en línea vertical la superior roja y la inferior
@@ -334,7 +334,7 @@ categories:
       question: 'Regla 26. Un buque dedicado a la pesca de arrastre exhibirá:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 27
       options:
         a: Estoy dando atrás.
@@ -348,7 +348,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 28
       options:
         a: Arrancada.
@@ -359,7 +359,7 @@ categories:
         adecuadamente se le denomina…
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 29
       options:
         a: Atraque en punta.
@@ -373,7 +373,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 30
       options:
         a: Realizar rápidamente un análisis de cuáles son los daños producidos.
@@ -386,7 +386,7 @@ categories:
         el costado del nuestro. ¿Qué debemos de hacer en esta situación?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 31
       options:
         a: Abriremos los grifos de fondo.
@@ -397,7 +397,7 @@ categories:
         la inundación de nuestra embarcación?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 32
       options:
         a: El mecanismo de extinción de incendios actúa eliminando el calor, reduciendo
@@ -412,7 +412,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 33
       options:
         a: El viento circula en sentido contrario a las agujas del reloj.
@@ -423,7 +423,7 @@ categories:
         de una borrasca en el hemisferio Norte?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 34
       options:
         a: Disminuye su intensidad a medida que aumentamos nuestra velocidad.
@@ -433,7 +433,7 @@ categories:
       question: Decimos que el viento ha racheado cuando…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 35
       options:
         a: En función de la temperatura del agua del mar.
@@ -443,7 +443,7 @@ categories:
       question: La escala Douglas describe el estado de la mar…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 36
       options:
         a: Terral.
@@ -457,7 +457,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 37
       options:
         a: Ecuador.
@@ -468,7 +468,7 @@ categories:
         90°, y que divide la Tierra en los hemisferios Norte y Sur, se le denomina.
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 38
       options:
         a: La longitud es el arco de meridiano del lugar contado desde el Ecuador
@@ -480,7 +480,7 @@ categories:
       question: Indique la respuesta correcta.
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 39
       options:
         a: En la carta náutica.
@@ -492,7 +492,7 @@ categories:
         en años posteriores?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 40
       options:
         a: De la velocidad de la embarcación.
@@ -502,7 +502,7 @@ categories:
       question: El desvío de aguja varía en función…
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 41
       options:
         a: Enfilaciones.
@@ -516,7 +516,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 42
       options:
         a: Ra = 264°
@@ -529,7 +529,7 @@ categories:
         2° NW y el desvío de aguja es 12° NW. ¿Qué rumbo de aguja deberá poner?'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 43
       options:
         a: 36°08.8’N / 005°18.2’W
@@ -541,7 +541,7 @@ categories:
         NW y el desvío de aguja de (-5°). ¿Cuál es nuestra posición en ese instante?.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 44
       options:
         a: 7 millas
@@ -554,7 +554,7 @@ categories:
         en ese momento?.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 45
       options:
         a: 0.5 millas

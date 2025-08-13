@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 1
       options:
         a: Cornamusa.
@@ -15,7 +15,7 @@ categories:
         en ellas los eslabones de la cadena, se llama…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 2
       options:
         a: Partes curvas de los costados, en las proximidades de la proa.
@@ -26,7 +26,7 @@ categories:
       question: 'Las amuras son:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 3
       options:
         a: La parte del casco que se encuentra por encima del plano de flotación.
@@ -37,7 +37,7 @@ categories:
       question: ¿Qué es la obra viva?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 4
       options:
         a: Eslora
@@ -51,7 +51,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 5
       options:
         a: Pasar un cabo por la bita.
@@ -61,7 +61,7 @@ categories:
       question: ¿Qué es el garreo?
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 6
       options:
         a: Seno
@@ -75,7 +75,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: Reducir la velocidad.
@@ -85,7 +85,7 @@ categories:
       question: Precauciones en aguas someras…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 8
       options:
         a: Caer a la banda de Estribor o Babor, indiferentemente.
@@ -96,7 +96,7 @@ categories:
         primero?:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 9
       options:
         a: Maniobra de Boutakow
@@ -108,7 +108,7 @@ categories:
         o menos, se denomina…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 10
       options:
         a: Asegurar la estanqueidad del barco.
@@ -123,7 +123,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 11
       options:
         a: Siempre
@@ -135,7 +135,7 @@ categories:
         a efectos de que hay personas siniestradas en la mar?
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 12
       options:
         a: Cierto
@@ -150,7 +150,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 13
       options:
         a: De peligro aislado.
@@ -161,7 +161,7 @@ categories:
         y blancas, es una marca…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 14
       options:
         a: La situación de granjas marinas.
@@ -171,7 +171,7 @@ categories:
       question: 'Las boyas de marcas especiales se utilizan para indicar:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 15
       options:
         a: Este.
@@ -182,7 +182,7 @@ categories:
         los vértices hacia abajo, se deberá pasar por el cuadrante:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 16
       options:
         a: Marcas cardinales
@@ -193,7 +193,7 @@ categories:
         exacta está indicada en carta o publicaciones náuticas, se utilizan las…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 17
       options:
         a: Marcas cardinales
@@ -207,7 +207,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 18
       options:
         a: No estar fondeado.
@@ -218,7 +218,7 @@ categories:
         aplica a un buque que cumpla la condición de'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 19
       options:
         a: el estado de visibilidad.
@@ -230,7 +230,7 @@ categories:
         se tendrán en cuenta, entre otras…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 20
       options:
         a: Su proa, o casi por su proa.
@@ -242,7 +242,7 @@ categories:
         un buque vea a otro por…"'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 21
       options:
         a: cuando cada uno de ellos reciba el viento por bandas contrarias, el que
@@ -258,7 +258,7 @@ categories:
         la derrota del otro en la forma siguiente:"…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 22
       options:
         a: Un buque de pesca al cerco, que tiene su aparejo largado a más de 150 metros.
@@ -269,7 +269,7 @@ categories:
         el vértice hacia abajo, se trata de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: anulada
       id: 23
       options:
         a: Un buque sin gobierno
@@ -281,7 +281,7 @@ categories:
         cada 5 segundos, se trata de….
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 24
       options:
         a: en la parte superior del palo, o cerca de ella, dos luces todo horizonte
@@ -294,7 +294,7 @@ categories:
         además de una luz blanca todo horizonte en proa,…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 25
       options:
         a: Buque dedicado a la pesca que no sea de arrastre
@@ -306,7 +306,7 @@ categories:
         el otro. Se trata de…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 26
       options:
         a: Que tiene reducida su maniobra conforme con el Reglamento.
@@ -316,7 +316,7 @@ categories:
       question: ¿Qué se entiende por capacidad de maniobra restringida?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 27
       options:
         a: Todo avión que flote sobre las aguas.
@@ -329,7 +329,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 28
       options:
         a: Acercamos la popa al muelle rápidamente, hacemos firme los largos de popa
@@ -344,7 +344,7 @@ categories:
         y con viento de tierra lo haremos:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 29
       options:
         a: Acción de apretar un cabo.
@@ -358,7 +358,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 30
       options:
         a: Llenar el depósito con el motor en marcha.
@@ -371,7 +371,7 @@ categories:
         cuanto a prevención de incendios:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 31
       options:
         a: Incendios de sólidos.
@@ -381,7 +381,7 @@ categories:
       question: 'Los incendios de clase F, corresponden a:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 32
       options:
         a: Jamás abandonarla si no se está seguro del hundimiento
@@ -394,7 +394,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 33
       options:
         a: 1000 mm.
@@ -404,7 +404,7 @@ categories:
       question: La presión atmosférica media a nivel del mar, vale…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 34
       options:
         a: Intensidad.
@@ -415,7 +415,7 @@ categories:
         dirección
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 35
       options:
         a: Virazón
@@ -428,7 +428,7 @@ categories:
         que se origina a causa de este fenómeno se llama:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 36
       options:
         a: Fetch
@@ -442,7 +442,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: la demora verdadera.
@@ -453,7 +453,7 @@ categories:
         del observador y la línea popa -proa del barco, se corresponde con ... :'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 38
       options:
         a: El Instituto Social de la Marina.
@@ -463,7 +463,7 @@ categories:
       question: Las cartas de navegación españolas las publica…
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 39
       options:
         a: los compases de navegación.
@@ -473,7 +473,7 @@ categories:
       question: 'La declinación magnética o variación local afecta a ... :'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 40
       options:
         a: Coeficiente de derrota.
@@ -484,7 +484,7 @@ categories:
         navegamos, se corrigen aplicando el...:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 41
       options:
         a: 310º
@@ -497,7 +497,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 42
       options:
         a: 041º
@@ -510,7 +510,7 @@ categories:
         de aguja de = +2º. Calcular el rumbo de aguja:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 43
       options:
         a: 6,9 nudos.
@@ -524,7 +524,7 @@ categories:
         velocidad tendremos que poner, para llegar a Tánger a HRB= 1200:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 44
       options:
         a: 3,2 millas.
@@ -538,7 +538,7 @@ categories:
         :'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 45
       options:
         a: 36º 03,6'N – 005º 10,2'W.

@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 1
       options:
         a: El elemento que nos sirve para dar pitadas.
@@ -14,7 +14,7 @@ categories:
       question: 'Definimos la bocina como:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 2
       options:
         a: Achicar el agua de las sentinas.
@@ -24,7 +24,7 @@ categories:
       question: 'La misión de las lumbreras es:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: Puntal
@@ -35,7 +35,7 @@ categories:
         llama:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 4
       options:
         a: La altura entre la quilla y el plano de flotación.
@@ -48,7 +48,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 5
       options:
         a: Navegaremos a toda velocidad para salir cuando antes de la niebla.
@@ -59,7 +59,7 @@ categories:
       question: 'En caso de que se cierre en niebla:'
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 6
       options:
         a: Mantendremos los motores en marcha.
@@ -73,7 +73,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 7
       options:
         a: Correr.
@@ -84,7 +84,7 @@ categories:
         aguantando el temporal proa a la mar o amurado a él:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 8
       options:
         a: Cerrar todos los grifos de fondo.
@@ -94,7 +94,7 @@ categories:
       question: 'Cuando se navega con mal tiempo es aconsejable:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 9
       options:
         a: Deben llevar obligatoriamente extintores portátiles, cuyo número dependerá
@@ -107,7 +107,7 @@ categories:
       question: 'Obligaciones de todas las embarcaciones de recreo:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 10
       options:
         a: Seguridad de equilibrio.
@@ -121,7 +121,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 11
       options:
         a: Es la ayuda prestada a un buque en situación desesperada, que ya no tiene
@@ -132,7 +132,7 @@ categories:
       question: 'Características del salvamento obligatorio:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 12
       options:
         a: A menos de 2 millas de la costa y menos de 2 nudos de velocidad.
@@ -146,7 +146,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 13
       options:
         a: Verdes.
@@ -157,7 +157,7 @@ categories:
         por estribor son:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 14
       options:
         a: Marca de peligro aislado.
@@ -168,7 +168,7 @@ categories:
         de tope de…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 15
       options:
         a: Con un castillete o espeque de color negro, provisto de una o más franjas
@@ -179,7 +179,7 @@ categories:
       question: ¿Cómo estará balizado un peligro aislado?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 16
       options:
         a: Una marca lateral que indica canal principal a babor.
@@ -189,7 +189,7 @@ categories:
       question: 'Una marca esférica con franjas verticales rojas y blancas es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 17
       options:
         a: Cilíndrica y color verde.
@@ -202,7 +202,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 18
       options:
         a: Deberán evitarse los cambios de rumbo.
@@ -212,7 +212,7 @@ categories:
       question: En la maniobra que se realice para evitar un abordaje…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 19
       options:
         a: Para cruzar la derrota del alcanzado.
@@ -222,7 +222,7 @@ categories:
       question: En una situación de alcance, el buque que alcanza deberá maniobrar….
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 20
       options:
         a: Si navegan de vuelta encontrada los dos deben caer a estribor, y si es
@@ -235,7 +235,7 @@ categories:
         mecánica, ¿quién debe maniobrar?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 21
       options:
         a: Puede modificar su rumbo, si con ello evita el abordaje.
@@ -245,7 +245,7 @@ categories:
       question: 'El buque que "Sigue a rumbo":'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 22
       options:
         a: Los buques de propulsión mecánica.
@@ -256,7 +256,7 @@ categories:
         derrota de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 23
       options:
         a: Dos luces todo horizonte roja sobre blanca.
@@ -266,7 +266,7 @@ categories:
       question: 'Un buque dedicado a la pesca de arrastre mostrará como luces características:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 24
       options:
         a: Un cono con el vértice hacia abajo.
@@ -276,7 +276,7 @@ categories:
       question: 'Un buque con capacidad de maniobra restringida de día, exhibirá:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 25
       options:
         a: Un pesquero de arrastre con arrancada.
@@ -287,7 +287,7 @@ categories:
         verde y una roja, se trata de un:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 26
       options:
         a: Una luz blanca todo horizonte a proa.
@@ -299,7 +299,7 @@ categories:
       question: 'Un buque fondeado de eslora mayor de 50 metros mostrará de noche:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 27
       options:
         a: Pitada corta 1 segundo.
@@ -313,7 +313,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 28
       options:
         a: Lo que se arrastra del fondo
@@ -323,7 +323,7 @@ categories:
       question: 'La arrancada de una embarcación es:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 29
       options:
         a: Sinónimo de templar.
@@ -336,7 +336,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 30
       options:
         a: De noche, lanzándola a la mar por sotavento.
@@ -347,7 +347,7 @@ categories:
         se deberá emplear una señal fumígena?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 31
       options:
         a: Lanzar todos los cohetes y bengalas.
@@ -357,7 +357,7 @@ categories:
       question: 'La primera medida a tomar en caso de abandono de buque es:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: Dar al paciente bebidas muy frías a grandes sorbos.
@@ -372,7 +372,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 33
       options:
         a: El número de horas que ha soplado el viento en la misma dirección sobre
@@ -385,7 +385,7 @@ categories:
       question: 'Definimos persistencia como:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 34
       options:
         a: El anemómetro.
@@ -395,7 +395,7 @@ categories:
       question: 'El instrumento utilizado para medir la presión atmosférica  es:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 35
       options:
         a: La intensidad de la corriente.
@@ -405,7 +405,7 @@ categories:
       question: La escala Beaufort mide...
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 36
       options:
         a: Un anticiclón.
@@ -418,7 +418,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 37
       options:
         a: Meridiano principal o de Greenwich.
@@ -429,7 +429,7 @@ categories:
         de los polos y divide a la Tierra en dos hemisferios Norte y Sur se llama...
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 38
       options:
         a: Sondas.
@@ -440,7 +440,7 @@ categories:
         conocen como:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 39
       options:
         a: La corredera.
@@ -450,7 +450,7 @@ categories:
       question: El instrumento que mide la velocidad de un yate cuando navega es...
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 40
       options:
         a: la zona marítima por donde se está navegando.
@@ -461,7 +461,7 @@ categories:
         debido a…
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 41
       options:
         a: Una línea de enfilación.
@@ -475,7 +475,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 42
       options:
         a: 40 minutos.
@@ -487,7 +487,7 @@ categories:
         de 14 nudos.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 43
       options:
         a: 176º
@@ -499,7 +499,7 @@ categories:
         extremo del espigón) con corrección total= 6ºW. Calcule el rumbo de aguja.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 44
       options:
         a: HRB= 1158
@@ -511,7 +511,7 @@ categories:
         al puerto de Ceuta con velocidad de 9 nudos.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 45
       options:
         a: 245º

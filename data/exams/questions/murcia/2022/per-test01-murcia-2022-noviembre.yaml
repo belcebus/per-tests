@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 1
       options:
         a: Manguerotes.
@@ -15,7 +15,7 @@ categories:
         se denomina:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 2
       options:
         a: Horizontal.
@@ -25,7 +25,7 @@ categories:
       question: 'Las cuadernas de un barco están dispuestas en sentido:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 3
       options:
         a: Está libre.
@@ -35,7 +35,7 @@ categories:
       question: 'Cuando el ancla despega del fondo se dice que:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 4
       options:
         a: Cuando el calado de proa es menor que el calado de popa.
@@ -48,7 +48,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 5
       options:
         a: As de guía.
@@ -60,7 +60,7 @@ categories:
         que queramos dar amarras a una barra o anilla?
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: a
       id: 6
       options:
         a: Verdadero.
@@ -74,7 +74,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 7
       options:
         a: Mesopelagicas.
@@ -84,7 +84,7 @@ categories:
       question: Decimos que estamos en "aguas poco profundas" cuando estas son…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 8
       options:
         a: Pantocazo.
@@ -95,7 +95,7 @@ categories:
         efecto del viento y/o las olas se denomina…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 9
       options:
         a: Navegar a velocidad reducida.
@@ -105,7 +105,7 @@ categories:
       question: Reglas básicas para navegar remolcador y remolcado
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 10
       options:
         a: 5 minutos.
@@ -118,7 +118,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 11
       options:
         a: Apartándonos de cualquier buque que nos estorbe, cayendo a babor o a estribor
@@ -132,7 +132,7 @@ categories:
         por la dársena de Cartagena, procuraremos navegar…
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 12
       options:
         a: No, en las zonas de baño no se puede navegar. Son para bañarse.
@@ -146,7 +146,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 13
       options:
         a: De color amarillo.
@@ -156,7 +156,7 @@ categories:
       question: 'Las marcas laterales de babor de la región A son:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 14
       options:
         a: Marca de peligro aislado.
@@ -167,7 +167,7 @@ categories:
         de tope de…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 15
       options:
         a: Este.
@@ -178,7 +178,7 @@ categories:
         los vértices hacia abajo, se deberá pasar por el cuadrante:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 16
       options:
         a: Lugar para fondear.
@@ -189,7 +189,7 @@ categories:
         horizontales rojas, significa:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 17
       options:
         a: Amarillo y negro.
@@ -202,7 +202,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 18
       options:
         a: Lo más similar posible a las indicadas en el sistema de balizamiento marítimo
@@ -216,7 +216,7 @@ categories:
         a la pesca en flotilla, estas deben ser:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 19
       options:
         a: Sí, si su motor se está utilizando.
@@ -227,7 +227,7 @@ categories:
       question: 'Un velero ¿se puede considerar como un buque de propulsión mecánica?:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 20
       options:
         a: El que reciba el viento por la banda de babor.
@@ -238,7 +238,7 @@ categories:
         de la derrota del otro:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 21
       options:
         a: Cada uno de ellos caerá a babor de forma que pase por la banda de estribor
@@ -251,7 +251,7 @@ categories:
         naveguen de vuelta encontrada a rumbos opuestos, con riesgo de abordaje…”
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 22
       options:
         a: Los buques de vela mayores de 50 metros.
@@ -261,7 +261,7 @@ categories:
       question: ¿Qué buques llevarán dos luces de tope?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 23
       options:
         a: Un pesquero.
@@ -272,7 +272,7 @@ categories:
         se trata de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 24
       options:
         a: Por el costado que exhiba dos luces rojas en línea vertical.
@@ -282,7 +282,7 @@ categories:
       question: 'Divisamos una draga que ocasiona una obstrucción, se pasará:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 25
       options:
         a: Un buque restringido por su calado.
@@ -293,7 +293,7 @@ categories:
         se trata de
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 26
       options:
         a: Buque restringido por su calado.
@@ -304,7 +304,7 @@ categories:
         línea vertical?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 27
       options:
         a: Una luz blanca todo horizonte a proa.
@@ -319,7 +319,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 28
       options:
         a: Amarrar proa o popa al muelle.
@@ -329,7 +329,7 @@ categories:
       question: 'Amarrar de punta a un muelle es:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 29
       options:
         a: Al virarlo el barco va avante y atraca la popa.
@@ -342,7 +342,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 30
       options:
         a: Gas inerte.
@@ -353,7 +353,7 @@ categories:
         de un incendio en la instalación eléctrica de una embarcación?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 31
       options:
         a: Por los orificios practicados en la obra muerta del casco.
@@ -364,7 +364,7 @@ categories:
         embarcación?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 32
       options:
         a: Golpes que no producen heridas en la piel.
@@ -377,7 +377,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 33
       options:
         a: La humedad.
@@ -387,7 +387,7 @@ categories:
       question: 'El barómetro es un aparato que mide:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 34
       options:
         a: En el sentido contrario a las agujas de reloj y con una componente hacia
@@ -399,7 +399,7 @@ categories:
         Norte?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 35
       options:
         a: Aumenta su intensidad.
@@ -409,7 +409,7 @@ categories:
       question: 'Se dice que el viento cae cuando:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 36
       options:
         a: Temporal.
@@ -422,7 +422,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: Las marcaciones.
@@ -433,7 +433,7 @@ categories:
         a puntos destacados representados en la misma, usaremos preferentemente:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 38
       options:
         a: 310º
@@ -443,7 +443,7 @@ categories:
       question: 'Al rumbo por cuadrantes: S50ºW, le corresponde el circular:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 39
       options:
         a: Que es un círculo máximo de la esfera terrestre.
@@ -453,7 +453,7 @@ categories:
       question: 'Las características principales del ecuador terrestre son:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 40
       options:
         a: Norte y Este.
@@ -465,7 +465,7 @@ categories:
         entre los puntos cardinales:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 41
       options:
         a: Un señalamiento.
@@ -480,7 +480,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 42
       options:
         a: 239º
@@ -492,7 +492,7 @@ categories:
         Calcular el rumbo de aguja con una corrección total de 5º NE:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 43
       options:
         a: 030º
@@ -504,7 +504,7 @@ categories:
         de Barbate? (luz extremo espigón):'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 44
       options:
         a: 310º
@@ -515,7 +515,7 @@ categories:
         ¿Qué rumbo verdadero llevamos?:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 45
       options:
         a: 082º

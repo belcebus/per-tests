@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 1
       options:
         a: Francobordo.
@@ -14,7 +14,7 @@ categories:
       question: 'La diferencia de calados entre proa y popa se denomina:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 2
       options:
         a: Arriar.
@@ -24,7 +24,7 @@ categories:
       question: 'La operación de subir el ancla a bordo se denomina:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: La parte del casco que queda sumergida.
@@ -34,7 +34,7 @@ categories:
       question: 'La obra muerta es:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 4
       options:
         a: La parte por donde sale el sol.
@@ -47,7 +47,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 5
       options:
         a: Llano.
@@ -58,7 +58,7 @@ categories:
         el nudo…
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 6
       options:
         a: Un cabo de amarre que va a un muerto.
@@ -72,7 +72,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: Desconectar los aparatos electrónicos.
@@ -83,7 +83,7 @@ categories:
       question: En caso de tormenta eléctrica…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 8
       options:
         a: Balances.
@@ -94,7 +94,7 @@ categories:
         las olas se conocen con el nombre de:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 9
       options:
         a: Aguantar el temporal poniendo la proa a la mar.
@@ -104,7 +104,7 @@ categories:
       question: Capear un temporal es…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 10
       options:
         a: Señalizar la posición del náufrago.
@@ -118,7 +118,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 11
       options:
         a: Desde la salida a la puesta del Sol.
@@ -128,7 +128,7 @@ categories:
       question: 'Las embarcaciones están obligados a izar el Pabellón nacional:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 12
       options:
         a: Nos acercaremos rápidamente pues es señal de pedir socorro.
@@ -141,7 +141,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 13
       options:
         a: Amarillo y verde.
@@ -152,7 +152,7 @@ categories:
         para indicar los lados de un canal:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 14
       options:
         a: Nos indican las aguas que son navegables.
@@ -163,7 +163,7 @@ categories:
         una marca cardinal:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 15
       options:
         a: Dos conos superpuestos con los vértices hacia abajo.
@@ -173,7 +173,7 @@ categories:
       question: 'Las marcas de tope que indican un peligro aislado son:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 16
       options:
         a: Amarillo y negro.
@@ -183,7 +183,7 @@ categories:
       question: 'Las marcas que indican aguas navegables tienen colores:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 17
       options:
         a: La situación de instalaciones de acuicultura.
@@ -196,7 +196,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 18
       options:
         a: Toda condición en que la visibilidad está disminuida por niebla, bruma,
@@ -213,7 +213,7 @@ categories:
         en la Mar (RIPA), la expresión “visibilidad reducida” significa…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 19
       options:
         a: Estado de la visibilidad.
@@ -225,7 +225,7 @@ categories:
         cuenta, entre otros, los siguientes factores:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 20
       options:
         a: El mayor margen posible.
@@ -237,7 +237,7 @@ categories:
         de tráfico deberán apartarse de él dejando…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 21
       options:
         a: Ninguna.
@@ -249,7 +249,7 @@ categories:
         se está propulsando mecánicamente?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 22
       options:
         a: El buque que tenga al otro a dos millas náuticas de distancia.
@@ -261,7 +261,7 @@ categories:
         de abordaje se mantendrá apartado de la derrota del otro:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 23
       options:
         a: Maniobraremos nosotros ya que observamos al otro por estribor.
@@ -274,7 +274,7 @@ categories:
         que se aproxima con riesgo de abordaje…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 24
       options:
         a: Cuando cada uno de ellos reciba el viento por bandas contrarias, el que
@@ -291,7 +291,7 @@ categories:
         la forma siguiente:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 25
       options:
         a: Luces de tope
@@ -303,7 +303,7 @@ categories:
         a 7 metros en navegación?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 26
       options:
         a: Dos luces todo horizonte, roja sobre blanca.
@@ -314,7 +314,7 @@ categories:
         en la Mar (RIPA), un buque dedicado a la pesca de arrastre mostrará de noche…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 27
       options:
         a: Una luz blanca todo horizonte a proa.
@@ -331,7 +331,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 28
       options:
         a: A la corriente.
@@ -341,7 +341,7 @@ categories:
       question: ¿A qué es debido el abatimiento?
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 29
       options:
         a: La embarcación se desplazará hacia proa y se abrirá la proa.
@@ -354,7 +354,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 30
       options:
         a: Lanzar todos los cohetes y bengalas.
@@ -364,7 +364,7 @@ categories:
       question: 'La primera medida a tomar en caso de abandono de buque es:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 31
       options:
         a: Gas inerte.
@@ -375,7 +375,7 @@ categories:
         de un incendio en la instalación eléctrica de una embarcación?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: Combustible, oxígeno, comburente y reacción en cadena.
@@ -388,7 +388,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 33
       options:
         a: Volumen de aire que envuelve a la tierra.
@@ -400,7 +400,7 @@ categories:
       question: ¿Qué se entiende por presión atmosférica?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 34
       options:
         a: Brisas costeras.
@@ -410,7 +410,7 @@ categories:
       question: ¿Qué se entiende por la expresión “rolar”?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 35
       options:
         a: El número de horas que ha soplado el viento en la misma dirección sobre
@@ -423,7 +423,7 @@ categories:
       question: La “persistencia” se define como…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 36
       options:
         a: Presión.
@@ -436,7 +436,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: La misma altura.
@@ -446,7 +446,7 @@ categories:
       question: Un veril es un elemento de la carta náutica que une puntos que tienen…
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 38
       options:
         a: La demora de aguja a un faro.
@@ -457,7 +457,7 @@ categories:
         para obtener nuestra posición?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 39
       options:
         a: El rumbo al que naveguemos.
@@ -467,7 +467,7 @@ categories:
       question: El valor de la declinación magnética o variación local, influye según…
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 40
       options:
         a: El ángulo que forma el Norte verdadero con la visual a un objeto.
@@ -477,7 +477,7 @@ categories:
       question: 'La demora verdadera es:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 41
       options:
         a: 145°
@@ -490,7 +490,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 42
       options:
         a: 310°
@@ -502,7 +502,7 @@ categories:
         verdadera por la que estamos viendo dicha enfilación.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 43
       options:
         a: 306°
@@ -518,7 +518,7 @@ categories:
         Tarifa.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 44
       options:
         a: 35° 57,5’N - 005° 36,6’W
@@ -530,7 +530,7 @@ categories:
         al faro de Punta Alcázar: 6 millas. ¿Qué posición tendremos en ese instante?'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 45
       options:
         a: 49 minutos

@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 1
       options:
         a: Calado medio.
@@ -15,7 +15,7 @@ categories:
         hasta la línea de agua en la condición de desplazamiento máximo se denomina
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 2
       options:
         a: Alerones.
@@ -26,7 +26,7 @@ categories:
         curva hacia la popa?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 3
       options:
         a: Paso de la hélice.
@@ -37,7 +37,7 @@ categories:
         una vuelta su hélice"?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 4
       options:
         a: Un tipo de hélice.
@@ -50,7 +50,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: a
       id: 5
       options:
         a: Garreando.
@@ -62,7 +62,7 @@ categories:
         se dice que el barco está:'
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 6
       options:
         a: Muerto.
@@ -77,7 +77,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: Niveles de aceite
@@ -88,7 +88,7 @@ categories:
         a la mar, indique cuál de ellas NO es imprescindible
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 8
       options:
         a: Estabilidad
@@ -99,7 +99,7 @@ categories:
         su posición de adrizada, una vez que se ha escorado por la acción de la mar?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 9
       options:
         a: Señalizar la posición del náufrago.
@@ -110,7 +110,7 @@ categories:
         será….
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 10
       options:
         a: Está a la deriva.
@@ -125,7 +125,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 11
       options:
         a: Nos acercaremos rápidamente pues es señal de pedir socorro.
@@ -135,7 +135,7 @@ categories:
       question: Si navegando avistamos una embarcación con la bandera Alfa izada
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 12
       options:
         a: No se pueden verter a la mar.
@@ -149,7 +149,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 13
       options:
         a: Verdes
@@ -160,7 +160,7 @@ categories:
         por babor son
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 14
       options:
         a: 9 centelleos muy rápidos seguidos de un período de oscuridad.
@@ -171,7 +171,7 @@ categories:
         es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 15
       options:
         a: Al norte de la marca.
@@ -182,7 +182,7 @@ categories:
         superpuestos con vértices hacia arriba, ¿dónde se encuentran las aguas navegables?:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 16
       options:
         a: Dos esferas negras superpuestas.
@@ -192,7 +192,7 @@ categories:
       question: 'Los topes de las marcas de peligro aislado son:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 17
       options:
         a: amarillo y pueden llevar una marca de tope en forma de V
@@ -205,7 +205,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 18
       options:
         a: Buque dedicado a la pesca.
@@ -218,7 +218,7 @@ categories:
         no puede apartarse de la derrota de otro buque, utiliza la expresión'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 19
       options:
         a: El estado de visibilidad.
@@ -230,7 +230,7 @@ categories:
         está incluido en dicha regla
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 20
       options:
         a: La demora de un buque que se aproxima no varía en forma apreciable.
@@ -241,7 +241,7 @@ categories:
         que existe el riesgo, si
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 21
       options:
         a: Dos luces rojas todo horizonte en línea vertical, en el lugar más visible.
@@ -252,7 +252,7 @@ categories:
         "Los buques sin gobierno exhibirán…"'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 22
       options:
         a: cada uno de ellos caerá a babor de forma que pase por la banda de estribor
@@ -265,7 +265,7 @@ categories:
         encontrada a rumbos opuestos, con riesgo de abordaje…"
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 23
       options:
         a: cuando cada uno de ellos reciba el viento por bandas contrarias, el que
@@ -281,7 +281,7 @@ categories:
         en la forma siguiente:"…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 24
       options:
         a: Tres pitadas largas.
@@ -293,7 +293,7 @@ categories:
         y sin arrancada en visibilidad reducida emitirá:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 25
       options:
         a: Por el costado que exhiba dos luces rojas en línea vertical.
@@ -303,7 +303,7 @@ categories:
       question: 'REGLA 27.  Divisamos una draga que ocasiona una obstrucción, se pasará:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 26
       options:
         a: En lo posible, mantener su rumbo fuera de la línea de separación o de la
@@ -317,7 +317,7 @@ categories:
         que utilicen un dispositivo de separación de tráfico deberán…"
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 27
       options:
         a: Una pitada corta para indicar "caigo a estribor".
@@ -333,7 +333,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 28
       options:
         a: Largo de proa.
@@ -344,7 +344,7 @@ categories:
         la proa al muelle, estamos virando del…
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: d
       id: 29
       options:
         a: Con el través de proa.
@@ -358,7 +358,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 30
       options:
         a: Daremos toda atrás para separarnos cuanto antes.
@@ -370,7 +370,7 @@ categories:
         en el costado del otro barco. ¿Qué debemos hacer?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 31
       options:
         a: Llenar el depósito con el motor en marcha.
@@ -382,7 +382,7 @@ categories:
         a prevención de incendios:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 32
       options:
         a: Descargarla de la web de la Seguridad Social en http://www.seg-social.es/prdi00/groups/public/documents/binario/175152.pdf
@@ -395,7 +395,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 33
       options:
         a: Ventómetro.
@@ -405,7 +405,7 @@ categories:
       question: Para conocer la velocidad del viento, utilizaremos un …
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 34
       options:
         a: Fetch, persistencia e intensidad.
@@ -415,7 +415,7 @@ categories:
       question: ¿De qué tres variables depende la altura de las olas?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 35
       options:
         a: Intensidad.
@@ -426,7 +426,7 @@ categories:
         dirección
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 36
       options:
         a: Fetch
@@ -440,7 +440,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 37
       options:
         a: Observatorio Marítimo Español.
@@ -451,7 +451,7 @@ categories:
         navegación en España, le corresponde al...
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 38
       options:
         a: Detalle cartográfico.
@@ -463,7 +463,7 @@ categories:
         se le llama...
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 39
       options:
         a: La milla náutica que vale 1852 metros.
@@ -474,7 +474,7 @@ categories:
         y empleamos para medir recorridos o tramos de navegación, es...
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 40
       options:
         a: de Greenwich.
@@ -484,7 +484,7 @@ categories:
       question: En la esfera terrestre, el meridiano 0º corresponde al meridiano…
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 41
       options:
         a: Una línea de enfilación entre dos faros.
@@ -498,7 +498,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 42
       options:
         a: 328º
@@ -510,7 +510,7 @@ categories:
         y Roche. ¿Cuál será en ese momento nuestro rumbo verdadero?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 43
       options:
         a: 8,1 nudos.
@@ -522,7 +522,7 @@ categories:
         hacer este recorrido en 3 horas. ¿Qué velocidad de máquinas deberemos de poner?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 44
       options:
         a: 090º
@@ -535,7 +535,7 @@ categories:
         cuenta que la variación local es de 2º W y el desvío de aguja de -3?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 45
       options:
         a: 1 hora y 10 minutos.

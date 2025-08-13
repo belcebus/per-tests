@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 1
       options:
         a: Positivo cuando el calado a popa es mayor que el calado a proa.
@@ -14,7 +14,7 @@ categories:
       question: 'El asiento puede ser:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 2
       options:
         a: Molinete
@@ -24,7 +24,7 @@ categories:
       question: 'La máquina que se utiliza para levar o fondear el ancla se denomina:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 3
       options:
         a: Eslora
@@ -36,7 +36,7 @@ categories:
         de la cuaderna del medio la denominamos:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 4
       options:
         a: De paso variable
@@ -49,7 +49,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: a
       id: 5
       options:
         a: Para amarrar un cabo al arganeo de un anclote o rezón.
@@ -59,7 +59,7 @@ categories:
       question: ¿Para qué sirve principalmente el nudo denominado “vuelta de rezón”?
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 6
       options:
         a: Encapillar.
@@ -73,7 +73,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 7
       options:
         a: Por su sotavento.
@@ -84,7 +84,7 @@ categories:
         mar?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 8
       options:
         a: Disminuirá el centro de gravedad.
@@ -96,7 +96,7 @@ categories:
         citado traslado a nuestra embarcación?:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 9
       options:
         a: Tirarnos con el chaleco salvavidas.
@@ -107,7 +107,7 @@ categories:
         aro salvavidas, procederemos a:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 10
       options:
         a: Navegaremos avante toda y saltando las olas.
@@ -120,7 +120,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 11
       options:
         a: Las disposiciones del Anexo V se aplican a todos los buques.
@@ -131,7 +131,7 @@ categories:
         MARPOL:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 12
       options:
         a: Nos mantendremos a la escucha, esperando instrucciones de las autoridades.
@@ -147,7 +147,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 13
       options:
         a: Canal principal a babor.
@@ -158,7 +158,7 @@ categories:
         lateral, de color roja con una banda ancha horizontal verde indica:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 14
       options:
         a: Daremos la vuelta, puesto que nos está indicando una zona en la que está
@@ -175,7 +175,7 @@ categories:
         por dos esferas negras superpuestas. ¿Cómo debemos proceder?:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 15
       options:
         a: Nos indican las aguas que son navegables.
@@ -186,7 +186,7 @@ categories:
         una marca cardinal:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 16
       options:
         a: Maniobraremos para pasar al norte de ella.
@@ -196,7 +196,7 @@ categories:
       question: Si vemos una marca con dos conos negros, opuestos por su base.
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 17
       options:
         a: Dos conos opuestos por sus vértices.
@@ -209,7 +209,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 18
       options:
         a: Todo buque que alcanza, al ir más rápido, tiene prioridad sobre el buque
@@ -223,7 +223,7 @@ categories:
         para prevenir los Abordajes en la Mar:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 19
       options:
         a: Buque de vela.
@@ -234,7 +234,7 @@ categories:
         para propulsarse, es considerado como….
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 20
       options:
         a: Todo buque que no tiene izado o no muestra su pabellón de bandera.
@@ -246,7 +246,7 @@ categories:
       question: 'Un "buque sin gobierno" significa:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 21
       options:
         a: Las luces de navegación encendidas, de esta forma se asegurarán una mayor
@@ -259,7 +259,7 @@ categories:
         durante el día como de noche:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 22
       options:
         a: Visibilidad.
@@ -271,7 +271,7 @@ categories:
         factores. Indique cuál de los que se indican a continuación NO es correcto.
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 23
       options:
         a: Los buques evitarán fondear dentro de un dispositivo de separación de tráfico.
@@ -284,7 +284,7 @@ categories:
         en la Mar,
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 24
       options:
         a: La demora de un buque que se aproxima no varía de forma apreciable.
@@ -294,7 +294,7 @@ categories:
       question: 'Se considerará que existe riesgo de abordaje si:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 25
       options:
         a: Toda aeronave proyectada para maniobrar sobre las aguas.
@@ -304,7 +304,7 @@ categories:
       question: 'La  palabra "hidroavión" designa a:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Dos bolas negras.
@@ -316,7 +316,7 @@ categories:
         está obligado a exhibir:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 27
       options:
         a: Una luz de tope en la zona de proa.
@@ -331,7 +331,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: d
       id: 28
       options:
         a: Tirar de un cabo de forma manual.
@@ -341,7 +341,7 @@ categories:
       question: ¿Qué es hacer firme un cabo?
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 29
       options:
         a: Al virarlo el barco va avante y atraca la popa.
@@ -354,7 +354,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 30
       options:
         a: Espeque
@@ -365,7 +365,7 @@ categories:
         para taponar una vía de agua circular, se denomina:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 31
       options:
         a: Combustible, oxígeno, comburente y reacción en cadena.
@@ -375,7 +375,7 @@ categories:
       question: ¿Qué elementos forman el llamado tetraedro del fuego?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: El nitrógeno
@@ -388,7 +388,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 33
       options:
         a: La humedad.
@@ -398,7 +398,7 @@ categories:
       question: 'El milibar se utiliza en meteorología para medir:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 34
       options:
         a: La fuerza que ejerce el viento.
@@ -408,7 +408,7 @@ categories:
       question: ¿Qué se entiende por fetch?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 35
       options:
         a: De Norte a Sur
@@ -418,7 +418,7 @@ categories:
       question: En el Hemisferio Norte, en una borrasca, los vientos circulan…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 36
       options:
         a: De mar a tierra.
@@ -431,7 +431,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: La demora de aguja a un faro.
@@ -442,7 +442,7 @@ categories:
         obtener nuestra posición?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 38
       options:
         a: Al compás de navegación.
@@ -452,7 +452,7 @@ categories:
       question: 'La declinación magnética o variación local afecta...:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 39
       options:
         a: La demora verdadera.
@@ -463,7 +463,7 @@ categories:
         del observador y la línea popa -proa del barco, se corresponde con ... :'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 40
       options:
         a: Oposiciones.
@@ -475,7 +475,7 @@ categories:
         preferentemente usaremos...
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 41
       options:
         a: Cartucho.
@@ -489,7 +489,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 42
       options:
         a: 1 hora y 28 minutos.
@@ -502,7 +502,7 @@ categories:
         el punto -B-:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 43
       options:
         a: 159º
@@ -514,7 +514,7 @@ categories:
         de 10 nudos y corrección total= 5º NE Calcule el rumbo de aguja (Ra) a poner:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 44
       options:
         a: 36º 00,9’N
@@ -526,7 +526,7 @@ categories:
         Cires. ¿Cuál será el valor de nuestra latitud?:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 45
       options:
         a: 245º

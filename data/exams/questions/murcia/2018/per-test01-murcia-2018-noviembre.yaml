@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 1
       options:
         a: Cuando el calado de proa es menor que el calado de popa.
@@ -14,7 +14,7 @@ categories:
       question: El asiento es positivo…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 2
       options:
         a: Cornamusa.
@@ -25,7 +25,7 @@ categories:
         en ellas los eslabones de la cadena, se llama…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: La distancia medida horizontalmente en el sentido transversal.
@@ -36,7 +36,7 @@ categories:
       question: La eslora se define como…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 4
       options:
         a: Bocina
@@ -51,7 +51,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 5
       options:
         a: Vigilar que nuestro círculo de borneo no interfiera con otras embarcaciones.
@@ -62,7 +62,7 @@ categories:
       question: Medidas de seguridad durante el fondeo…
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 6
       options:
         a: Que el ancla queda firme en el fondo.
@@ -75,7 +75,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 7
       options:
         a: A estribor.
@@ -86,7 +86,7 @@ categories:
         el remolcado se situará respecto al buque remolcador…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 8
       options:
         a: Asegurar la estanqueidad del barco.
@@ -97,7 +97,7 @@ categories:
       question: ¿Qué debemos hacer si se nos aproxima un fuerte chubasco con viento?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 9
       options:
         a: Desconectar los aparatos electrónicos
@@ -108,7 +108,7 @@ categories:
       question: En caso de tormenta eléctrica
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 10
       options:
         a: Hay que parar máquinas inmediatamente.
@@ -121,7 +121,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 11
       options:
         a: En aguas portuarias.
@@ -131,7 +131,7 @@ categories:
       question: Las aguas sucias procedentes de aseos, se descargarán, sin restricciones,…
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 12
       options:
         a: Solo está permitido triturados y a más de 12 millas de la costa.
@@ -144,7 +144,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 13
       options:
         a: Dos conos con el vértice hacia arriba.
@@ -154,7 +154,7 @@ categories:
       question: ¿Cuál es la marca de tope de la marca cardinal Norte?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 14
       options:
         a: Indica un punto de recalada.
@@ -165,7 +165,7 @@ categories:
         marca de tope de dos esferas negras superpuestas,…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 15
       options:
         a: La situación de granjas marinas.
@@ -175,7 +175,7 @@ categories:
       question: 'Las boyas de marcas especiales se utilizan para indicar:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 16
       options:
         a: Castillete.
@@ -185,7 +185,7 @@ categories:
       question: Las marcas laterales de babor. ¿Qué forma pueden tener?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 17
       options:
         a: Aguas navegables al Sur de la marca.
@@ -200,7 +200,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 18
       options:
         a: Alta mar.
@@ -211,7 +211,7 @@ categories:
         a…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 19
       options:
         a: La máxima que le permitan las máquinas para poder realizar el alcance de
@@ -226,7 +226,7 @@ categories:
         Internacional para prevenir abordajes en la mar?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 20
       options:
         a: Tendrán preferencia de paso en las vías de circulación.
@@ -238,7 +238,7 @@ categories:
         en la mar, los buques de pesca…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 21
       options:
         a: El que alcanza se aproxime al otro viniendo desde una marcación mayor de
@@ -253,7 +253,7 @@ categories:
         en la mar, se considera que un buque alcanza a otro cuando…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 22
       options:
         a: el mayor margen posible.
@@ -265,7 +265,7 @@ categories:
         de tráfico deberán apartarse de él dejando'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 23
       options:
         a: cuando cada uno de ellos reciba el viento por bandas contrarias, el que
@@ -282,7 +282,7 @@ categories:
         la forma siguiente:”…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 24
       options:
         a: Un buque de vela que es alcanzado por un buque dedicado a la pesca, deberá
@@ -299,7 +299,7 @@ categories:
         en el Reglamento Internacional para prevenir abordajes en la mar?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 25
       options:
         a: La demora o la marcación de un buque que se aproxima varía en forma apreciable.
@@ -312,7 +312,7 @@ categories:
         entre otros que…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Un cono con el vértice hacia abajo.
@@ -322,7 +322,7 @@ categories:
       question: 'Un buque con capacidad de maniobra restringida de día, exhibirá:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 27
       options:
         a: Dos bolas en línea vertical.
@@ -335,7 +335,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: d
       id: 28
       options:
         a: Atracar por la banda de babor o estribor al muelle.
@@ -345,7 +345,7 @@ categories:
       question: Se llama abarloarse a la acción de…
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 29
       options:
         a: Se acerca la proa al muelle, se aleja la popa del mismo y se traslada la
@@ -361,7 +361,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 30
       options:
         a: Aquellos que implican metales combustibles.
@@ -371,7 +371,7 @@ categories:
       question: 'Los fuegos de clase B son:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 31
       options:
         a: Enfriamiento.
@@ -382,7 +382,7 @@ categories:
         es:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: El Servicio del 112.
@@ -396,7 +396,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 33
       options:
         a: Peso de la masa de aire que hay sobre dicho punto.
@@ -407,7 +407,7 @@ categories:
       question: Se denomina presión atmosférica en un punto dado al …
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 34
       options:
         a: 740 mm.
@@ -417,7 +417,7 @@ categories:
       question: El valor de la presión atmosférica a nivel del mar es…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 35
       options:
         a: Las isobaras son líneas que unen puntos de igual presión atmosférica
@@ -427,7 +427,7 @@ categories:
       question: ¿ Cúal es la afirmación correcta?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 36
       options:
         a: La altura de las olas.
@@ -440,7 +440,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: Ángulo de corriente.
@@ -451,7 +451,7 @@ categories:
         desvía un ángulo con respecto a la línea de proa - popa que se le denomina:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 38
       options:
         a: El derrotero correspondiente que lo edita el Instituto Hidrográfico de
@@ -464,7 +464,7 @@ categories:
         de una costa concreta o datos de un puerto, lo podrá encontrar en:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 39
       options:
         a: Norte-Este.
@@ -475,7 +475,7 @@ categories:
         cardinales:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 40
       options:
         a: El escandallo o cuenta millas.
@@ -486,7 +486,7 @@ categories:
         es:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 41
       options:
         a: Cero grado.
@@ -501,7 +501,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 42
       options:
         a: 034º
@@ -514,7 +514,7 @@ categories:
         el rumbo de aguja al punto  – P – :'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 43
       options:
         a: 8,8 nudos.
@@ -526,7 +526,7 @@ categories:
         hacer el recorrido en 90 minutos. ¿Cuál será la velocidad aponer? ... :'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 44
       options:
         a: 310º
@@ -538,7 +538,7 @@ categories:
         qué demora verdadera estaremos viendo dicha enfilación? :'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 45
       options:
         a: 008º

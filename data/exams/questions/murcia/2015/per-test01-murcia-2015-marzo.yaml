@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 1
       options:
         a: Cada una de las cuadernas que soportan las cubiertas.
@@ -15,7 +15,7 @@ categories:
       question: “Puntal” es…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 2
       options:
         a: Cuando el calado de proa es mayor que el calado de popa.
@@ -25,7 +25,7 @@ categories:
       question: Asiento negativo es…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: Un mecanismo de acople y desacople del ancla.
@@ -35,7 +35,7 @@ categories:
       question: El “barboten” es…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 4
       options:
         a: Su calado.
@@ -49,7 +49,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 5
       options:
         a: Encapillar.
@@ -60,7 +60,7 @@ categories:
         fondear, para que no se pierda, se llama:'
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 6
       options:
         a: Piedra.
@@ -74,7 +74,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 7
       options:
         a: Por su sotavento.
@@ -86,7 +86,7 @@ categories:
         mar?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 8
       options:
         a: Asegurar la estanqueidad del barco.
@@ -98,7 +98,7 @@ categories:
         fuerte chubasco con viento a la zona por la que estamos navegando?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 9
       options:
         a: Meter timón a la misma banda de caída.
@@ -109,7 +109,7 @@ categories:
         que se debe hacer es:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 10
       options:
         a: A estribor.
@@ -123,7 +123,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 11
       options:
         a: 50 metros de la playa.
@@ -134,7 +134,7 @@ categories:
         prohibidos a menos de:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 12
       options:
         a: 3 nudos.
@@ -148,7 +148,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 13
       options:
         a: Dos conos con el vértice hacia arriba.
@@ -158,7 +158,7 @@ categories:
       question: ¿Cuál es la marca de tope de la marca cardinal Oeste?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 14
       options:
         a: Dos conos superpuestos con los vértices hacia abajo.
@@ -168,7 +168,7 @@ categories:
       question: 'Las marcas de tope que indican un peligro aislado son:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 15
       options:
         a: Cilíndrica y roja.
@@ -179,7 +179,7 @@ categories:
         es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 16
       options:
         a: Un aspa amarilla en forma de X.
@@ -189,7 +189,7 @@ categories:
       question: 'La marca de tope de una marca especial es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 17
       options:
         a: Un cilindro rojo.
@@ -202,7 +202,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 18
       options:
         a: Buque dedicado a la pesca.
@@ -215,7 +215,7 @@ categories:
         no puede apartarse de la derrota de otro buque, utiliza la expresión'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 19
       options:
         a: No estar fondeado.
@@ -226,7 +226,7 @@ categories:
         aplica a un buque que cumpla la condición de'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 20
       options:
         a: El estado de visibilidad.
@@ -238,7 +238,7 @@ categories:
         NO está incluido en dicha regla
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 21
       options:
         a: La demora de un buque que se aproxima no varía en forma apreciable.
@@ -249,7 +249,7 @@ categories:
         1” se considerará que existe el riesgo, si
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 22
       options:
         a: Los buques petroleros.
@@ -261,7 +261,7 @@ categories:
         con seguridad dentro de un paso o canal angosto son'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 23
       options:
         a: El mayor margen posible
@@ -273,7 +273,7 @@ categories:
         tráfico deberán apartarse de él dejando'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 24
       options:
         a: Mayor de 22,5 grados a popa del través de este ultimo.
@@ -284,7 +284,7 @@ categories:
         a todo buque que se aproxime a otro viniendo desde una marcación'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 25
       options:
         a: Su proa, o casi por su proa.
@@ -296,7 +296,7 @@ categories:
         a otro por:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 26
       options:
         a: Dos luces rojas todo horizonte en línea vertical, en el lugar más visible.
@@ -307,7 +307,7 @@ categories:
         Los buques sin gobierno exhibirán:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 27
       options:
         a: 'Dos pitadas cortas para indicar: "caigo a estribor"'
@@ -323,7 +323,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 28
       options:
         a: Acercamos la popa al muelle rápidamente, hacemos firme los largos de popa
@@ -338,7 +338,7 @@ categories:
         y con viento de tierra lo haremos:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: anulada
       id: 29
       options:
         a: El largo de popa.
@@ -352,7 +352,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 30
       options:
         a: Se comprimirá la herida y se aplicará torniquete si no deja de manar sangre.
@@ -362,7 +362,7 @@ categories:
       question: 'En caso de hemorragia arterial:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 31
       options:
         a: Combustible gaseoso (butano, propano).
@@ -373,7 +373,7 @@ categories:
         de la clase “B”, lo utilizaremos en un fuego de:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: Por enfriamiento.
@@ -387,7 +387,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 33
       options:
         a: Ventómetro.
@@ -397,7 +397,7 @@ categories:
       question: Para conocer la velocidad del viento, utilizaremos un …
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 34
       options:
         a: La distancia en que el viento sopla en la misma dirección.
@@ -407,7 +407,7 @@ categories:
       question: 'La persistencia es:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 35
       options:
         a: Fetch, persistencia e intensidad.
@@ -417,7 +417,7 @@ categories:
       question: ¿De qué tres variables depende la altura de las olas?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 36
       options:
         a: El volumen de aire que envuelve a la tierra.
@@ -432,7 +432,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: La misma altura.
@@ -442,7 +442,7 @@ categories:
       question: 'Un veril es un elemento de la carta náutica que une puntos que tienen:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b,c
       id: 38
       options:
         a: Corriente.
@@ -453,7 +453,7 @@ categories:
         proa-popa del mismo?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 39
       options:
         a: Meridiano del lugar.
@@ -464,7 +464,7 @@ categories:
         coordenadas de nuestra situación?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 40
       options:
         a: La marcación a un punto conocido.
@@ -474,7 +474,7 @@ categories:
       question: ¿Qué línea de posición es mas fiable?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 41
       options:
         a: Líneas de separación de las zonas de navegación costera.
@@ -487,7 +487,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 42
       options:
         a: 2,6 millas.
@@ -500,7 +500,7 @@ categories:
         Pta Malabata se encuentra el barco?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 43
       options:
         a: 335º
@@ -511,7 +511,7 @@ categories:
         nuestra proa al Faro de Punta Europa. ¿Cuál es nuestro rumbo?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 44
       options:
         a: 2h-42 m.
@@ -523,7 +523,7 @@ categories:
         10´ W y l=35º 50´ N L= 006º 00´ W ?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: anulada
       id: 45
       options:
         a: S47W

@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 1
       options:
         a: Cuando el calado de proa es mayor que el calado de popa.
@@ -14,7 +14,7 @@ categories:
       question: Asiento positivo es…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 2
       options:
         a: Cada una de las cuadernas que soportan las cubiertas.
@@ -25,7 +25,7 @@ categories:
       question: El “Puntal” es…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: Codaste.
@@ -36,7 +36,7 @@ categories:
         proa de la nave, se llama:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 4
       options:
         a: Gira hacia la izquierda en la marcha avante.
@@ -49,7 +49,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: a
       id: 5
       options:
         a: Fondear
@@ -60,7 +60,7 @@ categories:
         mar?.
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 6
       options:
         a: Que el ancla queda firme en el fondo.
@@ -73,7 +73,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: Asegurar la estanqueidad del barco.
@@ -85,7 +85,7 @@ categories:
         fuerte chubasco con viento a la zona por la que estamos navegando?.
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 8
       options:
         a: Meter el timón a la misma banda de caída.
@@ -96,7 +96,7 @@ categories:
         que se debe hacer es:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 9
       options:
         a: Bravas.
@@ -107,7 +107,7 @@ categories:
         de una varada involuntaria, se denominan aguas…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 10
       options:
         a: Capear un temporal de proa.
@@ -120,7 +120,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 11
       options:
         a: Verdadero.
@@ -133,7 +133,7 @@ categories:
         en su auxilio, informando a éstas de ello o al servicio de búsqueda y salvamento”.'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 12
       options:
         a: Las zonas situadas en el interior de una banda litoral, paralela a la costa,
@@ -151,7 +151,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 13
       options:
         a: Un cilindro rojo.
@@ -161,7 +161,7 @@ categories:
       question: 'El tope de una marca lateral de estribor en la Región “A” es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 14
       options:
         a: Cardinal.
@@ -171,7 +171,7 @@ categories:
       question: 'Una marca que muestre colores amarillos y negros es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 15
       options:
         a: Una esfera roja.
@@ -181,7 +181,7 @@ categories:
       question: '¿Cuál es la marca de tope de un espeque que indica peligro aislado?:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 16
       options:
         a: Amarillo
@@ -191,7 +191,7 @@ categories:
       question: ¿Cuál es el color de una boya de marca especial?.
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 17
       options:
         a: De peligro aislado.
@@ -205,7 +205,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 18
       options:
         a: Está prohibido siempre.
@@ -216,7 +216,7 @@ categories:
         de tráfico o en las zonas próximas a sus extremos”…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 19
       options:
         a: Siempre maniobrará el de mayor eslora.
@@ -227,7 +227,7 @@ categories:
         en situación de vuelta encontrada?.
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 20
       options:
         a: El que tenga al otro por su costado de estribor.
@@ -238,7 +238,7 @@ categories:
         de colisión, deberá ceder el paso…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 21
       options:
         a: Luz de remolque.
@@ -248,7 +248,7 @@ categories:
       question: '¿Qué tipo de luz ilumina un arco de horizonte de 225º, hacia la proa?:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 22
       options:
         a: Cierto en todos los casos.
@@ -260,7 +260,7 @@ categories:
         obligado a exhibir las luces prescritas por la regla 24 del RIPA:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 23
       options:
         a: Verdadero
@@ -272,7 +272,7 @@ categories:
         pesca…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 24
       options:
         a: Con unos prismáticos.
@@ -283,7 +283,7 @@ categories:
       question: ¿Cómo debe ser la vigilancia en una guardia de mar?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 25
       options:
         a: Siempre que la visibilidad esté disminuida por niebla, bruma, lluvia o
@@ -294,7 +294,7 @@ categories:
       question: 'La expresión “visibilidad reducida” la aplica el Reglamento (RIPA):'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 26
       options:
         a: El de vela
@@ -305,7 +305,7 @@ categories:
         de vela y uno dedicado a la pesca?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 27
       options:
         a: Un buque sin gobierno
@@ -319,7 +319,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 28
       options:
         a: Tomar vueltas.
@@ -329,7 +329,7 @@ categories:
       question: 'Recoger un cabo ordenadamente es:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 29
       options:
         a: El barco irá hacia atrás.
@@ -343,7 +343,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 30
       options:
         a: Esperar la pleamar.
@@ -353,7 +353,7 @@ categories:
       question: Para salir de una embarrancada, es aconsejable…
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 31
       options:
         a: Sangre roja brillante que sale sin presión.
@@ -363,7 +363,7 @@ categories:
       question: ¿Qué característica tiene una hemorragia venosa?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: Clase A
@@ -377,7 +377,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 33
       options:
         a: El número de horas que ha soplado el viento en la misma dirección y con
@@ -390,7 +390,7 @@ categories:
       question: 'Definimos Persistencia como:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 34
       options:
         a: Presión inferior a 1012 milibares.
@@ -401,7 +401,7 @@ categories:
         hemisferio Norte?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 35
       options:
         a: Las líneas que unen puntos de igual temperatura.
@@ -412,7 +412,7 @@ categories:
       question: En un mapa meteorológico las isobaras son…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 36
       options:
         a: 740 mm
@@ -425,7 +425,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 37
       options:
         a: 150º
@@ -435,7 +435,7 @@ categories:
       question: Al rumbo cuadrantal S30ºW le corresponde el rumbo circular...
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 38
       options:
         a: Aumenta su Latitud pero no varía su Longitud.
@@ -446,7 +446,7 @@ categories:
         005º10’W, navega durante unas horas por el mismo paralelo con rumbo Este:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 39
       options:
         a: El rumbo al que naveguemos.
@@ -456,7 +456,7 @@ categories:
       question: El valor de la declinación magnética varía con…
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 40
       options:
         a: Una milla náutica.
@@ -466,7 +466,7 @@ categories:
       question: 'Un minuto de latitud se corresponde con:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 41
       options:
         a: Líneas de separación de las zonas de navegación costera.
@@ -479,7 +479,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 42
       options:
         a: 8 nudos
@@ -491,7 +491,7 @@ categories:
         la  velocidad  a la que debemos navegar en una hora y media.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 43
       options:
         a: 36º 05,7'N - 005º 19,3’W
@@ -503,7 +503,7 @@ categories:
         Carnero de 6 millas. Indique nuestra posición.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 44
       options:
         a: 36º 05,1'N – 005º 13,2'W
@@ -514,7 +514,7 @@ categories:
         290º y tomamos distancia radar a dicho faro= 9 millas. Indique nuestra posición:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 45
       options:
         a: 5,6’ millas

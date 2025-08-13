@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 1
       options:
         a: La aleta.
@@ -14,7 +14,7 @@ categories:
       question: 'La zona más curvada del costado, en las proximidades de la proa es:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 2
       options:
         a: Lumbreras.
@@ -24,7 +24,7 @@ categories:
       question: 'Los orificios que permiten la salida de agua de la cubierta se denominan:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: Refuerzo transversal vertical.
@@ -34,7 +34,7 @@ categories:
       question: 'El codaste es un:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 4
       options:
         a: Dar estanqueidad a la bocina.
@@ -48,7 +48,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 5
       options:
         a: Chicote.
@@ -59,7 +59,7 @@ categories:
         en algún lugar…
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 6
       options:
         a: As de guía.
@@ -72,7 +72,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 7
       options:
         a: Evitar comprometer la estabilidad del barco.
@@ -82,7 +82,7 @@ categories:
       question: En caso de mal tiempo…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 8
       options:
         a: Facilitar que una embarcación pueda ser detectada por los radares de otros
@@ -93,7 +93,7 @@ categories:
       question: ¿Para qué sirve el reflector radar?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 9
       options:
         a: la separación entre el centro de flotación y el centro de gravedad.
@@ -103,7 +103,7 @@ categories:
       question: La estabilidad estática transversal inicial depende de…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 10
       options:
         a: Por la banda de estribor.
@@ -116,7 +116,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: anulada
       id: 11
       options:
         a: Infracción grave.
@@ -128,7 +128,7 @@ categories:
         Marítimas sobre régimen y tráfico de embarcaciones está tipificado como:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 12
       options:
         a: Que está usted navegando en una zona de especial interés para el Mediterráneo.
@@ -142,7 +142,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 13
       options:
         a: Son rojas.
@@ -152,7 +152,7 @@ categories:
       question: 'Las marcas laterales de estribor en la Región “A”:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 14
       options:
         a: El cuadrante por el que se ha de pasar para salvar un peligro.
@@ -162,7 +162,7 @@ categories:
       question: 'Una marca cardinal indica:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 15
       options:
         a: Verde con franjas horizontales rojas.
@@ -172,7 +172,7 @@ categories:
       question: 'El color de una marca de peligro aislado es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 16
       options:
         a: Amarillo y negro.
@@ -182,7 +182,7 @@ categories:
       question: 'Las marcas de aguas navegables tienen colores:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 17
       options:
         a: Puede tener cualquier forma.
@@ -195,7 +195,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 18
       options:
         a: Un buque que tiene un motor.
@@ -206,7 +206,7 @@ categories:
         (RIPA) un buque de propulsión mecánica es:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 19
       options:
         a: Los buques de pesca.
@@ -217,7 +217,7 @@ categories:
         metros, NO estorbarán a…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 20
       options:
         a: La “A”.
@@ -228,7 +228,7 @@ categories:
         a vela “A” alcanza a otra de propulsión mecánica “B”. ¿Quién debe gobernar?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 21
       options:
         a: Los buques de propulsión mecánica.
@@ -239,7 +239,7 @@ categories:
         derrota de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 22
       options:
         a: Roja a estribor y verde a babor.
@@ -249,7 +249,7 @@ categories:
       question: 'Las luces de costado serán:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 23
       options:
         a: Tope, costados y alcance.
@@ -260,7 +260,7 @@ categories:
         mecánica menor de 7 metros de eslora, navegando a menos de 7 nudos?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 24
       options:
         a: Las luces de costado, la de alcance, el tope de proa y dos luces todo horizonte,
@@ -272,7 +272,7 @@ categories:
       question: 'Un velero navegando de noche podrá exhibir:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 25
       options:
         a: Ninguna.
@@ -283,7 +283,7 @@ categories:
         mecánica, en navegación?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Cae a estribor.
@@ -294,7 +294,7 @@ categories:
         cortas" para indicar su maniobra, significa que:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 27
       options:
         a: Tres pitadas largas.
@@ -309,7 +309,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 28
       options:
         a: Sinónimo de templar.
@@ -319,7 +319,7 @@ categories:
       question: '"Lascar" es:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 29
       options:
         a: Lo que se arrastra del fondo
@@ -332,7 +332,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 30
       options:
         a: Clase F
@@ -343,7 +343,7 @@ categories:
         clase:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 31
       options:
         a: Sangre roja brillante que sale sin presión.
@@ -353,7 +353,7 @@ categories:
       question: '¿Qué características tiene una hemorragia arterial?:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 32
       options:
         a: Teoría del triángulo del fuego.
@@ -367,7 +367,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 33
       options:
         a: 1.012 mbar
@@ -377,7 +377,7 @@ categories:
       question: La presión atmosférica normal es...
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 34
       options:
         a: La temperatura del aire.
@@ -387,7 +387,7 @@ categories:
       question: 'Con un barómetro, medimos:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: anulada
       id: 35
       options:
         a: El termómetro.
@@ -397,7 +397,7 @@ categories:
       question: ¿Qué aparato es el que mide y registra la temperatura?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 36
       options:
         a: Un anticiclón.
@@ -410,7 +410,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 37
       options:
         a: 130°
@@ -420,7 +420,7 @@ categories:
       question: Pasar de cuadrantal a circular el rumbo S50W.
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 38
       options:
         a: El rumbo al que naveguemos.
@@ -430,7 +430,7 @@ categories:
       question: 'El valor de la declinación magnética o variación local, Influye según:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 39
       options:
         a: Los derroteros.
@@ -441,7 +441,7 @@ categories:
         a la navegación las puede encontrar en:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 40
       options:
         a: Meridiano del lugar.
@@ -452,7 +452,7 @@ categories:
         coordenadas de nuestra situación?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 41
       options:
         a: Cero magnético.
@@ -465,7 +465,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 42
       options:
         a: 'Latitud: 35º 57.8’N / Longitud: 05º47.4’W'
@@ -478,7 +478,7 @@ categories:
         final al Norte de Tánger?.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: anulada
       id: 43
       options:
         a: 020º
@@ -491,7 +491,7 @@ categories:
         poner para llegar al puerto de Barbate?.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 44
       options:
         a: 112º
@@ -503,7 +503,7 @@ categories:
         si la declinación magnética es 2º(-) y el desvío es 1º(+).'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 45
       options:
         a: 1h05m

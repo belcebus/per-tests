@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 1
       options:
         a: Línea de flotación.
@@ -15,7 +15,7 @@ categories:
         iguales, se llama…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 2
       options:
         a: Mamparo.
@@ -25,7 +25,7 @@ categories:
       question: La pieza que cubre la parte superior de la borda se llama…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: Cornamusa.
@@ -36,7 +36,7 @@ categories:
         en ellas los eslabones de la cadena, se llama…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 4
       options:
         a: Limera.
@@ -50,7 +50,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 5
       options:
         a: Llano.
@@ -61,7 +61,7 @@ categories:
         un nudo…
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 6
       options:
         a: Chicote.
@@ -75,7 +75,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 7
       options:
         a: Por su sotavento.
@@ -87,7 +87,7 @@ categories:
         mar?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 8
       options:
         a: Asegurar la estanqueidad del barco.
@@ -98,7 +98,7 @@ categories:
       question: ¿Qué debemos hacer si se nos aproxima un fuerte chubasco con viento?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 9
       options:
         a: Permanencia
@@ -109,7 +109,7 @@ categories:
         cuando la pierden por causas externas…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 10
       options:
         a: Revisión del estado general del motor.
@@ -122,7 +122,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 11
       options:
         a: Verdadero.
@@ -135,7 +135,7 @@ categories:
         en su auxilio, informando a éstas de ello o al servicio de búsqueda y salvamento"
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 12
       options:
         a: 3 nudos.
@@ -149,7 +149,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 13
       options:
         a: Marca de peligro aislado.
@@ -160,7 +160,7 @@ categories:
         de tope de…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 14
       options:
         a: Aguas más profundas al Oeste de la marca.
@@ -171,7 +171,7 @@ categories:
         de una boya pintada con banda amarilla entre dos bandas negras, indica…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 15
       options:
         a: 9 centelleos muy rápidos seguidos de un período de oscuridad.
@@ -182,7 +182,7 @@ categories:
         es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 16
       options:
         a: Un aspa amarilla en forma de X.
@@ -192,7 +192,7 @@ categories:
       question: 'La marca de tope de una marca especial es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 17
       options:
         a: Un cilindro rojo.
@@ -205,7 +205,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 18
       options:
         a: buque con capacidad de maniobra restringida.
@@ -218,7 +218,7 @@ categories:
         buque…" corresponde a un…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 19
       options:
         a: el estado de visibilidad.
@@ -230,7 +230,7 @@ categories:
         se tendrán en cuenta, entre otras…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 20
       options:
         a: se considerará que existe riesgo si la demora o la marcación de un buque
@@ -244,7 +244,7 @@ categories:
         se tendrá en cuenta, entre otros…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: anulada
       id: 21
       options:
         a: Verdadero.
@@ -256,7 +256,7 @@ categories:
         el tránsito de otro buque que navegue dentro de un paso o canal angosto"…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 22
       options:
         a: Está prohibido siempre.
@@ -267,7 +267,7 @@ categories:
         de tráfico o en las zonas próximas a sus extremos"…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 23
       options:
         a: cuando cada uno de ellos reciba el viento por bandas contrarias, el que
@@ -283,7 +283,7 @@ categories:
         la derrota del otro en la forma siguiente:"…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 24
       options:
         a: cada uno de ellos caerá a babor de forma que pase por la banda de estribor
@@ -296,7 +296,7 @@ categories:
         naveguen de vuelta encontrada a rumbos opuestos, con riesgo de abordaje…"
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 25
       options:
         a: Su proa, o casi por su proa.
@@ -308,7 +308,7 @@ categories:
         un buque vea a otro por…"'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 26
       options:
         a: Dos luces rojas todo horizonte en línea vertical, en el lugar más visible.
@@ -319,7 +319,7 @@ categories:
         restringida: "Los buques sin gobierno exhibirán…"'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 27
       options:
         a: 'Dos pitadas cortas para indicar: "caigo a estribor".'
@@ -336,7 +336,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: d
       id: 28
       options:
         a: Atracar por la banda de babor o estribor al muelle.
@@ -346,7 +346,7 @@ categories:
       question: Se llama abarloarse a la acción de…
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 29
       options:
         a: La popa.
@@ -359,7 +359,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 30
       options:
         a: Daremos toda atrás para separarnos cuanto antes.
@@ -371,7 +371,7 @@ categories:
         en el costado del otro barco. ¿Qué debemos hacer?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 31
       options:
         a: Se comprimirá la herida y se aplicará torniquete si no deja de manar sangre.
@@ -381,7 +381,7 @@ categories:
       question: 'En caso de hemorragia arterial:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 32
       options:
         a: Llenar el depósito con el motor en marcha.
@@ -397,7 +397,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 33
       options:
         a: 1000 mm.
@@ -407,7 +407,7 @@ categories:
       question: La presión atmosférica media a nivel del mar, vale…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 34
       options:
         a: La distancia en que el viento sopla en la misma dirección.
@@ -417,7 +417,7 @@ categories:
       question: 'La persistencia es:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 35
       options:
         a: Fetch, persistencia e intensidad.
@@ -427,7 +427,7 @@ categories:
       question: ¿De qué tres variables depende la altura de las olas?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 36
       options:
         a: La fuerza que ejerce el viento.
@@ -440,7 +440,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 37
       options:
         a: 130°
@@ -450,7 +450,7 @@ categories:
       question: Pasar de cuadrantal a circular el rumbo S50W.
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 38
       options:
         a: A la declinación magnética.
@@ -460,7 +460,7 @@ categories:
       question: ¿A qué es debida la deriva en el rumbo de un barco?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 39
       options:
         a: La latitud.
@@ -470,7 +470,7 @@ categories:
       question: 'El desvío de aguja sufrirá variaciones, según:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 40
       options:
         a: La línea proa -popa y el meridiano magnético.
@@ -480,7 +480,7 @@ categories:
       question: 'Se llama marcación al ángulo formado entre:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 41
       options:
         a: Los derroteros.
@@ -494,7 +494,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 42
       options:
         a: 01h 10m
@@ -507,7 +507,7 @@ categories:
         recorrido a la velocidad de 10 nudos?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 43
       options:
         a: 247º
@@ -521,7 +521,7 @@ categories:
         rumbo de aguja deberemos de poner:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b,c
       id: 44
       options:
         a: 305º
@@ -532,7 +532,7 @@ categories:
         faro de Espartel. ¿Cuál será el rumbo verdadero a poner?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 45
       options:
         a: 034º

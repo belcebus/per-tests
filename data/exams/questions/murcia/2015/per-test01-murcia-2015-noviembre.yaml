@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 1
       options:
         a: Bordas.
@@ -15,7 +15,7 @@ categories:
         dando soporte a la cubierta, se llaman:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 2
       options:
         a: Partes curvas de los costados, en las proximidades de la proa.
@@ -26,7 +26,7 @@ categories:
       question: 'Las amuras son:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: Refuerzo transversal vertical.
@@ -36,7 +36,7 @@ categories:
       question: 'El codaste es un:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 4
       options:
         a: Dar estanqueidad a la bocina.
@@ -50,7 +50,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 5
       options:
         a: Bita.
@@ -61,7 +61,7 @@ categories:
         para afirmar los cabos, se llama:'
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 6
       options:
         a: Vigilar que nuestro círculo de borneo no interfiera con otras embarcaciones.
@@ -75,7 +75,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: El buen estado y funcionamiento de equipos de navegación, comunicaciones;
@@ -86,7 +86,7 @@ categories:
       question: 'Antes de hacerse a la mar es conveniente comprobar:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 8
       options:
         a: Evitar comprometer la estabilidad del barco.
@@ -96,7 +96,7 @@ categories:
       question: En caso de mal tiempo…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 9
       options:
         a: Reducir la velocidad.
@@ -106,7 +106,7 @@ categories:
       question: Precauciones en aguas someras…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 10
       options:
         a: Dar la voz de ¡Hombre al agua!, indicando la banda por la que ha caído.
@@ -119,7 +119,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 11
       options:
         a: Verdadero.
@@ -132,7 +132,7 @@ categories:
         en su auxilio, informando a éstas de ello o al servicio de búsqueda y salvamento"
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 12
       options:
         a: En aguas portuarias.
@@ -145,7 +145,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 13
       options:
         a: Boya cilíndrica de color rojo, con marca de tope cilindro rojo.
@@ -155,7 +155,7 @@ categories:
       question: Marca lateral de Babor…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 14
       options:
         a: Aguas navegables al Sur de la marca.
@@ -167,7 +167,7 @@ categories:
         indica…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 15
       options:
         a: Indica un punto de recalada.
@@ -178,7 +178,7 @@ categories:
         marca de tope de 2 esferas negras superpuestas,…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 16
       options:
         a: De peligro aislado.
@@ -189,7 +189,7 @@ categories:
         y blancas, es una marca…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 17
       options:
         a: La situación de granjas marinas.
@@ -202,7 +202,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: anulada
       id: 18
       options:
         a: Sin gobierno / dedicado a la pesca / hidroavión / draga / vela.
@@ -213,7 +213,7 @@ categories:
         entre estas embarcaciones, sería…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 19
       options:
         a: Verdadero.
@@ -225,7 +225,7 @@ categories:
         pesca…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 20
       options:
         a: se considerará que existe riesgo si la demora o la marcación de un buque
@@ -239,7 +239,7 @@ categories:
         se tendrá en cuenta, entre otros…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 21
       options:
         a: Navegar siguiendo la dirección general de la corriente de tráfico indicada.
@@ -251,7 +251,7 @@ categories:
         de separación de tráfico, deberán…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 22
       options:
         a: Los buques evitarán fondear dentro de un dispositivo de separación de tráfico.
@@ -263,7 +263,7 @@ categories:
       question: Según la Regla 10 del RIPA,
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 23
       options:
         a: cuando cada uno de ellos reciba el viento por bandas contrarias, el que
@@ -279,7 +279,7 @@ categories:
         la derrota del otro en la forma siguiente:”…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 24
       options:
         a: Un buque de vela que es alcanzado por un buque dedicado a la pesca, deberá
@@ -294,7 +294,7 @@ categories:
       question: Según las Reglas 13/14/15 del RIPA,
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 25
       options:
         a: Su proa, o casi por su proa.
@@ -306,7 +306,7 @@ categories:
         un buque vea a otro por…"'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 26
       options:
         a: Dos luces rojas todo horizonte en línea vertical, en el lugar más visible.
@@ -317,7 +317,7 @@ categories:
         restringida: "Los buques sin gobierno exhibirán…"'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 27
       options:
         a: 'Dos pitadas cortas para indicar: "caigo a estribor"'
@@ -334,7 +334,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 28
       options:
         a: Tomar vueltas.
@@ -344,7 +344,7 @@ categories:
       question: 'Recoger un cabo ordenadamente es:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 29
       options:
         a: Largo de proa.
@@ -358,7 +358,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 30
       options:
         a: Evaluar los daños.
@@ -368,7 +368,7 @@ categories:
       question: Ante una varada involuntaria, lo primero es…
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 31
       options:
         a: Incendios de sólidos.
@@ -378,7 +378,7 @@ categories:
       question: 'Los incendios de clase F, corresponden a:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 32
       options:
         a: Enfriamiento.
@@ -392,7 +392,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 33
       options:
         a: Intensidad.
@@ -403,7 +403,7 @@ categories:
         dirección
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 34
       options:
         a: Maestral.
@@ -414,7 +414,7 @@ categories:
         se llama:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 35
       options:
         a: La altura de las olas.
@@ -424,7 +424,7 @@ categories:
       question: La Escala de Douglas mide ...
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 36
       options:
         a: Caer el viento.
@@ -438,7 +438,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: Cero magnético.
@@ -448,7 +448,7 @@ categories:
       question: 'Las sondas indicadas en la carta de navegación, son referidas al:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 38
       options:
         a: Abatimiento.
@@ -459,7 +459,7 @@ categories:
         se llama:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 39
       options:
         a: 125°.
@@ -469,7 +469,7 @@ categories:
       question: 'El rumbo cuadrantal S45°E corresponde al circular:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 40
       options:
         a: Una línea que une puntos de igual latitud.
@@ -479,7 +479,7 @@ categories:
       question: 'En una carta náutica, un veril es:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 41
       options:
         a: Líneas de separación de las zonas de navegación costera.
@@ -492,7 +492,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 42
       options:
         a: 35º 58,2' N - 006º 04,6' W.
@@ -505,7 +505,7 @@ categories:
         alcanzado después de una hora y media de navegación?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 43
       options:
         a: 36º 05,4' N - 006º 02,0' W.
@@ -518,7 +518,7 @@ categories:
         encontramos?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 44
       options:
         a: Rv = 327º
@@ -530,7 +530,7 @@ categories:
         ¿Cuál será nuestro rumbo?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 45
       options:
         a: Ra = 264º

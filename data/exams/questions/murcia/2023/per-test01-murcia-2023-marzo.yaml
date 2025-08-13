@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 1
       options:
         a: Negativo cuando el calado a popa es mayor que el calado a proa.
@@ -14,7 +14,7 @@ categories:
       question: El asiento puede ser…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 2
       options:
         a: Tragaluces.
@@ -26,7 +26,7 @@ categories:
         compartimentos de una embarcación, se les denominan:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 3
       options:
         a: Adrizar.
@@ -37,7 +37,7 @@ categories:
         y quedarse sin escora se denomina…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 4
       options:
         a: Hélice levógira.
@@ -51,7 +51,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: a
       id: 5
       options:
         a: Pieza fijada al muelle de forma cilíndrica y simétrica cuya función es
@@ -68,7 +68,7 @@ categories:
       question: Se define noray como…
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: a
       id: 6
       options:
         a: A la hora de fondear debemos elegir un lugar que esté abrigado de los vientos
@@ -84,7 +84,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: Comprobar los equipos de radiocomunicaciones.
@@ -95,7 +95,7 @@ categories:
       question: ¿Qué debemos hacer si se nos aproxima un fuerte chubasco con viento?.
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 8
       options:
         a: Dar máquina avante, a todo lo que dé el motor.
@@ -106,7 +106,7 @@ categories:
         hacer primero?.
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 9
       options:
         a: Son opcionales, aunque es muy recomendable llevar alguno a bordo.
@@ -117,7 +117,7 @@ categories:
       question: Los extintores portátiles en las embarcaciones de recreo…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 10
       options:
         a: Ir cambiando de rumbos continuamente.
@@ -130,7 +130,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 11
       options:
         a: Accederemos a la playa por cualquier sitio, incluida la zona de baño, teniendo
@@ -144,7 +144,7 @@ categories:
         que tiene balizada la zona de baño…
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 12
       options:
         a: La embarcación efectúe la descarga a una distancia superior a 3 millas
@@ -165,7 +165,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 13
       options:
         a: Marca lateral de estribor.
@@ -175,7 +175,7 @@ categories:
       question: 'Una marca cónica de color verde con una franja roja, indica:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 14
       options:
         a: Barlovento.
@@ -186,7 +186,7 @@ categories:
         de color verde deben quedar por:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 15
       options:
         a: Una marca cardinal norte.
@@ -197,7 +197,7 @@ categories:
         pertenece a:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 16
       options:
         a: Al norte de la marca.
@@ -208,7 +208,7 @@ categories:
         superpuestos con vértices hacia arriba, ¿dónde se encuentran las aguas navegables?:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 17
       options:
         a: Dos destellos de color rojos.
@@ -221,7 +221,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 18
       options:
         a: La demora de un buque que se aproxima no varía en forma apreciable.
@@ -233,7 +233,7 @@ categories:
         en cuenta, entre otras, la siguiente consideración:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 19
       options:
         a: Dos luces rojas todo horizonte en línea vertical, en el lugar más visible.
@@ -243,7 +243,7 @@ categories:
       question: Según la Regla 27 del RIPA, "Los buques sin gobierno exhibirán…"
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 20
       options:
         a: La densidad del tráfico, incluidas las concentraciones de buques de pesca
@@ -257,7 +257,7 @@ categories:
         se tendrán en cuenta, entre otras…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 21
       options:
         a: Cada uno de ellos caerá a babor de forma que pase por la banda de estribor
@@ -270,7 +270,7 @@ categories:
         naveguen de vuelta encontrada a rumbos opuestos, con riesgo de abordaje…"
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 22
       options:
         a: Navegar siguiendo la dirección general de la corriente de tráfico indicada.
@@ -282,7 +282,7 @@ categories:
         de separación de tráfico deberán…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 23
       options:
         a: Cuando cada uno de ellos reciba el viento por bandas contrarias, el que
@@ -298,7 +298,7 @@ categories:
         la derrota del otro en la forma siguiente":'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 24
       options:
         a: Tres pitadas largas.
@@ -310,7 +310,7 @@ categories:
         pero parado y sin arrancada con visibilidad reducida emitirá:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 25
       options:
         a: Dos luces todo horizonte, en línea vertical la superior roja y la inferior
@@ -325,7 +325,7 @@ categories:
         de más de 50 metros de eslora, con arrancada, exhibirá:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 26
       options:
         a: En la parte superior del palo, o cerca de ella, dos luces todo horizonte
@@ -338,7 +338,7 @@ categories:
         noche exhibirá, además de una luz blanca todo horizonte en proa,…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 27
       options:
         a: Se mantendrán lo más cerca posible del límite exterior del paso o canal
@@ -355,7 +355,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 28
       options:
         a: Cobrar.
@@ -366,7 +366,7 @@ categories:
         se le denomina…
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 29
       options:
         a: Acercarnos al muelle por la banda de estribor y dar seguidamente dos largos,
@@ -382,7 +382,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 30
       options:
         a: Llenar todos los tanques que tengamos vacíos para aumentar el calado de
@@ -394,7 +394,7 @@ categories:
         hacer para salir de la embarrancada?.
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 31
       options:
         a: Sofocación.
@@ -405,7 +405,7 @@ categories:
         estaremos apagando un incendio por…
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 32
       options:
         a: Solicitar ayuda a través de la VHF.
@@ -418,7 +418,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 33
       options:
         a: Anemómetro
@@ -430,7 +430,7 @@ categories:
         para indicar la dirección del viento, se le denomina…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 34
       options:
         a: En las borrascas, en el hemisferio norte, la circulación del viento va
@@ -445,7 +445,7 @@ categories:
         la respuesta verdadera.
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 35
       options:
         a: Viento que existe cuando una embarcación está parada.
@@ -455,7 +455,7 @@ categories:
       question: Se denomina viento aparente al…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 36
       options:
         a: Persistencia.
@@ -469,7 +469,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 37
       options:
         a: Derrotero.
@@ -480,7 +480,7 @@ categories:
         y de los puertos, se denomina:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 38
       options:
         a: Rumbo magnético.
@@ -491,7 +491,7 @@ categories:
         buque se denomina:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 39
       options:
         a: Demora verdadera.
@@ -502,7 +502,7 @@ categories:
         magnético se denomina:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 40
       options:
         a: Abatimiento.
@@ -513,7 +513,7 @@ categories:
         embarcación, se denomina:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 41
       options:
         a: De proa a popa de 0° a 90° hacia babor y estribor.
@@ -526,7 +526,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 42
       options:
         a: 034°
@@ -540,7 +540,7 @@ categories:
         de (-6°). Calcular el rumbo de aguja.'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 43
       options:
         a: 36°05.4’N - 006°02.0’W
@@ -552,7 +552,7 @@ categories:
         ¿En qué posición nos encontramos si la corrección total es 6°NW?.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 44
       options:
         a: 238°
@@ -564,7 +564,7 @@ categories:
         ¿Qué Rumbo verdadero tendremos que poner para llegar a la segunda posición?.'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 45
       options:
         a: 3.2 millas

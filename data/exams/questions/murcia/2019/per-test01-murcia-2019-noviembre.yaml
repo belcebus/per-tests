@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 1
       options:
         a: Varenga.
@@ -16,7 +16,7 @@ categories:
         y cubierta del buque, de donde son expulsadas después por las bombas:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 2
       options:
         a: 25 metros
@@ -26,7 +26,7 @@ categories:
       question: ¿Cuál es la longitud de un grillete de cadena?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: Una lima especial para suavizar la arista de ataque del timón.
@@ -36,7 +36,7 @@ categories:
       question: 'La limera es:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 4
       options:
         a: La bocina, el eje y las palas.
@@ -49,7 +49,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 5
       options:
         a: Pasar un cabo por la bita.
@@ -59,7 +59,7 @@ categories:
       question: ¿Qué es el garreo?
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 6
       options:
         a: Chicote.
@@ -73,7 +73,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 7
       options:
         a: Navegar con poca velocidad recibiendo las olas por la amura.
@@ -84,7 +84,7 @@ categories:
       question: 'Entendemos por correr el temporal:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 8
       options:
         a: Escorar.
@@ -95,7 +95,7 @@ categories:
         la estabilidad de la embarcación
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 9
       options:
         a: Capear un temporal.
@@ -106,7 +106,7 @@ categories:
         pasar un temporal, se denomina….
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 10
       options:
         a: Longitudinal.
@@ -119,7 +119,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 11
       options:
         a: Tiene buceadores en el agua.
@@ -131,7 +131,7 @@ categories:
         que:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 12
       options:
         a: El nacional.
@@ -144,7 +144,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 13
       options:
         a: La boya verde en estribor.
@@ -155,7 +155,7 @@ categories:
         A, deberemos dejar:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 14
       options:
         a: Norte
@@ -167,7 +167,7 @@ categories:
         las aguas navegables con relación a dicha marca están situadas al:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 15
       options:
         a: Blanco.
@@ -177,7 +177,7 @@ categories:
       question: ¿Qué color tienen las marcas especiales?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 16
       options:
         a: Franjas rojas y negras.
@@ -187,7 +187,7 @@ categories:
       question: ¿De qué color son las marcas de aguas navegables?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 17
       options:
         a: Es una marca colocada o fondeada sobre un peligro e indica que está prohibida
@@ -204,7 +204,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 18
       options:
         a: Un buque dedicado a dragados.
@@ -216,7 +216,7 @@ categories:
         NO es un buque con capacidad de maniobra restringida?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 19
       options:
         a: Vaya navegando a vela siempre que su maquinaria propulsora, caso de llevarla,
@@ -227,7 +227,7 @@ categories:
       question: 'Un buque a vela puede considerarse como tal cuando:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 20
       options:
         a: El estado de visibilidad.
@@ -239,7 +239,7 @@ categories:
         se tendrán en cuenta, entre otras…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 21
       options:
         a: Cuando cada uno de ellos reciba el viento por bandas contrarias, el que
@@ -255,7 +255,7 @@ categories:
         forma siguiente:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 22
       options:
         a: Supondrá que no existe tal situación.
@@ -266,7 +266,7 @@ categories:
         dudas de si existe tal situación:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 23
       options:
         a: Maniobraremos, ya que observamos al otro por estribor.
@@ -277,7 +277,7 @@ categories:
         se aproxima con riesgo de abordaje:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 24
       options:
         a: Buque de propulsión mecánica visto por su popa.
@@ -289,7 +289,7 @@ categories:
         qué tipo de barco se trata?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 25
       options:
         a: Tope, costados y alcance.
@@ -300,7 +300,7 @@ categories:
         mecánica menor de 7 metros de eslora, navegando a menos de 7 nudos?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Un pesquero.
@@ -311,7 +311,7 @@ categories:
         se trata de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 27
       options:
         a: Dos bolas negras.
@@ -326,7 +326,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 28
       options:
         a: Facilitar la maniobra de atraque.
@@ -336,7 +336,7 @@ categories:
       question: ¿Qué ventaja tiene dar un cabo por seno?
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 29
       options:
         a: A los que tienen mucha obra muerta.
@@ -349,7 +349,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 30
       options:
         a: Sangre roja brillante que sale sin presión.
@@ -359,7 +359,7 @@ categories:
       question: '¿Qué características tiene una hemorragia arterial?:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 31
       options:
         a: Barlovento.
@@ -370,7 +370,7 @@ categories:
         por:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: Proa al viento real y con su misma velocidad.
@@ -383,7 +383,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 33
       options:
         a: Presión.
@@ -393,7 +393,7 @@ categories:
       question: 'El milibar, es una unidad de:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 34
       options:
         a: Un anticiclón.
@@ -404,7 +404,7 @@ categories:
         conforme nos acercamos a su centro es:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 35
       options:
         a: En el sentido de las agujas del reloj.
@@ -415,7 +415,7 @@ categories:
         una baja, el viento sopla alrededor de la baja:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 36
       options:
         a: La intensidad del viento.
@@ -428,7 +428,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: Se editan semanalmente.
@@ -438,7 +438,7 @@ categories:
       question: 'Los derroteros:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 38
       options:
         a: Representadas en las cartas que unen puntos de igual sonda o profundidad.
@@ -448,7 +448,7 @@ categories:
       question: 'Los veriles son las líneas:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 39
       options:
         a: El coeficiente de corredera que tenemos es de 0,80.
@@ -459,7 +459,7 @@ categories:
         indica 19 millas:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 40
       options:
         a: Que la milla es la unidad de velocidad y equivale a 10 nudos.
@@ -471,7 +471,7 @@ categories:
         milla náutica", es:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 41
       options:
         a: Ángulo que se forma entre el Norte de aguja y el Norte magnético.
@@ -484,7 +484,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 42
       options:
         a: 353º
@@ -496,7 +496,7 @@ categories:
         = 6º E. Calcular el rumbo de aguja:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 43
       options:
         a: 1 hora y 26 minutos.
@@ -508,7 +508,7 @@ categories:
         a -B- a la velocidad de 9 nudos?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 44
       options:
         a: 36º04,0'N -005º 23,0'W
@@ -520,7 +520,7 @@ categories:
         situación obtenida?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 45
       options:
         a: 015º

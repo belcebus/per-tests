@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 1
       options:
         a: Partes curvas de los costados, en las proximidades de la proa.
@@ -15,7 +15,7 @@ categories:
       question: 'Las amuras son:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 2
       options:
         a: Crujía.
@@ -25,7 +25,7 @@ categories:
       question: ¿Cómo se denomina la línea que separa la obra viva de la obra muerta?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: Los trancaniles.
@@ -36,7 +36,7 @@ categories:
         son:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 4
       options:
         a: Una lima especial para suavizar la arista de ataque del timón.
@@ -49,7 +49,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 5
       options:
         a: Bita.
@@ -60,7 +60,7 @@ categories:
         para afirmar los cabos, se llama:'
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 6
       options:
         a: La parte más larga de un cabo.
@@ -73,7 +73,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: El buen estado y funcionamiento de equipos de navegación, comunicaciones;
@@ -84,7 +84,7 @@ categories:
       question: 'Antes de hacerse a la mar es conveniente comprobar:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 8
       options:
         a: Como la oscilación de la embarcación que se produce en sentido transversal
@@ -98,7 +98,7 @@ categories:
       question: 'Se puede definir cabezada:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 9
       options:
         a: Asegurar la estanqueidad del barco.
@@ -109,7 +109,7 @@ categories:
       question: ¿Qué debemos hacer si se nos aproxima un fuerte chubasco con viento?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 10
       options:
         a: Que deberemos llevar al menos uno por persona embarcada.
@@ -122,7 +122,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 11
       options:
         a: Cierto.
@@ -134,7 +134,7 @@ categories:
         sus señales y maniobrando con precaución
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 12
       options:
         a: No existe relación alguna ya que son incompatibles.
@@ -149,7 +149,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 13
       options:
         a: Barlovento.
@@ -160,7 +160,7 @@ categories:
         de color verde deben quedar por:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 14
       options:
         a: Una marca cardinal norte.
@@ -171,7 +171,7 @@ categories:
         pertenece a:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 15
       options:
         a: Indica un punto de recalada.
@@ -182,7 +182,7 @@ categories:
         marca de tope de 2 esferas negras superpuestas,…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 16
       options:
         a: Franjas rojas y negras.
@@ -192,7 +192,7 @@ categories:
       question: ¿De qué color son las marcas de aguas navegables?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 17
       options:
         a: Marca especial.
@@ -205,7 +205,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 18
       options:
         a: uno pueda ser observado por radar desde el otro.
@@ -216,7 +216,7 @@ categories:
         cuando
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 19
       options:
         a: el estado de visibilidad.
@@ -228,7 +228,7 @@ categories:
         se tendrán en cuenta, entre otras…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 20
       options:
         a: Seguirá a rumbo y velocidad sin variar nada.
@@ -238,7 +238,7 @@ categories:
       question: 'Cuando un buque abrigue dudas de si está o no alcanzando a otro:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 21
       options:
         a: Puede modificar su rumbo, si con ello evita el abordaje.
@@ -248,7 +248,7 @@ categories:
       question: 'El buque que "Sigue a rumbo":'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 22
       options:
         a: Luz de remolque.
@@ -259,7 +259,7 @@ categories:
         proa?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 23
       options:
         a: Buque de propulsión mecánica visto por su popa.
@@ -271,7 +271,7 @@ categories:
         qué tipo de barco se trata?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 24
       options:
         a: Ninguna.
@@ -282,7 +282,7 @@ categories:
         propulsando mecánicamente?:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 25
       options:
         a: Dos bolas negras en línea vertical.
@@ -292,7 +292,7 @@ categories:
       question: 'Un buque varado exhibirá de día:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Pitada corta 1 segundo.
@@ -303,7 +303,7 @@ categories:
         de...
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 27
       options:
         a: Una pitada larga seguida de dos cortas cada dos minutos.
@@ -317,7 +317,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 28
       options:
         a: de maniobra, variable, uniforme
@@ -327,7 +327,7 @@ categories:
       question: Las tres fases de evolución en marcha avante son los períodos…
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 29
       options:
         a: Velocidad de seguridad.
@@ -341,7 +341,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 30
       options:
         a: Desconectar los aparatos electrónicos.
@@ -352,7 +352,7 @@ categories:
       question: En caso de tormenta eléctrica
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 31
       options:
         a: Clase A
@@ -362,7 +362,7 @@ categories:
       question: 'Un incendio producido por gases inflamables, corresponde a la clase:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: Continuado de 08:00 a 18:00
@@ -375,7 +375,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 33
       options:
         a: Anemómetro.
@@ -386,7 +386,7 @@ categories:
         se llama:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 34
       options:
         a: Vientos racheados de la costa.
@@ -396,7 +396,7 @@ categories:
       question: ¿Qué son los terrales?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 35
       options:
         a: Un anticiclón.
@@ -407,7 +407,7 @@ categories:
         conforme nos acercamos a su centro es:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 36
       options:
         a: Son las brisas costeras.
@@ -420,7 +420,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: 125°
@@ -430,7 +430,7 @@ categories:
       question: 'El rumbo cuadrantal S45°E corresponde al circular:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 38
       options:
         a: Corrección total.
@@ -441,7 +441,7 @@ categories:
         (Nm) se denomina:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 39
       options:
         a: El nomenclátor de los puertos españoles que edita el Instituto Social de
@@ -456,7 +456,7 @@ categories:
         costas españolas, se utiliza:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 40
       options:
         a: Un círculo máximo de la esfera terrestre perpendicular al eje de la tierra.
@@ -467,7 +467,7 @@ categories:
       question: 'El Ecuador es:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 41
       options:
         a: La desviación del rumbo verdadero por el efecto del viento sobre la obra
@@ -483,7 +483,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 42
       options:
         a: 339º
@@ -495,7 +495,7 @@ categories:
         verdadero que hemos puesto?.'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: anulada
       id: 43
       options:
         a: 020º
@@ -507,7 +507,7 @@ categories:
         024º, la declinación magnética es 3.5º (-) y el desvío 1.5º (+)?.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: d
       id: 44
       options:
         a: 55 minutos
@@ -520,7 +520,7 @@ categories:
         nuestra velocidad es de 10 nudos?.'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 45
       options:
         a: 'Latitud: 36º02’N / Longitud: 05º50’W'

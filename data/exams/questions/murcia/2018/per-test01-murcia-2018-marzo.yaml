@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 1
       options:
         a: Un mecanismo de acople y desacople del ancla.
@@ -14,7 +14,7 @@ categories:
       question: El "barboten" es…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 2
       options:
         a: Refuerzo transversal vertical.
@@ -24,7 +24,7 @@ categories:
       question: 'El codaste es un:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 3
       options:
         a: La distancia entre la vertical de proa y la de popa.
@@ -34,7 +34,7 @@ categories:
       question: ¿Qué es el asiento?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 4
       options:
         a: Codaste
@@ -48,7 +48,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 5
       options:
         a: Encapillar.
@@ -59,7 +59,7 @@ categories:
         fondear, para que no se pierda, se llama:'
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 6
       options:
         a: As de guía.
@@ -72,7 +72,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 7
       options:
         a: Revisión del estado general del motor.
@@ -82,7 +82,7 @@ categories:
       question: Comprobaciones antes de hacerse a la mar…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 8
       options:
         a: Facilitar que una embarcación pueda ser detectada por los radares de otros
@@ -93,7 +93,7 @@ categories:
       question: ¿Para qué sirve el reflector radar?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 9
       options:
         a: Asegurar la estanqueidad del barco.
@@ -105,7 +105,7 @@ categories:
         fuerte chubasco con viento a la zona por la que estamos navegando?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 10
       options:
         a: Desconectar los aparatos electrónicos.
@@ -119,7 +119,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: a
       id: 11
       options:
         a: 3 nudos.
@@ -130,7 +130,7 @@ categories:
         fondeaderos la velocidad máxima admitida es de:'
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 12
       options:
         a: Prohibir vertidos que menoscaben la integridad de la zona protegida.
@@ -144,7 +144,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 13
       options:
         a: Dos conos superpuestos con los vértices hacia abajo.
@@ -154,7 +154,7 @@ categories:
       question: 'Las marcas de tope que indican un peligro aislado son:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 14
       options:
         a: Un cilindro rojo.
@@ -164,7 +164,7 @@ categories:
       question: 'El tope de las marcas laterales de babor de la Región A es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 15
       options:
         a: Dos destellos de color rojos.
@@ -174,7 +174,7 @@ categories:
       question: 'En una marca de peligro aislado el ritmo y el color de su luz es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 16
       options:
         a: Marcas laterales
@@ -185,7 +185,7 @@ categories:
         seguirse en un canal, se utilizan las….
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 17
       options:
         a: Marcas cardinales
@@ -199,7 +199,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 18
       options:
         a: El estado de visibilidad.
@@ -211,7 +211,7 @@ categories:
         NO está incluido en dicha regla
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 19
       options:
         a: 112,5º
@@ -221,7 +221,7 @@ categories:
       question: 'La luz de tope muestra una luz sin interrupción en un arco de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 20
       options:
         a: Los buques petroleros.
@@ -233,7 +233,7 @@ categories:
         con seguridad dentro de un paso o canal angosto son'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 21
       options:
         a: Dos luces rojas todo horizonte en línea vertical, en el lugar más visible.
@@ -244,7 +244,7 @@ categories:
         "Los buques sin gobierno exhibirán…"'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 22
       options:
         a: Dragaminas trabajando.
@@ -256,7 +256,7 @@ categories:
         se trata de …
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 23
       options:
         a: cada uno de ellos caerá a babor de forma que pase por la banda de estribor
@@ -269,7 +269,7 @@ categories:
         naveguen de vuelta encontrada a rumbos opuestos, con riesgo de abordaje…"
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 24
       options:
         a: buque con capacidad de maniobra restringida.
@@ -282,7 +282,7 @@ categories:
         buque…" corresponde a un…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 25
       options:
         a: Tres pitadas largas.
@@ -294,7 +294,7 @@ categories:
         en visibilidad reducida emitirá:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Un buque de pesca al cerco, que tiene su aparejo largado a más de 150 metros.
@@ -305,7 +305,7 @@ categories:
         el vértice hacia abajo, se trata de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 27
       options:
         a: Manteniendo su rumbo y velocidad.
@@ -319,7 +319,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 28
       options:
         a: La popa.
@@ -329,7 +329,7 @@ categories:
       question: Para amarrarse a una boya, lo mejor es tomar la corriente por…
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 29
       options:
         a: de maniobra, variable, uniforme.
@@ -342,7 +342,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: a
       id: 30
       options:
         a: Se comprimirá la herida y se aplicará torniquete si no deja de manar sangre.
@@ -352,7 +352,7 @@ categories:
       question: 'En caso de hemorragia arterial:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 31
       options:
         a: Por enfriamiento.
@@ -363,7 +363,7 @@ categories:
         se llama…
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 32
       options:
         a: Esperar la pleamar.
@@ -376,7 +376,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 33
       options:
         a: En el sentido contrario a las agujas de reloj y con una componente hacia
@@ -388,7 +388,7 @@ categories:
         Norte?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 34
       options:
         a: El número de horas que ha soplado el viento en la misma dirección sobre
@@ -401,7 +401,7 @@ categories:
       question: 'Definimos Persistencia como:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 35
       options:
         a: Viento real.
@@ -412,7 +412,7 @@ categories:
         y el viento que genera la velocidad a la que nos desplazamos, se denomina…
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 36
       options:
         a: Líneas que unen puntos de igual presión.
@@ -426,7 +426,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 37
       options:
         a: La misma altura.
@@ -437,7 +437,7 @@ categories:
         llaman veriles o líneas isobáticas representan
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 38
       options:
         a: 130º
@@ -447,7 +447,7 @@ categories:
       question: ¿Qué rumbo circular le corresponde al cuadrantal S50W?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 39
       options:
         a: EI abatimiento.
@@ -458,7 +458,7 @@ categories:
         su rumbo verdadero afectado por ... :'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 40
       options:
         a: Sur y Oeste.
@@ -468,7 +468,7 @@ categories:
       question: 'El tercer cuadrante del horizonte, es el comprendido entre ... :'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 41
       options:
         a: Una milla náutica.
@@ -481,7 +481,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 42
       options:
         a: 2h 42m
@@ -494,7 +494,7 @@ categories:
         de 8 nudos?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 43
       options:
         a: Ra= 247º
@@ -507,7 +507,7 @@ categories:
         Tarifa (corrección total = 5ºNW). Calcular el rumbo de aguja
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 44
       options:
         a: 5,4 millas
@@ -520,7 +520,7 @@ categories:
         al puerto de Barbate?'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 45
       options:
         a: Ra= 340º

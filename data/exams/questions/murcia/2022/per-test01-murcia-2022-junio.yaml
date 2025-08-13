@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 1
       options:
         a: Obra muerta.
@@ -15,7 +15,7 @@ categories:
         hasta la línea de flotación, se llama:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 2
       options:
         a: La quilla.
@@ -25,7 +25,7 @@ categories:
       question: 'La mecha que sale por la limera es parte de:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 3
       options:
         a: La eslora.
@@ -35,7 +35,7 @@ categories:
       question: 'Cuadernas, roda y codaste son elementos relacionados con:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: d
       id: 4
       options:
         a: Una hélice.
@@ -48,7 +48,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: a
       id: 5
       options:
         a: Bornear.
@@ -59,7 +59,7 @@ categories:
         del viento o la corriente?
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: a
       id: 6
       options:
         a: Cornamusas.
@@ -73,7 +73,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 7
       options:
         a: Ponerse proa (amura) a la mar moderando la velocidad.
@@ -83,7 +83,7 @@ categories:
       question: 'El término "correr un temporal" significa:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: d
       id: 8
       options:
         a: Mantener al accidentado en lugar fresco y ventilado.
@@ -93,7 +93,7 @@ categories:
       question: 'En caso de hipotermia, es conveniente:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 9
       options:
         a: Seguridad de equilibrio.
@@ -104,7 +104,7 @@ categories:
         cuando la pierde por causas externas es conocida como:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 10
       options:
         a: Naveguemos con mucha atención.
@@ -118,7 +118,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 11
       options:
         a: No fondear en zonas que haya posidonia.
@@ -128,7 +128,7 @@ categories:
       question: ¿Qué podemos hacer para proteger la Posidonia?
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 12
       options:
         a: Cuando demos una fiesta en la embarcación.
@@ -141,7 +141,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 13
       options:
         a: Babor.
@@ -152,7 +152,7 @@ categories:
         dejaremos por:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 14
       options:
         a: De color negro sobre amarillo y de castillete o espeque.
@@ -162,7 +162,7 @@ categories:
       question: 'Una marca cardinal Norte es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 15
       options:
         a: Aguas navegables.
@@ -173,7 +173,7 @@ categories:
         la existencia de:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 16
       options:
         a: Una marca cardinal del Este.
@@ -184,7 +184,7 @@ categories:
         destellos blancos, podemos suponer que se trata de:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 17
       options:
         a: Aguas navegables.
@@ -198,7 +198,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 18
       options:
         a: Las luces de navegación encendidas, de esta forma se asegurarán una mayor
@@ -212,7 +212,7 @@ categories:
         durante el día como de noche:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 19
       options:
         a: Que tiene reducida su maniobra conforme con el Reglamento.
@@ -222,7 +222,7 @@ categories:
       question: ¿Qué se entiende por capacidad de maniobra restringida?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 20
       options:
         a: buque con capacidad de maniobra restringida.
@@ -235,7 +235,7 @@ categories:
         buque…" corresponde a un…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 21
       options:
         a: El estado de visibilidad.
@@ -247,7 +247,7 @@ categories:
         en dicha regla:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 22
       options:
         a: Se mantendrán lo más cerca posible del límite exterior del paso o canal
@@ -260,7 +260,7 @@ categories:
       question: Los buques que naveguen a lo largo de un paso o canal angosto…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 23
       options:
         a: Roja sobre verde.
@@ -271,7 +271,7 @@ categories:
         en vertical:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 24
       options:
         a: Un dragaminas trabajando.
@@ -283,7 +283,7 @@ categories:
         …
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 25
       options:
         a: Un segundo.
@@ -293,7 +293,7 @@ categories:
       question: 'Una "pitada corta" es un sonido de una duración aproximada de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 26
       options:
         a: Utilizando un teléfono móvil.
@@ -306,7 +306,7 @@ categories:
         y advertencia?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 27
       options:
         a: Un disparo de cañón.
@@ -321,7 +321,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 28
       options:
         a: Hacerlo firme.
@@ -331,7 +331,7 @@ categories:
       question: 'Amollar un cabo es:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 29
       options:
         a: Colocarse al costado de otra embarcación y amarrarse a la misma.
@@ -344,7 +344,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 30
       options:
         a: Sin apretar demasiado.
@@ -354,7 +354,7 @@ categories:
       question: 'En una hemorragia arterial, el torniquete se coloca:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 31
       options:
         a: El nitrógeno.
@@ -364,7 +364,7 @@ categories:
       question: 'En un incendio, el comburente más común es:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: Llenar el depósito con el motor en marcha.
@@ -379,7 +379,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 33
       options:
         a: La humedad.
@@ -389,7 +389,7 @@ categories:
       question: 'El milibar se utiliza en meteorología para medir:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 34
       options:
         a: Isobatas.
@@ -400,7 +400,7 @@ categories:
         de igual presión atmosférica, se denominan:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 35
       options:
         a: La altura de las olas.
@@ -410,7 +410,7 @@ categories:
       question: 'La escala de Beaufort, se utiliza para conocer:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 36
       options:
         a: La distancia en que el viento sopla en la misma dirección.
@@ -423,7 +423,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 37
       options:
         a: La Guía Costera correspondiente de la zona o área.
@@ -434,7 +434,7 @@ categories:
         por donde estamos navegando, consultaremos:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 38
       options:
         a: El nivel de referencia de las sondas en las cartas de navegación españolas.
@@ -444,7 +444,7 @@ categories:
       question: 'Se conoce como "cero hidrográfico" a:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 39
       options:
         a: 210º
@@ -454,7 +454,7 @@ categories:
       question: '¿Cuál será el valor circular del rumbo cuadrantal S60ºW?:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 40
       options:
         a: El escandallo.
@@ -465,7 +465,7 @@ categories:
         navegada acumulada es:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 41
       options:
         a: Deriva.
@@ -479,7 +479,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 42
       options:
         a: 1h 48m
@@ -491,7 +491,7 @@ categories:
         de Algeciras (luz extremo espigón):'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 43
       options:
         a: 082º
@@ -503,7 +503,7 @@ categories:
         Faro de P. Alcázar (corrección total= 6ºW). Calcular el rumbo de aguja:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 44
       options:
         a: 8,3 nudos
@@ -515,7 +515,7 @@ categories:
         espigón) en 2h30m:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 45
       options:
         a: 12,3 millas

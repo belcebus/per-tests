@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 1
       options:
         a: Partes curvas de los costados, en las proximidades de la proa.
@@ -15,7 +15,7 @@ categories:
       question: 'Las amuras son:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 2
       options:
         a: Crujía.
@@ -25,7 +25,7 @@ categories:
       question: ¿Cómo se denomina la línea que separa la obra viva de la obra muerta?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 3
       options:
         a: Puntal.
@@ -36,7 +36,7 @@ categories:
         la línea de flotación, se llama:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 4
       options:
         a: Molinete.
@@ -49,7 +49,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 5
       options:
         a: Comienza a garrear.
@@ -59,7 +59,7 @@ categories:
       question: Decimos que el ancla zarpa cuando...
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 6
       options:
         a: Mantendremos los motores en marcha.
@@ -73,7 +73,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 7
       options:
         a: Meter timón a la banda contraria a la de caída del náufrago.
@@ -84,7 +84,7 @@ categories:
         lo primero que haremos será.
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 8
       options:
         a: Reducir velocidad y controlar frecuentemente la sonda.
@@ -95,7 +95,7 @@ categories:
         por aguas someras?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 9
       options:
         a: Bozas.
@@ -106,7 +106,7 @@ categories:
         atracar, para evitar rozamientos o golpes se llaman…
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 10
       options:
         a: Válvulas de acceso.
@@ -120,7 +120,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 11
       options:
         a: A más de 4 millas.
@@ -132,7 +132,7 @@ categories:
         cerradas?
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 12
       options:
         a: Nos mantendremos a la escucha.
@@ -148,7 +148,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 13
       options:
         a: Marcas laterales
@@ -159,7 +159,7 @@ categories:
         seguirse en un canal, se utilizan las…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 14
       options:
         a: Las marcas cardinales.
@@ -170,7 +170,7 @@ categories:
         colocada son las del cuadrante que da nombre a la marca, se utilizan…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 15
       options:
         a: Dos conos negros superpuestos, opuestos por la base.
@@ -180,7 +180,7 @@ categories:
       question: 'La marca cardinal Este, tiene como marca de tope:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 16
       options:
         a: Es una marca colocada o fondeada sobre un peligro e indica que está prohibida
@@ -194,7 +194,7 @@ categories:
       question: Una marca de peligro aislado…
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: a
       id: 17
       options:
         a: Una X amarilla.
@@ -207,7 +207,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 18
       options:
         a: Todo avión que flote sobre el agua.
@@ -218,7 +218,7 @@ categories:
         en la Mar (RIPA), la palabra "hidroavión" designa a:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 19
       options:
         a: Un buque con capacidad de maniobra restringida.
@@ -229,7 +229,7 @@ categories:
         el Reglamento Internacional para Prevenir Abordajes en la Mar (RIPA) como…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 20
       options:
         a: Velocidad máxima del buque.
@@ -241,7 +241,7 @@ categories:
         en la Mar (RIPA) por "velocidad de seguridad"?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 21
       options:
         a: Los buques petroleros.
@@ -254,7 +254,7 @@ categories:
         paso o canal angosto son…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 22
       options:
         a: Mantenerse apartado de la derrota del otro.
@@ -266,7 +266,7 @@ categories:
         por babor o estribor. ¿Qué deberá hacer?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 23
       options:
         a: Todo buque que alcanza, al ir más rápido, tiene prioridad sobre el buque
@@ -280,7 +280,7 @@ categories:
         en la Mar (RIPA):'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 24
       options:
         a: 225°
@@ -290,7 +290,7 @@ categories:
       question: Regla 21. La luz de tope tiene un arco de luz de...
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 25
       options:
         a: Las luces de costado, la de alcance, el tope de proa y dos luces todo horizonte,
@@ -302,7 +302,7 @@ categories:
       question: Regla 25. Un velero navegando de noche podrá exhibir…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 26
       options:
         a: Un buque sin gobierno.
@@ -313,7 +313,7 @@ categories:
         de…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 27
       options:
         a: Estoy dando atrás.
@@ -327,7 +327,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 28
       options:
         a: Acción de apretar un cabo.
@@ -338,7 +338,7 @@ categories:
       question: ¿Qué es adujar un cabo?
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 29
       options:
         a: Largo, través y esprín.
@@ -352,7 +352,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 30
       options:
         a: Jamás abandonar la embarcación si no se está seguro del hundimiento.
@@ -362,7 +362,7 @@ categories:
       question: Medidas a tomar antes de abandonar la embarcación.
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 31
       options:
         a: Sangre roja brillante que sale sin presión.
@@ -372,7 +372,7 @@ categories:
       question: ¿Qué características tiene una hemorragia arterial?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: b
       id: 32
       options:
         a: Espeque.
@@ -386,7 +386,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 33
       options:
         a: Maestral.
@@ -397,7 +397,7 @@ categories:
         se llama:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 34
       options:
         a: En el sentido contrario a las agujas de reloj y con una componente hacia
@@ -409,7 +409,7 @@ categories:
         Norte?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 35
       options:
         a: Las isobaras son líneas que unen puntos de igual presión atmosférica.
@@ -419,7 +419,7 @@ categories:
       question: ¿Cuál de las siguientes afirmaciones es la correcta?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 36
       options:
         a: La humedad.
@@ -432,7 +432,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 37
       options:
         a: La línea proa-popa y el meridiano magnético.
@@ -442,7 +442,7 @@ categories:
       question: 'Se llama marcación al ángulo formado entre:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 38
       options:
         a: Una milla náutica.
@@ -452,7 +452,7 @@ categories:
       question: 'Un minuto de latitud corresponde con:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 39
       options:
         a: Una línea que une puntos de igual latitud.
@@ -462,7 +462,7 @@ categories:
       question: En la carta náutica, un veril es…
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 40
       options:
         a: Corrección total.
@@ -473,7 +473,7 @@ categories:
         (Nm) se denomina:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 41
       options:
         a: Real Observatorio Marítimo Español.
@@ -487,7 +487,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 42
       options:
         a: Ra = 227°
@@ -498,7 +498,7 @@ categories:
         año actual 10°E y desvío (-6°). Indique el rumbo de aguja.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 43
       options:
         a: 35°58.2’N / 006°04.6’W
@@ -511,7 +511,7 @@ categories:
         posición después de una hora y media de navegación?'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 44
       options:
         a: 13,6 millas
@@ -525,7 +525,7 @@ categories:
         Gracia y Espartel a ese rumbo y velocidad?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 45
       options:
         a: 245°

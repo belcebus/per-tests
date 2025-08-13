@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 1
       options:
         a: La distancia entre la vertical de proa y la de popa.
@@ -14,7 +14,7 @@ categories:
       question: ¿Qué es el asiento?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 2
       options:
         a: La parte del casco que se encuentra por encima del plano de flotación.
@@ -25,7 +25,7 @@ categories:
       question: ¿Qué es la obra viva?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: b
       id: 3
       options:
         a: Es el volumen máximo del agua desplazada por la embarcación cuando está
@@ -37,7 +37,7 @@ categories:
       question: ¿Qué es el desplazamiento máximo en embarcaciones de recreo?
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 4
       options:
         a: Es la propiedad que tiene una embarcación de recuperar su posición vertical,
@@ -51,7 +51,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: d
       id: 5
       options:
         a: Pasar un cabo por la bita.
@@ -61,7 +61,7 @@ categories:
       question: ¿Qué es el garreo?
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: c
       id: 6
       options:
         a: Un cabo de amarre que va a un muerto.
@@ -75,7 +75,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 7
       options:
         a: Caer a la banda de Estribor o Babor, indiferentemente.
@@ -86,7 +86,7 @@ categories:
         primero?:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 8
       options:
         a: En meter timón a la banda de caída y desarrollamos un giro hasta modificar
@@ -99,7 +99,7 @@ categories:
         si un hombre cae por babor, consistirá...
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 9
       options:
         a: Facilitar que una embarcación pueda ser detectada por los radares de otros
@@ -110,7 +110,7 @@ categories:
       question: ¿Para qué sirve el reflector radar?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 10
       options:
         a: Aquellas en las cuales la profundidad es mayor que la mitad de la longitud
@@ -126,7 +126,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: b
       id: 11
       options:
         a: Siempre
@@ -138,7 +138,7 @@ categories:
         a efectos de que hay personas siniestradas en la mar?
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 12
       options:
         a: Prohibir vertidos que menoscaben la integridad de la zona protegida.
@@ -152,7 +152,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 13
       options:
         a: Marca lateral de estribor.
@@ -162,7 +162,7 @@ categories:
       question: 'Una marca cónica de color verde con una franja roja, indica:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 14
       options:
         a: Dos destellos de color rojos.
@@ -172,7 +172,7 @@ categories:
       question: 'En una marca de peligro aislado el ritmo y el color de su luz es:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 15
       options:
         a: Este.
@@ -183,7 +183,7 @@ categories:
         los vértices hacia abajo, se deberá pasar por el cuadrante:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 16
       options:
         a: Castillete.
@@ -193,7 +193,7 @@ categories:
       question: Las marcas laterales de babor. ¿Qué forma pueden tener?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: d
       id: 17
       options:
         a: Verde con franjas horizontales rojas.
@@ -206,7 +206,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 18
       options:
         a: Coincidentes, en todo lo posible, con lo dispuesto en este Reglamento.
@@ -219,7 +219,7 @@ categories:
         a la pesca en flotilla, estas deben ser:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 19
       options:
         a: El que reciba el viento por la banda de babor.
@@ -230,7 +230,7 @@ categories:
         de la derrota del otro:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 20
       options:
         a: 112,5º
@@ -240,7 +240,7 @@ categories:
       question: 'La luz de tope muestra una luz sin interrupción en un arco de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 21
       options:
         a: Tres pitadas largas.
@@ -252,7 +252,7 @@ categories:
         en visibilidad reducida emitirá:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 22
       options:
         a: Dos bolas en línea vertical.
@@ -262,7 +262,7 @@ categories:
       question: 'Un buque varado exhibirá de día:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 23
       options:
         a: Por el costado que exhiba dos luces rojas en línea vertical.
@@ -272,7 +272,7 @@ categories:
       question: 'Divisamos una draga que ocasiona una obstrucción, se pasará:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 24
       options:
         a: Dos luces todo horizonte, en línea vertical la superior roja y la inferior
@@ -290,7 +290,7 @@ categories:
       question: 'Un buque de pesca al arrastre exhibirá:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 25
       options:
         a: Un buque de pesca al cerco, que tiene su aparejo largado a más de 150 metros.
@@ -301,7 +301,7 @@ categories:
         el vértice hacia abajo, se trata de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 26
       options:
         a: Manteniendo su rumbo y velocidad.
@@ -312,7 +312,7 @@ categories:
         a un buque de propulsión mecánica con riesgo de abordaje,:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 27
       options:
         a: Un cono con el vértice hacia abajo.
@@ -325,7 +325,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: c
       id: 28
       options:
         a: Acción de apretar un cabo.
@@ -336,7 +336,7 @@ categories:
       question: ¿Qué es adujar un cabo?
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 29
       options:
         a: A la corriente.
@@ -349,7 +349,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 30
       options:
         a: El Servicio del 112.
@@ -360,7 +360,7 @@ categories:
       question: 'El servicio de atención médica por radio lo presta en España:'
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 31
       options:
         a: Por enfriamiento
@@ -371,7 +371,7 @@ categories:
         se llama…
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: Combustible gaseoso (butano, propano).
@@ -385,7 +385,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: d
       id: 33
       options:
         a: Virazón
@@ -398,7 +398,7 @@ categories:
         que se origina a causa de este fenómeno se llama:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 34
       options:
         a: El aumento brusco y momentáneo de la velocidad del viento.
@@ -409,7 +409,7 @@ categories:
       question: 'Definimos racha como:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: b
       id: 35
       options:
         a: En el sentido contrario a las agujas de reloj y con una componente hacia
@@ -421,7 +421,7 @@ categories:
         Norte?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 36
       options:
         a: El número de horas que ha soplado el viento en la misma dirección sobre
@@ -437,7 +437,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 37
       options:
         a: Meridiano del lugar.
@@ -448,7 +448,7 @@ categories:
         coordenadas de nuestra situación?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 38
       options:
         a: La escala de latitudes.
@@ -458,7 +458,7 @@ categories:
       question: 'Las distancias en las cartas náuticas, se miden en:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 39
       options:
         a: Un naufragio.
@@ -469,7 +469,7 @@ categories:
         de puntos, significa:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 40
       options:
         a: Norte-Este.
@@ -479,7 +479,7 @@ categories:
       question: 'El segundo cuadrante, es el comprendido entre:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 41
       options:
         a: Corrección total.
@@ -493,7 +493,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 42
       options:
         a: 223º
@@ -506,7 +506,7 @@ categories:
         cuya posición es 35º 55'N – 006º 10'W.  ¿Cuál será el rumbo resultante?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 43
       options:
         a: 36º 08.8'N – 005º 18,2’W.
@@ -518,7 +518,7 @@ categories:
         nuestra posición en ese instante?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 44
       options:
         a: 12,8 nudos.
@@ -531,7 +531,7 @@ categories:
         Indique que velocidad tendremos que poner para cumplir dicho objetivo.
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 45
       options:
         a: 162º

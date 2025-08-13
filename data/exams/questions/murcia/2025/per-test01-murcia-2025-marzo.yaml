@@ -4,7 +4,7 @@ categories:
     questions:
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 1
       options:
         a: Cuando el calado de proa es mayor que el calado de popa.
@@ -14,7 +14,7 @@ categories:
       question: Asiento negativo es…
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: a
       id: 2
       options:
         a: Partes curvas de los costados, en las proximidades de la proa.
@@ -25,7 +25,7 @@ categories:
       question: 'Las amuras son:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 3
       options:
         a: Los trancaniles.
@@ -36,7 +36,7 @@ categories:
         son:'
     - category: 1
       category_name: Nomenclatura náutica
-      correct_answer: null
+      correct_answer: c
       id: 4
       options:
         a: Bordas.
@@ -50,7 +50,7 @@ categories:
     questions:
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 5
       options:
         a: As de guía.
@@ -60,7 +60,7 @@ categories:
       question: Nudo que se utiliza, habitualmente, para unir cabos de grosor similar
     - category: 2
       category_name: Elementos de amarre y fondeo
-      correct_answer: null
+      correct_answer: b
       id: 6
       options:
         a: As de guía.
@@ -73,7 +73,7 @@ categories:
     questions:
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 7
       options:
         a: Longitudinal.
@@ -83,7 +83,7 @@ categories:
       question: 'El balance es un movimiento:'
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: c
       id: 8
       options:
         a: Cuando realicemos la maniobra de Boutakow.
@@ -93,7 +93,7 @@ categories:
       question: Apagaremos los aparatos eléctricos, como medida preventiva…..
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: a
       id: 9
       options:
         a: Reducir la velocidad y controlar frecuentemente la sonda.
@@ -104,7 +104,7 @@ categories:
         por aguas someras?
     - category: 3
       category_name: Seguridad
-      correct_answer: null
+      correct_answer: b
       id: 10
       options:
         a: Cuando lo indique el certificado de navegabilidad.
@@ -117,7 +117,7 @@ categories:
     questions:
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: c
       id: 11
       options:
         a: No, en las zonas de baño no se puede navegar. Son para bañarse.
@@ -128,7 +128,7 @@ categories:
       question: ¿Se puede navegar en una zona de baño NO balizada?
     - category: 4
       category_name: Legislación
-      correct_answer: null
+      correct_answer: d
       id: 12
       options:
         a: Con una bandera roja.
@@ -142,7 +142,7 @@ categories:
     questions:
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 13
       options:
         a: Verdes.
@@ -153,7 +153,7 @@ categories:
         por babor son….
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: b
       id: 14
       options:
         a: Dos bolas negras.
@@ -163,7 +163,7 @@ categories:
       question: ¿Cuál es la marca de tope de las balizas de marcas cardinales?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 15
       options:
         a: Aguas navegables.
@@ -174,7 +174,7 @@ categories:
         la existencia de:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 16
       options:
         a: Ninguna.
@@ -184,7 +184,7 @@ categories:
       question: ¿Qué marca está pintada con franjas verticales rojas y blancas?
     - category: 5
       category_name: Balizamiento
-      correct_answer: null
+      correct_answer: c
       id: 17
       options:
         a: De castillete o de espeque.
@@ -197,7 +197,7 @@ categories:
     questions:
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: c
       id: 18
       options:
         a: uno pueda ser observado por radar desde el otro.
@@ -208,7 +208,7 @@ categories:
         únicamente cuando
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 19
       options:
         a: La demora de un buque que se aproxima no varía de forma apreciable.
@@ -219,7 +219,7 @@ categories:
         en la Mar (RIPA), se considerará que existe riesgo de abordaje si…..
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 20
       options:
         a: Se deben cumplir de noche.
@@ -229,7 +229,7 @@ categories:
       question: Regla 20.  Las reglas relativas a “luces y marcas” …
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 21
       options:
         a: Un buque sin gobierno.
@@ -240,7 +240,7 @@ categories:
         mediante una conexión rígida, formando una unidad compuesta, serán considerados:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: b
       id: 22
       options:
         a: Una marca bicónica
@@ -251,7 +251,7 @@ categories:
         pesca es…
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 23
       options:
         a: Buque restringido por su calado.
@@ -262,7 +262,7 @@ categories:
         en línea vertical?
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 24
       options:
         a: En la parte de proa, una luz roja todo horizonte o una bola negra.
@@ -272,7 +272,7 @@ categories:
       question: 'Regla 30. Los buques fondeados exhibirán en el lugar más visible:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: a
       id: 25
       options:
         a: Cuatro a seis segundos.
@@ -282,7 +282,7 @@ categories:
       question: 'Regla 32.  Una pitada larga tiene una duración aproximada de:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 26
       options:
         a: Cae a estribor.
@@ -293,7 +293,7 @@ categories:
         "dos pitadas cortas" para indicar su maniobra, significa que:'
     - category: 6
       category_name: Reglamento (RIPA)
-      correct_answer: null
+      correct_answer: d
       id: 27
       options:
         a: Ejercicios militares.
@@ -306,7 +306,7 @@ categories:
     questions:
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: b
       id: 28
       options:
         a: Lo que se arrastra del fondo
@@ -316,7 +316,7 @@ categories:
       question: 'La arrancada de una embarcación es:'
     - category: 7
       category_name: Maniobra y navegación
-      correct_answer: null
+      correct_answer: a
       id: 29
       options:
         a: A los que tienen mucha obra muerta.
@@ -329,7 +329,7 @@ categories:
     questions:
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 30
       options:
         a: Por los orificios practicados en la obra muerta del casco.
@@ -340,7 +340,7 @@ categories:
         embarcación?
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: d
       id: 31
       options:
         a: Aquellos que implican metales combustibles.
@@ -350,7 +350,7 @@ categories:
       question: Los fuegos de clase B son…..
     - category: 8
       category_name: Emergencias en la mar
-      correct_answer: null
+      correct_answer: c
       id: 32
       options:
         a: Dar al paciente bebidas muy frías a grandes sorbos.
@@ -365,7 +365,7 @@ categories:
     questions:
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 33
       options:
         a: Los Centros de Coordinación de Salvamento, en los canales establecidos
@@ -376,7 +376,7 @@ categories:
       question: 'Los boletines meteorológicos los podremos obtener a través de:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: c
       id: 34
       options:
         a: El termómetro.
@@ -386,7 +386,7 @@ categories:
       question: ¿Qué aparato es el que mide y registra la temperatura?
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 35
       options:
         a: Un anticiclón.
@@ -397,7 +397,7 @@ categories:
         conforme nos acercamos a su centro es:'
     - category: 9
       category_name: Meteorología
-      correct_answer: null
+      correct_answer: a
       id: 36
       options:
         a: El aumento brusco y momentáneo de la velocidad del viento.
@@ -411,7 +411,7 @@ categories:
     questions:
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: a
       id: 37
       options:
         a: El círculo máximo de la esfera terrestre perpendicular al eje de la tierra.
@@ -422,7 +422,7 @@ categories:
       question: 'El Ecuador es:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 38
       options:
         a: El rumbo al que naveguemos.
@@ -432,7 +432,7 @@ categories:
       question: El valor de la declinación magnética varía con…
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: d
       id: 39
       options:
         a: Rumbo magnético.
@@ -443,7 +443,7 @@ categories:
         buque se denomina:'
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: b
       id: 40
       options:
         a: El veril de sonda.
@@ -453,7 +453,7 @@ categories:
       question: ¿Qué línea de posición es más fiable?
     - category: 10
       category_name: Teoría de la navegación
-      correct_answer: null
+      correct_answer: c
       id: 41
       options:
         a: Su altura.
@@ -466,7 +466,7 @@ categories:
     questions:
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: c
       id: 42
       options:
         a: 034º
@@ -479,7 +479,7 @@ categories:
         de -6º. Calcular rumbo de aguja:'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: a
       id: 43
       options:
         a: 36º 05,4' N - 006º 02,0' W
@@ -492,7 +492,7 @@ categories:
         encontramos?
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 44
       options:
         a: 12h30m
@@ -505,7 +505,7 @@ categories:
         velocidad es de 12 nudos?'
     - category: 11
       category_name: Carta de navegación
-      correct_answer: null
+      correct_answer: b
       id: 45
       options:
         a: 035º
