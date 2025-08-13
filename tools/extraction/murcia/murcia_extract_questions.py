@@ -405,7 +405,7 @@ class MurciaExamExtractor:
                 # Ser muy estricto para evitar cortar opciones que solo contengan números
                 if letter == 'd':  # Solo verificar corte en la última opción
                     # Usar el patrón exacto que se está usando para este examen
-                    pattern_to_use = pattern.pattern if hasattr(pattern, 'pattern') else r'(\d+)\.?\s*-?\s*'
+                    pattern_to_use = r'(\d+)\.?\s*-?\s*'
                     next_question_match = re.search(pattern_to_use, option_text)
                     
                     if next_question_match:
