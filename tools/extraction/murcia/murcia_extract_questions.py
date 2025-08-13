@@ -167,7 +167,6 @@ class MurciaExamExtractor:
         # Manejo específico para comillas de Murcia: < al inicio de citas y = al final
         # Patrón: <texto contenido= se convierte en "texto contenido"
         # Solo aplicar si hay un patrón claro de cita
-        import re
         quote_pattern = r'<([^<>=]+)='
         normalized_text = re.sub(quote_pattern, r'"\1"', normalized_text)
         
