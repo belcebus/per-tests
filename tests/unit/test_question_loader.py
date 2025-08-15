@@ -937,3 +937,163 @@ class TestQuestionLoaderNewMethods:
         # Identificador válido en formato pero que no existe
         with pytest.raises(ValueError, match="No se encontraron preguntas para el examen"):
             loader.get_questions_for_specific_exam("inexistente_9999_enero_test99")
+
+
+class TestQuestionLoaderRealImplementation:
+    """Tests para ejercitar la implementación real y cubrir líneas faltantes."""
+
+    @pytest.fixture
+    def loader_with_real_data(self):
+        """Crear un loader con datos reales para ejercitar implementaciones."""
+        # Crear preguntas reales para testear los métodos
+        metadata1 = QuestionMetadata(
+            title='Examen Madrid', subtitle='Test01', total_questions=10,
+            community='Madrid', year=2023, call='Ordinaria', test_code='Test01',
+            categoria='1'
+        )
+        metadata2 = QuestionMetadata(
+            title='Examen Barcelona', subtitle='Test01', total_questions=15,
+            community='Barcelona', year=2023, call='Extraordinaria', test_code='Test01',
+            categoria='2'
+        )
+        metadata3 = QuestionMetadata(
+            title='Examen Madrid', subtitle='Test02', total_questions=12,
+            community='Madrid', year=2022, call='Ordinaria', test_code='Test02',
+            categoria='1'
+        )
+        
+        questions = [
+            Question(
+                id='q1', enunciado='¿Pregunta 1?',
+                opciones={'a': 'Resp1A', 'b': 'Resp1B'},
+                respuesta_correcta='a', metadata=metadata1
+            ),
+            Question(
+                id='q2', enunciado='¿Pregunta 2?',
+                opciones={'a': 'Resp2A', 'b': 'Resp2B'},
+                respuesta_correcta='a', metadata=metadata2
+            ),
+            Question(
+                id='q3', enunciado='¿Pregunta 3?',
+                opciones={'a': 'Resp3A', 'b': 'Resp3B'},
+                respuesta_correcta='a', metadata=metadata3
+            ),
+        ]
+        
+        loader = QuestionLoader()
+        loader.all_questions = questions
+        return loader
+
+    def test_get_exam_metadata_real_implementation(self, loader_with_real_data):
+        """Test de implementación real para get_exam_metadata (líneas 329-359)."""
+        loader = loader_with_real_data
+        
+        # Llamar a la implementación real
+        metadata = loader.get_exam_metadata()
+        
+        # Verificar estructura
+        assert "comunidades" in metadata
+        assert "anios" in metadata
+        assert "convocatorias_por_comunidad_anio" in metadata
+        
+        # Verificar contenido
+        conv_data = metadata["convocatorias_por_comunidad_anio"]
+        assert "Madrid" in conv_data
+        assert "Barcelona" in conv_data
+        
+        # Verificar estructura jerárquica
+        assert 2023 in conv_data["Madrid"]
+        assert 2022 in conv_data["Madrid"]
+        assert "Ordinaria" in conv_data["Madrid"][2023]
+        assert "Extraordinaria" in conv_data["Barcelona"][2023]
+        
+        # Verificar que los test_codes están ordenados
+        test_codes_madrid_2023 = conv_data["Madrid"][2023]["Ordinaria"]
+        assert isinstance(test_codes_madrid_2023, list)
+        assert "Test01" in test_codes_madrid_2023
+
+    def test_get_available_calls_by_community_year_real(self, loader_with_real_data):
+        """Test de implementación real para get_available_calls_by_community_year (líneas 378-386)."""
+        loader = loader_with_real_data
+        
+        # Probar con Madrid 2023
+        calls = loader.get_available_calls_by_community_year("Madrid", 2023)
+        assert isinstance(calls, list)
+        assert "Ordinaria" in calls
+        assert len(calls) == 1  # Solo hay Ordinaria para Madrid 2023
+        
+        # Probar con Barcelona 2023
+        calls = loader.get_available_calls_by_community_year("Barcelona", 2023)
+        assert "Extraordinaria" in calls
+        assert len(calls) == 1
+        
+        # Probar con combinación que no existe
+        calls = loader.get_available_calls_by_community_year("Madrid", 2025)
+        assert calls == []  # Lista vacía
+
+    def test_get_available_tests_by_criteria_real(self, loader_with_real_data):
+        """Test de implementación real para get_available_tests_by_criteria (líneas 402-427)."""
+        loader = loader_with_real_data
+        
+        # Probar con criterios válidos
+        tests = loader.get_available_tests_by_criteria("Madrid", 2023, "Ordinaria")
+        assert isinstance(tests, list)
+        assert len(tests) == 1
+        
+        # Verificar estructura del test
+        test = tests[0]
+        assert "id" in test
+        assert "title" in test
+        assert "subtitle" in test
+        assert "community" in test
+        assert test["community"] == "Madrid"
+        assert test["title"] == "Examen Madrid"
+        
+        # Probar con criterios que no existen
+        tests = loader.get_available_tests_by_criteria("Madrid", 2025, "Ordinaria")
+        assert tests == []
+
+    def test_question_loader_error_handling_coverage(self):
+        """Test para cubrir líneas de manejo de errores (líneas 466, 474-479)."""
+        loader = QuestionLoader()
+        
+        # Test con loader vacío
+        assert loader.get_available_calls_by_community_year("Madrid", 2023) == []
+        assert loader.get_available_tests_by_criteria("Madrid", 2023, "Ordinaria") == []
+        
+        # Test de get_exam_metadata con loader vacío
+        metadata = loader.get_exam_metadata()
+        assert metadata["comunidades"] == []
+        assert metadata["anios"] == []
+        assert metadata["convocatorias_por_comunidad_anio"] == {}
+
+    def test_additional_edge_cases_for_coverage(self, loader_with_real_data):
+        """Test adicionales para cubrir casos específicos."""
+        loader = loader_with_real_data
+        
+        # Test con múltiples test_codes para la misma combinación
+        # Agregar una pregunta más con el mismo criterio pero diferente test_code
+        metadata_extra = QuestionMetadata(
+            title='Examen Madrid Extra', subtitle='Test03', total_questions=8,
+            community='Madrid', year=2023, call='Ordinaria', test_code='Test03',
+            categoria='3'
+        )
+        
+        extra_question = Question(
+            id='q_extra', enunciado='¿Pregunta extra?',
+            opciones={'a': 'RespExtraA', 'b': 'RespExtraB'},
+            respuesta_correcta='a', metadata=metadata_extra
+        )
+        
+        loader.all_questions.append(extra_question)
+        
+        # Ahora debería haber 2 tests para Madrid 2023 Ordinaria
+        tests = loader.get_available_tests_by_criteria("Madrid", 2023, "Ordinaria")
+        assert len(tests) == 2
+        
+        # Verificar que los test_codes están ordenados en get_exam_metadata
+        metadata = loader.get_exam_metadata()
+        test_codes = metadata["convocatorias_por_comunidad_anio"]["Madrid"][2023]["Ordinaria"]
+        assert test_codes == sorted(test_codes)  # Debe estar ordenado
+        assert "Test01" in test_codes
+        assert "Test03" in test_codes

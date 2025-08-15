@@ -10,8 +10,10 @@ Este módulo maneja toda la lógica de:
 
 import uuid
 import random
+import hashlib
+import re
 from datetime import datetime, timedelta
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Set, Any
 
 from app.models.schemas import (
     Question,
@@ -51,9 +53,157 @@ class ExamService:
         # Servicio de carga de preguntas
         self.question_loader = question_loader
 
+    def _get_question_content_hash(self, question: Question) -> str:
+        """
+        Genera un hash único basado en el contenido de la pregunta.
+
+        Solo considera:
+        - Texto del enunciado (limpio, sin espacios/saltos extra)
+        - Textos de las respuestas ordenadas alfabéticamente (limpios)
+
+        Ignora metadatos, IDs y orden original de respuestas para detectar
+        preguntas idénticas que puedan venir de diferentes exámenes/modelos.
+
+        Args:
+            question: La pregunta de la que generar el hash
+
+        Returns:
+            Hash SHA-256 del contenido normalizado de la pregunta
+        """
+        # Limpiar el enunciado: quitar espacios extra, saltos de línea, etc.
+        clean_enunciado = re.sub(r"\s+", " ", question.enunciado.strip())
+
+        # Limpiar y ordenar alfabéticamente las opciones de respuesta
+        clean_options = []
+        for option_text in question.opciones.values():
+            clean_option = re.sub(r"\s+", " ", option_text.strip())
+            clean_options.append(clean_option)
+
+        # Ordenar alfabéticamente para que el orden no importe
+        clean_options.sort()
+
+        # Crear string con el contenido normalizado
+        content = f"{clean_enunciado}||{'||'.join(clean_options)}"
+
+        # Generar hash SHA-256
+        return hashlib.sha256(content.encode("utf-8")).hexdigest()
+
+    def _select_unique_questions(
+        self, available_questions: List[Question], num_needed: int
+    ) -> List[Question]:
+        """
+        Selecciona preguntas aleatorias evitando duplicados de contenido.
+
+        Usa un algoritmo eficiente O(n) que mantiene un set de hashes
+        para detección rápida de duplicados.
+
+        Args:
+            available_questions: Lista de preguntas disponibles
+            num_needed: Número de preguntas únicas necesarias
+
+        Returns:
+            Lista de preguntas seleccionadas sin duplicados de contenido
+
+        Raises:
+            ValueError: Si no hay suficientes preguntas únicas disponibles
+        """
+        if not available_questions:
+            raise ValueError("No hay preguntas disponibles para seleccionar")
+
+        # Mezclar las preguntas para selección aleatoria
+        shuffled_questions = available_questions.copy()
+        random.shuffle(shuffled_questions)
+
+        selected_questions: List[Question] = []
+        seen_hashes: Set[str] = set()
+        duplicates_found = 0
+        duplicate_details: List[Dict[str, Any]] = (
+            []
+        )  # Para rastrear detalles de duplicados
+
+        for question in shuffled_questions:
+            # Si ya tenemos suficientes preguntas, parar
+            if len(selected_questions) >= num_needed:
+                break
+
+            # Generar hash del contenido de la pregunta
+            content_hash = self._get_question_content_hash(question)
+
+            # Si no hemos visto este contenido antes, añadirla
+            if content_hash not in seen_hashes:
+                selected_questions.append(question)
+                seen_hashes.add(content_hash)
+            else:
+                duplicates_found += 1
+                # Registrar detalles del duplicado
+                duplicate_info = {
+                    "hash": content_hash[:16],
+                    "question_id": question.id,
+                    "enunciado": (
+                        question.enunciado[:80] + "..."
+                        if len(question.enunciado) > 80
+                        else question.enunciado
+                    ),
+                    "metadata": {
+                        "community": getattr(question.metadata, "community", "N/A"),
+                        "year": getattr(question.metadata, "year", "N/A"),
+                        "test_code": getattr(question.metadata, "test_code", "N/A"),
+                        "categoria": getattr(question.metadata, "categoria", "N/A"),
+                    },
+                }
+                duplicate_details.append(duplicate_info)
+
+        # Verificar que conseguimos suficientes preguntas únicas
+        if len(selected_questions) < num_needed:
+            unique_available = len(shuffled_questions) - duplicates_found
+            raise ValueError(
+                f"No hay suficientes preguntas únicas. "
+                f"Necesarias: {num_needed}, "
+                f"Únicas disponibles: {unique_available}, "
+                f"Duplicados encontrados: {duplicates_found}"
+            )
+
+        if duplicates_found > 0:
+            print(
+                f"🔍 Duplicados evitados: {duplicates_found} preguntas con contenido idéntico"
+            )
+
+            # Mostrar detalles de los duplicados si no son demasiados
+            if duplicates_found <= 10:
+                print("   📋 Detalles de duplicados evitados:")
+                for i, dup in enumerate(duplicate_details, 1):
+                    metadata = dup["metadata"]
+                    exam_info = f"{str(metadata['community'])}-{str(metadata['year'])}-{str(metadata['test_code'])}"
+                    print(
+                        f"      {i}. Hash:{dup['hash']}... - {exam_info} - Cat:{str(metadata['categoria'])}"
+                    )
+                    print(f"         Enunciado: {dup['enunciado']}")
+            else:
+                print("   📊 Muchos duplicados detectados. Resumen por fuente:")
+                # Agrupar duplicados por fuente
+                by_community: Dict[str, int] = {}
+                by_year: Dict[str, int] = {}
+                for dup in duplicate_details:
+                    metadata = dup["metadata"]
+                    community = str(metadata["community"])
+                    year = str(metadata["year"])
+
+                    by_community[community] = by_community.get(community, 0) + 1
+                    by_year[year] = by_year.get(year, 0) + 1
+
+                print(
+                    f"      🏛️  Por comunidad: {dict(sorted(by_community.items(), key=lambda x: x[1], reverse=True))}"
+                )
+                print(
+                    f"      📅 Por año: {dict(sorted(by_year.items(), key=lambda x: x[1], reverse=True))}"
+                )
+
+        return selected_questions
+
     def generate_exam(self, request: ExamGenerationRequest) -> GeneratedExam:
         """
         Genera un nuevo examen según los criterios especificados.
+        Previene preguntas duplicadas basándose en contenido.
 
         Args:
             request: Criterios para generar el examen
@@ -78,8 +228,10 @@ class ExamService:
                 f"Solicitadas: {request.num_preguntas}"
             )
 
-        # 2. Seleccionar preguntas aleatorias
-        selected_questions = random.sample(available_questions, request.num_preguntas)
+        # 2. Seleccionar preguntas aleatorias sin duplicados de contenido
+        selected_questions = self._select_unique_questions(
+            available_questions, request.num_preguntas
+        )
 
         # 3. Crear ID único para el examen
         exam_id = f"exam_{uuid.uuid4().hex[:8]}"
@@ -352,8 +504,10 @@ class ExamService:
                     f"para el simulacro"
                 )
 
-            # Seleccionar preguntas aleatorias de esta categoría
-            selected_category_questions = random.sample(cat_questions, num_questions)
+            # Seleccionar preguntas únicas aleatorias de esta categoría
+            selected_category_questions = self._select_unique_questions(
+                cat_questions, num_questions
+            )
 
             # Mezclar el orden dentro de la categoría
             random.shuffle(selected_category_questions)
