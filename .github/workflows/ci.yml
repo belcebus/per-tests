@@ -23,13 +23,13 @@ jobs:
           VERSION=$(make get-version)
           echo "Versión encontrada en pyproject.toml: $VERSION"
           
-          # Verificar si ya existe un release con esta versión (sin prefijo 'v')
-          if gh release view "$VERSION" >/dev/null 2>&1; then
-            echo "❌ Error: La versión $VERSION ya existe como release en GitHub"
+          # Verificar si ya existe un tag con esta versión
+          if git ls-remote --tags origin | grep -q "refs/tags/$VERSION$"; then
+            echo "❌ Error: La versión $VERSION ya existe como tag en GitHub"
             echo "Por favor, actualiza la versión en pyproject.toml antes de hacer el merge"
             exit 1
           else
-            echo "✅ La versión $VERSION no existe como release, continuando..."
+            echo "✅ La versión $VERSION no existe como tag, continuando..."
           fi
         env:
           GH_TOKEN: ${{ github.token }}
