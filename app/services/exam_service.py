@@ -164,39 +164,42 @@ class ExamService:
             )
 
         if duplicates_found > 0:
+            # Logging básico siempre se muestra (importante para operaciones)
             print(
                 f"🔍 Duplicados evitados: {duplicates_found} preguntas con contenido idéntico"
             )
 
-            # Mostrar detalles de los duplicados si no son demasiados
-            if duplicates_found <= 10:
-                print("   📋 Detalles de duplicados evitados:")
-                for i, dup in enumerate(duplicate_details, 1):
-                    metadata = dup["metadata"]
-                    exam_info = f"{str(metadata['community'])}-{str(metadata['year'])}-{str(metadata['test_code'])}"
+            # Logging detallado solo si está habilitado (desarrollo/debug)
+            if settings.verbose_duplicate_logging:
+                # Mostrar detalles de los duplicados si no son demasiados
+                if duplicates_found <= settings.duplicate_details_threshold:
+                    print("   📋 Detalles de duplicados evitados:")
+                    for i, dup in enumerate(duplicate_details, 1):
+                        metadata = dup["metadata"]
+                        exam_info = f"{str(metadata['community'])}-{str(metadata['year'])}-{str(metadata['test_code'])}"
+                        print(
+                            f"      {i}. Hash:{dup['hash']}... - {exam_info} - Cat:{str(metadata['categoria'])}"
+                        )
+                        print(f"         Enunciado: {dup['enunciado']}")
+                else:
+                    print("   📊 Muchos duplicados detectados. Resumen por fuente:")
+                    # Agrupar duplicados por fuente
+                    by_community: Dict[str, int] = {}
+                    by_year: Dict[str, int] = {}
+                    for dup in duplicate_details:
+                        metadata = dup["metadata"]
+                        community = str(metadata["community"])
+                        year = str(metadata["year"])
+
+                        by_community[community] = by_community.get(community, 0) + 1
+                        by_year[year] = by_year.get(year, 0) + 1
+
                     print(
-                        f"      {i}. Hash:{dup['hash']}... - {exam_info} - Cat:{str(metadata['categoria'])}"
+                        f"      🏛️  Por comunidad: {dict(sorted(by_community.items(), key=lambda x: x[1], reverse=True))}"
                     )
-                    print(f"         Enunciado: {dup['enunciado']}")
-            else:
-                print("   📊 Muchos duplicados detectados. Resumen por fuente:")
-                # Agrupar duplicados por fuente
-                by_community: Dict[str, int] = {}
-                by_year: Dict[str, int] = {}
-                for dup in duplicate_details:
-                    metadata = dup["metadata"]
-                    community = str(metadata["community"])
-                    year = str(metadata["year"])
-
-                    by_community[community] = by_community.get(community, 0) + 1
-                    by_year[year] = by_year.get(year, 0) + 1
-
-                print(
-                    f"      🏛️  Por comunidad: {dict(sorted(by_community.items(), key=lambda x: x[1], reverse=True))}"
-                )
-                print(
-                    f"      📅 Por año: {dict(sorted(by_year.items(), key=lambda x: x[1], reverse=True))}"
-                )
+                    print(
+                        f"      📅 Por año: {dict(sorted(by_year.items(), key=lambda x: x[1], reverse=True))}"
+                    )
 
         return selected_questions
 

@@ -7,10 +7,14 @@ from unittest.mock import Mock, patch
 
 from app.services.exam_service import ExamService
 from app.models.schemas import Question, QuestionMetadata, ExamGenerationRequest
+from config.settings import settings
 
 
 class TestDuplicateDetection:
     """Tests para la funcionalidad de detección de preguntas duplicadas."""
+    
+    # Constante derivada de la configuración para evitar números mágicos
+    DUPLICATE_THRESHOLD = settings.duplicate_details_threshold
     
     def test_get_question_content_hash_identical_questions(self):
         """Test que preguntas idénticas generan el mismo hash."""
@@ -186,22 +190,22 @@ class TestDuplicateDetection:
             Question(
                 id='q1', enunciado='¿Pregunta A?',
                 opciones={'a': 'RespA1', 'b': 'RespA2'},
-                respuesta_correcta='a', metadata=metadata
+                respuesta_correcta='b', metadata=metadata  # Respuesta realista variada
             ),
             Question(
                 id='q2', enunciado='¿Pregunta A?',  # Duplicada
                 opciones={'a': 'RespA1', 'b': 'RespA2'},
-                respuesta_correcta='a', metadata=metadata
+                respuesta_correcta='a', metadata=metadata  # Diferente respuesta pero mismo contenido
             ),
             Question(
                 id='q3', enunciado='¿Pregunta B?',
                 opciones={'a': 'RespB1', 'b': 'RespB2'},
-                respuesta_correcta='a', metadata=metadata
+                respuesta_correcta='c', metadata=metadata  # Respuesta variada
             ),
             Question(
                 id='q4', enunciado='¿Pregunta A?',  # Otra duplicada
                 opciones={'b': 'RespA2', 'a': 'RespA1'},  # Orden diferente
-                respuesta_correcta='a', metadata=metadata
+                respuesta_correcta='d', metadata=metadata  # Respuesta diferente pero mismo contenido
             ),
         ]
         
@@ -435,10 +439,12 @@ class TestDuplicateDetection:
             assert result.exam_id.startswith('exam_'), "Debe tener ID de examen válido"
     
     def test_duplicate_traces_with_many_duplicates(self):
-        """Test específico para activar las trazas de resumen estadístico (líneas 170-183)."""
+        """Test específico para activar las trazas de resumen estadístico (cuando hay más duplicados que el threshold)."""
         service = ExamService()
         
-        # Crear EXACTAMENTE 11 preguntas idénticas para garantizar >10 duplicados
+        # Crear EXACTAMENTE threshold+1 preguntas idénticas para garantizar logging de resumen
+        # Esto hace el test flexible a cambios en la configuración
+        num_duplicates = self.DUPLICATE_THRESHOLD + 1
         questions = []
         
         # Todas las preguntas serán idénticas excepto por los IDs y metadatos
@@ -448,8 +454,8 @@ class TestDuplicateDetection:
         communities = ['Madrid', 'Barcelona', 'Valencia', 'Sevilla', 'Murcia']
         years = [2020, 2021, 2022, 2023, 2024]
         
-        # Crear 11 preguntas idénticas
-        for i in range(11):
+        # Crear threshold+1 preguntas idénticas
+        for i in range(num_duplicates):
             metadata = QuestionMetadata(
                 title=f'Test {i}', subtitle='Test01', total_questions=10,
                 community=communities[i % len(communities)],
@@ -495,8 +501,8 @@ class TestDuplicateDetection:
         assert all(h == hashes[0] for h in hashes), "Todas las preguntas duplicadas deben tener el mismo hash"
         assert unique_hash != hashes[0], "La pregunta única debe tener hash diferente"
         
-        # Ahora hacer la selección - deberíamos ver exactamente 10 duplicados descartados
-        # (11 duplicadas - 1 seleccionada = 10 descartadas)
+        # Ahora hacer la selección - deberíamos ver exactamente num_duplicates-1 duplicados descartados  
+        # (num_duplicates duplicadas - 1 seleccionada = num_duplicates-1 descartadas)
         selected = service._select_unique_questions(questions, 2)
         
         # Debe seleccionar exactamente 2: 1 de las duplicadas + 1 única
@@ -513,3 +519,128 @@ class TestDuplicateDetection:
         # Test del caso donde available_questions está vacío (línea 109)
         with pytest.raises(ValueError, match="No hay preguntas disponibles para seleccionar"):
             service._select_unique_questions([], 1)
+
+    def test_duplicate_logging_threshold_flexibility(self):
+        """Test para verificar que el threshold de logging es configurable y flexible."""
+        service = ExamService()
+        
+        # Verificar que el threshold viene de la configuración
+        assert hasattr(settings, 'duplicate_details_threshold'), "Settings debe tener duplicate_details_threshold"
+        assert isinstance(settings.duplicate_details_threshold, int), "Threshold debe ser entero"
+        assert settings.duplicate_details_threshold > 0, "Threshold debe ser positivo"
+        
+        # Verificar que nuestro test usa el valor correcto
+        assert self.DUPLICATE_THRESHOLD == settings.duplicate_details_threshold, \
+            "La constante del test debe coincidir con la configuración"
+        
+        print(f"✅ Duplicate logging threshold configurado en: {self.DUPLICATE_THRESHOLD}")
+
+    def test_questions_with_different_correct_answers_are_duplicates(self):
+        """
+        Test específico que documenta nuestra filosofía: preguntas con mismo enunciado y opciones
+        pero diferente respuesta_correcta SÍ se consideran duplicados.
+        
+        Esto es por diseño, ya que el valor educativo es el mismo independientemente de cuál
+        sea la opción marcada como correcta (que puede cambiar por reordenamiento de opciones
+        o errores administrativos).
+        """
+        service = ExamService()
+        
+        # Crear metadatos diferentes para simular preguntas de diferentes exámenes
+        metadata1 = QuestionMetadata(
+            title='Examen Madrid 2023', subtitle='Test01', total_questions=45,
+            community='Madrid', year=2023, call='Abril', test_code='Test01',
+            categoria='6'
+        )
+        
+        metadata2 = QuestionMetadata(
+            title='Examen Murcia 2023', subtitle='Test02', total_questions=45,
+            community='Murcia', year=2023, call='Junio', test_code='Test02',
+            categoria='6'
+        )
+        
+        # Crear dos preguntas con MISMO contenido (enunciado + opciones) pero DIFERENTE respuesta_correcta
+        question1 = Question(
+            id='q1',
+            enunciado='¿Cuál es la velocidad máxima permitida en puerto?',
+            opciones={'a': '3 nudos', 'b': '5 nudos', 'c': '7 nudos', 'd': '10 nudos'},
+            respuesta_correcta='b',  # Respuesta correcta: 5 nudos
+            metadata=metadata1
+        )
+        
+        question2 = Question(
+            id='q2', 
+            enunciado='¿Cuál es la velocidad máxima permitida en puerto?',
+            opciones={'a': '3 nudos', 'b': '5 nudos', 'c': '7 nudos', 'd': '10 nudos'},
+            respuesta_correcta='c',  # DIFERENTE respuesta correcta: 7 nudos
+            metadata=metadata2
+        )
+        
+        # Generar hashes - deberían ser IDÉNTICOS según nuestra filosofía
+        hash1 = service._get_question_content_hash(question1)
+        hash2 = service._get_question_content_hash(question2)
+        
+        # VERIFICACIÓN PRINCIPAL: Mismo contenido + diferente respuesta_correcta = MISMO HASH
+        assert hash1 == hash2, \
+            f"Preguntas con mismo contenido deben tener mismo hash independientemente de respuesta_correcta. " \
+            f"Hash1: {hash1}, Hash2: {hash2}"
+        
+        # Verificar que el algoritmo de selección las trata como duplicados
+        questions = [question1, question2]
+        selected = service._select_unique_questions(questions, 1)  # Solo pedir 1 porque son duplicados
+        
+        # Debe seleccionar solo 1 pregunta (la primera encontrada) porque son duplicados
+        assert len(selected) == 1, \
+            f"Debe seleccionar solo 1 pregunta porque son duplicados, pero seleccionó {len(selected)}"
+        
+        print(f"✅ Filosofía confirmada: mismo contenido + diferente respuesta_correcta = duplicado detectado")
+
+    def test_realistic_answer_variations_in_duplicates(self):
+        """
+        Test que usa respuestas correctas variadas y realistas en lugar del hardcodeado 'a'.
+        Esto mejora la calidad del test haciéndolo más representativo de casos reales.
+        """
+        service = ExamService()
+        
+        # Crear preguntas con diferentes respuestas correctas pero contenido variado
+        questions = []
+        
+        # Respuestas correctas realistas distribuidas
+        correct_answers = ['a', 'b', 'c', 'd', 'b', 'a', 'c', 'd', 'a', 'b']
+        
+        for i, correct_answer in enumerate(correct_answers):
+            metadata = QuestionMetadata(
+                title=f'Examen {i+1}', subtitle='Test01', total_questions=45,
+                community='Madrid', year=2023, call='Abril', test_code=f'Test{i+1:02d}',
+                categoria=str((i % 11) + 1)  # Rotar entre categorías 1-11
+            )
+            
+            question = Question(
+                id=f'q{i+1}',
+                enunciado=f'¿Pregunta única número {i+1} sobre navegación?',
+                opciones={
+                    'a': f'Opción A de pregunta {i+1}',
+                    'b': f'Opción B de pregunta {i+1}', 
+                    'c': f'Opción C de pregunta {i+1}',
+                    'd': f'Opción D de pregunta {i+1}'
+                },
+                respuesta_correcta=correct_answer,  # Respuesta variada y realista
+                metadata=metadata
+            )
+            questions.append(question)
+        
+        # Todas las preguntas son únicas (contenido diferente)
+        selected = service._select_unique_questions(questions, len(questions))
+        
+        # Debe seleccionar todas porque no hay duplicados
+        assert len(selected) == len(questions), \
+            f"Todas las preguntas son únicas, debe seleccionar {len(questions)} pero seleccionó {len(selected)}"
+        
+        # Verificar que todas tienen hashes diferentes
+        hashes = [service._get_question_content_hash(q) for q in questions]
+        unique_hashes = set(hashes)
+        
+        assert len(unique_hashes) == len(questions), \
+            f"Todas las preguntas deben tener hashes únicos. Esperados: {len(questions)}, Únicos: {len(unique_hashes)}"
+        
+        print(f"✅ Test con respuestas variadas: {len(questions)} preguntas únicas detectadas correctamente")
