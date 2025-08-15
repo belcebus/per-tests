@@ -20,7 +20,7 @@ jobs:
       - name: Verificar que la versión no existe como release
         run: |
           # Extraer la versión del pyproject.toml usando make get-version
-          VERSION=$(make get-version)
+          VERSION=$(make get-version 2>/dev/null)
           echo "Versión encontrada en pyproject.toml: $VERSION"
           
           # Debug: Listar todos los tags disponibles
@@ -30,7 +30,7 @@ jobs:
           
           # Verificar si ya existe un tag con esta versión
           echo "🔍 Buscando tag exacto: refs/tags/$VERSION"
-          if git ls-remote --tags origin | grep -q "refs/tags/$VERSION$"; then
+          if git ls-remote --tags origin | grep -q "refs/tags/$VERSION\$"; then
             echo "❌ Error: La versión $VERSION ya existe como tag en GitHub"
             echo "Por favor, actualiza la versión en pyproject.toml antes de hacer el merge"
             exit 1
