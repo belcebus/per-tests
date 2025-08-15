@@ -21,8 +21,8 @@ install-toml-cli: venv
 install-toml-cli-quiet: venv
 	@$(PYTHON_CMD) -m pip install toml-cli > /dev/null 2>&1
 
-# Extrae la versión del pyproject.toml (solo retorna la versión, sin output adicional)
-get-version: install-toml-cli-quiet
+# Extrae la versión del pyproject.toml (asume que toml-cli ya está instalado)
+get-version:
 	@venv/bin/toml get --toml-path pyproject.toml project.version
 
 # Makefile para comandos de testing del proyecto PER Tests

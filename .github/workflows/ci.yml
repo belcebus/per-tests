@@ -17,10 +17,14 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Verificar que la versión no existe como release
+      - name: Instalar toml-cli
+        run: |
+          make install-toml-cli
+
+      - name: Verificar que la versión no existe como tag
         run: |
           # Extraer la versión del pyproject.toml usando make get-version
-          VERSION=$(make get-version 2>/dev/null)
+          VERSION=$(make get-version)
           echo "Versión encontrada en pyproject.toml: $VERSION"
           
           # Debug: Listar todos los tags disponibles
