@@ -161,6 +161,19 @@ class Settings(BaseSettings):
         le=100,
     )
 
+    # Configuración de logging de duplicados
+    verbose_duplicate_logging: bool = Field(
+        default=False,
+        alias="PER_VERBOSE_DUPLICATE_LOGGING",
+        description="Habilitar logging detallado de duplicados encontrados (desarrollo/debug)",
+    )
+
+    duplicate_details_threshold: int = Field(
+        default=10,
+        alias="PER_DUPLICATE_DETAILS_THRESHOLD",
+        description="Máximo número de duplicados para mostrar detalles individuales (vs resumen agrupado)",
+    )
+
     # ==========================================
     # CONFIGURACIÓN DE PROCESAMIENTO
     # ==========================================

@@ -596,18 +596,35 @@ class TestEdgeCases:
         result = service.correct_exam(submission)
         assert result.puntuacion_total == "1/1"
     
-    @patch('app.services.exam_service.random.sample')
-    def test_random_sampling_edge_case(self, mock_sample):
-        """Test de manejo de errores en sampling aleatorio."""
-        mock_sample.side_effect = ValueError("Sample larger than population")
-        
+    def test_random_sampling_edge_case(self):
+        """Test de manejo de errores cuando no hay suficientes preguntas únicas."""
         service = ExamService()
         request = ExamGenerationRequest(num_preguntas=5, comunidades=["Madrid"])
         
-        with patch('app.services.exam_service.question_loader') as mock_loader:
-            mock_loader.get_questions_by_criteria.return_value = [Mock()] * 10
+        # Patchear el question_loader de la instancia del servicio
+        with patch.object(service, 'question_loader') as mock_loader:
+            # Crear un mock de metadata válido
+            mock_metadata = Mock()
+            mock_metadata.title = "Test"
+            mock_metadata.subtitle = "Test01"
+            mock_metadata.total_questions = 10
+            mock_metadata.community = "Madrid"
+            mock_metadata.year = 2023
+            mock_metadata.call = "Ordinaria"
+            mock_metadata.test_code = "Test01"
             
-            with pytest.raises(ValueError):
+            # Simulamos que hay 10 preguntas pero todas son duplicadas (mismo contenido)
+            mock_question = Mock()
+            mock_question.id = "test_q1"
+            mock_question.enunciado = "¿Cuál es la capital de España?"
+            mock_question.opciones = {"a": "Madrid", "b": "Barcelona"}
+            mock_question.respuesta_correcta = "a"
+            mock_question.metadata = mock_metadata
+            
+            # Todas las preguntas tienen el mismo contenido (10 copias de la misma pregunta)
+            mock_loader.get_questions_by_criteria.return_value = [mock_question] * 10
+            
+            with pytest.raises(ValueError, match="No hay suficientes preguntas únicas"):
                 service.generate_exam(request)
 
 
