@@ -12,6 +12,11 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
       - name: Verificar que la versión no existe como release
         run: |
           # Extraer la versión del pyproject.toml usando make get-version
@@ -28,12 +33,6 @@ jobs:
           fi
         env:
           GH_TOKEN: ${{ github.token }}
-
-      - name: Configurar Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
 
       - name: Instalar dependencias de desarrollo
         run: |
