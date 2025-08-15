@@ -11,6 +11,20 @@ quality: venv
 install-lint: venv
 	@echo "$(GREEN)📦 Instalando paquete con linters y analizadores...$(NC)"
 	$(PYTHON_CMD) -m pip install -e ".[lint]"
+
+# Instala solo toml-cli para operaciones con archivos TOML
+install-toml-cli: venv
+	@echo "$(GREEN)📦 Instalando toml-cli...$(NC)"
+	@$(PYTHON_CMD) -m pip install toml-cli > /dev/null 2>&1
+
+# Instala toml-cli silenciosamente (para uso interno)
+install-toml-cli-quiet: venv
+	@$(PYTHON_CMD) -m pip install toml-cli > /dev/null 2>&1
+
+# Extrae la versión del pyproject.toml (solo retorna la versión, sin output adicional)
+get-version: install-toml-cli-quiet
+	@venv/bin/toml get --toml-path pyproject.toml project.version
+
 # Makefile para comandos de testing del proyecto PER Tests
 # Facilita la ejecución de diferentes tipos de tests con opciones específicas
 # 
@@ -40,6 +54,10 @@ help:
 	@echo "  make install-dev     - Instalar con dependencias de desarrollo"
 	@echo "  make install-tools   - Instalar con herramientas de procesamiento"
 	@echo "  make install-full    - Instalar todas las dependencias"
+	@echo "  make install-toml-cli - Instalar toml-cli para operaciones TOML"
+	@echo ""
+	@echo "$(YELLOW)Utilidades:$(NC)"
+	@echo "  make get-version     - Extraer versión del pyproject.toml"
 	@echo ""
 	@echo "$(YELLOW)Tests rápidos (sin cobertura):$(NC)"
 	@echo "  make test-fast        - Ejecutar todos los tests sin cobertura (rápido)"

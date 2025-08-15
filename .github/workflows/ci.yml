@@ -12,6 +12,23 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
+      - name: Verificar que la versión no existe como release
+        run: |
+          # Extraer la versión del pyproject.toml usando make get-version
+          VERSION=$(make get-version)
+          echo "Versión encontrada en pyproject.toml: $VERSION"
+          
+          # Verificar si ya existe un release con esta versión
+          if gh release view "v$VERSION" >/dev/null 2>&1; then
+            echo "❌ Error: La versión v$VERSION ya existe como release en GitHub"
+            echo "Por favor, actualiza la versión en pyproject.toml antes de hacer el merge"
+            exit 1
+          else
+            echo "✅ La versión v$VERSION no existe como release, continuando..."
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:

@@ -113,6 +113,11 @@ pip install -e ".[full]"
 make install-lint
 # o manualmente:
 pip install -e ".[lint]"
+
+# Instalación de toml-cli para operaciones con archivos TOML
+make install-toml-cli
+# o manualmente:
+pip install toml-cli
 ```
 
 ### 📦 **Instalación Legacy (Solo si es necesario)**
@@ -141,6 +146,8 @@ El proyecto incluye un Makefile completo que simplifica todas las tareas de desa
 
 #### **Comandos útiles y calidad de código:**
    - `make install-dev` — instala dependencias de desarrollo
+   - `make install-toml-cli` — instala toml-cli para operaciones TOML
+   - `make get-version` — extrae versión del pyproject.toml
    - `make test-fast` — ejecuta todos los tests sin cobertura (rápido)
    - `make test-unit` — ejecuta solo tests unitarios
    - `make test-integration` — ejecuta solo tests de integración
@@ -205,8 +212,9 @@ make run-prod       # Producción (4 workers)
 make run-custom     # Variables de entorno personalizadas
 ```
 
-#### **Mantenimiento:**
+#### **Mantenimiento y Utilidades:**
 ```bash
+make get-version    # Extraer versión actual del pyproject.toml
 make clean          # Limpiar archivos temporales
 make help           # Ver todos los comandos disponibles
 ```
@@ -728,9 +736,20 @@ Estado actual de la suite de tests:
 
 El proyecto incluye tres workflows de GitHub Actions:
 
-- **CI**: Ejecuta automáticamente los tests en cada pull request a la rama `main`, usando solo dependencias de desarrollo ([dev]). Puedes ver el workflow en `.github/workflows/ci.yml`.
+- **CI**: Ejecuta automáticamente los tests en cada pull request a la rama `main`. Incluye una **validación previa de versión** que verifica si la versión en `pyproject.toml` ya existe como release en GitHub, evitando releases duplicados. Usa solo dependencias de desarrollo ([dev]). Puedes ver el workflow en `.github/workflows/ci.yml`.
 - **Security**: Ejecuta el análisis de seguridad (Semgrep) en un workflow independiente, usando solo dependencias de seguridad ([security]).
 - **Deploy**: Despliega automáticamente la aplicación a Azure Web App cuando se crea una release o se ejecuta manualmente. Incluye validación con tests antes del despliegue.
+
+#### **🔒 Validación de Versión en PRs**
+
+El workflow de CI incluye una nueva validación que se ejecuta **antes** de los tests para mayor eficiencia:
+
+1. **Extrae la versión** del `pyproject.toml` usando `make get-version`
+2. **Verifica en GitHub** si ya existe un release con esa versión
+3. **Bloquea el merge** si encuentra una versión duplicada
+4. **Continúa con el CI** si la versión es nueva
+
+Esta validación previene releases accidentales con versiones duplicadas y mantiene la integridad del versionado del proyecto.
 
 Esto permite que la instalación de dependencias en CI sea más rápida y modular, y que el análisis de seguridad se ejecute solo cuando sea necesario.
 
