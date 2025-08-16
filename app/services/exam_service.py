@@ -29,6 +29,10 @@ from app.models.schemas import (
 from app.services.question_loader import question_loader
 from config.settings import settings
 
+# Constantes de configuración
+EXAM_TYPES_WITH_CORRECT_ANSWERS = {"normal", "per"}
+"""Tipos de examen que incluyen respuestas correctas para práctica"""
+
 
 class ExamService:
     """
@@ -262,7 +266,7 @@ class ExamService:
         self.active_exams[exam_id] = cached_exam
 
         # 6. Crear versión para cliente (con o sin respuestas correctas según el tipo)
-        if request.tipo_examen in ["normal", "per"]:
+        if request.tipo_examen in EXAM_TYPES_WITH_CORRECT_ANSWERS:
             # Para exámenes de práctica (normal y per), incluir respuestas correctas
             client_questions = [
                 QuestionForClient(

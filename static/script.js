@@ -35,6 +35,16 @@ const API_BASE = '/api';
 // ================================
 
 /**
+ * Verifica si el tipo de examen permite mostrar respuestas correctas
+ * 
+ * IMPORTANTE: Debe mantenerse sincronizada con EXAM_TYPES_WITH_CORRECT_ANSWERS 
+ * en app/services/exam_service.py
+ */
+function isExamTypeWithAnswers(examType) {
+    return examType === 'normal' || examType === 'per';
+}
+
+/**
  * Muestra/oculta el overlay de carga
  */
 function showLoading(show = true) {
@@ -643,7 +653,7 @@ function updateNavigationButtons(index) {
     
     // Botón Ver Respuesta - solo para exámenes de práctica (normal) que tengan respuestas correctas
     const currentQuestion = currentExam.questions[index];
-    const isNormalExam = currentExam.metadata && (currentExam.metadata.tipo_examen === 'normal' || currentExam.metadata.tipo_examen === 'per');
+    const isNormalExam = currentExam.metadata && isExamTypeWithAnswers(currentExam.metadata.tipo_examen);
     const hasCorrectAnswer = currentQuestion && currentQuestion.respuesta_correcta;
     const alreadyUsedHelp = questionsWithHelp.has(currentQuestion.id);
     
@@ -727,7 +737,9 @@ function toggleCorrectAnswer() {
         console.log('🔍 Ayuda usada para pregunta:', currentQuestion.id);
         
         // Seleccionar automáticamente la respuesta correcta (pasamos el elemento DOM)
-        selectOption(correctElement);
+        if (correctElement) {
+            selectOption(correctElement);
+        }
     }
 }
 
