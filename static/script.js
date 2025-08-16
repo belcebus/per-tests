@@ -16,6 +16,7 @@
 let currentExam = null;          // Examen actual
 let currentQuestionIndex = 0;    // Índice de pregunta actual
 let userAnswers = {};           // Respuestas del usuario
+let questionsWithHelp = new Set(); // Preguntas que usaron ayuda (Ver Respuesta)
 let examStartTime = null;       // Tiempo de inicio del examen
 let timerInterval = null;       // Intervalo del cronómetro
 let examType = 'normal';        // 'normal', 'simulacro' o 'especifico'
@@ -301,10 +302,7 @@ async function generateExam() {
             // Generar examen normal o simulacro
             const config = getExamConfig();
             
-            // Añadir tipo_examen si es simulacro
-            if (examType === 'simulacro') {
-                config.tipo_examen = 'simulacro';
-            }
+            console.log('🔍 DEBUG generateExam - config enviado:', config);
             
             exam = await apiRequest('/exams/generate', {
                 method: 'POST',
@@ -312,9 +310,13 @@ async function generateExam() {
             });
         }
         
+        console.log('📥 DEBUG generateExam - examen recibido:', exam);
+        console.log('📋 DEBUG generateExam - metadata:', exam.metadata);
+        
         currentExam = exam;
         currentQuestionIndex = 0;
         userAnswers = {};
+        questionsWithHelp.clear(); // Resetear preguntas con ayuda
         startExam();
         
     } catch (error) {
@@ -361,7 +363,8 @@ function getExamConfig() {
         num_preguntas: numPreguntas,
         categorias: categorias.length > 0 ? categorias : null,
         anios: anios.length > 0 ? anios : null,
-        comunidades: comunidades.length > 0 ? comunidades : null
+        comunidades: comunidades.length > 0 ? comunidades : null,
+        tipo_examen: examType  // Agregar el tipo de examen
     };
 }
 
@@ -556,13 +559,43 @@ function showQuestion(index) {
     });
     // Limpiar cualquier selección previa (por si el DOM mantiene clases)
     document.querySelectorAll('.option.selected').forEach(opt => opt.classList.remove('selected'));
+    document.querySelectorAll('.option.correct-answer').forEach(opt => opt.classList.remove('correct-answer'));
+    document.querySelectorAll('.option.disabled').forEach(opt => {
+        opt.classList.remove('disabled');
+        opt.style.pointerEvents = '';
+        opt.style.opacity = '';
+    });
+    
     // Restaurar respuesta previa si existe (solo dentro del mismo examen)
     const questionId = question.id;
     if (userAnswers[questionId]) {
         const selectedOption = document.querySelector(`.option[data-value="${userAnswers[questionId]}"]`);
         if (selectedOption) {
             selectedOption.classList.add('selected');
+            
+            // Si esta pregunta usó ayuda, también restaurar el estado visual de ayuda
+            if (questionsWithHelp.has(questionId)) {
+                // Verificar si es una pregunta anulada
+                if (question.respuesta_correcta && question.respuesta_correcta.toLowerCase() === 'anulada') {
+                    // Para preguntas anuladas, marcar todas las opciones como correctas
+                    document.querySelectorAll('.option').forEach(opt => {
+                        opt.classList.add('correct-answer');
+                    });
+                } else {
+                    // Para preguntas normales, marcar solo la seleccionada
+                    selectedOption.classList.add('correct-answer');
+                }
+            }
         }
+    }
+    
+    // Si esta pregunta usó ayuda, bloquear todas las opciones
+    if (questionsWithHelp.has(questionId)) {
+        document.querySelectorAll('.option').forEach(opt => {
+            opt.classList.add('disabled');
+            opt.style.pointerEvents = 'none';
+            opt.style.opacity = '0.7';
+        });
     }
     
     // Actualizar botones de navegación
@@ -594,6 +627,7 @@ function updateNavigationButtons(index) {
     const btnAnterior = document.getElementById('btn-anterior');
     const btnSiguiente = document.getElementById('btn-siguiente');
     const btnFinalizar = document.getElementById('btn-finalizar');
+    const btnVerRespuesta = document.getElementById('btn-ver-respuesta');
     
     // Botón anterior
     btnAnterior.style.display = index > 0 ? 'inline-block' : 'none';
@@ -605,6 +639,18 @@ function updateNavigationButtons(index) {
     } else {
         btnSiguiente.style.display = 'none';
         btnFinalizar.style.display = 'inline-block';
+    }
+    
+    // Botón Ver Respuesta - solo para exámenes de práctica (normal) que tengan respuestas correctas
+    const currentQuestion = currentExam.questions[index];
+    const isNormalExam = currentExam.metadata && (currentExam.metadata.tipo_examen === 'normal' || currentExam.metadata.tipo_examen === 'per');
+    const hasCorrectAnswer = currentQuestion && currentQuestion.respuesta_correcta;
+    const alreadyUsedHelp = questionsWithHelp.has(currentQuestion.id);
+    
+    if (isNormalExam && hasCorrectAnswer && !alreadyUsedHelp) {
+        btnVerRespuesta.style.display = 'inline-block';
+    } else {
+        btnVerRespuesta.style.display = 'none';
     }
 }
 
@@ -625,6 +671,63 @@ function nextQuestion() {
     if (currentQuestionIndex < currentExam.questions.length - 1) {
         currentQuestionIndex++;
         showQuestion(currentQuestionIndex);
+    }
+}
+
+/**
+ * Muestra/oculta la respuesta correcta de la pregunta actual
+ */
+function toggleCorrectAnswer() {
+    const currentQuestion = currentExam.questions[currentQuestionIndex];
+    
+    if (!currentQuestion || !currentQuestion.respuesta_correcta) {
+        alert('No hay respuesta correcta disponible para esta pregunta.');
+        return;
+    }
+    
+    // Verificar si es una pregunta anulada
+    if (currentQuestion.respuesta_correcta.toLowerCase() === 'anulada') {
+        // Para preguntas anuladas, mostrar todas las opciones como correctas
+        const allOptions = document.querySelectorAll('.option');
+        const isShowing = !allOptions[0].classList.contains('correct-answer');
+        
+        allOptions.forEach(option => {
+            if (isShowing) {
+                option.classList.add('correct-answer');
+            } else {
+                option.classList.remove('correct-answer');
+            }
+        });
+        
+        if (isShowing) {
+            questionsWithHelp.add(currentQuestion.id);
+            console.log('🔍 Ayuda usada para pregunta anulada:', currentQuestion.id);
+            
+            // Mostrar mensaje explicativo
+            alert('Esta pregunta está anulada. Todas las opciones son válidas. Puedes seleccionar cualquiera.');
+        }
+        
+        return;
+    }
+    
+    // Comportamiento normal para preguntas no anuladas
+    const correctElement = document.querySelector(`.option[data-value="${currentQuestion.respuesta_correcta}"]`);
+    
+    if (!correctElement) {
+        console.error('No se encontró el elemento de la opción correcta');
+        return;
+    }
+    
+    // Toggle la clase de respuesta correcta
+    const isShowing = correctElement.classList.toggle('correct-answer');
+    
+    // Si estamos mostrando la respuesta, registrar que se usó ayuda
+    if (isShowing) {
+        questionsWithHelp.add(currentQuestion.id);
+        console.log('🔍 Ayuda usada para pregunta:', currentQuestion.id);
+        
+        // Seleccionar automáticamente la respuesta correcta (pasamos el elemento DOM)
+        selectOption(correctElement);
     }
 }
 
@@ -650,12 +753,14 @@ async function finishExam() {
     
     try {
         // Enviar respuestas para corrección
+        const requestData = {
+            exam_id: currentExam.exam_id,
+            respuestas: userAnswers
+        };
+        
         const result = await apiRequest('/exams/correct', {
             method: 'POST',
-            body: JSON.stringify({
-                exam_id: currentExam.exam_id,
-                respuestas: userAnswers
-            })
+            body: JSON.stringify(requestData)
         });
         
         // Mostrar resultados
@@ -685,6 +790,38 @@ function showResults(result) {
     } else {
         statusElement.textContent = '❌ SUSPENDIDO';
         statusElement.className = 'score-status suspendido';
+    }
+    
+    // Calcular estadísticas con ayuda
+    let correctasSinAyuda = 0;
+    let correctasConAyuda = 0;
+    let incorrectas = 0;
+    
+    result.preguntas_detalle.forEach((detail, index) => {
+        if (detail.es_correcta) {
+            if (questionsWithHelp.has(detail.question_id)) {
+                correctasConAyuda++;
+            } else {
+                correctasSinAyuda++;
+            }
+        } else {
+            incorrectas++;
+        }
+    });
+    
+    // Mostrar estadísticas detalladas si se usó ayuda
+    if (questionsWithHelp.size > 0) {
+        const detailedStats = document.createElement('div');
+        detailedStats.className = 'detailed-stats';
+        detailedStats.innerHTML = `
+            <h4>📊 Estadísticas Detalladas</h4>
+            <div class="stats-grid">
+                <div class="stat-item correct">✅ Correctas sin ayuda: ${correctasSinAyuda}</div>
+                <div class="stat-item helped">🔍 Correctas con ayuda: ${correctasConAyuda}</div>
+                <div class="stat-item incorrect">❌ Incorrectas: ${incorrectas}</div>
+            </div>
+        `;
+        document.querySelector('.results-summary').appendChild(detailedStats);
     }
     
     // Resultados por categoría
@@ -720,8 +857,12 @@ function showResults(result) {
             let claseOpcion = 'option-reference';
             const esCorrecta = detail.respuestas_correctas_lista.includes(letra);
             const esRespuestaUsuario = letra === detail.respuesta_usuario;
+            const usoAyuda = questionsWithHelp.has(detail.question_id);
+            
             if (esCorrecta) claseOpcion += ' correct-option';
             if (esRespuestaUsuario && !detail.es_correcta) claseOpcion += ' user-wrong-option';
+            if (usoAyuda && esRespuestaUsuario) claseOpcion += ' helped-question';
+            
             // Indicadores
             let indicadores = '';
             if (esCorrecta) {
@@ -733,6 +874,9 @@ function showResults(result) {
             }
             if (esRespuestaUsuario && !detail.es_correcta) {
                 indicadores += '✗';
+            }
+            if (usoAyuda && esRespuestaUsuario) {
+                indicadores += ' 🔍';
             }
             const divOpt = document.createElement('div');
             divOpt.className = claseOpcion;
@@ -916,7 +1060,14 @@ function newExam() {
     currentExam = null;
     currentQuestionIndex = 0;
     userAnswers = {};
+    questionsWithHelp.clear(); // Resetear preguntas con ayuda
     stopTimer();
+    
+    // Limpiar estadísticas detalladas del DOM
+    const detailedStats = document.querySelector('.detailed-stats');
+    if (detailedStats) {
+        detailedStats.remove();
+    }
     
     // Volver a la pantalla de configuración
     showScreen('exam-config');
@@ -955,6 +1106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('btn-generar').addEventListener('click', generateExam);
     document.getElementById('btn-anterior').addEventListener('click', previousQuestion);
     document.getElementById('btn-siguiente').addEventListener('click', nextQuestion);
+    document.getElementById('btn-ver-respuesta').addEventListener('click', toggleCorrectAnswer);
     document.getElementById('btn-finalizar').addEventListener('click', finishExam);
     document.getElementById('btn-nuevo-examen').addEventListener('click', newExam);
     

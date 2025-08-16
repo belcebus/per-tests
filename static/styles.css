@@ -235,6 +235,15 @@ select:focus, input:focus {
     background: #218838;
 }
 
+.btn-info {
+    background: #17a2b8;
+    color: white;
+}
+
+.btn-info:hover {
+    background: #138496;
+}
+
 .button-group {
     display: flex;
     gap: 1rem;
@@ -346,6 +355,49 @@ select:focus, input:focus {
     color: white;
 }
 
+.option.correct-answer {
+    border-color: #28a745;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+}
+
+.option.correct-answer::after {
+    content: " ✓";
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Estilo especial para preguntas anuladas (todas las opciones son correctas) */
+.option.correct-answer.disabled::after {
+    content: " ✓ (anulada)";
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Opciones deshabilitadas (después de usar ayuda) */
+.option.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: #f8f9fa;
+    border-color: #e9ecef;
+    color: #6c757d;
+}
+
+.option.disabled:hover {
+    background: #f8f9fa;
+    border-color: #e9ecef;
+    transform: none;
+    box-shadow: none;
+}
+
+.option.disabled .option-letter {
+    background: #6c757d;
+    color: #fff;
+}
+
 .option-letter {
     background: #667eea;
     color: white;
@@ -428,6 +480,47 @@ select:focus, input:focus {
 .score-details {
     font-size: 1.2rem;
     color: #666;
+}
+
+.detailed-stats {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+}
+
+.detailed-stats h4 {
+    margin: 0 0 1rem 0;
+    color: #495057;
+    font-size: 1rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+}
+
+.stat-item {
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.stat-item.correct {
+    background: #d4edda;
+    color: #155724;
+}
+
+.stat-item.helped {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.stat-item.incorrect {
+    background: #f8d7da;
+    color: #721c24;
 }
 
 /* Category results */
@@ -633,6 +726,11 @@ select:focus, input:focus {
     border-color: #dc3545;
 }
 
+.option-reference.helped-question {
+    background: #fff3cd;
+    border-color: #ffc107;
+}
+
 .option-letter-ref {
     background: #e9ecef;
     color: #495057;
@@ -655,6 +753,11 @@ select:focus, input:focus {
 .user-wrong-option .option-letter-ref {
     background: #dc3545;
     color: white;
+}
+
+.helped-question .option-letter-ref {
+    background: #ffc107;
+    color: #212529;
 }
 
 .option-text-ref {

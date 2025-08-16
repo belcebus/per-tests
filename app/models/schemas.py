@@ -84,14 +84,15 @@ class QuestionForClient(BaseModel):
     """
     Versión de la pregunta que se envía al cliente.
 
-    Es igual que Question pero SIN la respuesta correcta.
-    Esto garantiza que el cliente no puede ver la respuesta correcta.
+    Por defecto es igual que Question pero SIN la respuesta correcta.
+    Para exámenes de práctica, puede incluir la respuesta correcta.
     """
 
     id: str
     enunciado: str
     opciones: Dict[str, str]
     metadata: QuestionMetadata
+    respuesta_correcta: Optional[str] = None
 
 
 # ================================

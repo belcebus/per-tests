@@ -151,3 +151,87 @@ class TestExamGenerationRequest:
         """Test con número de preguntas demasiado alto."""
         with pytest.raises(ValidationError):
             ExamGenerationRequest(num_preguntas=150)  # Debe ser <= 100
+
+
+class TestQuestionForClient:
+    """Pruebas para el modelo QuestionForClient."""
+    
+    def test_question_for_client_without_answer(self):
+        """Test de pregunta para cliente sin respuesta correcta (simulacro)."""
+        from app.models.schemas import QuestionForClient, QuestionMetadata
+        
+        question = QuestionForClient(
+            id="test_q1",
+            enunciado="¿Cuál es la respuesta correcta?",
+            opciones={"a": "Opción A", "b": "Opción B", "c": "Opción C", "d": "Opción D"},
+            metadata=QuestionMetadata(
+                title="Test Exam",
+                subtitle="Test 01",
+                total_questions=45,
+                community="Madrid",
+                year=2024,
+                call="abril",
+                test_code="test01",
+                categoria="1",
+                numero_pregunta=1
+            )
+        )
+        
+        assert question.id == "test_q1"
+        assert question.enunciado == "¿Cuál es la respuesta correcta?"
+        assert len(question.opciones) == 4
+        assert question.respuesta_correcta is None  # Campo opcional no incluido
+    
+    def test_question_for_client_with_answer(self):
+        """Test de pregunta para cliente con respuesta correcta (examen normal)."""
+        from app.models.schemas import QuestionForClient, QuestionMetadata
+        
+        question = QuestionForClient(
+            id="test_q1",
+            enunciado="¿Cuál es la respuesta correcta?",
+            opciones={"a": "Opción A", "b": "Opción B", "c": "Opción C", "d": "Opción D"},
+            respuesta_correcta="a",
+            metadata=QuestionMetadata(
+                title="Test Exam",
+                subtitle="Test 01", 
+                total_questions=45,
+                community="Madrid",
+                year=2024,
+                call="abril",
+                test_code="test01",
+                categoria="1",
+                numero_pregunta=1
+            )
+        )
+        
+        assert question.id == "test_q1"
+        assert question.enunciado == "¿Cuál es la respuesta correcta?"
+        assert len(question.opciones) == 4
+        assert question.respuesta_correcta == "a"  # Campo opcional incluido
+    
+    def test_question_for_client_with_anulada_answer(self):
+        """Test de pregunta para cliente con respuesta anulada (examen normal)."""
+        from app.models.schemas import QuestionForClient, QuestionMetadata
+        
+        question = QuestionForClient(
+            id="test_q_anulada",
+            enunciado="¿Pregunta anulada?",
+            opciones={"a": "Opción A", "b": "Opción B", "c": "Opción C", "d": "Opción D"},
+            respuesta_correcta="anulada",
+            metadata=QuestionMetadata(
+                title="Test Exam",
+                subtitle="Test 01", 
+                total_questions=45,
+                community="Madrid",
+                year=2024,
+                call="abril",
+                test_code="test01",
+                categoria="1",
+                numero_pregunta=1
+            )
+        )
+        
+        assert question.id == "test_q_anulada"
+        assert question.enunciado == "¿Pregunta anulada?"
+        assert len(question.opciones) == 4
+        assert question.respuesta_correcta == "anulada"  # Valor especial para preguntas anuladas
