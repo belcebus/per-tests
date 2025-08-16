@@ -602,9 +602,13 @@ function showQuestion(index) {
     // Si esta pregunta usó ayuda, bloquear todas las opciones
     if (questionsWithHelp.has(questionId)) {
         document.querySelectorAll('.option').forEach(opt => {
-            opt.classList.add('disabled');
             opt.style.pointerEvents = 'none';
-            opt.style.opacity = '0.7';
+            
+            // Solo aplicar disabled y opacidad a opciones que NO son la correcta
+            if (!opt.classList.contains('correct-answer')) {
+                opt.classList.add('disabled');
+                opt.style.opacity = '0.7';
+            }
         });
     }
     
@@ -715,6 +719,12 @@ function toggleCorrectAnswer() {
             
             // Mostrar mensaje explicativo
             alert('Esta pregunta está anulada. Todas las opciones son válidas. Puedes seleccionar cualquiera.');
+            
+            // Bloquear todas las opciones después de mostrar ayuda para pregunta anulada
+            allOptions.forEach(option => {
+                option.style.pointerEvents = 'none';
+                // No cambiar opacidad para preguntas anuladas ya que todas son correctas
+            });
         }
         
         return;
@@ -740,6 +750,19 @@ function toggleCorrectAnswer() {
         if (correctElement) {
             selectOption(correctElement);
         }
+        
+        // Bloquear todas las opciones INMEDIATAMENTE después de usar ayuda
+        document.querySelectorAll('.option').forEach(opt => {
+            if (opt !== correctElement) {
+                // Deshabilitar opciones incorrectas
+                opt.classList.add('disabled');
+                opt.style.pointerEvents = 'none';
+                opt.style.opacity = '0.7';
+            } else {
+                // Mantener la opción correcta seleccionable visualmente pero bloquear clics futuros
+                opt.style.pointerEvents = 'none';
+            }
+        });
     }
 }
 
