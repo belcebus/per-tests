@@ -5,6 +5,7 @@ Utilidades para manejo de versión de la aplicación.
 import tomllib
 from functools import lru_cache
 from pathlib import Path
+from typing import Any, Dict
 
 
 @lru_cache(maxsize=1)
@@ -27,9 +28,10 @@ def get_app_version() -> str:
         pyproject_path = Path(__file__).parent.parent.parent / "pyproject.toml"
 
         with open(pyproject_path, "rb") as f:
-            data = tomllib.load(f)
+            data: Dict[str, Any] = tomllib.load(f)
 
-        return data["project"]["version"]
+        version: str = data["project"]["version"]
+        return version
 
     except Exception:
         # Fallback silencioso en caso de error
