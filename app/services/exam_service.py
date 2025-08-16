@@ -29,6 +29,10 @@ from app.models.schemas import (
 from app.services.question_loader import question_loader
 from config.settings import settings
 
+# Constantes de configuración
+EXAM_TYPES_WITH_CORRECT_ANSWERS = {"normal", "per"}
+"""Tipos de examen que incluyen respuestas correctas para práctica"""
+
 
 class ExamService:
     """
@@ -261,13 +265,30 @@ class ExamService:
         )
         self.active_exams[exam_id] = cached_exam
 
-        # 6. Crear versión para cliente (sin respuestas correctas)
-        client_questions = [
-            QuestionForClient(
-                id=q.id, enunciado=q.enunciado, opciones=q.opciones, metadata=q.metadata
-            )
-            for q in questions_with_unique_ids
-        ]
+        # 6. Crear versión para cliente (con o sin respuestas correctas según el tipo)
+        if request.tipo_examen in EXAM_TYPES_WITH_CORRECT_ANSWERS:
+            # Para exámenes de práctica (normal y per), incluir respuestas correctas
+            client_questions = [
+                QuestionForClient(
+                    id=q.id,
+                    enunciado=q.enunciado,
+                    opciones=q.opciones,
+                    metadata=q.metadata,
+                    respuesta_correcta=q.respuesta_correcta,
+                )
+                for q in questions_with_unique_ids
+            ]
+        else:
+            # Para simulacros y otros tipos, no incluir respuestas correctas
+            client_questions = [
+                QuestionForClient(
+                    id=q.id,
+                    enunciado=q.enunciado,
+                    opciones=q.opciones,
+                    metadata=q.metadata,
+                )
+                for q in questions_with_unique_ids
+            ]
 
         # 7. Limpiar exámenes expirados
         self._cleanup_expired_exams()

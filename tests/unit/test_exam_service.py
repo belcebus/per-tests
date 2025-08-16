@@ -87,11 +87,12 @@ class TestExamGeneration:
         assert len(result.questions) == 5
         assert result.metadata == request
         
-        # Verificar que las preguntas no tienen respuestas correctas
+        # Verificar que las preguntas tienen respuestas correctas para exámenes normales
         for question in result.questions:
             assert hasattr(question, 'enunciado')
             assert hasattr(question, 'opciones')
-            assert not hasattr(question, 'respuesta_correcta')
+            assert hasattr(question, 'respuesta_correcta')  # Para exámenes normales SÍ tienen respuesta correcta
+            assert question.respuesta_correcta is not None
         
         # Verificar que el examen se guardó en memoria
         assert result.exam_id in service.active_exams
@@ -143,6 +144,86 @@ class TestExamGeneration:
             service.generate_exam(request)
             
             mock_cleanup.assert_called_once()
+    
+    @patch('app.services.exam_service.question_loader')
+    def test_generate_exam_respuesta_correcta_by_type(self, mock_loader, mock_questions):
+        """Test de que las respuestas correctas se incluyen según el tipo de examen."""
+        mock_loader.get_questions_by_criteria.return_value = mock_questions
+        
+        service = ExamService()
+        
+        # Test examen normal (por defecto es "per") - SÍ debe tener respuestas correctas
+        request_normal = ExamGenerationRequest(num_preguntas=3, comunidades=["Madrid"])
+        result_normal = service.generate_exam(request_normal)
+        
+        for question in result_normal.questions:
+            assert hasattr(question, 'respuesta_correcta')
+            assert question.respuesta_correcta is not None
+        
+        # Test examen tipo "normal" explícito - SÍ debe tener respuestas correctas
+        request_normal_explicit = ExamGenerationRequest(
+            num_preguntas=3, 
+            comunidades=["Madrid"], 
+            tipo_examen="normal"
+        )
+        result_normal_explicit = service.generate_exam(request_normal_explicit)
+        
+        for question in result_normal_explicit.questions:
+            assert hasattr(question, 'respuesta_correcta')
+            assert question.respuesta_correcta is not None
+        
+        # Test examen tipo simulacro - NO debe tener respuestas correctas  
+        request_simulacro = ExamGenerationRequest(
+            num_preguntas=3, 
+            comunidades=["Madrid"], 
+            tipo_examen="simulacro"
+        )
+        result_simulacro = service.generate_exam(request_simulacro)
+        
+        for question in result_simulacro.questions:
+            assert not hasattr(question, 'respuesta_correcta') or question.respuesta_correcta is None
+    
+    @patch('app.services.exam_service.question_loader')
+    def test_generate_exam_with_anulada_questions(self, mock_loader, mock_questions):
+        """Test de que las preguntas anuladas se manejan correctamente con respuestas correctas."""
+        # Crear una pregunta anulada
+        anulada_question = Question(
+            id="anulada_q1",
+            enunciado="Pregunta anulada de prueba",
+            opciones={"a": "Opción A", "b": "Opción B", "c": "Opción C", "d": "Opción D"},
+            respuesta_correcta="anulada",
+            metadata=QuestionMetadata(
+                title="Test Exam", subtitle="Test 01", total_questions=45,
+                community="Madrid", year=2024, call="abril", test_code="test01",
+                categoria="1", numero_pregunta=1
+            )
+        )
+        
+        # Mezclar pregunta anulada con preguntas normales
+        mixed_questions = [anulada_question] + mock_questions[:2]
+        mock_loader.get_questions_by_criteria.return_value = mixed_questions
+        
+        service = ExamService()
+        
+        # Test examen normal - SÍ debe incluir respuestas correctas (incluso "anulada")
+        request = ExamGenerationRequest(num_preguntas=3, comunidades=["Madrid"])
+        result = service.generate_exam(request)
+        
+        # Verificar que todas las preguntas tienen respuesta_correcta
+        for question in result.questions:
+            assert hasattr(question, 'respuesta_correcta')
+            assert question.respuesta_correcta is not None
+        
+        # Verificar que la pregunta anulada mantiene su valor "anulada"
+        anulada_question_in_result = None
+        for question in result.questions:
+            if question.respuesta_correcta == "anulada":
+                anulada_question_in_result = question
+                break
+        
+        assert anulada_question_in_result is not None
+        assert anulada_question_in_result.respuesta_correcta == "anulada"
+        assert anulada_question_in_result.enunciado == "Pregunta anulada de prueba"
 
 
 class TestSimulacroGeneration:
@@ -202,6 +283,12 @@ class TestSimulacroGeneration:
         assert isinstance(result, GeneratedExam)
         assert result.exam_id.startswith("simulacro_")
         assert len(result.questions) == 20  # 4+2+4+10
+        
+        # Verificar que las preguntas NO tienen respuestas correctas para simulacros
+        for question in result.questions:
+            assert hasattr(question, 'enunciado')
+            assert hasattr(question, 'opciones')
+            assert not hasattr(question, 'respuesta_correcta') or question.respuesta_correcta is None
         
         # Verificar que se respeta la distribución por categorías
         categories_found = {}
@@ -398,6 +485,56 @@ class TestExamCorrection:
         
         assert result.porcentaje == 66.67  # 2/3
         assert result.aprobado is True  # 66.67% > 50%
+    
+    def test_correct_exam_anulada_question_with_help_tracking(self):
+        """Test de corrección de pregunta anulada que podría usar ayuda."""
+        # Crear examen con pregunta anulada que incluye respuesta_correcta
+        anulada_question = Question(
+            id="exam_anulada_q1",
+            enunciado="Pregunta anulada con ayuda",
+            opciones={"a": "Opción A", "b": "Opción B", "c": "Opción C", "d": "Opción D"},
+            respuesta_correcta="anulada",
+            metadata=QuestionMetadata(
+                title="Test Exam", subtitle="Test 01", total_questions=45,
+                community="Madrid", year=2024, call="abril", test_code="test01",
+                categoria="1", numero_pregunta=1
+            )
+        )
+        
+        cached_exam = CachedExam(
+            questions=[anulada_question],
+            metadata=ExamGenerationRequest(num_preguntas=1, comunidades=["Madrid"]),
+            timestamp=datetime.now()
+        )
+        
+        service = ExamService()
+        exam_id = "test_anulada_exam"
+        service.active_exams[exam_id] = cached_exam
+        
+        # Enviar respuesta para pregunta anulada
+        submission = ExamSubmission(
+            exam_id=exam_id,
+            respuestas={
+                "exam_anulada_q1": "c"  # Cualquier respuesta es correcta para anulada
+            }
+        )
+        
+        result = service.correct_exam(submission)
+        
+        # Verificar que la pregunta anulada se marca como correcta
+        assert result.puntuacion_total == "1/1"
+        assert result.porcentaje == 100.0
+        assert result.aprobado is True
+        
+        # Verificar detalles de la pregunta anulada
+        question_detail = result.preguntas_detalle[0]
+        assert question_detail.es_correcta is True
+        assert question_detail.es_anulada is True
+        assert question_detail.respuesta_correcta == "anulada"
+        assert question_detail.respuesta_usuario == "c"
+        
+        # Verificar que las respuestas correctas incluyen todas las opciones
+        assert set(question_detail.respuestas_correctas_lista) == {"a", "b", "c", "d"}
 
 
 class TestAnswerValidation:
