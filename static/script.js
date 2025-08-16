@@ -123,6 +123,7 @@ function displaySystemInfo(info) {
     const grid = document.createElement('div');
     grid.className = 'info-grid';
     const items = [
+        { label: '🏷️ Versión:', value: `v${info.aplicacion.version}` },
         { label: '📚 Total de preguntas:', value: preguntas.total_preguntas },
         { label: '📂 Categorías:', value: preguntas.categorias },
         { label: '📅 Años disponibles:', value: (preguntas.años_disponibles || preguntas.anios_disponibles || []).join(', ') },

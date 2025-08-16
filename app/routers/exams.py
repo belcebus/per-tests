@@ -21,6 +21,7 @@ from app.models.schemas import (
 )
 from app.services.exam_service import exam_service
 from app.services.question_loader import question_loader
+from app.utils.version import get_app_version
 
 # Crear el router para las rutas de exámenes
 # Un router es como una "sección" de la API
@@ -153,6 +154,11 @@ async def get_exam_info() -> Dict[str, Any]:
     **Ejemplo de respuesta:**
     ```json
     {
+        "aplicacion": {
+            "nombre": "PER Tests",
+            "version": "1.0.0",
+            "descripcion": "Aplicación de Exámenes Aleatorios de PER España"
+        },
         "preguntas": {
             "total_preguntas": 1250,
             "categorias": 10,
@@ -175,6 +181,11 @@ async def get_exam_info() -> Dict[str, Any]:
     """
     try:
         return {
+            "aplicacion": {
+                "nombre": "PER Tests",
+                "version": get_app_version(),
+                "descripcion": "Aplicación de Exámenes Aleatorios de PER España",
+            },
             "preguntas": question_loader.get_stats(),
             "servicio": exam_service.get_service_stats(),
         }

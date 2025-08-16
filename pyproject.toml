@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "per-tests"
-version = "1.0.0"
+version = "1.2.0"
 description = "Aplicación de Exámenes Aleatorios de PER España"
 readme = "README.md"
 license = {file = "LICENSE"}
@@ -17,14 +17,14 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Education :: Testing",
     "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
 ]
 keywords = ["per", "exams", "fastapi", "education", "testing"]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 
 # Dependencias principales (mínimas para la aplicación)
 dependencies = [
@@ -143,7 +143,7 @@ exclude_lines = [
 
 [tool.black]
 line-length = 88
-target-version = ["py310", "py311", "py312"]
+target-version = ["py311", "py312", "py313"]
 include = '\.pyi?$'
 extend-exclude = '''
 /(

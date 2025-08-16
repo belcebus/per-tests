@@ -208,9 +208,12 @@ class TestExamEndpoints:
     
     @patch('app.routers.exams.exam_service')
     @patch('app.routers.exams.question_loader')
-    def test_get_exam_info(self, mock_question_loader, mock_exam_service, client: TestClient):
+    @patch('app.routers.exams.get_app_version')
+    def test_get_exam_info(self, mock_get_version, mock_question_loader, mock_exam_service, client: TestClient):
         """Test del endpoint de información."""
         # Configurar mocks con el formato real
+        mock_get_version.return_value = "1.0.0"
+        
         mock_question_loader.get_stats.return_value = {
             "total_preguntas": 1000,
             "categorias": 5,
@@ -228,8 +231,16 @@ class TestExamEndpoints:
 
         assert response.status_code == 200
         data = response.json()
+        assert "aplicacion" in data
         assert "preguntas" in data
         assert "servicio" in data
+        
+        # Verificar información de aplicación
+        assert data["aplicacion"]["nombre"] == "PER Tests"
+        assert data["aplicacion"]["version"] == "1.0.0"
+        assert data["aplicacion"]["descripcion"] == "Aplicación de Exámenes Aleatorios de PER España"
+        
+        # Verificar que los datos existentes siguen funcionando
         assert data["preguntas"]["total_preguntas"] == 1000
         assert data["servicio"]["examenes_activos"] == 3
 
@@ -581,8 +592,11 @@ class TestRouterErrorHandling:
             assert response.status_code == 500
             assert "Error corrigiendo examen" in response.json()["detail"]
 
-    def test_get_exam_info_server_error(self, client: TestClient):
+    @patch('app.routers.exams.get_app_version')
+    def test_get_exam_info_server_error(self, mock_get_version, client: TestClient):
         """Test para error 500 en get_exam_info"""
+        mock_get_version.return_value = "1.0.0"
+        
         with patch('app.routers.exams.question_loader.get_stats') as mock_stats:
             mock_stats.side_effect = Exception("Error obteniendo estadísticas")
             
