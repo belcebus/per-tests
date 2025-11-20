@@ -543,8 +543,25 @@ class ExamService:
         # Las preguntas ya están aleatorias dentro de cada categoría
 
         exam_id = f"simulacro_{uuid.uuid4().hex[:8]}"
+
+        # Asignar IDs únicos temporales a las preguntas para evitar colisiones
+        # Esto resuelve el problema de IDs duplicados entre diferentes categorías
+        questions_with_unique_ids = []
+        for i, question in enumerate(selected_questions):
+            # Crear una copia de la pregunta con ID único temporal
+            unique_question = Question(
+                id=f"{exam_id}_q{i + 1}",  # ID único: simulacro_abc123_q1, simulacro_abc123_q2, etc.
+                enunciado=question.enunciado,
+                opciones=question.opciones,
+                respuesta_correcta=question.respuesta_correcta,
+                metadata=question.metadata,
+            )
+            questions_with_unique_ids.append(unique_question)
+
         cached_exam = CachedExam(
-            questions=selected_questions, metadata=request, timestamp=datetime.now()
+            questions=questions_with_unique_ids,
+            metadata=request,
+            timestamp=datetime.now(),
         )
         self.active_exams[exam_id] = cached_exam
 
@@ -552,13 +569,16 @@ class ExamService:
             QuestionForClient(
                 id=q.id, enunciado=q.enunciado, opciones=q.opciones, metadata=q.metadata
             )
-            for q in selected_questions
+            for q in questions_with_unique_ids
         ]
 
         self._cleanup_expired_exams()
         print(
             f"✅ Simulacro generado con ID: {exam_id} "
             f"(preguntas agrupadas por categorías)"
+        )
+        print(
+            f"🔑 IDs únicos asignados: {[q.id for q in questions_with_unique_ids[:3]]}..."
         )
         return GeneratedExam(
             exam_id=exam_id, questions=client_questions, metadata=request

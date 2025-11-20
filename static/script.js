@@ -545,13 +545,16 @@ function showQuestion(index) {
     
     // Mostrar opciones de forma segura (sin innerHTML)
     const optionsContainer = document.getElementById('question-options');
-    // Limpiar opciones previas
+    
+    // PASO 1: Limpiar completamente el contenedor de opciones
     while (optionsContainer.firstChild) {
         optionsContainer.removeChild(optionsContainer.firstChild);
     }
+    
+    // PASO 2: Crear nuevas opciones sin clases pre-existentes
     Object.entries(question.opciones).forEach(([letter, text]) => {
         const optionDiv = document.createElement('div');
-        optionDiv.className = 'option';
+        optionDiv.className = 'option';  // Solo clase base, sin selected/disabled
         optionDiv.setAttribute('data-value', letter);
 
         const letterDiv = document.createElement('div');
@@ -567,19 +570,14 @@ function showQuestion(index) {
         optionDiv.addEventListener('click', () => selectOption(optionDiv));
         optionsContainer.appendChild(optionDiv);
     });
-    // Limpiar cualquier selección previa (por si el DOM mantiene clases)
-    document.querySelectorAll('.option.selected').forEach(opt => opt.classList.remove('selected'));
-    document.querySelectorAll('.option.correct-answer').forEach(opt => opt.classList.remove('correct-answer'));
-    document.querySelectorAll('.option.disabled').forEach(opt => {
-        opt.classList.remove('disabled');
-        opt.style.pointerEvents = '';
-        opt.style.opacity = '';
-    });
     
-    // Restaurar respuesta previa si existe (solo dentro del mismo examen)
+    // PASO 3: Validar y restaurar respuesta previa SOLO si realmente existe
     const questionId = question.id;
-    if (userAnswers[questionId]) {
-        const selectedOption = document.querySelector(`.option[data-value="${userAnswers[questionId]}"]`);
+    const savedAnswer = userAnswers[questionId];
+    
+    // Validación defensiva: verificar que existe y es válida
+    if (savedAnswer !== undefined && savedAnswer !== null && savedAnswer !== '') {
+        const selectedOption = document.querySelector(`.option[data-value="${savedAnswer}"]`);
         if (selectedOption) {
             selectedOption.classList.add('selected');
             
@@ -620,17 +618,30 @@ function showQuestion(index) {
  * Selecciona una opción
  */
 function selectOption(optionElement) {
-    // Remover selección previa
+    // PASO 1: Remover TODAS las selecciones previas de forma robusta
     document.querySelectorAll('.option').forEach(opt => {
         opt.classList.remove('selected');
     });
     
-    // Seleccionar nueva opción
+    // PASO 2: Validar que el elemento existe antes de marcarlo
+    if (!optionElement) {
+        console.error('⚠️ selectOption: elemento de opción no válido');
+        return;
+    }
+    
+    // PASO 3: Seleccionar nueva opción
     optionElement.classList.add('selected');
     
-    // Guardar respuesta
+    // PASO 4: Guardar respuesta con validación
     const questionId = currentExam.questions[currentQuestionIndex].id;
     const answer = optionElement.dataset.value;
+    
+    if (!answer) {
+        console.error('⚠️ selectOption: respuesta no tiene valor válido');
+        return;
+    }
+    
+    // Guardar en el objeto global
     userAnswers[questionId] = answer;
 }
 
