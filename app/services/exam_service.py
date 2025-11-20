@@ -543,7 +543,7 @@ class ExamService:
         # Las preguntas ya están aleatorias dentro de cada categoría
 
         exam_id = f"simulacro_{uuid.uuid4().hex[:8]}"
-        
+
         # Asignar IDs únicos temporales a las preguntas para evitar colisiones
         # Esto resuelve el problema de IDs duplicados entre diferentes categorías
         questions_with_unique_ids = []
@@ -557,7 +557,7 @@ class ExamService:
                 metadata=question.metadata,
             )
             questions_with_unique_ids.append(unique_question)
-        
+
         cached_exam = CachedExam(
             questions=questions_with_unique_ids, metadata=request, timestamp=datetime.now()
         )
