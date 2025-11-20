@@ -559,7 +559,9 @@ class ExamService:
             questions_with_unique_ids.append(unique_question)
 
         cached_exam = CachedExam(
-            questions=questions_with_unique_ids, metadata=request, timestamp=datetime.now()
+            questions=questions_with_unique_ids,
+            metadata=request,
+            timestamp=datetime.now(),
         )
         self.active_exams[exam_id] = cached_exam
 
