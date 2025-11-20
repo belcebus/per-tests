@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "per-tests"
-version = "1.3.0"
+version = "1.3.1"
 description = "Aplicación de Exámenes Aleatorios de PER España"
 readme = "README.md"
 license = {file = "LICENSE"}
