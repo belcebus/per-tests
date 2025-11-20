@@ -284,6 +284,17 @@ class TestSimulacroGeneration:
         assert result.exam_id.startswith("simulacro_")
         assert len(result.questions) == 20  # 4+2+4+10
         
+        # Verificar que las preguntas tienen IDs únicos (no los originales)
+        question_ids = [q.id for q in result.questions]
+        assert len(set(question_ids)) == len(question_ids)  # Todos únicos
+        
+        # Verificar formato del ID único
+        for i, q in enumerate(result.questions):
+            assert q.id.startswith(result.exam_id)
+            assert "_q" in q.id
+            expected_id = f"{result.exam_id}_q{i + 1}"
+            assert q.id == expected_id
+        
         # Verificar que las preguntas NO tienen respuestas correctas para simulacros
         for question in result.questions:
             assert hasattr(question, 'enunciado')
