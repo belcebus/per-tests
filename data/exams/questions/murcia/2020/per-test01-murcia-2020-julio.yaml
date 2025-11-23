@@ -175,7 +175,7 @@ categories:
         por dos esferas negras superpuestas. ¿Cómo debemos proceder?:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: b
+      correct_answer: d
       id: 15
       options:
         a: Nos indican las aguas que son navegables.
@@ -186,7 +186,7 @@ categories:
         una marca cardinal:'
     - category: 5
       category_name: Balizamiento
-      correct_answer: d
+      correct_answer: b
       id: 16
       options:
         a: Maniobraremos para pasar al norte de ella.
