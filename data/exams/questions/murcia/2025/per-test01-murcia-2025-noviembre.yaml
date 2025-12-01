@@ -1,0 +1,527 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 1
+      options:
+        a: Puntal.
+        b: Eslora.
+        c: Francobordo.
+        d: Calado.
+      question: A la distancia vertical entre la quilla y la línea de flotación se
+        le denomina…
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 2
+      options:
+        a: La parte por donde sale el sol.
+        b: La parte por donde viene el viento.
+        c: La parte por donde viene la corriente.
+        d: La parte por donde viene la marea.
+      question: 'Se denomina barlovento a:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 3
+      options:
+        a: Francobordo.
+        b: Puntal.
+        c: Calado medio.
+        d: Asiento.
+      question: 'La diferencia de calados entre proa y popa se denomina:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 4
+      options:
+        a: De paso variable.
+        b: Levógira.
+        c: Dextrógira.
+        d: De palas abatibles.
+      question: 'Cuando una hélice gira en el sentido de las agujas del reloj, mirando
+        desde la popa, se denomina:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 5
+      options:
+        a: Manguerotes.
+        b: Defensas.
+        c: Muertos.
+        d: Candeleros.
+      question: '¿Cómo se llaman los elementos utilizados en las embarcaciones para
+        proteger el casco de golpes y rozaduras?:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: d
+      id: 6
+      options:
+        a: Hacer una gaza.
+        b: Reforzar otro cabo desgastado por el roce.
+        c: Para amarre de un cabo a una argolla.
+        d: Unir dos cabos.
+      question: 'El nudo "llano" se emplea para:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 7
+      options:
+        a: Pantocazo.
+        b: Balance.
+        c: Cabezada.
+        d: Estabilidad transversal.
+      question: El movimiento oscilante transversal que se produce en el barco por
+        efecto del viento y/o las olas se denomina…
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 8
+      options:
+        a: Mantener al accidentado en lugar fresco y ventilado.
+        b: Aplicar bolas de hielo.
+        c: Dar friegas de alcohol.
+        d: Abrigar al accidentado.
+      question: 'En caso de hipotermia, es conveniente:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 9
+      options:
+        a: Bravas.
+        b: Superficiales.
+        c: Someras.
+        d: Vivas.
+      question: 'Las aguas poco profundas en las que la embarcación corre  el riesgo
+        de una varada involuntaria, se denominan aguas:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 10
+      options:
+        a: Balance.
+        b: Arrufo.
+        c: Cabezada.
+        d: Cuchareo.
+      question: ¿Cómo se denomina al movimiento de oscilacion de la embarcación en
+        el sentido longitudinal (proa-popa) por causas de las olas?
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 11
+      options:
+        a: Solamente cuando se esté navegando por alta mar.
+        b: Exclusivamente el día de la Comunidad Autónoma.
+        c: Siempre junto con la bandera nacional y en lugar menos preferente que esta.
+        d: Nunca, está prohibido.
+      question: ¿Puede exhibirse la bandera de la Comunidad Autónoma en la embarcación?
+    - category: 4
+      category_name: Legislación
+      correct_answer: b
+      id: 12
+      options:
+        a: Nos acercaremos rápidamente pues es señal de pedir socorro.
+        b: Nos alejaremos de ella pues tiene buzo sumergido.
+        c: Sabremos que navega sin problemas.
+        d: Sabremos que está varada sobre una roca.
+      question: Si navegando avistamos una embarcación con la bandera Alfa izada
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 13
+      options:
+        a: Una marca cardinal Norte.
+        b: Una marca cardinal Este.
+        c: Una marca cardinal Sur.
+        d: Una marca cardinal Oeste.
+      question: ¿Qué marca tiene de tope, dos conos superpuestos con los vértices
+        hacia abajo?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 14
+      options:
+        a: Las marcas especiales.
+        b: Las marcas de peligro aislado.
+        c: Las marcas de canal principal a babor.
+        d: La marca cardinal Norte.
+      question: '¿Qué marca tiene de tope, dos conos negros superpuestos con los vértices
+        apuntando para arriba?:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 15
+      options:
+        a: Verde.
+        b: Roja.
+        c: Amarilla.
+        d: Blanca.
+      question: 'La marca lateral de estribor es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 16
+      options:
+        a: Amarillo.
+        b: Rojo.
+        c: Verde.
+        d: Blanco con franjas verticales rojas.
+      question: ¿Cuál es el color de una marca especial?
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 17
+      options:
+        a: Dos conos superpuestos con los vértices hacia arriba.
+        b: Una esfera roja.
+        c: Dos esferas negras en vertical.
+        d: Dos conos opuestos por sus vértices.
+      question: '¿Cuál es la marca de tope de la baliza de aguas navegables?:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 18
+      options:
+        a: Buque con capacidad de maniobra restringida.
+        b: Buque de propulsión mecánica.
+        c: Buque de pesca.
+        d: Buque de pesca restringida.
+      question: REGLA 3.  Un buque de pesca de arrastre faenando, es considerado como….
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 19
+      options:
+        a: Cuando exista riesgo de abordaje.
+        b: En cualquier condición de visibilidad.
+        c: Solo durante la noche.
+        d: Solo durante el día.
+      question: 'REGLA 4. Las reglas de rumbo y gobierno se aplicarán:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 20
+      options:
+        a: Deberán evitarse los cambios de rumbo.
+        b: Deberán evitarse los cambios de velocidad.
+        c: Deberán evitarse una sucesión de pequeños cambios de rumbo y/o velocidad.
+        d: Deberán evitarse una sucesión de grandes cambios de rumbo y/o velocidad.
+      question: REGLA 8. En la maniobra que se realice para evitar un abordaje…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 21
+      options:
+        a: Se mantendrán lo más cerca posible del límite exterior del paso o canal
+          que quede por su costado de estribor.
+        b: Fondearán inmediatamente, a la espera de instrucciones.
+        c: Se mantendrán lo más cerca posible del centro del canal.
+        d: Tendrá prioridad de paso el que venga del sur, debiendo caer hacia estribor
+          aquel buque que venga del norte.
+      question: REGLA 9.  Los buques que naveguen a lo largo de un paso o canal angosto…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 22
+      options:
+        a: Cruce.
+        b: Alcance.
+        c: Vuelta encontrada.
+        d: De paso por el través de estribor.
+      question: REGLA 14. Si navegando de noche observamos por la proa la luz de tope
+        y las luces de costado de otro buque, estaremos ante una situación de…
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 23
+      options:
+        a: Puede modificar su rumbo, si con ello evita el abordaje.
+        b: Nunca debe modificar su rumbo.
+        c: Siempre a de modificar su rumbo.
+        d: Buscará un rumbo que sea opuesto al que llevaba.
+      question: REGLA 17. Un buque que “sigue a rumbo”.
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 24
+      options:
+        a: Cualquier buque le venga por donde le venga.
+        b: Un buque de pesca que no está pescando.
+        c: Un velero propulsado a motor.
+        d: Un buque sin gobierno.
+      question: 'REGLA 18. Un buque de propulsión mecánica, en navegación, se mantendrán
+        apartados de la derrota de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 25
+      options:
+        a: Roja a estribor y verde a babor.
+        b: Roja a babor y verde a estribor.
+        c: Blancas todo horizonte.
+        d: Amarilla centelleante.
+      question: 'REGLA 21. Las luces de costado serán:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 26
+      options:
+        a: Luces de tope.
+        b: Luz de alcance.
+        c: Luces de costado.
+        d: Luces de costado y alcance.
+      question: REGLA 25. ¿Qué luces debe mostrar un buque de vela de eslora superior
+        a 7 metros en navegación?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 27
+      options:
+        a: Estoy dando atrás.
+        b: Caigo a babor.
+        c: Caigo a estribor.
+        d: Pretendo alcanzarle por su banda de estribor.
+      question: REGLA 34. Cuando un buque de propulsión mecánica en navegación da
+        “dos pitadas cortas”. ¿Qué está indicando?
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: d
+      id: 28
+      options:
+        a: Tirar de un cabo de forma manual.
+        b: Tirar de un cabo por medio de una maquinilla.
+        c: Poner tensión en un cabo.
+        d: Fijar un cabo, impidiéndole todo movimiento.
+      question: ¿Qué es hacer firme un cabo?
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 29
+      options:
+        a: Tomar vueltas.
+        b: Adujar.
+        c: Amollar.
+        d: Lascar.
+      question: 'Recoger un cabo ordenadamente es:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 30
+      options:
+        a: Continuado de 08:00 a 18:00
+        b: De lunes a domingos de 07:00 a 22:00
+        c: Continuado las 24 horas
+        d: Continuado de 07:00 a 22:00
+      question: 'El Servicio Radio-Médico español funciona:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 31
+      options:
+        a: Sofocación.
+        b: Dispersión.
+        c: Enfriamiento.
+        d: Inhibición de la reacción en cadena.
+      question: Si eliminamos el calor para reducir la temperatura del combustible,
+        estaremos apagando un incendio por…
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 32
+      options:
+        a: Combustible, oxígeno, comburente y reacción en cadena.
+        b: Combustible, calor, metano y reacción en cadena.
+        c: Combustible, comburente, energía de activación y reacción en cadena.
+        d: Nitrógeno, oxígeno, calor y reacción en cadena.
+      question: ¿Qué elementos forman el llamado tetraedro del fuego?
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 33
+      options:
+        a: El anemómetro.
+        b: El psicrómetro.
+        c: El barómetro.
+        d: El termómetro húmedo.
+      question: 'El instrumento utilizado para medir la presión atmosférica  es:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 34
+      options:
+        a: Líneas que unen puntos de igual temperatura.
+        b: Líneas que unen puntos en los que la presión ha variado la misma cantidad
+          de milibares.
+        c: Líneas que unen puntos de igual profundidad.
+        d: Líneas que unen puntos de igual presión a nivel del mar.
+      question: 'En un mapa meteorológico, las isóbaras son:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 35
+      options:
+        a: La dirección.
+        b: La duración.
+        c: La persistencia.
+        d: El fetch.
+      question: ¿Qué parámetro del viento nos indica el catavientos?
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 36
+      options:
+        a: Intensidad.
+        b: Persistencia.
+        c: Fetch.
+        d: Virulencia.
+      question: 'El tiempo que el viento sopla, sobre el mar, en la misma dirección
+        y con la misma intensidad, se llama:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 37
+      options:
+        a: Un señalamiento.
+        b: Un paquete.
+        c: Un cartucho.
+        d: Un detalle.
+      question: 'Un portulano que a modo de ventana va inserto en una carta y que
+        destaca ampliando un puerto, fondeadero o un lugar de interés para la navegación,
+        se le llama en cartografía:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 38
+      options:
+        a: Observatorio Marítimo Español.
+        b: Departamento Marítimo Costero del Ministerio de Fomento.
+        c: Instituto Hidrográfico de la Marina.
+        d: Centro Nacional de Cartografía y Ayudas a la Navegación.
+      question: La publicación de los derroteros, libros de faros y las cartas de
+        navegación en España, le corresponde al...
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 39
+      options:
+        a: La escala de latitudes.
+        b: La escala de longitudes.
+        c: En el meridiano opuesto.
+        d: En el paralelo.
+      question: 'Las distancias en las cartas náuticas, se miden en:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 40
+      options:
+        a: 1832 m
+        b: 1842 m
+        c: 1852 m
+        d: 1862 m
+      question: 'Una milla náutica equivale a:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 41
+      options:
+        a: Escandallo.
+        b: Tacómetro.
+        c: Corredera.
+        d: Velocímetro.
+      question: El instrumento que nos proporciona la velocidad de nuestra embarcación
+        se denomina…
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 42
+      options:
+        a: 35º 57,5'N - 005º 36,6'W
+        b: 35º 53,6'N - 005º 29,7'W
+        c: 35º 56,8’N - 005º 31,8'W
+        d: 35º 52,6'N - 005º 34,7'W
+      question: 'A HRB = 1000 nos encontramos situados sobre la línea de oposición
+        de los faros: Isla de Tarifa y Punta Cires. Simultáneamente tomamos distancia
+        al faro de Punta Alcázar = 6 millas. ¿Qué posición tendremos en ese instante?'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 43
+      options:
+        a: 335º
+        b: 340º
+        c: 345º
+        d: 350º
+      question: Nos encontramos en la oposición de Punta Europa y Punta Almina, con
+        nuestra proa al Faro de Punta Europa. ¿Cuál es nuestro rumbo?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 44
+      options:
+        a: 7 millas náuticas
+        b: 9 millas náuticas
+        c: 11 millas náuticas
+        d: 13 millas náuticas
+      question: 'Situados sobre la línea de la enfilación de los faros: Isla de Tarifa
+        y Punta Paloma, tenemos en ese instante al faro de Punta Alcázar por nuestro
+        Sur verdadero, ¿a qué distancia tendremos al faro de Punta Carnero en ese
+        momento?'
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 45
+      options:
+        a: 162º
+        b: 152º
+        c: 142º
+        d: 132º
+      question: 'A HRB 11:00 nos encontramos sobre la línea de la oposición de los
+        faros de Punta Almina y Punta Europa y obtenemos distancia al faro de Punta
+        Carnero = 6 millas. Desde esa posición, damos rumbo para pasar a 3'' al Ev
+        de Punta Almina, teniendo en cuenta que no hay viento ni corriente. Calcule
+        que Rumbo de aguja deberemos de poner, sabiendo que la corrección total es
+        de 5º NE:'
+exam_info:
+  call: noviembre
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 0
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2025
