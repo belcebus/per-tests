@@ -1025,5 +1025,304 @@ class TestSpecificExamGeneration:
             assert question.id == expected_id
 
 
+class TestSimulacroSpecialRules:
+    """Tests para las reglas especiales de aprobación en simulacros."""
+    
+    @pytest.fixture
+    def simulacro_exam_questions(self):
+        """
+        Crea un conjunto de preguntas que simula un examen tipo simulacro
+        con las categorías relevantes: 5 (Balizamiento), 6 (RIPA), 11 (Cartas).
+        """
+        questions = []
+        
+        # Categoría 5: Balizamiento (5 preguntas, mínimo 3 correctas)
+        for i in range(5):
+            questions.append(Question(
+                id=f"simulacro_test_q{len(questions)+1}",
+                enunciado=f"Pregunta Balizamiento {i+1}?",
+                opciones={"a": "Opción A", "b": "Opción B", "c": "Opción C", "d": "Opción D"},
+                respuesta_correcta="a",
+                metadata=QuestionMetadata(
+                    title="Simulacro PER", subtitle="Test 01", total_questions=45,
+                    community="Madrid", year=2024, call="abril", test_code="test01",
+                    categoria="5", categoria_nombre="Balizamiento", numero_pregunta=len(questions)+1
+                )
+            ))
+        
+        # Categoría 6: RIPA (10 preguntas, mínimo 5 correctas)
+        for i in range(10):
+            questions.append(Question(
+                id=f"simulacro_test_q{len(questions)+1}",
+                enunciado=f"Pregunta RIPA {i+1}?",
+                opciones={"a": "Opción A", "b": "Opción B", "c": "Opción C", "d": "Opción D"},
+                respuesta_correcta="a",
+                metadata=QuestionMetadata(
+                    title="Simulacro PER", subtitle="Test 01", total_questions=45,
+                    community="Madrid", year=2024, call="abril", test_code="test01",
+                    categoria="6", categoria_nombre="Reglamento (RIPA)", numero_pregunta=len(questions)+1
+                )
+            ))
+        
+        # Categoría 11: Cartas (4 preguntas, mínimo 2 correctas)
+        for i in range(4):
+            questions.append(Question(
+                id=f"simulacro_test_q{len(questions)+1}",
+                enunciado=f"Pregunta Cartas {i+1}?",
+                opciones={"a": "Opción A", "b": "Opción B", "c": "Opción C", "d": "Opción D"},
+                respuesta_correcta="a",
+                metadata=QuestionMetadata(
+                    title="Simulacro PER", subtitle="Test 01", total_questions=45,
+                    community="Madrid", year=2024, call="abril", test_code="test01",
+                    categoria="11", categoria_nombre="Carta de navegación", numero_pregunta=len(questions)+1
+                )
+            ))
+        
+        # Otras categorías para llegar a 45 preguntas
+        for i in range(26):  # 5 + 10 + 4 + 26 = 45
+            questions.append(Question(
+                id=f"simulacro_test_q{len(questions)+1}",
+                enunciado=f"Pregunta General {i+1}?",
+                opciones={"a": "Opción A", "b": "Opción B", "c": "Opción C", "d": "Opción D"},
+                respuesta_correcta="a",
+                metadata=QuestionMetadata(
+                    title="Simulacro PER", subtitle="Test 01", total_questions=45,
+                    community="Madrid", year=2024, call="abril", test_code="test01",
+                    categoria="1", categoria_nombre="Nomenclatura", numero_pregunta=len(questions)+1
+                )
+            ))
+        
+        return questions
+    
+    def test_simulacro_aprobado_cumple_todos_requisitos(self, simulacro_exam_questions):
+        """Test: simulacro aprobado cuando cumple todos los requisitos."""
+        service = ExamService()
+        exam_id = "simulacro_test_123"
+        
+        # Crear examen tipo simulacro
+        cached_exam = CachedExam(
+            questions=simulacro_exam_questions,
+            metadata=ExamGenerationRequest(
+                num_preguntas=45,
+                tipo_examen="simulacro"
+            ),
+            timestamp=datetime.now()
+        )
+        service.active_exams[exam_id] = cached_exam
+        
+        # Respuestas: todas correctas (45/45)
+        respuestas = {q.id: "a" for q in simulacro_exam_questions}
+        
+        submission = ExamSubmission(exam_id=exam_id, respuestas=respuestas)
+        result = service.correct_exam(submission)
+        
+        assert result.aprobado is True
+        assert result.es_simulacro is True
+        assert result.requisitos_especiales is not None
+        assert result.motivos_suspenso is None
+        
+        # Verificar que todos los requisitos se cumplen
+        for req_id, req in result.requisitos_especiales.items():
+            assert req.cumplido is True, f"Requisito {req_id} no cumplido"
+    
+    def test_simulacro_suspenso_falta_total_minimo(self, simulacro_exam_questions):
+        """Test: simulacro suspenso cuando no alcanza 32 correctas totales."""
+        service = ExamService()
+        exam_id = "simulacro_test_123"
+        
+        cached_exam = CachedExam(
+            questions=simulacro_exam_questions,
+            metadata=ExamGenerationRequest(num_preguntas=45, tipo_examen="simulacro"),
+            timestamp=datetime.now()
+        )
+        service.active_exams[exam_id] = cached_exam
+        
+        # Solo 30 correctas (necesita 32)
+        respuestas = {}
+        for i, q in enumerate(simulacro_exam_questions):
+            if i < 30:
+                respuestas[q.id] = "a"  # Correcta
+            else:
+                respuestas[q.id] = "b"  # Incorrecta
+        
+        submission = ExamSubmission(exam_id=exam_id, respuestas=respuestas)
+        result = service.correct_exam(submission)
+        
+        assert result.aprobado is False
+        assert result.es_simulacro is True
+        assert result.motivos_suspenso is not None
+        assert any("32" in motivo for motivo in result.motivos_suspenso)
+    
+    def test_simulacro_suspenso_falta_minimo_balizamiento(self, simulacro_exam_questions):
+        """Test: simulacro suspenso cuando no alcanza mínimo en Balizamiento (cat 5)."""
+        service = ExamService()
+        exam_id = "simulacro_test_123"
+        
+        cached_exam = CachedExam(
+            questions=simulacro_exam_questions,
+            metadata=ExamGenerationRequest(num_preguntas=45, tipo_examen="simulacro"),
+            timestamp=datetime.now()
+        )
+        service.active_exams[exam_id] = cached_exam
+        
+        # Respuestas: 40 correctas en total, pero solo 2 en Balizamiento (necesita 3)
+        respuestas = {}
+        balizamiento_count = 0
+        for q in simulacro_exam_questions:
+            if q.metadata.categoria == "5":
+                # Solo 2 correctas en Balizamiento
+                if balizamiento_count < 2:
+                    respuestas[q.id] = "a"
+                    balizamiento_count += 1
+                else:
+                    respuestas[q.id] = "b"  # Incorrecta
+            else:
+                respuestas[q.id] = "a"  # Correcta
+        
+        submission = ExamSubmission(exam_id=exam_id, respuestas=respuestas)
+        result = service.correct_exam(submission)
+        
+        assert result.aprobado is False
+        assert result.es_simulacro is True
+        assert result.requisitos_especiales["5"].cumplido is False
+        assert any("Balizamiento" in motivo for motivo in result.motivos_suspenso)
+    
+    def test_simulacro_suspenso_falta_minimo_ripa(self, simulacro_exam_questions):
+        """Test: simulacro suspenso cuando no alcanza mínimo en RIPA (cat 6)."""
+        service = ExamService()
+        exam_id = "simulacro_test_123"
+        
+        cached_exam = CachedExam(
+            questions=simulacro_exam_questions,
+            metadata=ExamGenerationRequest(num_preguntas=45, tipo_examen="simulacro"),
+            timestamp=datetime.now()
+        )
+        service.active_exams[exam_id] = cached_exam
+        
+        # Respuestas: todas correctas excepto 6 en RIPA (solo 4 correctas, necesita 5)
+        respuestas = {}
+        ripa_count = 0
+        for q in simulacro_exam_questions:
+            if q.metadata.categoria == "6":
+                if ripa_count < 4:
+                    respuestas[q.id] = "a"
+                    ripa_count += 1
+                else:
+                    respuestas[q.id] = "b"  # Incorrecta
+            else:
+                respuestas[q.id] = "a"  # Correcta
+        
+        submission = ExamSubmission(exam_id=exam_id, respuestas=respuestas)
+        result = service.correct_exam(submission)
+        
+        assert result.aprobado is False
+        assert result.requisitos_especiales["6"].cumplido is False
+        assert any("RIPA" in motivo for motivo in result.motivos_suspenso)
+    
+    def test_simulacro_suspenso_falta_minimo_cartas(self, simulacro_exam_questions):
+        """Test: simulacro suspenso cuando no alcanza mínimo en Cartas (cat 11)."""
+        service = ExamService()
+        exam_id = "simulacro_test_123"
+        
+        cached_exam = CachedExam(
+            questions=simulacro_exam_questions,
+            metadata=ExamGenerationRequest(num_preguntas=45, tipo_examen="simulacro"),
+            timestamp=datetime.now()
+        )
+        service.active_exams[exam_id] = cached_exam
+        
+        # Respuestas: todas correctas excepto en Cartas (solo 1 correcta, necesita 2)
+        respuestas = {}
+        cartas_count = 0
+        for q in simulacro_exam_questions:
+            if q.metadata.categoria == "11":
+                if cartas_count < 1:
+                    respuestas[q.id] = "a"
+                    cartas_count += 1
+                else:
+                    respuestas[q.id] = "b"  # Incorrecta
+            else:
+                respuestas[q.id] = "a"  # Correcta
+        
+        submission = ExamSubmission(exam_id=exam_id, respuestas=respuestas)
+        result = service.correct_exam(submission)
+        
+        assert result.aprobado is False
+        assert result.requisitos_especiales["11"].cumplido is False
+        assert any("Carta" in motivo for motivo in result.motivos_suspenso)
+    
+    def test_simulacro_suspenso_multiples_requisitos_fallidos(self, simulacro_exam_questions):
+        """Test: simulacro suspenso con múltiples requisitos no cumplidos."""
+        service = ExamService()
+        exam_id = "simulacro_test_123"
+        
+        cached_exam = CachedExam(
+            questions=simulacro_exam_questions,
+            metadata=ExamGenerationRequest(num_preguntas=45, tipo_examen="simulacro"),
+            timestamp=datetime.now()
+        )
+        service.active_exams[exam_id] = cached_exam
+        
+        # Respuestas: fallar en Balizamiento y RIPA
+        respuestas = {}
+        for q in simulacro_exam_questions:
+            if q.metadata.categoria in ["5", "6"]:
+                respuestas[q.id] = "b"  # Incorrecta
+            else:
+                respuestas[q.id] = "a"  # Correcta
+        
+        submission = ExamSubmission(exam_id=exam_id, respuestas=respuestas)
+        result = service.correct_exam(submission)
+        
+        assert result.aprobado is False
+        assert len(result.motivos_suspenso) >= 2  # Al menos 2 motivos (categorías + posiblemente total)
+    
+    def test_examen_especifico_usa_reglas_simulacro(self, simulacro_exam_questions):
+        """Test: exámenes específicos también usan reglas especiales."""
+        service = ExamService()
+        exam_id = "especifico_test_123"
+        
+        cached_exam = CachedExam(
+            questions=simulacro_exam_questions,
+            metadata=ExamGenerationRequest(num_preguntas=45, tipo_examen="especifico"),
+            timestamp=datetime.now()
+        )
+        service.active_exams[exam_id] = cached_exam
+        
+        # Respuestas: todas correctas
+        respuestas = {q.id: "a" for q in simulacro_exam_questions}
+        
+        submission = ExamSubmission(exam_id=exam_id, respuestas=respuestas)
+        result = service.correct_exam(submission)
+        
+        assert result.aprobado is True
+        assert result.es_simulacro is True  # específico también usa reglas de simulacro
+        assert result.requisitos_especiales is not None
+    
+    def test_examen_normal_no_usa_reglas_simulacro(self, simulacro_exam_questions):
+        """Test: exámenes normales usan porcentaje tradicional, no reglas especiales."""
+        service = ExamService()
+        exam_id = "normal_test_123"
+        
+        cached_exam = CachedExam(
+            questions=simulacro_exam_questions[:10],  # Solo 10 preguntas
+            metadata=ExamGenerationRequest(num_preguntas=10, tipo_examen="per"),
+            timestamp=datetime.now()
+        )
+        service.active_exams[exam_id] = cached_exam
+        
+        # 7/10 correctas = 70% (aprueba con regla de 65%)
+        respuestas = {}
+        for i, q in enumerate(simulacro_exam_questions[:10]):
+            respuestas[q.id] = "a" if i < 7 else "b"
+        
+        submission = ExamSubmission(exam_id=exam_id, respuestas=respuestas)
+        result = service.correct_exam(submission)
+        
+        assert result.aprobado is True
+        assert result.es_simulacro is False
+        assert result.requisitos_especiales is None
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])

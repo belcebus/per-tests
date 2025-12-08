@@ -281,6 +281,25 @@ class QuestionResult(BaseModel):
     metadata: QuestionMetadata
 
 
+class RequisitoResult(BaseModel):
+    """
+    Resultado de un requisito mínimo específico.
+
+    Muestra:
+    - nombre: Nombre del requisito (ej: "Balizamiento")
+    - correctas: Número de respuestas correctas
+    - total: Total de preguntas en esta categoría
+    - minimo_requerido: Mínimo de correctas necesarias
+    - cumplido: Si se cumple el requisito
+    """
+
+    nombre: str
+    correctas: int
+    total: int
+    minimo_requerido: int
+    cumplido: bool
+
+
 class ExamResult(BaseModel):
     """
     Resultado completo del examen corregido.
@@ -288,9 +307,12 @@ class ExamResult(BaseModel):
     Incluye:
     - puntuacion_total: "correctas/total" (ej: "38/45")
     - porcentaje: Porcentaje de acierto
-    - aprobado: Si aprobó o no (>=65%)
+    - aprobado: Si aprobó o no
     - desglose_por_categoria: Resultados por cada categoría
     - preguntas_detalle: Detalle de cada pregunta
+    - es_simulacro: Si el examen es simulacro o específico (aplica reglas especiales)
+    - requisitos_especiales: Detalle de requisitos mínimos (solo para simulacro/específico)
+    - motivos_suspenso: Lista de motivos por los que no se aprobó (si aplica)
     """
 
     puntuacion_total: str
@@ -298,6 +320,9 @@ class ExamResult(BaseModel):
     aprobado: bool
     desglose_por_categoria: Dict[str, CategoryResult]
     preguntas_detalle: List[QuestionResult]
+    es_simulacro: bool = False
+    requisitos_especiales: Optional[Dict[str, RequisitoResult]] = None
+    motivos_suspenso: Optional[List[str]] = None
 
 
 # ================================

@@ -820,6 +820,72 @@ async function finishExam() {
 }
 
 /**
+ * Renderiza la sección de requisitos especiales para simulacro/específico
+ * Muestra una tabla con cada requisito, su estado y si se cumplió
+ */
+function renderRequisitosEspeciales(result) {
+    const requisitos = result.requisitos_especiales;
+    const motivos = result.motivos_suspenso || [];
+    
+    // Ordenar requisitos: primero "total", luego las categorías por ID
+    const ordenRequisitos = ['total', '5', '6', '11'];
+    const requisitosOrdenados = ordenRequisitos
+        .filter(key => requisitos[key])
+        .map(key => ({ id: key, ...requisitos[key] }));
+    
+    let html = `
+        <div class="requisitos-header">
+            <h4>📋 Requisitos para Aprobar (Examen Oficial)</h4>
+            <p class="requisitos-descripcion">
+                Para aprobar un examen oficial PER, además del total de respuestas correctas, 
+                se requiere un mínimo en ciertas categorías.
+            </p>
+        </div>
+        <div class="requisitos-tabla">
+    `;
+    
+    requisitosOrdenados.forEach(req => {
+        const iconoEstado = req.cumplido ? '✅' : '❌';
+        const claseEstado = req.cumplido ? 'requisito-cumplido' : 'requisito-fallido';
+        const progreso = req.total > 0 ? (req.correctas / req.total) * 100 : 0;
+        const progresoMinimo = req.total > 0 ? (req.minimo_requerido / req.total) * 100 : 0;
+        
+        html += `
+            <div class="requisito-item ${claseEstado}">
+                <div class="requisito-info">
+                    <span class="requisito-icono">${iconoEstado}</span>
+                    <span class="requisito-nombre">${req.nombre}</span>
+                </div>
+                <div class="requisito-progreso-container">
+                    <div class="requisito-barra">
+                        <div class="requisito-barra-fondo"></div>
+                        <div class="requisito-barra-minimo" style="left: ${progresoMinimo}%;" title="Mínimo: ${req.minimo_requerido}"></div>
+                        <div class="requisito-barra-progreso ${claseEstado}" style="width: ${progreso}%;"></div>
+                    </div>
+                    <span class="requisito-valores">${req.correctas}/${req.total} (mín: ${req.minimo_requerido})</span>
+                </div>
+            </div>
+        `;
+    });
+    
+    html += '</div>';
+    
+    // Mostrar motivos de suspenso si los hay
+    if (motivos.length > 0) {
+        html += `
+            <div class="motivos-suspenso">
+                <h5>⚠️ Motivos del suspenso:</h5>
+                <ul>
+                    ${motivos.map(m => `<li>${m}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+    }
+    
+    return html;
+}
+
+/**
  * Muestra los resultados del examen
  */
 function showResults(result) {
@@ -836,6 +902,16 @@ function showResults(result) {
     } else {
         statusElement.textContent = '❌ SUSPENDIDO';
         statusElement.className = 'score-status suspendido';
+    }
+    
+    // Mostrar requisitos especiales para simulacro/específico
+    const requisitosContainer = document.getElementById('requisitos-especiales');
+    if (result.es_simulacro && result.requisitos_especiales) {
+        requisitosContainer.style.display = 'block';
+        requisitosContainer.innerHTML = renderRequisitosEspeciales(result);
+    } else {
+        requisitosContainer.style.display = 'none';
+        requisitosContainer.innerHTML = '';
     }
     
     // Calcular estadísticas con ayuda
