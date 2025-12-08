@@ -25,6 +25,7 @@ from app.models.schemas import (
     ExamResult,
     CategoryResult,
     QuestionResult,
+    RequisitoResult,
 )
 from app.services.question_loader import question_loader
 from config.settings import settings
@@ -32,6 +33,9 @@ from config.settings import settings
 # Constantes de configuración
 EXAM_TYPES_WITH_CORRECT_ANSWERS = {"normal", "per"}
 """Tipos de examen que incluyen respuestas correctas para práctica"""
+
+EXAM_TYPES_WITH_SPECIAL_RULES = {"simulacro", "especifico"}
+"""Tipos de examen que requieren reglas especiales de aprobación (mínimos por categoría)"""
 
 
 class ExamService:
@@ -417,15 +421,92 @@ class ExamService:
                 porcentaje=round(cat_percentage, 2),
             )
 
-        # 5. Determinar si aprobó (65% mínimo)
-        passed = percentage >= settings.passing_score_percentage
+        # 5. Determinar si aprobó
+        # Verificar si es un examen con reglas especiales (simulacro o específico)
+        tipo_examen = cached_exam.metadata.tipo_examen
+        es_simulacro = tipo_examen in EXAM_TYPES_WITH_SPECIAL_RULES
+
+        requisitos_especiales = None
+        motivos_suspenso = []
+
+        if es_simulacro:
+            # Aplicar reglas especiales para simulacro/específico
+            requisitos_especiales = {}
+            # Pylint no reconoce correctamente los tipos de pydantic-settings
+            # pylint: disable=no-member
+            requisitos_config: Dict[str, Any] = settings.simulacro_requisitos_minimos
+
+            # Verificar requisito de total general
+            req_total = requisitos_config.get("total", {})
+            min_total = req_total.get("min_correctas", 32)
+            cumple_total = total_correct >= min_total
+            requisitos_especiales["total"] = RequisitoResult(
+                nombre=req_total.get("nombre", "Total general"),
+                correctas=total_correct,
+                total=total_questions,
+                minimo_requerido=min_total,
+                cumplido=cumple_total,
+            )
+            if not cumple_total:
+                motivos_suspenso.append(
+                    f"No alcanza el mínimo de {min_total} respuestas correctas "
+                    f"(obtenidas: {total_correct})"
+                )
+
+            # Verificar requisitos por categoría
+            for cat_id, req_config in requisitos_config.items():
+                if cat_id == "total":
+                    continue  # Ya procesado arriba
+
+                cat_stats = category_stats.get(cat_id, {"correctas": 0, "total": 0})
+                correctas_cat = cat_stats["correctas"]
+                total_cat = cat_stats["total"]
+                min_cat = req_config.get("min_correctas", 0)
+                nombre_cat = req_config.get("nombre", f"Categoría {cat_id}")
+
+                cumple_cat = correctas_cat >= min_cat
+                requisitos_especiales[cat_id] = RequisitoResult(
+                    nombre=nombre_cat,
+                    correctas=correctas_cat,
+                    total=total_cat,
+                    minimo_requerido=min_cat,
+                    cumplido=cumple_cat,
+                )
+                if not cumple_cat:
+                    motivos_suspenso.append(
+                        f"No alcanza el mínimo en {nombre_cat}: "
+                        f"{correctas_cat}/{total_cat} (mínimo requerido: {min_cat})"
+                    )
+
+            # Para aprobar, deben cumplirse TODOS los requisitos
+            passed = len(motivos_suspenso) == 0
+            # pylint: enable=no-member
+        else:
+            # Examen de práctica: usar porcentaje tradicional
+            passed = percentage >= settings.passing_score_percentage
+            if not passed:
+                motivos_suspenso.append(
+                    f"No alcanza el porcentaje mínimo de {settings.passing_score_percentage}% "
+                    f"(obtenido: {percentage:.1f}%)"
+                )
 
         # 6. Limpiar el examen de memoria (ya se corrigió)
         del self.active_exams[submission.exam_id]
 
-        print(
-            f"✅ Examen corregido: {total_correct}/{total_questions} ({percentage:.1f}%)"
-        )
+        # Log del resultado
+        if es_simulacro:
+            requisitos_cumplidos = sum(
+                1 for r in requisitos_especiales.values() if r.cumplido
+            )
+            total_requisitos = len(requisitos_especiales)
+            print(
+                f"✅ Examen corregido (simulacro): {total_correct}/{total_questions} "
+                f"({percentage:.1f}%) - Requisitos: {requisitos_cumplidos}/{total_requisitos}"
+            )
+        else:
+            print(
+                f"✅ Examen corregido: {total_correct}/{total_questions} ({percentage:.1f}%)"
+            )
 
         # Asegurar que las claves sean str, nunca None
         clean_category_results = {
@@ -437,6 +518,9 @@ class ExamService:
             aprobado=passed,
             desglose_por_categoria=clean_category_results,
             preguntas_detalle=question_results,
+            es_simulacro=es_simulacro,
+            requisitos_especiales=requisitos_especiales,
+            motivos_suspenso=motivos_suspenso if motivos_suspenso else None,
         )
 
     def _cleanup_expired_exams(self) -> None:

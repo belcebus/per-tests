@@ -10,6 +10,7 @@ Este módulo proporciona configuración centralizada para:
 
 import os
 from pathlib import Path
+from typing import Any, Dict
 
 from pydantic import Field
 from pydantic_settings import BaseSettings
@@ -150,6 +151,18 @@ class Settings(BaseSettings):
     )
     simulacro_max_time_minutes: int = Field(
         default=90, description="Tiempo máximo (minutos) para el simulacro de examen"
+    )
+
+    # Requisitos mínimos para aprobar simulacro/examen específico
+    # Formato: {"categoria_id": {"min_correctas": X, "total": Y, "nombre": "..."}}
+    simulacro_requisitos_minimos: Dict[str, Dict[str, Any]] = Field(
+        default={
+            "total": {"min_correctas": 32, "total": 45, "nombre": "Total general"},
+            "5": {"min_correctas": 3, "total": 5, "nombre": "Balizamiento"},
+            "6": {"min_correctas": 5, "total": 10, "nombre": "Reglamento (RIPA)"},
+            "11": {"min_correctas": 2, "total": 4, "nombre": "Carta de navegación"},
+        },
+        description="Requisitos mínimos por categoría para aprobar simulacro/examen específico",
     )
 
     # Configuración de corrección de exámenes
