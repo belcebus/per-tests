@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""One-shot converter: YAML exam questions -> single CSV.
+"""One-shot converter: YAML exam questions -> CSVs grouped by province.
 
-This script generates a CSV compatible with examenes-csv/ejemplo-preguntas.csv,
+This script generates CSV files compatible with examenes-csv/ejemplo-preguntas.csv,
 using only data/exams/questions/**/*.yaml as source.
 
 Design constraints:
@@ -277,6 +277,17 @@ def collect_yaml_paths(root: Path) -> List[Path]:
     return sorted(root.rglob("*.yaml"), key=lambda p: p.as_posix())
 
 
+def province_from_yaml_path(yaml_path: Path, input_root: Path) -> str:
+    relative_parts = yaml_path.relative_to(input_root).parts
+    if not relative_parts:
+        return "unknown"
+    return relative_parts[0]
+
+
+def province_output_path(output_path: Path, province: str) -> Path:
+    return output_path.with_name(f"{output_path.stem}_{province}{output_path.suffix}")
+
+
 def write_csv(rows: Iterable[Dict[str, str]], output_path: Path) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8", newline="") as f:
@@ -302,26 +313,34 @@ def main() -> int:
 
     stats = BuildStats(yaml_files=len(yaml_paths))
     ids = IdFactory()
-    all_rows: List[Dict[str, str]] = []
+    rows_by_province: Dict[str, List[Dict[str, str]]] = {}
 
     for yaml_path in yaml_paths:
         file_rows = convert_yaml_file(yaml_path, ids, stats, args.strict)
-        all_rows.extend(file_rows)
+        province = province_from_yaml_path(yaml_path, input_root)
+        rows_by_province.setdefault(province, []).extend(file_rows)
 
-    stats.rows = len(all_rows)
+    stats.rows = sum(len(rows) for rows in rows_by_province.values())
 
-    if not all_rows:
+    if not stats.rows:
         print("[ERROR] No rows generated.")
         return 2
 
-    write_csv(all_rows, output_path)
+    written_files: List[Path] = []
+    for province in sorted(rows_by_province.keys()):
+        province_rows = rows_by_province[province]
+        province_output = province_output_path(output_path, province)
+        write_csv(province_rows, province_output)
+        written_files.append(province_output)
 
     print("[OK] CSV generado")
     print(f" - YAML procesados: {stats.yaml_files}")
     print(f" - Filas generadas: {stats.rows}")
     print(f" - Preguntas anuladas: {stats.annulled_rows}")
     print(f" - Warnings: {stats.warnings}")
-    print(f" - Salida: {output_path}")
+    print(" - Salidas:")
+    for written_file in written_files:
+        print(f"   - {written_file}")
 
     return 0
 

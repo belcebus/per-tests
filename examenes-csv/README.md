@@ -1,6 +1,6 @@
-# Generacion One-Shot de CSV Consolidado
+# Generacion One-Shot de CSV por Provincia
 
-Este directorio contiene un flujo one-shot para generar un CSV unico a partir de los YAML de preguntas oficiales.
+Este directorio contiene un flujo one-shot para generar varios CSV a partir de los YAML de preguntas oficiales, agrupados por provincia.
 
 ## Restricciones del flujo
 
@@ -12,7 +12,8 @@ Este directorio contiene un flujo one-shot para generar un CSV unico a partir de
 ## Archivos
 
 - `generate_csv_from_yaml.py`: script one-shot de conversion.
-- `preguntas_todas_convocatorias.csv`: salida consolidada (generada por script).
+- `preguntas_todas_convocatorias_madrid.csv`: salida para Madrid (generada por script).
+- `preguntas_todas_convocatorias_murcia.csv`: salida para Murcia (generada por script).
 - `ejemplo-preguntas.csv`: referencia de formato objetivo ya existente.
 
 ## Fuente de datos
@@ -47,6 +48,11 @@ python3 examenes-csv/generate_csv_from_yaml.py \
   --output examenes-csv/preguntas_todas_convocatorias.csv
 ```
 
+El valor de `--output` se usa como base del nombre. Si pasas `preguntas_todas_convocatorias.csv`, el script generara:
+
+- `preguntas_todas_convocatorias_madrid.csv`
+- `preguntas_todas_convocatorias_murcia.csv`
+
 Modo estricto (falla ante inconsistencias):
 
 ```bash
@@ -70,7 +76,7 @@ Ademas valida internamente casos como:
 
 ## Comprobacion manual recomendada
 
-1. Revisar que existe `examenes-csv/preguntas_todas_convocatorias.csv`.
-2. Verificar cabecera y columnas esperadas.
+1. Revisar que existen los ficheros `examenes-csv/preguntas_todas_convocatorias_madrid.csv` y `examenes-csv/preguntas_todas_convocatorias_murcia.csv`.
+2. Verificar cabecera y columnas esperadas en ambos.
 3. Muestrear preguntas de varios YAML y comprobar categoria, enunciado y respuesta marcada.
 4. Confirmar que preguntas anuladas salen con `not_influence_to_score=on`.
