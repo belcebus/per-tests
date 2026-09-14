@@ -1,0 +1,529 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - id: 1
+      question: 'El lado o costado contrario por donde se recibe el viento se denomina:'
+      options:
+        a: Barlovento.
+        b: Estribor.
+        c: Sotavento.
+        d: Babor.
+      category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+    - id: 2
+      question: 'La acción de tumbar o inclinar una embarcación se denomina:'
+      options:
+        a: Adrizar
+        b: Escorar
+        c: Arriar
+        d: Arribar
+      category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+    - id: 3
+      question: 'En una embarcación llamamos manga máxima a:'
+      options:
+        a: La altura entre la quilla y el plano de flotación.
+        b: La altura entre la quilla y la cubierta.
+        c: La anchura máxima del casco, medida transversalmente de babor a estribor.
+        d: La medida entre los extremos de proa y popa.
+      category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+    - id: 4
+      question: '¿Cómo son las hélices gemelas de giro al exterior?:'
+      options:
+        a: La de estribor, dextrógira y la de babor, levógira.
+        b: Ambas levógiras.
+        c: Ambas dextrógiras.
+        d: La de babor, dextrógira y la de estribor, levógira.
+      category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - id: 5
+      question: 'Se denomina chicote a:'
+      options:
+        a: El extremo de un cabo o cable.
+        b: La parte más larga de un cabo.
+        c: Un tipo de nudo similar al ballestrinque.
+        d: El arco que forma el cabo entre los extremos que lo sujetan.
+      category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: a
+    - id: 6
+      question: Al giro que hace una embarcación alrededor del ancla, una vez fondeada,
+        por efecto del viento y/o la corriente, se le denomina…
+      options:
+        a: Borneo.
+        b: Role.
+        c: Garreo.
+        d: Orinque.
+      category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: a
+  3:
+    name: Seguridad
+    questions:
+    - id: 7
+      question: Como se denomina a la acción de mantener nuestra embarcación navegando,
+        aguantando el temporal proa a la mar o amurado a él?
+      options:
+        a: Correr.
+        b: Adrizar.
+        c: Capear.
+        d: Barloventear.
+      category: 3
+      category_name: Seguridad
+      correct_answer: c
+    - id: 8
+      question: 'Si navegando dos tripulantes, uno de ellos cae al agua, lo primero
+        que se debe hacer es:'
+      options:
+        a: Meter timón a la misma banda de caída.
+        b: Meter timón a la banda contraria a la caída.
+        c: Gritar hombre al agua.
+        d: Realizar una llamada de socorro.
+      category: 3
+      category_name: Seguridad
+      correct_answer: a
+    - id: 9
+      question: 'La propiedad que tiene un barco de recobrar su posición de equilibrio
+        inicial cuando la pierde por causas externas es conocida como:'
+      options:
+        a: Seguridad de equilibrio.
+        b: Seguridad de adrizamiento.
+        c: Estabilidad.
+        d: Inestabilidad.
+      category: 3
+      category_name: Seguridad
+      correct_answer: c
+    - id: 10
+      question: ¿Para qué sirve el reflector radar?
+      options:
+        a: Facilitar que una embarcación pueda ser detectada por los radares de otros
+          buques.
+        b: Emitir señales visuales detectables por otros barcos.
+        c: Ayuda a nuestro radar a detectar a otros buques.
+        d: Evitar las interferencias de las comunicaciones por VHF.
+      category: 3
+      category_name: Seguridad
+      correct_answer: a
+  4:
+    name: Legislación
+    questions:
+    - id: 11
+      question: 'En el Mar Mediterráneo existe una planta que forma extensas praderas
+        en el lecho marino que se conoce como:'
+      options:
+        a: Alga parda.
+        b: Gorgonia roja
+        c: Posidonia oceánica.
+        d: Caulerpa.
+      category: 4
+      category_name: Legislación
+      correct_answer: c
+    - id: 12
+      question: 'Si necesitara acceder a tierra en una playa balizada:'
+      options:
+        a: Podría hacerlo por cualquier punto de ella.
+        b: Tendría que hacerlo por el canal de acceso.
+        c: Sería imposible hacerlo.
+        d: No está permitida la navegación en playas balizadas en ningún caso.
+      category: 4
+      category_name: Legislación
+      correct_answer: b
+  5:
+    name: Balizamiento
+    questions:
+    - id: 13
+      question: 'En la región A, entrando a puerto desde la mar, las marcas laterales
+        de color roja deben quedar por:'
+      options:
+        a: Barlovento.
+        b: Sotavento.
+        c: Estribor.
+        d: Babor.
+      category: 5
+      category_name: Balizamiento
+      correct_answer: d
+    - id: 14
+      question: 'Una luz centelleante blanca en grupos de 3 destellos cada 5 segundos,
+        pertenece a:'
+      options:
+        a: Una marca cardinal norte.
+        b: Una marca cardinal este.
+        c: Una marca cardinal sur.
+        d: Una marca cardinal oeste.
+      category: 5
+      category_name: Balizamiento
+      correct_answer: b
+    - id: 15
+      question: ¿De qué color es la luz de la marca cardinal oeste?
+      options:
+        a: Roja.
+        b: Blanca.
+        c: Verde.
+        d: Amarilla.
+      category: 5
+      category_name: Balizamiento
+      correct_answer: b
+    - id: 16
+      question: 'En una marca de peligro aislado, el ritmo y el color de su luz es:'
+      options:
+        a: Dos destellos de color rojos.
+        b: Grupo de dos destellos de color blanco.
+        c: Grupo de dos destellos de color verde.
+        d: Un destello color blanco.
+      category: 5
+      category_name: Balizamiento
+      correct_answer: b
+    - id: 17
+      question: '¿Cuál de las siguientes respuestas corresponde a alguna de las formas
+        de una boya de aguas navegables?:'
+      options:
+        a: Cónica.
+        b: Cilíndrica.
+        c: Elíptica.
+        d: Esférica.
+      category: 5
+      category_name: Balizamiento
+      correct_answer: d
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - id: 18
+      question: Regla 3. La expresión “en navegación” se aplica a…
+      options:
+        a: Un buque fondeado.
+        b: Un buque que no esté ni fondeado, ni amarrado a tierra, ni varado.
+        c: Un buque que está varado y es de pesca.
+        d: Un buque cualquiera aunque este amarrado.
+      category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+    - id: 19
+      question: Regla 6. Para determinar la “velocidad de velocidad de seguridad”,
+        se tendrán en cuenta…
+      options:
+        a: El estado de la visibilidad.
+        b: El estado del viento, mar y corriente y la proximidad de peligros para
+          la navegación.
+        c: El calado, en relación con la profundidad disponible de agua.
+        d: Todas las respuestas son correctas.
+      category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+    - id: 20
+      question: Regla 9. En un canal angosto las embarcaciones con una eslora inferior
+        a 20 metros, NO estorbarán a…
+      options:
+        a: Los buques de pesca.
+        b: Los buques que naveguen con seguridad dentro del canal.
+        c: Los buques de vela.
+        d: Las embarcaciones más pequeñas.
+      category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+    - id: 21
+      question: Regla 12. Un velero que recibe el viento por babor, avista a otro
+        velero a barlovento y no tiene la seguridad de si este último recibe el viento
+        por babor o estribor, ¿Qué deberá hacer?
+      options:
+        a: Mantenerse apartado de la derrota del otro.
+        b: Seguir a rumbo.
+        c: Virar en redondo.
+        d: Aproar al viento.
+      category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+    - id: 22
+      question: 'Regla 18. Cómo deberá actuar un buque de vela si divisa por su costado
+        de estribor a un buque de propulsión mecánica con riesgo de abordaje:'
+      options:
+        a: Manteniendo su rumbo y velocidad.
+        b: Maniobrando por tener al otro buque por su costado de estribor.
+        c: Caerá a babor.
+        d: Suprimirá toda su arrancada.
+      category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+    - id: 23
+      question: 'Regla 24. Una luz amarilla la llevan los:'
+      options:
+        a: Los barcos de vela navegando a motor.
+        b: Los barcos dedicados a la pesca con curricán.
+        c: Los barcos sin gobierno.
+        d: Los remolcadores remolcando.
+      category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+    - id: 24
+      question: 'Regla 25. ¿Cuál es la marca de día de un buque navegando a vela que
+        se está propulsando mecánicamente?:'
+      options:
+        a: Ninguna.
+        b: Cónica con vértice hacia arriba.
+        c: Cónica con vértice hacia abajo.
+        d: Cilíndrica.
+      category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+    - id: 25
+      question: Regla 26. Un buque dedicado a la pesca de arrastre mostrará de noche…
+      options:
+        a: Dos luces todo horizonte, roja sobre blanca.
+        b: Dos luces de tope.
+        c: Dos luces todo horizonte, verde sobre blanca.
+        d: Dos luces todo horizonte, blanca sobre roja.
+      category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+    - id: 26
+      question: Regla 27. Un buque que muestra dos bolas negras en línea vertical
+        está indicando que…
+      options:
+        a: Es un buque restringido por su calado.
+        b: Es un buque con capacidad de maniobra restringida.
+        c: Es un buque que está fondeado.
+        d: Es un buque sin gobierno.
+      category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+    - id: 27
+      question: 'Regla 30. Los buques fondeados exhibirán en el lugar más visible:'
+      options:
+        a: Una luz verde o una marca bicónica.
+        b: En la parte de proa, una luz blanca todo horizonte o una bola negra.
+        c: Tres luces rojas o dos bolas.
+        d: Luces de costado o una marca bicónica.
+      category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+  7:
+    name: Maniobra y navegación
+    questions:
+    - id: 28
+      question: '"Lascar" es:'
+      options:
+        a: Sinónimo de templar.
+        b: Aflojar despacio un cabo que estaba tenso.
+        c: Largar un cabo del noray.
+        d: Largar un cabo de su bita o cornamusa.
+      category: 7
+      category_name: Maniobra y navegación
+      correct_answer: d
+    - id: 29
+      question: 'Amarrar de punta a un muelle es:'
+      options:
+        a: Amarrar proa o popa al muelle.
+        b: Amarrar popa a otro buque.
+        c: Amarrar de costado al muelle.
+        d: Amarrar abarloado a otro buque.
+      category: 7
+      category_name: Maniobra y navegación
+      correct_answer: a
+  8:
+    name: Emergencias en la mar
+    questions:
+    - id: 30
+      question: Durante nuestra travesía hemos varado en un fondo de arena, ¿qué podríamos
+        hacer para salir de la embarrancada?
+      options:
+        a: Llenar todos los tanques que tengamos vacíos para aumentar el calado de
+          la embarcación.
+        b: Esperar la bajamar.
+        c: Trasladar pesos a la zona de la embarcación en la que haya menos fondo.
+        d: Aligerar pesos en la embarcación para disminuir los calados.
+      category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+    - id: 31
+      question: Un daño producido en alguna parte del cuerpo a causa de un fuerte
+        golpe, y que no genera una hemorragia, sería…..
+      options:
+        a: Una infección.
+        b: Un picotazo.
+        c: Una contusión.
+        d: Una hemofilia.
+      category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+    - id: 32
+      question: 'De las siguientes afirmaciones, indique la que es CORRECTA:'
+      options:
+        a: Hay que llenar el depósito de combustible con el motor en marcha.
+        b: Las baterías deben estar en un lugar sin airear y sin ventilación.
+        c: En caso de derrame de combustible es necesario enjuagar abundantemente
+          con agua.
+        d: Está permitido fumar mientras hacemos combustible.
+      category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+  9:
+    name: Meteorología
+    questions:
+    - id: 33
+      question: 'El peso de la columna de aire sobre la superficie del mar se conoce
+        como:'
+      options:
+        a: Presión atmosférica.
+        b: Marea barométrica.
+        c: Presión hidrostática.
+        d: Presión isobárica.
+      category: 9
+      category_name: Meteorología
+      correct_answer: a
+    - id: 34
+      question: Decimos que el viento ha rolado cuando…
+      options:
+        a: Ha disminuido su intensidad.
+        b: Cambia de intensidad en intervalos cortos.
+        c: Cambia de dirección.
+        d: Ha aumentado de intensidad.
+      category: 9
+      category_name: Meteorología
+      correct_answer: c
+    - id: 35
+      question: 'Una subida significativa de la presión nos indica:'
+      options:
+        a: Temporal.
+        b: Fuertes chubascos.
+        c: Empeoramiento del tiempo.
+        d: Mejoría del tiempo.
+      category: 9
+      category_name: Meteorología
+      correct_answer: d
+    - id: 36
+      question: ¿Qué son los terrales?
+      options:
+        a: Vientos racheados de la costa.
+        b: Vientos portantes.
+        c: Brisas nocturnas que soplan desde tierra hacia el mar.
+        d: Brisas diurnas que soplan de mar a tierra.
+      category: 9
+      category_name: Meteorología
+      correct_answer: c
+  10:
+    name: Teoría de la navegación
+    questions:
+    - id: 37
+      question: Las distancias en las cartas náuticas se medirán…
+      options:
+        a: Sobre la escala de cualquier paralelo.
+        b: En la escala de latitudes y de longitudes indistintamente.
+        c: En la escala de latitudes.
+        d: En la escala de longitudes.
+      category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+    - id: 38
+      question: 'La publicación náutica que indica las características de la costa
+        y de los puertos, se denomina:'
+      options:
+        a: Derrotero.
+        b: Libro de Faros.
+        c: Guía náutica para la navegación de recreo.
+        d: Reglamento Internacional para Prevenir Abordajes en la Mar.
+      category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+    - id: 39
+      question: Las inexactitudes medidas por la corredera instalada a bordo cuando
+        navegamos, se corrigen aplicando el...
+      options:
+        a: Coeficiente de derrota.
+        b: Coeficiente de abatimiento.
+        c: Coeficiente de corredera.
+        d: Coeficiente de navegación.
+      category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+    - id: 40
+      question: 'El ángulo que existe entre el Norte verdadero (Nv) y el Norte magnético
+        (Nm) se denomina:'
+      options:
+        a: Corrección total.
+        b: Desvío.
+        c: Declinación magnética.
+        d: Rumbo de aguja.
+      category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+    - id: 41
+      question: 'Cuando una embarcación se ve afectada por una corriente y su rumbo
+        presenta un desplazamiento como consecuencia de ello, a este fenómeno se le
+        conoce como:'
+      options:
+        a: Marea.
+        b: Desvío.
+        c: Abatimiento.
+        d: Deriva.
+      category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+  11:
+    name: Carta de navegación
+    questions:
+    - id: 42
+      question: 'A Hora Reloj Bitácora (HRB)= 1030 tomamos simultáneamente demoras
+        verdaderas a los faros: Punta Carnero= 316º y Punta Cires= 233º ¿Cuál será
+        nuestra posición en ese instante?'
+      options:
+        a: 36º 02'N - 005º 22'W
+        b: 36º 00'N - 005º 20'W
+        c: 35º 58'N - 005º 18'W
+        d: 36º 03'N - 005º 23'W
+      category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+    - id: 43
+      question: Nos encontramos situados en la línea de la oposición de los faros
+        Isla Tarifa - Punta Alcázar y a 7 millas de distancia del faro de Punta Cires.
+        ¿Cuál será el valor de nuestra latitud?
+      options:
+        a: 36º 00,9’N
+        b: 35º 58,3’N
+        c: 35º 56,2'N
+        d: 35º 55,0’N
+      category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+    - id: 44
+      question: 'Calcular la velocidad a poner para hacer el recorrido Tánger - Barbate
+        (extremos de sus respectivos espigones de salida y de llegada) en 2,5 horas:'
+      options:
+        a: 9,68’
+        b: 12,80’
+        c: 14,60’
+        d: 16,20’
+      category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+    - id: 45
+      question: Navegando en aguas cercanas a Barbate, a Hora Reloj Bitácora (HRB)=
+        0930, nos encontramos proa a la línea de la enfilación de los faros de Trafalgar
+        y Roche. ¿Cuál será en ese momento nuestro rumbo verdadero?
+      options:
+        a: 328º
+        b: 323º
+        c: 318º
+        d: 314º
+      category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+exam_info:
+  call: marzo
+  categories: 11
+  community: Murcia
+  expected_questions: 45
+  questions_with_answers: 45
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN DE PATRÓN DE EMBARCACIONES DE RECREO
+  total_questions: 45
+  year: 2026
