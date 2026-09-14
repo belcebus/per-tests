@@ -22,7 +22,6 @@ from app.routers import exams
 from app.services.question_loader import question_loader
 from config.settings import settings
 
-
 # Añadir el directorio padre al path para importaciones
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 

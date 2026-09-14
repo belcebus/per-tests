@@ -10,7 +10,7 @@ from pathlib import Path
 from config.settings import settings
 
 # Agregar el directorio raíz del proyecto al path de Python
-project_root = Path(__file__).parent.parent.parent
+project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
 

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "per-tests"
-version = "1.5.0"
+version = "1.6.0"
 description = "Aplicación de Exámenes Aleatorios de PER España"
 readme = "README.md"
 license = {file = "LICENSE"}
@@ -57,21 +57,9 @@ security = [
     "semgrep>=1.67.0",
 ]
 
-# Dependencias para herramientas de procesamiento
-tools = [
-    "PyMuPDF>=1.23.0",
-    "PyPDF2>=3.0.0",
-    "pdf2image>=1.17.0",
-    "pytesseract>=0.3.10",
-    "Pillow>=10.0.0",
-    "pdfplumber>=0.9.0",
-    "numpy>=1.24.0",
-    "opencv-python>=4.9.0.80",
-]
-
-# Dependencias completas (aplicación + desarrollo + herramientas)
+# Dependencias completas (aplicación + desarrollo)
 full = [
-    "per-tests[dev,tools]",
+    "per-tests[dev]",
 ]
 
 # Dependencias para análisis de código
@@ -87,8 +75,8 @@ Issues = "https://github.com/belcebus/per-tests/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["app*", "config*", "tools*"]
-exclude = ["tests*", "data*", "static*", "extracted-answers*"]
+include = ["app*", "config*"]
+exclude = ["tests*", "data*", "static*"]
 
 [tool.pytest.ini_options]
 # Configuración de pytest (migrada desde pytest.ini)
@@ -119,7 +107,7 @@ addopts = [
 ]
 
 [tool.coverage.run]
-source = ["app", "config", "tools"]
+source = ["app", "config"]
 omit = [
     "*/tests/*",
     "*/venv/*",
@@ -166,7 +154,7 @@ extend-exclude = '''
 profile = "black"
 multi_line_output = 3
 line_length = 88
-known_first_party = ["app", "config", "tools"]
+known_first_party = ["app", "config"]
 [tool.mypy]
 python_version = "3.13"
 warn_return_any = true
@@ -183,11 +171,5 @@ warn_unreachable = true
 strict_equality = true
 
 [[tool.mypy.overrides]]
-module = [
-    "yaml.*",
-    "pdf2image.*",
-    "pytesseract.*",
-    "fitz.*",
-    "pdfplumber.*",
-]
+module = ["yaml.*"]
 ignore_missing_imports = true

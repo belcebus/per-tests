@@ -55,23 +55,9 @@ per-tests/
 │   │           ├── 2023/    # Respuestas del año 2023
 │   │           ├── 2024/    # Respuestas del año 2024
 │   │           └── 2025/    # Respuestas del año 2025
-│   ├── backups/             # Archivos YAML de respaldo (estructura antigua)
-│   └── raw/                 # PDFs originales sin procesar
-│       ├── questions/       # PDFs de preguntas oficiales organizados jerárquicamente
-│       │   └── madrid/      # PDFs por comunidad autónoma
-│       │       ├── 2022/    # PDFs del año 2022
-│       │       ├── 2023/    # PDFs del año 2023
-│       │       ├── 2024/    # PDFs del año 2024
-│       │       └── 2025/    # PDFs del año 2025
-│       └── answers/         # PDFs de respuestas oficiales organizados jerárquicamente
-│           └── madrid/      # PDFs por comunidad autónoma
-│               ├── 2022/    # PDFs del año 2022
-│               ├── 2023/    # PDFs del año 2023
-│               ├── 2024/    # PDFs del año 2024
-│               └── 2025/    # PDFs del año 2025
+├── scripts/                 # Scripts de mantenimiento (p.ej. check_exam_consistency.py)
 ├── static/                  # Frontend (HTML, CSS, JS)
 
-├── extracted-answers/       # Respuestas extraídas por OCR (temporal)
 ├── Makefile                 # Comandos automatizados para testing y desarrollo
 ├── pyproject.toml           # Configuración moderna: proyecto, dependencias, pytest, coverage
 └── README.md                # Este archivo
@@ -94,17 +80,12 @@ make install-dev
 # o manualmente:
 pip install -e ".[dev]"
 
-# Instalación con herramientas de procesamiento (OCR, PDFs)
-make install-tools
-# o manualmente:
-pip install -e ".[tools]"
-
 # Instalación para análisis de seguridad (Semgrep)
 make install-security
 # o manualmente:
 pip install -e ".[security]"
 
-# Instalación completa (desarrollo + herramientas)
+# Instalación completa (desarrollo)
 make install-full
 # o manualmente:
 pip install -e ".[full]"
@@ -803,7 +784,6 @@ Los archivos siguen el mismo patrón para preguntas (YAML) y respuestas (JSON):
 ### Perfiles de dependencias
 
 - **[dev]**: Testing y desarrollo (pytest, coverage, httpx, etc.)
-- **[tools]**: Procesamiento de PDFs e imágenes (PyMuPDF, pdf2image, pytesseract, Pillow, pdfplumber, numpy)
 - **[security]**: Análisis de seguridad (Semgrep)
 - **[lint]**: Linting y análisis estático (flake8, black, isort, mypy, radon, pylint)
 - **[full]**: Todo lo anterior junto
@@ -822,14 +802,6 @@ Los archivos siguen el mismo patrón para preguntas (YAML) y respuestas (JSON):
 - **httpx**: Cliente HTTP asíncrono para tests de API
 - **asgi_lifespan**: Soporte para tests de ciclo de vida ASGI
 
-### Herramientas de Procesamiento ([tools])
-- **PyMuPDF**: Extracción de texto de archivos PDF
-- **pdf2image**: Conversión de PDFs a imágenes para OCR
-- **pytesseract**: Motor OCR para extraer texto de imágenes
-- **Pillow**: Procesamiento y mejora de imágenes
-- **pdfplumber**: Análisis avanzado de estructura PDF
-- **numpy**: Operaciones numéricas para procesamiento de imágenes
-
 ### Análisis de Seguridad ([security])
 - **semgrep**: Análisis de seguridad y buenas prácticas multi-lenguaje
 
@@ -840,65 +812,6 @@ Los archivos siguen el mismo patrón para preguntas (YAML) y respuestas (JSON):
 - **mypy**: Comprobación de tipos
 - **radon**: Complejidad ciclomática
 - **pylint**: Análisis estático avanzado
-
-### Dependencias del Sistema (DevContainer)
-
-El devcontainer instala automáticamente las siguientes dependencias del sistema necesarias para OCR:
-
-#### 📦 Paquetes del Sistema
-
-1. **poppler-utils**: Herramientas para manipular archivos PDF
-   - Necesario para: `pdf2image` (conversión de PDF a imágenes)
-   - Comandos: `pdfinfo`, `pdftoppm`, etc.
-
-2. **tesseract-ocr**: Motor de OCR (Reconocimiento Óptico de Caracteres)
-   - Necesario para: `pytesseract` (reconocimiento de texto en imágenes)
-   - Versión: 4.1.1
-
-3. **tesseract-ocr-spa**: Paquete de idioma español para Tesseract
-   - Mejora la precisión del OCR para texto en español
-   - Incluye modelos entrenados específicamente para español
-
-#### 🚀 Instalación Automática
-
-Las dependencias del sistema se instalan automáticamente cuando se crea el devcontainer:
-
-```bash
-sudo apt update && sudo apt install -y poppler-utils tesseract-ocr tesseract-ocr-spa && pip3 install --user -e .
-```
-
-#### ✅ Verificación de Instalación
-
-Para verificar que las dependencias están correctamente instaladas:
-
-```bash
-# Verificar poppler
-pdfinfo --version
-
-# Verificar tesseract
-tesseract --version
-
-# Verificar idiomas disponibles en tesseract
-tesseract --list-langs
-```
-
-#### 🔧 Solución de Problemas
-
-Si encuentras errores relacionados con:
-
-- `PDFInfoNotInstalledError`: Instala `poppler-utils`
-- `tesseract is not installed`: Instala `tesseract-ocr`
-- Precisión baja en OCR español: Instala `tesseract-ocr-spa`
-
-#### 🏗️ Reconstruir Devcontainer
-
-Si necesitas aplicar estos cambios a un Codespace existente:
-
-1. Abre la paleta de comandos (Ctrl+Shift+P)
-2. Busca "Dev Containers: Rebuild Container"
-3. Selecciona la opción para reconstruir
-
-O simplemente crea un nuevo Codespace que tendrá automáticamente todas las dependencias instaladas.
 
 
 
@@ -968,8 +881,7 @@ Todas las variables están documentadas en `config/settings.py` con tipos, valor
 
 - **Servidor:** `PER_HOST`, `PER_PORT`, `PER_DEBUG`, `PER_RELOAD`, `PER_LOG_LEVEL`
 - **API:** `PER_API_TITLE`, `PER_API_DESCRIPTION`, `PER_API_VERSION`
-- **Rutas:** `PER_DATA_DIR`, `PER_EXAMS_DIR`, `PER_RAW_QUESTIONS_DIR`, etc.
+- **Rutas:** `PER_DATA_DIR`, `PER_EXAMS_DIR`
 - **Exámenes:** `PER_DEFAULT_NUM_QUESTIONS`, `PER_EXAM_TTL_HOURS`
-- **Procesamiento:** `PER_OCR_CONFIDENCE_THRESHOLD`, `PER_PDF_DPI`
 
 > **💡 Tip:** La aplicación está diseñada para funcionar sin configuración. Solo modifica variables si necesitas un comportamiento específico.

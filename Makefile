@@ -6,7 +6,7 @@ quality: venv
 	venv/bin/black --check app config
 	venv/bin/mypy app config
 	@echo "$(GREEN)🔍 Verificando consistencia de archivos de exámenes...$(NC)"
-	$(PYTHON_CMD) tools/utils/check_exam_consistency.py
+	$(PYTHON_CMD) scripts/check_exam_consistency.py
 # Instala solo las dependencias de linters y analizadores
 install-lint: venv
 	@echo "$(GREEN)📦 Instalando paquete con linters y analizadores...$(NC)"
@@ -34,7 +34,7 @@ get-version:
 # Variables
 PYTHON_CMD = venv/bin/python
 PYTEST_CMD = venv/bin/python -m pytest
-COV_MODULES = app config tools
+COV_MODULES = app config
 
 # Colores para output
 GREEN = \033[0;32m
@@ -42,7 +42,7 @@ YELLOW = \033[1;33m
 RED = \033[0;31m
 NC = \033[0m # No Color
 
-.PHONY: help test test-fast test-cov test-cov-html test-cov-xml test-unit test-integration test-api clean install install-dev install-tools install-full run run-prod run-azure run-debug run-local run-custom security build-deploy
+.PHONY: help test test-fast test-cov test-cov-html test-cov-xml test-unit test-integration test-api clean install install-dev install-full run run-prod run-azure run-debug run-local run-custom security build-deploy
 
 
 # Comando por defecto
@@ -52,7 +52,6 @@ help:
 	@echo "$(YELLOW)Instalación:$(NC)"
 	@echo "  make install         - Instalar dependencias básicas"
 	@echo "  make install-dev     - Instalar con dependencias de desarrollo"
-	@echo "  make install-tools   - Instalar con herramientas de procesamiento"
 	@echo "  make install-full    - Instalar todas las dependencias"
 	@echo "  make install-toml-cli - Instalar toml-cli para operaciones TOML"
 	@echo ""
@@ -122,10 +121,6 @@ install-dev: venv
 	@echo "$(GREEN)📦 Instalando paquete con dependencias de desarrollo...$(NC)"
 	$(PYTHON_CMD) -m pip install -e ".[dev]"
 
-install-tools: venv
-	@echo "$(GREEN)📦 Instalando paquete con herramientas de procesamiento...$(NC)"
-	$(PYTHON_CMD) -m pip install -e ".[tools]"
-
 install-full: venv
 	@echo "$(GREEN)📦 Instalando paquete con todas las dependencias...$(NC)"
 	$(PYTHON_CMD) -m pip install -e ".[full]"
@@ -141,24 +136,24 @@ test: test-fast
 # Tests con cobertura básica
 test-cov:
 	@echo "$(GREEN)📊 Ejecutando tests con cobertura...$(NC)"
-	$(PYTEST_CMD) --cov=app --cov=config --cov-report=term-missing --cov-fail-under=0 --cov-config=.coveragerc --ignore=tools
+	$(PYTEST_CMD) --cov=app --cov=config --cov-report=term-missing --cov-fail-under=0 --cov-config=.coveragerc
 
 # Tests con cobertura y reporte HTML
 test-cov-html:
 	@echo "$(GREEN)📊 Ejecutando tests con cobertura y reporte HTML...$(NC)"
-	$(PYTEST_CMD) --cov=app --cov=config --cov=tools --cov-report=term-missing --cov-report=html:coverage_html
+	$(PYTEST_CMD) --cov=app --cov=config --cov-report=term-missing --cov-report=html:coverage_html
 	@echo "$(YELLOW)📄 Reporte HTML generado en: coverage_html/index.html$(NC)"
 
 # Tests con cobertura y reporte XML (para CI/CD)
 test-cov-xml:
 	@echo "$(GREEN)📊 Ejecutando tests con cobertura y reporte XML...$(NC)"
-	$(PYTEST_CMD) --cov=app --cov=config --cov=tools --cov-report=term-missing --cov-report=xml:coverage.xml
+	$(PYTEST_CMD) --cov=app --cov=config --cov-report=term-missing --cov-report=xml:coverage.xml
 	@echo "$(YELLOW)📄 Reporte XML generado en: coverage.xml$(NC)"
 
 # Tests con cobertura completa (HTML + XML)
 test-cov-full:
 	@echo "$(GREEN)📊 Ejecutando tests con cobertura completa...$(NC)"
-	$(PYTEST_CMD) --cov=app --cov=config --cov=tools --cov-report=term-missing --cov-report=html:coverage_html --cov-report=xml:coverage.xml
+	$(PYTEST_CMD) --cov=app --cov=config --cov-report=term-missing --cov-report=html:coverage_html --cov-report=xml:coverage.xml
 	@echo "$(YELLOW)📄 Reportes generados:$(NC)"
 	@echo "  - HTML: coverage_html/index.html"
 	@echo "  - XML:  coverage.xml"
@@ -179,7 +174,7 @@ test-api:
 # Tests con umbral de cobertura mínimo
 test-cov-strict:
 	@echo "$(GREEN)📊 Ejecutando tests con cobertura (umbral 95%)...$(NC)"
-	$(PYTEST_CMD) --cov=app --cov=config --cov=tools --cov-report=term-missing --cov-fail-under=95
+	$(PYTEST_CMD) --cov=app --cov=config --cov-report=term-missing --cov-fail-under=95
 
 # Limpieza de archivos generados
 clean:
@@ -197,7 +192,7 @@ clean:
 # Tests para CI/CD con timeout
 test-ci:
 	@echo "$(GREEN)🤖 Ejecutando tests para CI/CD...$(NC)"
-	$(PYTEST_CMD) --cov=app --cov=config --cov=tools --cov-report=xml:coverage.xml --cov-report=term --timeout=300
+	$(PYTEST_CMD) --cov=app --cov=config --cov-report=xml:coverage.xml --cov-report=term --timeout=300
 
 # Comandos para ejecutar la aplicación
 security:

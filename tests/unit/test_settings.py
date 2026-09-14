@@ -49,8 +49,6 @@ class TestSettingsConfiguration:
         # Verificar que las rutas se construyen correctamente
         assert test_settings.data_dir == "data"
         assert test_settings.exams_dir == "data/exams"
-        assert test_settings.raw_questions_dir == "data/raw/questions"
-        assert test_settings.raw_answers_dir == "data/raw/answers"
 
     def test_custom_data_directory(self):
         """Test para directorio de datos personalizado"""
@@ -75,13 +73,6 @@ class TestSettingsConfiguration:
         
         assert test_settings.default_num_questions == 45
         assert test_settings.exam_ttl_hours == 2
-
-    def test_processing_settings(self):
-        """Test para configuración de procesamiento"""
-        test_settings = Settings()
-        
-        assert test_settings.ocr_confidence_threshold == 0.7  # Valor real es 0.7
-        assert test_settings.pdf_dpi == 300
 
     def test_boolean_environment_variables(self):
         """Test para manejo de variables de entorno booleanas"""
@@ -112,13 +103,11 @@ class TestSettingsConfiguration:
         with patch.dict(os.environ, {
             'PER_PORT': '8080',
             'PER_EXAM_TTL_HOURS': '3',  # Debe ser entero, no float
-            'PER_OCR_CONFIDENCE_THRESHOLD': '0.75'  # Debe ser float
         }):
             test_settings = Settings()
             
             assert test_settings.port == 8080
             assert test_settings.exam_ttl_hours == 3
-            assert test_settings.ocr_confidence_threshold == 0.75
 
     def test_invalid_numeric_environment_variables(self):
         """Test para manejo de variables de entorno numéricas inválidas"""
@@ -154,7 +143,6 @@ class TestSettingsValidation:
         # Verificar que las rutas están definidas
         assert test_settings.data_dir is not None
         assert test_settings.exams_dir is not None
-        assert test_settings.raw_questions_dir is not None
 
     def test_settings_model_fields(self):
         """Test para verificar que todos los campos necesarios están definidos"""

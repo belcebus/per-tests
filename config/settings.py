@@ -5,7 +5,6 @@ Este módulo proporciona configuración centralizada para:
 - Rutas de archivos y directorios
 - Configuración del servidor web
 - Configuración de exámenes
-- Configuración de herramientas de procesamiento
 """
 
 import os
@@ -45,30 +44,6 @@ class Settings(BaseSettings):
         default="data/exams",
         alias="PER_EXAMS_DIR",
         description="Directorio de archivos YAML de exámenes",
-    )
-
-    raw_questions_dir: str = Field(
-        default="data/raw/questions",
-        alias="PER_RAW_QUESTIONS_DIR",
-        description="Directorio de PDFs de preguntas originales",
-    )
-
-    raw_answers_dir: str = Field(
-        default="data/raw/answers",
-        alias="PER_RAW_ANSWERS_DIR",
-        description="Directorio de PDFs de respuestas originales",
-    )
-
-    backups_dir: str = Field(
-        default="data/backups",
-        alias="PER_BACKUPS_DIR",
-        description="Directorio de backups de archivos YAML",
-    )
-
-    extracted_dir: str = Field(
-        default="extracted_answers",
-        alias="PER_EXTRACTED_DIR",
-        description="Directorio de archivos extraídos temporalmente",
     )
 
     static_dir: str = Field(
@@ -188,24 +163,6 @@ class Settings(BaseSettings):
     )
 
     # ==========================================
-    # CONFIGURACIÓN DE PROCESAMIENTO
-    # ==========================================
-
-    # Configuración de OCR
-    ocr_confidence_threshold: float = Field(
-        default=0.7,
-        alias="PER_OCR_CONFIDENCE_THRESHOLD",
-        description="Umbral de confianza para OCR",
-    )
-
-    # Configuración de procesamiento de PDFs
-    pdf_dpi: int = Field(
-        default=300,
-        alias="PER_PDF_DPI",
-        description="DPI para conversión de PDFs a imágenes",
-    )
-
-    # ==========================================
     # CONFIGURACIÓN DE DESARROLLO
     # ==========================================
 
@@ -232,22 +189,6 @@ class Settings(BaseSettings):
     def get_exams_path(self) -> Path:
         """Obtiene la ruta absoluta del directorio de exámenes."""
         return self.get_absolute_path(self.exams_dir)
-
-    def get_raw_questions_path(self) -> Path:
-        """Obtiene la ruta absoluta del directorio de preguntas originales."""
-        return self.get_absolute_path(self.raw_questions_dir)
-
-    def get_raw_answers_path(self) -> Path:
-        """Obtiene la ruta absoluta del directorio de respuestas originales."""
-        return self.get_absolute_path(self.raw_answers_dir)
-
-    def get_backups_path(self) -> Path:
-        """Obtiene la ruta absoluta del directorio de backups."""
-        return self.get_absolute_path(self.backups_dir)
-
-    def get_extracted_path(self) -> Path:
-        """Obtiene la ruta absoluta del directorio de extracción temporal."""
-        return self.get_absolute_path(self.extracted_dir)
 
     def get_static_path(self) -> Path:
         """Obtiene la ruta absoluta del directorio de archivos estáticos."""
