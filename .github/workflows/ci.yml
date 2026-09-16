@@ -54,5 +54,5 @@ jobs:
 
       - name: Ejecutar tests
         run: |
-          make test-cov
+          make test-ci
 

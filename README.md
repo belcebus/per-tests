@@ -116,7 +116,7 @@ pip install -r requirements.txt
 
 ```bash
 # Un solo comando para desarrollo completo
-make install-dev && make test-fast
+make install-dev && make test
 ```
 
 ## 🛠️ **Makefile - Herramienta de Desarrollo**
@@ -129,16 +129,8 @@ El proyecto incluye un Makefile completo que simplifica todas las tareas de desa
    - `make install-dev` — instala dependencias de desarrollo
    - `make install-toml-cli` — instala toml-cli para operaciones TOML
    - `make get-version` — extrae versión del pyproject.toml
-   - `make test-fast` — ejecuta todos los tests sin cobertura (rápido)
-   - `make test-unit` — ejecuta solo tests unitarios
-   - `make test-integration` — ejecuta solo tests de integración
-   - `make test-api` — ejecuta solo tests de API
-   - `make test-cov` — ejecuta tests con cobertura en terminal
-   - `make test-cov-html` — genera reporte HTML de cobertura
-   - `make test-cov-xml` — genera reporte XML de cobertura
-   - `make test-cov-full` — genera reportes HTML+XML de cobertura
-   - `make test-cov-strict` — ejecuta tests con cobertura mínima (95%)
-   - `make test-ci` — ejecuta tests para CI/CD (con timeout)
+   - `make test` — ejecuta todos los tests con cobertura estricta del 95% y reportes HTML/XML
+   - `make test-ci` — ejecuta la misma suite con timeout para CI/CD
    - `make quality` — ejecuta linters y analizadores (flake8, pylint, black, isort, radon, mypy)
    - `make security` — ejecuta análisis de seguridad del código (semgrep)
    - `make run` — inicia la aplicación (configuración por defecto)
@@ -153,28 +145,17 @@ El proyecto incluye un Makefile completo que simplifica todas las tareas de desa
 
    **Ejemplos:**
    - `make install-dev`                  # Instalación para desarrollo
-   - `make test-fast`                    # Durante desarrollo
-   - `make test-cov`                     # Para verificar cobertura
+   - `make test`                         # Ejecutar la suite completa con cobertura estricta
    - `make quality`                      # Análisis de calidad de código
-   - `make test-cov-html`                # Para generar reporte visual
    - `make run`                          # Aplicación con configuración por defecto
    - `PER_PORT=9000 make run`            # Cambiar puerto
    - `PER_HOST=localhost make run-local` # Localhost en puerto personalizado
 
 
-#### **Testing Rápido (Desarrollo):**
+#### **Testing:**
 ```bash
-make test-fast       # Tests sin cobertura (7-8 segundos)
-make test-unit       # Solo tests unitarios
-make test-api        # Solo tests de API
-```
-
-#### **Testing con Cobertura:**
-```bash
-make test-cov        # Cobertura en terminal
-make test-cov-html   # + Reporte HTML visual
-make test-cov-xml    # + Reporte XML (CI/CD)
-make test-cov-full   # HTML + XML completo
+make test             # Suite completa, cobertura mínima del 95% y reportes HTML/XML
+make test-ci          # Igual que make test, con timeout de 300 segundos
 ```
 
 #### **Análisis de Seguridad:**
@@ -205,12 +186,11 @@ make help           # Ver todos los comandos disponibles
 ```bash
 # Flujo típico de desarrollo
 make install-dev                    # Configurar entorno
-make test-fast                      # Verificar que todo funciona
+make test                           # Verificar tests y cobertura estricta
 make run                           # Ejecutar aplicación
 
 # Verificar calidad antes de commit
-make test-cov                      # Ver cobertura actual
-make test-cov-html                 # Generar reporte detallado
+make test                           # Ejecutar suite completa y generar reportes
 
 # Personalizar configuración
 PER_PORT=9000 make run             # Cambiar puerto
@@ -388,20 +368,12 @@ Selección y realización de exámenes oficiales concretos de convocatorias espe
 
 ## Testing
 
-### 🏆 **Logros de Calidad Conseguidos**
+### 🏆 **Política de calidad**
 
-**Estado actual: EXCELENTE** ✨
-- 🎯 **97% de cobertura total** (Objetivo 80% superado)
-- ✅ **100 tests ejecutándose** con 100% de éxito
-- 🧹 **Código limpio**: Eliminadas 68 líneas de código muerto
-- 📊 **Métricas sobresalientes** en todos los módulos críticos
-
-**Mejoras recientes destacadas:**
-- `question_loader.py`: 61% → **100%** (+39 puntos)
-- `exam_service.py`: 26% → **98%** (+72 puntos)
-- `main.py`: 59% → **95%** (+36 puntos)
-- Suite de tests: 47 → **100 tests** (+53 tests nuevos)
-- Fallos: 27 → **0 fallos** (100% éxito)
+La suite oficial se ejecuta con un umbral mínimo del **95% de cobertura**.
+El comando `make test` genera los reportes de cobertura en `coverage_html/` y
+`coverage.xml`; `make test-ci` ejecuta la misma validación con un timeout de 300
+segundos para CI/CD.
 
 ### Descripción General
 El proyecto incluye una suite completa de pruebas automatizadas para garantizar la calidad y funcionamiento correcto de la aplicación. Los tests están organizados en una estructura jerárquica que facilita el mantenimiento y la ejecución selectiva.
@@ -458,37 +430,14 @@ La configuración se encuentra centralizada en:
 
 ### Ejecución de Tests
 
-#### 🚀 **Tests Rápidos (Recomendado para Desarrollo)**
+#### 🚀 **Suite completa de tests**
 
 ```bash
-# Ejecutar todos los tests sin cobertura (más rápido)
-make test-fast
-# o simplemente
-pytest
+# Desarrollo y verificación local: suite completa, cobertura mínima del 95%
+make test
 
-# Tests por categoría
-make test-unit      # Solo tests unitarios
-make test-api       # Solo tests de API
-pytest -m unit      # Alternativa directa
-```
-
-#### 📊 **Tests con Cobertura (Para Verificación)**
-
-```bash
-# Cobertura básica en terminal
-make test-cov
-# o
-pytest --cov=app --cov-report=term-missing
-
-# Cobertura con reporte HTML visual
-make test-cov-html
-# Abre: coverage_html/index.html
-
-# Cobertura con reporte XML (para CI/CD)
-make test-cov-xml
-
-# Cobertura completa (HTML + XML)
-make test-cov-full
+# CI/CD: la misma suite con timeout de 300 segundos
+make test-ci
 ```
 
 #### 🎯 **Tests Específicos**
@@ -521,33 +470,14 @@ pytest -n auto
 pytest -v -s
 ```
 
-#### 🔧 **Comandos Avanzados**
-
-```bash
-# Tests con umbral de cobertura estricto
-make test-cov-strict
-
-# Limpiar archivos de cobertura
-make clean
-
-# Ver todos los comandos disponibles
-make help
-```
-
 #### 💡 **Ejemplos de Uso Según Contexto**
 
 ```bash
-# 🏃‍♂️ Durante desarrollo activo (rápido)
-make test-fast
+# 🧪 Desarrollo y validación local
+make test
 
 # 🔍 Verificar un módulo específico
 pytest tests/unit/test_models.py -v
-
-# 📊 Verificar cobertura antes de commit
-make test-cov
-
-# 🎯 Verificar que todos los objetivos se cumplen
-make test-cov-strict
 
 # 🤖 Para CI/CD automático
 make test-ci
@@ -563,126 +493,22 @@ make clean
 La cobertura de código es la métrica principal para medir la completitud de tests:
 
 ```bash
-# Cobertura básica
-pytest --cov=app
-
-# Cobertura con detalles de líneas no cubiertas
-pytest --cov=app --cov-report=term-missing
-
-# Reporte HTML interactivo
-pytest --cov=app --cov-report=html
-# Ver en: htmlcov/index.html
-
-# Establecer umbral mínimo (falla si no se alcanza)
-pytest --cov=app --cov-fail-under=80
+# Ejecución oficial con umbral mínimo del 95%
+make test
+# Reporte HTML: coverage_html/index.html
 ```
 
 #### 🎯 **Objetivos de Cobertura Recomendados**
 
-- **Modelos Pydantic**: 100% ✅ (Conseguido)
-- **Servicios críticos**: 90%+ ✅ (Conseguido: 98% exam_service, 100% question_loader)
-- **Routers/Endpoints**: 80%+ ✅ (Conseguido: 85%)
-- **Configuración**: 70%+ ✅ (Conseguido: 95% main.py)
-- **Total del proyecto**: 80%+ ✅ (Conseguido: 97% - ¡SUPERADO!)
+- **Total del proyecto**: mínimo del 95%, aplicado por `make test` y `make test-ci`
 
 #### 🔍 **Estado Actual de Cobertura**
 
 ```
-🏆 COBERTURA TOTAL: 97% (EXCELENTE - Objetivo 80% superado)
+🏆 COBERTURA TOTAL: debe superar el umbral estricto del 95%
 
-Por módulos:
-✅ app/models/schemas.py         100%  (Perfecto)
-✅ app/services/question_loader.py 100%  (Perfecto - Mejorado desde 61%)
-✅ app/services/exam_service.py   98%   (Excelente - Mejorado desde 26%)
-✅ app/main.py                    95%   (Muy bueno - Mejorado desde 59%)
-✅ app/routers/exams.py           85%   (Muy bueno - Mejorado desde 76%)
-
-🎯 Logros destacados:
-- Eliminación de código muerto (68 líneas en question_loader.py)
-- Mejora masiva en exam_service.py (+72 puntos de cobertura)
-- Mejora significativa en main.py (+36 puntos de cobertura)
-- 100 tests ejecutándose con 100% de éxito
-- Total de 398 líneas de código, solo 11 sin cubrir
+🎯 El umbral se comprueba automáticamente en cada ejecución de la suite.
 ```
-
-#### 🧪 **Métricas Adicionales de Calidad**
-
-Además de la cobertura, considera estas métricas:
-
-```bash
-# Complejidad ciclomática (requiere radon)
-pip install radon
-radon cc app/ -a
-
-# Análisis de código estático (requiere flake8)
-pip install flake8
-flake8 app/
-
-# Detección de código duplicado (requiere pylint)
-pip install pylint
-pylint app/
-
-# Tests de mutación (requiere mutmut)
-pip install mutmut
-mutmut run
-```
-
-#### 📋 **Checklist de Completitud**
-
-**Tests Unitarios:**
-- [x] Modelos Pydantic (100%) ✅
-- [x] Validaciones básicas ✅
-- [x] Servicios críticos (98% exam_service, 100% question_loader) ✅
-- [x] Lógica de negocio compleja ✅
-- [x] Manejo de errores básicos ✅
-
-**Tests de API:**
-- [x] Endpoints básicos (health, info) ✅
-- [x] Generación de exámenes ✅
-- [x] Corrección de exámenes ✅
-- [x] Validación de entrada ✅
-- [ ] Manejo de errores HTTP complejos ⚠️
-
-**Tests de Integración:**
-- [ ] Flujo completo de examen ⚠️
-- [ ] Interacción entre servicios ⚠️
-- [ ] Persistencia de datos ⚠️
-
-#### 🎯 **Plan de Mejora Actualizado**
-
-🏆 **OBJETIVOS PRINCIPALES CONSEGUIDOS** (97% cobertura total)
-
-**Completado recientemente:**
-- ✅ Eliminación de código muerto en question_loader.py (-68 líneas)
-- ✅ Cobertura 100% en servicios críticos
-- ✅ Suite de 100 tests con 100% éxito
-- ✅ Superación del objetivo del 80% de cobertura
-
-**Próximas prioridades:**
-
-1. **Prioridad Alta** (Próximas semanas):
-   ```bash
-   # Objetivo: Tests de integración y casos edge
-   - Tests end-to-end del flujo completo de examen
-   - Manejo de errores HTTP complejos
-   - Tests de rendimiento y carga
-   ```
-
-2. **Prioridad Media** (Futuro):
-   ```bash
-   # Objetivo: Optimización y métricas avanzadas
-   - Análisis de complejidad ciclomática
-   - Tests de mutación para validar calidad
-   - Integración continua mejorada
-   ```
-
-3. **Prioridad Baja** (Opcional):
-   ```bash
-   # Objetivo: Herramientas adicionales
-   - Análisis estático de código (flake8, pylint)
-   - Documentación automática de API
-   - Monitorización de rendimiento
-   ```
 
 ### Fixtures Disponibles
 
@@ -696,22 +522,9 @@ El archivo `conftest.py` proporciona fixtures reutilizables:
 
 ### Estadísticas de Tests
 
-Estado actual de la suite de tests:
-- **100 tests** en total ✅ (Incremento desde 47 tests)
-- **Tests que pasan**: 100 tests (100% éxito) ✅
-- **Tests que fallan**: 0 tests ✅ (Reducción desde 27 fallos)
-- **Cobertura**: 97% total ✅ (Incremento masivo desde 59%)
-  - Modelos Pydantic: 100% ✅
-  - Servicios: exam_service 98%, question_loader 100% ✅
-  - Endpoints FastAPI: 85% ✅
-  - Configuración: 95% ✅
-
-**Mejoras recientes conseguidas:**
-- 🧹 Eliminación de 68 líneas de código muerto
-- 📈 Mejora de +38 puntos en cobertura total (59% → 97%)
-- 🧪 Duplicación de número de tests (47 → 100)
-- ✅ Reducción de fallos a cero (27 → 0)
-- 🎯 Superación del objetivo del 80% de cobertura
+Estado de la suite: ejecútala con `make test` para obtener el número de tests y
+la cobertura actuales. El comando falla automáticamente si la cobertura total
+queda por debajo del 95%.
 
 ### Integración Continua
 
@@ -733,17 +546,6 @@ El workflow de CI incluye una nueva validación que se ejecuta **antes** de los 
 Esta validación previene releases accidentales con versiones duplicadas y mantiene la integridad del versionado del proyecto.
 
 Esto permite que la instalación de dependencias en CI sea más rápida y modular, y que el análisis de seguridad se ejecute solo cuando sea necesario.
-
-### Contribuir con Tests
-
-Al añadir nuevas funcionalidades:
-
-1. **Escribir tests unitarios** para nuevos modelos/servicios
-2. **Seguir la convención de nombres**: `test_*.py`
-3. **Usar fixtures** existentes cuando sea posible
-4. **Añadir markers** apropiados (`@pytest.mark.unit`, etc.)
-5. **Documentar** tests complejos con docstrings
-6. **Actualizar estadísticas** en este README cuando se añadan tests
 
 ## Estructura de Datos
 
@@ -798,6 +600,7 @@ Los archivos siguen el mismo patrón para preguntas (YAML) y respuestas (JSON):
 - **pytest**: Framework de testing moderno y potente
 - **pytest-asyncio**: Soporte para tests asíncronos
 - **pytest-cov**: Generación de reportes de cobertura de código
+- **pytest-timeout**: Límite de tiempo para tests en CI/CD
 - **pytest-mock**: Utilities para mocking en tests
 - **httpx**: Cliente HTTP asíncrono para tests de API
 - **asgi_lifespan**: Soporte para tests de ciclo de vida ASGI
@@ -812,8 +615,6 @@ Los archivos siguen el mismo patrón para preguntas (YAML) y respuestas (JSON):
 - **mypy**: Comprobación de tipos
 - **radon**: Complejidad ciclomática
 - **pylint**: Análisis estático avanzado
-
-
 
 ## Despliegue en Azure Web Apps
 
