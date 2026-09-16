@@ -577,7 +577,7 @@ mutmut run
 **Completado recientemente:**
 - ✅ Eliminación de código muerto en question_loader.py (-68 líneas)
 - ✅ Cobertura 100% en servicios críticos
-- ✅ Suite de 100 tests con 100% éxito
+- ✅ Suite de 177 tests con 100% éxito
 - ✅ Umbral mínimo del 95% configurado en los comandos oficiales de test
 
 **Próximas prioridades:**
@@ -707,6 +707,7 @@ Los archivos siguen el mismo patrón para preguntas (YAML) y respuestas (JSON):
 - **pytest**: Framework de testing moderno y potente
 - **pytest-asyncio**: Soporte para tests asíncronos
 - **pytest-cov**: Generación de reportes de cobertura de código
+- **pytest-timeout**: Límite de tiempo para tests en CI/CD
 - **pytest-mock**: Utilities para mocking en tests
 - **httpx**: Cliente HTTP asíncrono para tests de API
 - **asgi_lifespan**: Soporte para tests de ciclo de vida ASGI
