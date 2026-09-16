@@ -172,8 +172,8 @@ build-deploy:
 	@echo "$(GREEN)📦 Preparando aplicación para despliegue...$(NC)"
 	@echo "$(YELLOW)🔧 Instalando dependencias...$(NC)"
 	@$(MAKE) install-dev
-	@echo "$(YELLOW)🧪 Ejecutando tests...$(NC)"
-	@$(MAKE) test
+	@echo "$(YELLOW)🧪 Ejecutando tests para despliegue con timeout...$(NC)"
+	@$(MAKE) test-ci
 	@echo "$(YELLOW)📁 Preparando archivos de despliegue...$(NC)"
 	@rm -rf deploy-build/
 	@mkdir -p deploy-build
