@@ -493,12 +493,6 @@ make clean
 La cobertura de código es la métrica principal para medir la completitud de tests:
 
 ```bash
-# Cobertura básica
-pytest --cov=app
-
-# Cobertura con detalles de líneas no cubiertas
-pytest --cov=app --cov-report=term-missing
-
 # Ejecución oficial con umbral mínimo del 95%
 make test
 # Reporte HTML: coverage_html/index.html
@@ -506,10 +500,6 @@ make test
 
 #### 🎯 **Objetivos de Cobertura Recomendados**
 
-- **Modelos Pydantic**: 100% ✅ (Conseguido)
-- **Servicios críticos**: 90%+ ✅ (Conseguido: 98% exam_service, 100% question_loader)
-- **Routers/Endpoints**: mantener la cobertura por encima del umbral global del 95%
-- **Configuración**: mantener la cobertura por encima del umbral global del 95%
 - **Total del proyecto**: mínimo del 95%, aplicado por `make test` y `make test-ci`
 
 #### 🔍 **Estado Actual de Cobertura**
@@ -517,94 +507,8 @@ make test
 ```
 🏆 COBERTURA TOTAL: debe superar el umbral estricto del 95%
 
-Por módulos:
-✅ app/models/schemas.py         100%  (Perfecto)
-✅ app/services/question_loader.py 100%  (Perfecto - Mejorado desde 61%)
-✅ app/services/exam_service.py   98%   (Excelente - Mejorado desde 26%)
-✅ app/main.py                    95%   (Muy bueno - Mejorado desde 59%)
-✅ app/routers/exams.py           85%   (Muy bueno - Mejorado desde 76%)
-
 🎯 El umbral se comprueba automáticamente en cada ejecución de la suite.
 ```
-
-#### 🧪 **Métricas Adicionales de Calidad**
-
-Además de la cobertura, considera estas métricas:
-
-```bash
-# Complejidad ciclomática (requiere radon)
-pip install radon
-radon cc app/ -a
-
-# Análisis de código estático (requiere flake8)
-pip install flake8
-flake8 app/
-
-# Detección de código duplicado (requiere pylint)
-pip install pylint
-pylint app/
-
-# Tests de mutación (requiere mutmut)
-pip install mutmut
-mutmut run
-```
-
-#### 📋 **Checklist de Completitud**
-
-**Tests Unitarios:**
-- [x] Modelos Pydantic (100%) ✅
-- [x] Validaciones básicas ✅
-- [x] Servicios críticos (98% exam_service, 100% question_loader) ✅
-- [x] Lógica de negocio compleja ✅
-- [x] Manejo de errores básicos ✅
-
-**Tests de API:**
-- [x] Endpoints básicos (health, info) ✅
-- [x] Generación de exámenes ✅
-- [x] Corrección de exámenes ✅
-- [x] Validación de entrada ✅
-- [ ] Manejo de errores HTTP complejos ⚠️
-
-**Tests de Integración:**
-- [ ] Flujo completo de examen ⚠️
-- [ ] Interacción entre servicios ⚠️
-- [ ] Persistencia de datos ⚠️
-
-#### 🎯 **Plan de Mejora Actualizado**
-
-🏆 **OBJETIVO PRINCIPAL**: mantener al menos un 95% de cobertura total
-
-**Completado recientemente:**
-- ✅ Eliminación de código muerto en question_loader.py (-68 líneas)
-- ✅ Cobertura 100% en servicios críticos
-- ✅ Suite de 177 tests con 100% éxito
-- ✅ Umbral mínimo del 95% configurado en los comandos oficiales de test
-
-**Próximas prioridades:**
-
-1. **Prioridad Alta** (Próximas semanas):
-   ```bash
-   # Objetivo: Tests de integración y casos edge
-   - Tests end-to-end del flujo completo de examen
-   - Manejo de errores HTTP complejos
-   - Tests de rendimiento y carga
-   ```
-
-2. **Prioridad Media** (Futuro):
-   ```bash
-   # Objetivo: Optimización y métricas avanzadas
-   - Análisis de complejidad ciclomática
-   - Tests de mutación para validar calidad
-   - Integración continua mejorada
-   ```
-
-3. **Prioridad Baja** (Opcional):
-   ```bash
-   # Objetivo: Herramientas adicionales
-   - Análisis estático de código (flake8, pylint)
-   - Documentación automática de API
-   - Monitorización de rendimiento
-   ```
 
 ### Fixtures Disponibles
 
@@ -642,17 +546,6 @@ El workflow de CI incluye una nueva validación que se ejecuta **antes** de los 
 Esta validación previene releases accidentales con versiones duplicadas y mantiene la integridad del versionado del proyecto.
 
 Esto permite que la instalación de dependencias en CI sea más rápida y modular, y que el análisis de seguridad se ejecute solo cuando sea necesario.
-
-### Contribuir con Tests
-
-Al añadir nuevas funcionalidades:
-
-1. **Escribir tests unitarios** para nuevos modelos/servicios
-2. **Seguir la convención de nombres**: `test_*.py`
-3. **Usar fixtures** existentes cuando sea posible
-4. **Añadir markers** apropiados (`@pytest.mark.unit`, etc.)
-5. **Documentar** tests complejos con docstrings
-6. **Actualizar estadísticas** en este README cuando se añadan tests
 
 ## Estructura de Datos
 
@@ -722,8 +615,6 @@ Los archivos siguen el mismo patrón para preguntas (YAML) y respuestas (JSON):
 - **mypy**: Comprobación de tipos
 - **radon**: Complejidad ciclomática
 - **pylint**: Análisis estático avanzado
-
-
 
 ## Despliegue en Azure Web Apps
 
