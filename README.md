@@ -368,20 +368,12 @@ Selección y realización de exámenes oficiales concretos de convocatorias espe
 
 ## Testing
 
-### 🏆 **Logros de Calidad Conseguidos**
+### 🏆 **Política de calidad**
 
-**Estado actual: EXCELENTE** ✨
-- 🎯 **97% de cobertura total** (Objetivo 80% superado)
-- ✅ **100 tests ejecutándose** con 100% de éxito
-- 🧹 **Código limpio**: Eliminadas 68 líneas de código muerto
-- 📊 **Métricas sobresalientes** en todos los módulos críticos
-
-**Mejoras recientes destacadas:**
-- `question_loader.py`: 61% → **100%** (+39 puntos)
-- `exam_service.py`: 26% → **98%** (+72 puntos)
-- `main.py`: 59% → **95%** (+36 puntos)
-- Suite de tests: 47 → **100 tests** (+53 tests nuevos)
-- Fallos: 27 → **0 fallos** (100% éxito)
+La suite oficial se ejecuta con un umbral mínimo del **95% de cobertura**.
+El comando `make test` genera los reportes de cobertura en `coverage_html/` y
+`coverage.xml`; `make test-ci` ejecuta la misma validación con un timeout de 300
+segundos para CI/CD.
 
 ### Descripción General
 El proyecto incluye una suite completa de pruebas automatizadas para garantizar la calidad y funcionamiento correcto de la aplicación. Los tests están organizados en una estructura jerárquica que facilita el mantenimiento y la ejecución selectiva.
@@ -507,26 +499,23 @@ pytest --cov=app
 # Cobertura con detalles de líneas no cubiertas
 pytest --cov=app --cov-report=term-missing
 
-# Reporte HTML interactivo
-pytest --cov=app --cov-report=html
-# Ver en: htmlcov/index.html
-
-# Establecer umbral mínimo (falla si no se alcanza)
-pytest --cov=app --cov-fail-under=80
+# Ejecución oficial con umbral mínimo del 95%
+make test
+# Reporte HTML: coverage_html/index.html
 ```
 
 #### 🎯 **Objetivos de Cobertura Recomendados**
 
 - **Modelos Pydantic**: 100% ✅ (Conseguido)
 - **Servicios críticos**: 90%+ ✅ (Conseguido: 98% exam_service, 100% question_loader)
-- **Routers/Endpoints**: 80%+ ✅ (Conseguido: 85%)
-- **Configuración**: 70%+ ✅ (Conseguido: 95% main.py)
-- **Total del proyecto**: 80%+ ✅ (Conseguido: 97% - ¡SUPERADO!)
+- **Routers/Endpoints**: mantener la cobertura por encima del umbral global del 95%
+- **Configuración**: mantener la cobertura por encima del umbral global del 95%
+- **Total del proyecto**: mínimo del 95%, aplicado por `make test` y `make test-ci`
 
 #### 🔍 **Estado Actual de Cobertura**
 
 ```
-🏆 COBERTURA TOTAL: 97% (EXCELENTE - Objetivo 80% superado)
+🏆 COBERTURA TOTAL: debe superar el umbral estricto del 95%
 
 Por módulos:
 ✅ app/models/schemas.py         100%  (Perfecto)
@@ -535,12 +524,7 @@ Por módulos:
 ✅ app/main.py                    95%   (Muy bueno - Mejorado desde 59%)
 ✅ app/routers/exams.py           85%   (Muy bueno - Mejorado desde 76%)
 
-🎯 Logros destacados:
-- Eliminación de código muerto (68 líneas en question_loader.py)
-- Mejora masiva en exam_service.py (+72 puntos de cobertura)
-- Mejora significativa en main.py (+36 puntos de cobertura)
-- 100 tests ejecutándose con 100% de éxito
-- Total de 398 líneas de código, solo 11 sin cubrir
+🎯 El umbral se comprueba automáticamente en cada ejecución de la suite.
 ```
 
 #### 🧪 **Métricas Adicionales de Calidad**
@@ -588,13 +572,13 @@ mutmut run
 
 #### 🎯 **Plan de Mejora Actualizado**
 
-🏆 **OBJETIVOS PRINCIPALES CONSEGUIDOS** (97% cobertura total)
+🏆 **OBJETIVO PRINCIPAL**: mantener al menos un 95% de cobertura total
 
 **Completado recientemente:**
 - ✅ Eliminación de código muerto en question_loader.py (-68 líneas)
 - ✅ Cobertura 100% en servicios críticos
 - ✅ Suite de 100 tests con 100% éxito
-- ✅ Superación del objetivo del 80% de cobertura
+- ✅ Umbral mínimo del 95% configurado en los comandos oficiales de test
 
 **Próximas prioridades:**
 
@@ -634,22 +618,9 @@ El archivo `conftest.py` proporciona fixtures reutilizables:
 
 ### Estadísticas de Tests
 
-Estado actual de la suite de tests:
-- **100 tests** en total ✅ (Incremento desde 47 tests)
-- **Tests que pasan**: 100 tests (100% éxito) ✅
-- **Tests que fallan**: 0 tests ✅ (Reducción desde 27 fallos)
-- **Cobertura**: 97% total ✅ (Incremento masivo desde 59%)
-  - Modelos Pydantic: 100% ✅
-  - Servicios: exam_service 98%, question_loader 100% ✅
-  - Endpoints FastAPI: 85% ✅
-  - Configuración: 95% ✅
-
-**Mejoras recientes conseguidas:**
-- 🧹 Eliminación de 68 líneas de código muerto
-- 📈 Mejora de +38 puntos en cobertura total (59% → 97%)
-- 🧪 Duplicación de número de tests (47 → 100)
-- ✅ Reducción de fallos a cero (27 → 0)
-- 🎯 Superación del objetivo del 80% de cobertura
+Estado de la suite: ejecútala con `make test` para obtener el número de tests y
+la cobertura actuales. El comando falla automáticamente si la cobertura total
+queda por debajo del 95%.
 
 ### Integración Continua
 
