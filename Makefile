@@ -35,6 +35,7 @@ get-version:
 PYTHON_CMD = venv/bin/python
 PYTEST_CMD = venv/bin/python -m pytest
 COV_MODULES = app config
+TEST_ARGS = --cov=app --cov=config --cov-report=term-missing --cov-report=html:coverage_html --cov-report=xml:coverage.xml --cov-fail-under=95
 
 # Colores para output
 GREEN = \033[0;32m
@@ -42,7 +43,7 @@ YELLOW = \033[1;33m
 RED = \033[0;31m
 NC = \033[0m # No Color
 
-.PHONY: help test test-fast test-cov test-cov-html test-cov-xml test-unit test-integration test-api clean install install-dev install-full run run-prod run-azure run-debug run-local run-custom security build-deploy
+.PHONY: help test test-ci clean install install-dev install-full run run-prod run-azure run-debug run-local run-custom security build-deploy
 
 
 # Comando por defecto
@@ -58,19 +59,9 @@ help:
 	@echo "$(YELLOW)Utilidades:$(NC)"
 	@echo "  make get-version     - Extraer versión del pyproject.toml"
 	@echo ""
-	@echo "$(YELLOW)Tests rápidos (sin cobertura):$(NC)"
-	@echo "  make test-fast        - Ejecutar todos los tests sin cobertura (rápido)"
-	@echo "  make test-unit        - Ejecutar solo tests unitarios"
-	@echo "  make test-integration - Ejecutar solo tests de integración"
-	@echo "  make test-api         - Ejecutar solo tests de API"
-	@echo ""
-	@echo "$(YELLOW)Tests con cobertura:$(NC)"
-	@echo "  make test-cov         - Ejecutar tests con cobertura en terminal"
-	@echo "  make test-cov-html    - Ejecutar tests y generar reporte HTML"
-	@echo "  make test-cov-xml     - Ejecutar tests y generar reporte XML"
-	@echo "  make test-cov-full    - Ejecutar tests y generar reportes HTML+XML"
-	@echo "  make test-cov-strict  - Ejecutar tests con cobertura mínima (95%)"
-	@echo "  make test-ci          - Ejecutar tests para CI/CD (con timeout)"
+	@echo "$(YELLOW)Tests:$(NC)"
+	@echo "  make test             - Ejecutar todos los tests de la forma más estricta (cobertura 95%, HTML+XML)"
+	@echo "  make test-ci          - Igual que 'make test' pero con timeout para CI/CD"
 	@echo ""
 	@echo "$(YELLOW)Calidad de código:$(NC)"
 	@echo "  make quality          - Ejecutar linters y analizadores (flake8, pylint, black, mypy)"
@@ -95,10 +86,8 @@ help:
 	@echo ""
 	@echo "$(YELLOW)Ejemplos:$(NC)"
 	@echo "  make install-dev                  # Instalación para desarrollo"
-	@echo "  make test-fast                    # Durante desarrollo"
-	@echo "  make test-cov                     # Para verificar cobertura"
+	@echo "  make test                         # Ejecutar la suite completa de tests"
 	@echo "  make quality                      # Análisis de calidad de código"
-	@echo "  make test-cov-html                # Para generar reporte visual"
 	@echo "  make run                          # Aplicación con configuración por defecto"
 	@echo "  PER_PORT=9000 make run            # Cambiar puerto"
 	@echo "  PER_HOST=localhost make run-local # Localhost en puerto personalizado"
@@ -125,56 +114,11 @@ install-full: venv
 	@echo "$(GREEN)📦 Instalando paquete con todas las dependencias...$(NC)"
 	$(PYTHON_CMD) -m pip install -e ".[full]"
 
-# Tests rápidos sin cobertura (ideal para desarrollo)
-test-fast:
-	@echo "$(GREEN)🚀 Ejecutando tests rápidos (sin cobertura)...$(NC)"
-	$(PYTEST_CMD)
-
-# Alias para compatibilidad
-test: test-fast
-
-# Tests con cobertura básica
-test-cov:
-	@echo "$(GREEN)📊 Ejecutando tests con cobertura...$(NC)"
-	$(PYTEST_CMD) --cov=app --cov=config --cov-report=term-missing --cov-fail-under=0 --cov-config=.coveragerc
-
-# Tests con cobertura y reporte HTML
-test-cov-html:
-	@echo "$(GREEN)📊 Ejecutando tests con cobertura y reporte HTML...$(NC)"
-	$(PYTEST_CMD) --cov=app --cov=config --cov-report=term-missing --cov-report=html:coverage_html
-	@echo "$(YELLOW)📄 Reporte HTML generado en: coverage_html/index.html$(NC)"
-
-# Tests con cobertura y reporte XML (para CI/CD)
-test-cov-xml:
-	@echo "$(GREEN)📊 Ejecutando tests con cobertura y reporte XML...$(NC)"
-	$(PYTEST_CMD) --cov=app --cov=config --cov-report=term-missing --cov-report=xml:coverage.xml
-	@echo "$(YELLOW)📄 Reporte XML generado en: coverage.xml$(NC)"
-
-# Tests con cobertura completa (HTML + XML)
-test-cov-full:
-	@echo "$(GREEN)📊 Ejecutando tests con cobertura completa...$(NC)"
-	$(PYTEST_CMD) --cov=app --cov=config --cov-report=term-missing --cov-report=html:coverage_html --cov-report=xml:coverage.xml
-	@echo "$(YELLOW)📄 Reportes generados:$(NC)"
-	@echo "  - HTML: coverage_html/index.html"
-	@echo "  - XML:  coverage.xml"
-
-# Tests por categoría
-test-unit:
-	@echo "$(GREEN)🧪 Ejecutando tests unitarios...$(NC)"
-	$(PYTEST_CMD) -m unit
-
-test-integration:
-	@echo "$(GREEN)🔗 Ejecutando tests de integración...$(NC)"
-	$(PYTEST_CMD) -m integration
-
-test-api:
-	@echo "$(GREEN)🌐 Ejecutando tests de API...$(NC)"
-	$(PYTEST_CMD) -m api
-
-# Tests con umbral de cobertura mínimo
-test-cov-strict:
-	@echo "$(GREEN)📊 Ejecutando tests con cobertura (umbral 95%)...$(NC)"
-	$(PYTEST_CMD) --cov=app --cov=config --cov-report=term-missing --cov-fail-under=95
+# Ejecuta toda la suite de tests de la forma más estricta posible: cobertura
+# mínima del 95% y reportes en terminal, HTML y XML.
+test:
+	@echo "$(GREEN)🧪 Ejecutando todos los tests (cobertura estricta 95%)...$(NC)"
+	$(PYTEST_CMD) $(TEST_ARGS)
 
 # Limpieza de archivos generados
 clean:
@@ -189,10 +133,10 @@ clean:
 	find . -type f -name "*.pyc" -delete
 	@echo "$(GREEN)✅ Limpieza completada$(NC)"
 
-# Tests para CI/CD con timeout
+# Igual que 'test' pero con timeout, pensado para la pipeline de CI/CD
 test-ci:
 	@echo "$(GREEN)🤖 Ejecutando tests para CI/CD...$(NC)"
-	$(PYTEST_CMD) --cov=app --cov=config --cov-report=xml:coverage.xml --cov-report=term --timeout=300
+	$(PYTEST_CMD) $(TEST_ARGS) --timeout=300
 
 # Comandos para ejecutar la aplicación
 security:
@@ -229,7 +173,7 @@ build-deploy:
 	@echo "$(YELLOW)🔧 Instalando dependencias...$(NC)"
 	@$(MAKE) install-dev
 	@echo "$(YELLOW)🧪 Ejecutando tests...$(NC)"
-	@$(MAKE) test-fast
+	@$(MAKE) test
 	@echo "$(YELLOW)📁 Preparando archivos de despliegue...$(NC)"
 	@rm -rf deploy-build/
 	@mkdir -p deploy-build

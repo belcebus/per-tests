@@ -116,7 +116,7 @@ pip install -r requirements.txt
 
 ```bash
 # Un solo comando para desarrollo completo
-make install-dev && make test-fast
+make install-dev && make test
 ```
 
 ## 🛠️ **Makefile - Herramienta de Desarrollo**
@@ -129,16 +129,8 @@ El proyecto incluye un Makefile completo que simplifica todas las tareas de desa
    - `make install-dev` — instala dependencias de desarrollo
    - `make install-toml-cli` — instala toml-cli para operaciones TOML
    - `make get-version` — extrae versión del pyproject.toml
-   - `make test-fast` — ejecuta todos los tests sin cobertura (rápido)
-   - `make test-unit` — ejecuta solo tests unitarios
-   - `make test-integration` — ejecuta solo tests de integración
-   - `make test-api` — ejecuta solo tests de API
-   - `make test-cov` — ejecuta tests con cobertura en terminal
-   - `make test-cov-html` — genera reporte HTML de cobertura
-   - `make test-cov-xml` — genera reporte XML de cobertura
-   - `make test-cov-full` — genera reportes HTML+XML de cobertura
-   - `make test-cov-strict` — ejecuta tests con cobertura mínima (95%)
-   - `make test-ci` — ejecuta tests para CI/CD (con timeout)
+   - `make test` — ejecuta todos los tests con cobertura estricta del 95% y reportes HTML/XML
+   - `make test-ci` — ejecuta la misma suite con timeout para CI/CD
    - `make quality` — ejecuta linters y analizadores (flake8, pylint, black, isort, radon, mypy)
    - `make security` — ejecuta análisis de seguridad del código (semgrep)
    - `make run` — inicia la aplicación (configuración por defecto)
@@ -153,28 +145,17 @@ El proyecto incluye un Makefile completo que simplifica todas las tareas de desa
 
    **Ejemplos:**
    - `make install-dev`                  # Instalación para desarrollo
-   - `make test-fast`                    # Durante desarrollo
-   - `make test-cov`                     # Para verificar cobertura
+   - `make test`                         # Ejecutar la suite completa con cobertura estricta
    - `make quality`                      # Análisis de calidad de código
-   - `make test-cov-html`                # Para generar reporte visual
    - `make run`                          # Aplicación con configuración por defecto
    - `PER_PORT=9000 make run`            # Cambiar puerto
    - `PER_HOST=localhost make run-local` # Localhost en puerto personalizado
 
 
-#### **Testing Rápido (Desarrollo):**
+#### **Testing:**
 ```bash
-make test-fast       # Tests sin cobertura (7-8 segundos)
-make test-unit       # Solo tests unitarios
-make test-api        # Solo tests de API
-```
-
-#### **Testing con Cobertura:**
-```bash
-make test-cov        # Cobertura en terminal
-make test-cov-html   # + Reporte HTML visual
-make test-cov-xml    # + Reporte XML (CI/CD)
-make test-cov-full   # HTML + XML completo
+make test             # Suite completa, cobertura mínima del 95% y reportes HTML/XML
+make test-ci          # Igual que make test, con timeout de 300 segundos
 ```
 
 #### **Análisis de Seguridad:**
@@ -205,12 +186,11 @@ make help           # Ver todos los comandos disponibles
 ```bash
 # Flujo típico de desarrollo
 make install-dev                    # Configurar entorno
-make test-fast                      # Verificar que todo funciona
+make test                           # Verificar tests y cobertura estricta
 make run                           # Ejecutar aplicación
 
 # Verificar calidad antes de commit
-make test-cov                      # Ver cobertura actual
-make test-cov-html                 # Generar reporte detallado
+make test                           # Ejecutar suite completa y generar reportes
 
 # Personalizar configuración
 PER_PORT=9000 make run             # Cambiar puerto
@@ -458,37 +438,14 @@ La configuración se encuentra centralizada en:
 
 ### Ejecución de Tests
 
-#### 🚀 **Tests Rápidos (Recomendado para Desarrollo)**
+#### 🚀 **Suite completa de tests**
 
 ```bash
-# Ejecutar todos los tests sin cobertura (más rápido)
-make test-fast
-# o simplemente
-pytest
+# Desarrollo y verificación local: suite completa, cobertura mínima del 95%
+make test
 
-# Tests por categoría
-make test-unit      # Solo tests unitarios
-make test-api       # Solo tests de API
-pytest -m unit      # Alternativa directa
-```
-
-#### 📊 **Tests con Cobertura (Para Verificación)**
-
-```bash
-# Cobertura básica en terminal
-make test-cov
-# o
-pytest --cov=app --cov-report=term-missing
-
-# Cobertura con reporte HTML visual
-make test-cov-html
-# Abre: coverage_html/index.html
-
-# Cobertura con reporte XML (para CI/CD)
-make test-cov-xml
-
-# Cobertura completa (HTML + XML)
-make test-cov-full
+# CI/CD: la misma suite con timeout de 300 segundos
+make test-ci
 ```
 
 #### 🎯 **Tests Específicos**
@@ -521,33 +478,14 @@ pytest -n auto
 pytest -v -s
 ```
 
-#### 🔧 **Comandos Avanzados**
-
-```bash
-# Tests con umbral de cobertura estricto
-make test-cov-strict
-
-# Limpiar archivos de cobertura
-make clean
-
-# Ver todos los comandos disponibles
-make help
-```
-
 #### 💡 **Ejemplos de Uso Según Contexto**
 
 ```bash
-# 🏃‍♂️ Durante desarrollo activo (rápido)
-make test-fast
+# 🧪 Desarrollo y validación local
+make test
 
 # 🔍 Verificar un módulo específico
 pytest tests/unit/test_models.py -v
-
-# 📊 Verificar cobertura antes de commit
-make test-cov
-
-# 🎯 Verificar que todos los objetivos se cumplen
-make test-cov-strict
 
 # 🤖 Para CI/CD automático
 make test-ci
