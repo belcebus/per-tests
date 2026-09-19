@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "per-tests"
-version = "1.6.0"
-description = "Aplicación de Exámenes Aleatorios de PER España"
+version = "1.7.0"
+description = "Aplicación de Exámenes de PER España"
 readme = "README.md"
 license = {file = "LICENSE"}
 authors = [
-    {name = "PER Tests Team", email = "contact@per-tests.com"}
+    {name = "David Hernandez Martin", email = "belcebus@gmail.com"}
 ]
 classifiers = [
     "Development Status :: 4 - Beta",

@@ -1,0 +1,602 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 1
+      options:
+        a: Calado
+        b: Puntal
+        c: Francobordo
+        d: Obra muerta
+      question: 'La distancia vertical comprendida entre la superficie de flotación
+        y la cubierta completa más alta con medios permanentes de cierre, medida en
+        el centro del costado del buque, se denomina:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 2
+      options:
+        a: Recoger la cadena del ancla para levarla
+        b: Dejar salir o largar cadena del ancla al agua
+        c: Fijar la cadena al molinete para que no se mueva
+        d: Limpiar la cadena del ancla después de levar
+      question: '¿Qué significa la expresión «filar cadena» durante la maniobra de
+        fondeo?:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 3
+      options:
+        a: Mecha
+        b: Limera
+        c: Guardines
+        d: Bocina
+      question: 'Indique cuál de las siguientes NO es una parte del timón:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 4
+      options:
+        a: Obra viva
+        b: Plano de flotación
+        c: Eslora entre perpendiculares
+        d: Obra muerta
+      question: '¿Cómo se denomina en una embarcación a la parte del casco situada
+        por debajo del plano de flotación?:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 5
+      options:
+        a: Únicamente la profundidad del agua en la zona de fondeo, sin considerar
+          otros factores
+        b: La dirección e intensidad del viento, la profundidad, el tipo de fondo,
+          la presencia de corrientes y el espacio disponible para el borneo de la
+          embarcación, entre otros
+        c: Solo la proximidad a otras embarcaciones ya fondeadas, para mantenerse
+          cerca de ellas
+        d: La cercanía a la costa o al puerto, independientemente del tipo de fondo
+          o de las condiciones meteorológicas.
+      question: 'Al elegir un lugar adecuado para fondear, ¿qué factores deben tenerse
+        en cuenta?:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 6
+      options:
+        a: Ballestrinque
+        b: Vuelta de rezón
+        c: Llano
+        d: As de guía
+      question: '¿Qué nudo se utiliza principalmente para unir por sus chicotes dos
+        cabos del mismo grosor?:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 7
+      options:
+        a: Provocando un cambio en la declinación magnética
+        b: Produciendo un desvío anómalo de la aguja
+        c: De ninguna. La inducción magnética de la descarga eléctrica no afecta a
+          la aguja
+        d: Las respuestas a) y b) son correctas
+      question: 'La caída de un rayo en las proximidades de una embarcación puede
+        afectar a la aguja magnética. ¿De qué manera?:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 8
+      options:
+        a: Adrizamiento transversal
+        b: Estabilidad transversal
+        c: Navegabilidad transversal
+        d: Flotabilidad transversal
+      question: '¿Cómo se denomina la capacidad de una embarcación para recuperar
+        su posición de adrizado cuando se escora debido a la acción de fuerzas externas?:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 9
+      options:
+        a: Maniobra de Anderson y maniobra de Boutakow
+        b: Maniobra de aproximación a la última situación conocida
+        c: Maniobra de sectores por amura o por popa
+        d: Exploración en espiral cuadrada y exploración por sectores
+      question: 'Cuando no se ve a un náufrago, ¿qué tipo de maniobras de búsqueda
+        se deben realizar?:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 10
+      options:
+        a: No es recomendable para embarcaciones de fibra que navegan con baja visibilidad
+        b: No mejora la detección de embarcaciones de madera
+        c: Es fundamental para mejorar la seguridad en condiciones de baja visibilidad
+        d: No tiene ningún efecto en la detección de embarcaciones
+      question: 'En relación con el reflector de RADAR pasivo, marque la opción CORRECTA:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: b
+      id: 11
+      options:
+        a: Las Islas Columbretes y la Isla de Tabarca son la únicas ZEPIM de la comunidad
+          valenciana
+        b: Las embarcaciones de recreo de eslora total inferior a 20 metros y los
+          artefactos flotantes de recreo no estorbarán el tránsito del resto de buques
+          y embarcaciones en las aguas de servicio de los puertos comerciales
+        c: En los tramos de costa que no estén balizados como zona de baño se entenderá
+          que ésta ocupa una franja de mar contigua a la costa de una anchura de 200
+          metros, tanto en las playas como en el resto de la costa
+        d: Las respuestas b) y c) son correctas
+      question: 'Indique cuál de las siguientes opciones es correcta:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 12
+      options:
+        a: La descarga de aguas sucias que no han sido previamente desinfectadas ni
+          desmenuzadas puede realizarse a más de 6 millas de la tierra más próxima
+        b: Las embarcaciones de recreo están exentas de la prohibición de fondear
+          en los canales de acceso al puerto
+        c: Las embarcaciones de recreo dotadas de inodoros deben disponer de un sistema
+          de retención de aguas sucias, de una instalación de tratamiento de aguas
+          sucias o de un sistema para desmenuzar y desinfectar las aguas sucias dotado
+          de medios que permitan almacenarlas temporalmente
+        d: Todas las respuestas anteriores son correctas (Las preguntas sobre marcas
+          laterales se refieren a la Región de Balizamiento A)
+      question: 'De las siguientes afirmaciones, señale la respuesta correcta:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 13
+      options:
+        a: Amarilla con ritmo Grupo de (2+1) destellos
+        b: Blanca con ritmo centelleante continuo o centelleante rápido continuo
+        c: Blanca con ritmo Grupo de 6 centelleos rápidos más un destello largo cada
+          10 segundos o Grupo de 6 centelleos más un destello largo cada 15 segundos
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'La luz de una marca cuya mitad superior es amarilla y la mitad inferior
+        es negra será:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 14
+      options:
+        a: De color rojo y cualquier ritmo excepto Grupo de (2+1) destellos
+        b: De color rojo y ritmo Grupo de (2+1) destellos
+        c: De color verde y cualquier ritmo excepto Grupo de (2+1) destellos
+        d: De color verde y ritmo Grupo de (2+1) destellos
+      question: 'La luz de una marca lateral de babor será:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 15
+      options:
+        a: Un cono verde
+        b: Un cilindro verde
+        c: Un cono rojo
+        d: Un cilindro rojo
+      question: '¿Cuál será la marca de tope (si existe) de una marca de color verde
+        con una banda ancha horizontal roja?:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 16
+      options:
+        a: Una esfera roja
+        b: Dos esferas rojas, una encima de la otra
+        c: Una esfera negra
+        d: Dos esferas negras, una encima de la otra
+      question: '¿Qué marca de tope corresponde a una marca de peligro aislado?:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 17
+      options:
+        a: Una marca cardinal. El ritmo varía según sea Norte, Sur, Este u Oeste
+        b: Una marca de peligro aislado
+        c: Una marca de aguas navegables
+        d: Ninguna. Las luces de ocultaciones sólo pueden emitirlas los faros, no
+          las marcas del Sistema de Balizamiento Marítimo
+      question: 'Una marca que emite una luz blanca de ocultaciones es:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 18
+      options:
+        a: Ambos deben caer a estribor
+        b: Ambos deben caer a babor
+        c: El que tenga al otro por su costado de estribor se mantendrá apartado de
+          la derrota de este otro
+        d: El que tenga al otro por su costado de babor se mantendrá apartado de la
+          derrota de este otro
+      question: 'En mar abierto dos buques de propulsión mecánica, que están a la
+        vista el uno del otro, se cruzan con riesgo de abordaje. En esta situación:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 19
+      options:
+        a: Una bola
+        b: Dos bolas
+        c: Una marca bicónica
+        d: Dos conos unidos por sus vértices en línea vertical, uno sobre el otro
+      question: 'La marca diurna que identifica a un buque dedicado a la pesca de
+        arrastre es:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 20
+      options:
+        a: Ambos deben caer a estribor
+        b: Ambos deben caer a babor
+        c: El buque de propulsión mecánica se mantendrá apartado de la derrota del
+          buque de vela
+        d: El buque de vela se mantendrá apartado de la derrota del buque de propulsión
+          mecánica
+      question: 'En mar abierto un buque de propulsión mecánica ve a un buque de vela
+        que se le aproxima desde una marcación 25º a popa de su través de estribor.
+        En esta situación:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 21
+      options:
+        a: Será tal que el buque pase a una distancia segura del otro
+        b: Consistirá en una sucesión de pequeños cambios de rumbo y/o velocidad,
+          siempre que sea posible
+        c: Se hará lo más tarde posible, cuando le resulte evidente que el otro buque
+          no va a maniobrar
+        d: Todas las respuestas anteriores son correctas
+      question: 'La maniobra que el buque que «cede el paso» debe efectuar para evitar
+        un abordaje:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 22
+      options:
+        a: Ambos deben caer a estribor
+        b: Ambos deben caer a babor
+        c: El buque de propulsión mecánica se mantendrá apartado de la derrota del
+          buque de vela
+        d: El buque de vela se mantendrá apartado de la derrota del buque de propulsión
+          mecánica
+      question: 'En mar abierto un buque de propulsión mecánica y un buque de vela,
+        que están a la vista el uno del otro, navegan de vuelta encontrada a rumbos
+        opuestos o casi opuestos. En esta situación:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 23
+      options:
+        a: Una luz blanca todo horizonte en el lugar más visible y sus luces de trabajo
+          o equivalentes
+        b: Dos luces blancas todo horizonte, una en la parte de proa y otra más baja
+          en la parte de popa
+        c: Dos luces blancas todo horizonte, una en la parte de proa y otra más alta
+          en la parte de popa
+        d: Dos luces blancas todo horizonte, una en la parte de proa y otra más baja
+          en la parte de popa, y sus luces de trabajo o equivalentes
+      question: '¿Qué configuración de luces debe mostrar un buque de propulsión mecánica
+        de 150 metros de eslora que está fondeado?:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 24
+      options:
+        a: El que tenga al otro por su costado de estribor se mantendrá apartado de
+          la derrota de este otro
+        b: El que tenga al otro por su costado de babor se mantendrá apartado de la
+          derrota de este otro
+        c: El buque que esté a sotavento se mantendrá apartado de la derrota del que
+          esté a barlovento
+        d: El buque que esté a barlovento se mantendrá apartado de la derrota del
+          que esté a sotavento
+      question: 'En mar abierto dos buques de vela que están a la vista el uno del
+        otro se cruzan con riesgo de abordaje. En esta situación, si ambos reciben
+        el viento por la banda de babor:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 25
+      options:
+        a: Todo buque que esté pescando con artes de pesca que restrinjan su maniobrabilidad
+        b: Todo buque que esté matriculado en la lista 3ª
+        c: Todo buque pesquero, desde que sale de puerto para dirigirse a la zona
+          de pesca hasta que regresa a puerto
+        d: Todas las respuestas anteriores son correctas
+      question: 'La expresión «buque dedicado a la pesca» se aplica a:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 26
+      options:
+        a: Se hará con el menor ángulo posible en relación con la dirección general
+          de la corriente del tráfico
+        b: Se hará siguiendo un rumbo que en la medida de lo posible forme una perpendicular
+          con la dirección general de la corriente del tráfico
+        c: No se puede hacer. Sólo está permitido entrar en las vías de circulación
+          por sus extremos
+        d: Las vías de circulación no tienen límites laterales definidos
+      question: 'En un dispositivo de separación del tráfico la incorporación a una
+        vía de circulación por uno de sus límites laterales:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 27
+      options:
+        a: Ambos buques debemos caer a estribor
+        b: Ambos buques debemos caer a babor
+        c: Somos el buque que «cede el paso» y debemos mantenernos apartados de la
+          derrota del otro buque
+        d: Somos el buque que «sigue a rumbo» y el otro buque debe mantenerse apartado
+          de nuestra derrota
+      question: 'Navegando a motor de noche vemos por nuestra proa las dos luces de
+        costado de un buque que se aproxima, sin que se aprecie ninguna otra luz.
+        En esta situación:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 28
+      options:
+        a: Dar avante con el timón a estribor para que la proa caiga a estribor
+        b: Dar avante con el timón a babor para que la proa caiga a babor
+        c: Dar avante con el timón a babor o a estribor, es indiferente
+        d: Dar atrás con la máquina
+      question: 'En ausencia de viento, al realizar la ciaboga con una embarcación
+        de una única hélice levógira la primera acción, más conveniente y más rápida
+        será:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: d
+      id: 29
+      options:
+        a: El esprín de proa
+        b: El largo de popa
+        c: El través de popa
+        d: El largo de proa
+      question: 'Si queremos atracar de costado con corriente de proa paralela al
+        muelle, el primer cabo que daremos a tierra será:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 30
+      options:
+        a: Administrar bebidas calientes para acelerar la coagulación
+        b: Aplicar presión directa sobre la herida y elevar la extremidad afectada
+          si es posible
+        c: Limpiar la herida con agua salada y esperar a que cese el sangrado por
+          sí solo
+        d: Cubrir la herida sin ejercer presión y no mover al accidentado
+      question: 'Antes de contactar con el servicio Radio-Médico, ¿cuál es la actuación
+        de urgencia ante una hemorragia exteriorizada a bordo?:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 31
+      options:
+        a: Combustible, oxígeno, energía de activación y propagación
+        b: Combustible, comburente, calor y reacción en cadena
+        c: Materiales ignífugos, oxígeno, temperatura e ignición
+        d: Oxígeno, combustible, ignición y reacción química
+      question: '¿Qué elementos deben estar presentes para que se inicie un incendio
+        según la teoría del tetraedro del fuego?:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 32
+      options:
+        a: Taponar la vía de agua y esperar a que el agua se achique sola con el funcionamiento
+          del motor
+        b: Abrir todas las escotillas para ventilar la embarcación y reducir la presión
+          del agua
+        c: Trasladar todos los pesos a las zonas libres de agua para favorecer el
+          achique natural de la embarcación
+        d: Achicar el agua con la bomba manual o eléctrica y taponar la vía de agua
+      question: 'En caso de una vía de agua en la embarcación, ¿qué medidas de urgencia
+        se deben adoptar?:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 33
+      options:
+        a: En un anticiclón los vientos giran en sentido antihorario
+        b: En una borrasca los vientos giran en sentido horario
+        c: En un anticiclón la presión es más alta en la periferia que en el centro
+        d: En una borrasca la presión es menor en el centro que en la periferia
+      question: 'En relación con la circulación general del viento en el hemisferio
+        norte, marque la opción correcta:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 34
+      options:
+        a: El virazón sopla por la noche
+        b: Cuando el viento cambia constantemente su dirección decimos que el viento
+          está refrescando
+        c: La escala Beaufort está relacionada con la intensidad del viento
+        d: El terral sopla durante el día
+      question: 'De las siguientes afirmaciones marque la opción correcta:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 35
+      options:
+        a: La exactitud de los barómetros aneroides es mayor que la de los barómetros
+          de mercurio
+        b: La veleta se emplea para determinar la intensidad del viento
+        c: Los barómetros aneroides son aparatos de lectura directa
+        d: Todas las opciones anteriores son falsas
+      question: 'De las siguientes afirmaciones marque la opción correcta:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 36
+      options:
+        a: Se denomina presión atmosférica en un lugar dado al peso por unidad de
+          superficie de la columna de aire que gravita sobre dicho lugar
+        b: Las líneas isobaras corresponden a las intersecciones de las superficies
+          isobáricas con la superficie del nivel del mar
+        c: 1000 milibares corresponden a 760 milímetros de mercurio
+        d: A la presión que equilibra una columna de mercurio de 760 mm, a 0⁰ centígrados,
+          a nivel del mar y a 45⁰ de latitud, se le denomina valor medio normal de
+          la presión
+      question: 'De las siguientes afirmaciones marque la opción FALSA:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 37
+      options:
+        a: La declinación magnética y el desvío tienen el mismo valor pero de diferente
+          signo
+        b: El desvío es cero y en este caso la declinación magnética no se tiene en
+          cuenta
+        c: Nuestra aguja no puede coincidir nunca con el rumbo verdadero
+        d: Las respuestas a) y b) son correctas
+      question: 'Navegando a un rumbo determinado nuestra aguja coincide con el rumbo
+        verdadero. Esto significa que:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 38
+      options:
+        a: La distancia vertical desde el fondo hasta el nivel medio de la marea
+        b: La distancia vertical desde el fondo hasta el nivel del mar en el momento
+          de la bajamar
+        c: La distancia vertical desde el fondo hasta el nivel del Cero Hidrográfico
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'Las sondas reflejadas en las cartas náuticas oficiales de España
+        indican:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 39
+      options:
+        a: No tiene ningún efecto sobre la altura de la marea
+        b: Tiene efectos sobre la marea si la presión atmosférica es mayor que 1020
+          mb
+        c: La altura de la marea es menor que la altura prevista
+        d: La altura de la marea es mayor que la altura prevista
+      question: 'Cuando la presión atmosférica es menor que la normal:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 40
+      options:
+        a: Luz fija que muestra un destello
+        b: Luz compuesta de una luz blanca y una luz más ligera que el anterior destello
+        c: Luz de destellos largos (destellos de 2 o más segundos)
+        d: Luz que muestra un destello blanco y otro de ocultación blanco
+      question: 'En la carta junto a un faro figura la siguiente abreviatura LFl (ele
+        mayúscula, efe mayúscula y ele minúscula). Se trata de una:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 41
+      options:
+        a: Es recomendable instalar circuitos eléctricos con intensidad de corriente
+          muy alta para disminuir los desvíos de la aguja
+        b: Se debe procurar que no esté rodeada de planchas de hierro o acero que
+          la apantallen
+        c: No es necesario que su línea de fe se encuentre sobre la línea de crujía
+          o sea paralela a ella
+        d: Las respuestas a) y b) son correctas
+      question: 'En relación a la instalación de la aguja náutica, ¿qué respuesta
+        es correcta?:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 42
+      options:
+        a: Ra = 204º; HRB = 13h 46m
+        b: Ra = 204º; HRB = 13h 53m
+        c: Ra = 214º; HRB = 13h 46m
+        d: Ra = 214º; HRB = 13h 53m
+      question: A HRB= 11h 45m nos encontramos en situación 36º 05,0′ N y 005º 11,0′
+        W. Situados, damos rumbo al puerto de Ceuta (luz verde de la bocana) en ausencia
+        de viento y corriente y con velocidad del buque 6 nudos. Calcular el rumbo
+        de aguja para llegar a Ceuta y la HRB de llegada, sabiendo que el desvío es
+        –9º (menos) y la declinación magnética es 4º NE.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 43
+      options:
+        a: +11º
+        b: +3º
+        c: –3º
+        d: –11º
+      question: Al encontrarnos en la enfilación de los faros de Punta Paloma y Punta
+        Camarinal marcamos este último en demora de aguja 112º. Calcular la corrección
+        total.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 44
+      options:
+        a: 006º
+        b: 012º
+        c: 016º
+        d: 022º
+      question: Nos encontramos a 3 millas al Norte verdadero del faro de Cabo Negro
+        (hacia el Sur de Ceuta). Calcular el rumbo de aguja para dirigirnos a un punto
+        situado a 5 millas al NE verdadero (Nordeste) del faro de Punta Almina. Desvío
+        de la aguja = + 5º (más) declinación magnética = 3º NE
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 45
+      options:
+        a: 248º, 8,5 millas
+        b: 250º, 5,1 millas
+        c: 253º, 3,8 millas
+        d: 286º, 6,0 millas
+      question: El 13 de junio de 2026, al ser HRB = 12h 00m, navegamos a 6 nudos
+        al rumbo de aguja 154° y nos encontramos a 5 millas al W verdadero (oeste)
+        del faro de Cabo Roche. Calcular la demora verdadera y distancia que nos encontramos
+        desde el faro de Cabo Trafalgar al ser HRB = 13h 42m. La declinación magnética
+        de la carta = 5º 20′ W 2010 (5′ E) y desvío de la aguja = -10º (menos).
+exam_info:
+  call: conv2b
+  categories: 11
+  community: Andalucía
+  expected_questions: 45
+  questions_with_answers: 45
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN TEÓRICO PARA LA OBTENCIÓN DEL TÍTULO P.E.R.
+  total_questions: 45
+  year: 2026
