@@ -1,0 +1,542 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 1
+      options:
+        a: El costado del barco por la cual sale el viento.
+        b: El costado del barco por la cual entra el viento.
+        c: Es la banda de estribor en los barcos de vela.
+        d: Es la banda de babor en los barcos de vela
+      question: Entendemos como la parte de Barlovento.
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 2
+      options:
+        a: Aquella que gira en la maquina avante, vista a popa de la hélice, en el
+          sentido de las agujas del reloj.
+        b: Aquella que gira en la maquina avante, vista a popa de la hélice, en el
+          sentido contrario de las agujas del reloj.
+        c: Aquella hélice que tiene palas abatibles.
+        d: Aquella hélice que tiene palas que podemos orientar hacia izquierdas o
+          derechas.
+      question: Según el paso de una hélice, entenderemos como paso dextrógiro…
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 3
+      options:
+        a: La parte del casco que se encuentra por debajo de la quilla
+        b: La parte del casco que se encuentra por debajo del plano de flotación.
+        c: La parte del casco que se ve durante la navegación.
+        d: La parte del casco que se encuentra por encima del plano de flotación,
+          pero sin contar lo que hay por encima de la cubierta principal.
+      question: Definiremos la Obra viva como…
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 4
+      options:
+        a: La distancia entre la vertical de proa y la de popa.
+        b: Es la diferencia entre el calado de popa y el calado de proa.
+        c: Es la distancia vertical entre la línea de flotación y la quilla del buque.
+        d: Ninguna de las respuestas anteriores es correcta.
+      question: ¿Qué entendemos por asiento de una embarcación?
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: anulada
+      id: 5
+      options:
+        a: Dar máquina avante.
+        b: Dar máquina atrás.
+        c: No se puede, depende del viento.
+        d: Es el utilizado por los pescadores únicamente.
+      question: Como podemos reducir el radio de borneo.
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: a
+      id: 6
+      options:
+        a: Unir el cabo con una argolla.
+        b: Unir dos argollas.
+        c: Unir dos cabos de la misma mena.
+        d: Es el utilizado por los pescadores únicamente.
+      question: Cuando utilizaremos el nudo “vuelta de rezón”
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 7
+      options:
+        a: Como la oscilación de la embarcación que se produce en sentido trasversal
+          (proa-popa) debido al estado de la mar.
+        b: Como la oscilación de la embarcación que se produce en sentido trasversal
+          (babor-estribor) debido al estado de la mar.
+        c: Como la oscilación de la embarcación que se produce en sentido longitudinal
+          (pro -apopa) debido al estado de la mar.
+        d: Como la oscilación de la embarcación que se produce en sentido longitudinal
+          (babor -estribor) debido al estado de la mar.
+      question: 'El balance se define:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 8
+      options:
+        a: 100NW
+        b: 75NW
+        c: 150 NW
+        d: 200NW
+      question: Con respecto a los chalecos salvavidas que debemos de llevar a bordo.
+        Que fuerza de flotabilidad expresada en newtons se requieren para la zona
+        4.
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 9
+      options:
+        a: Caer a la banda de Estribor o Babor, indiferentemente.
+        b: Parar maquinas
+        c: Meter el timón a la banda donde cayó el hombre/mujer y lanzarle un aro
+          salvavidas.
+        d: Meter el timón a la banda opuesta por donde cayó el hombre/mujer y lanzarle
+          un aro salvavidas.
+      question: 'En caso de hombre al agua, en una embarcación a motor, ¿Qué haremos
+        primero?:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 10
+      options:
+        a: 5 minutos
+        b: 3 minutos
+        c: 2 minutos
+        d: La respuesta a) y b) son correctas.
+      question: 'La señal fumígena flotante emitirá humo al menos durante qué tiempo:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 11
+      options:
+        a: Si
+        b: 'No'
+        c: No está en Andalucía.
+        d: No existen las siglas ZEPIM
+      question: ¿En Andalucía se considera Zona ZEPIM el Paraje Natural acantilados
+        Maro-cerro Gordo perteneciente a la provincia de Málaga?
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 12
+      options:
+        a: De ninguna de las maneras.
+        b: Si, pero no podrá estar izada sino esta la bandera Nacional izada.
+        c: Si, pero siempre que esta izada la bandera Nacional y no supere un tercio
+          de la bandera Española.
+        d: Da lo mismo.
+      question: ¿Podemos llevar la bandera de la comunidad autónoma izada en nuestra
+        embarcación?
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 13
+      options:
+        a: Indicas por el lugar más adecuado para pasar por debajo de puentes.
+        b: Indican bajos.
+        c: zonas de ejercicios militares.
+        d: especifica que el agua alrededor de la marca puede ser peligrosas.
+      question: Cual de las siguientes respuestas tiene que ver con la marca de aguas
+        navegables.
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 14
+      options:
+        a: Dos esferas negras.
+        b: Una esfera negra.
+        c: Una esfera roja.
+        d: Una esfera verde.
+      question: 'La marca de tope de aguas navegables, consiste en:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 15
+      options:
+        a: Este.
+        b: Oeste.
+        c: Norte.
+        d: Sur.
+      question: 'Una marca de tope consistente en dos conos negros superpuestos con
+        los vértices hacia abajo, se deberá pasar por el cuadrante:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 16
+      options:
+        a: Dos destellos de color rojos.
+        b: Grupo de dos destellos de color blanco.
+        c: Grupo de dos destellos de color verde.
+        d: Un destello color blanco
+      question: 'En una marca de peligro aislado el ritmo y el color de su luz es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 17
+      options:
+        a: Marca lateral de estribor.
+        b: Marca lateral de babor.
+        c: Canal principal a babor.
+        d: Canal principal a estribor.
+      question: 'Una marca cónica de color verde con una franja roja, indica:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 18
+      options:
+        a: El que reciba el viento por la banda de babor.
+        b: El que reciba el viento por la banda de estribor.
+        c: El que este a sotavento.
+        d: Cuando los dos reciban el viento por bandas contrarias, el que este a barlovento.
+      question: 'En caso de riesgo de abordaje de dos veleros, se mantendrá apartado
+        de la derrota del otro:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 19
+      options:
+        a: A todo buque que se aproxime viniendo desde una marcación menor de 22,5º
+          a popa del través de este último.
+        b: A todo buque que se aproxime viniendo desde una marcación mayor de 22,5º
+          a popa del través de este último.
+        c: A todo buque que vea las luces de costado del otro.
+        d: A todo buque que se aproxime viniendo desde una marcación mayor de 22,
+          5º a proa del través de este último.
+      question: 'Se considera que un buque alcanza a otro:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 20
+      options:
+        a: La eslora del buque.
+        b: La obra muerta del buque.
+        c: El tipo de propulsión del buque.
+        d: El calado en relación con la profundidad disponible de agua.
+      question: 'Para determinar la velocidad de seguridad, en todos los buques, se
+        tendrá en cuenta entre otros factores:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 21
+      options:
+        a: En caso de emergencia para evitar un peligro inmediato.
+        b: No hay ninguna prohibición al respecto.
+        c: Para dedicarse a la pesca.
+        d: a) y c) son correctas.
+      question: 'En una zona de separación de tráfico se podrá entrar:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 22
+      options:
+        a: Únicamente luces de costado
+        b: Una luz de tope.
+        c: Las mismas luces prescritas para los buques de vela
+        d: Únicamente una luz de alcance.
+      question: 'Las embarcaciones de remos (sin motor) podrán exhibir:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 23
+      options:
+        a: Dos luces rojas, una de tope y una verde.
+        b: Una luz de tope, luces de costado y luz de alcance.
+        c: Dos luces de tope, luces de costado y luz de alcance.
+        d: Las mismas que un barco menor de 12m.
+      question: 'Un buque de propulsión mecánica de eslora entre 12m y 50m exhibirá:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 24
+      options:
+        a: De un buque de propulsión mecánica
+        b: De un buque sin gobierno
+        c: De un buque con capacidad de maniobra restringida
+        d: b y c son correctas
+      question: Un buque de vela se mantendrá apartado de la derrota
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 25
+      options:
+        a: Dos bolas en línea vertical.
+        b: Dos marcas bicónicas en línea vertical.
+        c: Tres marcas, bolas la superior y la inferior y biónica la marca central.
+        d: Un cilindro.
+      question: 'Los buques de propulsión mecánica restringido por su calado, podrán
+        exhibir una marca consistente:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 26
+      options:
+        a: Tres segundos.
+        b: Entre tres y cuatro segundos
+        c: Un segundo
+        d: La mitad que una larga.
+      question: 'Una pitada corta tiene una duración aproximada de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 27
+      options:
+        a: Tres pitadas largas.
+        b: Una corta seguida de dos largas que no excedan de dos segundos entre ambas.
+        c: Dos pitadas largas que no excedan dos minutos de duración.
+        d: Una pitada larga que no exceda de dos minutos.
+      question: 'Un buque de propulsión mecánica en navegación, pero parado y sin
+        arrancada en visibilidad reducida emitirá:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: a
+      id: 28
+      options:
+        a: Babor
+        b: Estribor
+        c: Va recto
+        d: Se frena
+      question: Una embarcación con hélice dextrógira, en marcha atrás, hacia donde
+        tendera a caer la popa.
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: c
+      id: 29
+      options:
+        a: Separar la popa del atraque y mover el barco hacia atrás.
+        b: Separar la proa del atraque y mover el barco hacia atrás.
+        c: Acercar la proa al atraque y mover el barco hacia atrás.
+        d: Acercar la popa al atraque y mover el barco hacia delante.
+      question: Descripción de los efectos producidos al cobrar el esprín de proa
+        estando el barco atracado de costado al muelle
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 30
+      options:
+        a: Cocinas y máquinas
+        b: Cocinas, cámaras de motores, toma de combustible, baterías, instalaciones
+          eléctricas y pañol o cofre de pinturas.
+        c: Toma de combustible, baterías, instalaciones eléctricas y pañol o cofre
+          de pinturas.
+        d: Generador de emergencia
+      question: 'Para prevenir incendios y explosiones los lugares de riesgo son:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 31
+      options:
+        a: La sangre es de color rojo vivo, sale a borbotones y con gran presión.
+        b: La sangre es de color rojo oscuro, sale a borbotones y con gran presión.
+        c: La sangre es de color rojo oscuro, sale de forma continua y con poca presión.
+        d: La sangre es de color rojo vivo, sale de forma continua y con poca presión.
+      question: 'En hemorragias de origen venoso, las identificaremos por que la sangre
+        es:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 32
+      options:
+        a: Líquidos
+        b: Gases
+        c: Producidos por aparatos electrónicos
+        d: Los producidos en sala de máquinas por la acumulación de gases.
+      question: 'Los incendios de clase B son los relacionados con:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 33
+      options:
+        a: La mar encontrada producida por el cambio en la dirección del viento.
+        b: Una zona o extensión en la que el viento sopla en la misma dirección y
+          con la misma intensidad.
+        c: Una zona o extensión en la que el viento sopla en varias direcciones y
+          con la misma intensidad.
+        d: El cambio en la dirección del viento
+      question: 'Llamamos Fetch a:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 34
+      options:
+        a: Virazón
+        b: Viento real
+        c: Borrasca
+        d: Terral
+      question: 'De noche la masa continental pierde el calor recibido durante el
+        día más rápido que la masa oceánica, provocando una baja presión relativa
+        sobre el nivel del mar y una alta presión relativa sobre la tierra. El viento
+        que se origina a causa de este fenómeno se llama:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 35
+      options:
+        a: De Norte a Sur
+        b: De Sur a Norte.
+        c: En el sentido de las agujas del reloj.
+        d: En el sentido contrario a las agujas del reloj.
+      question: En el Hemisferio Norte, en una borrasca, los vientos circulan…
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 36
+      options:
+        a: Isobaras.
+        b: Isalobaras.
+        c: Isohipsas.
+        d: Ninguna de las anteriores.
+      question: ¿Cómo se llaman las líneas que unen puntos de igual presión?
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 37
+      options:
+        a: Su altura.
+        b: El color de su luz.
+        c: El color de su luz y ritmo.
+        d: Su altura y el color de su luz
+      question: 'Se ve un faro de noche se identifica por:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 38
+      options:
+        a: De proa a popa de 0º a 90º hacia babor y estribor.
+        b: Es el ángulo que va del norte geográfico hasta el norte de aguja
+        c: De proa hasta popa por estribor y de proa hasta popa por babor
+        d: No se pueden medir
+      question: 'La marcación se mide:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 39
+      options:
+        a: Si.
+        b: Si, trazándolas adecuadamente.
+        c: Nunca.
+        d: Necesitaremos además el desvío de la aguja náutica.
+      question: Navegando obtenemos una demora de aguja de cabo Espartel y otra demora
+        de aguja de Punta Gracia, ¿podemos posicionarnos directamente en la carta
+        de navegación?
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 40
+      options:
+        a: El ángulo que forma el norte con la visual a un objeto.
+        b: El ángulo que forma la línea proa-popa con la visual a un objeto.
+        c: El ángulo que forma la línea proa-popa con el Norte.
+        d: Es lo que tarda en llegar un barco a puerto.
+      question: 'Demora es:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 41
+      options:
+        a: Desvío.
+        b: Corrección total.
+        c: Declinación magnética.
+        d: Demora
+      question: 'Al ángulo formado por el meridiano magnético y el meridiano geográfico,
+        se le denomina:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 42
+      options:
+        a: l = 36º 00,5' N L = 005º 29,7' W
+        b: l = 36º 05' N L = 005º 29,6' W
+        c: l = 36º 01,5' N L = 005º 28,7' W
+        d: l = 36º 00,5' N L = 005º 27,8' W
+      question: Navegando al Ra = S 76º W, con desvío de aguja = - 5º y dm = 5º NW,
+        observamos marcación del faro de Pta. Europa = 157º por Er. Y simultáneamente,
+        marcación del faro de Pta. Almina = 120º por Br. ¿Cuál será la situación?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 43
+      options:
+        a: 12 millas
+        b: 15,2 millas
+        c: 14,2 millas
+        d: 12,5 millas
+      question: Si Salimos de Barbate (Farola roja con características Fl.R.4s5M)
+        con rumbo verdadero 175º y una vez navegadas 12 millas. ¿A qué distancia nos
+        encontraremos de Isla de Tarifa?
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 44
+      options:
+        a: Ct = 8º +
+        b: Ct = 8º -
+        c: Ct = 6º +
+        d: Ct = 6º –
+      question: A HRB= 20:00 estando en la oposición Punta Europa-Punta Almina, se
+        toma Da a Punta Europa de 338º. Se pide la corrección total.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: anulada
+      id: 45
+      options:
+        a: 39º
+        b: 29º
+        c: 45º
+        d: 19º
+      question: HRB 09:00 navegamos por el sur del Estrecho de Gibraltar con una velocidad
+        de 6 nudos y nos posicionamos en la l=35º45´N y L=006º10´W. Una vez situados
+        ponemos rumbo para pasar a 5 millas del faro de cabo Espartel dejándolo por
+        estribor. Desvío para el nuevo rumbo es de 5º, se utiliza la declinación magnética
+        de la carta de navegación L 105. ¿Qué rumbo de aguja hemos de llevar?
+exam_info:
+  call: conv1b
+  categories: 11
+  community: Andalucía
+  expected_questions: 45
+  questions_with_answers: 45
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN TEÓRICO PARA LA OBTENCIÓN DEL TÍTULO P.E.R.
+  total_questions: 45
+  year: 2021

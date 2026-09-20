@@ -1,0 +1,577 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: a
+      id: 1
+      options:
+        a: Poner la embarcación en posición vertical, o lo que es lo mismo, corregir
+          la escora
+        b: Atracar al costado de otra embarcación
+        c: Atracar al costado de un muelle o pantalán
+        d: Tumbar o inclinar la embarcación.
+      question: 'Si quisiéramos adrizar la embarcación, ¿qué acción estaríamos haciendo?:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 2
+      options:
+        a: Lumbreras
+        b: Imbornales
+        c: Guardines
+        d: Manguerotes
+      question: 'Los orificios que permiten la salida del agua embarcada en cubierta,
+        por ejemplo por mala mar, reciben el nombre de:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 3
+      options:
+        a: La que, en marcha avante, gira en sentido contrario a las agujas del reloj,
+          visto desde popa
+        b: La que es de paso variable
+        c: Aquella cuyas palas se recogen con la intención de disminuir la resistencia
+        d: La que, en marcha avante, gira en sentido de las agujas del reloj, visto
+          desde popa
+      question: ¿Qué entendemos por hélice dextrógira?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 4
+      options:
+        a: Francobordo
+        b: Codaste
+        c: Obra viva
+        d: Obra muerta
+      question: 'La parte sumergida del casco recibe el nombre de:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 5
+      options:
+        a: Fondear
+        b: Garreo
+        c: Orinque
+        d: Cobrar el ancla
+      question: 'La acción que se produce cuando el ancla no agarra en el fondo arrastrándose
+        sobre él, recibe el nombre de:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 6
+      options:
+        a: Vuelta de rezón
+        b: Llano
+        c: Ballestrinque
+        d: As de Guía
+      question: ¿Qué nudo se usa para unir dos cabos del mismo material y mena (grosor)?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 7
+      options:
+        a: Arrumbar
+        b: Correr el temporal
+        c: Capear el temporal
+        d: Sincronismo
+      question: 'La acción de recibir las olas por la amura, manteniendo la embarcación
+        avante con poca velocidad cuando existe mala mar, se conoce como:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 8
+      options:
+        a: Virar momentáneamente 70º a la banda contraría de la caída del náufrago
+          y, posteriormente, virar 150º a la banda contraria
+        b: Virar a la banda de la caída del náufrago hasta variar el rumbo inicial
+          270º
+        c: Virar 70º a la banda de la caída del náufrago y, posteriormente, virar
+          a la banda contraria hasta quedar al rumbo opuesto al primitivo
+        d: Virar a la banda de la caída del náufrago hasta variar el rumbo inicial
+          120º
+      question: 'La maniobra de Boutakow consiste en:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 9
+      options:
+        a: Comprobar la existencia de un aro salvavidas por cada tripulante
+        b: Comprobar que llevamos suficiente agua salada almacenada en los tanques
+        c: Comprobar los filtros de decantación de agua, la correa del alternador
+          y el nivel de combustible
+        d: Todas las respuestas anteriores son correctas
+      question: 'Antes de hacernos a la mar deberemos, entre otras, realizar las siguientes
+        comprobaciones:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 10
+      options:
+        a: 900 200 200
+        b: 900 202 202
+        c: 091
+        d: 900 400 400
+      question: 'El teléfono para contactar con Salvamento Marítimo es:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: a
+      id: 11
+      options:
+        a: Está prohibida la navegación deportiva y de recreo
+        b: Está permitida la navegación a una velocidad inferior a tres nudos
+        c: Únicamente está permitida la navegación para acceder perpendicularmente
+          a la playa, a una velocidad inferior a tres nudos
+        d: Sólo está permitida la navegación de las motos náuticas, a una velocidad
+          inferior a tres nudos
+      question: 'Dentro de las zonas de baño debidamente balizadas:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: d
+      id: 12
+      options:
+        a: En las instalaciones portuarias especialmente diseñadas para el tratamiento
+          de desechos
+        b: A una distancia superior a 3 millas náuticas de la tierra más próxima
+        c: A una distancia superior a 6 millas náuticas de la tierra más próxima
+        d: A una distancia superior a 12 millas náuticas de la tierra más próxima
+          (De acuerdo con el apartado 5.1 del temario de conocimientos teóricos en
+          vigor, las preguntas sobre marcas laterales se refieren a la Región de Balizamiento
+          A)
+      question: 'La descarga de aguas sucias que no han sido previamente desinfectadas
+        ni desmenuzadas debe realizarse:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 13
+      options:
+        a: Señala un peligro de dimensiones limitadas, que está enteramente rodeado
+          de aguas navegables
+        b: Señala un peligro que no figura en las cartas de navegación
+        c: Indica que hay un peligro al sur de ella
+        d: Indica que hay un peligro al norte de ella
+      question: 'Una marca que tiene como marca de tope dos esferas negras superpuestas:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 14
+      options:
+        a: Siempre por nuestra banda de estribor
+        b: Siempre por nuestra banda de babor
+        c: Saliendo de puerto, por nuestra banda de estribor
+        d: Saliendo de puerto, por nuestra banda de babor
+      question: 'En un canal balizado, las marcas de color verde debemos dejarlas:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 15
+      options:
+        a: De destellos, de color verde, con el ritmo que haya establecido la autoridad
+          competente y que figura en la carta y en las publicaciones náuticas
+        b: De ocultaciones, de color verde, con el ritmo que haya establecido la autoridad
+          competente y que figura en la carta y en las publicaciones náuticas
+        c: Grupo de 2 destellos verdes + 1 destello rojo
+        d: Grupo de 2 + 1 destellos verdes
+      question: 'Una marca es de color verde con una banda ancha horizontal roja.
+        ¿Cómo es su luz?:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 16
+      options:
+        a: Centelleante continua
+        b: Centelleante continua más un destello largo
+        c: Centelleante de grupos de 6 centelleos
+        d: Centelleante de grupos de 6 centelleos más un destello largo
+      question: 'El ritmo de la luz de una marca cardinal Norte es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 17
+      options:
+        a: Negro la mitad superior y amarillo la inferior
+        b: Amarillo la mitad superior y negro la inferior
+        c: Negro con una ancha banda horizontal amarilla
+        d: Amarillo con una ancha banda horizontal negra
+      question: 'Para indicar que hay que pasar al oeste de un peligro, se utilizará
+        una marca de color:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 18
+      options:
+        a: Un pito, una campana y un gong
+        b: Un pito y una campana
+        c: Un pito
+        d: Cualquier medio capaz de hacer señales acústicas eficaces
+      question: 'Una embarcación de recreo de 12 metros de eslora deberá ir provista
+        de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 19
+      options:
+        a: Somos el «buque que sigue a rumbo», por lo que en principio mantendremos
+          rumbo y velocidad
+        b: Debemos maniobrar con suficiente antelación, evitando un cambio de rumbo
+          a babor, en la medida de lo posible
+        c: Debemos maniobrar con suficiente antelación, evitando un cambio de rumbo
+          a estribor, en la medida de lo posible
+        d: Reduciremos la velocidad a la mínima de gobierno, danto atrás si es necesario
+          para suprimir toda la arrancada
+      question: 'Navegando en niebla cerrada, detectamos únicamente por medio del
+        radar un buque que se aproxima a rumbo de colisión por la amura de babor,
+        en una situación de cruce. En estas circunstancias:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 20
+      options:
+        a: Vuelta encontrada, con riesgo de abordaje
+        b: Cruce, con riesgo de abordaje
+        c: Alcance, con riesgo de abordaje
+        d: No hay riesgo de abordaje
+      question: 'Avistamos un buque en marcación 110º Br, que se aproxima al nuestro
+        sin que la marcación varíe de forma apreciable. Nos encontramos en una situación
+        de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 21
+      options:
+        a: Por el centro del canal
+        b: Por la parte del canal que tenga mayor profundidad, para reducir el riesgo
+          de varada
+        c: Manteniéndonos lo más cerca posible del límite exterior del canal que quede
+          por nuestro costado de estribor
+        d: Manteniéndonos lo más cerca posible del límite exterior del canal que quede
+          por nuestro costado de babor
+      question: 'Siempre que sea posible, en un canal angosto debemos navegar:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 22
+      options:
+        a: Lleva un aparejo de pesca de más de 150 metros de longitud
+        b: Tiene problemas para maniobrar
+        c: Se está propulsando mecánicamente y tiene la consideración de «buque de
+          propulsión mecánica», no de «buque de vela»
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'Un buque navegando a vela lleva a proa un cono con el vértice hacia
+        abajo. Está indicando que:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 23
+      options:
+        a: No. Está exenta de esta obligación, aunque puede hacerlo
+        b: No, si está fondeada en un lugar que no esté dentro ni cerca de un canal
+          angosto, paso, fondeadero o zona de navegación frecuente
+        c: Sí, si es de propulsión mecánica. Si es de vela no tiene obligación
+        d: Sí, siempre
+      question: 'Una embarcación de recreo de 11 metros de eslora está fondeada de
+        día. ¿Debe exhibir una bola negra a proa?:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 24
+      options:
+        a: Los buques de vela tienen obligación de arrancar el motor
+        b: Los buques de propulsión mecánica tendrán sus máquinas listas para maniobrar
+          inmediatamente
+        c: Todos los buques reducirán su velocidad a la mínima de gobierno
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'En condiciones de visibilidad reducida:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 25
+      options:
+        a: 112,5º
+        b: 135º
+        c: 180º
+        d: 225º
+      question: ¿Qué sector de visibilidad tiene la luz de alcance?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 26
+      options:
+        a: El buque mercante
+        b: La embarcación de recreo
+        c: El que tenga al otro por su costado de estribor
+        d: El que tenga al otro por su costado de babor
+      question: Un buque mercante y una embarcación de recreo, ambos de propulsión
+        mecánica y a la vista, se cruzan en mar abierto con riesgo de abordaje. ¿Cuál
+        debe mantenerse apartado de la derrota del otro?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 27
+      options:
+        a: Ambos caerán a estribor
+        b: El que reciba el viento por babor se mantendrá apartado de la derrota del
+          otro
+        c: El que reciba el viento por estribor se mantendrá apartado de la derrota
+          del otro
+        d: El que esté a barlovento se mantendrá apartado de la derrota del que esté
+          a sotavento
+      question: 'Dos buques de vela, que reciben el viento por bandas contrarias,
+        navegan de vuelta encontrada con riesgo de abordaje. En este caso:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: d
+      id: 28
+      options:
+        a: La popa cae a estribor
+        b: La popa no cae a ninguna banda
+        c: La popa cae inicialmente a estribor y luego a babor
+        d: La popa cae a babor
+      question: 'El efecto de la corriente de expulsión en una hélice de giro dextrógiro,
+        en un buque con timón a la vía, parado y sin arrancada y que dé máquinas atrás,
+        es:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: a
+      id: 29
+      options:
+        a: Templar
+        b: Amollar
+        c: Encapillar
+        d: Virar
+      question: '¿Qué nombre recibe la acción de dar tensión a los cabos?:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 30
+      options:
+        a: Tomar las medidas de estanqueidad oportunas
+        b: Tomar las medidas de apuntalamiento y achique oportunas
+        c: Establecer el acuerdo de separarse con el patrón o capitán de la otra embarcación.
+        d: Todas las respuestas anteriores son correctas
+      question: 'En caso de sufrir un abordaje, no se deberá intentar separar los
+        dos barcos sin previamente haber valorado la situación. Para ello es importante:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 31
+      options:
+        a: Para tratar una quemadura química, inicialmente colocaremos una gasa estéril,
+          o paño limpio sobre la misma
+        b: Para tratar una herida abdominal de urgencia, aplicaremos un vendaje que
+          comprima
+        c: Para detener una hemorragia en un brazo bajaremos la zona de sangrado por
+          debajo del corazón
+        d: Para tratar una insolación o golpe de calor llevaremos al paciente a un
+          lugar fresco, seco y bien ventilado y le quitaremos la ropa
+      question: 'Señale la afirmación correcta sobre accidentes personales:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 32
+      options:
+        a: Mantener la embarcación con rumbo constante y mínima velocidad
+        b: Emitir llamada/mensajes de socorro y activar la radiobaliza manualmente
+          (si se tiene)
+        c: Trincar en cubierta todo lo que pueda flotar
+        d: Colocarse el aro salvavidas
+      question: '¿Cuál de las siguientes medidas a tomar antes de abandonar la embarcación
+        es correcta?:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 33
+      options:
+        a: Escala Beaufort
+        b: Escala altimétrica
+        c: Escala de nivelización
+        d: Escala Douglas
+      question: 'La escala que clasifica los diferentes estados de la mar en 10 grados
+        tomando como referencia la altura de las olas se denomina:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 34
+      options:
+        a: El instrumento para medir la presión atmosférica es el manómetro
+        b: Las isobaras son líneas que unen puntos con la misma tendencia barométrica
+        c: La presión atmosférica en un lugar dado es el peso por unidad de superficie
+          de la columna de aire que gravita sobre dicho lugar
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'De las siguientes afirmaciones, marque la correcta:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 35
+      options:
+        a: Tiene sentido horario
+        b: Tiene sentido anti-horario
+        c: Es perpendicular a las isobaras
+        d: Está dirigida desde el interior hacia el exterior de la borrasca
+      question: 'En el hemisferio norte la circulación de los vientos en una borrasca:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 36
+      options:
+        a: El terral es un viento que sopla durante la noche desde la tierra hacia
+          el mar
+        b: El terral es un viento que sopla durante el día desde el mar hacia la tierra
+        c: El virazón es un viento que sopla durante el día desde la tierra hacia
+          el mar
+        d: El virazón es un viento que sopla durante la noche desde el mar hacia la
+          tierra
+      question: 'De las siguientes afirmaciones, marque la correcta:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 37
+      options:
+        a: Trasladaremos la abertura del compás sobre la escala de longitudes, donde
+          cada minuto de la escala equivale a una milla
+        b: Trasladaremos la abertura del compás sobre la escala de longitudes, donde
+          cada grado de la escala equivale a una milla
+        c: Trasladaremos la abertura del compás sobre la escala de latitudes, donde
+          cada minuto de la escala equivale a una milla
+        d: Trasladaremos la abertura del compás sobre la escala de latitudes, donde
+          cada grado de la escala equivale a una milla
+      question: 'Para medir las distancias en la carta procederemos a señalar con
+        el compás la distancia en la carta y seguidamente:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 38
+      options:
+        a: 7,3′
+        b: 8,0′
+        c: 8,8′
+        d: 9,1′
+      question: 'Si el coeficiente de corredera es 1,1 y la distancia de corredera
+        es 8 millas, ¿cuál será la distancia verdadera navegada?:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 39
+      options:
+        a: 065 º
+        b: 115º
+        c: 155º
+        d: 165º
+      question: '¿Cuál es el valor circular del rumbo cuadrantal S65E?:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 40
+      options:
+        a: El desvío de la aguja
+        b: La declinación magnética
+        c: La corrección total
+        d: La demora de aguja
+      question: 'El ángulo formado entre el norte geográfico y el norte de aguja es:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 41
+      options:
+        a: Una baja presión atmosférica hace disminuir la altura de la marea
+        b: La demora de aguja es igual a la suma algebraica del rumbo de aguja y la
+          marcación
+        c: El ángulo entre la estela del buque y el plano de crujía del buque es la
+          deriva
+        d: La amplitud de la marea es la diferencia entre la hora de la pleamar y
+          la de la bajamar o viceversa
+      question: 'Indique la afirmación correcta:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 42
+      options:
+        a: 36º 01,4' N; 005º 57,9' W
+        b: 36º 04,0' N; 005º 57,2' W
+        c: 36º 05,9' N; 005º 57,4' W
+        d: 36º 08,5' N; 005º 58,0' W
+      question: A las 20h 00m del 17 de junio de 2023, nos encontramos en situación
+        verdadera 36º 05,0' N, 006º 10,0' W. Navegamos a 6 nudos al rumbo de aguja
+        082°. Calcular la situación de estima a las 21h 45m, sabiendo que la declinación
+        magnética indicada en la carta es 5° 45′ E 2018 (9′ W) y que el desvío es
+        +7° (más).
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 43
+      options:
+        a: 320º
+        b: 324º
+        c: 334º
+        d: 336º
+      question: A las 10h 00m del 17 de junio de 2023, navegando al rumbo verdadero
+        340º, nos encontramos al Sur verdadero del faro de Punta Camarinal y al Oeste
+        verdadero del faro de la Isla de Tarifa. Situados, damos rumbo al puerto de
+        Barbate (faro de Tierra). Calcular el rumbo de aguja, sabiendo que la declinación
+        magnética es 6º NE y que el desvío de la aguja es +4º (más)
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 44
+      options:
+        a: – 8º (menos)
+        b: – 4º (menos)
+        c: + 4º (más)
+        d: + 8º (más)
+      question: Navegamos al rumbo de aguja 138º. Al cruzar la oposición de los faros
+        de Punta Paloma e Isla de Tarifa, marcamos el faro de Isla de Tarifa en demora
+        de aguja 130º. Calcular la corrección total.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 45
+      options:
+        a: 35º 55,8' N; 005º 49,7' W
+        b: 35º 52,4' N; 005º 52,0' W
+        c: 35º 51,6' N; 005º 46,7' W
+        d: 35º 50,5' N; 005º 48,6' W
+      question: Navegamos a 8 nudos al rumbo verdadero 090º y obtenemos marcación
+        al faro de Cabo Espartel 120º ER y simultáneamente marcación al faro de Punta
+        Malabata 30º ER. Calcular la situación.
+exam_info:
+  call: conv2b
+  categories: 11
+  community: Andalucía
+  expected_questions: 45
+  questions_with_answers: 45
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN TEÓRICO PARA LA OBTENCIÓN DEL TÍTULO P.E.R.
+  total_questions: 45
+  year: 2023

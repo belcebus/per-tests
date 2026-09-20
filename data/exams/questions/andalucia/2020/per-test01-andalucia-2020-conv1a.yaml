@@ -1,0 +1,575 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 1
+      options:
+        a: Son piezas dispuestas perpendicularmente a la línea de crujía
+        b: Sobre ellos se montan las cubiertas
+        c: Están afirmados a las cuadernas
+        d: Todas las respuestas anteriores son correctas
+      question: 'En relación a los Baos:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 2
+      options:
+        a: Aquella que en máquina avante gira en el sentido de las agujas del reloj
+        b: Aquella que en máquina atrás gira en sentido contrario a las agujas del
+          reloj
+        c: Aquella que en máquina atrás gira en el sentido de las agujas del reloj
+        d: Las respuestas a) y b) son correctas
+      question: 'Si miramos de popa hacia proa, una hélice de giro levógira es:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 3
+      options:
+        a: Virar progresivamente la cadena del ancla
+        b: Arriar progresivamente la cadena del ancla
+        c: Levar la cadena del ancla
+        d: Hacer zarpar la cadena del ancla
+      question: 'Filar la cadena del ancla es la maniobra de:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 4
+      options:
+        a: La banda por donde entra el viento
+        b: La banda contraria a la de barlovento
+        c: La banda por donde sale el viento
+        d: Las respuestas b) y c) son correctas
+      question: 'Banda de Sotavento es:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: d
+      id: 5
+      options:
+        a: Cornamusa
+        b: Noray
+        c: Bita
+        d: Las respuestas a) y c) son correctas
+      question: '¿Qué elemento de a bordo sirve para hacer firme un cabo?:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: d
+      id: 6
+      options:
+        a: Cascajo
+        b: Arcilla
+        c: Fango duro
+        d: Fango blando
+      question: 'De los tenederos siguientes, ¿cuál sería el menos apropiado para
+        fondear?:'
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 7
+      options:
+        a: Correr el temporal
+        b: Capear el temporal
+        c: Ponerse a son de mar
+        d: Entrar en sincronismo con la mar
+      question: 'La acción de recibir las olas por la amura cuando existe mala mar,
+        manteniendo la embarcación avante y con poca velocidad, se conoce como:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 8
+      options:
+        a: Exploración de Boutakow
+        b: Maniobra de Anderson
+        c: Exploración secuencial
+        d: Exploración en espiral cuadrada
+      question: 'En caso de hombre al agua, ¿cuál de las siguientes maniobras es más
+        aconsejable cuando no conocemos con exactitud la situación del náufrago?:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 9
+      options:
+        a: En los veleros no es necesario estar pendiente de la botavara
+        b: Los candeleros son unos elementos fiables para prevenir  una  caída
+        c: Hay que desplazarse con cuidado por cubierta, empleando los equipos de
+          seguridad a nuestro alcance
+        d: Las respuestas b) y c) son correctas
+      question: 'Para prevenir y evitar una situación de hombre al agua, ¿qué afirmación
+        es correcta?:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 10
+      options:
+        a: Estabilidad dinámica longitudinal
+        b: Estabilidad estática transversal
+        c: Estabilidad estática longitudinal
+        d: Estabilidad dinámica transversal
+      question: 'La propiedad que tiene el buque una vez escorado de recuperar su
+        posición de equilibrio, cuando se encuentra flotando en aguas en reposo, se
+        denomina:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: d
+      id: 11
+      options:
+        a: De forma instantánea, a cualquier velocidad
+        b: De forma instantánea, a velocidad no menor que 4 nudos
+        c: A un régimen de descarga moderado, a cualquier velocidad
+        d: A un régimen de descarga moderado, a velocidad no menor que 4 nudos
+      question: 'La descarga de aguas sucias que hayan estado almacenadas en los tanques
+        de retención se realizará:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 12
+      options:
+        a: Siempre
+        b: A más de 3 millas de la costa
+        c: A más de 12 millas de la costa
+        d: Nunca
+      question: 'En el Mediterráneo, la descarga de comida desmenuzada puede realizarse:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 13
+      options:
+        a: Marca de peligro aislado
+        b: Marca cardinal sur
+        c: Marca de aguas navegables
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'Una marca cuya luz es un grupo de dos destellos blancos cada quince
+        segundos es una:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 14
+      options:
+        a: Para indicar que las aguas son navegables alrededor de la marca
+        b: Para definir los ejes de los canales
+        c: Para indicar la entrada de un canal, la aproximación a un puerto o estuario
+          o un punto de recalada
+        d: Todas las respuestas anteriores son correctas
+      question: 'Una marca de aguas navegables puede ser utilizada:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 15
+      options:
+        a: Ninguna. La marcas laterales no utilizan marcas de tope
+        b: Una esfera
+        c: Un cono
+        d: Un cilindro
+      question: 'La marca de tope (si la tiene) de una marca lateral de babor es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: b
+      id: 16
+      options:
+        a: Babor
+        b: Estribor
+        c: Cuando vemos esa marca significa que estamos navegando por un canal secundario.
+          Debemos invertir el rumbo para volver al canal principal
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'Entrando en puerto por un canal balizado vemos una marca que emite
+        una luz consistente en un grupo de 2 + 1 destellos verdes. Si queremos seguir
+        por el canal principal, dejaremos esta marca por nuestra banda de:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 17
+      options:
+        a: Cardinal norte
+        b: De peligro aislado
+        c: De aguas navegables
+        d: Especial
+      question: 'Una marca emite una luz blanca durante dos segundos, está apagada
+        durante dos segundos, y así sucesivamente de forma ininterrumpida. Se trata
+        de una marca:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 18
+      options:
+        a: Cuando un buque se aproxime al otro viniendo desde una marcación mayor
+          de 22,5 grados a popa del través de este último
+        b: Cuando un buque vea al otro por su proa, o casi por su proa
+        c: Cuando no se trate de una situación de alcance o de vuelta encontrada
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'En caso de riesgo de abordaje, ¿cuándo dos buques se encuentran en
+        una situación «de cruce»?:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 19
+      options:
+        a: Nunca
+        b: Cuando el buque de vela está alcanzando al de propulsión mecánica
+        c: Cuando se cruzan con riesgo de abordaje y el buque de vela se encuentra
+          por el costado de babor del de propulsión mecánica, de forma que de noche
+          vería su luz de costado roja
+        d: Las respuestas b) y c) son correctas
+      question: 'En mar abierto, ¿en cuál de las siguientes situaciones un buque de
+        vela está obligado a mantenerse apartado de la derrota de un buque de propulsión
+        mecánica que está a la vista?:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 20
+      options:
+        a: Un sonido de cualquier duración superior a un segundo
+        b: Un sonido de cualquier duración superior a dos segundos
+        c: Un sonido de una duración aproximada de cuatro a seis segundos
+        d: Nada; esa expresión no está recogida en el reglamento de abordajes
+      question: '¿Qué es una «pitada larga»?:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 21
+      options:
+        a: Debemos mantenernos apartados de la derrota del otro buque
+        b: Debemos mantener rumbo y velocidad. Al navegar por el dispositivo de separación
+          del tráfico somos el buque que «sigue a rumbo»
+        c: Debemos denunciar la maniobra del otro buque al servicio de control de
+          tráfico del dispositivo
+        d: Las respuestas b) y c) son correctas
+      question: 'Navegando a motor por la vía apropiada de un dispositivo de separación
+        del tráfico, vemos por estribor un buque de propulsión mecánica con un rumbo
+        perpendicular al nuestro, que pretende cruzar el dispositivo, provocando una
+        situación de cruce con riesgo de abordaje. En esta situación:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 22
+      options:
+        a: Buques dedicados al lanzamiento o recuperación de aeronaves
+        b: Buques dedicados a la pesca de arrastre
+        c: Buques dedicados a dragados u operaciones submarinas
+        d: Todos los anteriores tienen la consideración de «buque con capacidad de
+          maniobra restringida»
+      question: '¿Cuál de los siguientes NO es un «buque con capacidad de maniobra
+        restringida»?:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 23
+      options:
+        a: Una marca bicónica
+        b: Dos conos unidos por sus vértices en línea vertical, uno sobre el otro
+        c: Dos bolas o marcas similares en línea vertical
+        d: Tres marcas en línea vertical en el lugar más visible. La más elevada y
+          la más baja de estas marcas serán bolas y la marca central será bicónica
+      question: '¿Cuál de las siguientes marcas identifica a un «buque con capacidad
+        de maniobra restringida»?:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 24
+      options:
+        a: Es de color amarillo
+        b: Debe colocarse lo más cerca posible de la proa
+        c: Es visible en un arco de 135º
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'La luz de alcance:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 25
+      options:
+        a: Es una embarcación de práctico en servicio de practicaje
+        b: Está dando atrás
+        c: Tiene dudas acerca de la maniobra de otro buque cercano
+        d: Esta señal acústica no existe
+      question: 'Un buque emite cinco pitadas cortas y rápidas; con ello indica que:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 26
+      options:
+        a: En virtud de la regla de visibilidad reducida, debemos evitar una caída
+          a babor
+        b: Debemos mantener rumbo y velocidad, pues es el otro buque el que debe apartarse
+          de nuestra derrota
+        c: Se trata de un buque de vela y debemos apartarnos de su derrota
+        d: Ambos buques deben caer a estribor
+      question: 'Navegando a motor de noche observamos por nuestra amura de babor
+        una luz verde; no vemos ninguna otra luz y la luz verde se aproxima, manteniendo
+        constante su demora. En este caso:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 27
+      options:
+        a: Mantendremos rumbo y velocidad. Somos el buque que «sigue a rumbo»
+        b: Maniobraremos con suficiente antelación, evitando si es posible una caída
+          a estribor
+        c: Maniobraremos con suficiente antelación, evitando si es posible una caída
+          a babor
+        d: Ninguna  de las respuestas anteriores es correcta
+      question: 'Navegando en condiciones de visibilidad reducida detectamos en el
+        radar un buque que no está a la vista, que se mantiene en marcación 65º Babor
+        en una situación de cruce con riesgo de abordaje. En estas circunstancias:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 28
+      options:
+        a: Que el firme y el chicote se encuentran amarrados en tierra
+        b: Que el firme y el chicote se encuentran amarrados a bordo
+        c: Que el firme se encuentra amarrado a bordo y el chicote en tierra
+        d: Que el firme se encuentra amarrado en tierra y el chicote a bordo
+      question: 'Por «amarrar por seno» se entiende:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: c
+      id: 29
+      options:
+        a: Es conveniente encapillar los dos largos al mismo noray, el que se encuentra
+          a sotavento (noray A)
+        b: Cada uno a un noray diferente, el de babor al de sotavento (noray A) y
+          de estribor al de barlovento (noray B)
+        c: Es conveniente encapillar los dos largos al mismo noray, el que se encuentra
+          en barlovento (noray B)
+        d: Es mejor no dar largos y emplear otras amarras
+      question: 'Al atracar en punta con viento fresco de costado, tal y como muestra
+        la figura, los largos de popa es conveniente encapillarlos:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 30
+      options:
+        a: Clase A
+        b: Clase B
+        c: Clase C
+        d: Clase F
+      question: 'Un incendio producido por combustibles sólidos, generalmente de naturaleza
+        orgánica, donde la combustión se realiza normalmente con formación de brasas,
+        pertenece a la clase:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 31
+      options:
+        a: Tomar las medidas de estanqueidad oportunas
+        b: Tomar medidas de apuntalamiento y achique oportunas
+        c: Acordar la separación con el patrón o capitán de la otra embarcación
+        d: Todas las respuestas anteriores son correctas
+      question: 'En caso de sufrir un abordaje, no es aconsejable intentar separar
+        los dos barcos sin previamente haber valorado la situación. Para ello es importante:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 32
+      options:
+        a: Inmovilización y elevación de la zona afectada
+        b: Aplicación de frío sobre la zona contusionada
+        c: Si se aprecia hematoma, aplicar una pomada a base de heparina o derivados
+        d: Pinchar el hematoma, si este se ha producido
+      question: 'Dentro de las medidas generales que habrán de adoptarse ante una
+        contusión, especialmente cuando ésta es leve, NO se incluye:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 33
+      options:
+        a: Disminuye de intensidad
+        b: Cambia de dirección
+        c: Aumenta la intensidad
+        d: Aumenta  repentinamente la intensidad y vuelve a disminuir
+      question: 'Se dice que el viento rola cuando:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 34
+      options:
+        a: Son áreas de altas presiones (Anticiclón)
+        b: Son áreas de bajas presiones (Depresión)
+        c: Son áreas de bajas presiones (Depresión), pero los vientos giran en el
+          sentido de las agujas del reloj
+        d: Son áreas de altas presiones (Anticiclón), pero los vientos giran en el
+          sentido de las agujas del reloj
+      question: 'Las áreas que se caracterizan por un aumento de la presión desde
+        el interior hacia la periferia y cuyos vientos giran en sentido contrario
+        a las agujas del reloj en el hemisferio norte:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 35
+      options:
+        a: La cuarta parte de la zona o extensión en la que el viento sopla con una
+          dirección  en la que el viento  rola continuamente y de intensidad racheada
+        b: El tiempo que lleva soplando el viento con una misma intensidad y dirección
+        c: La zona o extensión, en la que el viento sopla con una misma dirección
+          e intensidad
+        d: La altura que alcanza la ola con un determinado viento constante en intensidad
+          y dirección
+      question: 'Se entiende por Fecht a:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 36
+      options:
+        a: Si estamos navegando y no sentimos ningún viento, el viento aparente es
+          cero y el viento real o verdadero sopla en la misma dirección que nuestro
+          rumbo
+        b: Si estamos navegando y no sentimos ningún viento, el viento aparente es
+          cero y el viento real o verdadero sopla en dirección opuesta a nuestro rumbo
+        c: El viento aparente sólo depende del viento real y del rumbo del buque,
+          no de la velocidad del buque
+        d: Las respuestas a) y c) con correctas
+      question: 'De las siguientes afirmaciones ¿cuál es correcta?:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 37
+      options:
+        a: El ángulo formado por la proa y la visual a un objeto
+        b: El ángulo formado por el meridiano y la visual a un objeto
+        c: El ángulo formado por el meridiano y la línea  proa-popa del buque
+        d: En ángulo formado por la proa a babor o estribor hasta la popa
+      question: 'La Demora es :'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 38
+      options:
+        a: Sumando el coeficiente de corredera a la velocidad de corredera
+        b: Multiplicando el coeficiente de corredera por la velocidad de corredera
+        c: Dividiendo la velocidad de corredera por el coeficiente de corredera
+        d: Restando el coeficiente de corredera a la velocidad de corredera
+      question: '¿Cómo podemos conocer la velocidad del barco?:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 39
+      options:
+        a: Duración de la marea
+        b: Sonda carta
+        c: Amplitud de la marea
+        d: Cero Hidrográfico
+      question: 'La diferencia entre la altura de la pleamar y la altura de la bajamar
+        se denomina:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 40
+      options:
+        a: La hora que se lleva a bordo, fijada por el Patrón
+        b: La hora legal
+        c: La hora oficial fijada por el estado del pabellón del barco
+        d: La hora oficial fijada por el estado soberano de las aguas por las que
+          navega
+      question: 'La Hora Reloj de Bitácora es :'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 41
+      options:
+        a: Es un faro que no emite luz alguna y se enciende en caso de emergencia,
+          si se sobrepasan las demoras de seguridad del faro
+        b: Emite luz durante cierto periodo y se oculta en caso de emergencia, si
+          se sobrepasan las demoras de seguridad del faro
+        c: Es un faro que está encendido continuamente y se apaga cada cierto periodo.
+          En este tipo de faros lo importante para reconocerlos es el periodo en que
+          está apagado
+        d: Es un faro que se encuentra apagado y emite luz cada cierto tiempo. En
+          este tipo de faros lo importante para reconocerlo es el periodo en que está
+          encendido
+      question: '¿Qué caracteriza a un faro que tiene una luz de ocultación?:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 42
+      options:
+        a: 35º 53,9' N; 005º 32,2' W
+        b: 36º 00,0' N; 005º 35,8' W
+        c: 35º 59,6' N; 005º 34,0' W
+        d: 35º 53,4' N; 005º 32,8' W
+      question: A HRB = 12h 00m del 25 de julio de 2020, nos encontramos a 4 millas
+        al Sur verdadero del faro de Punta Carnero, navegando al Rumbo de aguja 244º.
+        Más tarde, obtenemos Marcación al Faro de Punta Cires 110º Babor (BR) y Marcación
+        al Faro de Punta Malabata 30º babor (BR). Calcular la situación al obtener
+        las marcaciones, sabiendo que la declinación magnética es 2º NE y el Desvío
+        = +4º (más).
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 43
+      options:
+        a: –12º (menos)
+        b: +8º (más)
+        c: –6º (menos)
+        d: +14º (más)
+      question: Navegamos al rumbo de aguja = 340º. Al encontrarnos en la oposición
+        de los faros de Punta Almina y Punta Carnero, marcamos el faro de Punta Carnero
+        en demora de aguja 332º. Calcular la corrección total.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 44
+      options:
+        a: 35º 55,4' N; 006º 02,9' W
+        b: 35º 54,8' N; 005º 56,2' W
+        c: 35º 53,0' N; 006º 01,0' W
+        d: 35º 58,6' N; 005º 59,5' W
+      question: El 25 de julio de 2020 navegamos a 7 nudos al rumbo de aguja 056º.
+        Al ser HRB = 18h 00m nos encontramos en situación 35º 50,0' N, 006º 10,0'
+        W. Calcular la situación al ser HRB = 19h 45m, sabiendo que la declinación
+        magnética es 5º NW y el Desvío= –6º (menos).
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 45
+      options:
+        a: Ra = 161º, HRB = 21h 34m
+        b: Ra = 181º, HRB = 21h 06m
+        c: Ra = 161º, HRB = 21h 06m
+        d: Ra = 181o, HRB = 21h 34m
+      question: El día 25 de julio de 2020, a HRB = 20h 00m, nos encontramos en situación
+        36o 00,0' N, 005º 50,0' W y damos rumbo al puerto de Tánger (punto de llegada
+        luz del espigón) con velocidad del buque 8 nudos. Calcular el rumbo de aguja,
+        y la HRB de llegada, sabiendo que la declinación magnética de la carta es
+        4,5º E 2010 (6' W) y el Desvío de la aguja = +6,5º (más).
+exam_info:
+  call: conv1a
+  categories: 11
+  community: Andalucía
+  expected_questions: 45
+  questions_with_answers: 45
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN TEÓRICO PARA LA OBTENCIÓN DEL TÍTULO P.E.R.
+  total_questions: 45
+  year: 2020

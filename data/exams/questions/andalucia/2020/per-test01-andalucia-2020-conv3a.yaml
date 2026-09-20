@@ -1,0 +1,571 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 1
+      options:
+        a: Candeleros
+        b: Aliviaderos
+        c: Lumbreras
+        d: Imbornales
+      question: 'Los orificios, practicados en el forro exterior a la altura del trancanil,
+        con el fin de dar salida al agua de cubierta se llaman:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 2
+      options:
+        a: Danforth
+        b: Rezón
+        c: Almirantazgo
+        d: De arado
+      question: ¿Cómo se llama el ancla de la imagen?
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 3
+      options:
+        a: Prensa estopa
+        b: Guardines
+        c: Limera
+        d: Bocina
+      question: 'El orificio por el que la mecha del timón atraviesa el casco se llama:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 4
+      options:
+        a: Aspiraciones de las bombas de achique
+        b: Los grifos de fondo
+        c: Válvulas de sentina
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'Las válvulas que se encuentran por debajo de la línea de flotación
+        y que toman agua de mar para los diferentes servicios del barco son:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 5
+      options:
+        a: Boyas
+        b: Bolardos
+        c: Defensas
+        d: Guiacabos
+      question: 'Las protecciones que se emplean en las embarcaciones o en los muelles
+        para evitar roces y golpes se llaman:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: b
+      id: 6
+      options:
+        a: Sacar la cadena del barboten
+        b: Dar unas paladas avante
+        c: Dar a avante con todo el timón a la banda contraria al ancla fondeada
+        d: Dar unas paladas atrás
+      question: Al levar el ancla, ésta tira por largo con mucha fuerza. ¿Qué debemos
+        hacer?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 7
+      options:
+        a: Aguas superficiales
+        b: Veriles
+        c: Sondas
+        d: Aguas someras
+      question: 'Aquellas aguas próximas a la costa en las que, por existencia de
+        bajos o poco agua bajo la quilla, es necesario navegar con precaución se conocen
+        como:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: a
+      id: 8
+      options:
+        a: Recibimos la mar por la amura
+        b: Recibimos la mar por la aleta
+        c: Recibimos la mar por el través
+        d: Recibimos la mar por la popa
+      question: 'Cuando capeamos un temporal:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 9
+      options:
+        a: Listos para zarpar
+        b: Al francobordo
+        c: A son de mar
+        d: Listos y arranchados
+      question: 'La expresión utilizada para indicar que se ha estibado y trincado
+        a bordo con criterio y a conciencia antes de salir a la mar es:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 10
+      options:
+        a: Deben colocarse tanto a proa como a popa unidos a una rabiza flotante
+        b: Deberán colocarse en las bandas (aletas) o en popa, con luz y un sistema
+          rápido de soltado y lanzado al agua
+        c: Deberán colocarse por las bandas (amuras) o en proa, con un sistema rápido
+          de puesta a flote
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'Señale la respuesta correcta sobre las recomendaciones de uso y estiba
+        de los aros salvavidas a bordo:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: b
+      id: 11
+      options:
+        a: 5 nudos
+        b: 3 nudos
+        c: 2 nudos
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'Al aproximarse a una playa no balizada, la velocidad máxima a la
+        que se puede navegar es:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: d
+      id: 12
+      options:
+        a: Con velocidad superior a tres nudos
+        b: Siempre en alta mar, a más de 12 millas de la costa
+        c: Las respuestas a) y b) son correctas
+        d: En los contenedores del puerto
+      question: 'La evacuación de plásticos se debe hacer:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 13
+      options:
+        a: Grupo de dos destellos
+        b: Un destello largo cada diez segundos
+        c: Grupo de dos ocultaciones
+        d: Las respuestas a) y c) son correctas
+      question: 'El ritmo de la luz de una marca de peligro aislado es:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 14
+      options:
+        a: Cardinales
+        b: Especiales
+        c: Laterales
+        d: De aguas navegables
+      question: 'Para definir los ejes de los canales se utilizan las marcas:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 15
+      options:
+        a: Lateral de babor
+        b: Lateral de bifurcación, canal principal a babor
+        c: De peligro aislado
+        d: Las respuestas a) y b) son correctas
+      question: 'Un cilindro de color rojo es la marca de tope de una marca:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 16
+      options:
+        a: Tendremos por estribor las marcas de color verde
+        b: Tendremos por babor las marcas cuya marca de tope es un cilindro
+        c: Las respuestas a) y b) son correctas
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'Saliendo de puerto por un canal balizado:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 17
+      options:
+        a: Son marcas colocadas o fondeadas sobre un peligro a cuyo alrededor las
+          aguas son navegables
+        b: Indican zonas o configuraciones especiales cuya naturaleza se visualiza
+          al consultar la carta u otra publicación náutica
+        c: Pueden utilizarse para llamar la atención sobre una configuración especial
+          de un canal, tal como un recodo, una confluencia, una bifurcación o el extremo
+          de un bajo fondo
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'Las marcas cardinales:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 18
+      options:
+        a: Reducir la velocidad hasta la mínima de gobierno y, si fuera necesario,
+          suprimir la arrancada
+        b: Caer a estribor para evitar el abordaje
+        c: Mantener rumbo y velocidad y, si se considera conveniente, emitir cinco
+          o más pitadas cortas y rápidas
+        d: Las respuestas a) y b) son correctas
+      question: Navegando sin radar en condiciones de visibilidad reducida se oye
+        la señal de niebla de un buque del que no tenemos conocimiento previo. Si
+        dicha señal parece escucharse por la amura de  babor, ¿qué debemos hacer?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 19
+      options:
+        a: El que tenga al otro por estribor
+        b: El que tenga al otro por babor
+        c: El que esté a barlovento
+        d: El que esté a sotavento
+      question: Dos buques de vela se encuentran en una situación de cruce con riesgo
+        de abordaje. Si ambos buques están a la vista y reciben el viento por la misma
+        banda, ¿cuál debe mantenerse apartado de la derrota del otro?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 20
+      options:
+        a: Luces de costado y luz de alcance
+        b: Una luz de tope, luces de costado y luz de alcance
+        c: Una luz blanca todo horizonte, luces de costado y luz de alcance
+        d: Las respuestas b) y c) son correctas
+      question: 'Un buque de 11 metros de eslora navega a vela y también se propulsa
+        mecánicamente. ¿Qué configuración de luces puede exhibir?:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 21
+      options:
+        a: Mantenernos apartados de la derrota del buque que tenemos por la proa
+        b: Caer obligatoriamente a estribor; el otro buque también caerá a su estribor
+        c: Mantener rumbo y velocidad
+        d: Disminuir velocidad hasta saber con certeza en qué situación estamos (cruce,
+          alcance o vuelta encontrada)
+      question: 'Navegando a motor avistamos por la proa las luces de costado de un
+        buque que no muestra ninguna otra luz. En este caso debemos:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 22
+      options:
+        a: El que vea al otro por babor
+        b: El que vea al otro por estribor
+        c: Ninguno. Ambos deben caer a estribor con antelación suficiente
+        d: Ninguna de las respuestas anteriores es correcta
+      question: Cuando dos buques de propulsión mecánica a la vista se cruzan con
+        riesgo de abordaje, ¿cuál es el buque que «sigue a rumbo»?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 23
+      options:
+        a: Los buques de eslora inferior a 20 metros
+        b: Los buques de vela y los buques de eslora inferior a 20 metros
+        c: Los buques de eslora inferior a 20 metros y los buques dedicados a la pesca
+        d: Los buques de vela, los buques de eslora inferior a 20 metros y los buques
+          dedicados a la pesca
+      question: Un buque se dirige a puerto por un canal angosto. Debido a sus dimensiones,
+        solo puede navegar con seguridad dentro de dicho canal. ¿Qué buques no estorbarán
+        su tránsito?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 24
+      options:
+        a: Cuando A navegue a mayor velocidad que B y ambos se aproximen con riesgo
+          de abordaje
+        b: Cuando A se aproxime a B viniendo desde una marcación mayor de 22,5 grados
+          a popa del través de B
+        c: Cuando A se aproxime a B viniendo desde una posición tal que de noche solamente
+          le sea posible ver la luz de alcance de B y ninguna de sus luces de costado
+        d: Las respuestas b) y c) son correctas
+      question: ¿Cuándo se considera que un buque A está alcanzando a un buque B?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 25
+      options:
+        a: Es el buque que «sigue a rumbo» y, en principio, debe mantener rumbo y
+          velocidad
+        b: Es el buque que «cede el paso» y debe mantenerse apartado de la derrota
+          del buque de vela
+        c: Es el buque que «sigue a rumbo» y, en principio, debe mantener rumbo y
+          reducir velocidad, para facilitar la maniobra del buque de vela
+        d: Debe caer a babor, haciendo sonar dos pitadas cortas, y vigilar que el
+          buque de vela caiga a estribor
+      question: Un buque de propulsión mecánica avista, en marcación 115º ER, a un
+        buque de vela que se aproxima con riesgo de abordaje. Si el abordaje no es
+        inminente, ¿cómo debe actuar?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 26
+      options:
+        a: Ninguna
+        b: Una pitada corta
+        c: Dos pitadas cortas
+        d: Tres pitadas cortas
+      question: En una zona de tráfico, un buque de propulsión mecánica va a caer
+        a babor para apartarse de la derrota de otro buque que está a la vista. ¿Qué
+        señal acústica debe emitir para avisar del cambio de rumbo?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 27
+      options:
+        a: Cuando su eslora es inferior a 20 metros
+        b: Cuando está en ruta hacia o desde un lugar situado dentro de la zona de
+          navegación costera
+        c: Para evitar un peligro inmediato
+        d: Todas las respuestas anteriores son correctas
+      question: En un dispositivo de separación del tráfico, ¿cuándo un buque de propulsión
+        mecánica puede utilizar la zona de navegación costera adyacente?
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 28
+      options:
+        a: Al principio a babor y luego a estribor
+        b: A estribor
+        c: A babor
+        d: Al principio a estribor y luego a babor
+      question: 'Vamos con arrancada avante, con timón a la vía y con una hélice levógira
+        o de giro a la izquierda. Si damos máquinas atrás, la POPA caerá:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: c
+      id: 29
+      options:
+        a: Cobrar
+        b: Virar
+        c: Adujar
+        d: Templar
+      question: 'La acción de recoger los cabos a bordo, formando vueltas o cocas
+        en la cubierta para que no se enreden y ocupen menos espacio, se denomina:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 30
+      options:
+        a: Dar atrás toda rápidamente
+        b: Trasladar pesos y trasegar líquidos para cambiar el asiento y anular el
+          efecto de ventosa con el fondo
+        c: Escorar el barco hacia la banda de barlovento, manteniéndolo en aguas iguales
+        d: Todas las respuestas anteriores son correctas
+      question: 'Si nos quedamos varados en un fondo blando (fango o arena), para
+        salir de la embarrancada debemos:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: d
+      id: 31
+      options:
+        a: Sólo podemos utilizar la telefonía móvil
+        b: Podemos hacerlo a través de las estaciones costeras usando la radiofonía,
+          indicando que la comunicación es para «consulta médica»
+        c: Podemos contactar directamente con el Centro Radio-Médico Español, llamando
+          al número de teléfono 913 10 34 75
+        d: Las respuestas b) y c) son correctas
+      question: 'Para hacer una consulta radio médica:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 32
+      options:
+        a: Designar a un tripulante a bombear con la bomba manual y el resto a achicar
+          con los baldes
+        b: Para reforzar el trabajo de las bombas de achique, soltaremos la toma de
+          agua de mar de refrigeración del motor, obturaremos o cerraremos el paso
+          y haremos que succione el agua embarcada
+        c: Apagar el motor de nuestra embarcación, para que las bombas de achique
+          funcionen a pleno rendimiento
+        d: Todas las respuestas anteriores son correctas
+      question: Si descubrimos agua en la sentina, ¿cuál de las siguientes acciones
+        NO es correcta?
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 33
+      options:
+        a: Disminuye su intensidad
+        b: Aumenta su intensidad
+        c: Cambia de dirección
+        d: Disminuye su temperatura
+      question: 'Se dice que el viento refresca cuando:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 34
+      options:
+        a: En sentido de las agujas del reloj
+        b: En línea recta entre los centros de presión del anticiclón
+        c: De Sur a Norte en todas las isobaras del anticiclón
+        d: En sentido contrario a las agujas del reloj
+      question: 'La circulación de los vientos en un anticiclón en el hemisferio norte
+        es:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 35
+      options:
+        a: Brisa costera típica de los alisios del NE
+        b: Brisa costera local que sopla de mar a tierra
+        c: Brisa costera local asociada a una borrasca que sopla de Este a Oeste
+        d: Brisa costera local que sopla de la tierra al mar
+      question: 'El término “virazón” se refiere a:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 36
+      options:
+        a: Son las intersecciones de las superficies isobáricas con la superficie
+          terrestre
+        b: Son líneas que unen puntos de igual presión atmosférica
+        c: Son los puntos de corte de las distintas superficies isobáricas con intervalos
+          de 4 milibares en un momento determinado
+        d: Las respuestas a) y b) son correctas
+      question: 'En relación a las líneas isobaras, ¿cuál de las siguientes afirmaciones
+        es correcta?:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 37
+      options:
+        a: Latitud
+        b: Longitud
+        c: Diferencia en latitud
+        d: Diferencia en longitud
+      question: 'El arco de ecuador, contado desde el meridiano de Greenwich hasta
+        el meridiano del lugar se llama:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 38
+      options:
+        a: Demora
+        b: Marcación
+        c: Rumbo
+        d: Enfilación
+      question: 'El ángulo horizontal que forma la línea proa-popa del barco con la
+        visual a un objeto se denomina:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 39
+      options:
+        a: El Sol
+        b: La Luna
+        c: El Sol y la Luna
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'Las mareas se producen fundamentalmente por la atracción gravitatoria
+        de:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 40
+      options:
+        a: El transpondedor
+        b: La corredera
+        c: El transductor
+        d: La sonda
+      question: 'El instrumento que mide la distancia navegada por el barco es:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 41
+      options:
+        a: Una señal de balizamiento
+        b: La zona de tierra y costa de las cartas de navegación costera
+        c: Una inserción, dentro del marco de la carta, en la que se representa a
+          mayor escala una parte de zona que abarca la carta náutica
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'En una carta náutica, un cartucho es:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 42
+      options:
+        a: 36º 05,2' N; 005º 51,1' W
+        b: 36º 01,7' N; 005º 50,6' W
+        c: 36º 02,8' N; 005º 46,6' W
+        d: 36º 07,0' N; 005º 55,2' W
+      question: A HRB = 12h 00m del 21 de noviembre de 2020, nos encontramos a 10
+        millas al Norte verdadero del faro de Cabo Espartel, navegando al Rumbo de
+        aguja 038º. Más tarde, obtenemos marcación al faro de cabo Trafalgar 89º Babor
+        (BR) y marcación al faro de Punta Paloma 25º Estribor (ER). Calcular la situación
+        al obtener las marcaciones, sabiendo que la declinación magnética es 2º NE
+        y el Desvío = +4º (más).
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 43
+      options:
+        a: 35º 58,8' N; 005º 49,2' W
+        b: 36º 01,4' N; 005º 57,5' W
+        c: 36º 02,1' N; 005º 48,2' W
+        d: 35º 56,0' N; 005º 50,9' W
+      question: A HRB= 08h 00m del 21 de noviembre de 2020 nos encontramos en situación
+        36º 05,0' N, 006º 10,0' W. Calcular la situación al ser HRB = 10h 30m, sabiendo
+        que la velocidad del barco es de 7,2 nudos y el Rumbo verdadero es 110º.  La
+        corrección total es  +10º (más).
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 44
+      options:
+        a: Ra = 335º, HRB = 13h 15m
+        b: Ra = 335º, HRB = 14h 00m
+        c: Ra = 355º, HRB = 13h 15m
+        d: Ra = 355º, HRB = 14h 00m
+      question: A HRB= 11h 15m del 21 de noviembre de 2020, nos encontramos en situación
+        verdadera 35º 55,0' N, 005º 50,0' W y damos rumbo al Puerto de Barbate (faro
+        de tierra) a 8,5 nudos de velocidad. Calcular el rumbo de aguja y la HRB de
+        llegada, sabiendo que la declinación magnética es 6º NE y el Desvío = +4º
+        (más).
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 45
+      options:
+        a: 35º 59,6' N; 005º 32,8' W
+        b: 35º 57,9' N; 005º 32,4' W
+        c: 35º 56,1' N; 005º 30,8' W
+        d: 35º 57,2’ N; 005º 35,8' W
+      question: El 21 de noviembre de 2020 navegamos a 6 nudos al rumbo de aguja 256º,
+        en ausencia de viento y corriente. A HRB = 08h 00m, nos encontramos en la
+        oposición de los faros de punta Carnero y punta Almina y al Este verdadero
+        del faro de la Isla de Tarifa. Calcular la situación a HRB= 09h 30m sabiendo
+        que la declinación magnética es 6º NW y el desvío de la aguja = +6º (más).
+exam_info:
+  call: conv3a
+  categories: 11
+  community: Andalucía
+  expected_questions: 45
+  questions_with_answers: 45
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN TEÓRICO PARA LA OBTENCIÓN DEL TÍTULO P.E.R.
+  total_questions: 45
+  year: 2020
