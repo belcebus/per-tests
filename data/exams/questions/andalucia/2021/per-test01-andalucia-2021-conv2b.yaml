@@ -1,0 +1,540 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 1
+      options:
+        a: El volumen del casco emergido sobre el agua.
+        b: El volumen del casco sumergido en el agua.
+        c: El volumen de carena.
+        d: La respuesta B y C son correctas.
+      question: 'La obra viva se identifica como:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 2
+      options:
+        a: Es un refuerzo estructural
+        b: Se trata del orificio de la embarcación que atraviesa el eje del motor-hélice.
+        c: Es el orificio que atraviesa el eje del timón.
+        d: Es un elemento móvil de las embarcaciones.
+      question: La bocina.
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 3
+      options:
+        a: Es un refuerzo transversal.
+        b: Es un refuerzo longitudinal y externo al casco.
+        c: Se sitúa siempre en el fondo de la embarcación.
+        d: Ninguna de las anteriores es correcta.
+      question: 'La regala:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 4
+      options:
+        a: Es paralela a la línea de través.
+        b: Divide la embarcación en 2 mitades proa y popa.
+        c: Divide la embarcación en 2 mitades simétricas llamadas bandas.
+        d: Se conoce así a la línea que dibuja la superficie del agua sobre el costado
+          de la embarcación.
+      question: 'En relación con la línea y plano de crujía:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 5
+      options:
+        a: Ballestrinque.
+        b: Vuelta de rezón.
+        c: As de guía.
+        d: Llano.
+      question: El nudo empleado para hacer una gaza sin costuras se llama.
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: anulada
+      id: 6
+      options:
+        a: Se utiliza para señalizar la posición del ancla.
+        b: Suele ser una boya, pero puede utilizarse cualquier elemento flotante.
+        c: Nos ayuda a conocer si la embarcación está garreando.
+        d: Todas las respuestas son correctas.
+      question: En relación con el Orinque.
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 7
+      options:
+        a: Tirar cualquier objeto flotante al agua del que dispongamos.
+        b: Señalar en todo momento la posición del náufrago.
+        c: Aumentar máquina para realizar la maniobra lo antes posible.
+        d: Realiza la maniobra de Andersson o Boutakow.
+      question: Que no debe hacerse ante una situación de hombre al agua.
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 8
+      options:
+        a: Como la oscilación de la embarcación que se produce en sentido trasversal
+          (proa-popa) debido al estado de la mar.
+        b: Como la oscilación de la embarcación que se produce en sentido trasversal
+          (babor-estribor) debido al estado de la mar.
+        c: Como la oscilación de la embarcación que se produce en sentido longitudinal
+          (proa - popa) debido al estado de la mar.
+        d: Como la oscilación de la embarcación que se produce en sentido longitudinal
+          (babor - estribor) debido al estado de la mar.
+      question: 'El cabeceo se define:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: anulada
+      id: 9
+      options:
+        a: Chaleco salvavidas.
+        b: Espejo de señales.
+        c: Arnés de seguridad.
+        d: Bengala de mano.
+      question: Cual de los siguientes NO es un elemento de seguridad obligatorio
+        en zona de navegación 4
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 10
+      options:
+        a: Aguas contaminadas por la acción de la navegación marítima.
+        b: Aguas con gran densidad de tráfico marítimo.
+        c: Aguas de poca profundidad.
+        d: Todas las anteriores son correctas.
+      question: Las aguas someras son.
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 11
+      options:
+        a: 50 metros.
+        b: 100 metros.
+        c: 200 metros.
+        d: 3 millas náuticas.
+      question: Ante una playa balizada, a qué distancia de la orilla está prohibida
+        la navegación de recreo.
+    - category: 4
+      category_name: Legislación
+      correct_answer: c
+      id: 12
+      options:
+        a: Zona exclusiva protegida de importancia para el mediterráneo.
+        b: Zona especialmente protegida de importancia para el medio marino.
+        c: Zona especialmente protegida de importancia para el mediterráneo.
+        d: Zona exclusiva protegida de importancia para el mar mediterráneo.
+      question: 'Las siglas ZEPIM significan:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: anulada
+      id: 13
+      options:
+        a: Se trata de una marca lateral de babor.
+        b: Se trata de una marca lateral de estribor.
+        c: Se trata de una marca canal preferente a babor y deberemos dejarla por
+          estribor para seguir el canal principal.
+        d: Se trata de una marca canal preferente a estribor y deberemos dejarla por
+          estribor para seguir el canal principal.
+      question: 'Si saliendo de un puerto hacia al mar observamos una luz roja con
+        un periodo 2+1 destellos:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: anulada
+      id: 14
+      options:
+        a: Se trata de una luz de aguas navegables y podemos navegar sin problema
+          por las inmediaciones
+        b: Se trata de una luz de peligro aislado y debemos darle resguardo
+        c: Deberemos cambiar nuestro rumbo a babor.
+        d: Deberemos cambiar nuestro rumbo a estribor.
+      question: 'Si navegando a rumbo norte observamos una luz blanca en grupo de
+        9 destellos debemos:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 15
+      options:
+        a: Para indicar que las aguas son navegables alrededor de la marca
+        b: Para definir los ejes de los canales
+        c: Para indicar la entrada de un canal, la aproximación a un puerto o estuario
+          o un punto de recalada
+        d: Todas las respuestas anteriores son correctas.
+      question: 'Una marca de aguas navegables puede ser utilizada:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 16
+      options:
+        a: Una cruz roja.
+        b: Una cruz verde.
+        c: Un cono rojo.
+        d: Un cilindro rojo
+      question: 'La marca de tope de las marcas laterales de babor en España son:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: d
+      id: 17
+      options:
+        a: Una marca lateral de babor.
+        b: Una boya de aguas navegables.
+        c: Una marca cardinal.
+        d: Una marca especial.
+      question: 'Si de noche divisamos una boya de la cual no distinguimos la forma,
+        pero sí divisamos una luz de color amarillo se trata de:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 18
+      options:
+        a: El que vea al otro por su costado de babor.
+        b: El que vea al otro por su costado de estribor.
+        c: Maniobran ambos buques.
+        d: Dependerá por donde reciban el viento.
+      question: Si dos buques navegando a vela, se encuentran en una situación de
+        riesgo de abordaje ¿quién maniobrará?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 19
+      options:
+        a: El otro buque
+        b: Nosotros, ya que el otro buque, es un buque de capacidad de maniobra restringida.
+        c: Ambos buques se trata de una situación de vuelta encontrada y ambos caerán
+          a su banda de babor.
+        d: Ambos buques se trata de una situación de vuelta encontrada y ambos caerán
+          a su banda de estribor.
+      question: Si navegando exclusivamente a vela divisamos justo por la proa una
+        embarcación a riesgo de abordaje, a la que se le divisan dos luces de tope
+        blancas y ambas luces de costado ¿quién debe maniobrar?
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 20
+      options:
+        a: Cuando cualesquiera que sean los buques se divisen a proa del través.
+        b: Cuando 2 embarcaciones de vela se crucen y reciban el viento por bandas
+          contrarias.
+        c: Siempre que dos buques de propulsión mecánica se encuentren a la vista
+          el uno del otro, observándose ambos por una marcación menor de 22,5 grados
+          a popa del través.
+        d: Siempre que los dos buques de propulsión mecánica se encuentren a la vista
+          el uno del otro, observándose ambos por una marcación mayor de 22,5 grados
+          a popa del través.
+      question: Cuando se puede considerar que una situación de riesgo de abordaje
+        es un cruce.
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 21
+      options:
+        a: No puede hacerlo en ninguna circunstancia.
+        b: Lo más cerca posible de los externos y con el menor ángulo respecto al
+          sentido de la navegación.
+        c: Lo más perpendicular posible al sentido de navegación.
+        d: Sin ocupar ni pasar por la zona de separación de tráfico.
+      question: 'Una embarcación que pretenda cruzar un DST lo hará:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 22
+      options:
+        a: Estoy dando atrás
+        b: Pretendo adelantar
+        c: Caigo o voy a caer a Babor
+        d: Caigo o voy a caer a Estribor.
+      question: Si un buque durante una maniobra en condición de visibilidad normal
+        emite una pitada correspondiente a 2 pitadas cortas, está queriendo indicar
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 23
+      options:
+        a: Se trata de un buque con capacidad de maniobra restringida
+        b: Se trata de un buque restringido por su calado
+        c: Se trata de un buque sin gobierno
+        d: Se trata de una embarcación fondeada
+      question: Si de día divisamos una embarcación con 2 esferas negras superpuestas.
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 24
+      options:
+        a: Una embarcación de practico
+        b: Un pesquero.
+        c: Un buque con capacidad de maniobra restringida
+        d: Un buque restringido por su calado.
+      question: 'Si de noche divisamos una embarcación con dos luces en el mismo vertical
+        roja la superior y blanca la inferior se trata de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 25
+      options:
+        a: En un sector de 112,5 º medido desde la popa hasta el través.
+        b: En un sector de 90 º desde la Proa hasta el través
+        c: En un sector de 112,5º medidos desde la proa hacia popa del través.
+        d: La suma de ambos costados es de 180 º siendo visible solo por proa.
+      question: En que sector son visibles las luces de costado.
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 26
+      options:
+        a: Un buque de propulsión mecánica parado y sin arrancada
+        b: Puede tratarse de un buque con Capacidad de maniobra restringida
+        c: Un buque fondeado.
+        d: Ninguna de las anteriores
+      question: 'Si en condiciones de visibilidad reducida escuchamos una señal consistente
+        en 1 pitada corta, 1 larga y 1 corta, se trata de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 27
+      options:
+        a: Aquel que debido a una avería temporal no puede maniobrar con normalidad.
+        b: El que debido a la naturaleza de su trabajo no puede maniobrar con normalidad.
+        c: Es lo mismo que los restringidos por su calado.
+        d: Todas las respuestas son correctas.
+      question: 'Un buque con capacidad de maniobra restringida es:'
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 28
+      options:
+        a: Tendera a caer a babor.
+        b: Tendera a caer a estribor.
+        c: La presión lateral de las palas compensará el resto de fuerzas y la popa
+          mantendrá su rumbo.
+        d: Todas las respuestas son falsas.
+      question: 'En una embarcación parada y sin arrancada de una sola hélice, con
+        hélice levógira y maquina atrás y timón a la vía, la popa de la embarcación:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: d
+      id: 29
+      options:
+        a: La embarcación se desplazará avante y juntaremos la proa del muelle.
+        b: La embarcación se desplazará avante paralela al muelle.
+        c: La embarcación se desplazará atrás separando la proa del muelle
+        d: La embarcación se desplazará atrás separando la popa y juntando la proa
+          al muelle
+      question: Atracados babor al muelle si viramos del Spring de Proa, a la vez
+        que lascamos el resto de los cabos.
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 30
+      options:
+        a: Solido.
+        b: Liquido.
+        c: Gaseoso.
+        d: Aceites de cocina.
+      question: Los fuegos de clase B son aquellos que tienen un combustible
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 31
+      options:
+        a: Solo por el patrón de la embarcación pues es quien tiene conocimiento para
+          hacerlo.
+        b: Tan pronto como nos encontremos en peligro sin atender a otros factores
+        c: Cuando estemos seguros de que otra embarcación o aeronave nos puede divisar,
+          por sotavento y siguiendo las instrucciones del fabricante.
+        d: Todas las respuestas son correctas.
+      question: 'Las señales pirotécnicas en caso de emergencia se utilizarán:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: b
+      id: 32
+      options:
+        a: Una pieza de respeto para el motor de carácter obligatoria.
+        b: Una pieza destinada a taponar los imbornales o las vías de agua.
+        c: Un tipo de patrón especializado en regatas.
+        d: Una maniobra para capear el temporal.
+      question: ¿Qué es un espiche?
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: anulada
+      id: 33
+      options:
+        a: Se recibirá más hacia a proa que el real.
+        b: Se recibirá más hacia a popa que el real.
+        c: Sera siempre mayor que el real.
+        d: Sera siempre menor que el real.
+      question: 'Si un buque tiene arrancada avante el viento aparente:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 34
+      options:
+        a: Unen puntos de igual temperatura.
+        b: Unen puntos de igual profundidad en la carta
+        c: Unen puntos de igual presión atmosférica.
+        d: Unen puntos de la misma intensidad de viento.
+      question: 'Las líneas isobaras:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: a
+      id: 35
+      options:
+        a: El estado de la mar según la altura de la ola.
+        b: La fuerza o intensidad del viento.
+        c: La intensidad de la marea.
+        d: El ángulo de abatimiento
+      question: 'La escala de Douglas clasifica según:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: anulada
+      id: 36
+      options:
+        a: Norte.
+        b: Sur.
+        c: Dependerá de la presión atmosférica en el centro de la borrasca
+        d: Previo a la llegada de la borrasca se caracteriza por no haber viento.
+      question: 'Previo a la llegada a una borrasca con carácter general los vientos
+        en la zona serán de componente:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 37
+      options:
+        a: El Nv
+        b: El Na
+        c: La proa de la embarcación o el rumbo.
+        d: Las respuestas b y c son correctas.
+      question: 'Las marcaciones son ángulos a un objeto que se miden desde:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 38
+      options:
+        a: Amplitud de marea
+        b: Intervalo de marea
+        c: Duración de la marea
+        d: Hora de marea.
+      question: 'La diferencia entre la hora de la bajamar y la hora de la pleamar
+        siguiente se conoce como:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 39
+      options:
+        a: El arco de meridiano medido desde el ecuador hasta el lugar.
+        b: El arco de paralelo medido desde el ecuador hasta el lugar.
+        c: El arco de meridiano medido desde el meridiano de Greenwich hasta el lugar.
+        d: El arco de paralelo medido desde el meridiano de Greenwich hasta el lugar.
+      question: 'La latitud en un punto se define como:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 40
+      options:
+        a: Desvío
+        b: Declinación magnética
+        c: Abatimiento
+        d: Deriva
+      question: 'La alteración producida sobre el rumbo de la embarcación por el viento
+        se conoce como:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 41
+      options:
+        a: Demora
+        b: Oposición
+        c: Rumbo
+        d: Enfilación.
+      question: Cual de las siguientes no es una línea de posición.
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: anulada
+      id: 42
+      options:
+        a: Rv= 337º
+        b: Rv= 161º
+        c: Rv= 181º
+        d: Rv= 001º
+      question: Se toma Da de P. Almina= 156º y distancia de dicho faro de 5´, Conociendo
+        que la Ct=2ºNW se pide Ra para llegar a la Farola Roja de Algeciras (FL(2)
+        R 6s 8M).
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: c
+      id: 43
+      options:
+        a: Ct=000º
+        b: Ct=008º NE
+        c: Ct=004º NE
+        d: Ct=004º NW
+      question: En el instante en el que el buque se encuentra en la Oposicion P.Europa
+        – P.Carnero, se tomar Da Punta Europa= 060º, Calcular la CT en ese momento.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 44
+      options:
+        a: l= 35º 57,0´N y L= 005º 32,2´W
+        b: l= 35º 51,8´N y L= 005º 37,8´W
+        c: l= 35º 51,8´N y L= 005º 32,2´W
+        d: l= 35º 57,0´N y L= 005º 37,8´W
+      question: Un buque navega a Ra= 117º y toma Da de Tarifa= 025º y Marcación de
+        Punta Alcázar = 035º Er, Si la dm= 2º NW y el desvío= -2º calcular la posición
+        en ese momento.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: b
+      id: 45
+      options:
+        a: 8 millas
+        b: 10 millas
+        c: 12 millas
+        d: 14 millas
+      question: Situados en posición l=35º 50´ N y L= 006º 10´W Navegamos a Rv= 032º
+        y  a una Velocidad= 6 Nudos, transcurridas 2,5 horas, ¿A qué distancia de
+        Punta Gracia nos encontraremos?
+exam_info:
+  call: conv2b
+  categories: 11
+  community: Andalucía
+  expected_questions: 45
+  questions_with_answers: 45
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN TEÓRICO PARA LA OBTENCIÓN DEL TÍTULO P.E.R.
+  total_questions: 45
+  year: 2021
