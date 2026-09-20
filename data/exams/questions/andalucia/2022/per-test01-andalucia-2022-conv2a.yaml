@@ -1,0 +1,610 @@
+categories:
+  1:
+    name: Nomenclatura náutica
+    questions:
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: d
+      id: 1
+      options:
+        a: Está clara
+        b: Ha zarpado
+        c: Está a la pendura
+        d: Está a pique
+      question: 'Si estamos fondeados y la cadena o la línea de fondeo está perpendicular
+        a la línea de flotación (es decir, llamando verticalmente), se dice que:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 2
+      options:
+        a: Eliminando el asiento
+        b: Escorando el barco
+        c: Adrizando el barco
+        d: Bajando el francobordo
+      question: 'Nuestra embarcación está inclinada a una banda. Al eliminar dicha
+        inclinación estamos:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: c
+      id: 3
+      options:
+        a: Candeleros
+        b: Regala
+        c: Pasamanos
+        d: Guardamancebos
+      question: 'Las piezas metálicas delgadas o las barandas de madera que corren
+        a una y otra banda de las escalas, de la toldilla, del castillo, de un puente,
+        etc., para servir de apoyo se denominan:'
+    - category: 1
+      category_name: Nomenclatura náutica
+      correct_answer: b
+      id: 4
+      options:
+        a: En sentido de las agujas del reloj en marcha avante
+        b: En sentido contrario a las agujas del reloj en marcha avante
+        c: En sentido contrario a las agujas del reloj en marcha atrás
+        d: Las respuestas a) y c) son correctas
+      question: 'Mirando desde popa hacia proa, el giro de una hélice levógira es:'
+  2:
+    name: Elementos de amarre y fondeo
+    questions:
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 5
+      options:
+        a: Cascajo
+        b: Arcilla
+        c: Fango duro
+        d: Fango blando
+      question: 'Indique cuál de los siguientes tenederos es el más adecuado para
+        fondear:'
+    - category: 2
+      category_name: Elementos de amarre y fondeo
+      correct_answer: c
+      id: 6
+      options:
+        a: Que el ancla se separa de la cadena
+        b: Que el ancla se enroque en el fondo
+        c: Que el ancla no agarra bien y se desplaza por el fondo
+        d: Que el barco gira alrededor del punto donde esta fondeada el ancla
+      question: ¿Qué quiere decir que un ancla garrea?
+  3:
+    name: Seguridad
+    questions:
+    - category: 3
+      category_name: Seguridad
+      correct_answer: c
+      id: 7
+      options:
+        a: La estabilidad estática es la propiedad que tiene un buque de permanecer
+          en un punto determinado sin dar balances ni cabezadas, sea cual sea el estado
+          de la mar
+        b: La estabilidad estática longitudinal es la propiedad que tiene el buque,
+          una vez escorado, de recuperar su posición de equilibrio, cuando se encuentra
+          flotando en aguas en reposo
+        c: La estabilidad estática transversal es la propiedad que tiene el buque,
+          una vez escorado, de recuperar su posición de equilibrio, cuando se encuentra
+          flotando en aguas en reposo
+        d: Se entiende como movimientos de balance o simplemente balance, al movimiento
+          de oscilación en sentido longitudinal que puede sufrir una embarcación.
+      question: 'Señale la afirmación correcta:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: d
+      id: 8
+      options:
+        a: Si la embarcación es de vela, se izará poco trapo de forma que la superficie
+          vélica que se presente sea reducida pero que permita mantener una ligera
+          arrancada avante
+        b: Si la embarcación es de vela, y en el supuesto de que  las condiciones
+          de viento y mar sean tales que aconsejen no izar trapo alguno, se podría
+          tratar de capear el temporal mediante el uso de un ancla de capa o ancla
+          flotante
+        c: En caso de una embarcación a motor se pondrá un rumbo tal, que se reciba
+          la mar de viento y el viento por la amura
+        d: Todas las respuestas anteriores son correctas
+      question: 'Cuando se capea un temporal con una embarcación:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 9
+      options:
+        a: La exploración en espiral cuadrada consiste en finalizar la búsqueda en
+          el datum, disminuyendo el área explorada formando cuadrados concéntricos
+        b: La exploración por sectores consiste en explorar radialmente a partir del
+          datum, trazando con la derrota un conjunto de sectores de círculo
+        c: En la exploración por sectores todos los giros que se realizan son de 100º
+          a babor y todos los tramos tienen la misma longitud.
+        d: El método de exploración en espiral cuadrada requiere de dos unidades de
+          búsqueda, siendo eficaz  en áreas de gran extensión
+      question: 'Señale la respuesta correcta, en relación con la maniobra de búsqueda
+        cuando no se ve al náufrago:'
+    - category: 3
+      category_name: Seguridad
+      correct_answer: b
+      id: 10
+      options:
+        a: Nos dirigiremos a puerto lo más rápidamente posible
+        b: Moderaremos la velocidad, adecuándola a las condiciones de visibilidad
+          del entorno
+        c: Utilizaremos el espejo de señales de niebla
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'En navegación con niebla:'
+  4:
+    name: Legislación
+    questions:
+    - category: 4
+      category_name: Legislación
+      correct_answer: d
+      id: 11
+      options:
+        a: Con carácter general, queda prohibido el fondeo de embarcaciones sobre
+          posidonia oceánica
+        b: En el caso de que haya praderas de posidonia cercanas, queda prohibido
+          que la cadena u otros elementos del fondeo puedan afectarlas
+        c: Se puede fondear sobre posidonia oceánica en casos de fuerza mayor o peligro
+          para la seguridad de la vida humana en el mar o de la navegación
+        d: Todas las respuestas anteriores son correctas
+      question: 'En relación a la protección de las praderas de posidonia oceánica,
+        ¿qué respuesta es correcta?:'
+    - category: 4
+      category_name: Legislación
+      correct_answer: d
+      id: 12
+      options:
+        a: Sólo debe acudir si recibe la petición de ayuda de un Centro de Salvamento
+        b: Debe acudir al auxilio si la embarcación es de su misma bandera, debido
+          a su condición jurídica
+        c: Si no puede acudir o, por las circunstancias del caso, el capitán estima
+          que es irrazonable o innecesario hacerlo, no debe hacerlo, sin que sea necesario
+          dar explicaciones de su decisión ni adoptar más medidas
+        d: Ninguna de las respuestas anteriores es correcta (De acuerdo con el apartado
+          5.1 del temario de conocimientos teóricos en vigor, las preguntas sobre
+          marcas laterales se refieren a la Región de Balizamiento A)
+      question: 'Indique qué respuesta es correcta sobre la obligación del capitán
+        de un barco de prestar auxilio a otra embarcación:'
+  5:
+    name: Balizamiento
+    questions:
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 13
+      options:
+        a: De aguas navegables
+        b: De peligro aislado
+        c: Lateral de babor y estribor
+        d: Lateral de bifurcación
+      question: '¿Cuál de las siguientes marcas se utiliza para indicar el centro
+        de un canal?:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 14
+      options:
+        a: Una marca cardinal norte. Se debe pasar al norte de ella
+        b: Una marca lateral de babor. Entrando en puerto se debe dejar por la banda
+          de estribor
+        c: Una marca lateral de estribor. Entrando en puerto se debe dejar por la
+          banda de estribor
+        d: Una marca de peligro aislado. Se le debe dar un resguardo apropiado
+      question: 'Avistamos una boya en forma de castillete, que en la parte superior
+        tiene un cono con el vértice hacia arriba (el resplandor del sol no permite
+        distinguir el color). Se trata de:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: c
+      id: 15
+      options:
+        a: De aguas navegables
+        b: De peligro aislado
+        c: Cardinal norte
+        d: Cardinal sur
+      question: 'Una marca emite una luz blanca centelleante continua. Se trata de
+        una marca:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 16
+      options:
+        a: De aguas navegables
+        b: De peligro aislado
+        c: Cardinal norte
+        d: Cardinal sur
+      question: 'Una marca emite una luz blanca que está dos segundos encendida y
+        dos segundos apagada, y así sucesivamente. Se trata de una marca:'
+    - category: 5
+      category_name: Balizamiento
+      correct_answer: a
+      id: 17
+      options:
+        a: Un cilindro
+        b: Un cono con el vértice hacia arriba
+        c: Un cilindro sobre un cono con el vértice hacia arriba
+        d: Un cono con el vértice hacia arriba sobre un cilindro
+      question: '¿Cuál es la marca de tope de una marca lateral de bifurcación, canal
+        principal a estribor?:'
+  6:
+    name: Reglamento (RIPA)
+    questions:
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 18
+      options:
+        a: Se considerará que existe riesgo de abordaje
+        b: Se reducirá la velocidad a la mínima de gobierno
+        c: Se emitirá una señal fónica consistente en cinco pitadas cortas y rápidas
+        d: Todas las respuestas anteriores son correctas
+      question: 'Si la demora de un buque que se aproxima no varía en forma apreciable:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 19
+      options:
+        a: Una única luz blanca todo horizonte
+        b: Una luz blanca todo horizonte y luces de costado
+        c: Una luz de tope a proa; luces de costado; y una luz de alcance
+        d: Una luz de tope a proa; una segunda luz de tope, a popa y más alta que
+          la de proa; luces de costado; y una luz de alcance
+      question: '¿Cuál de las siguientes configuraciones de luces corresponde a un
+        buque de propulsión mecánica de 60 metros de eslora?:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 20
+      options:
+        a: El que alcanza se mantendrá apartado de la derrota del alcanzado
+        b: Si reciben el viento por bandas contrarias, el que lo reciba por babor
+          se mantendrá apartado de la derrota del otro
+        c: Si reciben el viento por la misma banda, el que esté a barlovento se mantendrá
+          apartado de la derrota del que esté a sotavento
+        d: Las respuestas b) y c) son correctas
+      question: 'Un buque de vela está alcanzando a otro buque de vela, ambos a la
+        vista el uno del otro. En este caso:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: a
+      id: 21
+      options:
+        a: Una bola en la parte de proa
+        b: Un cono con el vértice hacia abajo
+        c: Una marca bicónica
+        d: Las embarcaciones de recreo no tienen obligación de exhibir ninguna marca
+          cuando están fondeadas
+      question: 'Un velero de 20 metros de eslora está fondeado. Durante el día debe
+        exhibir:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 22
+      options:
+        a: Cada uno de ellos caerá a estribor de forma que pase por la banda de babor
+          del otro
+        b: Cada uno de ellos caerá a babor de forma que pase por la banda de estribor
+          del otro
+        c: El buque de propulsión mecánica caerá a estribor y el buque dedicado a
+          la pesca disminuirá velocidad
+        d: El buque de propulsión mecánica se mantendrá apartado de la derrota del
+          buque dedicado a la pesca
+      question: 'Un buque de propulsión mecánica y un buque dedicado a la pesca, que
+        están a la vista el uno del otro, navegan de vuelta encontrada a rumbos opuestos
+        o casi opuestos, con riesgo de abordaje. En este caso:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: c
+      id: 23
+      options:
+        a: Luz de tope
+        b: Luz de remolque
+        c: Luz de alcance
+        d: Luz de popa
+      question: '¿Cómo se denomina la luz blanca que se coloca lo más cerca posible
+        de la popa, de forma que muestra su luz sin interrupción en todo un arco del
+        horizonte de 135 grados,  67,5 grados contados a partir de la popa hacia cada
+        una de las bandas del buque?:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 24
+      options:
+        a: Emitirá una señal fónica consistente en una pitada corta, una larga y una
+          corta
+        b: Reducirá su velocidad hasta la mínima de gobierno
+        c: Caerá a estribor con suficiente antelación
+        d: Todas las respuestas anteriores son correctas
+      question: 'En condiciones de visibilidad reducida, salvo en los casos en que
+        se haya comprobado que no existe riesgo de abordaje, todo buque en navegación
+        que oiga, al parecer a proa de su través, la señal de niebla de otro buque:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: b
+      id: 25
+      options:
+        a: Buque de vela
+        b: Buque de propulsión mecánica
+        c: Motovelero
+        d: Embarcación de recreo
+      question: 'Un yate de 20 metros de eslora está navegando a vela, propulsándose
+        al mismo tiempo con la máquina. En el contexto del Reglamento de Abordajes,
+        tiene la condición de:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 26
+      options:
+        a: Debe suprimir toda su arrancada hasta haber evaluado plenamente la situación
+        b: Es el buque que «sigue a rumbo». En principio, debe mantener rumbo y velocidad
+        c: Es el buque que «sigue a rumbo». Debe mantener rumbo y reducir la velocidad
+          para facilitar la maniobra del otro buque
+        d: Es el buque que «cede el paso». Debe mantenerse apartado de la derrota
+          del otro buque
+      question: 'Un buque de propulsión mecánica ve por su través de babor la luz
+        de costado verde de un buque, que se aproxima con riesgo de abordaje y que
+        no exhibe más luces. En este caso:'
+    - category: 6
+      category_name: Reglamento (RIPA)
+      correct_answer: d
+      id: 27
+      options:
+        a: No, nunca
+        b: Exclusivamente en caso de emergencia para evitar un peligro inmediato
+        c: Sólo en caso de emergencia para evitar un peligro inmediato y para dedicarse
+          a la pesca en dicha zona de separación
+        d: En caso de emergencia para evitar un peligro inmediato, para dedicarse
+          a la pesca en dicha zona de separación y cuando sea necesario cruzar una
+          vía de circulación
+      question: En un dispositivo de separación del tráfico, ¿se puede entrar en una
+        zona de separación?
+  7:
+    name: Maniobra y navegación
+    questions:
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: a
+      id: 28
+      options:
+        a: Periodo de Maniobra
+        b: Periodo de Rabeo de la popa
+        c: Periodo de Avance
+        d: Ninguna de las respuestas anteriores es correcta
+      question: '¿Qué fase (o periodo) forma parte de la curva de evolución con máquina
+        avante?:'
+    - category: 7
+      category_name: Maniobra y navegación
+      correct_answer: b
+      id: 29
+      options:
+        a: Corriente de expulsión la popa a babor y presión lateral la popa a babor
+        b: Corriente de expulsión la popa a estribor y presión lateral la popa a estribor
+        c: Corriente de expulsión la popa a estribor y presión lateral la popa a babor
+        d: Corriente de expulsión la popa a babor y presión lateral la popa a estribor
+      question: 'Una embarcación con una hélice levógira, se encuentra parada, sin
+        arrancada y con el timón a la vía. Al dar máquina atrás, el efecto de la corriente
+        de expulsión y de la presión lateral de las palas sobre la embarcación es:'
+  8:
+    name: Emergencias en la mar
+    questions:
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 30
+      options:
+        a: Intentaremos conseguir lo antes posible consejo radio médico
+        b: Si el paciente pierde el conocimiento, lo acostaremos en posición horizontal
+        c: Si el paciente lo solicita, le daremos agua en pequeños sorbos
+        d: Todas las respuestas anteriores son correctas
+      question: 'Ante una sospecha de hemorragia interna tras un traumatismo, actuaremos
+        de la siguiente forma:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: a
+      id: 31
+      options:
+        a: En caso de saltar al agua, haremos una profunda inspiración y saltaremos
+          al vacío con las piernas y pies juntos y plegadas sobre el estómago
+        b: Si debemos permanecer en el agua, lo haremos de la manera más estática
+          y pasiva posible. En todo caso, realizaremos los movimientos necesarios
+          para mantener la cabeza fuera del agua
+        c: Antes de saltar al agua comprobaremos que no haya otros supervivientes
+          en la vertical de la caída
+        d: Si hay varios supervivientes en el agua, procurarán permanecer agrupados
+      question: 'Señale la afirmación INCORRECTA, en caso de abandono de la embarcación
+        y permanencia en el agua:'
+    - category: 8
+      category_name: Emergencias en la mar
+      correct_answer: c
+      id: 32
+      options:
+        a: Explica y establece las clases de fuego según los lados del tetraedro
+        b: Explica qué tipo de agente extintor tenemos que emplear en cada lado del
+          tetraedro, para impedir el desarrollo del fuego
+        c: Explica el por qué una vez que el fuego se inicia, adquiere un proceso
+          de continuidad hasta la anulación de alguno de sus tres factores básicos
+          de desarrollo
+        d: Las respuestas b) y c) son correctas
+      question: 'La teoría del tetraedro del fuego:'
+  9:
+    name: Meteorología
+    questions:
+    - category: 9
+      category_name: Meteorología
+      correct_answer: b
+      id: 33
+      options:
+        a: Escala de Douglas
+        b: Escala de Beaufort
+        c: Escala de Coriolis
+        d: Escala de Persistencia
+      question: 'La escala que designa los diferentes estados del viento se llama:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: c
+      id: 34
+      options:
+        a: Líneas que unen puntos que tienen el mismo gradiente horizontal de presión
+        b: Líneas que unen puntos de igual tendencia barométrica
+        c: Las intersecciones de las superficies isobáricas existentes en un momento
+          dado, con la superficie del nivel del mar
+        d: Ninguna de las respuestas anteriores es correcta
+      question: 'Las isobaras son:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 35
+      options:
+        a: La intensidad del viento aparente es el doble de la intensidad del viento
+          verdadero
+        b: La intensidad del viento aparente es la mitad de la intensidad del viento
+          verdadero
+        c: La intensidad del viento aparente es igual a la intensidad del viento verdadero
+        d: El viento aparente es nulo
+      question: 'Si navegamos avante recibiendo el viento verdadero por Popa y la
+        velocidad del buque es igual a la intensidad de dicho viento verdadero:'
+    - category: 9
+      category_name: Meteorología
+      correct_answer: d
+      id: 36
+      options:
+        a: Intensidad
+        b: Periodo
+        c: Persistencia
+        d: Fetch
+      question: 'A la extensión marítima o de mar sobre la que sopla un viento de
+        fuerza y dirección constantes se denomina:'
+  10:
+    name: Teoría de la navegación
+    questions:
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: c
+      id: 37
+      options:
+        a: La hora legal
+        b: La diferencia entre la hora legal y hora civil del lugar
+        c: La hora fijada por el patrón, por la que se rige la vida a bordo
+        d: La hora oficial fijada por el Gobierno de la Nación
+      question: 'La Hora Reloj Bitácora (HRB) es:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: d
+      id: 38
+      options:
+        a: La latitud es el arco de ecuador medido desde el meridiano de Greenwich
+          hasta el meridiano del lugar de un observador .
+        b: Dos buques que se encuentren en el mismo meridiano y en hemisferios distintos,
+          tienen la misma latitud
+        c: Si un buque se encuentra en el Ecuador, su longitud siempre será cero grados
+        d: Dos buques que se encuentren en el mismo paralelo, tienen la misma latitud
+      question: 'Señale la afirmación correcta:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 39
+      options:
+        a: El ángulo, contado desde la proa, que forman la línea de crujía del buque
+          y la visual a un objeto se denomina Marcación
+        b: El ángulo formado por la línea proa–popa del buque y la visual desde a
+          bordo a un faro u objeto se denomina Enfilación
+        c: El ángulo formado entre el norte magnético y el norte de aguja se denomina
+          declinación magnética
+        d: El ángulo que forma la línea proa-popa del buque con el meridiano geográfico
+          del lugar se denomina Rumbo magnético
+      question: 'Señale la afirmación correcta:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: b
+      id: 40
+      options:
+        a: Luz de ocultaciones, es decir, que se encuentra apagada y da grupos de
+          destellos de 3 segundos cada 10 segundos y tiene un alcance de 12 millas
+        b: Luz de ocultaciones, es decir, que está continuamente encendida y se apaga
+          3 veces cada 10 segundos, con un alcance de 12 millas
+        c: Luz de ocultaciones, es decir, es un faro que no emite luz alguna y cada
+          10 segundos se enciende 3 veces con un alcance de 12 millas
+        d: Luz de ocultaciones, que da un grupo de 3 destellos cada 10 segundos, pudiendo
+          dar hasta 12 destellos magnificados por seguridad, y que se oculta en caso
+          de emergencia
+      question: 'Si observamos en una carta náutica la siguiente inscripción al lado
+        de un faro Oc(3) 10s 12M, ¿qué significa?:'
+    - category: 10
+      category_name: Teoría de la navegación
+      correct_answer: a
+      id: 41
+      options:
+        a: El Cero hidrográfico es el plano horizontal de referencia sobre el cual
+          se miden, de forma vertical, las profundidades representadas en la carta
+          náutica
+        b: La LAT se emplea como referencia horizontal de la cartografía náutica
+        c: Se llama amplitud a la diferencia de altura entre dos bajamares consecutivas
+        d: La duración de la marea siempre es constante e igual a 6 horas
+      question: 'Señale la afirmación correcta:'
+  11:
+    name: Carta de navegación
+    questions:
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: d
+      id: 42
+      options:
+        a: 36º 13,4' N; 006º 08,4' W
+        b: 36º 13,4' N; 006º 13,5' W
+        c: 36º 00,0' N; 005º 53,5' W
+        d: 36º 11,4’ N; 006º 10,6' W
+      question: El 11 de junio de 2022 navegamos a 6 nudos al rumbo de aguja 320º.
+        Al ser HRB = 08h 00m, nos encontramos al Sur verdadero del faro de cabo Trafalgar
+        y al Oeste verdadero del faro de punta Camarinal. Calcular la situación de
+        estima al ser HRB = 09h 30m, sabiendo que la declinación magnética es 4º NW
+        y el desvío de la aguja = ‒6º (menos).
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: anulada
+      id: 43
+      options:
+        a: 35º 57,2' N; 005º 47,5' W
+        b: 35º 54,4' N; 005º 50,4' W
+        c: 36º 54,0' N; 005º 47,6' W
+        d: 35º 55,4' N; 005º 47,9' W
+      question: Navegando al rumbo de aguja 092º, tomamos marcación al faro de punta
+        Paloma 070º Babor y marcación al faro de punta Malabata 065º Estribor. Calcular
+        la situación, sabiendo que la declinación magnética es 4º NW y el Desvío =
+        +2º (más).
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 44
+      options:
+        a: Ra = 161º, HRB = 16h 30m
+        b: Ra = 151º, HRB = 16h 30m
+        c: Ra = 161º, HRB = 15h 00m
+        d: Ra = 151º, HRB = 16h 00m
+      question: A HRB = 14h 30m  estamos en situación verdadera 36º 05,0' N, 005º
+        57,0' W y damos rumbo al puerto de Tánger (farola del espigón) con velocidad
+        9.5 nudos, en ausencia de viento y corriente. Calcular el rumbo de aguja necesario
+        y la HRB de llegada, sabiendo que el Desvío = +3º (más) y la declinación magnética
+        es 8º NW.
+    - category: 11
+      category_name: Carta de navegación
+      correct_answer: a
+      id: 45
+      options:
+        a: +7º (más)
+        b: ‒10º (menos)
+        c: ‒7º (menos)
+        d: +10º (más)
+      question: Al encontrarnos en la enfilación de los faros de punta Alcázar y punta
+        Cires, marcamos este último en demora de aguja 220º. Navegamos al rumbo verdadero
+        230º. Calcular la corrección total.
+exam_info:
+  call: conv2a
+  categories: 11
+  community: Andalucía
+  expected_questions: 45
+  questions_with_answers: 45
+  subtitle: Código de Test 01
+  test_code: test01
+  title: EXAMEN TEÓRICO PARA LA OBTENCIÓN DEL TÍTULO P.E.R.
+  total_questions: 45
+  year: 2022
